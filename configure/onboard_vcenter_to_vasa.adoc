@@ -1,0 +1,34 @@
+---
+permalink: configure/onboard_vcenter_to_vasa.html
+sidebar: sidebar
+keywords:
+summary: 'Onboard storage backends and add mapping with VC. Ensure the certificates are published to the vCenter.'
+---
+= Onboard vCenter to VASA provider
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Onboard storage backends and add mapping with VC. Ensure the certificates are published to the vCenter.
+
+Use the below API to onboard vCenter onto VASA provider:
+----
+POST /virtualization/api/v1/vcenters
+Request:
+{   
+  "hostname_or_ip": "10.224.60.30",   
+  "username": "administrator@vsphere.local",   
+  "password": "UDRkeDRjI1RDaTE3",   
+  "port": "443" 
+}
+---- 
+Example: 
+----
+
+{   
+  "hostname_or_ip": "10.12.13.14",
+   "port": "1234",   
+   "username": "hello",   
+   "password": "world" 
+}
+----

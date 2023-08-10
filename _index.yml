@@ -1,9 +1,33 @@
 indexpage:
-  lead: # single paragraph, shown on the page
+  lead: ONTAP tools for VMware vSphere enables you to configure, manage, and protect your virtual datastores in your vCenter Server environment.
   tiles:
     # one or more tile definitions for the page
-  - title: # short string (tile title)
-    links:
-      # one or more links on the tile
-      - title: # short string (link title)
-        url: # single file name or external URL
+    - title: Get started
+      links:
+        - title: Release notes
+          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885833
+        - title: Learn about ONTAP tools for VMware vSphere
+          url: /concepts/concept_ontap_tools_overview.html
+        - title: ONTAP tools Quick start
+          url: /qsg.html
+        - title: Deploy ONTAP tools
+          url: /deploy/prepare_deployment.html
+        - title: Migrate ONTAP tools
+          url: /migrate/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html
+    - title: Use ONTAP tools
+      links:
+      - title: Configure role-based access control
+        url: /concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html
+      - title: Configure remote diagnostics
+        url: /manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html
+      - title: Configure high availability
+        url: /concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html
+    - title: More resources
+      links:
+      - title: Documentation for earlier versions of ONTAP tools for VMware
+        url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
+      - title: NetApp Knowledge Base - ONTAP tools
+        url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
+      - title: NetApp Community - ONTAP tools
+        url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions
+

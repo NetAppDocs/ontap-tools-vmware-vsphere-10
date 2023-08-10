@@ -1,0 +1,30 @@
+---
+permalink: configure/onboard_svm.html
+sidebar: sidebar
+keywords:
+summary: 'Use the following API to onboard the storage backends and map the SVM to vCenter.'
+---
+= Onboard storage backend (SVM or Cluster) with vCenter
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+Use the following API to onboard the storage backends and map the SVM to vCenter locally.  See link:../configure/task_configure_user_role_and_privileges.html[Configure user roles and privileges] section for the ONTAP SVM user privileges. 
+
+----
+POST /virtualization/api/v1/vcenters/<vcguid>/storage-backends
+
+{ 
+ "hostname ": "10.234.10.10", 
+ "username": "admin",
+ "password": "********" 
+} 
+----
+[NOTE]
+The ID from the above API response is used in discovery.
+
+You need to pass x-auth for the API. You can generate this x-auth from the new API added under Auth in Swagger.
+----
+/virtualization/api/v1/auth/vcenter-login
+----

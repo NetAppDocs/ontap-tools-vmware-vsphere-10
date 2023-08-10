@@ -1,0 +1,27 @@
+section: configure
+title: Configure ONTAP tools
+entries:
+  - title: ESXi Discovery and settings
+    url: /configure/discovery_and_setting.html
+  - title: Manage network access
+    url: /configure/ip_whitelisting.html
+  - title: Configure user roles and privileges
+    url: /configure/task_configure_user_role_and_privileges.html
+  - title: ONTAP tools manager user interface
+    url: /configure/ontap_tools_manager_ui.html
+  - title: Add vCenter
+    url: /configure/add_vcenter.html
+  - title: Add storage backend
+    url: /configure/add_storage_backend.html
+  - title: Associate storage backend with vCenter
+    url: /configure/associate_storage_backend.html
+  - title: Onboard storage backend (SVM or Cluster) with vCenter
+    url: /configure/onboard_svm.html
+  - title: Register VASA Provider to vCenter
+    url: /configure/register_vasa.html
+  - title: Create vVols datastore
+    url: /configure/create_vvols_datastore.html        
+  - title: Onboard vCenter to VASA provider
+    url: /configure/onboard_vcenter_to_vasa.html        
+  - title: Verify registered SVM
+    url: /configure/verify_registered_svm.html        

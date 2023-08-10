@@ -1,0 +1,86 @@
+---
+permalink: manage/expand_storage_of_vvol_datastore.html
+sidebar: sidebar
+keywords: virtual volume datastores
+summary: 'There are APIs to increase or decrease the available storage.'
+---
+= Expand or shrink Storage of vVol Datastore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+There are APIs to increase or decrease the available storage.
+
+*Steps*
+
+Use the following API to expand or shrink the vVols datastore:
+----
+PATCH
+​/virtualization​/api​/v1​/vcenters​/{vcguid}​/vvols​/datastores​/{moref}​/volumes
+----
+
+Examples
+
+* Modify vVols datastore for add new volume
+----  
+  PATCH virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-24/volumes
+
+    Request Body
+    {
+      "operation": "grow",
+      "volumes" : [
+        {
+            "is_existing" : false,
+            "name" : "exp3",
+            "size_in_mb" : 51200,
+            "space_efficiency" : "thin",
+            "aggregate" : {
+                "id" : "1466e4bf-c6d6-411a-91d5-c4f56210e1ab"
+            },
+            "storage_backend": {
+                    "storage_id": "13d86e4f-1fb1-11ee-9509-005056a75778"
+            },
+            "qos" : {
+                "max_iops": 5000
+                }
+        },
+----
+* Modify vVols datastore for add existing volume
+----
+  PATCH virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-24/volumes
+
+    Request Body
+    {
+      "operation": "grow",
+      "volumes": [{
+        "is_existing": true,
+        "id": "vfded9ad-6bsd-4c9e-b44g-691250bfe2sd"
+      }]
+    }
+----
+* Modify vVols datastore for remove volume and delete volume from storage
+----
+  PATCH virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-24/volumes?delete_volumes=true
+
+    Request Body
+    {
+      "operation": "shrink",
+      "volumes": [{
+        "is_existing": true,
+        "id": "vfded9ad-6bsd-4c9e-b44g-691250bfe2sd"
+      }]
+    }
+----
+* Modify vVols datastore for remove volume and do not delete volume from storage
+----
+  PATCH virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-24/volumes?delete_volumes=false
+
+    Request Body
+    {
+      "operation": "shrink",
+      "volumes": [{
+        "is_existing": true,
+        "id": "vfded9ad-6bsd-4c9e-b44g-691250bfe2sd"
+      }]
+    }
+----

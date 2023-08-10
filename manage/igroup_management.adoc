@@ -1,0 +1,25 @@
+---
+permalink: manage/igroup_management.html
+sidebar: sidebar
+keywords:
+summary: 'In ONTAP, export polices are used to provide volume data path access to hosts and igroups are used to provide LUN data path access to ESXi hosts.'
+---
+= Managed iGroup and Export policies
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+In ONTAP, export polices are used to provide volume data path access to hosts and initiator groups (igroups) are used to provide logical unit number (LUN) data path access to ESXi hosts.
+
+When virtual volume datastores are created or mounted to hosts in vCenter, these hosts need to be given access to volumes (NFS) or LUNs (iSCSI) depending on the protocol type of the datastore.
+
+The export policy is dynamic and the new export policy is created in format of trident-uuid. On your ONTAP System Manager, go to *Storage* > *Storage VMs* > *[storage VM name]* > *Settings* > *Export Policies* to see the export policy.
+
+The igroups and export policies in ONTAP tools are managed in an efficient manner and provide the following benefits:
+
+* Supports migrated export Policies and igroups.
+* No interruption of Virtual Machine input and output operations.
+* Supports mounting on additional hosts without manual intervention.
+* Minimizes the need for managing number of igroups and export Policies.
+* A garbage collector automatically deletes all the unused managed igroups and export Policies periodically.
+* If datastore is provisioned at host cluster level then igroup is created with all host initiators under the host cluster that are added to the igroup.

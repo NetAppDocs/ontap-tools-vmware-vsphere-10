@@ -1,0 +1,73 @@
+---
+permalink: configure/discovery_and_setting.html
+sidebar: sidebar
+keywords:
+summary: 'When you first run ONTAP tools in a vSphere client, ONTAP tools discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage backends that own those LUNs and exports.'
+---
+= ESXi Discovery and settings
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you first run ONTAP tools in a vSphere client, ONTAP tools discover the ESXi hosts, their LUNs and NFS exports, and the NetApp storage backends that own those LUNs and exports.
+
+*What you will need*
+
+* All of the ESXi hosts must be powered on and connected.
+* All the storage virtual machines (SVMs) to be discovered must be running, and each cluster node must have at least one data LIF configured for the storage protocol in use (NFS or iSCSI).
+
+*About this task*
+
+You can discover new storage backends or update information about existing storage backends to obtain the latest capacity and configuration information at any time. You can also modify the credentials that ONTAP tools uses to log in to the storage backends.
+
+While discovering the storage backends, ONTAP tools collects information from the ESXi hosts that are managed by the vCenter Server instance.
+
+*Steps*
+
+Use the following API to run the discovery operation:
+
+----
+
+{
+  "id" : "host_id"
+  "vcguid": ""
+  "moref": "host-18",
+  "hostnames": [
+    "10.224.60.129"
+  ],
+  "parent_moref": "domain-c19",
+  "supported_protocols": "NFS, ISCSI, FC",
+  "kerberos_enabled": false,
+  "vmkernal_nics": [
+    ""
+  ],
+  "vmkernal_nets": [
+    ""
+  ],
+  "AccessGroup": [{"initiator":{
+                            "id":"", "type":"NFS"}
+                    },]
+  "datastores": {
+    "mount_path": {
+      "key": "",
+      "value": [
+        "ds:///vmfs/volumes/648abcfb-19e2d424-09d4-005056a7d228/"
+      ]
+    },
+    "type": "NFS",
+    "moref": "datastore-16",
+    "uuid": "ba4d5176-04ec-11ee-9a61-005056acf436"
+  },
+  "version": {
+    "generation": "8",
+    "major": "0",
+    "minor": "1"
+  }
+ "metadata": {
+    "tenant_ID": "9ac4a638-f144-4b68-a09b-079dae46425b",
+    "create_time": "2023-06-21T07:14:22.788405Z",
+    "update_time": "2023-06-21T07:14:23.789405Z"
+  }
+}
+
+----

@@ -1,0 +1,29 @@
+section: manage
+title: Manage ONTAP tools
+entries:
+  - title: Manage datastores
+    entries:
+      - title: Expand or shrink Storage of vVol Datastore
+        url: /manage/expand_storage_of_vvol_datastore.html
+      - title: Delete vVols datastore
+        url: /manage/task_remove_storage_from_a_vvols_datastore.html
+      - title: Mount and unmount a vVols datastore
+        url: /manage/task_mount_a_vvols_datastore.html
+  - title: Manage storage backend
+    url: /manage/storage_backend.html
+  - title: Manage vCenter
+    url: /manage/manage_vcenter.html
+  - title: Manage vVol Lifecycle
+    url: /manage/vvol_lifecycle_management.html
+  - title: Managed iGroup and Export policies
+    url: /manage/igroup_management.html
+  - title: Access ONTAP tools maintenance console
+    entries:
+    - title: Overview of ONTAP tools maintenance console
+      url: /manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html
+    - title: Configure remote diagnostic access
+      url: /manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html
+  - title: Collect the log files
+    url: /manage/task_collect_the_log_files.html
+  - title: Discovery
+    url: /manage/discovery.html
