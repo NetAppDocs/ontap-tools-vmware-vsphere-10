@@ -13,7 +13,7 @@ vCenter Server provides role-based access control (RBAC) that enables you to con
 
 |===
 |Components | Description
-|Privileges |A privilege enables or denies access to perform actions in vSphere. Privileges are divided into 20 categories and subcategories.
+|Privileges |A privilege enables or denies access to perform actions in vSphere.
 |Roles |A role contains one or more system privileges where each privilege defines an administrative right to a certain object or type of object in the system. By assigning a user a role, the user inherits the capabilities of the privileges defined in that role.
 |Users and groups |Users and groups are used in permissions to assign roles from Active Directory (AD) or potentially local windows users/groups as well (not recommended)
 |Permissions |Permissions allow you to assign privileges to users or groups to perform certain actions and make changes to objects inside vCenter Server. vCenter Server permissions affect only those users who log into vCenter Server rather than users who log into an ESXi host directly.
@@ -42,20 +42,20 @@ You can view the ONTAP tools standard roles by clicking *Roles* on the vSphere C
 |===
 | *Role* | *Description*
 |
-Administrator
+NetApp ONTAP tools Administrator
 |
-Provides all of the native vCenter Server privileges and ONTAP tools-specific privileges that are required to perform all ONTAP tools tasks.
+Provides all of the native vCenter Server privileges and ONTAP tools-specific privileges that are required to perform some of the ONTAP tools tasks.
 |
-Read Only
+NetApp ONTAP tools Read Only
 |
 Provides read-only access to ONTAP tools. These users cannot perform any ONTAP tools actions that are access-controlled.
 |
-Provision
+NetApp ONTAP tools Provision
 a|
-Provides all of the native vCenter Server privileges and ONTAP tools-specific privileges that are required to provision storage. You can perform the following tasks:
+Provides some of the native vCenter Server privileges and ONTAP tools-specific privileges that are required to provision storage. You can perform the following tasks:
 
 * Create new datastores
-* Destroy datastores
+* Manage datastores
 
 |===
 
