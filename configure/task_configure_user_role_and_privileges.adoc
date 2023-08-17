@@ -101,5 +101,6 @@ Using APIs:
 |/api/storage/disks	|Read-Only	|To get the Disks associated in an Aggregate
 |/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM Policy management
 |/api/svm/svms	|Read-Only	|To get SVM configuration in case the Cluster is added locally.
+|/api/network/ip/interfaces |Read-Only |Add Storage Backend - To identify the management LIF scope is Cluster/SVM
 |===
  
