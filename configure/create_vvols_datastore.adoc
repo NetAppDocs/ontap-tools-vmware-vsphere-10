@@ -37,7 +37,7 @@ Request Body for NFS datastore
          "size_in_mb":2048000,
          "space_efficiency":"thin",
          "aggregate":{
-            "id":"d7078b3c-3827-4ac9-9273-0a32909455c2",
+            "id":"d7078b3c-3827-4ac9-9273-0a32909455c2"
          },
          "qos":{
             "min_iops":200,

@@ -102,5 +102,6 @@ Using APIs:
 |/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM Policy management
 |/api/svm/svms	|Read-Only	|To get SVM configuration in case the Cluster is added locally.
 |/api/network/ip/interfaces |Read-Only |Add Storage Backend - To identify the management LIF scope is Cluster/SVM
+|/api |Read-Only | Cluster user must have this privilege to get the correct storage backend status. Otherwise, ONTAP tools Manager UI shows "unknown" storage backend status.
 |===
  

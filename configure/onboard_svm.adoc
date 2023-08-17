@@ -15,11 +15,11 @@ Use the following API to onboard the storage backends and map the SVM to vCenter
 ----
 POST /virtualization/api/v1/vcenters/<vcguid>/storage-backends
 
-{ 
- "hostname ": "10.234.10.10", 
- "username": "admin",
- "password": "********" 
-} 
+{
+     "hostname_or_ip": "172.21.103.107",
+     "username": "svm11",
+     "password": "netapp1!"
+   }
 ----
 [NOTE]
 The ID from the above API response is used in discovery.

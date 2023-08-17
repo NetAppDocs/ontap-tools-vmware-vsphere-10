@@ -53,7 +53,7 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 ----
 . Once the job is completed, validate the migration report available at: <TBD> for any failure.
 . Add ONTAP tools storage provider 10.0 to the vCenter and link:../configure/register_vasa.html[Register VASA Provider to vCenter].
-. Disable ONTAP tools for VMware vSphere 9.11 and 9.10 VASA provider.
+. Disable ONTAP tools for VMware vSphere 9.11P1 or 9.10P1 VASA provider.
 .. Select ONTAP tools in the vSphere client home page.
 .. Select *Settings* > *Manage capabilities* > *Disable VASA provider* from the ONTAP tools.
 +
