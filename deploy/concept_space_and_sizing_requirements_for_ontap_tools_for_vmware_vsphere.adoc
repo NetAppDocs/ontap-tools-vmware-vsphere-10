@@ -13,14 +13,26 @@ Before deploying the ONTAP tools for VMware vSphere, you should be familiar with
 
 You can use the ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server Virtual Appliance (vCSA). You must deploy the ONTAP tools on a supported vSphere that includes ESXi system.
 
-* *Installation package space requirements*
- ** 10 GB for thin provisioned installations
- ** 200 GB for thick provisioned installations
+* *Installation package space requirements per node*
+** 10 GB for thin provisioned installations
+** 200 GB for thick provisioned installations
 
-* *Host system sizing requirements*
-  ** Recommended memory: 24 GB RAM
- ** Recommended CPUs: 12
+* *Host system sizing requirements per node*
+Recommended memory as per the size of deployment and per node is as shown in the table below:
 
+|===
+ |Type of deployment|CPUs|Memory(GB)
+
+ | Small (S)
+ |8
+ |16
+ |Medium (M)
+ |12
+ |24
+ |Large (L)
+ |24
+|48
+|===
 == Minimum storage and application requirements:
 
 |===

@@ -12,9 +12,9 @@ summary: 'You can configure HA three node in either small, medium, or large conf
 
 You can configure HA three node in either small, medium, or large configurations.
 
-* Small HA three node contains 12 CPUs and 24 GB RAM.
-* Medium HA three node contains 24 CPUs and 48 GB RAM.
-* Large HA three node contains 36 CPUs and 72 GB RAM.
+* Small HA three node contains 8 CPUs and 16 GB RAM.
+* Medium HA three node contains 12 CPUs and 24 GB RAM.
+* Large HA three node contains 24 CPUs and 48 GB RAM.
 
 *About this task*
 
@@ -88,22 +88,9 @@ Enter the following details:
 .. Primary DNS 
 .. Secondary DNS 
 .. Search Domains 
-. In *Customize template* > *Node2 Configuration* and *Node3 Configuration* window, enter the following details:
-.. Datacenter
-.. Network vLAN name
-.. Folder path
-.. Resource pool
-.. Cluster
-.. Exsi host - This can be the same as the previous node or can be a different ESXi host.
-.. Datastore
+. In *Customize template* > *Node 2 Configuration* and *Node 3 Configuration* window, enter the following details:
 .. HostName
 .. IP Address
-.. Prefix length (only for IPV6)
-.. Netmask (only for IPV4)
-.. Gateway
-.. Primary DNS
-.. Secondary DNS
-.. Search Domains
 . Review the details in the *Ready to complete* window, select *FINISH*.
 +
 As the task gets created, the progress is shown in the vSphere task bar.

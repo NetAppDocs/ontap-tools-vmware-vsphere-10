@@ -10,11 +10,11 @@ summary: 'You can configure Non-HA single node in either small, medium, or large
 
 [.lead]
 
-You can configure Non-HA single node in either small, medium, or large configurations.
+You can configure Non-HA single node in either small, medium, or large configurations. 
 
-* Small Non-HA configuration contains 12 CPUs and 24 GB RAM.
-* Medium Non-HA configuration contains 24 CPUs and 48 GB RAM.
-* Large Non-HA configuration contains 36 CPUs and 72 GB RAM.
+* Small Non-HA configuration contains 8 CPUs and 16 GB RAM.
+* Medium Non-HA configuration contains 12 CPUs and 24 GB RAM.
+* Large Non-HA configuration contains 24 CPUs and 48 GB RAM.
 
 Make sure network route is present.
 Example: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>
