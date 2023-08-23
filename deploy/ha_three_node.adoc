@@ -55,7 +55,7 @@ You can disable AutoSupport at any time, but you should leave it enabled. Enabli
 .. Copy and paste the Root and Intermediate certificates.
 .. Copy and paste the Leaf certificates and Private key.
 .. Enter the Domain name with which you generated the certificate.
-.. Enter the virtual IP to which the domain is tagged.
+.. Enter the Load Balance IP details.
 . In *Customize template* > *Deployment Configuration* window, enter the following details:
 .. Enter a free IP Address in Virtual IP for K8s Control Plane. You need this for K8s API Server.
 .. Select the checkbox against *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
@@ -66,12 +66,13 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 +
 image::../media/ng_deployment_configuration.png["deployment configuration"]
 .. Enter the ONTAP Cluster or the SVM Management IP in *ONTAP/SVM Management LIF*.
+.. Enter the ONTAP Cluster or the SVM *ONTAP/SVM Data LIF*.
 .. For Storage VM, you can choose to either provide your ONTAP’s default storage VM details or you can create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this filed is ignored.
 .. Enter the ONTAP/SVM Username.
 .. Enter the ONTAP/SVM Password. 
 .. Enable Migration is disabled by default. Do not alter this choice.
 .. Primary VM is enabled by default. Do not alter this choice.
-. In *Customize template* > *Content Library Details* window, enter the *Content Library Name* and the *OVF Templete Name*.
+. In *Customize template* > *Content Library Details* window, enter the *Content Library Name* and the *OVF Template Name*.
 . In *Customize template* > *vCenter Configuration* window, provide the details of the vCenter where the content library is hosted.
 . In *Customize template* > *Node Configuration* window, enter the network properties of the OVA for all the three nodes. 
 +
