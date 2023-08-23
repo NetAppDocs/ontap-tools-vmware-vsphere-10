@@ -2,7 +2,7 @@
 permalink: concepts/concept_ontap_tools_overview.html
 sidebar: sidebar
 keywords:
-summary: 'The ONTAP tools for VMware vSphere provide end-to-end life cycle management for virtual machines in VMware environments that use NetApp storage backends.'
+summary: 'The ONTAP tools for VMware vSphere manages provisioning of datastores and virtual-machines in VMware environments that use NetApp storage backends.'
 ---
 = ONTAP tools Overview
 :icons: font
@@ -10,7 +10,7 @@ summary: 'The ONTAP tools for VMware vSphere provide end-to-end life cycle manag
 // This topic was modified entirely for 10.0 release.
 
 [.lead]
-The ONTAP tools for VMware vSphere provide end-to-end life cycle management for virtual machines in VMware environments that use NetApp storage backends. It enables the administrators to manage the storage within the vCenter Server directly and hence simplifies the storage and data management for VMware environments.
+The ONTAP tools for VMware vSphere manages provisioning of datastores and virtual-machines in VMware environments that use NetApp storage backends. It enables the administrators to manage the storage within the vCenter Server directly and hence simplifies the storage and data management for VMware environments.
 
 ONTAP tools for VMware vSphere 10.0 release is a collection of horizontally scalable, event driven, microservices deployed on Kubernetes. It is packaged in various deployment form factors like Open Virtual Appliance (OVA) and Software as a service (SaaS) for on-prem.
 
