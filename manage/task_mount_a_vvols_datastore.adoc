@@ -29,10 +29,8 @@ Request Body
   "morefs": [
     "host-7044"
   ],
-  "all_hosts": false
 }
 ----
-If all_hosts is true, then morefs should be empty and if all_hosts is false, then morefs should be non empty.
 
 == Examples:
 * Mount on additional host
@@ -46,7 +44,6 @@ Use the following API to mount on additional host:
      {
       "operation": "mount",
       "morefs": ["host-13"],
-      "all_hosts": false
      }
 ----
 
@@ -61,6 +58,5 @@ Use the following API to unmount on additional host:
      {
       "operation": "unmount",
       "morefs": ["host-13"],
-      "all_hosts": false
      }
 ----

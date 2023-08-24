@@ -31,8 +31,8 @@ ONTAP tools use certificate based authentication with ONTAP irrespective of the 
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . Deploy OVA for ONTAP tools for VMware vSphere 10.0 release. See link:../qsg_10.html[ONTAP tools Quick start]
-. Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.0 release. See link:../configure/add_vcenter.html[Add vCenter]
-. Onboard storage backend from the remote plugin vCenter APIs. See link:../configure/onboard_svm.html[ Onboard storage backend]
+. Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.0 release. See link:../configure/add_vcenter.html[Add vCenter]. 
+. Onboard storage backend locally from the remote plugin vCenter APIs. See link:../configure/onboard_svm.html[Onboard storage backend]. Add storage as local scoped for migration.
 . Use the following API to migrate:
 +
 ----
@@ -54,8 +54,7 @@ Above API call gives the jobid, which can be used for status check.
 ----
 https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
-. Once the job is completed, validate the migration report 
-// available at: <TBD> for any failure.
+. Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
 . Add ONTAP tools storage provider 10.0 to the vCenter and link:../configure/register_vasa.html[Register VASA Provider to vCenter].
 . Disable ONTAP tools for VMware vSphere 9.11P1 or 9.10P1 VASA provider.
 .. Select ONTAP tools in the vSphere client home page.
