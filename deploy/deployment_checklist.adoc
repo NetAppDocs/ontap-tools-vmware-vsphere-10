@@ -30,8 +30,8 @@ Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan yo
 
 *Load balancer and API server details*
  
-- [ ] Load Balancer IP(*) = 10.60.25.158
-- [ ] Virtual IP for K8s Control Plane(*) = 10.60.25.159
+- [ ] Load Balancer IP(*)
+- [ ] Virtual IP for K8s Control Plane(*)
  
 *ONTAP Details*
  
@@ -48,14 +48,14 @@ Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan yo
  
 *First Node Network details*
  
-- [ ] HostName(*) = bchappat8
-- [ ] IPAddress(*) = 10.60.25.160
-- [ ] Prefix length (Only for IPv6) = 
-- [ ] Netmask (Only for IPv4)(*) = 255.255.254.0
-- [ ] Gateway(*) = 10.60.24.1
-- [ ] Primary DNS(*) = 10.224.223.130
-- [ ] Secondary DNS(*) = 10.224.223.131
-- [ ] Search Domains(*) = rtp.netapp.com 
+- [ ] HostName(*)
+- [ ] IPAddress(*)
+- [ ] Prefix length (Only for IPv6) 
+- [ ] Netmask (Only for IPv4)(*)
+- [ ] Gateway(*) 
+- [ ] Primary DNS(*)
+- [ ] Secondary DNS(*)
+- [ ] Search Domains(*)
  
 *Second Node - Node Network details*
  
@@ -64,5 +64,5 @@ Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan yo
 
 *Third Node - Node Network details*
  
-- [ ] HostName(*) = bchappat10
-- [ ] IPAddress(*) = 10.60.25.162
+- [ ] HostName(*)
+- [ ] IPAddress(*)
