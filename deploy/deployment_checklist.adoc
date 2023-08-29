@@ -1,0 +1,68 @@
+---
+permalink: deploy/deployment_checklist.html
+sidebar: sidebar
+keywords:
+summary: 'The checklist here helps you to have all the information handy before you begin the deployment.'
+---
+= Deployment Checklist
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+The checklist here helps you to have all the information handy before you begin the deployment. Make sure to note down these values for your setup before deploying.
+
+You should be aware of the basic storage backend requirements, application requirements, and license requirements before you begin deploying the ONTAP tools for VMware vSphere. 
+Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan your deployment and decide how you want to configure ONTAP tools in your environment.
+
+*First  Node and other common fields*
+
+- [ ] VASA Provider Username(*)
+- [ ] Administrator Username(*)
+- [ ] NTP Servers
+
+*Certificate Details*
+
+- [ ] Enable Custom CA Certificate
+- [ ] Root and Intermediate certificates (ignore when self-signed is enabled)
+- [ ] Leaf certificate and Private key (ignored when self-signed is enabled)
+- [ ] Domain name(*) (ignored when self-signed is enabled)
+
+*Load balancer and API server details*
+ 
+- [ ] Load Balancer IP(*) = 10.60.25.158
+- [ ] Virtual IP for K8s Control Plane(*) = 10.60.25.159
+ 
+*ONTAP Details*
+ 
+- [ ] ONTAP Management LIF(*) (Cluster management IP)
+- [ ] ONTAP Data LIF(*) 
+- [ ] Storage VM(*)
+- [ ] ONTAP Cluster Username(*)
+- [ ] Enable Migration
+- [ ] Primary VM
+- [ ] Content Library Name(*)
+- [ ] OVF Template Name(*) 
+- [ ] Hostname(*) 
+- [ ] Username(*)
+ 
+*First Node Network details*
+ 
+- [ ] HostName(*) = bchappat8
+- [ ] IPAddress(*) = 10.60.25.160
+- [ ] Prefix length (Only for IPv6) = 
+- [ ] Netmask (Only for IPv4)(*) = 255.255.254.0
+- [ ] Gateway(*) = 10.60.24.1
+- [ ] Primary DNS(*) = 10.224.223.130
+- [ ] Secondary DNS(*) = 10.224.223.131
+- [ ] Search Domains(*) = rtp.netapp.com 
+ 
+*Second Node - Node Network details*
+ 
+- [ ] HostName(*)
+- [ ] IPAddress(*)
+
+*Third Node - Node Network details*
+ 
+- [ ] HostName(*) = bchappat10
+- [ ] IPAddress(*) = 10.60.25.162
