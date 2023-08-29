@@ -21,28 +21,12 @@ Following are the ONTAP tools requirements before proceeding with the deployment
 
 * Configure and set up your vCenter Server environment. 
 * Download the _.ova_ file. 
-* Administrator login credentials for your vCenter Server instance.
 * Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements for deploying the ONTAP tools* section.  
 * Delete the browser cache.  
 * You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment.
-* Custom CA Certificates (.pem format)
-** Domain name on which the certificate is issued.
-** Root certificate
-** Intermediate certificate
-** Leaf certificate 
-** Private Key
-** SANs field in certificate should have Virtual IP address.
 * In case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP.
 * IPv4 supported VLAN.
 * NTP Server which is already provided to the vCenter for time synchronization.
-* Static IP configuration details for the Node or virtual machine (VM) where the OVA is being deployed (Mandatory)
-** Hostname – A valid DNS hostname for the virtual appliance.
-** IP Address
-** Netmask
-** Gateway
-** Primary DNS
-** Secondary DNS
-** Search Domains
 * A storage VM on ONTAP with NFS enabled is required. Follow the below steps to configure the storage VM:
 ** Have both your ONTAP System Manager and ONTAP CLI open. 
 ** If you prefer to create a new storage VM, login to your ONTAP System Manager and create a storage VM with NFS enabled.
