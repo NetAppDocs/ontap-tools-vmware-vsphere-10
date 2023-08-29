@@ -25,8 +25,6 @@ Following are the ONTAP tools requirements before proceeding with the deployment
 * Delete the browser cache.  
 * You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment.
 * In case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP.
-* IPv4 supported VLAN.
-* NTP Server which is already provided to the vCenter for time synchronization.
 * A storage VM on ONTAP with NFS enabled is required. Follow the below steps to configure the storage VM:
 ** Have both your ONTAP System Manager and ONTAP CLI open. 
 ** If you prefer to create a new storage VM, login to your ONTAP System Manager and create a storage VM with NFS enabled.
@@ -49,7 +47,7 @@ If it does not exist then login to your ONTAP CLI and run the following commands
 ** Make sure that an Export Policy exists for the storage VM. On your ONTAP System Manager, go to *Storage* > *Storage VMs* > *[storage VM name]* > *Settings* > *Export Policies*. If there is no export policy follow the next step.
 ** Create an export policy rule using the following commands from ONTAP CLI
 +
-a.	vserver export-policy rule create -vserver <storage VM name> -policyname <export policy name> -clientmatch <ESXI-IP> -rorule any -rwrule any -superuser any 
+vserver export-policy rule create -vserver <storage VM name> -policyname <export policy name> -clientmatch <ESXI-IP> -rorule any -rwrule any -superuser any 
 +
 [NOTE]
 Make sure that _superuser_ value is not _none_.
