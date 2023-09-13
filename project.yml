@@ -1,5 +1,5 @@
 settings:
-  name: "Product Name"
+  name: ONTAP tools for VMware vSphere 10.0
   internal:
     pdf_enabled: true
   prod:
@@ -8,5 +8,14 @@ settings:
 
 sidebar: 
   entries:
-  - title: Legal notices
-    url: /legal-notices.html
+    - title: ONTAP tools for VMware vSphere 10.0 docs
+      url: /index.html
+    - title: Release notes
+      url: /release_notes.html
+    - section: concepts
+    - section: deploy
+    - section: configure
+    - section: manage
+    - section: migrate
+    - title: Legal notices
+      url: /legal-notices.html

@@ -1,0 +1,28 @@
+---
+permalink: manage/reference_verify_vvols_dashboard_data_requirements.html
+sidebar: sidebar
+keywords: vVol dashboard
+summary: 'You must verify some important requirements of the vVols dashboard to display dynamic details of the VMware Virtual Volumes \(vVols\) datastores and virtual machines.'
+---
+= vVols dashboard data requirements
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You must verify some important requirements of the vVols dashboard to display dynamic details of the VMware Virtual Volumes (vVols) datastores and virtual machines.
+
+The following table presents an overview of what you should verify if the vVols dashboard does not display the performance metrics for the provisioned SAN vVols datastores and virtual machines.
+
+|===
+| *Considerations*| *Description*
+
+a|
+storage backends
+a|
+
+* You are using ONTAP 9.7 or later.
+* You are using appropriate credentials for the storage backend.
+* Your storage backend is active and accessible.
+* The virtual machine that you selected must be using at least one vVols datastore, and I/O operations are executing on the disk of the virtual machine.
+
+|===

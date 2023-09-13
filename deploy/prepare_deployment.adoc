@@ -1,0 +1,53 @@
+---
+permalink: deploy/prepare_deployment.html
+sidebar: sidebar
+keywords:
+summary: 'You should deploy ONTAP tools in your environment, and specify the required parameters, to be able to use the appliance.'
+---
+= Prepare to deploy ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+ONTAP tools for VMware vSphere supports multi vCenter Server that includes VASA Provider. 
+
+You should be aware of the basic storage backend requirements, application requirements, and license requirements before you begin deploying the ONTAP tools for VMware vSphere. 
+Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan your deployment and decide how you want to configure ONTAP tools in your environment. 
+
+== Preparing for deployment 
+
+Following are the ONTAP tools requirements before proceeding with the deployment: 
+
+* Configure and set up your vCenter Server environment. 
+* Download the _.ova_ file. 
+* Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements for deploying the ONTAP tools* section.  
+* Delete the browser cache.  
+* You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment.
+* In case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP.
+* A storage VM on ONTAP with NFS enabled is required. Follow the below steps to configure the storage VM:
+** Have both your ONTAP System Manager and ONTAP CLI open. 
+** If you prefer to create a new storage VM, login to your ONTAP System Manager and create a storage VM with NFS enabled.
+** Add an aggregate with at least 100GB.
+** To verify if the aggregate is added successfully:
++
+a) Login to your ONTAP CLI
++
+b) Run the command, vserver show -fields aggr-list
++
+c) If your aggregate has not been listed against your default storage VM, run the command: vserver modify <storage VM name> -aggr-list <aggregate name>
++
+To find the name of the aggregate you want to add to your default storage VM, you can use the following command in the ONTAP CLI: _aggr show_
++
+This command displays a list of aggregates on the storage system, and you can find the name of the aggregate you need to use in the *Aggregate* column.
+** There are two options with deployment configuration, one is cluster credentials and the other is SVM credentials or direct SVM. For direct SVM, you need to configure the management LIF for the SVM before starting the deployment. Skip this for cluster credentials.
+** Make sure network route exists, login to your ONTAP CLI and run the command, network route show -vserver <storage VM name>
++
+If it does not exist then login to your ONTAP CLI and run the following commands, net route create -vserver <vserver name> -destination <destination IP> -gateway <gateway IP> -metric 20
+** Make sure that an Export Policy exists for the storage VM. On your ONTAP System Manager, go to *Storage* > *Storage VMs* > *[storage VM name]* > *Settings* > *Export Policies*. If there is no export policy follow the next step.
+** Create an export policy rule using the following commands from ONTAP CLI
++
+vserver export-policy rule create -vserver <storage VM name> -policyname <export policy name> -clientmatch <ESXI-IP> -rorule any -rwrule any -superuser any 
++
+[NOTE]
+Make sure that _superuser_ value is not _none_.

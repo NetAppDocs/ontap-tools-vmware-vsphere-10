@@ -1,0 +1,12 @@
+---
+permalink: manage/vvol_lifecycle_management.html
+sidebar: sidebar
+keywords: manage vVols
+summary: 'You can manage Virtual Volumes (vVols) using the VMWare vCenter user interface.'
+---
+= Manage vVol Lifecycle 
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can manage Virtual Volumes (vVols) using the VMWare vCenter user interface. For details, refer to https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.storage.doc/GUID-0F225B19-7C2B-4F33-BADE-766DA1E3B565.html[VMware documentation].

@@ -1,0 +1,53 @@
+---
+permalink: concepts/concept_configure_vvols_datastores.html
+sidebar: sidebar
+keywords:
+summary: 'You can use VASA Provider for ONTAP to create and manage VMware Virtual Volumes \(vVols\). You can provision, edit, mount, and delete a vVols datastore. You can also add storage to the vVols datastore or remove storage from the vVols datastore to provide greater flexibility.'
+---
+= VASA Provider configurations for vVols
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use VASA Provider for ONTAP to create and manage VMware Virtual Volumes (vVols). You can provision, edit, mount, and delete a vVols datastore. You can also add storage to the vVols datastore or remove storage from the vVols datastore to provide greater flexibility.
+
+A vVols datastore consists of one or more FlexVol volumes within a storage container (also called backing storage). A virtual machine can be spread across one vVols datastore or multiple vVols datastores.
+
+While you can create a vVols datastore that has multiple FlexVol volumes, all of the FlexVol volumes within the storage container must use the same protocol (NFS or iSCSI) and the same storage virtual machines (SVMs).
+
+NOTE: It is a good practice to include multiple FlexVol volumes in a vVols datastore for performance and flexibility. Because FlexVol volumes have LUN count restrictions that limit the number of virtual machines, including multiple FlexVol volumes allows you to store more virtual machines in your vVols datastore. Adding diverse volumes increases the datastore capabilities where there could be a mix of thin and thick volumes so that both kind of VMs can be created on the datastore.
+
+VASA Provider creates different types of vVols during virtual machine provisioning or VMDK creation.
+
+* *Config*
++
+VMware vSphere uses this vVols datastore to store configuration information.
++
+In SAN (block) implementations, the storage is a 4 GB LUN.
+vCenter 8 takes the capacity to 256GB LUN in Thin provisioning.  
++
+In an NFS implementation, this is a directory containing VM config files such as the vmx file and pointers to other vVols datastores.
+
+* *Data*
++
+This vVols contains operating system information and user files.
++
+In SAN implementations, this is a LUN that is the size of the virtual disk.
++
+In an NFS implementation, this is a file that is the size of the virtual disk.
+
+* *Swap*
++
+This vVols is created when the virtual machine is powered on and is deleted when the virtual machine is powered off.
++
+In SAN implementations, this is a LUN that is the size of the virtual memory.
++
+In an NFS implementation, this is a file that is the size of the virtual memory.
+
+* *Memory*
++
+This vVols is created if the memory snapshots option is selected when creating VM snapshot.
++
+In SAN implementations, this is a LUN that is the size of the virtual memory.
++
+In an NFS implementation, this is a file that is the size of the virtual memory.
