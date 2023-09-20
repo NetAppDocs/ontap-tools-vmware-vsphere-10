@@ -55,3 +55,40 @@ You need to remove all the storage backends attached to the vCenter before remov
 +
 [NOTE]
 Once you remove the vCenter, it will no longer be maintained by the application.
+
+== Storage threshold management
+
+Use the following Get threshold API to retrieve the configured storage threshold limits for volume and aggregate.
+
+----
+GET​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+
+Examples:
+Get the Storage thresholds per vcenter by vcenter guid
+----
+GET "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+----
+
+Use the following PATCH configure alarm for volume and aggregate to generate notification when configured threshold limits are reached. 
+----
+PATCH​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+
+Examples:
+Update the Storage thresholds per vcenter by vcenter guid. Default limits are 80% for nearly-full and 90% for full.
+Modifying all threshold settings
+----
+{{{}PATCH "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+Request Body
+{
+"volume":
+
+{ "nearly_full_percent": 80, "full_percent": 90 }
+,
+"aggregate": {
+"nearly_full_percent": 80,
+"full_percent": 90
+}
+}{}}}{}
+----
