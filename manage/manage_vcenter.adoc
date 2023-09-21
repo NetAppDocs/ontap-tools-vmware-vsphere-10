@@ -56,7 +56,7 @@ You need to remove all the storage backends attached to the vCenter before remov
 [NOTE]
 Once you remove the vCenter, it will no longer be maintained by the application.
 
-== Storage threshold management
+== Manage Storage threshold
 
 Use the following Get threshold API to retrieve the configured storage threshold limits for volume and aggregate.
 
