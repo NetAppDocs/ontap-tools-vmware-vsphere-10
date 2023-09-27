@@ -1,8 +1,6 @@
 section: configure
 title: Configure ONTAP tools
 entries:
-  - title: ESXi Discovery and settings
-    url: /configure/discovery_and_setting.html
   - title: Manage network access
     url: /configure/ip_whitelisting.html
   - title: Configure user roles and privileges

@@ -15,7 +15,7 @@ summary: Provides instructions for deploying and initializing ONTAP tools for VM
 :imagesdir: ./media/
 
 [.lead]
-ONTAP tools for VMware vSphere is a single vCenter Server plug-in that includesONTAP tools and VASA Provider extensions. ONTAP tools are recommended for allONTAP vSphere environments as it configures ESXi host settings and provisions ONTAPstorage using best practices. The VASA Provider is required for virtual volumes (vVols)support.
+ONTAP tools for VMware vSphere is a single vCenter Server plug-in that includes ONTAP tools and VASA Provider extensions. ONTAP tools are recommended for all ONTAP vSphere environments as it configures ESXi host settings and provisions ONTAP storage using best practices. The VASA Provider is required for virtual volumes (vVols)support.
 
 == Preparing for installation
 
