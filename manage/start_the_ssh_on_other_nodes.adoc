@@ -17,7 +17,7 @@ The VASA Provider extension must be enabled for your vCenter Server instance.
 
 *About this task*
 
-<Need info>
+Perform this procedure on each of the nodes, before you upgrade.
 
 *Steps*
 
