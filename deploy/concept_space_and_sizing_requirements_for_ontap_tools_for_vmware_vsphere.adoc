@@ -74,12 +74,6 @@ This is the password assigned to the administrator account. For security reasons
 
 You must access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Application Configuration menu of the maintenance console of your ONTAP tools to change the password.
 
-=== vCenter Server administrator credentials
-
-You can set the administrator credentials for the vCenter Server while deploying ONTAP tools.
-
-If the password for the vCenter Server changes, then you can update the password for the administrator by using the following URL: `\https://<IP>:8143/Register.html` where the IP address is of ONTAP tools that you provide during deployment.
-
 === vCenter Server IP address
 
 * You should provide the IP address (IPv4 or IPv6) of the vCenter Server instance to which you want to register ONTAP tools.
