@@ -22,6 +22,9 @@ This task gives you instructions on how to install HA three node in small, mediu
 [NOTE]
 Creating the content library is a mandatory step for deploying HA three node configuration. See link:../deploy/concept_how_to_download_ontap_tools.html[How to download ONTAP tools] for details.
 
+[NOTE]
+Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to *Conservative* during the installation of ONTAP tools.
+
 *Steps*
 
 . Log in to the vSphere server.
