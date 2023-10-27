@@ -35,17 +35,16 @@ You can use the ONTAP tools with either a Windows vCenter Server or with a VMwar
 Recommended memory as per the size of deployment and per node is as shown in the table below:
 
 |===
- |Type of deployment|CPUs|Memory(GB)
-
- | Small (S)
- |8
- |16
- |Medium (M)
- |12
- |24
- |Large (L)
- |24
-|48
+|Type of deployment|CPUs|Memory(GB)
+| Small (S)
+|8
+|16
+|Medium (M)
+|12
+|24
+|Large (L)
+|16
+|32
 |===
 == Minimum storage and application requirements:
 

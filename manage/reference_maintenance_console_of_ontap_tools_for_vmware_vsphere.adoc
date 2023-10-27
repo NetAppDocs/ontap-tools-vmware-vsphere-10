@@ -36,8 +36,6 @@ a|
 . Change 'maint' user password
 . Change time zone
 . Add new NTP server
-+
-You can provide an IPv6 address for your NTP server.
 . Increase jail disk size (/jail)
 . Upgrade
 . Install VMware Tools
@@ -53,8 +51,6 @@ a|
 . Change static routes
 . Commit changes
 . Ping a host
-+
-You can use this option to ping to an IPv6 host.
 . Restore default settings
 
 a|

@@ -14,7 +14,9 @@ You can configure HA three node in either small, medium, or large configurations
 
 * Small HA three node contains 8 CPUs and 16 GB RAM.
 * Medium HA three node contains 12 CPUs and 24 GB RAM.
-* Large HA three node contains 24 CPUs and 48 GB RAM.
+* Large HA three node contains 16 CPUs and 32 GB RAM.
+[NOTE]
+This is a per node requirement. When HA three node configuration is deployed, the hardware requirement will be three times the value mentioned here.
 
 *About this task*
 
@@ -42,14 +44,9 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 . Select the destination network for each source network, select *Next*.
 . Select *Customize template* > *system configuration* window. Enter the following details:
 .. VASA provider username and password: This username and password is used for registering the VASA provider in the vCenter.
-.. Vasa Provider is enabled by default. Do not alter this when Storage Replication Adapter and Remote Plugin UI are not enabled.
-+
-[NOTE]
-The Storage Replication Adapter and Remote plug-in UI are not supported in ONTAP tools for VMware vSphere 10.0 release.
 .. The *Enable ASUP* checkbox is selected by default.
 +
-[NOTE]
-You can disable AutoSupport at any time, but you should leave it enabled. Enabling AutoSupport can significantly help speed problem determination and resolution should a problem occur on your storage system. By default, the system collects AutoSupport information and stores it locally, even if you disable AutoSupport. 
+The ASUP can be enabled or disabled only during deployment.
 .. Administrator Username and Administrator Password: This is the password used to login to *ONTAP Tools Manager* UI. 
 .. Enter NTP server information in *NTP Servers* field. 
 .. Maintenance user password: This is used to grant access to ‘Maint Console Options’.
