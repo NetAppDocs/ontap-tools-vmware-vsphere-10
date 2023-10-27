@@ -12,11 +12,9 @@ summary: 'You can configure HA three node in either small, medium, or large conf
 
 You can configure HA three node in either small, medium, or large configurations.
 
-* Small HA three node contains 8 CPUs and 16 GB RAM.
-* Medium HA three node contains 12 CPUs and 24 GB RAM.
-* Large HA three node contains 16 CPUs and 32 GB RAM.
-[NOTE]
-This is a per node requirement. When HA three node configuration is deployed, the hardware requirement will be three times the value mentioned here.
+* Small HA three node contains 8 CPUs and 16 GB RAM per node.
+* Medium HA three node contains 12 CPUs and 24 GB RAM per node.
+* Large HA three node contains 16 CPUs and 32 GB RAM per node.
 
 *About this task*
 
