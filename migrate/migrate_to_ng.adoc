@@ -56,13 +56,12 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 ----
 . Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
 . Add ONTAP tools storage provider 10.0 to the vCenter and link:../configure/register_vasa.html[Register VASA Provider to vCenter].
-. Disable ONTAP tools for VMware vSphere 9.11P1 or 9.10P1 VASA provider.
-.. Select ONTAP tools in the vSphere client home page.
-.. Select *Settings* > *Manage capabilities* > *Disable VASA provider* from the ONTAP tools.
+. Stop the ONTAP tools storage provider 9.10 /9.11 VASA Provider service (STOP VASA provider from maint console).
 +
-Note: NetApp recommends you not to delete the VASA provider.
+[Note] 
+NetApp recommends you not to delete the VASA provider.
 +
-Once the old VASA provider is disabled, vCenter will failover to ONTAP tools for VMware vSphere 10.0. All the datastores and VMs become accessible and will be served from ONTAP tools for VMware vSphere 10.0.
+Once the old VASA provider is stopped, vCenter fails over to ONTAP tools for VMware vSphere 10.0. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere 10.0.
 . Perform the patch migrate using the following API:
 +
 ----
@@ -85,7 +84,6 @@ This API deletes migration by Migration Id and deletes migration on the given vC
 
 After successful migration and after you register ONTAP tools 10.0 to the vCenter, do the following:
 
-* Bring down the ONTAP tools storage provider 9.10 /9.11 VASA Provider service (STOP VASA provider and SRA service from maint console).
 * Refresh the certificate on all the hosts.
 * Wait for sometime before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that  are present in the setup. When you don't wait, the operations may fail intermittently.
 
