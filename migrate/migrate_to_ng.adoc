@@ -16,16 +16,16 @@ It is recommended to migrate classic setup only if the setup is servicing the VA
 
 *About this task* 
 
-Migration is supported from ONTAP tools for VMware vSphere 9.10P1 and 9.11P1 releases to 10.0 release. To migrate from:
+Migration is supported from ONTAP tools for VMware vSphere 9.10D2 and 9.11D4 releases to 10.0 release. To migrate from:
+* ONTAP tools for VMware vSphere 9.10 release, first upgrade to 9.10D2 release then migrate to 10.0 release.
+* ONTAP tools for VMware vSphere 9.11 release, first upgrade to 9.11D4 release then migrate to 10.0 release.
 
-* ONTAP tools for VMware vSphere 9.10 release, first upgrade to 9.10P1 release then migrate to 10.0 release.
-* ONTAP tools for VMware vSphere 9.11 release, first upgrade to 9.11P1 release then migrate to 10.0 release.
-
-ONTAP tools use certificate based authentication with ONTAP irrespective of the migration path.
+[NOTE]
+As an existing user you need to take the OVA backup from 9.10/9.11 before upgrading to 9.10D patch or 9.11D patch 
 
 *Steps*
 
-. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere 9.10P1 and 9.11P1. To enable the port, login to CLI with root user and run the following command:
+. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere 9.10D2 and 9.11D4. To enable the port, login to CLI with root user and run the following command:
 +
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
@@ -56,13 +56,12 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 ----
 . Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
 . Add ONTAP tools storage provider 10.0 to the vCenter and link:../configure/register_vasa.html[Register VASA Provider to vCenter].
-. Disable ONTAP tools for VMware vSphere 9.11P1 or 9.10P1 VASA provider.
-.. Select ONTAP tools in the vSphere client home page.
-.. Select *Settings* > *Manage capabilities* > *Disable VASA provider* from the ONTAP tools.
+. Stop the ONTAP tools storage provider 9.10 /9.11 VASA Provider service (STOP VASA provider from maint console).
 +
-Note: NetApp recommends you not to delete the VASA provider.
+[Note] 
+NetApp recommends you not to delete the VASA provider.
 +
-Once the old VASA provider is disabled, vCenter will failover to ONTAP tools for VMware vSphere 10.0. All the datastores and VMs become accessible and will be served from ONTAP tools for VMware vSphere 10.0.
+Once the old VASA provider is stopped, vCenter fails over to ONTAP tools for VMware vSphere 10.0. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere 10.0.
 . Perform the patch migrate using the following API:
 +
 ----
@@ -82,3 +81,11 @@ The delete API for migration is:
 Delete /virtualization/api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
 ----
 This API deletes migration by Migration Id and deletes migration on the given vCenter.
+
+After successful migration and after you register ONTAP tools 10.0 to the vCenter, do the following:
+
+* Refresh the certificate on all the hosts.
+* Wait for sometime before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that  are present in the setup. When you don't wait, the operations may fail intermittently.
+
+
+

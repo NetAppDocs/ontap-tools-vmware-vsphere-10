@@ -9,11 +9,11 @@ indexpage:
         - title: Learn about ONTAP tools for VMware vSphere
           url: /concepts/concept_ontap_tools_overview.html
         - title: ONTAP tools Quick start
-          url: /qsg.html
+          url: /qsg_10.html
         - title: Deploy ONTAP tools
           url: /deploy/prepare_deployment.html
         - title: Migrate ONTAP tools
-          url: /migrate/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html
+          url: migrate/migrate_to_ng.html
     - title: Use ONTAP tools
       links:
       - title: Configure role-based access control
