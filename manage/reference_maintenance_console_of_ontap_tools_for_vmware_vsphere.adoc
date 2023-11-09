@@ -1,0 +1,63 @@
+---
+permalink: manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html
+sidebar: sidebar
+keywords:
+summary: 'You can manage your application, system, and network configurations by using the maintenance console of the ONTAP tools. You can change your administrator password and maintenance password. You can also generate support bundles, set different log levels, view and manage TLS configurations, and start remote diagnostics.'
+---
+= Overview of ONTAP tools maintenance console
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can manage your application, system, and network configurations by using the maintenance console of the ONTAP tools. You can change your administrator password and maintenance password. You can also generate support bundles, set different log levels, view and manage TLS configurations, and start remote diagnostics.
+
+You must have installed VMware tools after deploying ONTAP tools to access the maintenance console. You should use `maint` as the user name and the password you configured during deployment to log in to the maintenance console of the ONTAP tools. You should use *nano* for editing the files in maint or root login console.
+
+NOTE: You must set a password for the `diag` user while enabling remote diagnostics.
+
+You should use the *Summary* tab of your deployed ONTAP tools to access the maintenance console. When you click  image:../media/launch_maintenance_console.gif["Play button"], the maintenance console starts.
+
+|===
+| *Console Menu*| *Options*
+a|
+Application Configuration
+a|
+// updated for 10.0 release
+
+. Display server status summary
+. Change LOG level for VASA Provider Services
+
+a|
+System Configuration
+a|
+
+. Reboot virtual machine
+. Shutdown virtual machine
+. Change 'maint' user password
+. Change time zone
+. Add new NTP server
+. Increase jail disk size (/jail)
+. Upgrade
+. Install VMware Tools
+
+a|
+Network Configuration
+a|
+
+. Display IP address settings
+. Display domain name search settings
+. Change domain name search settings
+. Display static routes
+. Change static routes
+. Commit changes
+. Ping a host
+. Restore default settings
+
+a|
+Support and Diagnostics
+a|
+
+. Access diagnostic shell
+. Enable remote diagnostic access
+
+|===

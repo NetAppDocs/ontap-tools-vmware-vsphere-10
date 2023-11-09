@@ -1,0 +1,98 @@
+---
+permalink: deploy/nonha_deployment.html
+sidebar: sidebar
+keywords:
+summary: 'You can configure Non-HA single node in either small, medium, or large configurations.'
+---
+= How to deploy Non-HA single node configuration
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+You can configure Non-HA single node in either small, medium, or large configurations. 
+
+* Small Non-HA configuration contains 8 CPUs and 16 GB RAM.
+* Medium Non-HA configuration contains 12 CPUs and 24 GB RAM.
+* Large Non-HA configuration contains 16 CPUs and 32 GB RAM.
+
+Make sure network route is present.
+Example: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>
+
+
+*About this task*
+
+This task gives you instructions on how to install Non-HA single node in small, medium, or high configurations.
+
+*Steps*
+
+. Log in to the vSphere server.
+. Navigate to the resource pool or the host where you want to deploy the OVA.
+. Right-click the required datacenter, and select *Deploy OVF template...*.
+. You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*.
+. Select a name and folder for the virtual machine and select *Next*.
+. Select the host and select *Next*
+. Review the summary of the template and select *Next*.
+. Read and accept the license agreement and select *Next*.
+. In the *Configuration window*, select *Non-HA single Node(small)*, *Non-HA single Node(Medium)*, or *Non-HA single Node(large)* configuration.
+. In the Configuration window choose the required size of Non-HA single Node configuration and select *Next*.
+. Select the datastore where you need to deploy the OVA and select *Next*.
+. Select the source and destination network and select *Next*.
+. Select *Customize template* > *system configuration* window. Enter the following details:
+.. VASA provider username and password: This username and password is used for registering the VASA provider in the vCenter.
+.. The *Enable ASUP* checkbox is selected by default.
++
+The ASUP can be enabled or disabled only during deployment. 
+.. Administrator Username and Administrator Password: This is the password used to login to *ONTAP Tools Manager* UI. 
+.. Enter NTP server information in *NTP Servers* field. 
+.. Maintenance user password: This is used to grant access to ‘Maint Console Options’.
+. In the *Customize template* > *VASA Provider Certificates* window, enter the following details:
+.. Check Enable Custom CA certificate check box. This is required for multi-VC enablement. In case of non multi-VC environment, ignore the check box. There is no need to mention the certificates and domain name, you need to only provide the virtual IP details.
+.. Copy and paste the Root and Intermediate certificates.
+.. Copy and paste the Leaf certificates and Private key.
+.. Enter the Domain name with which you generated the certificate.
+.. Enter the Load Balance IP details..
+. In *Customize template* > *Deployment Configuration* window, enter the following details:
+.. Enter a free IP Address in Virtual IP for K8s Control Plane. You need this for K8s API Server.
+.. Select the checkbox against *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
++
+[NOTE]
+When SVM scope is enabled you should have already enabled SVM support with management IP.
+.. Enter the details shown in the below image:
++
+image::../media/ng_deployment_configuration.png["deployment configuration"]
+.. Enter the ONTAP Cluster or the SVM Management IP in *ONTAP/SVM Management LIF*.
+.. Enter the ONTAP Cluster or the SVM *ONTAP/SVM Data LIF*.
+.. For Storage VM, you can choose to either provide your ONTAP’s default storage VM details or you can create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this filed is ignored.
+.. Enter the ONTAP/SVM Username.
+.. Enter the ONTAP/SVM Password. 
+.. Enable Migration is disabled by default. Do not alter this choice.
+.. Primary VM is enabled by default. Do not alter this choice.
+. In *Customize template* > *Node Configuration* window enter the network properties of the OVA. 
++
+[NOTE]
+The information provided here will be validated for proper patterns during installation process. In case of discrepancy, an error message will be displayed on the web console and you will be prompted to correct any incorrect information provided.
++
+.. Enter the Host name. 
+.. Enter the IP Address mapped to the host name. 
+.. Prefix length (only for IPV6) 
+.. Netmask (only for IPV4) 
+.. Gateway 
+.. Primary DNS 
+.. Secondary DNS 
+.. Search Domains 
+. Review the details in the *Ready to complete* window, select *FINISH*.
++
+As the task gets created, the progress is shown in the vSphere task bar.
+. Power on the VM after the completion of the task.
++
+The installation begins. You can track the the installation progress in VM’s web console.
+As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
+. To make necessary changes in the dialog prompt, follow the below steps:
+.. Double click on the web console to start interacting with the console.
+.. Use UP and DOWN arrow keys on your keyboard to navigate across the fields shown.
+.. Use RIGHT and LEFT arrow keys on your keyboard to navigate to the right or left end of the value provided to the field.
+.. Use TAB to navigate across the panel to enter your values, *OK* or *CANCEL*.
+.. Use ENTER to select either *OK* or *CANCEL*.
+. On selecting *OK* or *CANCEL*, the values provided would again be validated. You have the provision to correct any values for 3 times. If you fail to correct within the 3 attempts, the product installation stops and you are advised to try the installation on a fresh VM.
+. After successful installation, web console shows the message stating the ONTAP tools for VMware vSphere is in Healthy State.

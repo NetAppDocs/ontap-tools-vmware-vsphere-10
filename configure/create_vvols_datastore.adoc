@@ -1,0 +1,109 @@
+---
+permalink: configure/create_vvols_datastore.html
+sidebar: sidebar
+keywords:
+summary: 'You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.'
+---
+= Create vVols datastore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.
+[NOTE]
+Check to ensure root aggregates are not mapped to SVM.
+
+You need to pass x-auth for the API. You can generate this x-auth from the new API added under Auth in Swagger.
+----
+/virtualization/api/v1/auth/vcenter-login
+----
+. Create vVols datastore with new volume.
+  Get Aggregate id, storage_id(SVM uuid) using ONTAP REST API. 
++
+----
+POST /virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores
+----
++
+Use the following URI to check the status:
++
+----
+https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+----
++
+Request Body for NFS datastore
++
+----    
+{
+   "name":"nfsds1",
+   "protocol":"nfs",
+   "platform_type":"aff",
+   "moref":"domain-c8",
+   "volumes":[
+      {
+         "is_existing":false,
+         "name":"vol_nfs_pvt",
+         "size_in_mb":2048000,
+         "space_efficiency":"thin",
+         "aggregate":{
+            "id":"d7078b3c-3827-4ac9-9273-0a32909455c2"
+         },
+         "qos":{
+            "min_iops":200,
+            "max_iops":5000
+         }
+      }
+   ],
+   "storage_backend":{
+      "storage_id":"654c67bc-0f75-11ee-8a8c-00a09860a3ff"
+   }
+}
+----
++
+Request body for iSCSI datastore:
+----
+{
+   "name" : "iscsi_custom",
+   "protocol" : "iscsi",
+   "platform_type": "aff",
+   "moref" : "domain-c8",
+   "volumes" : [
+       {
+           "is_existing" : false,
+           "name" : "iscsi_custom",
+           "size_in_mb" : 8034,
+           "space_efficiency" : "thin",
+           "aggregate" : {
+               "id" : "54fe5dd4-e461-49c8-bb2d-6d62c5d75af2"
+           }
+       }
+   ],
+   "custom_igroup_name": "igroup1",
+   "storage_backend": {
+                       "storage_id": "eb9d33ab-1960-11ee-9506-00a0985c6d9b"    }
+}
+----
+. Create vVols datastore with existing volumes. 
++
+Get aggregate_id and volume_id using ONTAP REST API. 
++
+----
+     POST /virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores
+----
+Request Body
+----
+     {
+    "name" : "nfsds2",
+    "protocol" : "nfs",
+    "platform_type": "aff",
+    "moref" : "domain-c8",
+    "volumes" : [
+        {
+              "is_existing": true,
+              "id": "e632a632-1412-11ee-8a8c-00a09860a3ff"
+            }
+    ],
+    "storage_backend": {
+                        "storage_id": "33a8b6b3-10cd-11ee-8a8c-00a09860a3ff"    }
+ 
+}
+----

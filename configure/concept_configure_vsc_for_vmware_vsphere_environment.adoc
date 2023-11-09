@@ -1,0 +1,19 @@
+---
+permalink: configure/concept_configure_vsc_for_vmware_vsphere_environment.html
+sidebar: sidebar
+keywords:
+summary: 'ONTAP tools supports numerous environments. Some of the features in these environments might require additional configuration.'
+---
+= Configure ONTAP tools for VMware vSphere
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP tools supports numerous environments. Some of the features in these environments might require additional configuration.
+
+You might have to perform some of the following tasks to configure your ESXi hosts, guest operating systems, and ONTAP tools:
+
+* Verifying your ESXi host settings, including the UNMAP settings
+* Adding timeout values for guest operating systems
+* Regenerating the ONTAP tools SSL certificate
+* Modifying the preferences file to enable the mounting of datastores across different subnets

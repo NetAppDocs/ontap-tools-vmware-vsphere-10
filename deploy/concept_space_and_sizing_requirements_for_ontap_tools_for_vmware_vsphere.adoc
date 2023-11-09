@@ -1,0 +1,92 @@
+---
+permalink: deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html
+sidebar: sidebar
+keywords: ONTAP tools,Storage Replication Adapter
+summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
+---
+= Requirements for deploying the ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
+
+You can use the ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server Virtual Appliance (vCSA). You must deploy the ONTAP tools on a supported vSphere that includes ESXi system.
+
+* *Installation package space requirements per node*
+** 10 GB for thin provisioned installations
+** 200 GB for thick provisioned installations
+
+* *Host system sizing requirements per node*
+Recommended memory as per the size of deployment and per node is as shown in the table below:
+
+|===
+|Type of deployment|CPUs|Memory(GB)
+|Small (S)
+|8
+|16
+|Medium (M)
+|12
+|24
+|Large (L)
+|16
+|32
+|===
+== Minimum storage and application requirements:
+
+|===
+|Storage, host, and applications|Version requirements
+
+|ONTAP
+|ONTAP 9.10.1 , 9.11 , 9.12, and 9.13
+
+|VMware vSphere
+|Minimum supported VMware version is 7.0.3.
+
+|ESXi hosts
+|ESXi 7.0.3 or later version 
+
+|vCenter server
+|vCenter 7.0.3
+
+|VASA provider 
+|3.0
+
+|OVA Application 
+|10.0
+
+|===
+
+
+The Interoperability Matrix Tool (IMT) contains the latest information about the supported versions of ONTAP, vCenter Server, ESXi hosts, and plug-in applications.
+
+https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT[Interoperability Matrix Tool^]
+
+== Additional deployment considerations
+You must consider few requirements while customizing the deployment ONTAP tools.
+
+=== Application user password
+
+This is the password assigned to the administrator account. For security reasons, it is recommended that the password length is eight to thirty characters long and contains a minimum of one upper, one lower, one digit, and one special character. Password expires after 90 days.
+
+=== Appliance maintenance console credentials
+
+You must access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Application Configuration menu of the maintenance console of your ONTAP tools to change the password.
+
+=== vCenter Server IP address
+
+* You should provide the IP address (IPv4) of the vCenter Server instance to which you want to register ONTAP tools.
++
+The type of ONTAP tools and VASA certificates generated depends on the IP address (IPv4) that you have provided during deployment.
+
+* The ONTAP tools IP address used to register with vCenter Server depends on the type of vCenter Server IP address (IPv4) entered in the deployment wizard.
++
+Both the ONTAP tools and VASA certificates will be generated using the same type of IP address used during vCenter Server registration.
+* Ensure that VM's are not migrated during installation.
++
+NOTE: IPv6 is not supported in ONTAP tools for VMware vSphere 10.0 release.
+
+=== Appliance network properties
+
+Specify a valid DNS hostname (unqualified) as well as the static IP address for the ONTAP tools and the other network parameters. DHCP is not supported in ONTAP tools for VMware vSphere 10.0 release. All of these parameters are required for proper installation and operation.
+

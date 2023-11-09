@@ -1,0 +1,26 @@
+---
+permalink: concepts/concept_ontap_tools_overview.html
+sidebar: sidebar
+keywords:
+summary: 'The ONTAP tools for VMware vSphere manages provisioning of datastores and virtual-machines in VMware environments that use NetApp storage backends.'
+---
+= ONTAP tools Overview
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The ONTAP tools for VMware vSphere manages provisioning of datastores and virtual-machines in VMware environments that use NetApp storage backends. It enables the administrators to manage the storage within the vCenter Server directly and hence simplifies the storage and data management for VMware environments.
+
+ONTAP tools for VMware vSphere 10.0 release is a collection of horizontally scalable, event driven,
+microservices deployed as an Open Virtual Appliance (OVA). It is packaged in various deployment form factors like Open Virtual Appliance (OVA) and Software as a service (SaaS) for on-prem.
+
+ONTAP tools for VMware vSphere consists of:
+
+* Virtual machine functionality
+* VASA Provider for VM granular
+* Storage policy-based management
+
+== ONTAP tools VASA Provider
+
+ONTAP tools VASA provider supports high scale requirements for Virtual volumes (vVols). It supports NFS protocol, iSCSI protocol, and OVA deployment.
+VASA Provider for VMware is a product that provides lifecycle management in a VMware deployment with ONTAP.
