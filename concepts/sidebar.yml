@@ -14,4 +14,4 @@ entries:
   - title: Configure high availability for ONTAP tools
     url: /concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html
   - title: AutoSupport
-    url: /concept/asup.html
+    url: /concepts/asup.html
