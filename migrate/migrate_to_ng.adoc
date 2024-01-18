@@ -30,7 +30,7 @@ As an existing user you need to take the OVA backup from 9.10/9.11 before upgrad
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Deploy OVA for ONTAP tools for VMware vSphere 10.0 release. See link:../qsg_10.html[ONTAP tools Quick start]
+. Deploy OVA for ONTAP tools for VMware vSphere 10.0 release. See link:../deploy/qsg_10.html[ONTAP tools Quick start]
 . Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.0 release. See link:../configure/add_vcenter.html[Add vCenter]. 
 . Onboard storage backend locally from the remote plugin vCenter APIs. See link:../configure/onboard_svm.html[Onboard storage backend]. Add storage as local scoped for migration.
 . Use the following API to migrate:
