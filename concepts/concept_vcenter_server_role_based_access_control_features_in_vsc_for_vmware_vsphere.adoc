@@ -24,7 +24,7 @@ To successfully complete a task, you must have the appropriate vCenter Server RB
 
 NOTE: The vCenter Server roles apply to ONTAP tools vCenter users, not to administrators. By default, administrators have full access to the product and do not require roles assigned to them.
 
-Users and groups do not have roles assigned to them. They gain access to a role by being part of a vCenter Server role.
+The users and groups gain access to a role by being part of a vCenter Server role.
 
 == Key points about assigning and modifying roles for vCenter Server
 
