@@ -13,7 +13,7 @@ You can register VASA provide to vCenter by using either self signed certificate
 
 *About this task*
 
-You need to have the CA signed certificate placed in vCenter when using the CA signed certificate method.
+You need to have the CA signed certificate placed in vCenter when using the CA signed certificate method. 
 
 
 *Steps*
@@ -23,7 +23,7 @@ You need to have the CA signed certificate placed in vCenter when using the CA s
 . Click the *Add* icon. 
 . Enter the connection information for the storage provider:  
 ..	Name: Any user-friendly name like "ScaleoutVP"
-..	URL: https://<name>/virtualization/version.xml - the name in the URL corresponds to Virtual IP provided during the OVA deployment for Single vCenter deployment (or) Domain name for Multi-vCenter deployments. 
+..	URL: https://<name>/virtualization/version.xml - the name in the URL corresponds to Virtual IP provided during the OVA deployment for Single vCenter deployment (or) Domain name for Multi-vCenter deployments. Add the certificates to the URL. Same certificates are published to vCenter. 
 .. Credentials: <VASA Provider username>/< VASA Provider password> provided during OVA deployment. 
 . After the VASA is registered, click *OK*.   
 Ensure that it is listed under Storage Provider and the status is Online. 
