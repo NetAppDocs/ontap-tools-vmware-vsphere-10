@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: qsg_10.html
+permalink: deploy/qsg_10.html
 keywords: QSG, ONTAP tools for VMware vSphere, Quick start guide, Installing
 summary: Provides instructions for deploying and initializing ONTAP tools for VMware vSphere.
 ---
@@ -70,7 +70,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 
 |===
 
-For more information see link:../deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html[Requirements for deploying the ONTAP tools]
+For more information, see link:../deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html[Requirements for deploying the ONTAP tools]
 
 === ONTAP tools requirements
 
