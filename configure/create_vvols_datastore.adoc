@@ -4,106 +4,45 @@ sidebar: sidebar
 keywords:
 summary: 'You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.'
 ---
-= Create vVols datastore
+= Create datastore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+
+Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user had privilege to execute.
+
+Create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore.
+ 
+== Create vVols datastore
+
 You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
+The user interface is self explanatory, use these steps as guidelines. 
 
-You need to pass x-auth for the API. You can generate this x-auth from the new API added under Auth in Swagger.
-----
-/virtualization/api/v1/auth/vcenter-login
-----
-. Create vVols datastore with new volume.
-  Get Aggregate id, storage_id(SVM uuid) using ONTAP REST API. 
-+
-----
-POST /virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores
-----
-+
-Use the following URI to check the status:
-+
-----
-https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
-----
-+
-Request Body for NFS datastore
-+
-----    
-{
-   "name":"nfsds1",
-   "protocol":"nfs",
-   "platform_type":"aff",
-   "moref":"domain-c8",
-   "volumes":[
-      {
-         "is_existing":false,
-         "name":"vol_nfs_pvt",
-         "size_in_mb":2048000,
-         "space_efficiency":"thin",
-         "aggregate":{
-            "id":"d7078b3c-3827-4ac9-9273-0a32909455c2"
-         },
-         "qos":{
-            "min_iops":200,
-            "max_iops":5000
-         }
-      }
-   ],
-   "storage_backend":{
-      "storage_id":"654c67bc-0f75-11ee-8a8c-00a09860a3ff"
-   }
-}
-----
-+
-Request body for iSCSI datastore:
-----
-{
-   "name" : "iscsi_custom",
-   "protocol" : "iscsi",
-   "platform_type": "aff",
-   "moref" : "domain-c8",
-   "volumes" : [
-       {
-           "is_existing" : false,
-           "name" : "iscsi_custom",
-           "size_in_mb" : 8034,
-           "space_efficiency" : "thin",
-           "aggregate" : {
-               "id" : "54fe5dd4-e461-49c8-bb2d-6d62c5d75af2"
-           }
-       }
-   ],
-   "custom_igroup_name": "igroup1",
-   "storage_backend": {
-                       "storage_id": "eb9d33ab-1960-11ee-9506-00a0985c6d9b"    }
-}
-----
-. Create vVols datastore with existing volumes. 
-+
-Get aggregate_id and volume_id using ONTAP REST API. 
-+
-----
-     POST /virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores
-----
-Request Body
-----
-     {
-    "name" : "nfsds2",
-    "protocol" : "nfs",
-    "platform_type": "aff",
-    "moref" : "domain-c8",
-    "volumes" : [
-        {
-              "is_existing": true,
-              "id": "e632a632-1412-11ee-8a8c-00a09860a3ff"
-            }
-    ],
-    "storage_backend": {
-                        "storage_id": "33a8b6b3-10cd-11ee-8a8c-00a09860a3ff"    }
- 
-}
-----
+.Steps
+. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
+. Select vVols in *Type* and click Next
+. Provide datastore name and protocol information and click NEXT
+. Select Platform and storage VM in the Storage pane. You can select the custom Export Policy in the advanced options.
+. You can either Create new volumes or Use existing volumes in the Storage attributes Pane and click NEXT.
+. Review the summary and click  FINISH.
+Datastore gets created and mounted on all the host 
+
+
+== Create NFS datastore
+
+.Steps
+. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
+. Select vVols in *Type* and click Next
+. Provide datastore name and protocol information and click NEXT
+. Select Platform and storage VM in the Storage pane. You can select the custom Export Policy in the advanced options.
+. You can either Create new volumes or Use existing volumes in the Storage attributes Pane and click NEXT.
+. Review the summary and click  FINISH.
+Datastore gets created and mounted on all the host 
+== Create VMFS datastore

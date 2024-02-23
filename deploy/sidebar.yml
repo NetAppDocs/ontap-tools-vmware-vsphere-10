@@ -15,5 +15,5 @@ entries:
     url: /deploy/nonha_deployment.html
   - title: How to deploy HA three node configuration
     url: /deploy/ha_three_node.html
-
-    
+  - title: Install the NFS VAAI plug-in
+    url: /deploy/task_install_the_nfs_vaai_plug_in.html

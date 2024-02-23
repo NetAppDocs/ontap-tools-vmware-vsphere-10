@@ -18,6 +18,8 @@ entries:
   - title: Register VASA Provider to vCenter
     url: /configure/register_vasa.html
   - title: Create vVols datastore
-    url: /configure/create_vvols_datastore.html        
+    url: /configure/create_vvols_datastore.html    
+  - title: Provision traditional datastores
+    url: /configure/task_provision_datastores.html    
   - title: Verify registered SVM
     url: /configure/verify_registered_svm.html        

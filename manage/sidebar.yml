@@ -31,3 +31,15 @@ entries:
     url: /manage/task_collect_the_log_files.html
   - title: Discovery
     url: /manage/discovery.html
+  - title: Manage virtual machines
+    entries:
+      - title: Considerations for migrating or cloning virtual machines
+        url: /manage/reference_considerations_for_migrating_virtual_machines.html
+      - title: Migrate traditional virtual machines to vVols datastores
+        url: /manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html
+      - title: Migrate virtual machines with older storage capability profiles
+        url: /manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html
+      - title: VASA cleanup
+        url: /manage/task_delete_virtual_machines.html
+  - title: Modify ESXi host settings
+    url: /manage/task_edit_esxi_host_settings.html
