@@ -3,6 +3,8 @@ title: Configure ONTAP tools
 entries:
   - title: Manage network access
     url: /configure/ip_whitelisting.html
+  - title: Configure ESXi server multipathing and timeout settings
+    url: /configure/task_configure_esx_server_multipathing_and_timeout_settings.html
   - title: Configure user roles and privileges
     url: /configure/task_configure_user_role_and_privileges.html
   - title: ONTAP tools manager user interface
@@ -19,7 +21,30 @@ entries:
     url: /configure/register_vasa.html
   - title: Create vVols datastore
     url: /configure/create_vvols_datastore.html    
-  - title: Provision traditional datastores
-    url: /configure/task_provision_datastores.html    
   - title: Verify registered SVM
-    url: /configure/verify_registered_svm.html        
+    url: /configure/verify_registered_svm.html
+  - title: Configure storage capability profiles
+    entries:
+      - title: Overview of storage capability profiles
+        url: /configure/concept_configure_storage_capability_profiles.html
+      - title: Create storage capability profiles
+        url: /configure/task_create_storage_capability_profiles.html
+      - title: Generate storage capability profiles automatically
+        url: /configure/task_automatically_generating_scps.html
+  - title: Configure datastores
+    entries:
+      - title: Provision traditional datastores
+        url: /configure/task_provision_datastores.html
+      - title: Map datastores to storage capability profiles
+        url: /configure/task_map_storage_to_storage_capability_profiles.html
+      - title: Assign QoS policies
+        url: /configure/task_assign_qos_policies.html
+      - title: Verify datastore compliance with the mapped storage capability profile
+        url: /configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html
+      - title: Provision vVols datastores
+        url: /configure/task_provision_vvols_datastores.html
+      - title: Rebalance vVols datastores
+        url: /configure/reference_rebalance_vvols_datastore.html
+      - title: Delete vVols datastores
+        url: /configure/reference_delete_vvols.html  
+        
