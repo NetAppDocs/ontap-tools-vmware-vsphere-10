@@ -1,0 +1,113 @@
+---
+permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html
+sidebar: sidebar
+keywords:
+summary: 'You can set timeouts and other values on the ESXi hosts using ONTAP tools for VMware vSphere to ensure best performance and successful failover. The values that ONTAP tools sets are based on internal NetApp testing.'
+---
+= ESXi host values set using ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can set timeouts and other values on the ESXi hosts using ONTAP tools for VMware vSphere to ensure best performance and successful failover. The values that ONTAP tools sets are based on internal NetApp testing.
+
+You can set the following values on an ESXi host:
+
+== HBA/CNA Adapter Settings
+
+Sets the recommended HBA timeout settings for NetApp storage systems.
+
+* *Disk.QFullSampleSize*
++
+Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
+
+* *Disk.QFullThreshold*
++
+Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.
++
+* *Emulex FC HBA timeouts*
++
+Use the default value.
++
+* *QLogic FC HBA timeouts*
++
+Use the default value.
+
+== ESXi advanced configuration
+
+* *VMFS3.HardwareAcceleratedLocking*
++
+You should set this value to 1.
+
+* *VMFS3.EnableBlockDelete*
++
+You should set this value to 0.
+
+== NFS settings
+
+* *Net.TcpipHeapSize*
++
+Set this value to 32.
+* *Net.TcpipHeapMax*
++
+Set this value to 1024MB.
+* *NFS.MaxVolumes*
++
+Set this value to 256.
+* *NFS41.MaxVolumes*
++
+Set this value to 256.
+* *NFS.MaxQueueDepth*
++
+Set this value to 128 or higher to avoid queuing bottlenecks.
+* *NFS.HeartbeatMaxFailures*
++
+Set this value to 10 for all NFS configurations.
+* *NFS.HeartbeatFrequency*
++
+Set this value to 12 for all NFS configurations.
+* *NFS.HeartbeatTimeout*
++
+Set this value to 5 for all NFS configurations.
+
+== FC/FCoE settings
+
+* *Path selection policy*
++
+Set this value to "`RR`" (round robin) when FC paths with ALUA are used.
++
+Set this value to "`FIXED`" for all other configurations.
++
+Setting this value to "`RR`" helps to provide load balancing across all of the active/optimized paths. The value "`FIXED`" is used for older, non-ALUA configurations and helps to prevent proxy I/O.
+
+* *Disk.QFullSampleSize*
++
+Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
+
+* *Disk.QFullThreshold*
++
+Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.
+
+* *Emulex FC HBA timeouts*
++
+Use the default value.
+
+* *QLogic FC HBA timeouts*
++
+Use the default value.
+
+== iSCSI settings
+
+* *Path selection policy*
++
+Set this value to "`RR`" for all iSCSI paths.
++
+Setting this value to "`RR`" helps to provide load balancing across all of the active/optimized paths.
+
+* *Disk.QFullSampleSize*
++
+Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
+
+* *Disk.QFullThreshold*
++
+Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.

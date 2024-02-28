@@ -13,7 +13,7 @@ vCenters are the central management platforms that allow you to control hosts, v
 
 *About this task*
 
-You can add and manage multiple vCenters with one instance of ONTAP tools for VMware vCenter 10.0.
+You can add and manage multiple vCenters with one instance of ONTAP tools for VMware vSphere.
 
 *Steps*
 

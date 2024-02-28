@@ -25,24 +25,61 @@ The user interface is self explanatory, use these steps as guidelines.
 . Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
 deployment.
 . Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
-. Select vVols in *Type* and click Next
-. Provide datastore name and protocol information and click NEXT
-. Select Platform and storage VM in the Storage pane. You can select the custom Export Policy in the advanced options.
-. You can either Create new volumes or Use existing volumes in the Storage attributes Pane and click NEXT.
-. Review the summary and click  FINISH.
+. Select vVols in *Datastore Type*  in the *Type* pane.
+. Provide *Datastore name* and *Protocol* information in the *Name and Protocol* pane.
+. Select *Platform* and *storage VM* in the Storage pane. In the *Advanced options* section, depending on your selection either select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol).
+[NOTE]
+*Asymmetric* toggle button will be visible only if iSCSI/FC was selected in the previous step and performance or capacity is selected in the platform rop-down.
+. You can either create new volumes or use existing volumes in the *Storage attributes* Pane.
+. Review your selection in the *Summary* pane and click *FINISH*.
 Datastore gets created and mounted on all the host 
 
-
 == Create NFS datastore
+//10.1 addition
+VMware Network File System (NFS) datastore is a type of storage that uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
 
 .Steps
 . Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
 deployment.
 . Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
-. Select vVols in *Type* and click Next
-. Provide datastore name and protocol information and click NEXT
-. Select Platform and storage VM in the Storage pane. You can select the custom Export Policy in the advanced options.
-. You can either Create new volumes or Use existing volumes in the Storage attributes Pane and click NEXT.
-. Review the summary and click  FINISH.
-Datastore gets created and mounted on all the host 
+. Select NFS in *Datastore Type* in the *Type* pane.
+. Provide datastore name, size, and protocol information. In the advanced options, select the Datastore cluster and Kerberos Authentication.
+[NOTE]
+Kerberos Authentication is available only when NFS 4.1 protocol is selected. 
+. Select Tier/Platform and Storage VM in the Storage pane. You can select *custom Export Policy* in the *Advanced Option* section.
+. Select the Aggregate, and choose the advanced options as required in the *Storage Attributes* pane.
+. Review the selections in the *Summary* pane and click *FINISH*.
+
+Datastore gets created and mounted on all the hosts.
+
 == Create VMFS datastore
+
+Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
+
+*About this task*
+
+Check the following items before proceeding: 
+
+* Check if all target hosts are healthy and check if host supports protocol.
+* Create new volume (min size 2GB)
+* Set Volume options with QOS
+* Create LUN of type vmware
+* Get initiators for all target hosts
+* Create/reuse igroup based on matching initiators
+* Map Lun to igroup
+* Add iSCSI targets to ESXi hosts
+* Rescan Host Bus Adapter(HBA's) on all hosts
+* Mount volume as VMFS6 datastore(for 6.5+ hosts)
+* Rescan VMFS storage on ESXi hosts
+* Move datastore to datastore-cluster
+* Rebalance ISCSI paths
+
+.Steps
+. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
+. Select VMFS in *Datastore Type* in the *Type* pane.
+. Provide datastore name, size, and protocol information in the Name and Protocol pane. Select the Datastore cluster in the *Advanced options* section of the pane. 
+. Select Platform and storage VM in the Storage pane. Select Asymmetric toggle button to (need more info). Provide the *Custom initiator group name* in the *Advanced options* section of the pane.
+. Select the Aggregate from the drop-down. Select the *Space Reserve* and *Use existing volume* options as required from the *Advanced options* section and provide the details as required.
+. Review the datastore details in the *Summary* pane and click *FINISH*.

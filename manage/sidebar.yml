@@ -3,9 +3,13 @@ title: Manage ONTAP tools
 entries:
   - title: Manage datastores
     entries:
-      - title: Expand or shrink Storage of vVol Datastore
+      - title: Mount datastore on additional hosts
+        url: /manage/task_mount_datastores_on_host.html
+      - title: Resize datastores
+        url: /manage/task_resize_datastores.html
+      - title: Resize vVol Datastore
         url: /manage/expand_storage_of_vvol_datastore.html
-      - title: Delete vVols datastore
+      - title: Remove storage from vVols datastore
         url: /manage/task_remove_storage_from_a_vvols_datastore.html
       - title: Mount and unmount a vVols datastore
         url: /manage/task_mount_a_vvols_datastore.html

@@ -3,14 +3,26 @@ title: Configure ONTAP tools
 entries:
   - title: Manage network access
     url: /configure/ip_whitelisting.html
-  - title: Configure ESXi server multipathing and timeout settings
-    url: /configure/task_configure_esx_server_multipathing_and_timeout_settings.html
+  - title: Configure ESXi settings
+    entries:
+      - title: Configure ESXi server multipathing and timeout settings
+        url: /configure/task_configure_esx_server_multipathing_and_timeout_settings.html
+      - title: ESXi host values set using ONTAP tools
+        url: /configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html
   - title: Configure user roles and privileges
     url: /configure/task_configure_user_role_and_privileges.html
   - title: ONTAP tools manager user interface
     url: /configure/ontap_tools_manager_ui.html
-  - title: Add vCenter
-    url: /configure/add_vcenter.html
+  - title: vCenter Management
+    entries:
+      - title: Add vCenter
+        url: /configure/add_vcenter.html
+      - title: Remote plugin Registration
+        url: /configure/remote_plugin_register.html
+      - title: Remote plugin unregistration
+        url: /configure/remote_plugin_unregister.html
+  - title: Discover storage systems and hosts
+    url: /configure/task_discover_storage_systems_and_hosts.html
   - title: Add storage backend
     url: /configure/add_storage_backend.html
   - title: Associate storage backend with vCenter
@@ -45,6 +57,6 @@ entries:
         url: /configure/task_provision_vvols_datastores.html
       - title: Rebalance vVols datastores
         url: /configure/reference_rebalance_vvols_datastore.html
-      - title: Delete vVols datastores
+      - title: Delete datastores
         url: /configure/reference_delete_vvols.html  
         

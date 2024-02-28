@@ -14,7 +14,7 @@ Storage backends are systems that the EXSi hosts use for data storage.
 
 *About this task*
 
-This task helps you to onbord the ONTAP cluster.
+This task helps you to onboard the ONTAP cluster.
 
 *Steps*
 
