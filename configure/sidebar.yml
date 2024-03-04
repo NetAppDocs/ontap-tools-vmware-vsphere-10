@@ -31,7 +31,7 @@ entries:
     url: /configure/onboard_svm.html
   - title: Register VASA Provider to vCenter
     url: /configure/register_vasa.html
-  - title: Create vVols datastore
+  - title: Create datastore
     url: /configure/create_vvols_datastore.html    
   - title: Verify registered SVM
     url: /configure/verify_registered_svm.html
