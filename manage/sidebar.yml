@@ -5,7 +5,7 @@ entries:
     entries:
       - title: Mount traditional datastores
         url: /manage/task_mount_datastores_on_host.html
-      - title: Mount and unmount a vVols datastore
+      - title: Mount vVols datastore
         url: /manage/task_mount_a_vvols_datastore.html
       - title: Resize traditional datastores
         url: /manage/task_resize_datastores.html

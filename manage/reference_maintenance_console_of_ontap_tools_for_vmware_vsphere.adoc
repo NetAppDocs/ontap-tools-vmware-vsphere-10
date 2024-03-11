@@ -26,6 +26,7 @@ a|
 
 . Display server status summary
 . Change LOG level for VASA Provider Services
+. Disable ASUP
 
 a|
 System Configuration

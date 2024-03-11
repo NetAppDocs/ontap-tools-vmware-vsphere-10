@@ -1,0 +1,5 @@
+section: upgrade
+title: Upgrade ONTAP tools
+entries:
+  - title: Upgrade to the latest ONTAP tools version 
+    url: /upgrade/upgrade_otv.html

@@ -75,16 +75,16 @@ You must access the maintenance console by using the "`maint`" user name. You ca
 
 === vCenter Server IP address
 
-* You should provide the IP address (IPv4) of the vCenter Server instance to which you want to register ONTAP tools.
+* You should provide the IP address (IPv4 or IPV6) of the vCenter Server instance to which you want to register ONTAP tools.
 +
-The type of ONTAP tools and VASA certificates generated depends on the IP address (IPv4) that you have provided during deployment.
+The type of ONTAP tools and VASA certificates generated depends on the IP address (IPv4 or IPV6) that you have provided during deployment.
 
-* The ONTAP tools IP address used to register with vCenter Server depends on the type of vCenter Server IP address (IPv4) entered in the deployment wizard.
+* The ONTAP tools IP address used to register with vCenter Server depends on the type of vCenter Server IP address (IPv4 or IPV6) entered in the deployment wizard.
 +
 Both the ONTAP tools and VASA certificates will be generated using the same type of IP address used during vCenter Server registration.
 * Ensure that VM's are not migrated during installation.
 +
-NOTE: IPv6 is not supported in ONTAP tools for VMware vSphere 10.0 release.
+NOTE: IPv6 is supported from ONTAP tools for VMware vSphere 10.1 release onwards.
 
 === Appliance network properties
 

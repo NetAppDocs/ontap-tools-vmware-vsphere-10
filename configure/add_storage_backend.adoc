@@ -23,6 +23,6 @@ This task helps you to onboard the ONTAP cluster.
 . Select *Add*. 
 . Provide the Server IP Address or FQDN, Username, and Password details and select *Add*.
 [NOTE]
-Only IPV4 management LIFs are supported.
+IPV4 and IPV6 management LIFs are supported.
 
 

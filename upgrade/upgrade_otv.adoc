@@ -1,0 +1,26 @@
+---
+permalink: upgrade/upgrade_otv.html
+sidebar: sidebar
+keywords: migrate
+summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.'
+---
+= Upgrade to the latest release of ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When you upgrade from Upgrade from ONTAP tools for VMware vSphere 10.0 to 10. 1, a recovery volume is created and all the necessary details is taken into the recovery volume. 
+For ONTAP tools for VMware vSphere 10.1 build to build upgrade, the same recovery volume will be used and the details will be refreshed. 
+Upgrade is supported for both HA and non-HA deployments.
+For certificate management is handled after post upgrade using the APIs. 
+
+*Steps*
+
+. From the vCenter Server, open a console to the ONTAP tools.
+. Log in as the maintenance user.
+. Enter 3 to select System Configuration menu.
+. Enter 7 to select the upgrade option.
+. When you upgrade the following actions are performed automatically:
+.. Certificate upgrade
+.. Remote plugin upgrade
+
