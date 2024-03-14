@@ -18,7 +18,7 @@ POST /virtualization/api/v1/vcenters/<vcguid>/storage-backends
 {
      "hostname_or_ip": "172.21.103.107",
      "username": "svm11",
-     "password": "netapp1!"
+     "password": "xxxxxx"
    }
 ----
 [NOTE]
