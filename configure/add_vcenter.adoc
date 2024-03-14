@@ -17,7 +17,7 @@ You can add and manage multiple vCenters with one instance of ONTAP tools for VM
 
 *Steps*
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar
 . Select *ADD* to onboard vCenters with vCenter IP Address/Hostname, username, password, and port. 
 
