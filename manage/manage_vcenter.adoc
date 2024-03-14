@@ -17,7 +17,7 @@ You can add and manage multiple vCenters with one instance of ONTAP tools for VM
 
 *Steps*
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar
 . Select *ADD* to onboard vCenters with vCenter IP Address/Hostname, username, password, and port. 
 . Navigate to *Storage Backend* page and select *Add to onboard storage backend* (ONTAP Cluster) with Hostname, username, password, and port. 
@@ -31,7 +31,7 @@ This task help you to create mapping between storage backend and onboarded vCent
 
 *Steps*
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar.
 . Click on the vertical ellipsis against the vCenter that you want to associate or dissociate with storage backends.
 . Select *Associate or Dissociate storage backend* depending on what action you want to perform.
@@ -41,7 +41,7 @@ See link:../configure/task_configure_user_role_and_privileges.html[List of minim
 == Modify vCenter
 Follow the steps below to modify the vCenters.
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar
 . Click on the vertical ellipsis against the vCenter that you want modify and select *Modify*.
 . Modify the vCenter details and select *Modify*.
@@ -49,7 +49,7 @@ Follow the steps below to modify the vCenters.
 == Remove vCenter
 You need to remove all the storage backends attached to the vCenter before removing it. 
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar
 . Click on the vertical ellipsis against the vCenter that you want remove and select *Remove*.
 +

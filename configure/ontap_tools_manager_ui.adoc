@@ -23,7 +23,7 @@ Storage backend is global when added from ONTAP tools manager or commons APIs an
 Example: For multi-tenant setup, you can add storage backend (cluster) globally and SVM locally to use direct SVM credentials.
 * Log bundle downloads
 
-To access ONTAP tools UI, launch https://loadBalanceIP:8443/virtualization/ui/ from the browser and login with ONTAP tools administrator credentials provided during deployment.
+To access ONTAP tools UI, launch `\https://loadBalanceIP:8443/virtualization/ui/` from the browser and login with ONTAP tools administrator credentials provided during deployment.
 
 image::../media/ontap_tools_manager.png["ONTAP tools manager UI"]
 
