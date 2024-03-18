@@ -1,0 +1,91 @@
+---
+permalink: migrate/migrate_to_ng.html
+sidebar: sidebar
+keywords: migrate
+summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.'
+---
+= Migrate to the latest release of ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.
+
+[NOTE]
+It is recommended to migrate classic setup only if the setup is servicing the VASA provider feature alone. If you have features like traditional/NVMe datastores, vVol replication, and if SRA is enabled on classic, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.0.
+
+*About this task* 
+
+Migration is supported from ONTAP tools for VMware vSphere 9.10D2 and 9.11D4 releases to 10.0 release. To migrate from:
+* ONTAP tools for VMware vSphere 9.10 release, first upgrade to 9.10D2 release then migrate to 10.0 release.
+* ONTAP tools for VMware vSphere 9.11 release, first upgrade to 9.11D4 release then migrate to 10.0 release.
+
+[NOTE]
+As an existing user you need to take the OVA backup from 9.10/9.11 before upgrading to 9.10D patch or 9.11D patch 
+
+*Steps*
+
+. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere 9.10D2 and 9.11D4. To enable the port, login to CLI with root user and run the following command:
++
+----
+iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
+----
+. Deploy OVA for ONTAP tools for VMware vSphere 10.0 release. See link:../deploy/qsg_10.html[ONTAP tools Quick start]
+. Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.0 release. See link:../configure/add_vcenter.html[Add vCenter]. 
+. Onboard storage backend locally from the remote plugin vCenter APIs. See link:../configure/onboard_svm.html[Onboard storage backend]. Add storage as local scoped for migration.
+. Use the following API to migrate:
++
+----
+/api/v1/vcenters/{vcguid}/migration-jobs
+
+{
+  "otv_ip": "10.10.10.10",
+  "vasa_provider_credentials": {
+    "username": "Administrator",
+    "password": "password"
+  }
+}
+----
++
+Above API call gives the jobid, which can be used for status check.
+// URI <https://10.60.24.125:8443/virtualization/api/v1/migration/migrate>
+. Use the following URI to check the status:
++
+----
+https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+----
+. Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
+. Add ONTAP tools storage provider 10.0 to the vCenter and link:../configure/register_vasa.html[Register VASA Provider to vCenter].
+. Stop the ONTAP tools storage provider 9.10 /9.11 VASA Provider service (STOP VASA provider from maint console).
++
+[Note] 
+NetApp recommends you not to delete the VASA provider.
++
+Once the old VASA provider is stopped, vCenter fails over to ONTAP tools for VMware vSphere 10.0. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere 10.0.
+. Perform the patch migrate using the following API:
++
+----
+/virtualization/api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
+----
++
+Request body is empty  for patch operation.
++
+[NOTE]
+uuid is the migration uuid returned in the response of post migrate API.
++
+Once the patch migrate API is successful, all the VMs will be compliant with the storage policy.
+
+The delete API for migration is:
+
+----
+Delete /virtualization/api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
+----
+This API deletes migration by Migration Id and deletes migration on the given vCenter.
+
+After successful migration and after you register ONTAP tools 10.0 to the vCenter, do the following:
+
+* Refresh the certificate on all the hosts.
+* Wait for sometime before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that  are present in the setup. When you don't wait, the operations may fail intermittently.
+
+
+

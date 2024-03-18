@@ -15,6 +15,7 @@ sidebar:
     - section: concepts
     - section: deploy
     - section: configure
+    - section: protect
     - section: manage
     - section: migrate
     - section: upgrade
