@@ -11,19 +11,6 @@ summary: 'vCenters are central management platforms that allow you to control ho
 [.lead]
 vCenters are central management platforms that allow you to control hosts, virtual machines, and storage backends.
 
-== Add vCenter
-
-You can add and manage multiple vCenters with one instance of ONTAP tools for VMware vCenter 10.0.
-
-*Steps*
-
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
-. Select vCenters from the sidebar
-. Select *ADD* to onboard vCenters with vCenter IP Address/Hostname, username, password, and port. 
-. Navigate to *Storage Backend* page and select *Add to onboard storage backend* (ONTAP Cluster) with Hostname, username, password, and port. 
-
-See link:../configure/task_configure_user_role_and_privileges.html[List of minimum privileges required for non-admin global scoped cluster user].
-
 == Associate or Dissociate storage backend with vCenter
 
 vCenter listing page shows the associated number of storage backends. Each vCenter has option to Associate or Disassociate a storage backend 

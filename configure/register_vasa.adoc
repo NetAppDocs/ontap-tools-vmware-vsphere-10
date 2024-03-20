@@ -23,11 +23,11 @@ You need to have the CA signed certificate placed in vCenter when using the CA s
 . Click the *Add* icon. 
 . Enter the connection information for the storage provider:  
 ..	Name: Any user-friendly name like "ScaleoutVP"
-..	URL: https://<name>/virtualization/version.xml - the name in the URL corresponds to Virtual IP provided during the OVA deployment for Single vCenter deployment (or) Domain name for Multi-vCenter deployments. Add the certificates to the URL. Same certificates are published to vCenter. 
+..	URL: `\https://<name>/virtualization/version.xml` - the name in the URL corresponds to Virtual IP provided during the OVA deployment for Single vCenter deployment (or) Domain name for Multi-vCenter deployments. Add the certificates to the URL. Same certificates are published to vCenter. 
 .. Credentials: <VASA Provider username>/< VASA Provider password> provided during OVA deployment. 
 . After the VASA is registered, click *OK*.   
 Ensure that it is listed under Storage Provider and the status is Online. 
 +
 If you have placed CA signed certificate in vCenter, the VASA registration continues with CA signed certificate. Else, the handshaking fails and registration defaults to SSA certificate.
-. You can register multiple vCenters to a single scaleout vp instance. 
+. You can register multiple vCenters to a single scaleout VP instance. 
 Repeat the steps mentioned above to register multiple vCenters. 

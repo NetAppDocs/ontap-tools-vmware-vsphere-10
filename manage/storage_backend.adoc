@@ -11,13 +11,15 @@ summary: 'Storage backends are systems that the EXSi hosts use for data storage.
 [.lead]
 Storage backends are systems that the EXSi hosts use for data storage.
 
-== Add storage backend
+== Discover storage
 
 Follow the steps below to add storage backends.
 
 *Steps*
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. From the shortcut, choose ONTAP tools > Storage backend 
+. Select Add
+Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select *Add*. 
 
@@ -28,7 +30,7 @@ Follow the steps below to modify the existing storage backend.
 . Select storage backends from the sidebar.
 . Select the  *Storage Backend* you want to modify
 . Click on the vertical ellipsis menu and select *Modify*. 
-. Enter the *Username* and *Password* to modify the storage backend.
+. You can modify the credentials or the port. Enter the *Username* and *Password* to modify the storage backend.
 
 == Remove storage backend
 
