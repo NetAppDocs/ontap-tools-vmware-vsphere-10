@@ -44,38 +44,13 @@ You need to remove all the storage backends attached to the vCenter before remov
 Once you remove the vCenter, it will no longer be maintained by the application.
 
 == Manage Storage threshold
+// Need to add procedure from ontap tools shortcut Settings> Threshold Settings > Modify. Move this API to API section
+You can set the threshold to receive notifications in vCenter when the volume and the aggregate capacity reaches certain levels.
 
-Use the following Get threshold API to retrieve the configured storage threshold limits for volume and aggregate.
-
-----
-GET​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
-----
-
-Examples:
-Get the Storage thresholds per vcenter by vcenter guid
-----
-GET "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
-----
-
-Use the following PATCH configure alarm for volume and aggregate to generate notification when configured threshold limits are reached. 
-----
-PATCH​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
-----
-
-Examples:
-Update the Storage thresholds per vcenter by vcenter guid. Default limits are 80% for nearly-full and 90% for full.
-Modifying all threshold settings
-----
-{{{}PATCH "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
-Request Body
-{
-"volume":
-
-{ "nearly_full_percent": 80, "full_percent": 90 }
-,
-"aggregate": {
-"nearly_full_percent": 80,
-"full_percent": 90
-}
-}{}}}{}
-----
+.Steps:
+. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the left pane of ONTAP tools, navigate to *Settings* >*Threshold Settings* > *Edit*
+. In the Edit Threshold window, provide the desired values in the Nearly Full and Full fields and click Save.
+You can reset the numbers to recommended values, which is 80 for Nearly full and 90 for full.

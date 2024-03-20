@@ -11,6 +11,8 @@ summary: 'You can use VASA Provider for ONTAP to create and manage VMware Virtua
 [.lead]
 You can use VASA Provider for ONTAP to create and manage VMware Virtual Volumes (vVols). You can provision, edit, mount, and delete a vVols datastore. You can also add storage to the vVols datastore or remove storage from the vVols datastore to provide greater flexibility.
 
+You need to register the VASA provider with the vCenter in the VASA provider settings to see vVols related options in the create datastore workflow.
+
 A vVols datastore consists of one or more FlexVol volumes within a storage container (also called backing storage). A virtual machine can be spread across one vVols datastore or multiple vVols datastores.
 
 While you can create a vVols datastore that has multiple FlexVol volumes, all of the FlexVol volumes within the storage container must use the same protocol (NFS or iSCSI) and the same storage virtual machines (SVMs).

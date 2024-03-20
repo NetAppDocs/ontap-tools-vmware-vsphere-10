@@ -2,29 +2,45 @@
 permalink: manage/storage_backend.html
 sidebar: sidebar
 keywords:
-summary: 'Storage backends are systems that the EXSi hosts use for data storage.'
+summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
 ---
 = Manage storage backend 
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Storage backends are systems that the EXSi hosts use for data storage.
+Storage backends are systems that the ESXi hosts use for data storage.
 
 == Discover storage
 
-Follow the steps below to add storage backends.
+Follow the steps below to discover the storage backends.
 
 *Steps*
 
-. From the shortcut, choose ONTAP tools > Storage backend 
-. Select Add
-Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
+. Click on the vertical ellipsis menu and select *Discover storage*
+
+You can perform the same action using ONTAP tools Manager UI
+
+. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
-. Select *Add*. 
+. Select *Discover storage*. 
+You can track the progress in the Recent Tasks panel.
 
 == Modify storage backend
 Follow the steps below to modify the existing storage backend.
+
+. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
+. Click on the vertical ellipsis menu and select *Modify* to modify the credentials or the port name.
+You can track the progress in the Recent Tasks panel.
+
+You can perform the same operation using the ONTAP tools manager UI:
 
 . Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select storage backends from the sidebar.
@@ -36,6 +52,15 @@ Follow the steps below to modify the existing storage backend.
 
 You need to delete all the datastores attached to the storage backend before removing the storage backend. 
 Follow the steps below to remove storage backend.
+
+. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
+. Click on the vertical ellipsis menu and select *Remove*. Ensure that the storage backend does not contain any datastores.
+You can track the progress in the Recent Tasks panel.
+
+You can perform the same operation using the ONTAP tools manager UI:
 
 . Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.

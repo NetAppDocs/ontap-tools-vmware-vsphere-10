@@ -2,7 +2,7 @@
 permalink: configure/add_storage_backend.html
 sidebar: sidebar
 keywords:
-summary: 'Storage backends are systems that the EXSi hosts use for data storage.'
+summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
 ---
 = Add storage backend
 :icons: font
@@ -10,7 +10,7 @@ summary: 'Storage backends are systems that the EXSi hosts use for data storage.
 
 [.lead]
 
-Storage backends are systems that the EXSi hosts use for data storage.
+Storage backends are systems that the ESXi hosts use for data storage.
 
 *About this task*
 

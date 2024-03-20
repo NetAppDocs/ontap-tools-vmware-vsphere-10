@@ -9,6 +9,8 @@ summary: 'This feature enables you to specify specific ESXi host address to be a
 :imagesdir: ../media/
 
 [.lead]
+// Need to add procedure with vCenter UI and ontap tools shortcut. move the API to API section. Setting> Manage network Access.
+
 
 This feature enables you to specify specific ESXi host address to be allowed for datastore mount operation.
 
@@ -18,18 +20,11 @@ If the setting is not provided, export policy adds all IP addresses discovered i
 
 By default all host IP's are added to the export policy.
 
-Use the following API to add IP addresses for whitelisting:
-
-----
-patch /api/v1/vcenters/{vcguid}/settings/ip-whitelist
- 
-{
-    value: string
-}
- 
-GET /api/v1/vcenters/{vcguid}/settings/ip-whitelist
- 
-{
-    value: string
-}
----- 
+.Steps
+. . Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
+deployment.
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the left pane of ONTAP tools, navigate to *Settings* > *Manage Network Access* > *Edit*. 
++
+Use coma(,) to separate the IP addresses. You can specify a specific IP address, or a range of IP addresses or IPv6 addresses.
+. Click *SAVE*. 
