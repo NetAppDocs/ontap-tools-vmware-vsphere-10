@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Resizing a datastore enables you to increase or decrease the storage for your virtual machine files. You might need to change the size of a datastore as your infrastructure requirements change.'
 ---
-= Resize datastores
+= Resize traditional datastores
 :icons: font
 :imagesdir: ../media/
 

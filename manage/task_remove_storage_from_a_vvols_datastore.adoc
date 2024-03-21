@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore
 summary: 'A vVols datastore exists as long as at least one FlexVol volume is available on the datastore.'
 ---
-= Remove storage from vVols datastore
+= Shrink vVols datastore
 :icons: font
 :imagesdir: ../media/
 
@@ -17,7 +17,8 @@ A vVols datastore exists as long as at least one FlexVol volume is available on 
 
 . Steps
 
-. From the Inventory *view* select the datastore. 
+. From the vSphere Client Home page, click *Hosts and Clusters*.
+. In the navigation pane, select the datacenter that contains the datastore.
 . Right click on the vVol datastore and select *NetApp Ontap tools* > *Remove storage from datastore*.
 . Clean up the Flex volumes at the Storage array and the igroup.
 

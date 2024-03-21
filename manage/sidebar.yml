@@ -9,9 +9,9 @@ entries:
         url: /manage/task_mount_a_vvols_datastore.html
       - title: Resize traditional datastores
         url: /manage/task_resize_datastores.html
-      - title: Resize vVol Datastore
+      - title: Expand vVol Datastore
         url: /manage/expand_storage_of_vvol_datastore.html
-      - title: Remove storage from vVols datastore
+      - title: Shrink vVols datastore
         url: /manage/task_remove_storage_from_a_vvols_datastore.html
   - title: Manage storage backend
     url: /manage/storage_backend.html

@@ -16,9 +16,10 @@ Create Datastore action wizard supports creation of NFS, VMFS, and vVols datasto
  
 == Create vVols datastore
 
-You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.
+You can create vVols datastore with new volumes or with existing volumes. You can not create vVols datastore with the combination of existing volumes and new volumes.
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
+
 The user interface is self explanatory, use these steps as guidelines. 
 
 .Steps
@@ -30,7 +31,7 @@ deployment.
 . Select *Platform* and *storage VM* in the Storage pane. In the *Advanced options* section, depending on your selection either select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol).
 [NOTE]
 *Asymmetric* toggle button will be visible only if iSCSI/FC was selected in the previous step and performance or capacity is selected in the platform rop-down.
-. You can either create new volumes or use existing volumes in the *Storage attributes* Pane.
+. You can either create new volumes or use existing volumes in the *Storage attributes* Pane. 
 . Review your selection in the *Summary* pane and click *FINISH*.
 Datastore gets created and mounted on all the host 
 
@@ -79,7 +80,8 @@ Check the following items before proceeding:
 deployment.
 . Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
 . Select VMFS in *Datastore Type* in the *Type* pane.
-. Provide datastore name, size, and protocol information in the Name and Protocol pane. Select the Datastore cluster in the *Advanced options* section of the pane. 
+. Provide datastore name, size, and protocol information in the Name and Protocol pane. 
+. In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
 . Select Platform and storage VM in the Storage pane. Select Asymmetric toggle button to (need more info). Provide the *Custom initiator group name* in the *Advanced options* section of the pane.
 . Select the Aggregate from the drop-down. Select the *Space Reserve* and *Use existing volume* options as required from the *Advanced options* section and provide the details as required.
 . Review the datastore details in the *Summary* pane and click *FINISH*.

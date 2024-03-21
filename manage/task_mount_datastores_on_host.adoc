@@ -11,6 +11,11 @@ summary: 'Mounting a datastore provides storage access to additional hosts. You 
 [.lead]
 Mounting a datastore provides storage access to additional hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment.
 
+[NOTE]
+Some of the right click actions are disabled or unavailable depending on vSphere client versions and the type of datastore selected. If you're using vSphere client 8.0 or later versions, some of the right click options will be hidden. 
+From vSphere 7.0U3 to vSPhere 8.0 versions even though the options appear, the action will be disabled. 
+
+
 *What you will need*
 
 You must ensure that the subnet details of all the networks to which the ESXi hosted is connected is entered in the `Kaminoprefs.xml`.
@@ -23,4 +28,5 @@ See Enabling datastore mounting across different subnets section.
 . In the navigation pane, select the datacenter that contains the host.
 . Repeat Step 2 for any additional hosts.
 . Right-click the host, and then select *NetApp ONTAP tools* > *Mount Datastores*.
-. Select the datastores that you want to mount, and then click *OK*.
+. Select the datastores that you want to mount, and then click *MOUNT*.
+You can track the progress in the Recent Task panel.
