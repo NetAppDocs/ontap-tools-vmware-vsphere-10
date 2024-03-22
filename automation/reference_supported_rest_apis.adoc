@@ -2,7 +2,7 @@
 permalink: sc-automation/reference_supported_rest_apis.html
 sidebar: sidebar
 keywords: REST API categories
-summary: 'The resources available through the SnapCenter REST API are organized in categories, as displayed on the SnapCenter API documentation page.'
+summary: 'The resources available through the ONTAP tools REST API are organized in categories, as displayed on the ONTAP tools API documentation page.'
 ---
 = REST APIs supported for ONTAP tools plug-in
 :icons: font
@@ -17,7 +17,7 @@ You can use this API to log into the ONTAP tools Server. This API returns a user
 == Domains
 You can use APIs to perform different operations.
 
-* retrieve all the domains in SnapCenter
+* retrieve all the domains in ONTAP tools
 * retrieve details of a specific domain
 * register or unregister a domain
 * modify a domain
@@ -25,7 +25,7 @@ You can use APIs to perform different operations.
 == Jobs
 You can use APIs to perform different operations.
 
-* retrieve all the jobs in SnapCenter
+* retrieve all the jobs in ONTAP tools
 * retrieve status of a job
 * cancel or stop a job
 
@@ -33,18 +33,18 @@ You can use APIs to perform different operations.
 You can use APIs to perform different operations.
 
 * register, modify, or remove a credential
-* displays the credential information registered in the SnapCenter Server
+* displays the credential information registered in the ONTAP tools Server
 * configure notification settings
 * retrieves information about the SMTP server currently configured to send email notifications and displays the name of the SMTP server, the name of the recipients, and the name of the sender
-* displays multi-factor authentication (MFA) configuration of the SnapCenter Server login
-* enable or disable and configure MFA for the SnapCenter Server login
+* displays multi-factor authentication (MFA) configuration of the ONTAP tools Server login
+* enable or disable and configure MFA for the ONTAP tools Server login
 * create the configuration file required to setup MFA
 
 == Hosts
 You can use APIs to perform different operations.
 
-* query all SnapCenter hosts
-* remove one or more hosts from SnapCenter
+* query all ONTAP tools hosts
+* remove one or more hosts from ONTAP tools
 * retrieve a host by name
 * retrieve all resources on a host
 * retrieve a resource using the resource ID
@@ -273,17 +273,17 @@ You can use APIs to perform different operations.
 == CertificateSettings
 You can use APIs to perform different operations.
 
-* view the certificate status for the SnapCenter Server or plug-in host
-* modify the certificate settings for the SnapCenter Server or plug-in host
+* view the certificate status for the ONTAP tools Server or plug-in host
+* modify the certificate settings for the ONTAP tools Server or plug-in host
 
 == Repository
 You can use APIs to perform different operations.
 
 * retrieve the repository backups
 * view the configuration information about the repository
-* protect and restore the SnapCenter repository
-* unprotect the SnapCenter repository
+* protect and restore the ONTAP tools repository
+* unprotect the ONTAP tools repository
 * rebuild and failover the repository
 
 == Version
-You can use this API to view the SnapCenter version.
+You can use this API to view the ONTAP tools version.

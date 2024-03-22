@@ -25,7 +25,7 @@ deployment.
 
 You can perform the same action using ONTAP tools Manager UI
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select *Discover storage*. 
 You can track the progress in the Recent Tasks panel.
@@ -42,7 +42,7 @@ You can track the progress in the Recent Tasks panel.
 
 You can perform the same operation using the ONTAP tools manager UI:
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select storage backends from the sidebar.
 . Select the  *Storage Backend* you want to modify
 . Click on the vertical ellipsis menu and select *Modify*. 
@@ -62,7 +62,7 @@ You can track the progress in the Recent Tasks panel.
 
 You can perform the same operation using the ONTAP tools manager UI:
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select the  storage backend you want to remove
 . Click on the vertical ellipsis menu and select *Remove*. 

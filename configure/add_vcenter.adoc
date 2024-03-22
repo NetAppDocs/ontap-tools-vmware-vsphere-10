@@ -17,9 +17,14 @@ You can add and manage multiple vCenters with one instance of ONTAP tools for VM
 
 *Steps*
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar
 . Select *ADD* to onboard vCenters with vCenter IP Address/Hostname, username, password, and port. 
+
+When you add vCenters, the following actions are performed automatically:
+* Plug-in is registered
+* Custom privileges for the plug-ins and APIs are pushed to the vCenter
+* Custom roles are created to manage the users.  
 
 See link:../configure/task_configure_user_role_and_privileges.html[List of minimum privileges required for non-admin global scoped cluster user].  
 

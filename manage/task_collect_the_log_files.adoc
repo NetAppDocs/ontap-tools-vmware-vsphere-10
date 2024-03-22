@@ -13,7 +13,7 @@ You can collect log files for ONTAP tools for VMware vSphere from the option ava
 
 *Steps*
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select *Log Bundles* from the sidebar.
 +
 This operation can take several minutes.

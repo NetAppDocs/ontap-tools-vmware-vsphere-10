@@ -21,7 +21,7 @@ When you add storage backend using the vCenter UI, direct SVM does not support v
 == Add storage backend using ONTAP tools Manager UI
 *Steps*
 
-. Launch https://loadBalanceIP:8443/virtualization/ui/ from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select *Add*. 
 . Provide the Server IP Address or FQDN, Username, and Password details and select *Add*.

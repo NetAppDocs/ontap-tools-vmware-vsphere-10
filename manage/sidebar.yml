@@ -47,3 +47,5 @@ entries:
         url: /manage/task_delete_virtual_machines.html
   - title: Modify ESXi host settings
     url: /manage/task_edit_esxi_host_settings.html
+  - title: Change ONTAP tools Manager password
+    url: /manage/change_manager_pw.html
