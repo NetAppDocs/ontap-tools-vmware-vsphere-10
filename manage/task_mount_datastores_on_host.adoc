@@ -9,7 +9,7 @@ summary: 'Mounting a datastore provides storage access to additional hosts. You 
 :imagesdir: ../media/
 
 [.lead]
-Mounting a datastore provides storage access to additional hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment.
+Mounting a datastore provides storage access to additional (NFS/VMFS) hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment.
 
 [NOTE]
 Some of the right click actions are disabled or unavailable depending on vSphere client versions and the type of datastore selected. If you're using vSphere client 8.0 or later versions, some of the right click options will be hidden. 
@@ -27,6 +27,7 @@ See Enabling datastore mounting across different subnets section.
 . From the vSphere Client Home page, click *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the host.
 . Repeat Step 2 for any additional hosts.
-. Right-click the host, and then select *NetApp ONTAP tools* > *Mount Datastores*.
+. To mount on the host, right-click the host, and then select *NetApp ONTAP tools* > *Mount Datastores*.
+. To mount on the cluster, right-click on the cluster and select *NetApp ONTAP tools* > *Mount Datastores*.
 . Select the datastores that you want to mount, and then click *MOUNT*.
 You can track the progress in the Recent Task panel.

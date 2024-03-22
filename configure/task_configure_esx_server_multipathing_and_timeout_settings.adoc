@@ -22,7 +22,11 @@ This process might take a long time, depending on your configuration and system 
 . In the NetApp Recommended Settings dialog box, select the values that work best with your system.
 +
 The standard, recommended values are set by default.
-+
-image::../media/vsc_recommended_hosts_settings.gif["Set recommended values screen"]
-
 . Click *OK*.
+. To restore the values to the recommended values, navigate to the ESXi Host Compliance portlet in the overview panel of the VMware vSphere Web Client home page.
+. Select *Apply Recommended Settings* link.
+. In the *Apply recommended host settings* window, select the hosts that you want to comply with NetApp recommended host settings and click *NEXT*
+[NOTE]
+You can expand the ESXi host to see the current values 
+. In the settings page, select the recommended values as required.
+You can track the progress in the Recent task panel.
