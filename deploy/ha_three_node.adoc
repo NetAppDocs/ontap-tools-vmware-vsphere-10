@@ -37,7 +37,7 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 . Select the host and select *Next*
 . Review the summary of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
-. In the *Configuration window*, select *High availability deployment(S)*, *High availability deployment(M)*, or *High availability deployment(L)* configuration, depending on your requirement.
+. In the *Configuration window*, select *High-Availability Deployment(S)*, *High-Availability Deployment(M)*, or *High-Availability Deployment(L)* configuration, depending on your requirement.
 . Select the storage for the configuration and disk files, select *Next*.
 . Select the destination network for each source network, select *Next*.
 . Select *Customize template* > *system configuration* window. Enter the following details:

@@ -1,0 +1,65 @@
+---
+permalink: deploy/recovery_deployment.html
+sidebar: sidebar
+keywords:
+summary: 'You can configure Non-HA single node in either small, medium, or large configurations.'
+---
+= How to recover ONTAP tools setup
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you loose your ONTAP tools setup, but have your ONTAP working, you can recover the ONTAP tools setup using the ONTAP.
+When you loose the setup, bring down the setup gracefully.
+You can recover both the single node deployment and the HA three node deployment. 
+[NOTE]
+You cannot recover the ONTAP tools setup if there are issues with vCenter or ONTAP. 
+
+*Steps*
+
+. Log in to the vSphere server.
+. Navigate to the resource pool or the cluster or the host where you want to deploy the OVA.
+. Right-click the required datacenter, and select *Deploy OVF template...*.
+. You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*.
+. Select a name and folder for the virtual machine and select *Next*.
+. Select the host and select *Next*
+. Review the summary of the template and select *Next*.
+. Read and accept the license agreement and select *Next*.
+. In the *Configuration* window, select *Recovery*  option.
+. In the *Select storage* window, select the storage for the configurations and disk files.
+. In the *Select networks* window, select a destination network for each source network.
+[NOTE]
+You need to retain the load balancer IP and Kubernetes API Server IP. You can change the node IP or you can retain the same IP.
+. Select *Customize template* > *system configuration* window. Enter the following details:
+.. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter. This can be different from the username and password provided during initial deployment. 
+.. The *Enable ASUP* checkbox is selected by default.
++
+The ASUP can be enabled or disabled only during deployment. 
+.. Administrator Username and Administrator Password: This is the password used to login to *ONTAP Tools Manager* UI. This can be different from the username and password provided during initial deployment.
+.. Enter NTP server information in *NTP Servers* field. 
+.. Maintenance user password: This is used to grant access to ‘Maint Console Options’.
+. In the *Customize template* > *VASA Provider Certificates* window, enter the following details:
+.. Enter the Domain name with which you generated the certificate.
+.. Enter the Load Balancer IP details.
+. In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be same as the ones provided during initial deployment with the exception of data LIF value.
+[NOTE]
+The storage SVM name should not be changed as that is where the recovery data is stored. This applies for direct SVM as well.
+. In case of HA-deployment recovery, provide the following details:
+.. Content library details.
+.. vCenter configuration details
+. In *Customize template* > *Node Configuration* window enter the details as per the set up you're trying to recover, Non-HA or HA setup.
+. Review the details in the *Ready to complete* window, select *FINISH*.
++
+As the task gets created, the progress is shown in the vSphere task bar.
+. Power on the VM after the completion of the task.
++
+The installation begins. You can track the the installation progress in VM’s web console.
+As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
+. To make necessary changes in the dialog prompt, follow the below steps:
+.. Double click on the web console to start interacting with the console.
+.. Use UP and DOWN arrow keys on your keyboard to navigate across the fields shown.
+.. Use RIGHT and LEFT arrow keys on your keyboard to navigate to the right or left end of the value provided to the field.
+.. Use TAB to navigate across the panel to enter your values, *OK* or *CANCEL*.
+.. Use ENTER to select either *OK* or *CANCEL*.
+. On selecting *OK* or *CANCEL*, the values provided would again be validated. You have the provision to correct any values for 3 times. If you fail to correct within the 3 attempts, the product installation stops and you are advised to try the installation on a fresh VM.
+. After successful installation, web console shows the message stating the ONTAP tools for VMware vSphere is in Healthy State.

@@ -13,10 +13,6 @@ You can provision a vVols datastore using the Provision Datastore wizard only if
 
 *What you will need*
 
-* You should ensure that the subnet details of all the networks to which the ESXi hosted is connected is entered in the Kaminoprefs.xml.
-+
-See *Enabling datastore mounting across different subnets* section.
-
 * You should configure similar replication policy and schedule on the datastores at both the source and target sites for reverse replication to be successful.
 
 The Provision datastore menu enables you to specify a storage capability profile for the datastore, which helps in specifying consistent service level objectives (SLOs) and simplifies the provisioning process. You can specify a storage capability profile only if you have enabled VASA Provider.

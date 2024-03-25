@@ -10,7 +10,7 @@ summary: 'When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10. 1, a 
 
 [.lead]
 When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10. 1, a recovery volume is created and all the necessary details are taken into the recovery volume. 
-For ONTAP tools for VMware vSphere 10.1 build to build upgrade, the same recovery volume will be used and the details will be refreshed. 
+For ONTAP tools for VMware vSphere 10.1 build to build upgrade, the same recovery volume is used and the details are refreshed. 
 Upgrade is supported for both HA and non-HA deployments.
 
 *Steps*

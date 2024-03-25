@@ -21,13 +21,6 @@ Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan yo
 - [ ] Administrator Username(*)
 - [ ] NTP Servers (provided to the vCenter for time synchronization)
 
-*Certificate Details*
-
-- [ ] Enable Custom CA Certificate
-- [ ] Root and Intermediate certificates (ignore when self-signed is enabled)
-- [ ] Leaf certificate and Private key (ignored when self-signed is enabled)
-- [ ] Domain name(*) (ignored when self-signed is enabled)
-
 *Load balancer and API server details*
  
 - [ ] Load Balancer IP(*)
