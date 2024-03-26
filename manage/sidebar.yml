@@ -19,6 +19,8 @@ entries:
     url: /manage/manage_vcenter.html
   - title: Manage vVol Lifecycle
     url: /manage/vvol_lifecycle_management.html
+  - title: Manage certificates
+    url: /manage/certificate_manage.html
   - title: Managed iGroup and Export policies
     url: /manage/igroup_management.html
   - title: Access ONTAP tools maintenance console

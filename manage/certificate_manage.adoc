@@ -1,5 +1,5 @@
 ---
-permalink: manage/change_manager_pw.html
+permalink: manage/certificate_manage.html
 sidebar: sidebar
 keywords:
 summary: 'Single instance of ONTAP tools can manage multiple vCenters. When ONTAP tools is deployed, self signed certificate is assigned to all vCenters by default.
