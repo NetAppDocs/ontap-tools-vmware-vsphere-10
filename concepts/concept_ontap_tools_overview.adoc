@@ -11,7 +11,7 @@ summary: 'The ONTAP tools for VMware vSphere manages provisioning of datastores 
 [.lead]
 The ONTAP tools for VMware vSphere manages provisioning of datastores and virtual-machines in VMware environments that use NetApp storage backends. It enables the administrators to manage the storage within the vCenter Server directly and hence simplifies the storage and data management for VMware environments.
 
-ONTAP tools for VMware vSphere 10.0 release is a collection of horizontally scalable, event driven,
+ONTAP tools for VMware vSphere 10.1 release is a collection of horizontally scalable, event driven,
 microservices deployed as an Open Virtual Appliance (OVA). It is packaged in various deployment form factors like Open Virtual Appliance (OVA) and Software as a service (SaaS) for on-prem.
 
 ONTAP tools for VMware vSphere consists of:
