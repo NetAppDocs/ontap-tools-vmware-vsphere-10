@@ -1,5 +1,5 @@
 ---
-permalink: sc-automation/reference_workflows.html
+permalink: automation/reference_workflows.html
 sidebar: sidebar
 keywords: REST API categories
 summary: 'The resources available through ONTAP tools REST API are organized in categories, as displayed on ONTAP tools API documentation page.'
