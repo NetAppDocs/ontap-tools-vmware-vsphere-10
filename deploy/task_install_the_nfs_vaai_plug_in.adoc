@@ -28,7 +28,7 @@ These values are set automatically on the ESXi host when the Recommended Setting
 *Steps*
 
 . Rename the `.vib` file that you downloaded from the NetApp Support Site to NetAppNasPlugin.vib to match the predefined name that ONTAP tools uses.
-. Click *Settings* in the ONTAP tools home page.
+. Click *Settings* in ONTAP tools home page.
 . Click *NFS VAAI Tools* tab.
 . Click *Change* in the *Existing version* section.
 . Browse and select the renamed `.vib` file, and then click *Upload* to upload the file to ONTAP tools.

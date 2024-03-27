@@ -20,7 +20,7 @@ You can map traditional datastore with a storage capability profile or change th
 
 *Steps*
 
-. From the ONTAP tools Home page, click *Storage Mapping*.
+. From ONTAP tools Home page, click *Storage Mapping*.
 +
 From the Storage Mapping page, you can determine the following information:
 

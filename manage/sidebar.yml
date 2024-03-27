@@ -35,8 +35,6 @@ entries:
       url: /manage/update_vcenter_ontap_credentials.html
   - title: Collect the log files
     url: /manage/task_collect_the_log_files.html
-  - title: Discovery
-    url: /manage/discovery.html
   - title: Manage virtual machines
     entries:
       - title: Considerations for migrating or cloning virtual machines

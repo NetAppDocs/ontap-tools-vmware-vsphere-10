@@ -14,7 +14,7 @@ You can control how an API call is processed through parameters and variables se
 
 == HTTP methods
 
-The HTTP methods supported by the ONTAP tools REST API are shown in the following table.
+The HTTP methods supported by ONTAP tools REST API are shown in the following table.
 
 NOTE: Not all the HTTP methods are available at each of the REST endpoints.
 

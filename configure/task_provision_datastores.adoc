@@ -19,12 +19,12 @@ You can also provision a datastore by adding a cluster.
 
 * If you use NFS or iSCSI, and the subnet is different between your ESXi hosts and your storage system, then the NFS or iSCSI settings in the kaminoprefs preferences file must include ESXi host subnet masks.
 +
-This preference file is also applicable to vVols datastore creation. See _Enable datastore mounting across different subnets_ and _Configure the ONTAP tools preferences files_ for more information.
+This preference file is also applicable to vVols datastore creation. See _Enable datastore mounting across different subnets_ and _Configure ONTAP tools preferences files_ for more information.
 
 * If you have enabled VASA Provider and you want to specify storage capability profiles for your NFS datastores or VMFS datastores, then you must have created one or more storage capability profiles.
 * To create an NFSv4.1 datastore, you must have enabled NFSv4.1 at the SVM level.
 
-The *Provision Datastore* option enables you to specify a storage capability profile for the datastore. Storage capability profiles help in specifying consistent service level objectives (SLOs) and simplify the provisioning process. You can specify a storage capability profile only if you have enabled VASA Provider. The ONTAP tools for VMware vSphere supports the following protocols:
+The *Provision Datastore* option enables you to specify a storage capability profile for the datastore. Storage capability profiles help in specifying consistent service level objectives (SLOs) and simplify the provisioning process. You can specify a storage capability profile only if you have enabled VASA Provider. ONTAP tools for VMware vSphere supports the following protocols:
 
 * NFSv3 and NFSv4.1
 * VMFS5 and VMFS6

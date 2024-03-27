@@ -64,7 +64,7 @@ Check the following items before proceeding:
 * Check if all target hosts are healthy and check if host supports protocol.
 * Create new volume (min size 2GB)
 * Set Volume options with QOS
-* Create LUN of type vmware
+* Create LUN of type VMware
 * Get initiators for all target hosts
 * Create/reuse igroup based on matching initiators
 * Map Lun to igroup

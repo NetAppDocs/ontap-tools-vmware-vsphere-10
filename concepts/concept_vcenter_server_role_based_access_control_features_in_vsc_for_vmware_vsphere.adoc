@@ -30,21 +30,21 @@ The users and groups gain access to a role by being part of a vCenter Server rol
 
 You only need to set up vCenter Server roles if you want to limit access to vSphere objects and tasks. Otherwise, you can log in as an administrator. This login automatically allows you to access all vSphere objects.
 
-Where you assign a role determines the ONTAP tools tasks that a user can perform. You can modify one role at any time. 
+Where you assign a role determines ONTAP tools tasks that a user can perform. You can modify one role at any time. 
 If you change the privileges within a role, the user associated with that role should log out and then log back in to enable the updated role.
 
 == Standard roles packaged with ONTAP tools
 
 To simplify working with vCenter Server privileges and RBAC, ONTAP tools provide standard ONTAP tools roles that enable you to perform key ONTAP tools tasks. There is also a read-only role that enables you to view the information, but not perform any tasks.
 
-You can view the ONTAP tools standard roles by clicking *Roles* on the vSphere Client Home page. The roles that ONTAP tools provides enable you to perform the following tasks:
+You can view ONTAP tools standard roles by clicking *Roles* on the vSphere Client Home page. The roles that ONTAP tools provides enable you to perform the following tasks:
 
 |===
 | *Role* | *Description*
 |
 NetApp ONTAP tools Administrator
 |
-Provides all of the native vCenter Server privileges and ONTAP tools-specific privileges that are required to perform some of the ONTAP tools tasks.
+Provides all of the native vCenter Server privileges and ONTAP tools-specific privileges that are required to perform some of ONTAP tools tasks.
 |
 NetApp ONTAP tools Read Only
 |
@@ -61,11 +61,11 @@ Provides some of the native vCenter Server privileges and ONTAP tools-specific p
 
 The Manager UI admin role is not registered with vCenter. This role is specific to the manager UI.
 
-If your company requires that you implement roles that are more restrictive than the standard ONTAP tools roles, you can use the ONTAP tools roles to create new roles.
+If your company requires that you implement roles that are more restrictive than the standard ONTAP tools roles, you can use ONTAP tools roles to create new roles.
 
 In this case, you would clone the necessary ONTAP tools roles and then edit the cloned role so that it has only the privileges your user requires.
 
 == Permissions for ONTAP storage backends and vSphere objects
 
 If the vCenter Server permission is sufficient, ONTAP tools then checks the ONTAP RBAC privileges (your ONTAP role) that are associated with the storage backends credentials (the user name and password) to determine whether you have sufficient privileges to perform the storage operations that are required by that ONTAP tools task on that storage backend. If you have the correct ONTAP privileges, you can access the
-storage backends and perform the ONTAP tools task. The ONTAP roles determine the ONTAP tools tasks that you can perform on the storage backend.
+storage backends and perform ONTAP tools task. The ONTAP roles determine ONTAP tools tasks that you can perform on the storage backend.

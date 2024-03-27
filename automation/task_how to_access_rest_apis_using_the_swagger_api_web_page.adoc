@@ -2,33 +2,28 @@
 permalink: sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html
 sidebar: sidebar
 keywords: REST API, Swagger
-summary: 'REST APIs are exposed through the Swagger web page. You can access the Swagger web page to display the ONTAP tools Server REST APIs, as well as to manually issue an API call. You can use REST APIs to help manage your ONTAP tools Server or to perform data protection operations.'
+summary: 'You can access the ONTAP REST API documentation through the Swagger UI at your local ONTAP system.'
 ---
-= How to access REST APIs using the Swagger API web page
+= Access the ONTAP tools API reference documentation through the Swagger UI
+
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-REST APIs are exposed through the Swagger web page. You can access the Swagger web page to display the ONTAP tools Server REST APIs, as well as to manually issue an API call. You can use REST APIs to help manage your ONTAP tools Server or to perform data protection operations.
+You can access the ONTAP REST API documentation through the Swagger UI at your local ONTAP system.
 
-You should know the management IP address or domain name of the ONTAP tools Server on which you want to execute the REST APIs.
+*Before you begin*
 
-You do not need special permissions to run the REST API client. Any user can access the Swagger web page. The respective permissions on the objects that are accessed via the REST API are based on the user who generates the token to login to the REST API.
+You must have the following:
+• IP address or host name of the ONTAP cluster management LIF
+• User name and password for an account with authority to access the ONTAP REST API
 
 .Steps
 
-. From a browser, enter the URL to access the Swagger web page in the format _\https://<ONTAP tools_IP_address_or_name>:<ONTAP tools_port>/swagger/_.
+. Type the URL in your browser and press *Enter*:
+_\https://<ip_address>/docs/api_
+. Sign in using the ONTAP account
 +
-NOTE: Ensure that the REST API URL does not have the following characters: +, ., %, and &.
-
-. In the *Swagger Explore* field, if the Swagger API documentation does not display automatically, type:
-_\https://<ONTAP tools_IP_address_or_name>:<ONTAP tools_port>/Content/swagger/ONTAP tools.yaml_
-
- . Click *Explore*.
-+
-A list of API resource types or categories are displayed.
-
-. Click an API resource type to display the APIs in that resource type.
-
-If you encounter unexpected behavior when executing ONTAP tools REST APIs, you can use the log files to identify the cause and resolve the problem.
-You can download the log files from the ONTAP tools user interface by clicking *Monitor* > *Logs* > *Download*.
+The ONTAP API documentation page is displayed with the API calls organized in major resource
+categories at the bottom.
+. As an example of an individual API call, scroll down to the *cluster* category and click *GET /cluster*.

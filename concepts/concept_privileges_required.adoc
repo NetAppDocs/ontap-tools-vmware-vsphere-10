@@ -13,15 +13,15 @@ Different ONTAP tools for VMware vSphere tasks require different combinations of
 
 Information about the privileges required for ONTAP tools tasks is available in the NetApp Knowledgebase article 1032542.
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_configure_RBAC_for_Virtual_Storage_Console[How to configure RBAC for Virtual Storage Console]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_configure_RBAC_for_Virtual_Storage_Console[Configure RBAC for Virtual Storage Console]
 
 == Product-level privilege required by ONTAP tools for VMware vSphere
-To access the ONTAP tools for VMware vSphere GUI, you must have the product-level, ONTAP tools-specific View privilege assigned at the correct vSphere object level. If you log in without this privilege, ONTAP tools displays an error message when you click the NetApp icon and prevents you from accessing ONTAP tools.
+To access ONTAP tools for VMware vSphere GUI, you must have the product-level, ONTAP tools-specific View privilege assigned at the correct vSphere object level. If you log in without this privilege, ONTAP tools displays an error message when you click the NetApp icon and prevents you from accessing ONTAP tools.
 
-In *View* privilege, you can access the ONTAP tools GUI. This privilege does not enable you to perform tasks within ONTAP tools. To perform any ONTAP tools tasks, you must have the correct ONTAP tools-specific and native vCenter Server privileges for those tasks.
+In *View* privilege, you can access ONTAP tools GUI. This privilege does not enable you to perform tasks within ONTAP tools. To perform any ONTAP tools tasks, you must have the correct ONTAP tools-specific and native vCenter Server privileges for those tasks.
 
 The assignment level determines which portions of the UI you can see. Assigning the View privilege at the root object (folder) enables you to enter ONTAP tools by clicking the NetApp icon.
 
-You can assign the View privilege to another vSphere object level; however, doing that limits the ONTAP tools menus that you can see and use.
+You can assign the View privilege to another vSphere object level; however, doing that limits ONTAP tools menus that you can see and use.
 
 The root object is the recommended place to assign any permission containing the View privilege.

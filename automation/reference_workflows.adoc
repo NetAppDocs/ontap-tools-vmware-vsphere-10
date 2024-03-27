@@ -1,0 +1,107 @@
+---
+permalink: sc-automation/reference_workflows.html
+sidebar: sidebar
+keywords: REST API categories
+summary: 'The resources available through ONTAP tools REST API are organized in categories, as displayed on ONTAP tools API documentation page.'
+---
+= Workflows
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.
+The ONTAP tools workflows include the core steps and parameters you need to accomplish each task. They provide a starting point for customizing your ONTAP tools automation environment.
+
+== Manage Storage threshold
+// Need to add procedure from ontap tools shortcut Settings> Threshold Settings > Modify. Move this API to API section
+
+Use the following Get threshold API to retrieve the configured storage threshold limits for volume and aggregate.
+
+----
+GET​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+
+Examples:
+Get the Storage thresholds per vCenter by vCenter guid
+----
+GET "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+----
+
+Use the following PATCH configure alarm for volume and aggregate to generate notification when configured threshold limits are reached. 
+----
+PATCH​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+
+Examples:
+Update the Storage thresholds per vCenter by vCenter guid. Default limits are 80% for nearly-full and 90% for full.
+Modifying all threshold settings
+----
+{{{}PATCH "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+Request Body
+{
+"volume":
+
+{ "nearly_full_percent": 80, "full_percent": 90 }
+,
+"aggregate": {
+"nearly_full_percent": 80,
+"full_percent": 90
+}
+}{}}}{}
+----
+
+== Manage network access
+
+Use the following API to add IP addresses for whitelisting:
+
+----
+patch /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+ 
+{
+    value: string
+}
+ 
+GET /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+ 
+{
+    value: string
+}
+---- 
+
+== SVM aggregate mapping requirements
+
+To use direct SVM credentials for provisioning datastores, internally ONTAP tools create volumes on the
+aggregate specified in the datastores POST API. The ONTAP does not allow the creation of volumes on
+unmapped aggregates on an SVM using direct SVM credentials. To resolve this, you need to map the SVMs
+with the aggregates using the REST API or CLI as described here.
+REST API:
+----
+PATCH "/api/svm/svms/f16f0935-5281-11e8-b94d-005056b46485"
+'{"aggregates":{"name":["aggr1","aggr2","aggr3"]}}'
+----
+
+ONTAP CLI:
+----
+sti115_vsim_ucs630f_aggr1 vserver show-aggregates
+AvailableVserver Aggregate State Size Type SnapLock
+Type-------------- -------------- ------- ---------- -------
+--------------svm_test sti115_vsim_ucs630f_aggr1
+online 10.11GB vmdisk non-snaplock
+----
+
+== Onboard storage backend (SVM or Cluster) with vCenter
+
+== Create vVols datastore
+
+== Mount vVols datastore
+
+== Unmount vVols datastore
+
+== Expand or shrink Storage of vVol Datastore
+
+== Delete vVols datastore
+
+== Manage Storage threshold
+
+== Storage discovery
+

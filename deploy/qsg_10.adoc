@@ -14,7 +14,7 @@ summary: Provides instructions for deploying and initializing ONTAP tools for VM
 :imagesdir: ./media/
 
 [.lead]
-ONTAP tools for VMware vSphere is a single vCenter Server plug-in that includes ONTAP tools and VASA Provider extensions. ONTAP tools are recommended for all ONTAP vSphere environments as it configures ESXi host settings and provisions ONTAP storage using best practices. The VASA Provider is required for virtual volumes (vVols)support.
+ONTAP tools for VMware vSphere is a collection of tools for lifecycle management of virtual machines. ONTAP tools are recommended for all ONTAP vSphere environments as it configures ESXi host settings and provisions ONTAP storage using best practices. The VASA Provider is required for virtual volumes (vVols)support.
 
 == Preparing for installation
 
@@ -22,9 +22,9 @@ You deploy the plug-in as a virtual appliance, which reduces your effort of inst
 
 === Deployment requirements
 
-Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements forthe deployment package and some basic host system requirements.
+Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements forthe deployment package and some basic host system requirements.
 
-You can use the ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server VirtualAppliance (vCSA). You must deploy the ONTAP tools on a supported vSphere that includes ESXi system.
+You can use ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server VirtualAppliance (vCSA). You must deploy ONTAP tools on a supported vSphere that includes ESXi system.
 
 * *Installation package space requirements per node*
 ** 10 GB for thin provisioned installations
@@ -70,21 +70,21 @@ Recommended memory as per the size of deployment and per node is as shown in the
 
 |===
 
-For more information, see link:../deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html[Requirements for deploying the ONTAP tools]
+For more information, see link:../deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html[Requirements for deploying ONTAP tools]
 
 === ONTAP tools requirements
 
 * Configure and set up your vCenter Server environment.
 * Download the .ova file.
 * The login credentials for your vCenter Server instance.
-* Delete the browser cache to avoid any browser cache issue during the deployment of the ONTAP tools.
+* Delete the browser cache to avoid any browser cache issue during the deployment of ONTAP tools.
 * Configure the default gateway to be used by the virtual appliance to respond to ICMP pings.
 * A valid DNS hostname for the virtual appliance.
 
 == Deploying ONTAP tools
 
 .Steps
-. Download `.zip` file that contains  binaries and signed certificates from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^] to a vSphere Client system to deploy the ONTAP tools.
+. Download `.zip` file that contains  binaries and signed certificates from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^] to a vSphere Client system to deploy ONTAP tools.
 . Extract the `.zip` file and deploy the `.ova` file.
 . Log in to the vSphere server.
 . Navigate to the resource pool or the host where you want to deploy the OVA.

@@ -15,7 +15,7 @@ Upgrade is supported for both HA and non-HA deployments.
 
 *Steps*
 
-. From the vCenter Server, open a console to the ONTAP tools.
+. From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
 . Enter 3 to select System Configuration menu.
 . Enter 7 to select the upgrade option.

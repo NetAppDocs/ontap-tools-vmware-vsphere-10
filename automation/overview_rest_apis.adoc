@@ -11,11 +11,5 @@ summary: 'Describes how to use REST APIs to perform several ONTAP tools manageme
 [.lead]
 REST APIs can be used to perform several ONTAP tools management operations. REST APIs are exposed through the Swagger web page.
 
-You can access the Swagger web page available at _\https://<ONTAP tools_IP_address_or_name>:<ONTAP tools_port>/swagger/_ to display the REST API documentation, as well as to manually issue an API call.
+You can access the Swagger web page available at _\https://loadbalancerIP:8443/_ to display the REST API documentation, as well as to manually issue an API call.
 
-The plug-ins that support REST APIs are:
-
-* Plug-in for Microsoft SQL Server
-* Plug-in for SAP HANA Database
-* Custom Plug-ins
-* Plug-in for Oracle Database

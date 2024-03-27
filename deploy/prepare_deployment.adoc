@@ -12,16 +12,16 @@ summary: 'You should deploy ONTAP tools in your environment, and specify the req
 
 ONTAP tools for VMware vSphere supports multi vCenter Server that includes VASA Provider. 
 
-You should be aware of the basic storage backend requirements, application requirements, and license requirements before you begin deploying the ONTAP tools for VMware vSphere. 
+You should be aware of the basic storage backend requirements, application requirements, and license requirements before you begin deploying ONTAP tools for VMware vSphere. 
 Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan your deployment and decide how you want to configure ONTAP tools in your environment. 
 
 == Preparing for deployment 
 
-Following are the ONTAP tools requirements before proceeding with the deployment: 
+Following are ONTAP tools requirements before proceeding with the deployment: 
 
 * Configure and set up your vCenter Server environment. 
 * Download the _.ova_ file. 
-* Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements for deploying the ONTAP tools* section.  
+* Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements for deploying ONTAP tools* section.  
 * Delete the browser cache.  
 * You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment.
 * Procure CA certificates (root , Leaf, and Intermediate certificates) from the commercial CA.

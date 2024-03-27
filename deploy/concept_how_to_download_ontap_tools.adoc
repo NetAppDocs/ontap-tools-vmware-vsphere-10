@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords:
 summary: 'You can download the .ova file for ONTAP tools for VMware vSphere from the NetApp Support Site.'
 ---
-= How to download ONTAP tools
+= Download ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can download the `.zip` file that contains  binaries (_.ova_) and signed certificates for the ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
+You can download the `.zip` file that contains  binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
 
-The _.ova_ file includes the ONTAP tools. When the deployment is complete, ONTAP tools and VASA products are installed in your environment. By default, ONTAP tools starts working as soon as you decide on the subsequent deployment model and choose whether to enable VASA Provider based on your requirements.
+The _.ova_ file includes ONTAP tools. When the deployment is complete, ONTAP tools and VASA products are installed in your environment. By default, ONTAP tools starts working as soon as you decide on the subsequent deployment model and choose whether to enable VASA Provider based on your requirements.
 
 == Content library
 

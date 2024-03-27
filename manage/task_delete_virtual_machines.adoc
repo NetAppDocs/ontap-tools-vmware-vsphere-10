@@ -17,5 +17,5 @@ it is recommended that you remove any vVols datastores before performing the VAS
 
 . Unregister the plugin by going into https://OTV_IP:8143/Register.html
 . Verify that the plugin is no longer available on the vCenter.
-. Shutdown the ONTAP tools for VMware vSphere VM
-. Delete the ONTAP tools for VMware vSphere VM
+. Shutdown ONTAP tools for VMware vSphere VM
+. Delete ONTAP tools for VMware vSphere VM

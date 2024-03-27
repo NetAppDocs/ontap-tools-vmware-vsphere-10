@@ -2,16 +2,16 @@
 permalink: deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html
 sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
-summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
+summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
 ---
-= Requirements for deploying the ONTAP tools
+= Requirements for deploying ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
+Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
 
-You can use the ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server Virtual Appliance (vCSA). You must deploy the ONTAP tools on a supported vSphere that includes ESXi system.
+You can use ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server Virtual Appliance (vCSA). You must deploy ONTAP tools on a supported vSphere that includes ESXi system.
 
 * *Installation package space requirements per node*
 ** 10 GB for thin provisioned installations
@@ -81,12 +81,12 @@ The type of ONTAP tools and VASA certificates generated depends on the IP addres
 
 * The ONTAP tools IP address used to register with vCenter Server depends on the type of vCenter Server IP address (IPv4 or IPV6) entered in the deployment wizard.
 +
-Both the ONTAP tools and VASA certificates will be generated using the same type of IP address used during vCenter Server registration.
+Both ONTAP tools and VASA certificates will be generated using the same type of IP address used during vCenter Server registration.
 * Ensure that VM's are not migrated during installation.
 +
 NOTE: IPv6 is supported from ONTAP tools for VMware vSphere 10.1 release onwards.
 
 === Appliance network properties
 
-Specify a valid DNS hostname (unqualified) as well as the static IP address for the ONTAP tools and the other network parameters. DHCP is not supported in ONTAP tools for VMware vSphere 10.0 release. All of these parameters are required for proper installation and operation.
+Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools and the other network parameters. DHCP is not supported in ONTAP tools for VMware vSphere 10.0 release. All of these parameters are required for proper installation and operation.
 

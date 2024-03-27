@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords:
 summary: 'You can configure Non-HA single node in either small, medium, or large configurations.'
 ---
-= How to recover ONTAP tools setup
+= Recover ONTAP tools setup
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you loose your ONTAP tools setup, but have your ONTAP working, you can recover the ONTAP tools setup using the ONTAP.
+If you loose your ONTAP tools setup, but have your ONTAP working, you can recover ONTAP tools setup using the ONTAP.
 When you loose the setup, bring down the setup gracefully.
 You can recover both the single node deployment and the HA three node deployment. 
 [NOTE]
-You cannot recover the ONTAP tools setup if there are issues with vCenter or ONTAP. 
+You cannot recover ONTAP tools setup if there are issues with vCenter or ONTAP. 
 
 *Steps*
 
@@ -62,4 +62,4 @@ As part of the installation, Node configurations are validated. The inputs provi
 .. Use TAB to navigate across the panel to enter your values, *OK* or *CANCEL*.
 .. Use ENTER to select either *OK* or *CANCEL*.
 . On selecting *OK* or *CANCEL*, the values provided would again be validated. You have the provision to correct any values for 3 times. If you fail to correct within the 3 attempts, the product installation stops and you are advised to try the installation on a fresh VM.
-. After successful installation, web console shows the message stating the ONTAP tools for VMware vSphere is in Healthy State.
+. After successful installation, web console shows the message stating ONTAP tools for VMware vSphere is in Healthy State.

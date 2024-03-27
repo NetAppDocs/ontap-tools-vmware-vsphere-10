@@ -10,6 +10,6 @@ summary: 'vCenters are the central management platforms that allow you to contro
 
 [.lead]
 
-When you Add vCenter, the ONTAP tools for VMware vCenter plug-in gets registered to the vCenter as a Remote plugin. The plug-in is visible on the vSphere user interface shortcuts.
+When you Add vCenter, ONTAP tools for VMware vCenter plug-in gets registered to the vCenter as a Remote plugin. The plug-in is visible on the vSphere user interface shortcuts.
  
 The plugin is registered with a key _com.netapp.otv_ to the vCenter and can be seen in the ExtensionManager of the vCenter.

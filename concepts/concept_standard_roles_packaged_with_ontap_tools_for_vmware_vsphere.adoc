@@ -17,7 +17,7 @@ As an administrator, you can assign these roles to users as required.
 
 NOTE: When you upgrade ONTAP tools to the latest version, the standard roles are automatically upgraded to work with the new version of the tool.
 
-You can view the ONTAP tools standard roles by clicking *Roles* on the vSphere Client Home page.
+You can view ONTAP tools standard roles by clicking *Roles* on the vSphere Client Home page.
 
 The roles that ONTAP tools provides enable you to perform the following tasks:
 
@@ -46,13 +46,13 @@ When you work with standard ONTAP tools for VMware vSphere roles, there are cert
 
 You should not directly modify the standard roles. If you do, ONTAP tools will overwrite your changes each time you upgrade. The installer updates the standard role definitions each time you upgrade ONTAP tools. Doing this ensures that the roles are current for your version of ONTAP tools as well as for all supported versions of the vCenter Server.
 
-You can, however, use the standard roles to create roles that are tailored to your environment. To do this, you should copy the ONTAP tools standard role and then edit the copied role. By creating a new role, you can maintain this role even when you restart or upgrade the ONTAP tools Windows service.
+You can, however, use the standard roles to create roles that are tailored to your environment. To do this, you should copy ONTAP tools standard role and then edit the copied role. By creating a new role, you can maintain this role even when you restart or upgrade ONTAP tools Windows service.
 
-Some of the ways that you might use the ONTAP tools standard roles include the following:
+Some of the ways that you might use ONTAP tools standard roles include the following:
 
 * Use the standard ONTAP tools roles for all ONTAP tools tasks.
 +
-In this scenario, the standard roles provide all the privileges a user needs to perform the ONTAP tools tasks.
+In this scenario, the standard roles provide all the privileges a user needs to perform ONTAP tools tasks.
 
 * Combine roles to expand the tasks a user can perform.
 +
@@ -62,6 +62,6 @@ If a user needs to perform other, non-ONTAP tools tasks that require additional 
 
 * Create more fine-grained roles.
 +
-If your company requires that you implement roles that are more restrictive than the standard ONTAP tools roles, you can use the ONTAP tools roles to create new roles.
+If your company requires that you implement roles that are more restrictive than the standard ONTAP tools roles, you can use ONTAP tools roles to create new roles.
 +
 In this case, you would clone the necessary ONTAP tools roles and then edit the cloned role so that it has only the privileges your user requires.
