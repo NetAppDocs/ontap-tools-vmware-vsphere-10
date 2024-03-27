@@ -21,8 +21,7 @@ If the setting is not provided, export policy adds all IP addresses discovered i
 By default all host IP's are added to the export policy.
 
 .Steps
-. . Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
-deployment.
+. Log in to the vSphere client using `\https://vcenterip/ui`
 . In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Settings* > *Manage Network Access* > *Edit*. 
 +

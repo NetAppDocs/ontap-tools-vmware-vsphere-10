@@ -48,8 +48,7 @@ Once you remove the vCenter, it will no longer be maintained by the application.
 You can set the threshold to receive notifications in vCenter when the volume and the aggregate capacity reaches certain levels.
 
 .Steps:
-. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
-deployment.
+. Log in to the vSphere client using `\https://vcenterip/ui`
 . In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Settings* >*Threshold Settings* > *Edit*
 . In the Edit Threshold window, provide the desired values in the Nearly Full and Full fields and click Save.

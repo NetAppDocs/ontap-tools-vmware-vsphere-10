@@ -25,8 +25,7 @@ Download the tar.gz file and send it to technical support.
 Follow the steps below to generate log bundle using the vCenter client UI:
 
 .Steps
-. Log in to the vSphere web client by using the vCenter IP that was provided during OVA ONTAP tools
-deployment.
+. Log in to the vSphere client using `\https://vcenterip/ui`
 . From the vSphere Client Home page, go to *Support* > *Log bundle* > *Generate*.
 . Provide the log bundle label and generate the log bundle.
 You can see the download option when the files are generated. Downloading may take some time.

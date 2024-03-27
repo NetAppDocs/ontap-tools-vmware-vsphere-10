@@ -19,7 +19,6 @@ You can configure Non-HA single node in either small, medium, or large configura
 Make sure network route is present.
 Example: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>
 
-
 *About this task*
 
 This task gives you instructions on how to install Non-HA single node in small, medium, or high configurations.

@@ -13,7 +13,7 @@ entries:
     url: /deploy/prepare_deployment.html
   - title: Deploy Non-HA single node configuration
     url: /deploy/nonha_deployment.html
-  - title: Deploy HA three node configuration
+  - title: High-Availability Deployment
     url: /deploy/ha_three_node.html
   - title: Recover ONTAP tools setup
     url: /deploy/recovery_deployment.html
