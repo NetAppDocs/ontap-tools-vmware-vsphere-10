@@ -18,7 +18,7 @@ This process might take a long time, depending on your configuration and system 
 *Steps*
 
 . From the VMware vSphere Web Client Home page, click *Hosts and Clusters*.
-. Right-click a host, and then select *Actions* > *NetApp ONTAP tools* > *Set Recommended Values*.
+. Right-click a host, and then select *Actions* > *NetApp ONTAP tools* > *Update host data*.
 . In the NetApp Recommended Settings dialog box, select the values that work best with your system.
 +
 The standard, recommended values are set by default.
@@ -29,4 +29,5 @@ The standard, recommended values are set by default.
 [NOTE]
 You can expand the ESXi host to see the current values 
 . In the settings page, select the recommended values as required.
+. In the summary pane, check the values and click *Finish*
 You can track the progress in the Recent task panel.

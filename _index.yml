@@ -30,8 +30,6 @@ indexpage:
         url: /protect/task_enable_storage_replication_adapter.html
       - title: Protect virtual machines
         url: /protect/concept_configure_replication_for_vvols_datastore.html
-      - title: Monitor traditional datastores (NFS and VMFS) and virtual machines
-        url: /manage/task_monitor_datastores_using_the_traditional_dashboard.html
       - title: Monitor vVols datastores and virtual machines
         url: /manage/task_monitor_vvols_datastores_and_virtual_machines_using_vvols_dashboard.html
     - title: More resources

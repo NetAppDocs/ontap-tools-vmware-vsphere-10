@@ -45,7 +45,7 @@ entries:
         url: /configure/task_automatically_generating_scps.html
   - title: Configure datastores
     entries:
-      - title: Provision traditional datastores
+      - title: Provision NFS and VMFS datastores
         url: /configure/task_provision_datastores.html
       - title: Map datastores to storage capability profiles
         url: /configure/task_map_storage_to_storage_capability_profiles.html

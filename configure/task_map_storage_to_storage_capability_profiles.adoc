@@ -16,7 +16,7 @@ You can map the datastores that are associated with VASA Provider for ONTAP to s
 * You must have registered your VASA Provider instance with ONTAP® tools for VMware vSphere.
 * ONTAP tools must have already discovered your storage.
 
-You can map traditional datastore with a storage capability profile or change the storage capability profile that is associated with a datastore. VASA Provider does _not_ display any virtual volume (VVol) datastores on the Storage Mappings page. All the datastores that are referred to in this task are traditional datastores.
+You can map NFS and VMFS datastore with a storage capability profile or change the storage capability profile that is associated with a datastore. VASA Provider does _not_ display any virtual volume (VVol) datastores on the Storage Mappings page. All the datastores that are referred to in this task are NFS and VMFS datastores.
 
 *Steps*
 
@@ -27,7 +27,7 @@ From the Storage Mapping page, you can determine the following information:
  ** The vCenter Server that is associated with the datastore
  ** How many profiles match the datastore
 +
-The Storage Mapping page displays only traditional datastores. This page does not display any VVol datastores or qtree datastores.
+The Storage Mapping page displays only NFS and VMFS datastores. This page does not display any VVol datastores or qtree datastores.
 
  ** Whether the datastore is currently associated with a profile
 +

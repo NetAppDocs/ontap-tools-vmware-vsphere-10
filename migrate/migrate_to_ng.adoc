@@ -12,7 +12,7 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.
 
 [NOTE]
-It is recommended to migrate classic setup only if the setup is servicing the VASA provider feature alone. If you have features like traditional/NVMe datastores, vVol replication, and if SRA is enabled on classic, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.1.
+It is recommended to migrate classic setup only if the setup is servicing the VASA provider feature alone. If you have features like NFS or VMFS NVMe datastores, vVol replication, and if SRA is enabled on classic, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.1.
 
 *About this task* 
 

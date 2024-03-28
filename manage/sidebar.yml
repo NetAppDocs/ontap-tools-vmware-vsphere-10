@@ -7,7 +7,7 @@ entries:
         url: /manage/task_mount_datastores_on_host.html
       - title: Mount vVols datastore
         url: /manage/task_mount_a_vvols_datastore.html
-      - title: Resize traditional datastores
+      - title: Resize NFS and VMFS datastores
         url: /manage/task_resize_datastores.html
       - title: Expand vVol Datastore
         url: /manage/expand_storage_of_vvol_datastore.html
@@ -39,7 +39,7 @@ entries:
     entries:
       - title: Considerations for migrating or cloning virtual machines
         url: /manage/reference_considerations_for_migrating_virtual_machines.html
-      - title: Migrate traditional virtual machines to vVols datastores
+      - title: Migrate virtual machines with NFS and VMFS datastores to vVols datastores
         url: /manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html
       - title: Migrate virtual machines with older storage capability profiles
         url: /manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html

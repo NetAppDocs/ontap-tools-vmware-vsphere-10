@@ -279,7 +279,7 @@ Request Body
 }
 ----
 == Mount and unmount vVols datastore
-You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can also unmount vVols datastore.
+You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore using APIs.
 
 Use the following API to mount or unmount a vVols datastore.
 You need to pass x-auth for the API. You can generate this x-auth from the new API added under Auth in Swagger.

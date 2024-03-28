@@ -17,14 +17,6 @@ You can set the following values on an ESXi host:
 
 Sets the recommended HBA timeout settings for NetApp storage systems.
 
-* *Disk.QFullSampleSize*
-+
-Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
-
-* *Disk.QFullThreshold*
-+
-Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.
-+
 * *Emulex FC HBA timeouts*
 +
 Use the default value.
@@ -80,14 +72,6 @@ Set this value to "`FIXED`" for all other configurations.
 +
 Setting this value to "`RR`" helps to provide load balancing across all of the active/optimized paths. The value "`FIXED`" is used for older, non-ALUA configurations and helps to prevent proxy I/O.
 
-* *Disk.QFullSampleSize*
-+
-Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
-
-* *Disk.QFullThreshold*
-+
-Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.
-
 * *Emulex FC HBA timeouts*
 +
 Use the default value.
@@ -103,11 +87,3 @@ Use the default value.
 Set this value to "`RR`" for all iSCSI paths.
 +
 Setting this value to "`RR`" helps to provide load balancing across all of the active/optimized paths.
-
-* *Disk.QFullSampleSize*
-+
-Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
-
-* *Disk.QFullThreshold*
-+
-Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.

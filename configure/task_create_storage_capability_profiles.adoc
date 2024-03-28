@@ -84,11 +84,11 @@ You can set traditional QoS policies for your storage system by using the Perfor
  ** When you select *None*, a QoS policy with no limit (infinite) is applied to a data VVol.
  ** When you select *QoS Policy Group*, then a traditional QoS policy is applied to a VVol.
 +
-You can set the value for *Max IOPS* and *Min IOPS* which enables you to use the QoS functionality. If you select Infinite IOPS, the Max IOPS field is disabled. When applied for a traditional datastore, a QoS policy with "`Max IOPS`" value is created and assigned to a FlexVol volume. When used with a vVols datastore, a QoS policy with Max IOPS and Min IOPS values is created for each data vVols datastore.
+You can set the value for *Max IOPS* and *Min IOPS* which enables you to use the QoS functionality. If you select Infinite IOPS, the Max IOPS field is disabled. When applied for a NFS and VMFS datastore, a QoS policy with "`Max IOPS`" value is created and assigned to a FlexVol volume. When used with a vVols datastore, a QoS policy with Max IOPS and Min IOPS values is created for each data vVols datastore.
 +
 *NOTE*:
 
-  *** Max IOPS and Min IOPS can also be applied to the FlexVol volume for a traditional datastore.
+  *** Max IOPS and Min IOPS can also be applied to the FlexVol volume for a NFS and VMFS datastore.
   *** You must ensure that the performance metrics are not also set separately at an storage virtual machine (SVM) level, an aggregate level, or a FlexVol volume level.
 
 a|
