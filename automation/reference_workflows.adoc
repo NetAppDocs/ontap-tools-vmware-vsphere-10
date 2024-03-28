@@ -12,97 +12,6 @@ summary: 'The resources available through ONTAP tools REST API are organized in 
 A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.
 The ONTAP tools workflows include the core steps and parameters you need to accomplish each task. They provide a starting point for customizing your ONTAP tools automation environment.
 
-== Manage Storage threshold
-// Need to add procedure from ontap tools shortcut Settings> Threshold Settings > Modify. Move this API to API section
-
-Use the following Get threshold API to retrieve the configured storage threshold limits for volume and aggregate.
-
-----
-GET​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
-----
-
-Examples:
-Get the Storage thresholds per vCenter by vCenter guid
-----
-GET "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
-----
-
-Use the following PATCH configure alarm for volume and aggregate to generate notification when configured threshold limits are reached. 
-----
-PATCH​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
-----
-
-Examples:
-Update the Storage thresholds per vCenter by vCenter guid. Default limits are 80% for nearly-full and 90% for full.
-Modifying all threshold settings
-----
-{{{}PATCH "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
-Request Body
-{
-"volume":
-
-{ "nearly_full_percent": 80, "full_percent": 90 }
-,
-"aggregate": {
-"nearly_full_percent": 80,
-"full_percent": 90
-}
-}{}}}{}
-----
-
-== Manage network access
-
-Use the following API to add IP addresses for whitelisting:
-
-----
-patch /api/v1/vcenters/{vcguid}/settings/ip-whitelist
- 
-{
-    value: string
-}
-
-GET /api/v1/vcenters/{vcguid}/settings/ip-whitelist
- 
-{
-    value: string
-}
----- 
-
-== Delete vVols datastore
-
-
-A vVols datastore exists as long as at least one FlexVol volume is available on the datastore. If you want to delete a vVols datastore in a HA cluster, you should first unmount the datastore from all hosts within the HA cluster, and then delete the residing _.vsphere-HA_ folder manually using the vCenter server user interface. 
-
-*Steps*
-
-Use the following API to delete vVols datastore. 
-----
-DELETE
-​/virtualization​/api​/v1​/vcenters​/{vcguid}​/vvols​/datastores​/{moref}
-----
-Examples
-
-* Delete vVols datastore and delete volumes from storage
-----
-  DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=true
-----
-[NOTE]
-Delete vVols Datastore workflow deletes datastore-volumes if you have passed the delete_volume flag as true irrespective of if the datastore-volume is managed or not managed.
-
-* Delete vVols datastore and do not delete volumes from storage
-----  
-  DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=false
-----
-
-Response:
-----
-{
-
-    "id": "1889"
-
-}
-----
-
 == Storage discovery
 
 Discovery interval can be configured as part of the configuration map. Scheduled discovery runs for every 60 mins. The API given here is to run the discovery on demand for a given storage backend which is added in the local scope. 
@@ -332,6 +241,99 @@ Use the following API to unmount on additional host:
 ----
 
 == Expand or shrink Storage of vVol Datastore
+
+== Manage Storage threshold
+// Need to add procedure from ontap tools shortcut Settings> Threshold Settings > Modify. Move this API to API section
+
+Use the following Get threshold API to retrieve the configured storage threshold limits for volume and aggregate.
+
+----
+GET​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+
+Examples:
+Get the Storage thresholds per vCenter by vCenter guid
+----
+GET "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+----
+
+Use the following PATCH configure alarm for volume and aggregate to generate notification when configured threshold limits are reached. 
+----
+PATCH​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
+----
+
+Examples:
+Update the Storage thresholds per vCenter by vCenter guid. Default limits are 80% for nearly-full and 90% for full.
+Modifying all threshold settings
+----
+{{{}PATCH "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
+Request Body
+{
+"volume":
+
+{ "nearly_full_percent": 80, "full_percent": 90 }
+,
+"aggregate": {
+"nearly_full_percent": 80,
+"full_percent": 90
+}
+}{}}}{}
+----
+
+== Manage network access
+
+Use the following API to add IP addresses for whitelisting:
+
+----
+patch /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+ 
+{
+    value: string
+}
+
+GET /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+ 
+{
+    value: string
+}
+---- 
+----
+== Delete vVols datastore
+
+
+A vVols datastore exists as long as at least one FlexVol volume is available on the datastore. If you want to delete a vVols datastore in a HA cluster, you should first unmount the datastore from all hosts within the HA cluster, and then delete the residing _.vsphere-HA_ folder manually using the vCenter server user interface. 
+
+*Steps*
+
+Use the following API to delete vVols datastore. 
+----
+DELETE
+​/virtualization​/api​/v1​/vcenters​/{vcguid}​/vvols​/datastores​/{moref}
+----
+Examples
+
+* Delete vVols datastore and delete volumes from storage
+----
+  DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=true
+----
+[NOTE]
+Delete vVols Datastore workflow deletes datastore-volumes if you have passed the delete_volume flag as true irrespective of if the datastore-volume is managed or not managed.
+
+* Delete vVols datastore and do not delete volumes from storage
+----  
+  DELETE /api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores/datastore-28?delete_volumes=false
+----
+
+Response:
+----
+{
+
+    "id": "1889"
+
+}
+----
+
+
 There are APIs to increase or decrease the available storage.
 
 *Steps*
