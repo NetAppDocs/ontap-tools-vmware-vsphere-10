@@ -24,7 +24,7 @@ POST
 
 [NOTE]
 --
-See link:../configure/onboard_svm.html[Onboard storage backend (SVM or Cluster)] section and get ID from post storage backend API response.
+See Onboard storage backend (SVM or Cluster) workflow and get ID from post storage backend API response.
 --
 
 Discovery from this API endpoint is supported only for local scoped storage backends and not for the global scoped storage backends.

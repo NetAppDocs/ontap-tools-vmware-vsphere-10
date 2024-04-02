@@ -10,7 +10,7 @@ summary: 'You can create vVols datastore with new volumes or with existing volum
 
 [.lead]
 
-Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user had privilege to execute.
+Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
 Create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore.
  
@@ -82,6 +82,6 @@ Check the following items before proceeding:
 . Select VMFS in *Datastore Type* in the *Type* pane.
 . Provide datastore name, size, and protocol information in the Name and Protocol pane. 
 . In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
-. Select Platform and storage VM in the Storage pane. Select Asymmetric toggle button to (need more info). Provide the *Custom initiator group name* in the *Advanced options* section of the pane. You can either choose an exiting iGroup for the datastore or create new iGroup with custom name.
+. Select Platform and storage VM in the Storage pane. Select Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane. You can either choose an exiting iGroup for the datastore or create new iGroup with custom name.
 . Select the Aggregate from the drop-down. Select the *Space Reserve* and *Use existing volume* options as required from the *Advanced options* section and provide the details as required.
 . Review the datastore details in the *Summary* pane and click *FINISH*.

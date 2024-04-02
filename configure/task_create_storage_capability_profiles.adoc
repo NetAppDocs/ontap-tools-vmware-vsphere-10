@@ -2,20 +2,18 @@
 permalink: configure/task_create_storage_capability_profiles.html
 sidebar: sidebar
 keywords:
-summary: 'You can use ONTAP tools to manually create storage capability profiles, automatically generate a profile based on the capabilities of a datastore, or modify a profile to meet your requirements.'
+summary: 'You can use ONTAP tools to manually create or edit storage capability profiles, automatically generate a profile based on the capabilities of a datastore, or modify a profile to meet your requirements.'
 ---
-= Create storage capability profiles
+= Create or edit storage capability profiles
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can use ONTAP tools to manually create storage capability profiles, automatically generate a profile based on the capabilities of a datastore, or modify a profile to meet your requirements.
+You can use ONTAP tools to manually create or edit storage capability profiles, automatically generate a profile based on the capabilities of a datastore, or modify a profile to meet your requirements.
 
 *What you'll need*
 
 You must have registered your VASA Provider instance with ONTAP tools for VMware vSphere.
-
-After setting up a profile, you can edit the profile as required.
 
 *Steps*
 
@@ -62,7 +60,7 @@ If you have enabled "`linked`" mode for your vCenter Servers, then you must sele
 a|
 Platform
 a|
-Starting from ONTAP tools for VMware vSphere 9.13, you can create storage capability profiles using the combination of the following items:
+You can create or edit storage capability profiles using the combination of the following items:
 
 1. Platform type - Performance, Capacity, and Flash Array Hybrid
 2. Asymmetric flag -  indicates storage system's SAN optimized (All San Array) status. 

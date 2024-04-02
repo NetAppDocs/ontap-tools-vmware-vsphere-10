@@ -2,18 +2,18 @@
 permalink: configure/task_map_storage_to_storage_capability_profiles.html
 sidebar: sidebar
 keywords:
-summary: 'You can map the datastores that are associated with VASA Provider for ONTAP to storage capability profiles. You can assign a profile to a datastore that is not associated with a storage capability profile.'
+summary: 'You can map the datastores that are associated with ONTAP tools for VMware vSphere to storage capability profiles. You can assign a profile to a datastore that is not associated with a storage capability profile.'
 ---
 = Map datastores to storage capability profiles
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can map the datastores that are associated with VASA Provider for ONTAP to storage capability profiles. You can assign a profile to a datastore that is not associated with a storage capability profile.
+You can map the datastores that are associated with ONTAP tools for VMware vSphere to storage capability profiles. You can assign a profile to a datastore that is not associated with a storage capability profile.
 
 *What you will need*
 
-* You must have registered your VASA Provider instance with ONTAP® tools for VMware vSphere.
+* You must have registered your VASA Provider instance with ONTAP tools for VMware vSphere.
 * ONTAP tools must have already discovered your storage.
 
 You can map NFS and VMFS datastore with a storage capability profile or change the storage capability profile that is associated with a datastore. VASA Provider does _not_ display any virtual volume (VVol) datastores on the Storage Mappings page. All the datastores that are referred to in this task are NFS and VMFS datastores.

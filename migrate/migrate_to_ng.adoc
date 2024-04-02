@@ -16,15 +16,10 @@ It is recommended to migrate classic setup only if the setup is servicing the VA
 
 *About this task* 
 
-Migration is supported from ONTAP tools for VMware vSphere 9.10D2 and 9.11D4 releases to 10.1 release. 
-
-To migrate from:
-
-* ONTAP tools for VMware vSphere 9.10 release, first upgrade to 9.10D2 release then migrate to 10.1 release.
-* ONTAP tools for VMware vSphere 9.11 release, first upgrade to 9.11D4 release then migrate to 10.1 release.
+Migration is supported from ONTAP tools for VMware vSphere 9.10D2, 9.11D4, 9.12, and 9.13 releases to 10.1 release. 
 
 [NOTE]
-As an existing user you need to take the OVA backup from 9.10/9.11 before upgrading to 9.10D patch or 9.11D patch 
+As an existing user you need to take the OVA backup from your current release before upgrading to the patch releases. 
 
 *Steps*
 
@@ -35,7 +30,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . Deploy OVA for ONTAP tools for VMware vSphere 10.1 release. See link:../deploy/qsg_10.html[ONTAP tools Quick start]
 . Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.0 release. See link:../configure/add_vcenter.html[Add vCenter]. 
-. Onboard storage backend locally from the remote plugin vCenter APIs. See link:../configure/onboard_svm.html[Onboard storage backend]. Add storage as local scoped for migration.
+. Onboard storage backend locally from the remote plugin vCenter APIs. Add storage as local scoped for migration.
 . Issue the following API call to migrate:
 +
 ====

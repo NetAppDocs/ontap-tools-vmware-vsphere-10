@@ -21,8 +21,6 @@ entries:
     url: /configure/add_storage_backend.html
   - title: Associate storage backend with vCenter
     url: /configure/associate_storage_backend.html
-  - title: Onboard storage backend (SVM or Cluster) with vCenter
-    url: /configure/onboard_svm.html
   - title: Register VASA Provider to vCenter
     url: /configure/register_vasa.html
   - title: Create datastore
@@ -33,7 +31,7 @@ entries:
     entries:
       - title: Overview of storage capability profiles
         url: /configure/concept_configure_storage_capability_profiles.html
-      - title: Create storage capability profiles
+      - title: Create or edit storage capability profiles
         url: /configure/task_create_storage_capability_profiles.html
       - title: Generate storage capability profiles automatically
         url: /configure/task_automatically_generating_scps.html
@@ -49,8 +47,6 @@ entries:
         url: /configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html
       - title: Provision vVols datastores
         url: /configure/task_provision_vvols_datastores.html
-      - title: Rebalance vVols datastores
-        url: /configure/reference_rebalance_vvols_datastore.html
       - title: Delete datastores
         url: /configure/reference_delete_vvols.html  
         
