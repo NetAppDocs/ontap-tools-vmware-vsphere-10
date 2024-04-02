@@ -79,7 +79,7 @@ You must access the maintenance console by using the "`maint`" user name. You ca
 +
 The type of ONTAP tools and VASA certificates generated depends on the IP address (IPv4 or IPV6) that you have provided during deployment.
 
-* The ONTAP tools IP address used to register with vCenter Server depends on the type of vCenter Server IP address (IPv4 or IPV6) entered in the deployment wizard.
+* ONTAP tools IP address used to register with vCenter Server depends on the type of vCenter Server IP address (IPv4 or IPV6) entered in the deployment wizard.
 +
 Both ONTAP tools and VASA certificates will be generated using the same type of IP address used during vCenter Server registration.
 * Ensure that VM's are not migrated during installation.

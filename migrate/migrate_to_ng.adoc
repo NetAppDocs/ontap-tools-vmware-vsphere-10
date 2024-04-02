@@ -16,7 +16,10 @@ It is recommended to migrate classic setup only if the setup is servicing the VA
 
 *About this task* 
 
-Migration is supported from ONTAP tools for VMware vSphere 9.10D2 and 9.11D4 releases to 10.1 release. To migrate from:
+Migration is supported from ONTAP tools for VMware vSphere 9.10D2 and 9.11D4 releases to 10.1 release. 
+
+To migrate from:
+
 * ONTAP tools for VMware vSphere 9.10 release, first upgrade to 9.10D2 release then migrate to 10.1 release.
 * ONTAP tools for VMware vSphere 9.11 release, first upgrade to 9.11D4 release then migrate to 10.1 release.
 

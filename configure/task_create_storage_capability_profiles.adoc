@@ -112,7 +112,7 @@ Deduplication and compression are enabled by default for ASA storage and cannot 
 The tiering attribute enables the use of volumes that are part of a FabricPool-enabled aggregate (supported by VASA Provider for AFF systems with ONTAP 9.4 and later). You can configure one of the following policies for the tiering attribute:
 
  ** None: Prevents volume data from being moved to the capacity tier
- ** Snapshot: Moves user data blocks of volume Snapshot copies that are not associated with the active file system to the capacity tier
+ ** Snapshot: Moves user data blocks of volume Snapshots that are not associated with the active file system to the capacity tier
 
 +
 |===

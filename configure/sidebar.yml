@@ -11,16 +11,10 @@ entries:
         url: /configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html
   - title: Configure user roles and privileges
     url: /configure/task_configure_user_role_and_privileges.html
-  - title: ONTAP tools manager user interface
+  - title: ONTAP tools Manager user interface
     url: /configure/ontap_tools_manager_ui.html
-  - title: vCenter Management
-    entries:
-      - title: Add vCenter
-        url: /configure/add_vcenter.html
-      - title: Remote plugin Registration
-        url: /configure/remote_plugin_register.html
-      - title: Remote plugin unregistration
-        url: /configure/remote_plugin_unregister.html
+  - title: Add and manage vCenter
+    url: /configure/add_vcenter.html
   - title: Discover storage systems and hosts
     url: /configure/task_discover_storage_systems_and_hosts.html
   - title: Add storage backend

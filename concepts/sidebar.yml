@@ -3,8 +3,6 @@ title: Concepts
 entries:
   - title: ONTAP tools Overview
     url: /concepts/concept_ontap_tools_overview.html
-  - title: VASA Provider configurations for vVols
-    url: /concepts/concept_configure_vvols_datastores.html 
   - title: Role based access control
     entries:
       - title: Overview of role-based access control for ONTAP tools

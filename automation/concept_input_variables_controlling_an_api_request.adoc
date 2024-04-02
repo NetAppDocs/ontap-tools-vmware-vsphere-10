@@ -60,7 +60,7 @@ When issuing an API call that uses GET, you can limit or filter the returned obj
 
 `<field>=<query value>`
 
-In addition to an exact match, other operators are available to return a set of objects over a range of values. The ONTAP tools REST API supports the filtering operators shown in the table below.
+In addition to an exact match, other operators are available to return a set of objects over a range of values. ONTAP tools REST API supports the filtering operators shown in the table below.
 
 |===
 |Operator |Description

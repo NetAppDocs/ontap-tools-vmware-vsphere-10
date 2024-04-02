@@ -2,7 +2,7 @@
 permalink: configure/ip_whitelisting.html
 sidebar: sidebar
 keywords:
-summary: 'This feature enables you to specify specific ESXi host address to be allowed for datastore mount operation.'
+summary: 'You can choose to allow few specific ESXi host addresses for datastore mount operation.'
 ---
 = Manage network access
 :icons: font
@@ -10,15 +10,9 @@ summary: 'This feature enables you to specify specific ESXi host address to be a
 
 [.lead]
 // Need to add procedure with vCenter UI and ontap tools shortcut. move the API to API section. Setting> Manage network Access.
+When you have multiple ESXi hosts IP addresses, all the discovered IP addresses from the host are added to an export policy by default. If you do not want to add all IP addresses to export policy, provide a setting for allowing specific IP addresses in a comma separated list or range or CIDR, or combination of all three for each vCenter. 
 
-
-This feature enables you to specify specific ESXi host address to be allowed for datastore mount operation.
-
-When you have multiple IP addresses for ESXi hosts, all the discovered IP addresses from the host are added to an Export policy. If you do not want to add all IP addresses to export policy, provide a setting for whitelisted IP addresses in a comma separated list or range or CIDR, or combination of all three for each vCenter.
-
-If the setting is not provided, export policy adds all IP addresses discovered in the pre-mount step. If the setting is provided, ONTAP tools adds only the ones which fall within the whitelisted IPs or range. If none of the IPs of a host belong to the whitelisted IPs, the mount on that host fails.
-
-By default all host IP's are added to the export policy.
+You can choose to allow few specific ESXi host addresses for datastore mount operation. If the setting is not provided, export policy adds all IP addresses discovered in the pre-mount step. If the setting is provided, ONTAP tools adds only the ones which fall within the listed IPs or range. If none of the IPs of a host belong to the listed IPs, the mount on that host fails.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`

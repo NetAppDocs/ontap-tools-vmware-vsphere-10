@@ -19,6 +19,11 @@ This task helps you to onboard the ONTAP cluster. When you add storage backend u
 When you add storage backend using the vCenter UI, direct SVM does not support vVols.
 
 == Add storage backend using ONTAP tools Manager UI
+
+[NOTE]
+Storage backend is global when added from ONTAP tools Manager or commons APIs and they are local when added from the vCenter APIs.
+Example: For multi-tenant setup, you can add storage backend (cluster) globally and SVM locally to use direct SVM credentials.
+
 *Steps*
 
 . Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 

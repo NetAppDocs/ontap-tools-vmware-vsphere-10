@@ -10,7 +10,7 @@ summary: 'The resources available through ONTAP tools REST API are organized in 
 
 [.lead]
 A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.
-The ONTAP tools workflows include the core steps and parameters you need to accomplish each task. They provide a starting point for customizing your ONTAP tools automation environment.
+ONTAP tools workflows include the core steps and parameters you need to accomplish each task. They provide a starting point for customizing your ONTAP tools automation environment.
 
 == Storage discovery
 

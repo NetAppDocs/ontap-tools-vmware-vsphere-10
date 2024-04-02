@@ -12,15 +12,10 @@ summary: 'ONTAP tools for VMware vSphere is a collection of tools for lifecycle 
 ONTAP tools for VMware vSphere is a collection of tools for lifecycle management of virtual machines. It integrates with VMware ecosystem and helps in provisioning, basic protection and disaster recovery of virtual machines.
 
 ONTAP tools for VMware vSphere 10.1 release is a collection of horizontally scalable, event driven,
-microservices deployed as an Open Virtual Appliance (OVA). It is packaged in various deployment form factors like Open Virtual Appliance (OVA) and Software as a service (SaaS) for on-prem.
+microservices deployed as an Open Virtual Appliance (OVA). It is packaged in various deployment form factors like OVA and Software as a service (SaaS) for on-prem. This release has REST API integration with ONTAP.
 
 ONTAP tools for VMware vSphere consists of:
 
 * Virtual machine functionality
 * VASA Provider for VM granular
 * Storage policy-based management
-
-== ONTAP tools VASA Provider
-
-ONTAP tools VASA provider supports high scale requirements for Virtual volumes (vVols). It supports NFS protocol, iSCSI protocol, and OVA deployment.
-VASA Provider for VMware is a product that provides lifecycle management in a VMware deployment with ONTAP.
