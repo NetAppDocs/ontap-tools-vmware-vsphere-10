@@ -21,7 +21,7 @@ Only single node failure is supported.
 * Virtual machine failure (Guest OS failure)
 * Application (ONTAP tools) crash
 
-No additional configuration is required for ONTAP tools to provide high availability. Only the vCenter Server and ESXi hosts must be configured with the VMware vSphere HA feature or the vSphere FT feature based on their requirements. Both HA and FT require clustered hosts together with shared storage. FT has additional requirements and limitations.
+No additional configuration is required for ONTAP tools to provide high availability. Only the vCenter Server and ESXi hosts should be configured with the VMware vSphere HA feature or the vSphere FT feature based on their requirements. Both HA and FT require clustered hosts together with shared storage. FT has additional requirements and limitations.
 
 In addition to the VMware vSphere HA solution and vSphere FT solution, ONTAP tools also help to keep ONTAP tools services running at all times.
 

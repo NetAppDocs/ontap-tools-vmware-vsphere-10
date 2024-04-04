@@ -13,12 +13,12 @@ Provisioning a datastore creates a logical container for your virtual machines a
 
 *What you will need*
 
-* To provision a datastore on an SVM that is directly connected to ONTAP tools, you must have added the SVM to ONTAP tools by using a user account that has the appropriate privileges, not the default vsadmin user account or vsadmin role.
+* To provision a datastore on an SVM that is directly connected to ONTAP tools, you should have added the SVM to ONTAP tools by using a user account that has the appropriate privileges, not the default vsadmin user account or vsadmin role.
 +
 You can also provision a datastore by adding a cluster.
 
-* If you have enabled VASA Provider and you want to specify storage capability profiles for your NFS datastores or VMFS datastores, then you must have created one or more storage capability profiles.
-* To create an NFSv4.1 datastore, you must have enabled NFSv4.1 at the SVM level.
+* If you have enabled VASA Provider and you want to specify storage capability profiles for your NFS datastores or VMFS datastores, then you should have created one or more storage capability profiles.
+* To create an NFSv4.1 datastore, you should have enabled NFSv4.1 at the SVM level.
 
 The *Provision Datastore* option enables you to specify a storage capability profile for the datastore. Storage capability profiles help in specifying consistent service level objectives (SLOs) and simplify the provisioning process. You can specify a storage capability profile only if you have enabled VASA Provider. ONTAP tools for VMware vSphere supports the following protocols:
 

@@ -2,18 +2,18 @@
 permalink: protect/task_configure_storage_replication_adapter_for_san_environment.html
 sidebar: sidebar
 keywords:
-summary: 'You must set up the storage systems before running Storage Replication Adapter \(SRA\) for Site Recovery Manager \(SRM\).'
+summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for Site Recovery Manager \(SRM\).'
 ---
 = Configure Storage Replication Adapter for SAN environment
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You must set up the storage systems before running Storage Replication Adapter (SRA) for Site Recovery Manager (SRM).
+You should set up the storage systems before running Storage Replication Adapter (SRA) for Site Recovery Manager (SRM).
 
 *What you will need*
 
-You must have installed the following programs on the protected site and the recovery site:
+You should have the following programs installed on the protected site and the recovery site:
 
 * SRM
 +
@@ -38,7 +38,7 @@ Check the LUN access for the mapped LUNs in the ESXi to verify FC and iSCSI conn
 
 *What you will need*
 
-You must have installed the following programs on the protected site and the recovery site:
+You should have the following programs installed on the protected site and the recovery site:
 
 * SRM
 +

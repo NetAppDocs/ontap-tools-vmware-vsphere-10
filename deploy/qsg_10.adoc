@@ -24,7 +24,7 @@ You deploy the plug-in as a virtual appliance, which reduces your effort of inst
 
 Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements forthe deployment package and some basic host system requirements.
 
-You can use ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server VirtualAppliance (vCSA). You must deploy ONTAP tools on a supported vSphere that includes ESXi system.
+You can use ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server VirtualAppliance (vCSA). You should deploy ONTAP tools on a supported vSphere that includes ESXi system.
 
 * *Installation package space requirements per node*
 ** 10 GB for thin provisioned installations

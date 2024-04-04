@@ -13,7 +13,7 @@ You need to start the SSH on other nodes before you upgrade.
 
 *What you will need*
 
-The VASA Provider extension must be enabled for your vCenter Server instance.
+The VASA Provider extension should be enabled for your vCenter Server instance.
 
 *About this task*
 

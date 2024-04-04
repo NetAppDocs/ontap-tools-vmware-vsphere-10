@@ -13,8 +13,8 @@ ONTAP tools for VMware vSphere enables you to automatically generate storage cap
 
 *What you will need*
 
-* You must have registered your VASA Provider instance with ONTAP tools.
-* ONTAP tools must have discovered your storage.
+* You should have registered your VASA Provider instance with ONTAP tools.
+* ONTAP tools should have discovered your storage.
 
 *About this task*
 

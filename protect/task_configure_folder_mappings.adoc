@@ -2,18 +2,18 @@
 permalink: protect/task_configure_folder_mappings.html
 sidebar: sidebar
 keywords:
-summary: 'You must map your folders on the protected site and recovery site to enable communication between them.'
+summary: 'You should map your folders on the protected site and recovery site to enable communication between them.'
 ---
 = Configure folder mappings
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You must map your folders on the protected site and recovery site to enable communication between them.
+You should map your folders on the protected site and recovery site to enable communication between them.
 
 *What you will need*
 
-You must have connected the protected and recovery sites.
+You should have connected the protected and recovery sites.
 
 *Steps*
 

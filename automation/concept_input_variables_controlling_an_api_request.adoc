@@ -101,7 +101,7 @@ Specify *fields=*** to retrieve all the object fields, including those requiring
 
 === Custom field selection
 
-Use *fields=<field_name>* to specify the exact field you want. When requesting multiple fields, the values must be separated using commas without spaces.
+Use *fields=<field_name>* to specify the exact field you want. When requesting multiple fields, the values should be separated using commas without spaces.
 
 IMPORTANT: As a best practice, you should always identify the specific fields you want. You should only retrieve the set of common fields or all fields when needed. Which fields are classified as common, and returned using _fields=*_, is determined by NetApp based on internal performance analysis. The classification of a field might change in future releases.
 
@@ -116,7 +116,7 @@ For example, you can sort the type field in descending order followed by id in a
 `order_by=type desc, id asc`
 
 * If you specify a sort field but do not provide a direction, the values are sorted in ascending order.
-* When including multiple parameters, you must separate the fields with a comma.
+* When including multiple parameters, you should separate the fields with a comma.
 
 == Pagination when retrieving objects in a collection
 

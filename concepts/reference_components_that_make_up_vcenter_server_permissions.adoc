@@ -25,7 +25,7 @@ The object is the target for the tasks.
 +
 The user or group defines who can perform the task.
 
-As the following diagram illustrates, you must have all three elements in order to have a permission.
+As the following diagram illustrates, you should have all three elements in order to have a permission.
 
 NOTE: In this diagram, the gray boxes indicate components that exist in the vCenter Server, and the white boxes indicate components that exist in the operating system where the vCenter Server is running.
 

@@ -2,18 +2,18 @@
 permalink: protect/task_configure_storage_replication_adapter_for_nas_environment.html
 sidebar: sidebar
 keywords:
-summary: 'You must configure the storage systems before running Storage Replication Adapter \(SRA\) for VMware vCenter Site Recovery Manager \(SRM\).'
+summary: 'You should configure the storage systems before running Storage Replication Adapter \(SRA\) for VMware vCenter Site Recovery Manager \(SRM\).'
 ---
 = Configure Storage Replication Adapter for NAS environment
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You must configure the storage systems before running Storage Replication Adapter (SRA) for VMware vCenter Site Recovery Manager (SRM).
+You should configure the storage systems before running Storage Replication Adapter (SRA) for VMware vCenter Site Recovery Manager (SRM).
 
 *What you will need*
 
-You must have installed the following programs on the protected site and the recovery site:
+You should have the following programs installed on the protected site and the recovery site:
 
 * SRM
 +

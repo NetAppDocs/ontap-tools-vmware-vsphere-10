@@ -13,8 +13,8 @@ You can quickly verify whether your datastores are compliant with the storage ca
 
 *What you will need*
 
-* You must have registered your VASA Provider instance with ONTAP tools for VMware vSphere.
-* ONTAP tools must have discovered your storage.
+* You should have registered your VASA Provider instance with ONTAP tools for VMware vSphere.
+* ONTAP tools should have discovered your storage.
 
 *Steps*
 

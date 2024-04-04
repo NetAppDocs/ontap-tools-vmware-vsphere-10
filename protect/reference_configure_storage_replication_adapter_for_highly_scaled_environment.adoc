@@ -2,14 +2,14 @@
 permalink: protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html
 sidebar: sidebar
 keywords:
-summary: 'You must configure the storage timeout intervals per the recommended settings for Storage Replication Adapter \(SRA\) to perform optimally in highly scaled environments.'
+summary: 'You should configure the storage timeout intervals per the recommended settings for Storage Replication Adapter \(SRA\) to perform optimally in highly scaled environments.'
 ---
 = Configure Storage Replication Adapter for highly scaled environment
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You must configure the storage timeout intervals per the recommended settings for Storage Replication Adapter (SRA) to perform optimally in highly scaled environments.
+You should configure the storage timeout intervals per the recommended settings for Storage Replication Adapter (SRA) to perform optimally in highly scaled environments.
 
 == Storage Provider settings
 
@@ -42,7 +42,7 @@ https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GU
 
 == Storage settings
 
-You must set the value of the `storage.commandTimeout` and `storage.maxConcurrentCommandCnt` timeout interval for highly scaled environments to 99,999 seconds.
+You should set the value of the `storage.commandTimeout` and `storage.maxConcurrentCommandCnt` timeout interval for highly scaled environments to 99,999 seconds.
 
 NOTE: The timeout interval specified is the maximum value. You do not need to wait for the maximum timeout to be reached. Most commands finish within the set maximum timeout interval.
 

@@ -17,7 +17,7 @@ You only need to set up vCenter Server permissions if you want to limit access t
 
 Where you assign a permission determines ONTAP tools tasks that a user can perform.
 
-Sometimes, to ensure the completion of a task, you must assign the permission at a higher level, such as the root object. This is the case when a task requires a privilege that does not apply to a specific vSphere object (for example, tracking the task) or when a required privilege applies to a non-vSphere object (for example, a storage system).
+Sometimes, to ensure the completion of a task, you should assign the permission at a higher level, such as the root object. This is the case when a task requires a privilege that does not apply to a specific vSphere object (for example, tracking the task) or when a required privilege applies to a non-vSphere object (for example, a storage system).
 
 In these cases, you can set up a permission so that it is inherited by the child entities. You can also assign other permissions to the child entities. The permission assigned to a child entity always overrides the permission inherited from the parent entity. This means that you can permissions to a child entity as a way to restrict the scope of a permission that was assigned to a root object and inherited by the child entity.
 
@@ -25,9 +25,9 @@ TIP: Unless your company's security policies require more restrictive permission
 
 == Permissions and non-vSphere objects
 
-The permission that you create are applied to a non-vSphere object. For example, a storage system is not a vSphere object. If a privilege applies to a storage system, you must assign the permission containing that privilege to ONTAP tools root object because there is no vSphere object to which you can assign it.
+The permission that you create are applied to a non-vSphere object. For example, a storage system is not a vSphere object. If a privilege applies to a storage system, you should assign the permission containing that privilege to ONTAP tools root object because there is no vSphere object to which you can assign it.
 
-For example, any permission that includes a privilege such as ONTAP tools privilege "Add/Modify/Skip storage systems" must be assigned at the root object level.
+For example, any permission that includes a privilege such as ONTAP tools privilege "Add/Modify/Skip storage systems" should be assigned at the root object level.
 
 == Modifying permissions
 

@@ -13,7 +13,7 @@ You can use ONTAP tools to manually create or edit storage capability profiles, 
 
 *What you'll need*
 
-You must have registered your VASA Provider instance with ONTAP tools for VMware vSphere.
+You should have registered your VASA Provider instance with ONTAP tools for VMware vSphere.
 
 *Steps*
 
@@ -56,7 +56,7 @@ You can use the *Description* field on the Name and Description tab to describe 
 For example, a business-critical application requires a profile with capabilities that support higher performance, such as AFF and ASA platform. A datastore that is used for testing or training might use a profile with a lower performance Flash Array Hybrid platform, and enable all of the storage efficiency capabilities and tiering to control costs.
 Combination of Platform type and asymmetric flag determines the type of SCPs. For example: Platinum_ASA_A, Platinum_ASA_C, Platinum_AFF_A, Platinum_AFF_C.
 
-If you have enabled "`linked`" mode for your vCenter Servers, then you must select the vCenter Server for which you are creating the storage capability profile.
+If you have enabled "`linked`" mode for your vCenter Servers, then you should select the vCenter Server for which you are creating the storage capability profile.
 a|
 Platform
 a|
@@ -87,7 +87,7 @@ You can set the value for *Max IOPS* and *Min IOPS* which enables you to use the
 *NOTE*:
 
   *** Max IOPS and Min IOPS can also be applied to the FlexVol volume for a NFS and VMFS datastore.
-  *** You must ensure that the performance metrics are not also set separately at an storage virtual machine (SVM) level, an aggregate level, or a FlexVol volume level.
+  *** You should ensure that the performance metrics are not also set separately at an storage virtual machine (SVM) level, an aggregate level, or a FlexVol volume level.
 
 a|
 Storage Attributes

@@ -17,7 +17,7 @@ With the latest version of ONTAP tools, you can configure QoS metrics for each v
 
 Starting with the 7.2 version of ONTAP tools, the QoS metrics of one virtual machine is not shared with other virtual machines.
 
-NOTE: You must not modify the existing VM Storage Policy as the virtual machines might become non-compliant.
+NOTE: You should not modify the existing VM Storage Policy as the virtual machines might become non-compliant.
 
 *Steps*
 

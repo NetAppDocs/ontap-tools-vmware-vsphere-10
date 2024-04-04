@@ -13,9 +13,9 @@ ONTAP tools for VMware vSphere provides the option to enable the SRA capability 
 
 *What you will need*
 
-* You must have set up your vCenter Server instance and configured ESXi.
-* You must have deployed ONTAP tools for Virtualization.
-* You must have downloaded the SRA Adapter `.tar.gz` file from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
+* You should have set up your vCenter Server instance and configured ESXi.
+* You should have deployed ONTAP tools for Virtualization.
+* You should have downloaded the SRA Adapter `.tar.gz` file from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
 
 *About this task*
 
@@ -29,7 +29,7 @@ The flexibility to enable VASA Provider and SRA capabilities enables you to exec
 . Rescan the adapters to verify that the details are updated in the SRM Storage Replication Adapters
 page.
 
-You must log out of the vSphere Client, and then log in again to verify that your selected extension is available for configuration.
+You should log out of the vSphere Client, and then log in again to verify that your selected extension is available for configuration.
 
 *Related information*
 

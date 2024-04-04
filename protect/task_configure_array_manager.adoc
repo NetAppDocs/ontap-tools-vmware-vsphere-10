@@ -13,10 +13,10 @@ You can configure Storage Replication Adapter (SRA) by using the Array Manager w
 
 *What you will need*
 
-* You must have paired the protected sites and recovery sites in SRM.
-* You must have configured your onboarded storage before configuring the array manager.
-* You must have configured and replicated the SnapMirror relationships between the protected sites and recovery sites.
-* You must have enabled the SVM management LIFs to enable multitenancy.
+* You should have paired the protected sites and recovery sites in SRM.
+* You should have configured your onboarded storage before configuring the array manager.
+* You should have configured and replicated the SnapMirror relationships between the protected sites and recovery sites.
+* You should have enabled the SVM management LIFs to enable multitenancy.
 
 SRA supports cluster-level management and SVM-level management. If you add storage at a cluster level, then you can discover and perform operations on all of the SVMs in the cluster. If you add storage at an SVM level, then you can manage only that specific SVM.
 
@@ -32,7 +32,7 @@ NOTE: VMware does not support NFS4.1 protocol for SRM.
   *** If you are connecting to a cluster, you should enter the cluster management LIF.
   *** If you are connecting directly to an SVM, you should enter the IP address of the SVM management LIF.
 +
-NOTE: When configuring the array manager, you must use the same connection and credentials for the storage system that was used to add the storage system in Virtual Storage Console's Storage Systems menu. For example, if the array manager configuration is SVM scoped, then the storage under ONTAP tools must be added at SVM level.
+NOTE: When configuring the array manager, you should use the same connection and credentials for the storage system that was used to add the storage system in Virtual Storage Console's Storage Systems menu. For example, if the array manager configuration is SVM scoped, then the storage under ONTAP tools should be added at SVM level.
 
  .. If you are connecting to a cluster, enter the name of the SVM in the *SVM name* field.
 +
@@ -42,13 +42,13 @@ You can also leave this field blank.
 +
 You can enter the source volume at the protected site and the replicated destination volume at the recovery site. You can enter either the full volume name or the partial volume name.
 +
-For example, if you want to discover volume src_vol1 that is in a SnapMirror relationship with volume dst_vol1, you must specify src_vol1 in the protected site field and dst_vol1 in the recovery site field.
+For example, if you want to discover volume src_vol1 that is in a SnapMirror relationship with volume dst_vol1, you should specify src_vol1 in the protected site field and dst_vol1 in the recovery site field.
 
  .. *(Optional)* Enter the volumes to be excluded from discovery in the *Volume exclude list* field.
 +
 You can enter the source volume at the protected site and the replicated destination volume at the recovery site. You can enter either the full volume name or the partial volume name.
 +
-For example, if you want to exclude volume _src_vol1_ that is in a SnapMirror relationship with volume _dst_vol1_, you must specify _src_vol1_ in the protected site field and _dst_vol1_ in the recovery site field.
+For example, if you want to exclude volume _src_vol1_ that is in a SnapMirror relationship with volume _dst_vol1_, you should specify _src_vol1_ in the protected site field and _dst_vol1_ in the recovery site field.
 
  .. Enter the password of the user account in the *Password* field.
 . Click *Next*.

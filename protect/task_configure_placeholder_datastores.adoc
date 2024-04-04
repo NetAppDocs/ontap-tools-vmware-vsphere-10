@@ -2,19 +2,19 @@
 permalink: protect/task_configure_placeholder_datastores.html
 sidebar: sidebar
 keywords:
-summary: 'You must configure a placeholder datastore to hold a place in the vCenter inventory at the recovery site for the protected virtual machine \(VM\). The placeholder datastore does not need to be large as the placeholder VMs are small and use only a few hundred or fewer kilobytes.'
+summary: 'You should configure a placeholder datastore to hold a place in the vCenter inventory at the recovery site for the protected virtual machine \(VM\). The placeholder datastore does not need to be large as the placeholder VMs are small and use only a few hundred or fewer kilobytes.'
 ---
 = Configure placeholder datastores
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You must configure a placeholder datastore to hold a place in the vCenter inventory at the recovery site for the protected virtual machine (VM). The placeholder datastore does not need to be large as the placeholder VMs are small and use only a few hundred or fewer kilobytes.
+You should configure a placeholder datastore to hold a place in the vCenter inventory at the recovery site for the protected virtual machine (VM). The placeholder datastore does not need to be large as the placeholder VMs are small and use only a few hundred or fewer kilobytes.
 
 *What you will need*
 
-* You must have connected the protected and recovery sites.
-* You must have configured your resource mappings.
+* You should have connected the protected and recovery sites.
+* You should have configured your resource mappings.
 
 *Steps*
 

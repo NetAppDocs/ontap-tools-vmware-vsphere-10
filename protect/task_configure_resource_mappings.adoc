@@ -2,18 +2,18 @@
 permalink: protect/task_configure_resource_mappings.html
 sidebar: sidebar
 keywords:
-summary: 'You must map your resources on the protected site and recovery site so that virtual machines are configured to fail over into one group of hosts or the other.'
+summary: 'You should map your resources on the protected site and recovery site so that virtual machines are configured to fail over into one group of hosts or the other.'
 ---
 = Configure resource mappings
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You must map your resources on the protected site and recovery site so that virtual machines are configured to fail over into one group of hosts or the other.
+You should map your resources on the protected site and recovery site so that virtual machines are configured to fail over into one group of hosts or the other.
 
 *What you will need*
 
-You must have connected the protected and recovery sites.
+You should have connected the protected and recovery sites.
 
 NOTE: In Site Recovery Manager (SRM), resources can be resource pools, ESXi hosts, or vSphere clusters.
 

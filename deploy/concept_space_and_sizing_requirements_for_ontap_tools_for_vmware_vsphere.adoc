@@ -11,7 +11,7 @@ summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familia
 [.lead]
 Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
 
-You can use ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server Virtual Appliance (vCSA). You must deploy ONTAP tools on a supported vSphere that includes ESXi system.
+You can use ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools on a supported vSphere that includes ESXi system.
 
 * *Installation package space requirements per node*
 ** 10 GB for thin provisioned installations
@@ -63,7 +63,7 @@ The Interoperability Matrix Tool (IMT) contains the latest information about the
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT[Interoperability Matrix Tool^]
 
 == Additional deployment considerations
-You must consider few requirements while customizing the deployment ONTAP tools.
+You should consider few requirements while customizing the deployment ONTAP tools.
 
 === Application user password
 
@@ -71,7 +71,7 @@ This is the password assigned to the administrator account. For security reasons
 
 === Appliance maintenance console credentials
 
-You must access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Application Configuration menu of the maintenance console of your ONTAP tools to change the password.
+You should access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Application Configuration menu of the maintenance console of your ONTAP tools to change the password.
 
 === vCenter Server IP address
 

@@ -19,7 +19,7 @@ The Provision datastore menu enables you to specify a storage capability profile
 
 FlexVol volumes that are used as backing storage are displayed on the vVols dashboard only if they are running ONTAP 9.5 or later. You should not use the vCenter Server New Datastore wizard to provision vVols datastores.
 
-* You must use cluster credentials to create vVols datastores.
+* You should use cluster credentials to create vVols datastores.
 +
 You cannot use SVM credentials to create vVols datastores.
 

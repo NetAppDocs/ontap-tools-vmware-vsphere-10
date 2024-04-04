@@ -14,15 +14,16 @@ When you're managing multiple vCenters and you want to enable vVols capability o
 
 *Steps*
 
-. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *Certificates* > *VASA provider* > *Renew* option to renew the certificates.
 [NOTE]
-System will be offline until the certificate is renewed.
+System will be offline till the certificate is renewed.
 . To upgrade the self signed certificate to custom CA certificate, select *Certificates* > *VASA provider* > *UPGRADE TO CA* option.
-.. In the upgrade certificate to custom CA pop-up, upload the Server certificate, Server certificate private key, and Root CA certificate and Intermediate certificate files. The tool tip provides description of the certificates.
-.. Enter the Domain name for which you had generated this certificate.
+.. In the *upgrade certificate to custom CA* pop-up, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files. The tool tip provides description of the certificates.
+.. Enter the domain name for which you generated this certificate.
 .. Click *UPGRADE*
 +
 [NOTE]
-System will be offline until the upgrade is complete.
+System will be offline till the upgrade is complete.
 

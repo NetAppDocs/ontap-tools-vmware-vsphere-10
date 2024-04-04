@@ -13,7 +13,8 @@ You can change the administrator password using ONTAP tools Manager.
 
 *Steps*
 
-. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
+. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Log in with ONTAP tools administrator credentials provided during deployment. 
 . Click on the *administrator* icon on the right top corner of the screen and select *Change password*.
 . In the change password pop-up window, enter the old password and the new password details. The constraints for changing the password is displayed on the UI screen.
 . Click *Change* to implement the changes. 

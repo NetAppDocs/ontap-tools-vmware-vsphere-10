@@ -2,21 +2,22 @@
 permalink: manage/task_remove_storage_from_a_vvols_datastore.html
 sidebar: sidebar
 keywords: Remove vVol datastore
-summary: 'A vVols datastore exists as long as at least one FlexVol volume is available on the datastore.'
+summary: 'Delete datastore action deletes the datastore when there are no vVols on the selected datastore.'
 ---
 = Shrink or delete vVols datastore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-A vVols datastore exists as long as at least one FlexVol volume is available on the datastore. If you want to delete a vVols datastore in a HA cluster, you should first unmount the datastore from all hosts within the HA cluster, and then delete the residing _.vsphere-HA_ folder manually using the vCenter server user interface. 
+Delete datastore action deletes the datastore when there are no vVols on the selected datastore.
 
 .Steps
 
 . From the vSphere Client Home page, click *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the datastore.
 . Right click on the vVol datastore and select *NetApp Ontap tools* > *Remove storage from datastore*.
-. Clean up the Flex volumes at the Storage array and the igroup.
-
+. Check the *Delete selected volume(s) from ONTAP cluster* option, if you choose to delete the selected volume on ONTAP storage as well.
++
 [NOTE]
-Delete vVols datastore and do not delete volumes from storage
+The option to delete the volume on which the vVols is residing is disabled.
+. Clean up the Flex volumes at the Storage array and the igroup.

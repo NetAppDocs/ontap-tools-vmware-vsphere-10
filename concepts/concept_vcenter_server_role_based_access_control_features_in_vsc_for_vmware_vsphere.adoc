@@ -20,7 +20,7 @@ vCenter Server provides role-based access control (RBAC) that enables you to con
 |Object |An entity upon which actions are performed. VMware vCenter objects are data centers, folders, resource pools, clusters, hosts, and VMs 
 |===
 
-To successfully complete a task, you must have the appropriate vCenter Server RBAC roles. During a task, ONTAP tools checks a user's vCenter Server roles before checking the user's ONTAP privileges.
+To successfully complete a task, you should have the appropriate vCenter Server RBAC roles. During a task, ONTAP tools checks a user's vCenter Server roles before checking the user's ONTAP privileges.
 
 NOTE: The vCenter Server roles apply to ONTAP tools vCenter users, not to administrators. By default, administrators have full access to the product and do not require roles assigned to them.
 

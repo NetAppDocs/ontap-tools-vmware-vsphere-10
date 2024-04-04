@@ -19,7 +19,7 @@ You can connect to the REST API through the following interfaces:
 * Node management LIF
 * SVM management LIF
 
-The LIF you choose to use must be configured to support the HTTPS management protocol. Also, the firewall configuration in your network must allow the HTTPS traffic.
+The LIF you choose to use should be configured to support the HTTPS management protocol. Also, the firewall configuration in your network should allow the HTTPS traffic.
 
 [NOTE]
 You should always use a cluster management LIF. This will load balance the API requests across all the nodes and avoid nodes that are offline or experiencing connectivity issues. If you have multiple cluster management LIFs configured, they are all equivalent regarding access to the REST API.
