@@ -1,0 +1,26 @@
+---
+permalink: automation/manage_network_workflows.html
+sidebar: sidebar
+keywords: REST API categories
+summary: 'The resources available through ONTAP tools REST API are organized in categories, as displayed on ONTAP tools API documentation page.'
+---
+= Manage network access
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use the following API to add IP addresses for whitelisting:
+
+----
+patch /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+ 
+{
+    value: string
+}
+
+GET /api/v1/vcenters/{vcguid}/settings/ip-whitelist
+ 
+{
+    value: string
+}
+---- 
