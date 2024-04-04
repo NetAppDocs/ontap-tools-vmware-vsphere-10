@@ -27,7 +27,7 @@ From the Storage Mapping page, you can determine the following information:
  ** The vCenter Server that is associated with the datastore
  ** How many profiles match the datastore
 +
-The Storage Mapping page displays only NFS and VMFS datastores. This page does not display any VVol datastores or qtree datastores.
+The Storage Mapping page displays only NFS and VMFS datastores. This page does not display any vVol datastores or qtree datastores.
 
  ** Whether the datastore is currently associated with a profile
 +
