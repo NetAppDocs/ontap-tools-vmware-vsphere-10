@@ -15,6 +15,8 @@ entries:
     url: /deploy/nonha_deployment.html
   - title: High-Availability Deployment
     url: /deploy/ha_three_node.html
+  - title: Upgrade to the latest ONTAP tools version 
+    url: /upgrade/upgrade_otv.html
   - title: Recover ONTAP tools setup
     url: /deploy/recovery_deployment.html
   - title: Install the NFS VAAI plug-in
