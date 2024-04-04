@@ -19,7 +19,7 @@ entries:
        URL: /automation/svm_workflow.html
      - title: Onboard storage backend (SVM or Cluster) with vCenter
        URL: /automation/onboard_svm_workflow.html
-     - title: Storage discovery
-       URL: /automation/storage_workflow.html
+     - title: Create vVols datastore
+       URL: /automation/create_vvol_workflow.html
      - title: Storage discovery
        URL: /automation/storage_workflow.html

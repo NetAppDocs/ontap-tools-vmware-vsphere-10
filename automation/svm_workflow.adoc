@@ -4,7 +4,6 @@ sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.'
 ---
-
 = SVM aggregate mapping requirements
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +14,7 @@ aggregate specified in the datastores POST API. The ONTAP does not allow the cre
 unmapped aggregates on an SVM using direct SVM credentials. To resolve this, you need to map the SVMs
 with the aggregates using the REST API or CLI as described here.
 REST API:
+
 ----
 PATCH "/api/svm/svms/f16f0935-5281-11e8-b94d-005056b46485"
 '{"aggregates":{"name":["aggr1","aggr2","aggr3"]}}'

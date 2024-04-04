@@ -1,10 +1,10 @@
 ---
-permalink: automation/storage_workflow.html
+permalink: automation/create_vvol_workflow.html
 sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.'
 ---
-= Storage discovery
+= Create vVols datastore
 :icons: font
 :imagesdir: ../media/
 
