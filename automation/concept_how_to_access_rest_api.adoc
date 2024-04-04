@@ -4,7 +4,6 @@ sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'You can access the ONTAP REST API in several different ways.'
 ---
-
 = How to access ONTAP tools REST API
 :icons: font
 :imagesdir: ../media/
