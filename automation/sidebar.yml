@@ -13,21 +13,21 @@ entries:
     url: /automation/task_get_started_with_the_rest_api.html
   - title: Workflows
     entries:
-     - title: Storage discovery
-       URL: /automation/storage_workflow.html
-     - title: SVM aggregate mapping requirements
-       URL: /automation/svm_workflow.html
-     - title: Onboard storage backend (SVM or Cluster) with vCenter
-       URL: /automation/onboard_svm_workflow.html
-     - title: Create vVols datastore
-       URL: /automation/create_vvol_workflow.html
-     - title: Mount and unmount vVols datastore
-       URL: /automation/mount_unmount_workflow.html
-     - title: Expand or shrink Storage of vVol Datastore
-       URL: /automation/expand_shrink_workflow.html
-     - title: Delete vVols datastore
-       URL: /automation/delete_vvol_workflow.html
-     - title: Manage storage threshold
-       URL: /automation/manage_threshold_workflow.html
-     - title: Manage network access
-       URL: /automation/manage_network_workflows.html
+      - title: Storage discovery
+        URL: /automation/storage_workflow.html
+      - title: SVM aggregate mapping requirements
+        URL: /automation/svm_workflow.html
+      - title: Onboard storage backend (SVM or Cluster) with vCenter
+        URL: /automation/onboard_svm_workflow.html
+      - title: Create vVols datastore
+        URL: /automation/create_vvol_workflow.html
+      - title: Mount and unmount vVols datastore
+        URL: /automation/mount_unmount_workflow.html
+      - title: Expand or shrink Storage of vVol Datastore
+        URL: /automation/expand_shrink_workflow.html
+      - title: Delete vVols datastore
+        URL: /automation/delete_vvol_workflow.html
+      - title: Manage storage threshold
+        URL: /automation/manage_threshold_workflow.html
+      - title: Manage network access
+        URL: /automation/manage_network_workflows.html
