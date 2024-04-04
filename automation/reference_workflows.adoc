@@ -12,49 +12,6 @@ summary: 'The resources available through ONTAP tools REST API are organized in 
 A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.
 ONTAP tools workflows include the core steps and parameters you need to accomplish each task. They provide a starting point for customizing your ONTAP tools automation environment.
 
-
-== SVM aggregate mapping requirements
-
-To use direct SVM credentials for provisioning datastores, internally ONTAP tools create volumes on the
-aggregate specified in the datastores POST API. The ONTAP does not allow the creation of volumes on
-unmapped aggregates on an SVM using direct SVM credentials. To resolve this, you need to map the SVMs
-with the aggregates using the REST API or CLI as described here.
-REST API:
-----
-PATCH "/api/svm/svms/f16f0935-5281-11e8-b94d-005056b46485"
-'{"aggregates":{"name":["aggr1","aggr2","aggr3"]}}'
-----
-
-ONTAP CLI:
-----
-sti115_vsim_ucs630f_aggr1 vserver show-aggregates
-AvailableVserver Aggregate State Size Type SnapLock
-Type
-svm_test sti115_vsim_ucs630f_aggr1
-online 10.11GB vmdisk non-snaplock
-----
-
-== Onboard storage backend (SVM or Cluster) with vCenter
-
-Use the following API to onboard the storage backends and map the SVM to vCenter locally.  See link:../configure/task_configure_user_role_and_privileges.html[Configure user roles and privileges] section for the ONTAP SVM user privileges. 
-
-----
-POST /virtualization/api/v1/vcenters/<vcguid>/storage-backends
-
-{
-     "hostname_or_ip": "172.21.103.107",
-     "username": "svm11",
-     "password": "xxxxxx"
-   }
-----
-[NOTE]
-The ID from the above API response is used in discovery.
-
-You need to pass x-auth for the API. You can generate this x-auth from the new API added under Auth in Swagger.
-----
-/virtualization/api/v1/auth/vcenter-login
-----
-
 == Create vVols datastore
 
 You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.

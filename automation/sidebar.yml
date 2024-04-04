@@ -12,5 +12,14 @@ entries:
   - title: Get started with the REST API
     url: /automation/task_get_started_with_the_rest_api.html
   - title: Workflows
+    entries:
+     - title: Storage discovery
+       URL: /automation/storage_workflow.html
+     - title: SVM aggregate mapping requirements
+       URL: /automation/svm_workflow.html
+     - title: Onboard storage backend (SVM or Cluster) with vCenter
+       URL: /automation/onboard_svm_workflow.html
+     - title: Storage discovery
+       URL: /automation/storage_workflow.html
      - title: Storage discovery
        URL: /automation/storage_workflow.html
