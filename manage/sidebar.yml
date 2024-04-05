@@ -49,3 +49,8 @@ entries:
     url: /manage/task_edit_esxi_host_settings.html
   - title: Change ONTAP tools Manager password
     url: /manage/change_manager_pw.html
+  - title: Reset ONTAP tools Manager password
+    url: /manage/reset_manager_pw.html
+  - title: Reset application user password
+    url: /manage/reset_app_pw.html
+

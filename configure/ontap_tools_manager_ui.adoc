@@ -19,6 +19,7 @@ ONTAP tools Manager helps in:
 * Log bundle downloads - Collect log files for ONTAP tools for VMware vSphere.
 * Certificate management - Change the self-signed certificate to custom CA certificate and renew
 or refresh all certificates.
+* Password management - Reset OVA application username and password.
 
 To access ONTAP tools Manager UI, launch `\https://loadBalanceIP:8443/virtualization/ui/` from the browser and login with ONTAP tools administrator credentials provided during deployment.
 

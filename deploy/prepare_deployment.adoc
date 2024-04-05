@@ -9,9 +9,6 @@ summary: 'You should deploy ONTAP tools in your environment, and specify the req
 :imagesdir: ../media/
 
 [.lead]
-
-ONTAP tools for VMware vSphere supports multi vCenter Server that includes VASA Provider. 
-
 You should be aware of the basic storage backend requirements, application requirements, and license requirements before you begin deploying ONTAP tools for VMware vSphere. 
 Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan your deployment and decide how you want to configure ONTAP tools in your environment. 
 

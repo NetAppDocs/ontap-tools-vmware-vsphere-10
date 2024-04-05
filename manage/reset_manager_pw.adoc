@@ -1,0 +1,25 @@
+---
+permalink: manage/reset_manager_pw.html
+sidebar: sidebar
+keywords:
+summary: 'You can change the administrator password using ONTAP tools Manager.'
+---
+= Reset ONTAP tools Manager password
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+If you've forgotten the ONTAP tools Manager password, You can reset the administrator credentials using ONTAP tools maintenance console.
+
+*Steps*
+
+. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. On the login screen, select *Reset password* option. 
++
+To reset the Manager UI password, you need to generate the reset token using the ONTAP tools maintenance console.
+.. From the vCenter Server, open the maintenance console 
+.. Enter '2' to select System Configuration option
+.. Enter '3' to generate the token to reset the password
+. In the change password pop-up window, enter the password token, username, and the new password details. 
+. Click *RESET* to implement the changes.
+On successful password reset, you can use new password to login.
