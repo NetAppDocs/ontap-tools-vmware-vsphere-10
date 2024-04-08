@@ -3,6 +3,8 @@ title: Concepts
 entries:
   - title: ONTAP tools Overview
     url: /concepts/concept_ontap_tools_overview.html
+  - title: Key concepts and terms
+    url: /concepts/concepts_terms.html
   - title: Role based access control
     entries:
       - title: Overview of role-based access control for ONTAP tools
