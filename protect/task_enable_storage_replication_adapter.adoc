@@ -30,7 +30,3 @@ The flexibility to enable VASA Provider and SRA capabilities enables you to exec
 page.
 
 You should log out of the vSphere Client, and then log in again to verify that your selected extension is available for configuration.
-
-*Related information*
-
-link:../concepts/concept_manage_disaster_recovery_setup_using_srm.html[Configure Storage Replication Adapter for disaster recovery]

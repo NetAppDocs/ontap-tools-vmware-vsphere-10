@@ -2,13 +2,14 @@
 permalink: concepts/concepts_terms.html
 sidebar: sidebar
 keywords:
-summary: 'Key concepts and terms explained.'
+summary: 'The following section describes the key concepts and terms used in the document.'
 ---
 = Key concepts and terms
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+The following section describes the key concepts and terms used in the document. 
 
 |===
 
@@ -18,32 +19,32 @@ summary: 'Key concepts and terms explained.'
 
 |OVA |Open Virtual Appliance
 
-|vVols |Virtual volumes. vVols are the actual virtual machine files and disks stored in the vVols datastore. Using the term vVol (singular) is referring to a single specific file, LUN, or namespace. 
+|vVols |Virtual volumes (vVols) are the actual virtual machine files and disks stored in the vVols datastore. Using the term vVol (singular) is referring to a single specific file, LUN, or namespace. 
 
 |vVols datastore | The Virtual Volume datastore is a logical datastore representation of a vVols container which is created and maintained by a VASA Provider.  
 
 |SRA |Storage Replication Adapter. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level as well as at the cluster level configuration.
 
-|SRM |VMware Site Recovery Manager. SRM provides business continuity, disaster recovery, site migration, and nondisruptive testing capabilities for VMware virtual environments.
+|SRM |VMware Site Recovery Manager (SRM) provides business continuity, disaster recovery, site migration, and nondisruptive testing capabilities for VMware virtual environments.
 
-|HA |High Availability - Cluster nodes are configured in HA pairs for fault tolerance and nondisruptive operations.
+|HA |Cluster nodes are configured in High Availability (HA) pairs for fault tolerance and nondisruptive operations.
 
-|SRM |Site Recovery Manager - VMware Site Recovery Manager is a business continuity and disaster recovery solution that helps you plan, test, and run the recovery of virtual machines between a protected vCenter Server site and a recovery vCenter Server site.
+|SRM |VMware Site Recovery Manager (SRM) is a business continuity and disaster recovery solution that helps you plan, test, and run the recovery of virtual machines between a protected vCenter Server site and a recovery vCenter Server site.
 
-|SRA |Storage Replication Adapter - SRA is an implementation of SRA spec provided by the storage vendors and implements an interface called the Storage Replication Adapter (SRA) interface. It enables SRM to execute the disaster recovery workflows on a specific Storage.
+|SRA |Storage Replication Adapter (SRA) is an implementation of SRA specifications provided by the storage vendors and implements an interface called the SRA interface. It enables SRM to execute the disaster recovery workflows on a specific Storage.
 
-|CA | Certificate authority. CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
+|CA |Certificate authority (CA) is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 
 |VAAI |VMware vSphere APIs for Array Integration. VAAI is a set of APIs that enable communication between VMware vSphere ESXi hosts and storage devices. 
 
-|iSCSI | iSCSI is a block protocol that can run on standard Ethernet networks. 
+|iSCSI |iSCSI is a block protocol that can run on standard Ethernet networks. 
 
-|SCP | A storage capability profile (SCP) is a form of storage template that allows the vCenter admin to define what storage features they require without actually needing to understand how to manage those features in ONTAP.
+|SCP |A storage capability profile (SCP) is a form of storage template that allows the vCenter admin to define what storage features they require without actually needing to understand how to manage those features in ONTAP.
 
-|VM Storage Policy | VM Storage Policies are created in vCenter under Policies and Profiles. For vVols, create a ruleset using rules from the NetApp vVols storage type provider. ONTAP tools provides a simplified approach by allowing you to simply select an SCP rather than forcing you to specify individual rules.
+|VM Storage Policy | VM Storage Policies are created in vCenter under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider. ONTAP tools provides a simplified approach by allowing you to simply select an SCP rather than forcing you to specify individual rules.
 
-|NFS |Network File System. NFS is a distributed file system protocol that is an open IETF standard defined in Request for Comments (RFC) that allows anyone to implement the protocol.
+|NFS |Network File System (NFS) is a distributed file system protocol that is an open IETF standard defined in Request for Comments (RFC) that allows anyone to implement the protocol.
 
-|SVM |storage virtual machine.  Like a virtual machine running on a hypervisor, an SVM is a logical entity that abstracts physical resources. SVM contain data volumes and one or more LIFs through which they serve data to the clients. 
+|SVM |Like a virtual machine running on a hypervisor, storage virtual machine (SVM) is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
 
 |===
