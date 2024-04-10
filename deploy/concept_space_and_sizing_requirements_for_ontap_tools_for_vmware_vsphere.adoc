@@ -71,7 +71,7 @@ This is the password assigned to the administrator account. For security reasons
 
 === Appliance maintenance console credentials
 
-You should access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Application Configuration menu of the maintenance console of your ONTAP tools to change the password.
+You should access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Restart guest OS option available during VM restart in vCenter to change the password.
 
 === vCenter Server IP address
 

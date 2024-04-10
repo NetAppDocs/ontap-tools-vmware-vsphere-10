@@ -53,4 +53,6 @@ entries:
     url: /manage/reset_manager_pw.html
   - title: Reset application user password
     url: /manage/reset_app_pw.html
+  - title: Reset maintenance console user password
+    url: /manage/reset_maint_pw.html
 

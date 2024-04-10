@@ -25,7 +25,7 @@ a|
 // updated for 10.0 release
 
 . Display server status summary
-. Change LOG level for VASA Provider Services and SRA
+. Change LOG level for VASA Provider Services and SRA Services
 . Disable ASUP
 
 a|
@@ -34,7 +34,7 @@ a|
 
 . Reboot virtual machine
 . Shutdown virtual machine
-. Generate token to change ONTAP tools manager password
+. Generate token to reset manager UI password
 . Change time zone
 . Add new NTP server
 . Increase jail disk size (/jail)
