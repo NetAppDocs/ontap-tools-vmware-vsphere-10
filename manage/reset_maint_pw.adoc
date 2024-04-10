@@ -17,7 +17,7 @@ This option is used to update the maintenance console user password present on t
 . Log in to your vCenter Server
 . Right-click on the VM and select *Power* > *Restart Guest OS* 
 During system restart, you get the following screen:
-image:../media/maint_console_pw.jpg[Reset maintenance user's password]
+image:../media/maint_console_pw.png[Reset maintenance user's password]
 You have 5 sec to choose your option. Press any key to stop the progress and freeze the grub menu. 
 . Select *Reset maintenance user's password* option. The maintenance console opens.
 . In the console, enter the new password details. *New password* and *Retype new password* details should match to successfully reset the password. You have three chances to enter the correct password. The system restarts after successfully entering the new password.  
