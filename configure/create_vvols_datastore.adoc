@@ -29,13 +29,15 @@ The user interface is self explanatory, use these steps as guidelines.
 +
 [NOTE]
 You get vVols option only if the VASA provider is registered with the selected vCenter.
-. Provide *Datastore name* and *Protocol* information in the *Name and Protocol* pane.
-. Select *Platform* and *storage VM* in the Storage pane. In the *Advanced options* section, depending on your selection either select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol).
+. In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
+. In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, depending on your choice, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol).
 [NOTE]
-*Asymmetric* toggle button will be visible only if iSCSI/FC was selected in the previous step and performance or capacity is selected in the platform rop-down.
-. You can either create new volumes or use existing volumes in the *Storage attributes* Pane. 
+* Platform and asymmetric options help you to filter out the SVMs dropdown options. You should select the SVM to create or use the volume(s) for datastore creation. 
+* *Asymmetric* toggle button is visible only if iSCSI/FC was selected in the previous step and performance or capacity is selected in the platform drop-down.
+* Asymmetric is true for AFF platform and false for ASA platform.
+. In the *Storage attributes* Pane, you can either create new volumes or use existing volumes. When creating new volume you can enable QoS on the datastore.  
 . Review your selection in the *Summary* pane and click *FINISH*.
-Datastore gets created and mounted on all the host 
+Datastore is created and mounted on all the hosts.
 
 == Create NFS datastore
 //10.1 addition
@@ -45,14 +47,17 @@ VMware Network File System (NFS) datastore is a type of storage that uses the NF
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
 . Select NFS in *Datastore Type* in the *Type* pane.
-. Provide datastore name, size, and protocol information. In the advanced options, select the Datastore cluster and Kerberos Authentication.
+. Provide datastore name, size, and protocol information. In the advanced options, select the *Datastore cluster* and Kerberos Authentication.
 [NOTE]
 Kerberos Authentication is available only when NFS 4.1 protocol is selected. 
-. Select Tier/Platform and Storage VM in the Storage pane. You can select *custom Export Policy* in the *Advanced Option* section.
-. Select the aggregate for creation of volume, and choose the advanced options as required in the *Storage Attributes* pane.
+. Select *Platform* and *Storage VM* in the Storage pane. You can select *custom Export Policy* in the *Advanced Option* section.
+[NOTE]
+* *Asymmetric* toggle button is visible only if performance or capacity is selected in the platform drop-down.
+* *Any* option in the platform dropdown enables you to see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag. 
+. In the *Storage Attributes* pane, select the aggregate for creation of volume. In the advanced options choose *Space Reserve* and *Enable QoS* as required.
 . Review the selections in the *Summary* pane and click *FINISH*.
 
-Datastore gets created and mounted on all the hosts.
+Datastore is created and mounted on all the hosts.
 
 == Create VMFS datastore
 
@@ -83,5 +88,8 @@ Check the following items before proceeding:
 . Provide datastore name, size, and protocol information in the Name and Protocol pane. 
 . In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
 . Select Platform and storage VM in the Storage pane. Select Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane. You can either choose an exiting iGroup for the datastore or create new iGroup with custom name.
-. Select the Aggregate from the drop-down. Select the *Space Reserve* and *Use existing volume* options as required from the *Advanced options* section and provide the details as required.
++
+If you choose *Any* option in the platform dropdown you can see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag.
+. Select the *Aggregate* from the drop-down. Select the *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
 . Review the datastore details in the *Summary* pane and click *FINISH*.
+Datastore is created and mounted on all the hosts.
