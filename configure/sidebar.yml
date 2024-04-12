@@ -21,7 +21,7 @@ entries:
     url: /configure/add_storage_backend.html
   - title: Associate storage backend with vCenter
     url: /configure/associate_storage_backend.html
-  - title: Register VASA Provider to vCenter
+  - title: Register VASA provider to vCenter
     url: /configure/register_vasa.html
   - title: Create datastore
     url: /configure/create_vvols_datastore.html    

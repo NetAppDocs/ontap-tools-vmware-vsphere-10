@@ -2,14 +2,14 @@
 permalink: manage/task_resize_datastores.html
 sidebar: sidebar
 keywords:
-summary: 'Resizing a datastore enables you to increase the storage for your virtual machine files. You might need to change the size of a datastore as your infrastructure requirements change.'
+summary: 'Resizing a datastore enables you to increase the storage for your virtual machine files. You can change the size of a datastore as your infrastructure requirements change.'
 ---
 = Resize NFS and VMFS datastores
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Resizing a datastore enables you to increase the storage for your virtual machine files. You might need to change the size of a datastore as your infrastructure requirements change.
+Resizing a datastore enables you to increase the storage for your virtual machine files. You can change the size of a datastore as your infrastructure requirements change.
 
 *About this task*
 

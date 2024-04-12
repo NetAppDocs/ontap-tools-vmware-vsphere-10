@@ -2,14 +2,14 @@
 permalink: manage/task_mount_a_vvols_datastore.html
 sidebar: sidebar
 keywords: Mount vVol
-summary: 'You can mount a VMware Virtual Volumes \(vVols\) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only using the APIs.'
+summary: 'You can mount a VMware Virtual Volumes \(vVols\) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only through the APIs.'
 ---
 = Mount vVols datastore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only using the APIs.
+You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only through the APIs.
 
 *Steps*
 

@@ -12,6 +12,8 @@ indexpage:
           url: /deploy/qsg_10.html
         - title: Deploy ONTAP tools
           url: /deploy/prepare_deployment.html
+        - title: Upgrade to the latest release of ONTAP tools
+          url: /deploy/upgrade_otv.html
         - title: Migrate ONTAP tools
           url: migrate/migrate_to_ng.html
     - title: Use ONTAP tools
@@ -22,17 +24,11 @@ indexpage:
         url: /manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html
       - title: Configure high availability
         url: /concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html
-    - title: Protect and manage datastores
-      links:
       - title: Protect your datastores
         url: /protect/task_enable_storage_replication_adapter.html
-      - title: Protect virtual machines
-        url: /protect/concept_configure_replication_for_vvols_datastore.html
-      - title: Monitor vVols datastores and virtual machines
-        url: /manage/task_monitor_vvols_datastores_and_virtual_machines_using_vvols_dashboard.html
     - title: More resources
       links:
-      - title: Documentation for earlier versions of ONTAP tools for VMware
+      - title: Documentation for earlier versions of ONTAP tools for VMware vSphere
         url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
       - title: NetApp Knowledge Base - ONTAP tools
         url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider

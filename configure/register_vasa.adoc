@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can register VASA provide to vCenter by using either self signed certificate or CA signed certificate. Self signed certificate is generated using VMware CA handshake.'
 ---
-= Register VASA Provider to vCenter
+= Register VASA provider to vCenter
 :icons: font
 :imagesdir: ../media/
 

@@ -47,4 +47,6 @@ The following section describes the key concepts and terms used in the document.
 
 |SVM |Like a virtual machine running on a hypervisor, storage virtual machine (SVM) is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
 
+|VMFS |Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments.
+
 |===
