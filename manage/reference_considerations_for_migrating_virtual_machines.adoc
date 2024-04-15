@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should be aware of some of the considerations while migrating exisitng virtual machines in your datacenter.'
 ---
-= Considerations for migrating or cloning virtual machines
+= Considerations to migrate or clone virtual machines
 :icons: font
 :imagesdir: ../media/
 

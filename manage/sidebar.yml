@@ -17,11 +17,11 @@ entries:
     url: /manage/storage_backend.html
   - title: Manage vCenter
     url: /manage/manage_vcenter.html
-  - title: Manage vVol Lifecycle
+  - title: Manage vVol lifecycle
     url: /manage/vvol_lifecycle_management.html
   - title: Manage certificates
     url: /manage/certificate_manage.html
-  - title: Managed iGroup and Export policies
+  - title: Manage iGroup and Export policies
     url: /manage/igroup_management.html
   - title: Access ONTAP tools maintenance console
     entries:
@@ -37,7 +37,7 @@ entries:
     url: /manage/task_collect_the_log_files.html
   - title: Manage virtual machines
     entries:
-      - title: Considerations for migrating or cloning virtual machines
+      - title: Considerations to migrate or clone virtual machines
         url: /manage/reference_considerations_for_migrating_virtual_machines.html
       - title: Migrate virtual machines with NFS and VMFS datastores to vVols datastores
         url: /manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html

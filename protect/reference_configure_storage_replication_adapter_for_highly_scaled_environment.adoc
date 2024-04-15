@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should configure the storage timeout intervals per the recommended settings for Storage Replication Adapter \(SRA\) to perform optimally in highly scaled environments.'
 ---
-= Configure Storage Replication Adapter for highly scaled environment
+= Configure SRA for highly scaled environment
 :icons: font
 :imagesdir: ../media/
 

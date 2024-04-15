@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: manage vVols
 summary: 'You can manage Virtual Volumes (vVols) using the VMWare vCenter user interface.'
 ---
-= Manage vVol Lifecycle 
+= Manage vVol lifecycle 
 :icons: font
 :imagesdir: ../media/
 

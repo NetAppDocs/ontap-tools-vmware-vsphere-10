@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for Site Recovery Manager \(SRM\).'
 ---
-= Configure Storage Replication Adapter for SAN environment
+= Configure SRA for SAN environment
 :icons: font
 :imagesdir: ../media/
 
@@ -34,7 +34,7 @@ The adapter is installed either on SRM.
 You can do this either by verifying that the ESXi hosts have local LUNs connected on the SVM or by using the `fcp show initiators` command or the `iscsi show initiators` command on the SVMs. 
 Check the LUN access for the mapped LUNs in the ESXi to verify FC and iSCSI connectivity.
 
-== Configure Storage Replication Adapter for NAS environment
+== Configure SRA for NAS environment
 
 *What you will need*
 

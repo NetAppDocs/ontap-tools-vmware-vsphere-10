@@ -23,15 +23,11 @@ The following section describes the key concepts and terms used in the document.
 
 |vVols datastore | The Virtual Volume datastore is a logical datastore representation of a vVols container which is created and maintained by a VASA Provider.  
 
-|SRA |Storage Replication Adapter. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level as well as at the cluster level configuration.
+|SRA |Storage Replication Adapter (SRA) is an implementation of SRA specifications provided by the storage vendors and implements an interface called the SRA interface. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level as well as at the cluster level configuration.
 
 |SRM |VMware Site Recovery Manager (SRM) provides business continuity, disaster recovery, site migration, and nondisruptive testing capabilities for VMware virtual environments.
 
 |HA |Cluster nodes are configured in High Availability (HA) pairs for fault tolerance and nondisruptive operations.
-
-|SRM |VMware Site Recovery Manager (SRM) is a business continuity and disaster recovery solution that helps you plan, test, and run the recovery of virtual machines between a protected vCenter Server site and a recovery vCenter Server site.
-
-|SRA |Storage Replication Adapter (SRA) is an implementation of SRA specifications provided by the storage vendors and implements an interface called the SRA interface. It enables SRM to execute the disaster recovery workflows on a specific Storage.
 
 |CA |Certificate authority (CA) is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 
