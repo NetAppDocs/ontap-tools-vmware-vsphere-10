@@ -9,7 +9,7 @@ summary: 'need info.'
 :imagesdir: ../media/
 
 [.lead]
-vCenter listing page shows the associated number of storage backends. Each vCenter has option to associate a storage backend 
+vCenter listing page shows the associated number of storage backends. Each vCenter has option to associate a storage backend.
 
 *About this task*
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'ONTAP tools for VMware vSphere enables you to automatically generate storage capability profiles for existing NFS and VMFS datastores. When you select the auto-generate option for a datastore, VASA Provider creates a profile that contains the storage capabilities that are used by that datastore.'
 ---
-= Generate storage capability profiles automatically
+= Generate storage capability profiles
 :icons: font
 :imagesdir: ../media/
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can configure HA three node in either small, medium, or large configurations.'
 ---
-= Deploy High-Availability configuration
+= Deploy HA configuration
 :icons: font
 :imagesdir: ../media/
 

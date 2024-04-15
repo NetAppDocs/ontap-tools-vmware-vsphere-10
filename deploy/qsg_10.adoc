@@ -5,7 +5,7 @@ keywords: QSG, ONTAP tools for VMware vSphere, Quick start guide, Installing
 summary: Provides instructions for deploying and initializing ONTAP tools for VMware vSphere.
 ---
 
-= ONTAP tools for VMware vSphere Quick Start
+= ONTAP tools for VMware vSphere quick start
 :hardbreaks:
 :toclevels: 1
 :nofooter:

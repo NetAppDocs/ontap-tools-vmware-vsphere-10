@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can choose to allow few specific ESXi host addresses for datastore mount operation.'
 ---
-= Manage network access
+= Configure network access
 :icons: font
 :imagesdir: ../media/
 

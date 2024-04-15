@@ -1,13 +1,13 @@
 section: configure
 title: Configure ONTAP tools
 entries:
-  - title: Manage network access
+  - title: Configure network access
     url: /configure/ip_whitelisting.html
   - title: Configure ESXi settings
     entries:
-      - title: Configure ESXi server multipathing and timeout settings
+      - title: Configure ESXi server multipath and timeout settings
         url: /configure/task_configure_esx_server_multipathing_and_timeout_settings.html
-      - title: ESXi host values set using ONTAP tools
+      - title: Set ESXi host values
         url: /configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html
   - title: Configure user roles and privileges
     url: /configure/task_configure_user_role_and_privileges.html
@@ -33,20 +33,20 @@ entries:
         url: /configure/concept_configure_storage_capability_profiles.html
       - title: Create or edit storage capability profiles
         url: /configure/task_create_storage_capability_profiles.html
-      - title: Generate storage capability profiles automatically
+      - title: Generate storage capability profiles
         url: /configure/task_automatically_generating_scps.html
   - title: Configure datastores
     entries:
       - title: Provision NFS and VMFS datastores
         url: /configure/task_provision_datastores.html
+      - title: Provision vVols datastores
+        url: /configure/task_provision_vvols_datastores.html
       - title: Map datastores to storage capability profiles
         url: /configure/task_map_storage_to_storage_capability_profiles.html
       - title: Assign QoS policies
         url: /configure/task_assign_qos_policies.html
       - title: Verify datastore compliance with the mapped storage capability profile
         url: /configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html
-      - title: Provision vVols datastores
-        url: /configure/task_provision_vvols_datastores.html
       - title: Delete datastores
         url: /configure/reference_delete_vvols.html  
         

@@ -18,7 +18,7 @@ Following are ONTAP tools requirements before proceeding with the deployment:
 
 * Configure and set up your vCenter Server environment. 
 * Download the _.ova_ file. 
-* Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements for deploying ONTAP tools* section.  
+* Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements to deploy ONTAP tools* section.  
 * Delete the browser cache.  
 * You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment.
 * Procure CA certificates (root , Leaf, and Intermediate certificates) from the commercial CA.

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can set up several recommended ONTAP roles for working with ONTAP tools for VMware vSphere and role-based access control \(RBAC\). These roles contain the ONTAP privileges that are required to perform the required storage operations that are executed by ONTAP tools tasks.'
 ---
-= Recommended ONTAP roles when using ONTAP tools for VMware vSphere
+= Recommended ONTAP roles for ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 

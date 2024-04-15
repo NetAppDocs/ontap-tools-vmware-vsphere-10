@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'There are several key points to keep in mind when you are working with vCenter Server permissions. Whether a ONTAP tools for VMware vSphere task succeeds can depend on where you assigned a permission, or what actions a user took after a permission was modified.'
 ---
-= Key points about assigning and modifying permissions for vCenter Server
+= Assign and modify permissions for vCenter Server
 :icons: font
 :imagesdir: ../media/
 
