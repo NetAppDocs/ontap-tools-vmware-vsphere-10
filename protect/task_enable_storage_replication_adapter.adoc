@@ -17,10 +17,6 @@ ONTAP tools for VMware vSphere provides the option to enable the SRA capability 
 * You should have deployed ONTAP tools for Virtualization.
 * You should have downloaded the SRA Adapter `.tar.gz` file from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
 
-*About this task*
-
-The flexibility to enable VASA Provider and SRA capabilities enables you to execute only the workflows that you require for your enterprise.
-
 *Steps*
 
 . Log in to SRM appliance management interface using the URL: `\https://:<srm_ip>:5480`, and the go to Storage Replication Adapters in VMware SRM appliance management interface.
@@ -29,4 +25,3 @@ The flexibility to enable VASA Provider and SRA capabilities enables you to exec
 . Rescan the adapters to verify that the details are updated in the SRM Storage Replication Adapters
 page.
 
-You should log out of the vSphere Client, and then log in again to verify that your selected extension is available for configuration.

@@ -9,7 +9,7 @@ summary: 'After you have deployed the SRM appliance, you should configure SRA on
 :imagesdir: ../media/
 
 [.lead]
-After you have deployed the SRM appliance, you should configure SRA on the SRM appliance. The successful configuration of SRA enables SRM Appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools credentials (IP address and administrator password) in the SRM appliance to enable communication between SRM Appliance and SRA.
+After you have deployed the SRM appliance, you should configure SRA on the SRM appliance. The successful configuration of SRA enables SRM Appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools credentials (IP address) in the SRM appliance to enable communication between SRM Appliance and SRA.
 
 *What you will need*
 
