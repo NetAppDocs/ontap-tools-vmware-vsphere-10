@@ -29,7 +29,7 @@ The *Provision Datastore* option enables you to specify a storage capability pro
 ONTAP tools can create a datastore on either an NFS volume or a LUN:
 
 * For an NFS datastore, ONTAP tools creates an NFS volume on the storage system, and then updates the export policies.
-* For a VMFS datastore, ONTAP tools creates a new volume (or uses an existing volume, if you selected that option), and then creates a LUN and an iGroup.
+* For a VMFS datastore, ONTAP tools creates a new volume (or uses an existing volume, if you selected that option), and then creates a LUN and an igroup.
 
 [NOTE]
 ====
@@ -154,8 +154,8 @@ The *Space reserve* option available under *Advanced* menu is also populated to 
 
 * A new initiator group will be created with this name if one does not already exist.
 * The protocol name will be appended to the specified initiator group name.
-* If an existing iGroup is found with the selected initiators, the iGroup will be renamed with the provided name and will be reused.
-* If you do not specify an iGroup name, iGroup will be created with the default name.
+* If an existing igroup is found with the selected initiators, the igroup will be renamed with the provided name and will be reused.
+* If you do not specify an igroup name, igroup will be created with the default name.
 a|
 Summary
 a|

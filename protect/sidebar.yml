@@ -5,7 +5,7 @@ entries:
     url: /protect/task_enable_storage_replication_adapter.html
   - title: Configure storage system for disaster recovery
     entries:
-      - title: Configure SRA for SAN and NAS environment
+      - title: Configure SRA for SAN and NAS environments
         url: /protect/task_configure_storage_replication_adapter_for_san_environment.html
       - title: Configure SRA for highly scaled environments
         url: /protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html

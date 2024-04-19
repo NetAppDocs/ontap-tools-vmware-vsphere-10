@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
 ---
-= Manage storage backend 
+= Manage storage backends
 :icons: font
 :imagesdir: ../media/
 

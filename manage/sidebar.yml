@@ -9,19 +9,19 @@ entries:
         url: /manage/task_mount_a_vvols_datastore.html
       - title: Resize NFS and VMFS datastores
         url: /manage/task_resize_datastores.html
-      - title: Expand vVol Datastore
+      - title: Expand vVol Datastores
         url: /manage/expand_storage_of_vvol_datastore.html
-      - title: Shrink or delete vVols datastore
+      - title: Shrink or delete vVols datastores
         url: /manage/task_remove_storage_from_a_vvols_datastore.html
   - title: Manage storage backend
     url: /manage/storage_backend.html
   - title: Manage vCenter
     url: /manage/manage_vcenter.html
-  - title: Manage vVol lifecycle
+  - title: Manage vVol lifecycles
     url: /manage/vvol_lifecycle_management.html
   - title: Manage certificates
     url: /manage/certificate_manage.html
-  - title: Manage iGroup and Export policies
+  - title: Manage igroup and export policies
     url: /manage/igroup_management.html
   - title: Access ONTAP tools maintenance console
     entries:
@@ -47,12 +47,14 @@ entries:
         url: /manage/task_delete_virtual_machines.html
   - title: Modify ESXi host settings
     url: /manage/task_edit_esxi_host_settings.html
-  - title: Change ONTAP tools Manager password
-    url: /manage/change_manager_pw.html
-  - title: Reset ONTAP tools Manager password
-    url: /manage/reset_manager_pw.html
-  - title: Reset application user password
-    url: /manage/reset_app_pw.html
-  - title: Reset maintenance console user password
-    url: /manage/reset_maint_pw.html
+  - title: Manage passwords
+    entries:
+      - title: Change ONTAP tools Manager password
+        url: /manage/change_manager_pw.html
+      - title: Reset ONTAP tools Manager password
+        url: /manage/reset_manager_pw.html
+      - title: Reset application user password
+        url: /manage/reset_app_pw.html
+      - title: Reset maintenance console user password
+        url: /manage/reset_maint_pw.html
 

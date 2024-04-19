@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: virtual volume datastores
 summary: 'When you right click on datastore object in the vCenter object view, ONTAP tools supported actions are shown under the plug-in section.'
 ---
-= Expand vVols Datastore
+= Expand vVols Datastores
 :icons: font
 :imagesdir: ../media/
 

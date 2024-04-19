@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Verify that the onboarded SVM is listed under VASA Provider from vCenter UI.'
 ---
-= Verify registered SVM
+= Verify registered SVMs
 :icons: font
 :imagesdir: ../media/
 

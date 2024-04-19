@@ -25,15 +25,15 @@ entries:
     url: /configure/register_vasa.html
   - title: Create datastore
     url: /configure/create_vvols_datastore.html    
-  - title: Verify registered SVM
+  - title: Verify registered SVMs
     url: /configure/verify_registered_svm.html
   - title: Configure storage capability profiles
     entries:
-      - title: Overview of storage capability profiles
+      - title: Overview
         url: /configure/concept_configure_storage_capability_profiles.html
       - title: Create or edit storage capability profiles
         url: /configure/task_create_storage_capability_profiles.html
-      - title: Generate storage capability profiles
+      - title: Auto-generate storage capability profiles
         url: /configure/task_automatically_generating_scps.html
   - title: Configure datastores
     entries:
