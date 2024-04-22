@@ -30,7 +30,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . Deploy OVA for ONTAP tools for VMware vSphere 10.1 release. See link:../deploy/qsg_10.html[ONTAP tools Quick start]
 . Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.0 release. See link:../configure/add_vcenter.html[Add vCenter]. 
-. Onboard storage backend locally from the remote plugin vCenter APIs. Add storage as local scoped for migration.
+. Onboard storage backend locally from the remote plug-in vCenter APIs. Add storage as local scoped for migration.
 . Issue the following API call to migrate:
 +
 ====

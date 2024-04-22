@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles
 summary: 'You can configure new user roles for managing storage backends using the JSON file provided with ONTAP tools and ONTAP System Manager.'
 ---
-= Configure user roles and privileges
+= Configure ONTAP user roles and privileges
 :icons: font
 :imagesdir: ../media/
 

@@ -27,14 +27,13 @@ These values are set automatically on the ESXi host when the Recommended Setting
 
 *Steps*
 
-. Rename the `.vib` file that you downloaded from the NetApp Support Site to NetAppNasPlugin.vib to match the predefined name that ONTAP tools uses.
 . Click *Settings* in ONTAP tools home page.
 . Click *NFS VAAI Tools* tab.
-. Click *Change* in the *Existing version* section.
-. Browse and select the renamed `.vib` file, and then click *Upload* to upload the file to ONTAP tools.
+. When the VAAI plug-in in uploaded to vCenter, select *Change* in the *Existing version* section. If a VAAI plug-in is not  uploaded to the vCenter, select *Upload* button.
+. Browse and select `.vib` file, and then click *Upload* to upload the file to ONTAP tools.
 . In the Install on ESXi Hosts section, select the ESXi host on which you want to install the NFS VAAI plug-in, and then click *Install*.
 +
-Only the ESXi hosts that are eligible for the plugin installation are displayed. You should follow the on-screen instructions to complete the installation. You can monitor the installation progress in the Recent Tasks section of vSphere Web Client. 
+Only the ESXi hosts that are eligible for the plug-in installation are displayed. You should follow the on-screen instructions to complete the installation. You can monitor the installation progress in the Recent Tasks section of vSphere Web Client. 
 . Reboot the ESXi host after the installation finishes.
 +
 When the VMware admin reboots the ESXi host, ONTAP tools automatically detects the NFS VAAI plug-in. You do not have to perform additional steps to enable the plug-in.

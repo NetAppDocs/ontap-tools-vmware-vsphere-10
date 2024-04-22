@@ -14,12 +14,12 @@ ONTAP tools for VMware vSphere is a Multi-tenant system, which manages multiple 
 
 ONTAP tools Manager helps in:
 
-* vCenter management - Register and unregister vCenters to ONTAP tools.
-* Storage backend management - Register and unregister ONTAP storage clusters to ONTAP tools and map them to onboarded vCenters globally.
+* vCenter management - Add and manage vCenters to ONTAP tools.
+* Storage backend management - Add and manage ONTAP storage clusters to ONTAP tools and map them to onboarded vCenters globally.
 * Log bundle downloads - Collect log files for ONTAP tools for VMware vSphere.
 * Certificate management - Change the self-signed certificate to custom CA certificate and renew
 or refresh all certificates.
-* Password management - Reset OVA application username and password.
+* Password management - Reset OVA application password for the user.
 
 To access ONTAP tools Manager UI, launch `\https://loadBalanceIP:8443/virtualization/ui/` from the browser and login with ONTAP tools administrator credentials provided during deployment.
 

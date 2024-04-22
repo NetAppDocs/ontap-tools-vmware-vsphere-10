@@ -26,19 +26,19 @@ You can add and manage multiple vCenters with one instance of ONTAP tools for VM
 
 When you add vCenters to ONTAP tools, the following actions are performed automatically:
 
-* Plug-in is registered
+* vCenter Client Plug-in is registered
 * Custom privileges for the plug-ins and APIs are pushed to the vCenter
 * Custom roles are created to manage the users.
 
 == Register Remote plug-in with vCenter
 
-When you add a vCenter, ONTAP tools for VMware vCenter plug-in gets registered to the vCenter as a remote plugin automatically. The plug-in is visible on the vSphere user interface shortcuts.
+When you add a vCenter, ONTAP tools for VMware vCenter plug-in gets registered to the vCenter as a remote plug-in automatically. The plug-in is visible on the vSphere user interface shortcuts.
  
-The plugin is registered with a key _com.netapp.otv_ to the vCenter and can be seen in the ExtensionManager of the vCenter.
+The plug-in is registered with a key _com.netapp.otv_ to the vCenter and can be seen in the ExtensionManager of the vCenter.
 
 == Unregister Remote plug-in on vCenter
 
-You can unregister the Remote Plugin on vCenter using the following steps.
+You can unregister the Remote Plug-in on vCenter using the following steps.
 
 *Steps*
 
@@ -48,3 +48,8 @@ You can unregister the Remote Plugin on vCenter using the following steps.
 . Click on the vertical ellipsis against the vCenter you want to remove and select the *Remove* option. 
 [NOTE]
 You cannot remove the vCenter if there is a storage mapping attached to it. You need to remove the mapping before remove the vCenter.
+
+When you remove vCenters in ONTAP tools, the following actions are performed automatically: 
+
+* Plug-in is unregistered
+* Plug-in privileges and plug-in roles are removed

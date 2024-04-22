@@ -9,7 +9,7 @@ entries:
         url: /configure/task_configure_esx_server_multipathing_and_timeout_settings.html
       - title: Set ESXi host values
         url: /configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html
-  - title: Configure user roles and privileges
+  - title: Configure ONTAP user roles and privileges
     url: /configure/task_configure_user_role_and_privileges.html
   - title: ONTAP tools Manager user interface
     url: /configure/ontap_tools_manager_ui.html
