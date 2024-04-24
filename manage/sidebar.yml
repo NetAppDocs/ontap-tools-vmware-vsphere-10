@@ -13,6 +13,8 @@ entries:
         url: /manage/expand_storage_of_vvol_datastore.html
       - title: Shrink vVols datastores
         url: /manage/task_remove_storage_from_a_vvols_datastore.html
+      - title: Delete datastores
+        url: /configure/reference_delete_vvols.html  
   - title: Manage storage backend
     url: /manage/storage_backend.html
   - title: Manage vCenter

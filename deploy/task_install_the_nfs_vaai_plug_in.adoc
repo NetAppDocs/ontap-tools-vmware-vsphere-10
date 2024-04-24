@@ -21,8 +21,8 @@ You can install the NetApp NFS Plug-in for VMware vStorage APIs for Array Integr
 These values are set automatically on the ESXi host when the Recommended Settings dialog box is updated.
 
 * You should have enabled the vstorage option on the storage virtual machine (SVM) by using the `vserver nfs modify -vserver vserver_name -vstorage enabled` command.
-* You should have ESXi 7.0 update1 or later if you are using NetApp NFS VAAI plug-in 2.0.
-* You should have the vSphere 7.0U3 latest patch releases as vSphere 6.5 has been deprecated and only vSphere 8.0, 8.0U1 and 8.0U2 releases are supported.
+* You should have ESXi 7.0U3 or later if you are using NetApp NFS VAAI plug-in 2.0.
+* You should have the vSphere 7.0U3 latest patch releases as vSphere 6.5 has been deprecated.
 * vSphere 8.x is supported with the NetApp NFS VAAI plug-in 2.0.1(build 16).
 
 *Steps*
@@ -34,6 +34,6 @@ These values are set automatically on the ESXi host when the Recommended Setting
 . In the Install on ESXi Hosts section, select the ESXi host on which you want to install the NFS VAAI plug-in, and then click *Install*.
 +
 Only the ESXi hosts that are eligible for the plug-in installation are displayed. You should follow the on-screen instructions to complete the installation. You can monitor the installation progress in the Recent Tasks section of vSphere Web Client. 
-. Reboot the ESXi host after the installation finishes.
+. You should manually reboot the ESXi host after the installation finishes.
 +
 When the VMware admin reboots the ESXi host, ONTAP tools automatically detects the NFS VAAI plug-in. You do not have to perform additional steps to enable the plug-in.

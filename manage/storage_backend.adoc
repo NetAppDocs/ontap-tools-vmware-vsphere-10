@@ -35,7 +35,7 @@ Follow the steps in this section to modify the existing storage backend.
 . Click on the vertical ellipsis menu and select *Modify* to modify the credentials or the port name.
 You can track the progress in the Recent Tasks panel.
 
-You can perform the same operation using ONTAP tools Manager UI using the following steps:
+You can perform the Modify operation for global ONTAP clusters using ONTAP tools Manager UI using the following steps
 
 . Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 

@@ -2,7 +2,7 @@
 permalink: deploy/nonha_deployment.html
 sidebar: sidebar
 keywords:
-summary: 'You can configure Non-HA single node in either small, medium, or large configurations.'
+summary: 'You can configure Non-HA single node in either small or medium configurations.'
 ---
 = Deploy Non-HA single node configuration
 :icons: font
@@ -10,12 +10,12 @@ summary: 'You can configure Non-HA single node in either small, medium, or large
 
 [.lead]
 
-You can configure Non-HA single node in either small, medium, or large configurations. 
+You can configure Non-HA single node in either small or medium configurations. 
 
 * Small Non-HA configuration contains 8 CPUs and 16 GB RAM.
 * Medium Non-HA configuration contains 12 CPUs and 24 GB RAM.
 
-Make sure network route is present.
+Make sure network route is present. Storage data network needs to be accessible from VM management network.
 Example: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>
 
 *About this task*

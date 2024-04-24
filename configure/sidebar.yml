@@ -37,6 +37,4 @@ entries:
         url: /configure/task_provision_vvols_datastores.html
       - title: Assign QoS policies
         url: /configure/task_assign_qos_policies.html
-      - title: Delete datastores
-        url: /configure/reference_delete_vvols.html  
         

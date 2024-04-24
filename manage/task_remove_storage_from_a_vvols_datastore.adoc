@@ -19,5 +19,5 @@ Delete datastore action deletes the datastore when there are no vVols on the sel
 . Select volumes which do not have vVols and click *REMOVE*.
 +
 [NOTE]
-The option to delete the volume on which the vVols is residing is disabled.
+The option to select the volume on which the vVols is residing is disabled.
 . In the *Remove storage* pop-up, select *Delete volumes from ONTAP cluster* checkbox to delete the volumes from datastore and from ONTAP storage and click *DELETE*.

@@ -38,7 +38,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |Storage, host, and applications|Version requirements
 
 |ONTAP
-|ONTAP 9.12.1 latest p patch , 9.13.1 latest p patch , 9.14.1 latest patch
+|ONTAP 9.12.1 latest p patch, 9.13.1 latest p patch , 9.14.1 latest patch
 
 |VMware vSphere
 |Minimum supported VMware version is 7.0U3 and 8.0U2 and U3
@@ -47,7 +47,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |ESXi 7.0.3 or later version 
 
 |vCenter server
-|vCenter 7.0U3 and 8.0U2 and U3
+|vCenter 7.0U3 and 8.0U2 and U3 or later versions
 
 |VASA provider 
 |3.0
@@ -72,19 +72,6 @@ This is the password assigned to the administrator account. For security reasons
 === Appliance maintenance console credentials
 
 You should access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Restart guest OS option available during VM restart in vCenter to change the password.
-
-=== vCenter Server IP address
-
-* You should provide the IP address (IPv4 or IPV6) of the vCenter Server instance to which you want to register ONTAP tools.
-+
-The type of ONTAP tools and VASA certificates generated depends on the IP address (IPv4 or IPV6) that you have provided during deployment.
-
-* ONTAP tools IP address used to register with vCenter Server depends on the type of vCenter Server IP address (IPv4 or IPV6) entered in the deployment wizard.
-+
-Both ONTAP tools and VASA certificates will be generated using the same type of IP address used during vCenter Server registration.
-* Ensure that VM's are not migrated during installation.
-+
-NOTE: IPv6 is supported from ONTAP tools for VMware vSphere 10.1 release onwards.
 
 === Appliance network properties
 

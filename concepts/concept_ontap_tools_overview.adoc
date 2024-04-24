@@ -16,6 +16,6 @@ microservices deployed as an Open Virtual Appliance (OVA). It is packaged in var
 
 ONTAP tools for VMware vSphere consists of:
 
-* Virtual machine functionality
-* VASA Provider for VM granular
+* Virtual machine functionality like basic protection and disaster recovery
+* VASA Provider for VM granular management
 * Storage policy-based management
