@@ -9,8 +9,8 @@ summary: 'You can configure Non-HA single node in either small, medium, or large
 :imagesdir: ../media/
 
 [.lead]
-If you loose your ONTAP tools setup, but have your ONTAP working, you can recover ONTAP tools setup using the ONTAP.
-When you loose the setup, bring down the setup gracefully.
+If you lose your ONTAP tools setup, but have your ONTAP working, you can recover ONTAP tools setup using the ONTAP.
+When you lose the setup, bring down the setup gracefully.
 You can recover both the single node deployment and the HA three node deployment. 
 [NOTE]
 You cannot recover ONTAP tools setup if there are issues with vCenter or ONTAP. 

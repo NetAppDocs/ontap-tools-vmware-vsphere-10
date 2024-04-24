@@ -13,18 +13,6 @@ You can set timeouts and other values on the ESXi hosts using ONTAP tools for VM
 
 You can set the following values on an ESXi host:
 
-== HBA/CNA Adapter Settings
-
-Sets the recommended HBA timeout settings for NetApp storage systems.
-
-* *Emulex FC HBA timeouts*
-+
-Use the default value.
-+
-* *QLogic FC HBA timeouts*
-+
-Use the default value.
-
 == ESXi advanced configuration
 
 * *VMFS3.HardwareAcceleratedLocking*
@@ -61,24 +49,6 @@ Set this value to 12 for all NFS configurations.
 * *NFS.HeartbeatTimeout*
 +
 Set this value to 5 for all NFS configurations.
-
-== FC/FCoE settings
-
-* *Path selection policy*
-+
-Set this value to "`RR`" (round robin) when FC paths with ALUA are used.
-+
-Set this value to "`FIXED`" for all other configurations.
-+
-Setting this value to "`RR`" helps to provide load balancing across all of the active/optimized paths. The value "`FIXED`" is used for older, non-ALUA configurations and helps to prevent proxy I/O.
-
-* *Emulex FC HBA timeouts*
-+
-Use the default value.
-
-* *QLogic FC HBA timeouts*
-+
-Use the default value.
 
 == iSCSI settings
 

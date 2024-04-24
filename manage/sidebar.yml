@@ -11,7 +11,7 @@ entries:
         url: /manage/task_resize_datastores.html
       - title: Expand vVol Datastores
         url: /manage/expand_storage_of_vvol_datastore.html
-      - title: Shrink or delete vVols datastores
+      - title: Shrink vVols datastores
         url: /manage/task_remove_storage_from_a_vvols_datastore.html
   - title: Manage storage backend
     url: /manage/storage_backend.html
@@ -41,8 +41,6 @@ entries:
         url: /manage/reference_considerations_for_migrating_virtual_machines.html
       - title: Migrate virtual machines with NFS and VMFS datastores to vVols datastores
         url: /manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html
-      - title: Migrate virtual machines with older storage capability profiles
-        url: /manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html
       - title: VASA cleanup
         url: /manage/task_delete_virtual_machines.html
   - title: Modify ESXi host settings

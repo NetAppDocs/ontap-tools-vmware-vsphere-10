@@ -13,7 +13,7 @@ Resizing a datastore enables you to increase the storage for your virtual machin
 
 *About this task*
 
-You can only increase the size of an NFS and VMFS datastores. Resizing of datastore is also supported for FlexGroup datastores with auto grow option. A FlexGroup that is part of a NFS and VMFS datastores and FlexVol volume that is part of a NFS and VMFS datastores cannot shrink below the existing size but can grow by 120% maximum. Default snapshots are enabled on these FlexGroup and FlexVol volumes.
+You can only increase the size of an NFS and VMFS datastores. A FlexVol volume that is part of a NFS and VMFS datastores cannot shrink below the existing size but can grow by 120% maximum.
 
 *Steps*
 
@@ -21,5 +21,3 @@ You can only increase the size of an NFS and VMFS datastores. Resizing of datast
 . In the navigation pane, select the datacenter that contains the datastore.
 . Right-click the NFS or VMFS datastore datastore and select *NetApp ONTAP tools* > *Resize datastore*.
 . In the Resize dialog box, specify a new size for the datastore, and then click *OK*.
-+
-You can run the *REDISCOVER ALL* option in the Storage Systems menu to manually update the storage listing under Storage Systems and dashboard, or wait for the next scheduled refresh.

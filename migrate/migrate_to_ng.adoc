@@ -12,7 +12,7 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.
 
 [NOTE]
-It is recommended to migrate classic setup only if the setup is servicing the VASA provider feature alone. If you have NFS or VMFS NVMe datastores, vVol replication, and if SRA is enabled on classic, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.1.
+It is recommended to migrate classic setup only if the setup is servicing the VASA provider feature alone. If you have NVMe datastores, vVol replication, and if SRA is enabled on classic, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.1.
 
 *About this task* 
 
@@ -28,8 +28,8 @@ As an existing user, you need to take the OVA backup from your current release b
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Deploy OVA for ONTAP tools for VMware vSphere 10.1 release. See link:../deploy/qsg_10.html[ONTAP tools Quick start]
-. Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.0 release. See link:../configure/add_vcenter.html[Add vCenter]. 
+. Deploy OVA for ONTAP tools for VMware vSphere 10.1 release.
+. Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.1 release. See link:../configure/add_vcenter.html[Add vCenter]. 
 . Onboard storage backend locally from the remote plug-in vCenter APIs. Add storage as local scoped for migration.
 . Issue the following API call to migrate:
 +
@@ -83,7 +83,7 @@ https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeS
 ----
 Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
 . Add ONTAP tools storage provider 10.1 to the vCenter and link:../configure/register_vasa.html[Register VASA Provider to vCenter].
-. Stop ONTAP tools storage provider 9.10 /9.11 VASA Provider service from maintenance console.
+. Stop ONTAP tools storage provider 9.10/9.11/9.12/9.13 VASA Provider service from maintenance console.
 +
 [Note] 
 Do not delete the VASA provider.

@@ -37,7 +37,7 @@ You can track the progress in the Recent Tasks panel.
 
 You can perform the same operation using ONTAP tools Manager UI using the following steps:
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select storage backends from the sidebar.
 . Select the  *Storage Backend* you want to modify
@@ -55,9 +55,9 @@ Follow the steps below to remove storage backend.
 . Click on the vertical ellipsis menu and select *Remove*. Ensure that the storage backend does not contain any datastores.
 You can track the progress in the Recent Tasks panel.
 
-You can perform the same operation using ONTAP tools Manager UI:
+You can perform the remove operation for global ONTAP clusters using ONTAP tools Manager UI.
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select the  storage backend you want to remove

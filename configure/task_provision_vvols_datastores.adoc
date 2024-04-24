@@ -15,8 +15,6 @@ You can provision a vVols datastore using the Provision Datastore wizard only if
 
 * You should configure similar replication policy and schedule on the datastores at both the source and target sites for reverse replication to be successful.
 
-The Provision datastore menu enables you to specify a storage capability profile for the datastore, which helps in specifying consistent service level objectives (SLOs) and simplifies the provisioning process. You can specify a storage capability profile only if you have enabled VASA Provider.
-
 FlexVol volumes that are used as backing storage are displayed on the vVols dashboard only if they are running ONTAP 9.5 or later. You should not use the vCenter Server New Datastore wizard to provision vVols datastores.
 
 * You should use cluster credentials to create vVols datastores.
@@ -60,25 +58,23 @@ a|
 The General section of the New Datastore dialog box provides options to enter the location, name, description, type, and protocol for the new datastore. The vVols datastore type is used to configure a vVols datastore.
 
 You can provision the vVols datastore if VASA provider capability is enabled. See, link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html[Enable VASA Provider for configuring virtual datastores] for details. The
-vVols datastore supports NFS, iSCSI, FC/FEoE, and NVMe/FC protocols.
+vVols datastore supports NFS and iSCSI protocols.
 
 [NOTE]
-NVMe/FC protocol for vVols datastore is available if ONTAP tools is registered with vCenter 8.0 and later, and if the ONTAP version is ONTAP 9.91P3 and later.
+NVMe protocol for vVols datastore is available if ONTAP tools is registered with vCenter 8.0 and later, and if the ONTAP version is ONTAP 9.91P3 and later.
 
 NOTE: If you are provisioning iSCSI vVols datastore for vVols replication, then before creating vVols datastore at the target site, you need to perform SnapMirror update and cluster rediscovery.
 
 a|
 Storage system
 a|
-This section enables you to select whether you want the vVols datastore to have either replication enabled or disabled. Only asynchronous type replication profile is allowed for this release. You can then select one or more storage capability profiles listed. The system recommended values of paired *Storage system* and *Storage VM* are populated automatically. The recommended values are populated only if they are paired in ONTAP. You can modify these values if required.
-
-*Note:* While creating FlexVol volumes in ONTAP, you should ensure to create them with the attributes you wish to select in the storage capability profile. Both read write and data protection FlexVol volumes should have similar attributes.
+This section enables you to select whether you want the vVols datastore to have either replication enabled or disabled. Only asynchronous type replication profile is allowed for this release. The system recommended values of paired *Storage system* and *Storage VM* are populated automatically. The recommended values are populated only if they are paired in ONTAP. You can modify these values if required.
 
 After FlexVol volumes are created and SnapMirror is initialized in ONTAP, you should run a storage rediscovery in ONTAP tools to be able to see the new volumes.
 a|
 Storage attributes
 a|
-You should select the schedule for SnapMirror and the required FlexVol volume from the existing list. This schedule should be similar to the one selected in the VM Storage Policies page. The user should have created FlexVol volumes on ONTAP with SnapMirror that are listed. You can select the default storage capability profile to be used for creating vVols using the *Default storage capability profile* option. By default all the volumes are set to maximum Autogrow size to 120 % and default Snapshots are enabled on these volumes.
+You should select the schedule for SnapMirror and the required FlexVol volume from the existing list. This schedule should be similar to the one selected in the VM Storage Policies page. The user should have created FlexVol volumes on ONTAP with SnapMirror that are listed. By default all the volumes are set to maximum Autogrow size to 120 % and default Snapshots are enabled on these volumes.
 
 *Note:*
 

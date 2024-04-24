@@ -17,6 +17,8 @@ entries:
     url: /configure/add_vcenter.html
   - title: Discover storage systems and hosts
     url: /configure/task_discover_storage_systems_and_hosts.html
+  - title: Install the NFS VAAI plug-in
+    url: /deploy/task_install_the_nfs_vaai_plug_in.html
   - title: Add storage backend
     url: /configure/add_storage_backend.html
   - title: Associate storage backend with vCenter
@@ -27,26 +29,14 @@ entries:
     url: /configure/create_vvols_datastore.html    
   - title: Verify registered SVMs
     url: /configure/verify_registered_svm.html
-  - title: Configure storage capability profiles
-    entries:
-      - title: Overview
-        url: /configure/concept_configure_storage_capability_profiles.html
-      - title: Create or edit storage capability profiles
-        url: /configure/task_create_storage_capability_profiles.html
-      - title: Auto-generate storage capability profiles
-        url: /configure/task_automatically_generating_scps.html
   - title: Configure datastores
     entries:
       - title: Provision NFS and VMFS datastores
         url: /configure/task_provision_datastores.html
       - title: Provision vVols datastores
         url: /configure/task_provision_vvols_datastores.html
-      - title: Map datastores to storage capability profiles
-        url: /configure/task_map_storage_to_storage_capability_profiles.html
       - title: Assign QoS policies
         url: /configure/task_assign_qos_policies.html
-      - title: Verify datastore compliance with the mapped storage capability profile
-        url: /configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html
       - title: Delete datastores
         url: /configure/reference_delete_vvols.html  
         

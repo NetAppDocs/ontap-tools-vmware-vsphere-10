@@ -19,7 +19,7 @@ You can add and manage multiple vCenters with one instance of ONTAP tools for VM
 
 *Steps*
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *vCenters* from the sidebar
 . Select *ADD* to onboard vCenters and provide vCenter IP Address/Hostname, username, password, and port details. 
@@ -42,7 +42,7 @@ You can unregister the Remote Plug-in on vCenter using the following steps.
 
 *Steps*
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar.
 . Click on the vertical ellipsis against the vCenter you want to remove and select the *Remove* option. 

@@ -11,7 +11,7 @@ summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familia
 [.lead]
 Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
 
-You can use ONTAP tools with either a Windows vCenter Server or with a VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools on a supported vSphere that includes ESXi system.
+You can use ONTAP tools with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools on a supported vSphere that includes ESXi system.
 
 * *Installation package space requirements per node*
 ** 10 GB for thin provisioned installations
@@ -38,16 +38,16 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |Storage, host, and applications|Version requirements
 
 |ONTAP
-|ONTAP 9.10.1 , 9.11 , 9.12, and 9.13
+|ONTAP 9.12.1 latest p patch , 9.13.1 latest p patch , 9.14.1 latest patch
 
 |VMware vSphere
-|Minimum supported VMware version is 7.0.3.
+|Minimum supported VMware version is 7.0U3 and 8.0U2 and U3
 
 |ESXi hosts
 |ESXi 7.0.3 or later version 
 
 |vCenter server
-|vCenter 7.0.3
+|vCenter 7.0U3 and 8.0U2 and U3
 
 |VASA provider 
 |3.0

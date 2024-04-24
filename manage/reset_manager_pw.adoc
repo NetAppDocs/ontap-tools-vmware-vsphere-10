@@ -13,7 +13,7 @@ If you've forgotten the ONTAP tools Manager password, You can reset the administ
 
 *Steps*
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . On the login screen, select *Reset password* option. 
 +
 To reset the Manager UI password, you need to generate the reset token using the ONTAP tools maintenance console.

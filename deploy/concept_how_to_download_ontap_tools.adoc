@@ -15,8 +15,8 @@ The _.ova_ file includes ONTAP tools. When the deployment is complete, ONTAP too
 
 == Content library
 
-Content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you a seamless experience as it is not depended on the network connectivity.
-You need to create a content library to store the OVA before deploying them in HA configuration. Do not select any security policy or set any password for the content library.
+Content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
+You need to create a content library to store the OVA before deploying them in HA configuration.
 Create the content library using the following steps:
 
 *Steps*

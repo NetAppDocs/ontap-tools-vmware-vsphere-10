@@ -19,4 +19,3 @@ You can mount a VMware Virtual Volumes (vVols) datastore to one or more addition
 . In the *Mount datastores on Hosts* dialog box, select the hosts on which you want to mount the datastore, and then click *MOUNT*.
 
 You can track the progress in the Recent Task panel.
-You can run the *REDISCOVER ALL* option in the Storage Systems menu to manually update the storage listing under Storage Systems and dashboard, or wait for the next scheduled refresh.

@@ -18,7 +18,7 @@ This task help you to create mapping between storage backend and onboarded vCent
 
 *Steps*
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar.
 . Click on the vertical ellipsis against the vCenter that you want to associate or dissociate with storage backends.
@@ -29,7 +29,7 @@ See link:../configure/task_configure_user_role_and_privileges.html[List of minim
 == Modify vCenter
 Follow the steps below to modify the vCenters.
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar
 . Click on the vertical ellipsis against the vCenter that you want modify and select *Modify*.
@@ -38,7 +38,7 @@ Follow the steps below to modify the vCenters.
 == Remove vCenter
 You need to remove all the storage backends attached to the vCenter before removing it. 
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar
 . Click on the vertical ellipsis against the vCenter that you want remove and select *Remove*.

@@ -27,7 +27,7 @@ Example: For multi-tenant setup, you can add storage backend (cluster) globally 
 
 *Steps*
 
-. Launch ONTAP tools Manger UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select *Add*. 
@@ -44,4 +44,3 @@ IPV4 and IPV6 management LIFs are supported. Direct SVM based credential with ma
 You can add either cluster based credentials and IPV4 and IPV6 management LIFs or you can provide SVM based credentials with management LIF of SVM to add direct SVM.
 
 The list gets refreshed and you can see the newly added storage backend in the list.
-You can check the status of the operation in the Recent Tasks pane.

@@ -15,7 +15,7 @@ The following section describes the key concepts and terms used in the document.
 
 |*Terms* |*Description*
 
-|VASA |VMware vSphere APIs for Storage Awareness (VASA) make it easy for a VM administrator to use whatever storage capabilities are needed to provision VMs without having to interact with their storage team. This is the software component that handles communication between VMware vSphere and the storage system. VASA Provider for ONTAP uses VASA to improve storage management between Virtual Storage Console for VMware vSphere and the vCenter Server.
+|VASA |VMware vSphere APIs for Storage Awareness (VASA) make it easy for a VM administrator to use whatever storage capabilities are needed to provision VMs without having to interact with their storage team. This is the software component that handles communication between VMware vSphere and the storage system. VASA Provider embedded within ONTAP tools for VMware vSphere uses VASA to improve storage management between Virtual Storage Console for VMware vSphere and the vCenter Server.
 
 |OVA |Open Virtual Appliance
 
@@ -27,7 +27,7 @@ The following section describes the key concepts and terms used in the document.
 
 |SRM |VMware Site Recovery Manager (SRM) provides business continuity, disaster recovery, site migration, and nondisruptive testing capabilities for VMware virtual environments.
 
-|HA |Cluster nodes are configured in High Availability (HA) pairs for fault tolerance and nondisruptive operations.
+|HA |Cluster nodes are configured in High Availability (HA) pairs for nondisruptive operations.
 
 |CA |Certificate authority (CA) is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 
@@ -35,11 +35,9 @@ The following section describes the key concepts and terms used in the document.
 
 |iSCSI |iSCSI is a block protocol that can run on standard Ethernet networks. 
 
-|SCP |A storage capability profile (SCP) is a form of storage template that allows the vCenter admin to define what storage features they require without actually needing to understand how to manage those features in ONTAP.
+|VM Storage Policy | VM Storage Policies are created in vCenter under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.
 
-|VM Storage Policy | VM Storage Policies are created in vCenter under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider. ONTAP tools provides a simplified approach by allowing you to simply select an SCP rather than forcing you to specify individual rules.
-
-|NFS |Network File System (NFS) is a distributed file system protocol that is an open IETF standard defined in Request for Comments (RFC) that allows anyone to implement the protocol.
+|NFS |Network File System (NFS) is an open IETF standard defined in Request for Comments (RFC) that allows anyone to implement the protocol.
 
 |SVM |Like a virtual machine running on a hypervisor, storage virtual machine (SVM) is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
 

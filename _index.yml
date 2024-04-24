@@ -8,8 +8,6 @@ indexpage:
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886542
         - title: Learn about ONTAP tools for VMware vSphere
           url: /concepts/concept_ontap_tools_overview.html
-        - title: ONTAP tools Quick start
-          url: /deploy/qsg_10.html
         - title: Deploy ONTAP tools
           url: /deploy/prepare_deployment.html
         - title: Upgrade to the latest release of ONTAP tools

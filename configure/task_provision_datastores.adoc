@@ -17,14 +17,12 @@ Provisioning a datastore creates a logical container for your virtual machines a
 +
 You can also provision a datastore by adding a cluster.
 
-* If you have enabled VASA Provider and you want to specify storage capability profiles for your NFS datastores or VMFS datastores, then you should have created one or more storage capability profiles.
 * To create an NFSv4.1 datastore, you should have enabled NFSv4.1 at the SVM level.
 
-The *Provision Datastore* option enables you to specify a storage capability profile for the datastore. Storage capability profiles help in specifying consistent service level objectives (SLOs) and simplify the provisioning process. You can specify a storage capability profile only if you have enabled VASA Provider. ONTAP tools for VMware vSphere supports the following protocols:
+ONTAP tools for VMware vSphere supports the following protocols:
 
 * NFSv3 and NFSv4.1
 * VMFS5 and VMFS6
-* From vSphere 8.0 release, NVMe/FC protocol is supported.
 
 ONTAP tools can create a datastore on either an NFS volume or a LUN:
 
@@ -48,7 +46,7 @@ On other platforms the maximum LUN size supported is 16TB.
 ** ONTAP Storage System (Cluster) with Kerberos configured
 ** ESXi host with Kerberos configured
 
-If a storage capability profile is not specified during provisioning, you can later use the Storage Mapping page to map a datastore to a storage capability profile. You can apply storage QoS settings, throughput ceiling (Max IOPS) and throughput floor (Min IOPS) on data VMDK files of virtual machines provisioned on FlexGroup backed datastore. QoS settings can be applied either at datastore level or at individual virtual machine level by right clicking the datastore. The right click option is available only on those datastores or virtual machines that are backed by FlexGroup datastore. After the QoS is applied to a datastore, any pre-existing datastore or virtual machine QoS settings are overridden. QoS settings cannot be applied at a datastore level or at a virtual machine level for datastores that are provisioned on direct SVM's, because ONTAP does not support QoS at SVM management level. 
+You can apply storage QoS settings, throughput ceiling (Max IOPS) and throughput floor (Min IOPS) on data VMDK files of virtual machines provisioned on datastores. QoS settings can be applied either at datastore level or at individual virtual machine level by right clicking the datastore. After the QoS is applied to a datastore, any pre-existing datastore or virtual machine QoS settings are overridden. QoS settings cannot be applied at a datastore level or at a virtual machine level for datastores that are provisioned on direct SVM's, because ONTAP does not support QoS at SVM management level. 
 
 Limitations for direct SVM on NFS and VMFS datastores are:
 
@@ -112,24 +110,15 @@ a|
 The General section of the New Datastore provisioning dialog box provides options to enter the destination, name, size, type, and protocol for the new datastore.
 
 You can select either *NFS*, *VMFS*, or *vVols* type to configure a datastore. 
-When you select vVols type, NVMe/FC protocol becomes available.
+When you select vVols type, NVMe protocol becomes available.
 
 [NOTE] 
-NVMe/FC protocol is supported for ONTAP 9.91P3 and later releases.
+NVMe protocol is supported for ONTAP 9.91P3 and later releases.
 
 * NFS: You can provision NFS datastore using either NFS3 or NFS4.1 protocols. 
-+
-You can select
-the option *Distribute datastore data across the
-ONTAP cluster* to provision a FlexGroup volume on
-the storage system. Selecting this option
-automatically deselects the checkbox *Use Storage
-Capability Profile for provisioning*.
-* VMFS: You can provision VMFS datastore of file system type  VMFS5 or VMFS6  using either iSCSI or FC/FCoE protocols.
-[NOTE]
-If VASA Provider is enabled, then you
-can choose to use the storage capability
-profiles.
+
+* VMFS: You can provision VMFS datastore of file system type  VMFS5 or VMFS6  using iSCSI protocol.
+
 a|
 Kerberos authentication
 a|
@@ -139,14 +128,11 @@ Kerberos authentication is supported only for Flexvols.
 a|
 Storage system
 a|
-You can select one of the listed storage capability profiles if you have selected the option in the General section.
-
-* If you are provisioning a FlexGroup datastore, then the storage capability profile for this datastore is not supported. The system-recommended values for the storage system and storage virtual machine are populated for ease. But you can modify the values if required.
-* For Kerberos authentication, the storage systems enabled for Kerberos are listed.
+For Kerberos authentication, the storage systems enabled for Kerberos are listed.
 a|
 Storage attributes
 a|
-By default, ONTAP tools populates the recommended values for *Aggregates* and *Volumes* options. You can customize the values based on your requirements. Aggregate selection is not supported for FlexGroup datastores as ONTAP manages the aggregate selection.
+By default, ONTAP tools populates the recommended values for *Aggregates* and *Volumes* options. You can customize the values based on your requirements.
 
 The *Space reserve* option available under *Advanced* menu is also populated to give optimum results.
 
@@ -160,10 +146,7 @@ a|
 Summary
 a|
 You can review the summary of the parameters you specified for the new datastore.
-
-The field "`Volume Style`" enables you to differentiate the type of datastore created. The "`Volume Style`" can be either "`FlexVol`" or "`FlexGroup`".
 |===
-NOTE: A FlexGroup that is part of a NFS and VMFS datastore cannot shrink below the existing size but can grow by 120% maximum. Default snapshots are enabled on these FlexGroup volumes.
 
 . In the Summary section, click *Finish*.
 

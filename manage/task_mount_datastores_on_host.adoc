@@ -13,14 +13,14 @@ Mounting a datastore provides storage access to additional (NFS/VMFS) hosts. You
 
 [NOTE]
 Some of the right click actions are disabled or unavailable depending on vSphere client versions and the type of datastore selected. If you're using vSphere client 8.0 or later versions, some of the right click options will be hidden. 
-From vSphere 7.0U3 to vSPhere 8.0 versions even though the options appear, the action will be disabled. 
+From vSphere 7.0U3 to vSphere 8.0 versions even though the options appear, the action will be disabled. 
 
 *Steps*
 
 . From the vSphere Client Home page, click *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the host.
 . Repeat Step 2 for any additional hosts.
-. To mount on the cluster, or host or host cluster, right-click on it, and then select *NetApp ONTAP tools* > *Mount Datastores*.
+. To mount NFS/VMFS datastores on host or host cluster, right-click on it, and then select *NetApp ONTAP tools* > *Mount Datastores*.
 . Select the datastores that you want to mount, and then click *MOUNT*.
 
 You can track the progress in the Recent Task panel.

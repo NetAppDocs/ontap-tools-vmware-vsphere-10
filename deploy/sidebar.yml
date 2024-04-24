@@ -1,8 +1,6 @@
 section: deploy
 title: Deploy ONTAP tools
 entries:
-  - title: ONTAP tools quick start
-    url: /deploy/qsg_10.html
   - title: Requirements
     url: /deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html
   - title: Deployment checklist
@@ -19,5 +17,3 @@ entries:
     url: /deploy/upgrade_otv.html
   - title: Recover ONTAP tools setup
     url: /deploy/recovery_deployment.html
-  - title: Install the NFS VAAI plug-in
-    url: /deploy/task_install_the_nfs_vaai_plug_in.html

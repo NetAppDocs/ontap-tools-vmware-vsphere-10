@@ -38,7 +38,6 @@ Provides all of the native vCenter Server privileges and ONTAP tools-specific pr
 
 * Create new datastores
 * Destroy datastores
-* View information about storage capability profiles
 |===
 
 == Guidelines for using ONTAP tools standard roles
