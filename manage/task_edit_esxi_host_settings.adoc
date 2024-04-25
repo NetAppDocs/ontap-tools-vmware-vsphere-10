@@ -19,36 +19,13 @@ If there is an issue with your ESXi host settings, the issue is displayed in the
 
 *Steps*
 
-. From the vSphere client home page, click *ONTAP tools*.
-. Edit the ESXi host settings.
-+
-|===
-| *If you want to edit the ESXi host settings from...*| *Do this...*
-a|
-Issues displayed
-a|
-
- .. Click the issue in the ESXi Host Systems portlet.
- .. Click the ESXi host names for which you want to modify the settings.
- .. Right-click the ESXi host name, and click *NetApp ONTAP tools* > *Set Recommended Values*.
- .. Modify the required settings, and then click *OK*.
-
-a|
-vSphere Client home page
-a|
-
- .. Click *Menu* > *Hosts and Clusters*.
- .. Right-click the required ESXi host, and select *NetApp ONTAP tools* > *Set Recommended Value*.
- .. Click *OK*.
-
-a|
-ESXi Host compliance portlet
-a|
-
- .. Click the *APPLY RECOMMENDED SETTINGS* link in the Overview section of ONTAP tools.
- .. Select the ESXi host name in the Host settings and click *NEXT*.
- .. Select the required settings in the Recommended host settings tab, and then click *Next*.
- .. Review your selection in the Summary tab, and then click *FINISH*.
-
-+
-|===
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. Go to *ESXi Host compliance* portlet in the Overview (Dashboard) of the ONTAP tools plug-in.
+. Select  *Apply Recommended Settings* link.
+. In the *Apply recommended host settings* window, select the hosts that you want to comply with NetApp recommended host settings and click *NEXT*
+[NOTE]
+You can expand the ESXi host to see the current values 
+. In the settings page, select the recommended values as required.
+. In the summary pane, check the values and click *Finish*
+You can track the progress in the Recent task panel.

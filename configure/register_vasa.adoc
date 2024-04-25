@@ -2,32 +2,24 @@
 permalink: configure/register_vasa.html
 sidebar: sidebar
 keywords:
-summary: 'You can register VASA provide to vCenter by using either self signed certificate or CA signed certificate. Self signed certificate is generated using VMware CA handshake.'
+summary: 'You can register and unregister the VASA provider with vCenter using ONTAP tools remote plugin interface.'
 ---
 = Register the VASA Provider with vCenter
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can register the VASA provider with vCenter using either a self-signed certificate or a CA-signed certificate. Self-signed certificates are generated using a VMware CA.
-
-*About this task*
-
-You need to have the CA signed certificate placed in vCenter when using the CA signed certificate method. 
-
+You can register and unregister the VASA provider with vCenter using ONTAP tools remote plugin interface.
+VASA Provider Settings section shows the VASA Provider registration state for the the selected vCenter.
 
 *Steps*
 
-. Navigate to vCenter server. 
-. Select *Configure* > *Storage Providers*. 
-. Click the *Add* icon. 
-. Enter the connection information for the storage provider:  
-..	Name: Any user-friendly name like "ScaleoutVP"
-..	URL: `\https://<name>/virtualization/version.xml` - the name in the URL corresponds to Virtual IP provided during the OVA deployment for Single vCenter deployment (or) Domain name for Multi-vCenter deployments. Add the certificates to the URL. Same certificates are published to vCenter. 
-.. Credentials: <VASA Provider username>/< VASA Provider password> provided during OVA deployment. 
-. After the VASA is registered, click *OK*.   
-Ensure that it is listed under Storage Provider and the status is Online. 
-+
-If you have placed CA signed certificate in vCenter, the VASA registration continues with CA signed certificate. Else, the handshaking fails and registration defaults to SSA certificate.
-. You can register multiple vCenters to a single scaleout VP instance. 
-Repeat the steps mentioned above to register multiple vCenters. 
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. Select *Settings* > *VASA provider settings*.  *VASA provider registration state* shows as not registered.
+. Click on *REGISTER* button to register the VASA Provider.
+. Enter a name for the VASA provider and provide ONTAP tools application user credentials and click *REGISTER*.
+. On successful registration and page refresh, UI shows the state, name, and version of the registered VASA provider. The *UNREGISTER action* ia activated.
+. If you want to unregister the VASA provider, perform the following steps:
+.. To unregister the VASA provider select *UNREGISTER* option at the bottom of the screen.
+.. In the *Unregister VASA provider* page, you can see the name of the VASA provider. In this page provide the application user credentials and click *UNREGISTER*.

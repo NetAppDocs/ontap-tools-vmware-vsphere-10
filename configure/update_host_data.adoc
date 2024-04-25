@@ -1,0 +1,18 @@
+---
+permalink: configure/update_host_data.html
+sidebar: sidebar
+keywords:
+summary: 'Update host data action on ESXi Host system is used to run an on-demand discovery of the host related data.'
+---
+= Update host data
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Update host data action on ESXi Host system is used to run an on-demand discovery of the host related data.
+
+*Steps*
+
+. From the VMware vSphere Web Client Home page, click *Hosts and Clusters*.
+. Right-click a host, and then select *Actions* > *NetApp ONTAP tools* > *Update host data*.
+. In the *Update Host and Storage Data* op-up window select *Yes* to restart the discovery of all connected storage systems.

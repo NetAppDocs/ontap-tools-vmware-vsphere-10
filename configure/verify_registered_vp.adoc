@@ -1,0 +1,25 @@
+---
+permalink: configure/verify_registered_vp.html
+sidebar: sidebar
+keywords:
+summary: 'Verify that the onboarded SVM is listed under VASA Provider from vCenter UI.'
+---
+= Verify registered VASA provider
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Verify that the onboarded VASA provider is listed under VASA Provider from vCenter UI and from remote plug-in UI.
+
+*Steps*
+
+.	To verify VASA Provider from vCenter UI follow these steps:
+.. Navigate to vCenter Server.
+..	Log in with the administrator credentials. 
+..	Select *Storage Providers*. 
+..	Select *Configure*.
+..	Under Storage Provider/storage backends verify that the onboarded VASA provider is listed correctly.
+.	To verify VASA Provider from the remote plug-in UI follow these steps:
+.. Log in to the vSphere client using `\https://vcenterip/ui`
+.. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+.. You can see the registered VASA Provider in the *Overview* page and in the *Settings* > *VASA provider settings* page.

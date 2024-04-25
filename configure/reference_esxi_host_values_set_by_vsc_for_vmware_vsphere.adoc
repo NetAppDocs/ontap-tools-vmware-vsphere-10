@@ -13,15 +13,30 @@ You can set timeouts and other values on the ESXi hosts using ONTAP tools for VM
 
 You can set the following values on an ESXi host:
 
-== ESXi advanced configuration
+== HBA/CNA Adapter Settings
+Sets the recommended HBA timeout settings for NetApp storage systems.
 
-* *VMFS3.HardwareAcceleratedLocking*
+* *Disk.QFullSampleSize*
 +
-You should set this value to 1.
+Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
 
-* *VMFS3.EnableBlockDelete*
+* *Disk.QFullThreshold*
 +
-You should set this value to 0.
+Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.
+
+* *Emulex FC HBA timeouts*
++
+Use the default value.
+
+* *QLogic FC HBA timeouts*
++
+Use the default value.
+
+== MPIO Settings
+
+Configures preferred paths for NetApp storage systems. Determines which of the available paths are optimized paths (as opposed to non-optimized paths that traverse the interconnect cable), and sets the preferred path to one of those paths.
+
+In high-performance environments or when testing performance with a single LUN datastore, consider changing the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) from the default IOPS setting of 1000 to a value of 1.
 
 == NFS settings
 
@@ -49,11 +64,3 @@ Set this value to 12 for all NFS configurations.
 * *NFS.HeartbeatTimeout*
 +
 Set this value to 5 for all NFS configurations.
-
-== iSCSI settings
-
-* *Path selection policy*
-+
-Set this value to "`RR`" for all iSCSI paths.
-+
-Setting this value to "`RR`" helps to provide load balancing across all of the active/optimized paths.

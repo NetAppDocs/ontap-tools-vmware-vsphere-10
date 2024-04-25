@@ -1,0 +1,20 @@
+---
+permalink: manage/manage_storage_threshold.html
+sidebar: sidebar
+keywords:
+summary: 'You can set the threshold to receive notifications in vCenter when the volume and the aggregate capacity reaches certain levels.
+'
+---
+= Manage Storage threshold
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can set the threshold to receive notifications in vCenter when the volume and the aggregate capacity reaches certain levels.
+
+.Steps:
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the left pane of ONTAP tools, navigate to *Settings* > *Threshold Settings* > *Edit*
+. In the *Edit Threshold* window, provide the desired values in the *Nearly Full* and *Full* fields and click Save.
+You can reset the numbers to recommended values, which is 80 for Nearly full and 90 for full.

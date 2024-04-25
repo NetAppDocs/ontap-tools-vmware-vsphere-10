@@ -15,12 +15,16 @@ entries:
         url: /manage/task_remove_storage_from_a_vvols_datastore.html
       - title: Delete datastores
         url: /configure/reference_delete_vvols.html  
+      - title: ONTAP storage views for datastores
+        url: /manage/ontap_storage_view_ds.html  
+      - title: Virtual machine storage view
+        url: /manage/vm_storage_view_ds.html  
+  - title: Manage storage threshold
+    url: /manage/manage_storage_threshold.html
   - title: Manage storage backend
     url: /manage/storage_backend.html
   - title: Manage vCenter
     url: /manage/manage_vcenter.html
-  - title: Manage vVol lifecycles
-    url: /manage/vvol_lifecycle_management.html
   - title: Manage certificates
     url: /manage/certificate_manage.html
   - title: Manage igroup and export policies
