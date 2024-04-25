@@ -63,11 +63,11 @@ The Interoperability Matrix Tool (IMT) contains the latest information about the
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT[Interoperability Matrix Tool^]
 
 == Additional deployment considerations
-You should consider few requirements while customizing the deployment ONTAP tools.
+You should consider a few requirements while customizing the deployment of ONTAP tools.
 
 === Application user password
 
-This is the password assigned to the administrator account. For security reasons, it is recommended that the password length is eight to thirty characters long and contains a minimum of one upper, one lower, one digit, and one special character. Password expires after 90 days.
+This is the password assigned to the administrator account. For security reasons, it is recommended that the password length is eight to thirty characters long and contains a minimum of one upper, one lower, one digit, and one special character.
 
 === Appliance maintenance console credentials
 
@@ -75,5 +75,5 @@ You should access the maintenance console by using the "`maint`" user name. You 
 
 === Appliance network properties
 
-Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools and the other network parameters. DHCP is not supported in ONTAP tools for VMware vSphere 10.0 release. All of these parameters are required for proper installation and operation.
+Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools and the other network parameters. The IP addresses provided should be accessible from the VLAN network that you select during the deployment. DHCP is not supported for ONTAP tools for VMware vSphere 10.1 release. All of these parameters are required for proper installation and operation.
 

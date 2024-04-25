@@ -20,10 +20,10 @@ Following are ONTAP tools requirements before proceeding with the deployment:
 * Download the _.ova_ file. 
 * Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements to deploy ONTAP tools* section.  
 * Delete the browser cache.  
-* You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment.
+* You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment. You need one more free IP in case of NonHA or three more free IPs in case of HA for the VM's. Note that all the IP's should be from the same VLAN that will be selected during the deployment.
 * Procure CA certificates (root , Leaf, and Intermediate certificates) from the commercial CA.
-* In case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP.
-* A storage VM on ONTAP with NFS or iSCSI enabled is required. Follow the below steps to configure the storage VM:
+* In case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP. The certificates should be created with domain name and IPAddress of the LoadBalancer IP.
+* A storage VM on ONTAP with NFS or iSCSI enabled is required. Follow the below steps to configure the storage VM. The steps mentioned here are for NFS only.
 ** Have both your ONTAP System Manager and ONTAP CLI open. 
 ** If you prefer to create a new storage VM, login to your ONTAP System Manager and create a storage VM with NFS enabled.
 ** Add an aggregate with at least 100GB.

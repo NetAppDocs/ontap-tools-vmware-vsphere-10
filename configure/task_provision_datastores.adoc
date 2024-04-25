@@ -110,10 +110,6 @@ a|
 The General section of the New Datastore provisioning dialog box provides options to enter the destination, name, size, type, and protocol for the new datastore.
 
 You can select either *NFS*, *VMFS*, or *vVols* type to configure a datastore. 
-When you select vVols type, NVMe protocol becomes available.
-
-[NOTE] 
-NVMe protocol is supported for ONTAP 9.91P3 and later releases.
 
 * NFS: You can provision NFS datastore using either NFS3 or NFS4.1 protocols. 
 

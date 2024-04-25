@@ -23,14 +23,14 @@ This task gives you instructions on how to install HA three nodes in small, medi
 Creating the content library is a mandatory step for deploying HA three nodes configuration. See link:../deploy/concept_how_to_download_ontap_tools.html[Download ONTAP tools] for details. Learn more https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vm-administration/GUID-A58AF4FD-6CBE-4210-9E67-27EFBDCC1EF2.html[Create and Edit a Content Library].
 
 [NOTE]
-Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to *Conservative* during the installation of ONTAP tools.
+Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to *Conservative* during the installation of ONTAP tools. This ensures that VM's do not migrate during the installation.
 
 *Steps*
 
 . Log in to the vSphere server.
 . If you have not imported the OVA file yet, navigate to your content library and select *Actions* in the right side of the page and select *Import item* to import the OVA file.
 . Navigate to the resource pool or the host where you want to deploy the OVA.
-. Right-click the required datacenter, and select *Deploy OVF template...*.
+. Right-click the required location where you want to deploy the VM, and select *Deploy OVF template...*.
 . Select the content library where the _.ova_ file is saved, and then select *Next*.
 . Select a name and folder for the virtual machine and select *Next*.
 . Select the host and select *Next*
@@ -62,7 +62,7 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 .. For Storage VM, you can choose to either provide your ONTAP’s default storage VM details or you can create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this filed is ignored.
 .. Enter the ONTAP/SVM Username.
 .. Enter the ONTAP/SVM Password. 
-.. Enable Migration is disabled by default. Do not alter this choice.
+.. Enable Migration is disabled by default.
 .. Primary VM is enabled by default. Do not alter this choice.
 . In *Customize template* > *Content Library Details* window, enter the *Content Library Name* and the *OVF Template Name*.
 . In *Customize template* > *vCenter Configuration* window, provide the details of the vCenter where the content library is hosted.

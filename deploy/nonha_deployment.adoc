@@ -26,13 +26,15 @@ This task gives you instructions on how to install Non-HA single node in small, 
 
 . Log in to the vSphere server.
 . Navigate to the resource pool or the cluster or the host where you want to deploy the OVA.
-. Right-click the required datacenter, and select *Deploy OVF template...*.
+. Right-click the required location, and select *Deploy OVF template...*.
 . You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*.
 . Select a name and folder for the virtual machine and select *Next*.
 . Select the host and select *Next*
 . Review the summary of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
-. In the *Configuration* window, select *Easy deployment(S)*, *Easy deployment(M)*, or *Advanced deployment(S)* or *Advanced deployment(M)*  configuration. Advanced option uses Trident as a storage backend and the easy deployment uses local storage. 
+. In the *Configuration* window, select *Easy deployment(S)*, *Easy deployment(M)*, or *Advanced deployment(S)* or *Advanced deployment(M)*  configuration. 
++
+Advanced deployment option uses ONTAP trident instead of trident as storage backend and the easy deployment uses local storage.  In advanced deployment, as trident is not the storage backend, ONTAP becomes the storage backend.
 . Select the datastore where you need to deploy the OVA and select *Next*.
 . Select the source and destination network and select *Next*.
 . Select *Customize template* > *system configuration* window. Enter the following details:
@@ -58,7 +60,7 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 .. For Storage VM, you can choose to either provide your ONTAP’s default storage VM details or you can create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this filed is ignored.
 .. Enter the ONTAP/SVM Username.
 .. Enter the ONTAP/SVM Password. 
-.. Enable Migration is disabled by default. Do not alter this choice.
+.. Enable Migration is disabled by default.
 .. Primary VM is enabled by default. Do not alter this choice.
 . In *Customize template* > *Node Configuration* window enter the network properties of the OVA. 
 +

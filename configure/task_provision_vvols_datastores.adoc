@@ -60,9 +60,6 @@ The General section of the New Datastore dialog box provides options to enter th
 You can provision the vVols datastore if VASA provider capability is enabled. See, link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html[Enable VASA Provider for configuring virtual datastores] for details. The
 vVols datastore supports NFS and iSCSI protocols.
 
-[NOTE]
-NVMe protocol for vVols datastore is available if ONTAP tools is registered with vCenter 8.0 and later, and if the ONTAP version is ONTAP 9.91P3 and later.
-
 NOTE: If you are provisioning iSCSI vVols datastore for vVols replication, then before creating vVols datastore at the target site, you need to perform SnapMirror update and cluster rediscovery.
 
 a|

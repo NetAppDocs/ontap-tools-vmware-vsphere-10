@@ -62,3 +62,22 @@ You can perform the remove operation for global ONTAP clusters using ONTAP tools
 . Select *Storage Backends* from the sidebar.
 . Select the  storage backend you want to remove
 . Click on the vertical ellipsis menu and select *Remove*. 
+
+== Drill down view of storage backend
+
+The storage backend page lists all the storage backends. You can perform *Discover storage*, *Modify*, and *Remove* operations on the storage backends you added and not the individual child under the cluster. 
+
+When you click on either the parent cluster or the child under the storage backend, you can see the overall summary of the component. When you click on the parent cluster you have the *ACTIONS* dropdown from which you can perform the *Discover storage*, *Modify*, and *Remove* operations. This option is missing when you click on the child SVM. 
+
+The summary page provides the following details:
+
+* Status of the storage backend
+* Capacity information
+* Basic information about the VM
+* Network information like the IP address and port of the network. For the child SVM, the information will be same as the parent storage backend.
+* Privileges allowed and restricted for the storage backend. For the child SVM, the information will be same as the parent storage backend. Privileges are shown only on the cluster based storage backends. If you add SVM as the storage backend, privileges information will not be shown.
+
+The *Interface* tab provides detailed information about the interface.
+
+The *Local Tiers* tab provides detailed information about the aggregate list.
+

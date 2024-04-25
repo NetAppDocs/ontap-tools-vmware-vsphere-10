@@ -29,12 +29,8 @@ entries:
     url: /configure/create_vvols_datastore.html    
   - title: Verify registered SVMs
     url: /configure/verify_registered_svm.html
-  - title: Configure datastores
-    entries:
-      - title: Provision NFS and VMFS datastores
-        url: /configure/task_provision_datastores.html
-      - title: Provision vVols datastores
-        url: /configure/task_provision_vvols_datastores.html
-      - title: Assign QoS policies
-        url: /configure/task_assign_qos_policies.html
+  - title: Provision NFS and VMFS datastores
+    url: /configure/task_provision_datastores.html
+  - title: Provision vVols datastores
+    url: /configure/task_provision_vvols_datastores.html
         
