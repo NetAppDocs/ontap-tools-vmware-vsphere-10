@@ -2,18 +2,18 @@
 permalink: configure/task_discover_storage_systems_and_hosts.html
 sidebar: sidebar
 keywords:
-summary: 'When you first run ONTAP tools in a vSphere Client, ONTAP tools discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.'
+summary: 'When you first run ONTAP tools in a vSphere Client, ONTAP tools discover the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.'
 ---
 = Discover storage systems and hosts
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When you first run ONTAP tools in a vSphere Client, ONTAP tools discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.
+When you first run ONTAP tools in a vSphere Client, ONTAP tools discover the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.
 
 *What you will need*
 
-* All of the ESXi hosts should be powered on and connected.
+* All the ESXi hosts should be powered on and connected.
 * All the storage virtual machines (SVMs) to be discovered should be running, and each cluster node should have at least one data LIF configured for the storage protocol in use (NFS or iSCSI).
 
 *About this task*

@@ -33,7 +33,7 @@ Example: For multi-tenant setup, you can add storage backend (cluster) globally 
 . Select *Add*. 
 . Provide the Server IP Address or FQDN, Username, and Password details and select *Add*.
 [NOTE]
-IPV4 and IPV6 management LIFs are supported. Direct SVM based credential with management LIFs are also supported.
+IPV4 and IPV6 management LIFs are supported. Direct SVM based credentials with management LIFs are also supported.
 
 == Add storage backend using vSphere client UI:
 . Log in to the vSphere client using `\https://vcenterip/ui`
@@ -41,6 +41,6 @@ IPV4 and IPV6 management LIFs are supported. Direct SVM based credential with ma
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select *ADD*.
 . In the *Add Storage Backend* window, provide the Server IP Address, Username, Password, and Port details and click *ADD*
 [NOTE]
-You can add either cluster based credentials and IPV4 and IPV6 management LIFs or you can provide SVM based credentials with management LIF of SVM to add direct SVM.
+You can add either cluster-based credentials and IPV4 and IPV6 management LIFs or you can provide SVM based credentials with management LIF of SVM to add direct SVM.
 
-The list gets refreshed and you can see the newly added storage backend in the list.
+The list gets refreshed, and you can see the newly added storage backend in the list.

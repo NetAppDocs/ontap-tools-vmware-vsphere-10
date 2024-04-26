@@ -45,9 +45,9 @@ You can unregister the Remote Plug-in on vCenter using the following steps.
 . Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar.
-. Click on the vertical ellipsis against the vCenter you want to remove and select the *Remove* option. 
+. Click on the vertical ellipses against the vCenter you want to remove and select the *Remove* option. 
 [NOTE]
-You cannot remove the vCenter if there is a storage mapping attached to it. You need to remove the mapping before remove the vCenter.
+You cannot remove the vCenter if there is a storage mapping attached to it. You need to remove the mapping before removing the vCenter.
 
 When you remove vCenters in ONTAP tools, the following actions are performed automatically: 
 

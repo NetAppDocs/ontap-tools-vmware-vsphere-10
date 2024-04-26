@@ -18,7 +18,7 @@ You should pair the protected and recovery sites created using your vSphere Clie
 
 *About this task*
 
-SnapMirror fan-out configurations are those where a source volume is replicated to two different destinations. These create a problem during recovery when SRM needs to recover the virtual machine from destination.
+SnapMirror fan-out configurations are those where a source volume is replicated to two different destinations. These create a problem during recovery when SRM needs to recover the virtual machine from its destination.
 
 NOTE: Storage Replication Adapter (SRA) does not support fan-out SnapMirror configurations.
 

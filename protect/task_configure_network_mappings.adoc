@@ -35,7 +35,7 @@ The Create Network Mapping wizard appears.
  .. Select *Automatically Prepare Mappings for Networks with Matching Names*, and click *Next*.
  .. Select the required data center objects for the protected and recovery sites, and click *Add Mappings*.
  .. Click *Next* after mappings are created successfully.
- .. Select the object that was used earlier to create reverse mapping, and then click *Finish*.
+ .. Select the object used earlier to create reverse mapping, then click *Finish*.
 
 *Result*
 

@@ -2,14 +2,14 @@
 permalink: configure/task_provision_datastores.html
 sidebar: sidebar
 keywords:
-summary: 'Provisioning a datastore creates a logical container for your virtual machines and their virtual machine disks \(VMDKs\). You can provision a datastore, and then attach the datastore to a single host, to all of the hosts in a cluster, or to all of the hosts in a datacenter.'
+summary: 'Provisioning a datastore creates a logical container for your virtual machines and their virtual machine disks \(VMDKs\). You can provision a datastore, and then attach the datastore to a single host, to all the hosts in a cluster, or to all the hosts in a datacenter.'
 ---
 = Provision NFS and VMFS datastores
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Provisioning a datastore creates a logical container for your virtual machines and their virtual machine disks (VMDKs). You can provision a datastore, and then attach the datastore to a single host, to all of the hosts in a cluster, or to all of the hosts in a datacenter.
+Provisioning a datastore creates a logical container for your virtual machines and their virtual machine disks (VMDKs). You can provision a datastore, and then attach the datastore to a single host, to all the hosts in a cluster, or to all the hosts in a datacenter.
 
 *What you will need*
 
@@ -26,13 +26,13 @@ ONTAP tools for VMware vSphere supports the following protocols:
 
 ONTAP tools can create a datastore on either an NFS volume or a LUN:
 
-* For an NFS datastore, ONTAP tools creates an NFS volume on the storage system, and then updates the export policies.
-* For a VMFS datastore, ONTAP tools creates a new volume (or uses an existing volume, if you selected that option), and then creates a LUN and an igroup.
+* For an NFS datastore, ONTAP tools create an NFS volume on the storage system, and then updates the export policies.
+* For a VMFS datastore, ONTAP tools create a new volume (or uses an existing volume, if you selected that option), and then creates a LUN and an igroup.
 
 [NOTE]
 ====
 
-* ONTAP tools supports provisioning of VMFS5 and VMFS6 datastores up to the maximum VMFS LUN and volume size of 64TB when used with ASA and approved AFF systems running ONTAP 9.8 and later.
+* ONTAP tools support provisioning of VMFS5 and VMFS6 datastores up to the maximum VMFS LUN and volume size of 64TB when used with ASA and approved AFF systems running ONTAP 9.8 and later.
 +
 On other platforms the maximum LUN size supported is 16TB.
 
@@ -51,7 +51,7 @@ You can apply storage QoS settings, throughput ceiling (Max IOPS) and throughput
 Limitations for direct SVM on NFS and VMFS datastores are:
 
 * QoS policy capability is not supported.
-* You can not manage aggregates and storage nodes.
+* You cannot manage aggregates and storage nodes.
 * Platform type related capabilities are not supported.
 
 *Steps*
@@ -85,11 +85,11 @@ a|
 |===
 | *To make the datastore available to...*| *Do this...*
 a|
-All of the hosts in a datacenter
+All the hosts in a datacenter
 a|
 Right-click a datacenter, and then select *NetApp ONTAP tools* > *Provision Datastore*.
 a|
-All of the hosts in a cluster
+All the hosts in a cluster
 a|
 Right-click a host cluster, and then select *NetApp ONTAP tools* > *Provision Datastore*.
 a|

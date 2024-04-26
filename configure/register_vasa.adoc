@@ -10,7 +10,7 @@ summary: 'You can register and unregister the VASA provider with vCenter using O
 
 [.lead]
 You can register and unregister the VASA provider with vCenter using ONTAP tools remote plugin interface.
-VASA Provider Settings section shows the VASA Provider registration state for the the selected vCenter.
+VASA Provider Settings section shows the VASA Provider registration state for the selected vCenter.
 
 *Steps*
 

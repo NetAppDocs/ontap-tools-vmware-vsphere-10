@@ -20,6 +20,6 @@ The igroups and export policies in ONTAP tools are managed in an efficient manne
 * Supports migrated export policies and igroups.
 * No interruption of Virtual Machine input and output operations.
 * Supports mounting on additional hosts without manual intervention.
-* Minimizes the need for managing number of igroups and export policies.
+* Minimizes the need for managing the number of igroups and export policies.
 * A garbage collector automatically deletes all the unused managed igroups and export Policies periodically.
-* If datastore is provisioned at host cluster level then igroup is created with all host initiators under the host cluster that are added to the igroup.
+* If datastore is provisioned at host cluster level, then igroup is created with all host initiators under the host cluster that are added to the igroup.

@@ -71,9 +71,9 @@ This is the password assigned to the administrator account. For security reasons
 
 === Appliance maintenance console credentials
 
-You should access the maintenance console by using the "`maint`" user name. You can set the password for the "`maint`" user during deployment. You can use the Restart guest OS option available during VM restart in vCenter to change the password.
+You should access the maintenance console by using the "`maint`" username. You can set the password for the "`maint`" user during deployment. You can use the Restart guest OS option available during VM restart in vCenter to change the password.
 
 === Appliance network properties
 
-Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools and the other network parameters. The IP addresses provided should be accessible from the VLAN network that you select during the deployment. DHCP is not supported for ONTAP tools for VMware vSphere 10.1 release. All of these parameters are required for proper installation and operation.
+Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools and the other network parameters. The IP addresses provided should be accessible from the VLAN network that you select during the deployment. DHCP is not supported for ONTAP tools for VMware vSphere 10.1 release. All these parameters are required for proper installation and operation.
 

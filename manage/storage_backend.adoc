@@ -22,7 +22,7 @@ Follow the steps below to discover the storage backends.
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
-. Click on the vertical ellipsis menu and select *Discover storage*
+. Click on the vertical ellipses menu and select *Discover storage*
 
 You can track the progress in the Recent Tasks panel.
 
@@ -32,7 +32,7 @@ Follow the steps in this section to modify the existing storage backend.
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
-. Click on the vertical ellipsis menu and select *Modify* to modify the credentials or the port name.
+. Click on the vertical ellipses menu and select *Modify* to modify the credentials or the port name.
 You can track the progress in the Recent Tasks panel.
 
 You can perform the Modify operation for global ONTAP clusters using ONTAP tools Manager UI using the following steps
@@ -41,7 +41,7 @@ You can perform the Modify operation for global ONTAP clusters using ONTAP tools
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select storage backends from the sidebar.
 . Select the  *Storage Backend* you want to modify
-. Click on the vertical ellipsis menu and select *Modify*. 
+. Click on the vertical ellipses menu and select *Modify*. 
 . You can modify the credentials or the port. Enter the *Username* and *Password* to modify the storage backend.
 
 == Remove storage backend
@@ -52,7 +52,7 @@ Follow the steps below to remove storage backend.
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
-. Click on the vertical ellipsis menu and select *Remove*. Ensure that the storage backend does not contain any datastores.
+. Click on the vertical ellipses menu and select *Remove*. Ensure that the storage backend does not contain any datastores.
 You can track the progress in the Recent Tasks panel.
 
 You can perform the remove operation for global ONTAP clusters using ONTAP tools Manager UI.
@@ -61,7 +61,7 @@ You can perform the remove operation for global ONTAP clusters using ONTAP tools
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select the  storage backend you want to remove
-. Click on the vertical ellipsis menu and select *Remove*. 
+. Click on the vertical ellipses menu and select *Remove*. 
 
 == Drill down view of storage backend
 
@@ -75,7 +75,7 @@ The summary page provides the following details:
 * Capacity information
 * Basic information about the VM
 * Network information like the IP address and port of the network. For the child SVM, the information will be same as the parent storage backend.
-* Privileges allowed and restricted for the storage backend. For the child SVM, the information will be same as the parent storage backend. Privileges are shown only on the cluster based storage backends. If you add SVM as the storage backend, privileges information will not be shown.
+* Privileges allowed and restricted for the storage backend. For the child SVM, the information will be same as the parent storage backend. Privileges are shown only on the cluster-based storage backends. If you add SVM as the storage backend, privileges information will not be shown.
 
 The *Interface* tab provides detailed information about the interface.
 

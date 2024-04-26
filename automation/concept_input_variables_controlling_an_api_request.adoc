@@ -44,7 +44,7 @@ This header should be set to _application/json_.
 
 === Authorization
 
-Basic authentication should be set with the user name and password encoded as a base64 string.
+Basic authentication should be set with the username and password encoded as a base64 string.
 
 == Request body
 

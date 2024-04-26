@@ -11,7 +11,7 @@ summary: 'Use the steps in this section to perform VASA cleanup.'
 [.lead]
 Use the steps in this section to perform VASA cleanup.
 [NOTE]
-it is recommended that you remove any vVols datastores before performing the VASA Cleanup. 
+It is recommended that you remove any vVols datastores before performing the VASA Cleanup. 
 
 *Steps*
 

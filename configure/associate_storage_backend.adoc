@@ -9,7 +9,7 @@ summary: 'need info.'
 :imagesdir: ../media/
 
 [.lead]
-vCenter listing page shows the associated number of storage backends. Each vCenter has option to associate a storage backend.
+vCenter listing page shows the associated number of storage backends. Each vCenter has the option to associate a storage backend.
 
 *About this task*
 
@@ -20,6 +20,6 @@ This task helps you to create mapping between storage backend and the onboarded 
 . Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select vCenters from the sidebar.
-. Click on the vertical ellipsis against the vCenter that you want to associate with storage backends.
+. Click on the vertical ellipses against the vCenter that you want to associate with storage backends.
 . Select storage backend from the dropdown in the pop up.
 . Select *Associate Storage Backend* option to associate vCenter with the required storage backend.

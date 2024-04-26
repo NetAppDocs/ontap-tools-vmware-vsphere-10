@@ -2,7 +2,7 @@
 permalink: configure/reference_delete_vvols.html
 sidebar: sidebar
 keywords: vVols datastore,delete vVol
-summary: 'Delete datastore action deletes the datastore. In case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.'
+summary: 'Delete datastore action deletes the datastore. In the case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.'
 ---
 = Delete datastores
 :icons: font
@@ -11,7 +11,7 @@ summary: 'Delete datastore action deletes the datastore. In case of NFS or VMFS 
 [.lead]
 Remove storage from datastore action is supported on all ONTAP tools discovered or managed vVols datastores in the vCenter. This action allows the removal of volumes from the vVols datastore.
 
-Remove option is disabled when there are vVols residing on a particular volume. In addition to removal of volumes from datastore, you can choose to delete the selected volume on ONTAP storage as well.
+Remove option is disabled when there are vVols residing on a particular volume. In addition to removing volumes from datastore, you can delete the selected volume on ONTAP storage.
 
 Delete datastore task from ONTAP tools in the VCenter does the following: 
 
@@ -30,6 +30,6 @@ Follow the steps below to delete NFS, VMFS, or vVOL datastore from ONTAP tools f
 [NOTE]
 You cannot delete the datastores if there are virtual machines using that datastore. You need to move the virtual machines to a different datastore before deleting the datastore.
 
-.. In case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.
-.. In case of vVols datastore, Delete datastore action deletes the datastore only when there are no vVols associated with it. The Delete datastore dialog box provides an option to delete volumes from ONTAP cluster.
+.. In the case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.
+.. In the case of vVols datastore, Delete datastore action deletes the datastore only when there are no vVols associated with it. The Delete datastore dialog box provides an option to delete volumes from ONTAP cluster.
 . To delete the backing volumes on ONTAP storage, select *Delete volumes on ONTAP cluster*.

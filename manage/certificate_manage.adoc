@@ -2,15 +2,15 @@
 permalink: manage/certificate_manage.html
 sidebar: sidebar
 keywords:
-summary: 'Single instance of ONTAP tools can manage multiple vCenters. When ONTAP tools is deployed, self signed certificate is assigned to all vCenters by default. '
+summary: 'Single instance of ONTAP tools can manage multiple vCenters. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenters by default.'
 ---
 = Manage certificates
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Single instance of ONTAP tools can manage multiple vCenters. When ONTAP tools is deployed, self signed certificate is assigned to all vCenters by default.
-When you're managing multiple vCenters and you want to enable vVols capability on multiple vCenters then you need to change the self signed certificate to custom CA certificate using ONTAP tools Manager interface. You can use the same interface to renew or refresh all certificates.
+Single instance of ONTAP tools can manage multiple vCenters. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenters by default.
+When you're managing multiple vCenters and you want to enable vVols capability on multiple vCenters then you need to change the self-signed certificate to custom CA certificate using ONTAP tools Manager interface. You can use the same interface to renew or refresh all certificates.
 
 *Steps*
 
@@ -18,12 +18,12 @@ When you're managing multiple vCenters and you want to enable vVols capability o
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *Certificates* > *VASA provider* > *Renew* option to renew the certificates.
 [NOTE]
-System will be offline till the certificate is renewed.
-. To upgrade the self signed certificate to custom CA certificate, select *Certificates* > *VASA provider* > *UPGRADE TO CA* option.
+The system will be offline till the certificate is renewed.
+. To upgrade the self-signed certificate to custom CA certificate, select *Certificates* > *VASA provider* > *UPGRADE TO CA* option.
 .. In the *upgrade certificate to custom CA* pop-up, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files. The tool tip provides description of the certificates.
 .. Enter the domain name for which you generated this certificate.
 .. Click *UPGRADE*
 +
 [NOTE]
-System will be offline till the upgrade is complete.
+The system will be offline till the upgrade is complete.
 

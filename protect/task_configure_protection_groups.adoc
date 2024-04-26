@@ -30,7 +30,7 @@ The fault domain is nothing but SVMs with replication enabled. The SVMs that hav
 
 . In the Replication groups tab, select either the enabled array pair or the replication groups that have the virtual machine you configured, and then click *NEXT*.
 +
-All of the virtual machines on the replication group are added to the protection group.
+All the virtual machines on the replication group are added to the protection group.
 
 . Select either the existing recovery plan or create a new plan by clicking *Add to new recovery plan*.
 . In the Ready to complete tab, review the details of the protection group that you created, and then click *Finish*.

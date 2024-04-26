@@ -56,6 +56,18 @@ Asynchronous
 /api/v1/vcenters/{vcguid}/migration-jobs
 
 *JSON input example*
+Request body for migrating from 9.12 and 9.13:
+
+{
+  "otv_ip": "10.12.13.45",
+  "vasa_provider_credentials": {
+    "username": "vasauser",
+    "password": "*******"
+  }
+  "database_password": "*******"
+}
+
+Request body for other release migration: 
 
 {
   "otv_ip": "10.12.13.45",
@@ -167,7 +179,7 @@ This API deletes migration by Migration Id and deletes migration on the given vC
 After successful migration and after you register ONTAP tools 10.1 to the vCenter, do the following:
 
 * Refresh the certificate on all the hosts.
-* Wait for sometime before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that  are present in the setup. When you don't wait, the operations may fail intermittently.
+* Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that  are present in the setup. When you don't wait, the operations may fail intermittently.
 
 
 

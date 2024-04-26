@@ -32,7 +32,7 @@ a|
 a|
 `storageProvider.hostRescanTimeoutSec`
 a|
-Set a high value(For example: 99999)
+Set a high value (For example: 99999)
 |===
 You should also enable the `StorageProvider.autoResignatureMode` option.
 

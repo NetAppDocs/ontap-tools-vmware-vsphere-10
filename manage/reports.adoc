@@ -1,0 +1,21 @@
+---
+permalink: manage/reports.html
+sidebar: sidebar
+keywords:
+summary: 'You can collect log files for ONTAP tools for VMware vSphere from the option available in ONTAP tools graphical user interface \(GUI\). Technical support might ask you to collect the log files to help troubleshoot a problem.'
+---
+= ONTAP tool reports
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP tools plug-in provides reports for virtual machines and datastores. 
+When you select NetApp ONTAP tools Plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to *Overview* page.
+Select the *Reports* tab to view the virtual machine and the datastores report.
+
+Virtual Machines report shows the list of discovered virtual machines(should have at least on disk from ONTAP storage based datastores) with performance metrics.
+When you expand the VM record, all the disk related datastore info is displayed.
+
+Datastores report shows the list of discovered or recognized ONTAP tools managed Datastores that are provisioned from ONTAP storage backend of all types with performance metrics.
+
+You can use the *Manage Columns* option to hide or show different columns.

@@ -23,7 +23,7 @@ The configuration of SRA on SRM Appliance stores the SRA credentials in the SRM 
 
 . On the SRM appliance screen, click *Storage Replication Adapter* > *New Adapter*.
 . Upload the _.tar.gz_ file to SRM.
-. Rescan the adapters to verify that the details are updated in the SRM Storage Replication Adapters page.
+. Rescan the adapters to verify that the details are updated on the SRM Storage Replication Adapters page.
 . Log in using administrator account to the SRM appliance using putty.
 . Switch to the root user using the command: `su root`
 . Run command `cd /var/log/vmware/srm` to navigate to the log directory.
@@ -31,7 +31,7 @@ The configuration of SRA on SRM Appliance stores the SRA credentials in the SRM 
 . To login to the container ID, enter command: `docker exec -it -u srm <container id> sh`
 . Configure SRM with ONTAP tools IP address and password using the command: `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>'`
 [NOTE]
-You need to provide the password value with in single quotes to ensure that the perl script does not read the special characters in the password as a delimiter of the input.
+You need to provide the password value within single quotes to ensure that the perl script does not read the special characters in the password as a delimiter of the input.
 
 +
 A success message confirming that the storage credentials are stored is displayed. SRA can communicate with SRA server using the provided IP address, port and credentials.

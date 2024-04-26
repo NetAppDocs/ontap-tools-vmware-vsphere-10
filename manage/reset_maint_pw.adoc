@@ -23,7 +23,7 @@ You have 5 sec to choose your option. Press any key to stop the progress and fre
 . Select *Reset maintenance user's password* option. The maintenance console opens.
 . In the console, enter the new password details. *New password* and *Retype new password* details should match to successfully reset the password. You have three chances to enter the correct password. The system restarts after successfully entering the new password.  
 . Press Enter to continue.
-The password in updated on the VM.
+The password is updated on the VM.
 
 [NOTE]
 The same grub menu comes up during power on of the VM as well. However, you should use the reset password option only with *Restart Guest OS* option.

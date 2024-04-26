@@ -82,7 +82,7 @@ The information provided here will be validated for proper patterns during insta
 As the task gets created, the progress is shown in the vSphere task bar.
 . Power on the VM after the completion of the task.
 +
-The installation begins. You can track the the installation progress in VM’s web console.
+The installation begins. You can track the installation progress in VM’s web console.
 As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
 . To make necessary changes in the dialog prompt, follow the below steps:
 .. Double click on the web console to start interacting with the console.

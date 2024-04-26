@@ -18,34 +18,31 @@ Following are ONTAP tools requirements before proceeding with the deployment:
 
 * Configure and set up your vCenter Server environment. 
 * Download the _.ova_ file. 
+* Gather the Postman collections JSON file provided by NetApp. 
+* Parent vCenter Server Credentials to deploy the OVA. 
 * Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements to deploy ONTAP tools* section.  
-* Delete the browser cache.  
-* You need two Virtual IPs for Load Balancer and Kubernetes API Server. Get two free IPs in the VLAN, used for deployment, which is used to access the services post deployment. You need one more free IP in case of NonHA or three more free IPs in case of HA for the VM's. Note that all the IP's should be from the same VLAN that will be selected during the deployment.
-* Procure CA certificates (root , Leaf, and Intermediate certificates) from the commercial CA.
-* In case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP. The certificates should be created with domain name and IPAddress of the LoadBalancer IP.
-* A storage VM on ONTAP with NFS or iSCSI enabled is required. Follow the below steps to configure the storage VM. The steps mentioned here are for NFS only.
-** Have both your ONTAP System Manager and ONTAP CLI open. 
-** If you prefer to create a new storage VM, login to your ONTAP System Manager and create a storage VM with NFS enabled.
-** Add an aggregate with at least 100GB.
-** To verify if the aggregate is added successfully:
-+
-a) Login to your ONTAP CLI
-+
-b) Run the command, vserver show -fields aggr-list
-+
-c) If your aggregate has not been listed against your default storage VM, run the command: vserver modify <storage VM name> -aggr-list <aggregate name>
-+
-To find the name of the aggregate you want to add to your default storage VM, you can use the following command in the ONTAP CLI: _aggr show_
-+
-This command displays a list of aggregates on the storage system, and you can find the name of the aggregate you need to use in the *Aggregate* column.
-** There are two options with deployment configuration, one is cluster credentials and the other is SVM credentials or direct SVM. For direct SVM, you need to configure the management LIF for the SVM before starting the deployment. Skip this for cluster credentials.
-** Make sure network route exists, login to your ONTAP CLI and run the command, network route show -vserver <storage VM name>
-+
-If it does not exist then login to your ONTAP CLI and run the following commands, net route create -vserver <vserver name> -destination <destination IP> -gateway <gateway IP> -metric 20
-** Make sure that an Export Policy exists for the storage VM. On your ONTAP System Manager, go to *Storage* > *Storage VMs* > *[storage VM name]* > *Settings* > *Export Policies*. If there is no export policy follow the next step.
-** Create an export policy rule using the following commands from ONTAP CLI
-+
-vserver export-policy rule create -vserver <storage VM name> -policyname <export policy name> -clientmatch <ESXI-IP> -rorule any -rwrule any -superuser any 
-+
-[NOTE]
-Make sure that _superuser_ value is not _none_.
+* The login credentials for your vCenter Server instance to which the ONTAP tools will connect to post deployment for registration. 
+* Delete the browser cache.
+* You need five free IPs in the vlan(used for deployment),  in which three IPs will be used as the VM IPs, one for API server IP, and last one for Load Balancer IP which is used to access the services post deployment.
+* In the case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP. The certificates should be created with domain name and IPAddress of the LoadBalancer IP.
+* IPv4/IPv6 supported VLAN 
+* NTP Server which is provided to the vCenter for time Sync.
+* Static IP Configuration details for the Node or VM where the OVA is being deployed (Mandatory) and other details. 
+.. vCenter hostname (venter where the OVA is deployed)
+.. vCenter username (venter where the OVA is deployed)
+.. vCenter password (venter where the OVA is deployed)
+.. Resource pool
+.. Data lif (IPv4/IPv6)
+.. Management lif
+.. ONTAP username
+.. ONTAP password
+.. SVM name
+.. Protocol
+.. API Server IP
+.. Kobe VIP IP address
+.. HA / NON-HA drop down
+.. Hostnames(list of hostnames)
+.. IpAddresses (string)(list of ipaddresses)
+.. Content library name
+.. OVF template name
+.. IPv6 gateway (optional)

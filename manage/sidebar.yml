@@ -39,6 +39,8 @@ entries:
       url: /manage/start_the_ssh_on_other_nodes.html
     - title: Update the vCenter and ONTAP credentials
       url: /manage/update_vcenter_ontap_credentials.html
+  - title: ONTAP tool reports
+    url: /manage/reports.html
   - title: Collect the log files
     url: /manage/task_collect_the_log_files.html
   - title: Manage virtual machines

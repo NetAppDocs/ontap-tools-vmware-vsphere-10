@@ -44,7 +44,7 @@ The ASUP can be enabled or disabled only during deployment.
 . In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be same as the ones provided during initial deployment with the exception of data LIF value.
 [NOTE]
 The storage SVM name should not be changed as that is where the recovery data is stored. This applies for direct SVM as well.
-. In case of HA-deployment recovery, provide the following details:
+. In the case of HA-deployment recovery, provide the following details:
 .. Content library details.
 .. vCenter configuration details
 . In *Customize template* > *Node Configuration* window enter the details as per the set up you're trying to recover, Non-HA or HA setup.
@@ -53,7 +53,7 @@ The storage SVM name should not be changed as that is where the recovery data is
 As the task gets created, the progress is shown in the vSphere task bar.
 . Power on the VM after the completion of the task.
 +
-The installation begins. You can track the the installation progress in VM’s web console.
+The installation begins. You can track the installation progress in VM’s web console.
 As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
 . To make necessary changes in the dialog prompt, follow the below steps:
 .. Double click on the web console to start interacting with the console.

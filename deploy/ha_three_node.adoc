@@ -20,18 +20,22 @@ You can configure HA three nodes in either small, medium, or large configuration
 
 This task gives you instructions on how to install HA three nodes in small, medium, or high configurations.
 [NOTE]
-Creating the content library is a mandatory step for deploying HA three nodes configuration. See link:../deploy/concept_how_to_download_ontap_tools.html[Download ONTAP tools] for details. Learn more https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-vm-administration/GUID-A58AF4FD-6CBE-4210-9E67-27EFBDCC1EF2.html[Create and Edit a Content Library].
+Creating the content library is a mandatory step for deploying HA three nodes configuration. See link:../deploy/concept_how_to_download_ontap_tools.html[Download ONTAP tools] for details. Learn more https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library].
+
+Make sure you have imported your OVA into your content library. Keep the name of the content library and the library item name that you have given to your OVA item handy.
 
 [NOTE]
 Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to *Conservative* during the installation of ONTAP tools. This ensures that VM's do not migrate during the installation.
 
 *Steps*
 
-. Log in to the vSphere server.
-. If you have not imported the OVA file yet, navigate to your content library and select *Actions* in the right side of the page and select *Import item* to import the OVA file.
-. Navigate to the resource pool or the host where you want to deploy the OVA.
-. Right-click the required location where you want to deploy the VM, and select *Deploy OVF template...*.
-. Select the content library where the _.ova_ file is saved, and then select *Next*.
+. To deploy from vSphere server:
+.. Log in to the vSphere server.
+.. Navigate to the resource pool or the host where you want to deploy the OVA and right-click the required location where you want to deploy the VM, and select *Deploy OVF template...*
+.. You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*
+. To deploy from content library:
+.. Go to your content library and click on the library item that you want to deploy. 
+.. Click on *Actions* > *New VM from This Template* 
 . Select a name and folder for the virtual machine and select *Next*.
 . Select the host and select *Next*
 . Review the summary of the template and select *Next*.
@@ -69,7 +73,7 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 . In *Customize template* > *Node Configuration* window, enter the network properties of the OVA for all the three nodes. 
 +
 [NOTE]
-The information provided here will be validated for proper patterns during installation process. In case of discrepancy, an error message will be displayed on the web console and you will be prompted to correct any incorrect information provided.
+The information provided here will be validated for proper patterns during installation process. In the case of discrepancy, an error message will be displayed on the web console and you will be prompted to correct any incorrect information provided.
 +
 .. Enter the Host name. 
 .. Enter IP Address (IPV4) mapped to the host name. 
@@ -82,7 +86,7 @@ The information provided here will be validated for proper patterns during insta
 .. Specify the Search Domain name to use when resolving the hostname.
 .. Specify the IPV6 gateway on the deployed network only when you need dual stack. 
 . In *Customize template* > *Node 2 Configuration* and *Node 3 Configuration* window, enter the following details:
-.. HostName
+.. HostName 2 and 3
 .. IP Address
 .. IPV6 Address
 . Review the details in the *Ready to complete* window, select *FINISH*.
@@ -90,8 +94,8 @@ The information provided here will be validated for proper patterns during insta
 As the task gets created, the progress is shown in the vSphere task bar.
 . Power on the VM after the completion of the task.
 +
-The installation begins. You can track the the installation progress in VM’s web console.
-As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
+The installation begins. You can track the installation progress in VM’s web console.
+As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In the case of any discrepancies, a dialog prompts you to take corrective action.
 . To make necessary changes in the dialog prompt, follow the below steps:
 .. Double click on the web console to start interacting with the console.
 .. Use UP and DOWN arrow keys on your keyboard to navigate across the fields shown.

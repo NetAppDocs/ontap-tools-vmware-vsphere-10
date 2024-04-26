@@ -11,7 +11,7 @@ summary: 'You can manage your application, system, and network configurations by
 [.lead]
 You can manage your application, system, and network configurations by using the maintenance console of ONTAP tools. You can change your administrator password and maintenance password. You can also generate support bundles, set different log levels, view and manage TLS configurations, and start remote diagnostics.
 
-You should have VMware tools installed after deploying ONTAP tools to access the maintenance console. You should use `maint` as the user name and the password you configured during deployment to log in to the maintenance console of ONTAP tools. You should use *nano* for editing the files in maint or root login console.
+You should have VMware tools installed after deploying ONTAP tools to access the maintenance console. You should use `maint` as the username and the password you configured during deployment to log in to the maintenance console of ONTAP tools. You should use *nano* for editing the files in maint or root login console.
 
 NOTE: You should set a password for the `diag` user while enabling remote diagnostics.
 

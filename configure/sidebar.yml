@@ -29,6 +29,8 @@ entries:
     url: /configure/ip_whitelisting.html
   - title: Configure ONTAP user roles and privileges
     url: /configure/task_configure_user_role_and_privileges.html
+  - title: NetApp ONTAP tools Plugin Dashboard overview
+    url: /configure/rp_dashboard_overview.html
   - title: Create datastore
     url: /configure/create_vvols_datastore.html    
   - title: Provision NFS and VMFS datastores

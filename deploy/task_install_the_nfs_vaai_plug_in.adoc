@@ -36,4 +36,4 @@ These values are set automatically on the ESXi host when the Recommended Setting
 Only the ESXi hosts that are eligible for the plug-in installation are displayed. You should follow the on-screen instructions to complete the installation. You can monitor the installation progress in the Recent Tasks section of vSphere Web Client. 
 . You should manually reboot the ESXi host after the installation finishes.
 +
-When the VMware admin reboots the ESXi host, ONTAP tools automatically detects the NFS VAAI plug-in. You do not have to perform additional steps to enable the plug-in.
+When the VMware admin reboots the ESXi host, ONTAP tools automatically detect the NFS VAAI plug-in. You do not have to perform additional steps to enable the plug-in.
