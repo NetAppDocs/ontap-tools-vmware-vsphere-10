@@ -55,16 +55,16 @@ a|
 NetApp ONTAP tools Console > View
 a|
 
-* NetApp OTV Administrator
-* NetApp OTV Provision
-* NetApp OTV Read Only
+* NetApp ONTAP tools Administrator
+* NetApp ONTAP tools Provision
+* NetApp ONTAP tools Read Only
 
 a|
 All ONTAP tools and VASA Provider specific tasks require the View Privilege.
 a|
 NetApp Virtual Storage Console > Policy Based Management > Management or privilege.nvpfVSC.VASAGroup.com.netapp.nvpf.label > Management
 a|
-NetApp OTV Administrator
+NetApp ONTAP tools Administrator
 a|
 ONTAP tools and VASA Provider tasks related to threshold settings.
 |===

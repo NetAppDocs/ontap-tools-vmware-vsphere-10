@@ -24,15 +24,15 @@ The roles that ONTAP tools provides enable you to perform the following tasks:
 |===
 | *Role* | *Description*
 a|
-NetApp OTV Administrator
+NetApp ONTAP tools Administrator
 a|
 Provides all the native vCenter Server privileges and ONTAP tools-specific privileges that are required to perform all ONTAP tools tasks.
 a|
-NetApp OTV Read Only
+NetApp ONTAP tools Read Only
 a|
 Provides read-only access to ONTAP tools. These users cannot perform any ONTAP tools actions that are access-controlled.
 a|
-NetApp OTV Provision
+NetApp ONTAP tools Provision
 a|
 Provides all the native vCenter Server privileges and ONTAP tools-specific privileges that are required to provision storage. You can perform the following tasks:
 
