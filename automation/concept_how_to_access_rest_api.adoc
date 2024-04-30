@@ -27,8 +27,6 @@ You should always use a cluster management LIF. This will load balance the API r
 
 You can access the Swagger from the hyperlink in the support page of the NetAPP ONTAP tools plug-in.
 
-image:../media/ontap_tools_support.gif[Support] page
-
 The format of the URL used to access the documentation page for the most recent version of the API is:
 
 \`https://<loadbalancer_ip_address>/docs/api`
