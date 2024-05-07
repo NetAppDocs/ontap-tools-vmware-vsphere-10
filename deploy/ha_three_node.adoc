@@ -43,7 +43,11 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 . In the *Configuration window*, select *High-Availability Deployment(S)*, *High-Availability Deployment(M)*, or *High-Availability Deployment(L)* configuration, depending on your requirement.
 . Select the storage for the configuration and disk files, select *Next*.
 . Select the destination network for each source network, select *Next*.
-. Select *Customize template* > *system configuration* window. Enter the following details:
+. Select *Customize template* > *system configuration* window. 
++
+image:../media/ha_deployment_sys_config.png[system configuration]
+Enter the following details:
+
 .. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter.
 .. The *Enable ASUP* checkbox is selected by default.
 +
@@ -56,6 +60,9 @@ The ASUP can be enabled or disabled only during deployment.
 .. Enter the Domain name with which you generated the certificate.
 .. Enter the Load Balance IP details. This is the IP that is assigned for VASA.
 . In *Customize template* > *Deployment Configuration* window, enter the following details:
++
+image:../media/ha_deploy_config.png[Deployment Configuration]
+
 .. Enter a free IP Address in Virtual IP for K8s Control Plane. You need this for K8s API Server.
 .. In the advanced deployment option, select the checkbox against *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
 +

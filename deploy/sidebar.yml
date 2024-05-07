@@ -11,6 +11,8 @@ entries:
     url: /deploy/nonha_deployment.html
   - title: Deploy HA configuration
     url: /deploy/ha_three_node.html
+  - title: Deployment error codes
+    url: /deploy/deployment_error_codes.html
   - title: Upgrade ONTAP tools 
     url: /deploy/upgrade_otv.html
   - title: Recover ONTAP tools setup

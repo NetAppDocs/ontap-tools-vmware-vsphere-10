@@ -1,0 +1,137 @@
+---
+permalink: deploy/deployment_error_codes.html
+sidebar: sidebar
+keywords: upgrade
+summary: 'This page outlines the error codes for the deployment, reboot, upgrade, and recovery operations of our system.'
+---
+= Deployment error codes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+This page outlines the error codes for the deployment, reboot, upgrade, and recovery operations of our system. 
+The error codes are five digits long, where the first two digits represent the script that encountered the issue, and the last three digits represent the specific workflow within that script.
+
+All error logs are recorded in the ansible-perl-errors.log file to facilitate easy tracking and resolution of issues. This log file contains the error code as well as the particular ansible task which has failed.
+
+The following table list the error codes and the corresponding file names.
+
+|===
+
+|*Error code*| *Script name*
+|00 |firstboot-network-config.pl, mode deploy
+|01 |firstboot-network-config.pl, mode upgrade
+|02 |firstboot-inputs-validation.pl
+|03 |firstboot-deploy-otv-ng.pl, deploy, ha
+|04 |firstboot-deploy-otv-ng.pl, deploy, non-ha
+|05 |firstboot-deploy-otv-ng.pl, reboot
+|06 |firstboot-deploy-otv-ng.pl, upgrade, ha
+|07 |firstboot-deploy-otv-ng.pl, upgrade, non-ha
+|08 |firstboot-otv-recovery.pl
+
+|===
+
+The last three digits of the error code indicate the specific workflow error within the script:
+
+|===
+|*Deployment error code*|*Workflow*
+|050 |Ssh Key generation failed
+|051
+|Failed deploying secondary VMs
+|052
+|Copy SSH Keys failed
+|053
+|Failed installing RKE2
+|054
+|Failed setting kubeconfig
+|055
+|Failed deploying registry
+|056
+|Login ISCSI has failed
+|057
+|Trident deployment has failed
+|058
+|Trident import has failed
+|059
+|KubeVip deployment has failed
+|060
+|Operator deployment has failed
+|061
+|Services deployment has failed
+|062
+|VASA Provider and SRA deployment has failed
+|063
+|Copying contents to recovery volume has failed
+|064
+|version.xml verification failed
+|065
+|Swagger page URL is not reachable
+|066
+|Post deployment steps failed
+|===
+
+|===
+|*Reboot error code*|*Workflow*
+|067
+|Waiting for rke2-server timed out
+|101
+|Failed to Reset Maint/Console user password
+|102
+|Failed to Delete password file during reset Maint/Console user password
+|103
+|Failed to Update New Maint/Console user password in vault
+|===
+
+|===
+|*Upgrade error code* |*Workflow*
+|068
+|Debian packages rollback has failed
+|069
+|Failed restoring files
+|070
+|Failed deleting backup
+|071
+|Kubernetes cluster was not healthy
+|072
+|CR file does not exist in jail disk
+|073
+|Applying the CR failed while setting force reconcile flag to false
+|074
+|Mount ISO has failed
+|075
+|Upgrade pre-checks has failed
+|076
+|Registry upgrade has failed
+|077
+|Registry rollback has failed
+|078
+|Operator upgrade has failed
+|079
+|Operator rollback has failed
+|080
+|Services upgrade has failed
+|081
+|Services rollback has failed
+|082
+|Deleting old images from container failed
+|083
+|Deleting backup has failed
+|084
+|Changing JobManager back to Production failed
+|085
+|failed creating CA certificate secrets
+|086
+|failed creating server/private-key certificate secrets
+|087
+|Failed! to complete post 10.0 to 10.1 upgrade steps
+|===
+
+|===
+|*Recovery error code* |*Workflow*
+|104
+|Post recovery steps has failed.
+|105
+|Copying contents to recovery volume has failed.
+|106
+|Failed to mount recovery volume.
+|===
