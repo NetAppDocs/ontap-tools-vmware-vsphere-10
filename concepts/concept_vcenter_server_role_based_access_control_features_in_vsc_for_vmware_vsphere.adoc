@@ -15,7 +15,7 @@ vCenter Server provides role-based access control (RBAC) that enables you to con
 |Components | Description
 |Privileges |A privilege enables or denies access to perform actions in vSphere.
 |Roles |A role contains one or more system privileges where each privilege defines an administrative right to a certain object or type of object in the system. By assigning a user a role, the user inherits the capabilities of the privileges defined in that role.
-|Users and groups |Users and groups are used in permissions to assign roles from Active Directory (AD) or potentially local windows users/groups as well (not recommended)
+|Users and groups |Users and groups are used in permissions to assign roles from Active Directory (AD). vCenter has its own local users and groups that you can use.
 |Permissions |Permissions allow you to assign privileges to users or groups to perform certain actions and make changes to objects inside vCenter Server. vCenter Server permissions affect only those users who log into vCenter Server rather than users who log into an ESXi host directly.
 |Object |An entity upon which actions are performed. VMware vCenter objects are data centers, folders, resource pools, clusters, hosts, and VMs 
 |===

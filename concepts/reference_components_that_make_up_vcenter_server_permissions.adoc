@@ -49,26 +49,6 @@ NOTE: To simplify working with vCenter Server RBAC, ONTAP tools provides several
 
 If you change the privileges within a permission, the user that is associated with that permission should log out, and then log in to enable the updated permission.
 
-|===
-| *Privilege* | *Roles* | *Tasks*
-a|
-NetApp ONTAP tools Console > View
-a|
-
-* NetApp ONTAP tools Administrator
-* NetApp ONTAP tools Provision
-* NetApp ONTAP tools Read Only
-
-a|
-All ONTAP tools and VASA Provider specific tasks require the View Privilege.
-a|
-NetApp Virtual Storage Console > Policy Based Management > Management or privilege.nvpfVSC.VASAGroup.com.netapp.nvpf.label > Management
-a|
-NetApp ONTAP tools Administrator
-a|
-ONTAP tools and VASA Provider tasks related to threshold settings.
-|===
-
 == vSphere objects
 
 Permissions are associated with vSphere objects, such as the vCenter Server, ESXi hosts, virtual machines, datastores, datacenters, and folders. You can assign permissions to any vSphere object. Based on the permission that is assigned to a vSphere object, the vCenter Server determines who can perform which tasks on that object. For ONTAP tools specific tasks, permissions are assigned and validated only at the root-folder level (vCenter Server) and not on any other entity. Except for VAAI plug-in operation, where permissions are validated against the concerned ESXi .

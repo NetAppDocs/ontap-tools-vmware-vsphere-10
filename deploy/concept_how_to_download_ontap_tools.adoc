@@ -11,11 +11,13 @@ summary: 'You can download the .ova file for ONTAP tools for VMware vSphere from
 [.lead]
 You can download the `.zip` file that contains  binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
 
-The _.ova_ file includes ONTAP tools. When the deployment is complete, ONTAP tools and VASA products are installed in your environment. By default, ONTAP tools starts working as soon as you decide on the subsequent deployment model and choose whether to enable VASA Provider based on your requirements. See link:../configure/register_vasa.html[Register the VASA Provider with vCenter] for details.
+The _.ova_ file includes ONTAP tools. When the deployment is complete, ONTAP tools and VASA products are installed in your environment. By default, ONTAP tools start working as soon as you decide on the subsequent deployment model and choose whether to enable VASA Provider based on your requirements. See link:../configure/register_vasa.html[Register the VASA Provider with vCenter] for details.
 
 == Content library
 
 Content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
+[NOTE]
+It is recommended to store the content library on shared datastore, such that all hosts in a cluster can access it.
 You need to create a content library to store the OVA before deploying them in HA configuration.
 Create the content library using the following steps:
 

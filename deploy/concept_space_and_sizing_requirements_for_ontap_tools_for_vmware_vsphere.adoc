@@ -38,7 +38,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |Storage, host, and applications|Version requirements
 
 |ONTAP
-|ONTAP 9.12.1 latest p patch, 9.13.1 latest p patch , 9.14.1 latest patch
+|ONTAP 9.12.1 latest p patch, 9.13.1 latest p patch, 9.14.1 latest patch
 
 |VMware vSphere
 |Minimum supported VMware version is 7.0U3 and 8.0U2 and U3

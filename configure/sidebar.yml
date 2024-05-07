@@ -33,5 +33,3 @@ entries:
     url: /configure/rp_dashboard_overview.html
   - title: Create datastore
     url: /configure/create_vvols_datastore.html    
-  - title: Provision NFS and VMFS datastores
-    url: /configure/task_provision_datastores.html        
