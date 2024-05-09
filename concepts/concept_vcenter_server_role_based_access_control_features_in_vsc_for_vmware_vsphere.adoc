@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'vCenter Server provides role-based access control (RBAC) that enables you to control access to vSphere objects.'
 ---
-= Overview of role-based access control in ONTAP tools
+= Overview of role-based access control in ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
@@ -20,7 +20,7 @@ vCenter Server provides role-based access control (RBAC) that enables you to con
 |Object |An entity upon which actions are performed. VMware vCenter objects are data centers, folders, resource pools, clusters, hosts, and VMs 
 |===
 
-To successfully complete a task, you should have the appropriate vCenter Server RBAC roles. During a task, ONTAP tools checks a user's vCenter Server roles before checking the user's ONTAP privileges.
+To successfully complete a task, you should have the appropriate vCenter Server RBAC roles. During a task, ONTAP tools for VMware vSphere checks a user's vCenter Server roles before checking the user's ONTAP privileges.
 
 NOTE: The vCenter Server roles apply to ONTAP tools vCenter users, not to administrators. By default, administrators have full access to the product and do not require roles assigned to them.
 
@@ -35,7 +35,7 @@ If you change the privileges within a role, the user associated with that role s
 
 == Standard roles packaged with ONTAP tools
 
-To simplify working with vCenter Server privileges and RBAC, ONTAP tools provide standard ONTAP tools roles that enable you to perform key ONTAP tools tasks. There is also a read-only role that enables you to view the information, but not perform any tasks.
+To simplify working with vCenter Server privileges and RBAC, ONTAP tools for VMware vSphere provides standard ONTAP tools roles that enable you to perform key ONTAP tools tasks. There is also a read-only role that enables you to view the information, but not perform any tasks.
 
 You can view ONTAP tools standard roles by clicking *Roles* on the vSphere Client Home page. The roles that ONTAP tools provides enable you to perform the following tasks:
 

@@ -2,7 +2,7 @@
 permalink: automation/manage_network_workflows.html
 sidebar: sidebar
 keywords: REST API categories
-summary: 'The resources available through ONTAP tools REST API are organized in categories, as displayed on ONTAP tools API documentation page.'
+summary: 'Manage network access'
 ---
 = Manage network access
 :icons: font

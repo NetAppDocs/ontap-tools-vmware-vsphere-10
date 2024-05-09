@@ -1,7 +1,7 @@
 section: deploy
-title: Deploy ONTAP tools
+title: Deploy ONTAP tools for VMware vSphere
 entries:
-  - title: Requirements
+  - title: Prerequisites
     url: /deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html
   - title: Download ONTAP tools
     url: /deploy/concept_how_to_download_ontap_tools.html

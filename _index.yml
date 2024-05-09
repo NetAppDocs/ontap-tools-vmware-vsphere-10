@@ -1,6 +1,6 @@
 indexpage:
   title: ONTAP tools for VMware vSphere documentation
-  lead: ONTAP tools for VMware vSphere enable you to configure, manage, and protect your virtual datastores in your vCenter Server environment.
+  lead: ONTAP tools for VMware vSphere enables you to configure, manage, and protect your virtual datastores in your vCenter Server environment.
   tiles: 
     - title: Get started
       links:

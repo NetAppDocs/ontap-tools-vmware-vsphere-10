@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
 summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
 ---
-= Requirements to deploy ONTAP tools
+= Prerequisites for deploying ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
 
-You can use ONTAP tools with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools on a supported vSphere that includes ESXi system.
+You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools for VMware vSphere on a supported vSphere client that includes ESXi system.
 
 * *Installation package space requirements per node*
 ** 10 GB for thin provisioned installations

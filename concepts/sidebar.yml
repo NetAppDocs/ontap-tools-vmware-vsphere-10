@@ -13,8 +13,6 @@ entries:
         url: /concepts/reference_components_that_make_up_vcenter_server_permissions.html
       - title: Assign and modify permissions for vCenter Server
         url: /concepts/reference_key_points_about_assigning_and_modifying_permissions.html
-      - title: RBAC roles packaged with ONTAP tools
-        url: /concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html
       - title: Privileges required for ONTAP tools tasks
         url: /concepts/concept_privileges_required.html
       - title: Recommended ONTAP roles

@@ -2,14 +2,14 @@
 permalink: configure/update_host_data.html
 sidebar: sidebar
 keywords:
-summary: 'Update host data action on ESXi Host system is used to run an on-demand discovery of the host related data.'
+summary: 'You can run an on-demand discovery on the ESXi host to get the latest updates on the storage data.'
 ---
 = Update host data
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Update host data action on ESXi Host system is used to run an on-demand discovery of the host related data.
+You can run an on-demand discovery on the ESXi host to get the latest updates on the storage data.
 
 *Steps*
 

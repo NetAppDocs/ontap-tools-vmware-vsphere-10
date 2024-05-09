@@ -13,7 +13,7 @@ You can control how an API call is processed through parameters and variables se
 
 == HTTP methods
 
-The HTTP methods supported by ONTAP tools REST API are shown in the following table.
+The HTTP methods supported by ONTAP tools for VMware vSphere REST API are shown in the following table.
 
 NOTE: Not all the HTTP methods are available at each of the REST endpoints.
 
@@ -59,7 +59,7 @@ When issuing an API call that uses GET, you can limit or filter the returned obj
 
 `<field>=<query value>`
 
-In addition to an exact match, other operators are available to return a set of objects over a range of values. ONTAP tools REST API supports the filtering operators shown in the table below.
+In addition to an exact match, other operators are available to return a set of objects over a range of values. ONTAP tools for VMware vSphere REST API supports the filtering operators shown in the table below.
 
 |===
 |Operator |Description
@@ -119,13 +119,13 @@ For example, you can sort the type field in descending order followed by id in a
 
 == Pagination when retrieving objects in a collection
 
-When issuing an API call using GET to access a collection of objects of the same type, ONTAP tools attempts to return as many objects as possible based on two constraints. You can control each of these constraints using additional query parameters on the request. The first constraint reached for a specific GET request terminates the request and therefore limits the number of records returned.
+When issuing an API call using GET to access a collection of objects of the same type, ONTAP tools for VMware vSphere attempts to return as many objects as possible based on two constraints. You can control each of these constraints using additional query parameters on the request. The first constraint reached for a specific GET request terminates the request and therefore limits the number of records returned.
 
 NOTE: If a request ends before iterating over all the objects, the response contains the link needed to retrieve the next batch of records.
 
 === Limiting the number of objects
 
-By default, ONTAP tools returns a maximum of 10,000 objects for a GET request. You can change this limit using the _max_records_ query parameter. For example:
+By default, ONTAP tools for VMware vSphere returns a maximum of 10,000 objects for a GET request. You can change this limit using the _max_records_ query parameter. For example:
 
 `max_records=20`
 
@@ -133,7 +133,7 @@ The number of objects actually returned can be less than the maximum in effect, 
 
 === Limiting the time used to retrieve the objects
 
-By default, ONTAP tools returns as many objects as possible within the time allowed for the GET request. The default timeout is 15 seconds. You can change this limit using the _return_timeout_ query parameter. For example:
+By default, ONTAP tools for VMware vSphere returns as many objects as possible within the time allowed for the GET request. The default timeout is 15 seconds. You can change this limit using the _return_timeout_ query parameter. For example:
 
 `return_timeout=5`
 

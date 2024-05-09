@@ -2,15 +2,15 @@
 permalink: deploy/prepare_deployment.html
 sidebar: sidebar
 keywords:
-summary: 'You should deploy ONTAP tools in your environment, and specify the required parameters, to be able to use the appliance.'
+summary: 'You should deploy ONTAP tools for VMware vSphere in your environment, and specify the required parameters, to be able to use the appliance.'
 ---
-= Prepare to deploy ONTAP tools
+= Prepare to deploy ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You should be aware of the basic storage backend requirements, application requirements, and license requirements before you begin deploying ONTAP tools for VMware vSphere. 
-Before you deploy ONTAP tools for VMware vSphere, it is good practice to plan your deployment and decide how you want to configure ONTAP tools in your environment. 
+It is a good practice to plan your deployment and decide how you want to configure ONTAP tools in your environment. 
 
 == Preparing for deployment 
 

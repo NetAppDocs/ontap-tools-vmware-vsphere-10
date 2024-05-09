@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'You can access the ONTAP REST API in several different ways.'
 ---
-= How to access ONTAP tools REST API
+= How to access ONTAP tools for VMware vSphere REST API
 :icons: font
 :imagesdir: ../media/
 
@@ -23,9 +23,9 @@ The LIF you choose to use should be configured to support the HTTPS management p
 [NOTE]
 You should always use a cluster management LIF. This will load balance the API requests across all the nodes and avoid nodes that are offline or experiencing connectivity issues. If you have multiple cluster management LIFs configured, they are all equivalent regarding access to the REST API.
 
-== ONTAP tools API online documentation page
+== ONTAP tools for VMware vSphere API online documentation page
 
-You can access the Swagger from the hyperlink in the support page of the NetAPP ONTAP tools plug-in.
+You can access the Swagger from the hyperlink in the support page of the NetAPP ONTAP tools for VMware vSphere plug-in.
 
 The format of the URL used to access the documentation page for the most recent version of the API is:
 
@@ -33,7 +33,7 @@ The format of the URL used to access the documentation page for the most recent 
 
 == Custom software and tools
 
-You can access ONTAP tools API using any of several different programming languages and tools. Popular choices include Python, Java, Curl, and PowerShell. A program, script, or tool that uses the API acts as a REST web services client. Using a programming language enables a deeper understanding of the API and provides an opportunity to automate ONTAP tools administration.
+You can access ONTAP tools for VMware vSphere API using any of several different programming languages and tools. Popular choices include Python, Java, Curl, and PowerShell. A program, script, or tool that uses the API acts as a REST web services client. Using a programming language enables a deeper understanding of the API and provides an opportunity to automate ONTAP tools for VMware vSphere administration.
 
 The format of the base URL used to directly access the most recent version of the API is:
 

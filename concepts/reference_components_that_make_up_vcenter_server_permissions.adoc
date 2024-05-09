@@ -45,7 +45,7 @@ These privileges are defined for specific ONTAP tools tasks. They are unique to 
 
 ONTAP tools tasks require both ONTAP tools-specific privileges and vCenter Server native privileges. These privileges constitute the "`role`" for the user. A permission can have multiple privileges. These privileges are for a user that is logged into the vCenter Server.
 
-NOTE: To simplify working with vCenter Server RBAC, ONTAP tools provides several standard roles that contain all ONTAP tools-specific and native privileges that are required to perform ONTAP tools tasks.
+NOTE: To simplify working with vCenter Server RBAC, ONTAP tools for VMware vSphere provides several standard roles that contain all ONTAP tools-specific and native privileges that are required to perform ONTAP tools tasks.
 
 If you change the privileges within a permission, the user that is associated with that permission should log out, and then log in to enable the updated permission.
 
