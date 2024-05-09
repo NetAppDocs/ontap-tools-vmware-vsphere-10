@@ -46,8 +46,8 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 . Select *Customize template* > *system configuration* window. 
 +
 image:../media/ha_deployment_sys_config.png[system configuration]
-Enter the following details:
 
+Enter the following details:
 .. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter.
 .. The *Enable ASUP* checkbox is selected by default.
 +
