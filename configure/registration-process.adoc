@@ -1,5 +1,5 @@
 ---
-permalink: configure/register_vasa.html
+permalink: configure/registration-process.html
 sidebar: sidebar
 keywords:
 summary: 'You can register and unregister the VASA provider with vCenter using ONTAP tools remote plugin interface.'

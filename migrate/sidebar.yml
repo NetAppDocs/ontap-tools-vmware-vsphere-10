@@ -2,4 +2,4 @@ section: migrate
 title: Migrate ONTAP tools
 entries:
   - title: Migrate to the latest ONTAP tools version 
-    url: /migrate/migrate_to_ng.html
+    url: /migrate/migrate-to-latest-ontaptools.html

@@ -1,5 +1,5 @@
 ---
-permalink: configure/add_vcenter.html
+permalink: configure/add-vcenter.html
 sidebar: sidebar
 keywords:
 summary: 'vCenters are the central management platforms that allow you to control hosts, virtual machines (VM), and storage backends.'

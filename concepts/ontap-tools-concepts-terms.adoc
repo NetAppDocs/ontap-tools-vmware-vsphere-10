@@ -1,5 +1,5 @@
 ---
-permalink: concepts/concepts_terms.html
+permalink: concepts/ontap-tools-concepts-terms.html
 sidebar: sidebar
 keywords:
 summary: 'The following section describes the key concepts and terms used in the document.'

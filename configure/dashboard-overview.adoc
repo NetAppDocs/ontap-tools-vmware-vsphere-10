@@ -1,5 +1,5 @@
 ---
-permalink: configure/rp_dashboard_overview.html
+permalink: configure/dashboard-overview.html
 sidebar: sidebar
 keywords: user roles
 summary: 'When you select NetApp ONTAP tools Plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to Overview page. This page acts like the dashboard providing you the summary of the ONTAP tools plug-in..'

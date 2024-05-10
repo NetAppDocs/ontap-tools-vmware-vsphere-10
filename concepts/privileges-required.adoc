@@ -1,5 +1,5 @@
 ---
-permalink: concepts/concept_privileges_required.html
+permalink: concepts/privileges-required.html
 sidebar: sidebar
 keywords:
 summary: 'Different ONTAP tools for VMware vSphere tasks require different combinations of privileges specific to ONTAP tools and native vCenter Server privileges.'

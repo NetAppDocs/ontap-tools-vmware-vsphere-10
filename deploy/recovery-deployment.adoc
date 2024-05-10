@@ -1,5 +1,5 @@
 ---
-permalink: deploy/recovery_deployment.html
+permalink: deploy/recovery-deployment.html
 sidebar: sidebar
 keywords:
 summary: 'If you lose your ONTAP tools setup, but have your ONTAP working, you can recover ONTAP tools setup using the ONTAP. When you lose the setup, bring down the setup gracefully.'

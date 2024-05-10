@@ -1,5 +1,5 @@
 ---
-permalink: configure/reference_delete_vvols.html
+permalink: configure/delete-vvols.html
 sidebar: sidebar
 keywords: vVols datastore,delete vVol
 summary: 'Delete datastore action deletes the datastore. In the case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.'

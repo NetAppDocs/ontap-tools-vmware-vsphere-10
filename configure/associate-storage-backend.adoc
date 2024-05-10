@@ -1,5 +1,5 @@
 ---
-permalink: configure/associate_storage_backend.html
+permalink: configure/associate-storage-backend.html
 sidebar: sidebar
 keywords:
 summary: 'need info.'

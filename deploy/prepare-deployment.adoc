@@ -1,5 +1,5 @@
 ---
-permalink: deploy/prepare_deployment.html
+permalink: deploy/prepare-deployment.html
 sidebar: sidebar
 keywords:
 summary: 'You should deploy ONTAP tools for VMware vSphere in your environment, and specify the required parameters, to be able to use the appliance.'

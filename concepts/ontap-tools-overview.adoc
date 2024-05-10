@@ -1,5 +1,5 @@
 ---
-permalink: concepts/concept_ontap_tools_overview.html
+permalink: concepts/ontap-tools-overview.html
 sidebar: sidebar
 keywords:
 summary: 'ONTAP tools for VMware vSphere is a collection of tools for lifecycle management of virtual machines. It integrates with VMware ecosystem and helps in provisioning, basic protection and disaster recovery of virtual machines.'

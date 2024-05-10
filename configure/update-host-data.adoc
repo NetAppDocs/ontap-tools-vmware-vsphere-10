@@ -1,5 +1,5 @@
 ---
-permalink: configure/update_host_data.html
+permalink: configure/update-host-data.html
 sidebar: sidebar
 keywords:
 summary: 'You can run an on-demand discovery on the ESXi host to get the latest updates on the storage data.'

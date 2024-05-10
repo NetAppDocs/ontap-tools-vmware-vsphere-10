@@ -1,5 +1,5 @@
 ---
-permalink: configure/create_vvols_datastore.html
+permalink: configure/create-vvols-datastore.html
 sidebar: sidebar
 keywords:
 summary: 'You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.'

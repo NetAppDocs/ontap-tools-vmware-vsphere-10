@@ -2,34 +2,32 @@ section: configure
 title: Configure ONTAP tools
 entries:
   - title: ONTAP tools Manager user interface
-    url: /configure/ontap_tools_manager_ui.html
+    url: /configure/manager-user-interface.html
   - title: Add and manage vCenter
-    url: /configure/add_vcenter.html
+    url: /configure/add-vcenter.html
   - title: Register VASA provider to vCenter
-    url: /configure/register_vasa.html
+    url: /configure/registration-process.html
   - title: Verify registered VASA provider
-    url: /configure/verify_registered_vp.html
-  - title: Install the NFS VAAI plug-in
-    url: /deploy/task_install_the_nfs_vaai_plug_in.html
+    url: /configure/verify-registration.html
   - title: Update host data
-    url: /configure/update_host_data.html
+    url: /configure/update-host-data.html
   - title: Configure ESXi settings
     entries:
       - title: Configure ESXi server multipath and timeout settings
-        url: /configure/task_configure_esx_server_multipathing_and_timeout_settings.html
+        url: /configure/configure-esx-server-multipath-and-timeout-settings.html
       - title: Set ESXi host values
-        url: /configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html
+        url: /configure/esxi-host-values.html
   - title: Discover storage systems and hosts
-    url: /configure/task_discover_storage_systems_and_hosts.html
+    url: /configure/discover-storage-systems-and-hosts.html
   - title: Add storage backend
-    url: /configure/add_storage_backend.html
+    url: /configure/add-storage-backend.html
   - title: Associate storage backend with vCenter
-    url: /configure/associate_storage_backend.html
+    url: /configure/associate-storage-backend.html
   - title: Configure network access
-    url: /configure/ip_whitelisting.html
+    url: /configure/configure-network-access.html
   - title: Configure ONTAP user roles and privileges
-    url: /configure/task_configure_user_role_and_privileges.html
+    url: /configure/configure-user-role-and-privileges.html
   - title: NetApp ONTAP tools Plugin Dashboard overview
-    url: /configure/rp_dashboard_overview.html
+    url: /configure/dashboard-overview.html
   - title: Create datastore
-    url: /configure/create_vvols_datastore.html    
+    url: /configure/create-vvols-datastore.html    

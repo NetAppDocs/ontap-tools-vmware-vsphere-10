@@ -1,5 +1,5 @@
 ---
-permalink: deploy/nonha_deployment.html
+permalink: deploy/nonha-deployment.html
 sidebar: sidebar
 keywords:
 summary: 'You can configure non-HA single node in either small or medium configurations.'

@@ -1,5 +1,5 @@
 ---
-permalink: deploy/ha_three_node.html
+permalink: deploy/ha-three-node-deployment.html
 sidebar: sidebar
 keywords:
 summary: 'You can configure HA s in either small, medium, or large configurations.'

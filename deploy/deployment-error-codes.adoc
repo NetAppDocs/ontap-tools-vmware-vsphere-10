@@ -1,5 +1,5 @@
 ---
-permalink: deploy/deployment_error_codes.html
+permalink: deploy/deployment-error-codes.html
 sidebar: sidebar
 keywords: upgrade
 summary: 'This page outlines the error codes for the deployment, reboot, upgrade, and recovery operations of our system.'

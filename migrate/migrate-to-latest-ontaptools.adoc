@@ -1,5 +1,5 @@
 ---
-permalink: migrate/migrate_to_ng.html
+permalink: migrate/migrate-to-latest-ontaptools.html
 sidebar: sidebar
 keywords: migrate
 summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.'

@@ -1,5 +1,5 @@
 ---
-permalink: concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html
+permalink: concepts/high-availability.html
 sidebar: sidebar
 keywords:
 summary: 'ONTAP tools for VMware vSphere supports a high-availability \(HA\) configuration to help provide uninterrupted functionality of ONTAP tools for VMware vSphere during failure.'
