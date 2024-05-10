@@ -1,5 +1,5 @@
 ---
-permalink: protect/task_configure_network_mappings.html
+permalink: protect/map-network.html
 sidebar: sidebar
 keywords:
 summary: 'You should map your networks on the protected site and the recovery site to enable communication between them.'

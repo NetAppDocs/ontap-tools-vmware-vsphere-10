@@ -1,5 +1,5 @@
 ---
-permalink: protect/task_configure_resource_mappings.html
+permalink: protect/map-resource.html
 sidebar: sidebar
 keywords:
 summary: 'You should map your resources on the protected site and recovery site so that virtual machines are configured to fail over into one group of hosts or the other.'

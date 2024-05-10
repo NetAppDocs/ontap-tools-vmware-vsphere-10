@@ -1,5 +1,5 @@
 ---
-permalink: automation/expand_shrink_workflow.html
+permalink: automation/expand-shrink-workflow.html
 sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.'

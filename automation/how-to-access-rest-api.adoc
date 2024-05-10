@@ -1,5 +1,5 @@
 ---
-permalink: automation/concept_how_to_access_rest_api.html
+permalink: automation/how-to-access-rest-api.html
 sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'You can access the ONTAP REST API in several different ways.'

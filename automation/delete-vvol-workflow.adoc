@@ -1,5 +1,5 @@
 ---
-permalink: automation/delete_vvol_workflow.html
+permalink: automation/delete-vvol-workflow.html
 sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.'

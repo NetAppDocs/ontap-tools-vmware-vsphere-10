@@ -1,5 +1,5 @@
 ---
-permalink: protect/task_enable_storage_replication_adapter.html
+permalink: protect/enable-storage-replication-adapter.html
 sidebar: sidebar
 keywords:
 summary: 'ONTAP tools for VMware vSphere provides the option to enable the SRA capability to be used with ONTAP tools to configure disaster recovery.'

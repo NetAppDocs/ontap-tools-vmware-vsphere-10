@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: automation/task_get_started_with_the_rest_api.html
+permalink: automation/get-started-with-the-rest-api.html
 keywords: REST API
 summary: 'Accessing the API provides some perspective before you begin using it with the more complex workflow processes on a live setup.'
 ---

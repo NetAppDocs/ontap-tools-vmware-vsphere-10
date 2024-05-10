@@ -2,32 +2,32 @@ section: automation
 title: Automate using REST APIs
 entries:
   - title: Overview of REST APIs
-    url: /automation/overview_rest_apis.html
+    url: /automation/overview-rest-apis.html
   - title: How to access ONTAP tools REST API
-    url: /automation/concept_how_to_access_rest_api.html
+    url: /automation/how-to-access-rest-api..html
   - title: Input variables controlling an API request
-    url: /automation/concept_input_variables_controlling_an_api_request.html
+    url: /automation/input-variables-control-an-api-request.html
   - title: Access ONTAP tools API reference documentation through the Swagger UI
-    url: /automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html
+    url: /automation/how-to-access-rest-api-doc-through-the-swagger-user-interface.html
   - title: Get started with the REST API
-    url: /automation/task_get_started_with_the_rest_api.html
+    url: /automation/tget-started-with-the-rest-api.html
   - title: Workflows
     entries:
       - title: Storage discovery
-        url: /automation/storage_workflow.html
+        url: /automation/storage-workflow.html
       - title: SVM aggregate mapping requirements
-        url: /automation/svm_workflow.html
+        url: /automation/svm-workflow.html
       - title: Onboard storage backend (SVM or Cluster) with vCenter
-        url: /automation/onboard_svm_workflow.html
+        url: /automation/onboard-svm-workflow.html
       - title: Create vVols datastore
-        url: /automation/create_vvol_workflow.html
+        url: /automation/create-vvol-workflow.html
       - title: Mount and unmount vVols datastore
-        url: /automation/mount_unmount_workflow.html
+        url: /automation/mount-unmount-workflow.html
       - title: Expand or shrink Storage of vVol Datastore
-        url: /automation/expand_shrink_workflow.html
+        url: /automation/expand-shrink-workflow.html
       - title: Delete vVols datastore
-        url: /automation/delete_vvol_workflow.html
+        url: /automation/delete-vvol-workflow.html
       - title: Manage storage threshold
-        url: /automation/manage_threshold_workflow.html
+        url: /automation/manage-threshold-workflow.html
       - title: Manage network access
-        url: /automation/manage_network_workflows.html
+        url: /automation/manage-network-workflows.html

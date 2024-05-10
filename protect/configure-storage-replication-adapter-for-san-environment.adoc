@@ -1,5 +1,5 @@
 ---
-permalink: protect/task_configure_storage_replication_adapter_for_san_environment.html
+permalink: protect/configure-storage-replication-adapter-for-san-environment.html
 sidebar: sidebar
 keywords:
 summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for Site Recovery Manager \(SRM\).'
