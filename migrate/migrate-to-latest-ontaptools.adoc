@@ -29,7 +29,7 @@ As an existing user, you need to take the OVA backup from your current release b
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 . Deploy OVA for ONTAP tools for VMware vSphere 10.1 release.
-. Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.1 release. See link:../configure/add_vcenter.html[Add vCenter]. 
+. Add the vCenter that you want to migrate to ONTAP tools for VMware vSphere 10.1 release. See link:../configure/add-vcenter.html[Add vCenter]. 
 . Onboard storage backend locally from the remote plug-in vCenter APIs. Add storage as local scoped for migration.
 . Issue the following API call to migrate:
 +
@@ -94,7 +94,7 @@ A job object is returned. You should save the job identifier to use it in the ne
 https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
-. Add ONTAP tools storage provider 10.1 to the vCenter and link:../configure/register_vasa.html[Register VASA Provider to vCenter].
+. Add ONTAP tools storage provider 10.1 to the vCenter and link:../configure/registration-process.html[Register VASA Provider to vCenter].
 . Stop ONTAP tools storage provider 9.10/9.11/9.12/9.13 VASA Provider service from maintenance console.
 +
 [Note] 

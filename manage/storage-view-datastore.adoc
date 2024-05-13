@@ -40,6 +40,6 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. 
 . The ONTAP storage view lists all the volumes. You can expand or remove storage from the ONTAP storage pane.
 +
-Expand storage is the same as link:../manage/expand_storage_of_vvol_datastore.html[Expand vVols Datastores] 
+Expand storage is the same as link:../manage/expand-storage-of-vvol-datastore.html[Expand vVols Datastores] 
 +
-Remove storage is the same as link:../manage/task_remove_storage_from_a_vvols_datastore.html[Shrink vVols datastores]
+Remove storage is the same as link:../manage/remove-storage-from-a-vvols-datastore.html[Shrink vVols datastores]

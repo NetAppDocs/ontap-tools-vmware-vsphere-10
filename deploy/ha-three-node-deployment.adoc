@@ -20,7 +20,7 @@ You can configure HA three nodes in either small, medium, or large configuration
 
 This task gives you instructions on how to install HA three nodes in small, medium, or high configurations.
 [NOTE]
-Creating the content library is a mandatory step for deploying HA three nodes configuration. See link:../deploy/concept_how_to_download_ontap_tools.html[Download ONTAP tools] for details. Learn more https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library].
+Creating the content library is a mandatory step for deploying HA three nodes configuration. See link:../deploy/download-ontap-tools.html[Download ONTAP tools] for details. Learn more https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library].
 
 Make sure you have imported your OVA into your content library. Keep the name of the content library and the library item name that you have given to your OVA item handy.
 

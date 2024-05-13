@@ -9,7 +9,7 @@ summary: 'A workflow is a sequence of one or more steps needed to accomplish a s
 :imagesdir: ../media/
 
 [.lead]
-Use the following API to onboard the storage backends and map the SVM to vCenter locally.  See link:../configure/task_configure_user_role_and_privileges.html[Configure ONTAP user roles and privileges] section for the ONTAP SVM user privileges. 
+Use the following API to onboard the storage backends and map the SVM to vCenter locally.  See link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges] section for the ONTAP SVM user privileges. 
 
 ----
 POST /virtualization/api/v1/vcenters/<vcguid>/storage-backends
