@@ -1,5 +1,5 @@
 ---
-permalink: manage/task_mount_datastores_on_host.html
+permalink: manage/mount-datastores-on-host.html
 sidebar: sidebar
 keywords:
 summary: 'Mounting a datastore provides storage access to additional hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment.'

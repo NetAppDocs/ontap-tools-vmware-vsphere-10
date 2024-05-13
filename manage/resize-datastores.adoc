@@ -1,5 +1,5 @@
 ---
-permalink: manage/task_resize_datastores.html
+permalink: manage/resize-datastores.html
 sidebar: sidebar
 keywords:
 summary: 'Resizing a datastore enables you to increase the storage for your virtual machine files. You can change the size of a datastore as your infrastructure requirements change.'

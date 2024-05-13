@@ -1,5 +1,5 @@
 ---
-permalink: manage/vm_storage_view_ds.html
+permalink: manage/virtual-machine-storage-view-datastore.html
 sidebar: sidebar
 keywords: Remove vVol datastore
 summary: 'The storage view shows the list of vVols that are created by the virtual machine.'

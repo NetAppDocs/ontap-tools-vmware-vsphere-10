@@ -1,5 +1,5 @@
 ---
-permalink: deploy/cdownload-ontap-tools.html
+permalink: deploy/download-ontap-tools.html
 sidebar: sidebar
 keywords:
 summary: 'You can download the .ova file for ONTAP tools for VMware vSphere from the NetApp Support Site.'

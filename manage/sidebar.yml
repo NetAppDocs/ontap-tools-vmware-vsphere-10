@@ -4,63 +4,63 @@ entries:
   - title: Manage datastores
     entries:
       - title: Mount NFS and VMFS datastores
-        url: /manage/task_mount_datastores_on_host.html
+        url: /manage/mount-datastores-on-host.html
       - title: Mount vVols datastore
-        url: /manage/task_mount_a_vvols_datastore.html
+        url: /manage/mount-a-vvols-datastore.html
       - title: Resize NFS and VMFS datastores
-        url: /manage/task_resize_datastores.html
+        url: /manage/resize-datastores.html
       - title: Expand vVol Datastores
-        url: /manage/expand_storage_of_vvol_datastore.html
+        url: /manage/expand-storage-of-vvol-datastore.html
       - title: Shrink vVols datastores
-        url: /manage/task_remove_storage_from_a_vvols_datastore.html
+        url: /manage/remove-storage-from-a-vvols-datastore.html
       - title: Delete datastores
         url: /configure/reference_delete_vvols.html  
       - title: ONTAP storage views for datastores
-        url: /manage/ontap_storage_view_ds.html  
+        url: /manage/storage-view-datastore.html  
       - title: Virtual machine storage view
-        url: /manage/vm_storage_view_ds.html  
+        url: /manage/virtual-machine-storage-view-datastore.html  
   - title: Manage storage threshold
-    url: /manage/manage_storage_threshold.html
+    url: /manage/manage-storage-threshold.html
   - title: Manage storage backend
-    url: /manage/storage_backend.html
+    url: /manage/storage-backend.html
   - title: Manage vCenter
-    url: /manage/manage_vcenter.html
+    url: /manage/manage-vcenter.html
   - title: Manage certificates
-    url: /manage/certificate_manage.html
+    url: /manage/certificate-manage.html
   - title: Manage igroup and export policies
-    url: /manage/igroup_management.html
+    url: /manage/igroup-management.html
   - title: Access ONTAP tools maintenance console
     entries:
     - title: Overview of ONTAP tools maintenance console
-      url: /manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html
+      url: /manage/maintenance-console.html
     - title: Configure remote diagnostic access
-      url: /manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html
+      url: /manage/configure-remote-diagnostic-access.html
     - title: Start the SSH on other nodes
-      url: /manage/start_the_ssh_on_other_nodes.html
+      url: /manage/start-the-ssh-on-other-nodes.html
     - title: Update the vCenter and ONTAP credentials
-      url: /manage/update_vcenter_ontap_credentials.html
+      url: /manage/update-vcenter-credentials.html
   - title: ONTAP tool reports
     url: /manage/reports.html
   - title: Collect the log files
-    url: /manage/task_collect_the_log_files.html
+    url: /manage/collect-the-log-files.html
   - title: Manage virtual machines
     entries:
       - title: Considerations to migrate or clone virtual machines
-        url: /manage/reference_considerations_for_migrating_virtual_machines.html
+        url: /manage/migrate-virtual-machines.html
       - title: Migrate virtual machines with NFS and VMFS datastores to vVols datastores
-        url: /manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html
+        url: /manage/migrate-standard-virtual-machines-to-vvols-datastores.html
       - title: VASA cleanup
-        url: /manage/task_delete_virtual_machines.html
+        url: /manage/delete-virtual-machines.html
   - title: Modify ESXi host settings
-    url: /manage/task_edit_esxi_host_settings.html
+    url: /manage/edit-esxi-host-settings.html
   - title: Manage passwords
     entries:
       - title: Change ONTAP tools Manager password
-        url: /manage/change_manager_pw.html
+        url: /manage/change-manager-password.html
       - title: Reset ONTAP tools Manager password
-        url: /manage/reset_manager_pw.html
+        url: /manage/reset-manager-password.html
       - title: Reset application user password
-        url: /manage/reset_app_pw.html
+        url: /manage/reset-app-password.html
       - title: Reset maintenance console user password
-        url: /manage/reset_maint_pw.html
+        url: /manage/reset-maint-password.html
 

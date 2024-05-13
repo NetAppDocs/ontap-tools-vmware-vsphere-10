@@ -1,5 +1,5 @@
 ---
-permalink: manage/igroup_management.html
+permalink: manage/igroup-management.html
 sidebar: sidebar
 keywords:
 summary: 'In ONTAP, export polices are used to provide volume data path access to hosts and igroups are used to provide LUN data path access to ESXi hosts.'

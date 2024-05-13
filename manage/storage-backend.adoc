@@ -1,5 +1,5 @@
 ---
-permalink: manage/storage_backend.html
+permalink: manage/storage-backend.html
 sidebar: sidebar
 keywords:
 summary: 'Storage backends are systems that the ESXi hosts use for data storage.'

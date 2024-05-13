@@ -1,5 +1,5 @@
 ---
-permalink: manage/task_delete_virtual_machines.html
+permalink: manage/delete-virtual-machines.html
 sidebar: sidebar
 keywords:
 summary: 'Use the steps in this section to perform VASA cleanup.'

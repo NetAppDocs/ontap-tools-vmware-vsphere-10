@@ -1,5 +1,5 @@
 ---
-permalink: manage/start_the_ssh_on_other_nodes.html
+permalink: manage/start-the-ssh-on-other-nodes.html
 sidebar: sidebar
 keywords:
 summary: 'You need to start the SSH on other nodes before you upgrade.'

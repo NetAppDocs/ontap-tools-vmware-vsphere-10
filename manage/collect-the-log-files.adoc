@@ -1,5 +1,5 @@
 ---
-permalink: manage/task_collect_the_log_files.html
+permalink: manage/collect-the-log-files.html
 sidebar: sidebar
 keywords:
 summary: 'You can collect log files for ONTAP tools for VMware vSphere from the options available in ONTAP tools graphical user interface \(GUI\). Technical support might ask you to collect the log files to help troubleshoot a problem.'

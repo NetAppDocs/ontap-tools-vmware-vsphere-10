@@ -1,5 +1,5 @@
 ---
-permalink: manage/ontap_storage_view_ds.html
+permalink: manage/storage-view-datastore.html
 sidebar: sidebar
 keywords: Remove vVol datastore
 summary: 'ONTAP storage view under configure tab of an ONTAP tools for VMware vSphere provides data related to the datastore and its volume.'

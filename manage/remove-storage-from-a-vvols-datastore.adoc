@@ -1,5 +1,5 @@
 ---
-permalink: manage/task_remove_storage_from_a_vvols_datastore.html
+permalink: manage/remove-storage-from-a-vvols-datastore.html
 sidebar: sidebar
 keywords: Remove vVol datastore
 summary: 'Delete datastore action deletes the datastore when there are no vVols on the selected datastore.'

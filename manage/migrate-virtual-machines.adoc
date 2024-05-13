@@ -1,5 +1,5 @@
 ---
-permalink: manage/reference_considerations_for_migrating_virtual_machines.html
+permalink: manage/migrate-virtual-machines.html
 sidebar: sidebar
 keywords:
 summary: 'You should be aware of some of the considerations while migrating exisitng virtual machines in your datacenter.'
