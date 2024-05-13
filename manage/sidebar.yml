@@ -14,7 +14,7 @@ entries:
       - title: Shrink vVols datastores
         url: /manage/remove-storage-from-a-vvols-datastore.html
       - title: Delete datastores
-        url: /configure/delete-vvols.html  
+        url: /manage/delete-vvols.html  
       - title: ONTAP storage views for datastores
         url: /manage/storage-view-datastore.html  
       - title: Virtual machine storage view

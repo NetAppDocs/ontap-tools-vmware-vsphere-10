@@ -9,6 +9,8 @@ entries:
     url: /configure/registration-process.html
   - title: Verify registered VASA provider
     url: /configure/verify-registration.html
+  - title: Install the NFS VAAI plug-in
+    url: /configure/install-nfs-vaai-plug-in.html    
   - title: Update host data
     url: /configure/update-host-data.html
   - title: Configure ESXi settings

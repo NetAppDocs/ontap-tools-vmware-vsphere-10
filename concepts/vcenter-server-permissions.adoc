@@ -29,7 +29,7 @@ As the following diagram illustrates, you should have all three elements in orde
 
 NOTE: In this diagram, the gray boxes indicate components that exist in the vCenter Server, and the white boxes indicate components that exist in the operating system where the vCenter Server is running.
 
-image::../media/permission_updated_graphic.gif["permission components illustration"]
+image::../media/permission-updated_graphic.gif["permission components illustration"]
 
 == Privileges
 

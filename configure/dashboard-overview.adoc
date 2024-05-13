@@ -13,7 +13,7 @@ When you select NetApp ONTAP tools Plug-in icon in the shortcuts section on the 
 
 In the case of Enhanced Linked Mode setup(ELM), the vCenter Server select dropdown appears and you can select a desired vCenter to see the data relevant to it. This dropdown is available for all the other listing views of the plugin. 
 vCenter selection made in one page persists across the tabs of the plug-in. 
-image:../media/rp_dashboard.png[Dashboard overview]
+image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
 The dashboard has several cards showing different elements of the system. The following table shows the different cards and what they represent.
 
