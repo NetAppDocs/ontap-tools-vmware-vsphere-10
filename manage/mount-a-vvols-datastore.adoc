@@ -1,0 +1,21 @@
+---
+permalink: manage/mount-a-vvols-datastore.html
+sidebar: sidebar
+keywords: Mount vVol
+summary: 'You can mount a VMware Virtual Volumes \(vVols\) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only through the APIs.'
+---
+= Mount vVols datastore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only through the APIs.
+
+*Steps*
+
+. From the vSphere Client Home page, click *Hosts and Clusters*.
+. In the navigation pane, select the datacenter that contains the datastore.
+. Right-click the datastore and select *NetApp ONTAP tools* > *Mount datastore*.
+. In the *Mount datastores on Hosts* dialog box, select the hosts on which you want to mount the datastore, and then click *MOUNT*.
+
+You can track the progress in the Recent Task panel.

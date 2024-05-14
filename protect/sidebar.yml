@@ -2,34 +2,34 @@ section: protect
 title: Protect datastores and virtual machines
 entries:
   - title: Enable SRA to protect datastores
-    url: /protect/task_enable_storage_replication_adapter.html
+    url: /protect/enable-storage-replication-adapter.html
   - title: Configure storage system for disaster recovery
     entries:
       - title: Configure SRA for SAN and NAS environments
-        url: /protect/task_configure_storage_replication_adapter_for_san_environment.html
+        url: /protect/configure-storage-replication-adapter-for-san-environment.html
       - title: Configure SRA for highly scaled environments
-        url: /protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html
+        url: /protect/configure-storage-replication-adapter-for-highly-scaled-environment.html
   - title: Configure SRA on the SRM appliance
-    url: /protect/task_configure_sra_on_srm_appliance.html
+    url: /protect/configure-on-srm-appliance.html
   - title: Update SRA credentials
-    url: /protect/task_update_sra_credentials.html
+    url: /protect/update-credentials.html
   - title: Configure protected and recovery sites
     entries:
       - title: Configure protection groups
-        url: /protect/task_configure_protection_groups.html
+        url: /protect/configure-protection-groups.html
       - title: Pair protected and recovery sites
-        url: /protect/task_pair_protected_and_recovery_sites.html
+        url: /protect/pair-protected-and-recovery-sites.html
       - title: Configure protected and recovery site resources
         entries:
           - title: Configure network mappings
-            url: /protect/task_configure_network_mappings.html
+            url: /protect/map-network.html
           - title: Configure folder mappings
-            url: /protect/task_configure_folder_mappings.html
+            url: /protect/map-folder.html
           - title: Configure resource mappings
-            url: /protect/task_configure_resource_mappings.html
+            url: /protect/map-resource.html
           - title: Configure placeholder datastores
-            url: /protect/task_configure_placeholder_datastores.html
+            url: /protect/configure-placeholder-datastores.html
           - title: Configure SRA using array manager
-            url: /protect/task_configure_array_manager.html
+            url: /protect/configure-array-manager.html
       - title: Verify the replicated storage systems
-        url: /protect/task_verify_the_replicated_storage_environment.html
+        url: /protect/verify-the-replicated-storage-environment.html

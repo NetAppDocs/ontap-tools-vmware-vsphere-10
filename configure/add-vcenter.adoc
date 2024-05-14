@@ -1,0 +1,55 @@
+---
+permalink: configure/add-vcenter.html
+sidebar: sidebar
+keywords:
+summary: 'vCenters are the central management platforms that allow you to control hosts, virtual machines (VM), and storage backends.'
+---
+= Add and manage vCenter
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+vCenters are the central management platforms that allow you to control hosts, virtual machines (VM), and storage backends.
+
+== Add vCenter
+
+*About this task*
+
+You can add and manage multiple vCenters with one instance of ONTAP tools for VMware vSphere.
+
+*Steps*
+
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Log in with ONTAP tools administrator credentials provided during deployment. 
+. Select *vCenters* from the sidebar
+. Select *ADD* to onboard vCenters and provide vCenter IP Address/Hostname, username, password, and port details. 
+
+When you add vCenters to ONTAP tools, the following actions are performed automatically:
+
+* vCenter Client Plug-in is registered
+* Custom privileges for the plug-ins and APIs are pushed to the vCenter
+* Custom roles are created to manage the users.
+
+== Register Remote plug-in with vCenter
+
+When you add a vCenter, ONTAP tools for VMware vCenter plug-in gets registered to the vCenter as a remote plug-in automatically. The plug-in is visible on the vSphere user interface shortcuts.
+ 
+The plug-in is registered with a key _com.netapp.otv_ to the vCenter and can be seen in the ExtensionManager of the vCenter.
+
+== Unregister Remote plug-in on vCenter
+
+You can unregister the Remote Plug-in on vCenter using the following steps.
+
+*Steps*
+
+. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Log in with ONTAP tools administrator credentials provided during deployment. 
+. Select vCenters from the sidebar.
+. Click on the vertical ellipses against the vCenter you want to remove and select the *Remove* option. 
+[NOTE]
+You cannot remove the vCenter if there is a storage mapping attached to it. You need to remove the mapping before removing the vCenter.
+
+When you remove vCenters in ONTAP tools, the following actions are performed automatically: 
+
+* Plug-in is unregistered
+* Plug-in privileges and plug-in roles are removed

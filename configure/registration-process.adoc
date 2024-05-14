@@ -1,0 +1,25 @@
+---
+permalink: configure/registration-process.html
+sidebar: sidebar
+keywords:
+summary: 'You can register and unregister the VASA provider with vCenter using ONTAP tools remote plugin interface.'
+---
+= Register the VASA Provider with vCenter
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can register and unregister the VASA provider with vCenter using ONTAP tools remote plugin interface.
+VASA Provider Settings section shows the VASA Provider registration state for the selected vCenter.
+
+*Steps*
+
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. Select *Settings* > *VASA provider settings*.  *VASA provider registration state* shows as not registered.
+. Click on *REGISTER* button to register the VASA Provider.
+. Enter a name for the VASA provider and provide ONTAP tools application user credentials and click *REGISTER*.
+. On successful registration and page refresh, UI shows the state, name, and version of the registered VASA provider. The *UNREGISTER action* ia activated.
+. If you want to unregister the VASA provider, perform the following steps:
+.. To unregister the VASA provider select *UNREGISTER* option at the bottom of the screen.
+.. In the *Unregister VASA provider* page, you can see the name of the VASA provider. In this page provide the application user credentials and click *UNREGISTER*.
