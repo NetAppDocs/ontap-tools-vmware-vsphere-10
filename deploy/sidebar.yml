@@ -7,7 +7,7 @@ entries:
     url: /deploy/download-ontap-tools.html
   - title: Prepare to deploy ONTAP tools
     url: /deploy/prepare-deployment.html
-  - title: Deploy non-HA single node configuration
+  - title: Deploy non-HA single-node configuration
     url: /deploy/nonha-deployment.html
   - title: Deploy HA configuration
     url: /deploy/ha-three-node-deployment.html

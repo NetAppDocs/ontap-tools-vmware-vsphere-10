@@ -2,25 +2,23 @@
 permalink: deploy/nonha-deployment.html
 sidebar: sidebar
 keywords:
-summary: 'You can configure non-HA single node in either small or medium configurations.'
+summary: 'You can configure non-HA single-node in either small or medium configurations.'
 ---
-= Deploy non-HA single node configuration
+= Deploy non-HA single-node configuration
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-You can configure non-HA single node in either small or medium configurations. 
+You can deploy a non-HA single-node configuration in either a small or medium configuration. 
 
 * Small non-HA configuration contains 8 CPUs and 16 GB RAM.
 * Medium non-HA configuration contains 12 CPUs and 24 GB RAM.
 
+*Before you begin*
+
 Make sure the network route is present. Storage data network needs to be accessible from VM management network.
 Example: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>
-
-*About this task*
-
-This task gives you instructions on how to install non-HA single node in small and medium configurations.
 
 *Steps*
 
@@ -34,7 +32,7 @@ This task gives you instructions on how to install non-HA single node in small a
 . Read and accept the license agreement and select *Next*.
 . In the *Configuration* window, select *Easy deployment(S)*, *Easy deployment(M)*, or *Advanced deployment(S)* or *Advanced deployment(M)*  configuration. 
 +
-Advanced deployment option uses ONTAP trident as storage backend and the easy deployment uses local storage.  In advanced deployment, as trident is not the storage backend, ONTAP becomes the storage backend.
+The advanced deployment option uses Trident as storage backend and the easy deployment uses local storage.
 . Select the datastore where you need to deploy the OVA and select *Next*.
 . Select the source and destination network and select *Next*.
 . Select *Customize template* > *system configuration* window. 
@@ -44,22 +42,22 @@ Enter the following details:
 .. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter.
 .. The *Enable ASUP* checkbox is selected by default.
 +
-The ASUP can be enabled or disabled only during deployment. 
-.. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for ASUP data transmission.
-.. Administrator Username and Administrator Password: This is the password used to login to *ONTAP Tools Manager* UI. 
-.. Enter NTP server information in *NTP Servers* field. 
+The AutoSupport can be enabled or disabled only during deployment. 
+.. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission.
+.. Administrator Username and Administrator Password: This is the password used to log in to *ONTAP Tools Manager* UI. 
+.. Enter your NTP server information in the *NTP Servers* field. 
 .. Maintenance user password: This is used to grant access to ‘Maint Console Options’.
 . In *Customize template* > *Deployment Configuration* window, enter the following details:
 +
 image:../media/ha-deploy-config.png[Deployment Configuration]
 
-.. Enter a free IP Address in Virtual IP for K8s Control Plane. You need this for K8s API Server.
+.. Enter a free IP Address in the Virtual IP address for Kubernetes Control Plane. You need this for Kubernetes API Server.
 .. Select the checkbox against *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
 +
 [NOTE]
-When SVM scope is enabled, you should have already enabled SVM support with management IP.
+When SVM scope is enabled, you should have already enabled SVM support with management IP address.
 .. Select either NFS or iSCSI in the *Protocol* field. 
-.. Enter the ONTAP Cluster or the SVM Management IP in *ONTAP/SVM Management LIF*.
+.. Enter the ONTAP Cluster or the SVM Management IP address in *ONTAP/SVM Management LIF*.
 .. Enter the ONTAP Cluster or the SVM *ONTAP/SVM Data LIF*.
 .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or you can create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
 .. Enter the ONTAP/SVM Username. ONTAP/SVM username and Password is required for Trident to create volumes for storing the data of services in case of advanced or HA deployment and also to recover the data from volumes during node failure.

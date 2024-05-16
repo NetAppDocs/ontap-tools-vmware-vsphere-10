@@ -11,39 +11,50 @@ summary: 'The following section describes the key concepts and terms used in the
 [.lead]
 The following section describes the key concepts and terms used in the document. 
 
-|===
+=== VMware vSphere APIs for Storage Awareness (VASA)
+VASA is a set of APIs that integrate storage arrays with vCenter for management and administration. The architecture is based on several components including the VASA Provider which handles communication between VMware vSphere and the storage systems.
 
-|*Terms* |*Description*
+=== Virtual volume (vVol)
+vVol provides a volume-level abstraction for storage used by a virtual machine. It includes several benefits and provides an alternative to using a traditional LUN. A vVol datastore is typically associated with a single LUN which acts as a container for the vVols.
 
-|VASA |VMware vSphere APIs for Storage Awareness (VASA) is a set of APIs providing integration of the storage arrays with vCenter for management and administration. The architecture is based on several components including the VASA Provider which handles communication between VMware vSphere and the storage systems.
+=== vVols datastore
+The vVols datastore is a logical datastore representation of a vVols container which is created and maintained by a VASA Provider.
 
-|OVA |Open Virtual Appliance
+=== Storage Replication Adapter (SRA)
+SRA is the storage vendor specific software that is installed inside the SRM appliance. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level and the cluster level configuration.
 
-|vVols |A virtual volume (vVol) provides a volume-level abstraction for storage used by a virtual machine. It includes several benefits and provides an alternative to using a traditional LUN. A vVol datastore is typically associated with a single LUN which acts as a container for the vVols.
+=== VMware Site Recovery Manager (SRM)
+SRM provides business continuity, disaster recovery, site migration, and non-disruptive testing capabilities for VMware virtual environments.
 
-|vVols datastore | The Virtual Volume datastore is a logical datastore representation of a vVols container which is created and maintained by a VASA Provider.  
+=== High Availability (HA)
+Cluster nodes are configured in HA pairs for non-disruptive operations.
 
-|SRA |Storage Replication Adapter (SRA) is an implementation of SRA specifications provided by the storage vendors and implements an interface called the SRA interface. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level as well as at the cluster level configuration.
+=== Certificate authority (CA)
+CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 
-|SRM |VMware Site Recovery Manager (SRM) provides business continuity, disaster recovery, site migration, and nondisruptive testing capabilities for VMware virtual environments.
+=== VMware vSphere Storage APIs - Array Integration (VAAI)
+VAAI is a set of APIs that enable communication between VMware vSphere ESXi hosts and the storage devices. The API includes a set of primitive operations used by the hosts to offload storage operations to the array. VAAI can provide significant performance improvements for storage-intensive tasks.
 
-|HA |Cluster nodes are configured in High Availability (HA) pairs for nondisruptive operations.
+=== iSCSI 
+iSCSI is a block protocol that can run on standard Ethernet networks. 
 
-|CA |Certificate authority (CA) is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
+=== VM Storage Policy
+VM Storage Policies are created in vCenter under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.
 
-|VAAI |VMware vSphere Storage APIs - Array Integration (VAAI) is a set of APIs that enable communication between VMware vSphere ESXi hosts and the storage devices. The API includes a set of primitive operations used by the hosts to offload storage operations to the array. VAAI can provide significant performance improvements for storage-intensive tasks. 
+=== Network File System (NFS) 
+NFS is an open IETF standard defined in Request for Comments (RFC) that allows anyone to implement the protocol.
 
-|iSCSI |iSCSI is a block protocol that can run on standard Ethernet networks. 
+=== Storage virtual machine (SVM)
+Like a virtual machine running on a hypervisor, SVM is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
 
-|VM Storage Policy | VM Storage Policies are created in vCenter under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.
+=== Virtual Machine File System (VMFS)
+VMFS is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments.
 
-|NFS |Network File System (NFS) is an open IETF standard defined in Request for Comments (RFC) that allows anyone to implement the protocol.
+=== Logical unit number (LUN)
+A LUN is a number used to identify a logical unit within a Storage Area Network (SAN). These addressable devices are typically logical disks accessed through the Small Computer System Interface (SCSI) protocol or one of its encapsulated derivatives.
 
-|SVM |Like a virtual machine running on a hypervisor, storage virtual machine (SVM) is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
+=== Open Virtual Appliance (OVA)
+OVA is an open standard for packaging and distributing virtual appliances or software that must be run in virtual machines. 
 
-|VMFS |Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments.
-
-|LUN
-|A Logical unit number (LUN) is a number used to identify a logical unit within a Storage Area Network (SAN). These addressable devices are typically logical disks accessed through the Small Computer System Interface (SCSI) protocol or one of its encapsulated derivatives.
-
-|===
+=== Zero RPO
+RPO stands for recovery point objective, which is the amount of data loss deemed acceptable during a given time period. Zero RPO signifies that no data loss is acceptable.

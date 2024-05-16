@@ -23,13 +23,13 @@ Following are ONTAP tools requirements before proceeding with the deployment:
 . Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the *Requirements to deploy ONTAP tools* section.  
 . The login credentials for your vCenter Server instance to which the ONTAP tools will connect to post deployment for registration. 
 . Delete the browser cache.
-. For non-HA deployment, you need three free IPs - one free IP for load balancer and one free IP for K8s control plane and one IP for node. For HA deployment, along with these three IPs you'll need two more IPs for second and third nodes.
-Host names should be mapped to the free IP addresses on the DNS before assigning. All the five IPs should be on the same VLAN that is selected for deployment. 
+. For non-HA deployment, you need three free IP addresses - one free IP address for load balancer and one free IP address for the Kubernetes control plane and one IP address for node. For HA deployment, along with these three IP addresses you'll need two more IP addresses for second and third nodes.
+Host names should be mapped to the free IP addresses on the DNS before assigning. All the five IP addresses should be on the same VLAN that is selected for deployment. 
 . Content library template once uploaded should not be deleted post deployment as it will be used during reboots.
-. In the case of multi-vCenter deployment where Custom CA certificates are mandatory, map the *Domain Name* on which the certificate is issued to the *Virtual IP*. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP. The certificates should be created with domain name and IPAddress of the LoadBalancer IP.
+. In a multi-vCenter deployment where Custom CA certificates are mandatory, map the Domain Name on which the certificate is issued to the Virtual IP address. Perform a ping check on the domain name to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the LoadBalancer IP address.
 . IPv4/IPv6 supported VLAN - Pure IPV6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.
 . NTP Server which is provided to the vCenter for time Sync.
-. Static IP Configuration details for the Node or VM where the OVA is being deployed (Mandatory) and other details. 
+. Static IP address Configuration details for the Node or VM where the OVA is being deployed (Mandatory) and other details. 
 .. vCenter hostname (vCenter where the OVA is deployed)
 .. vCenter username (vCenter where the OVA is deployed)
 .. vCenter password (vCenter where the OVA is deployed)
@@ -40,10 +40,10 @@ Host names should be mapped to the free IP addresses on the DNS before assigning
 .. ONTAP password
 .. SVM name
 .. Protocol
-.. virtual IPs for K8s control plane. 
+.. Virtual IP addresses for Kubernetes control plane. 
 .. HA / NON-HA drop down
-.. Hostnames(list of hostnames)
-.. IPAddresses (string)
+.. List of hostnames)
+.. IP addresses (string)
 .. Content library name
 .. OVF template name
 .. IPv6 gateway (optional)

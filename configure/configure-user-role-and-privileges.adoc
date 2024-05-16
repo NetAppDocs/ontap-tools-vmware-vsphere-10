@@ -23,8 +23,8 @@ You can create users at cluster or direct storage virtual machines (SVMs) level.
 *Steps*
 
 . Extract the downloaded _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_ file.
-. Access ONTAP System Manager using the cluster management IP of the cluster.
-. Login as the cluster or SVM user.
+. Access ONTAP System Manager using the cluster management IP address of the cluster.
+. Log in as the cluster or SVM user.
 . Select *CLUSTER* > *Settings* > *Users and Roles* pane.
 . Select *Add* under Users.
 . In the *Add User* dialog box, select *Virtualization products*.
@@ -64,8 +64,8 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 Follow the instructions in this section to create the user and roles manually without using the JSON file.
 
-. Access ONTAP System Manager. To access ONTAP system manager use the cluster management IP of the cluster.
-. Login as the cluster or SVM user.
+. Access ONTAP System Manager. To access ONTAP system manager use the cluster management IP address of the cluster.
+. Log in as the cluster or SVM user.
 . Select *CLUSTER* > *Settings* > *Users and Roles* pane.
 . Create Roles:
 .. Select *Add* under *Roles* table.

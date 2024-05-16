@@ -19,20 +19,12 @@ As a security measure, ONTAP tools specific ONTAP roles are ordered hierarchical
 
 The following are some of the recommended ONTAP RBAC roles when using ONTAP tools. After you create these roles, you can assign them to users who must perform tasks related to storage, such as provisioning virtual machines.
 
-. Discovery
-+
-This role enables you to add storage systems.
-
-. Create Storage
-+
-This role enables you to create storage. This role also includes all the privileges that are associated with the Discovery role.
-
-. Modify Storage
-+
-This role enables you to modify storage. This role also includes all the privileges that are associated with the Discovery role and the Create Storage role.
-
-. Destroy Storage
-+
-This role enables you to destroy storage. This role also includes all the privileges that are associated with the Discovery role, the Create Storage role, and the Modify Storage role.
+|===
+|*Role* | *privileges*
+|Discovery |This role enables you to add storage systems.
+|Create Storage |This role enables you to create storage. This role also includes all the privileges that are associated with the Discovery role.
+|Modify Storage |This role enables you to modify storage. This role also includes all the privileges that are associated with the Discovery role and the Create Storage role.
+|Destroy Storage | This role enables you to destroy storage. This role also includes all the privileges that are associated with the Discovery role, the Create Storage role, and the Modify Storage role.
+|===
 
 If you are using ONTAP tools for VMware vSphere, you should also set up a policy-based management (PBM) role. This role enables you to manage storage by using storage policies. This role requires that you also set up the "`Discovery`" role.
