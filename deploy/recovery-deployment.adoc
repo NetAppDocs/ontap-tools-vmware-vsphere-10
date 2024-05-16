@@ -4,44 +4,44 @@ sidebar: sidebar
 keywords:
 summary: 'If you lose your ONTAP tools setup, but have your ONTAP working, you can recover ONTAP tools setup using the ONTAP. When you lose the setup, bring down the setup gracefully.'
 ---
-= Recover ONTAP tools setup
+= Recover your ONTAP tools setup
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you lose your ONTAP tools setup, but have your ONTAP working, you can recover ONTAP tools setup using the ONTAP.
+If you lose your ONTAP tools for VMware vSphere setup, you can recover your ONTAP tools setup using the ONTAP.
 When you lose the setup, bring down the setup gracefully.
 You can recover both the single-node deployment and the HA three nodes deployment. 
 [NOTE]
-You cannot recover ONTAP tools setup if there are issues with vCenter or ONTAP. 
+You cannot recover your ONTAP tools setup if there are issues with vCenter Server or ONTAP. 
 
 *Steps*
 
 . Log in to the vSphere server.
-. Navigate to the resource pool or the cluster or the host where you want to deploy the OVA.
-. Right-click the required location, and select *Deploy OVF template...*.
+. Navigate to the resource pool or the node cluster or the host where you want to deploy the OVA.
+. Right-click the required location and select *Deploy OVF template*.
 . You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*.
 +
 [NOTE]
-You should use the same OVA build that you used for installing the recovering setup.
+You should use the same OVA build that you used for installing the recovery setup.
 . Select a name and folder for the virtual machine and select *Next*.
-. Select the host and select *Next*
+. Select the host and select *Next*.
 . Review the summary of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
 . In the *Configuration* window, select *Recovery*  option.
 . In the *Select storage* window, select the storage for the configurations and disk files.
 . In the *Select networks* window, select a destination network for each source network.
 [NOTE]
-You need to retain the load balancer IP address and Kubernetes API Server IP address. You can change the node IP address or you can retain the same IP address.
+You need to retain the load balancer IP address and the Kubernetes API Server IP address. You can change the node IP address or you can retain the same IP address.
 . Select *Customize template* > *system configuration* window. Enter the following details:
-.. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter. This can be different from the username and password provided during initial deployment. 
+.. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter Server. This can be different from the username and password provided during initial deployment. 
 .. The *Enable ASUP* checkbox is selected by default.
 +
 The AutoSupport can be enabled or disabled only during deployment. 
 .. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission.
 .. Administrator Username and Administrator Password: This is the password used to log in to *ONTAP Tools Manager* UI. This can be different from the username and password provided during initial deployment.
 .. Enter your NTP server information in the *NTP Servers* field. 
-.. Maintenance user password: This is used to grant access to ‘Maint Console Options’.
+.. Maintenance user password: This is used to grant access to maintenance console options.
 . In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be same as the ones provided during initial deployment with the exception of data LIF value.
 [NOTE]
 The storage SVM name should not be changed as that is where the recovery data is stored. This applies for direct SVM as well.
@@ -49,18 +49,13 @@ The storage SVM name should not be changed as that is where the recovery data is
 .. Content library details.
 .. vCenter configuration details
 . In *Customize template* > *Node Configuration* window enter the details as per the set up you're trying to recover, non-HA or HA setup.
-. Review the details in the *Ready to complete* window, select *FINISH*.
+. Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the task gets created, the progress is shown in the vSphere task bar.
 . Power on the VM after the completion of the task.
 +
 The installation begins. You can track the installation progress in VM’s web console.
 As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
-. To make necessary changes in the dialog prompt, follow the below steps:
-.. Double click on the web console to start interacting with the console.
-.. Use UP and DOWN arrow keys on your keyboard to navigate across the fields shown.
-.. Use the RIGHT and LEFT arrow keys on your keyboard to navigate to the right or left end of the value provided to the field.
-.. Use TAB to navigate across the panel to enter your values, *OK* or *CANCEL*.
-.. Use ENTER to select either *OK* or *CANCEL*.
-. On selecting *OK* or *CANCEL*, the values provided would again be validated. You have the provision to correct any values for 3 times. If you fail to correct within the 3 attempts, the product installation stops and you are advised to try the installation on a fresh VM.
-. After successful installation, web console shows the state of ONTAP tools for VMware vSphere. After successful installation, you should manually edit the 'Hardware requirements' as per the guidelines. 
+. Make necessary changes in the dialog prompt. Use tab button to navigate across the panel to enter your values, *OK* or *Cancel*.
+. On selecting *OK* or *Cancel*, the values provided would again be validated. You have the provision to correct any values for 3 times. If you fail to correct within the 3 attempts, the product installation stops and you are advised to try the installation on a fresh VM.
+. After successful installation, the web console shows the state of ONTAP tools for VMware vSphere. After successful installation, you should manually edit the hardware requirements as per the guidelines in the link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere] page. 

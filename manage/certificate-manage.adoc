@@ -2,19 +2,19 @@
 permalink: manage/certificate-manage.html
 sidebar: sidebar
 keywords:
-summary: 'Single instance of ONTAP tools can manage multiple vCenters. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenters by default.'
+summary: 'Single instance of ONTAP tools can manage multiple vCenter Server instances. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenter Server instances by default.'
 ---
 = Manage certificates
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Single instance of ONTAP tools can manage multiple vCenters. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenters by default.
-When you're managing multiple vCenters and you want to enable vVols capability on multiple vCenters then you need to change the self-signed certificate to custom CA certificate using ONTAP tools Manager interface. You can use the same interface to renew or refresh all certificates.
+Single instance of ONTAP tools can manage multiple vCenter Server instances. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenter Server instances by default.
+When you're managing multiple vCenter Server instances and you want to enable vVols capability on multiple vCenter Server instances then you need to change the self-signed certificate to custom CA certificate using ONTAP tools Manager interface. You can use the same interface to renew or refresh all certificates.
 
 *Steps*
 
-. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *Certificates* > *VASA provider* > *Renew* option to renew the certificates.
 [NOTE]

@@ -3,9 +3,9 @@ title: Configure ONTAP tools
 entries:
   - title: ONTAP tools Manager user interface
     url: /configure/manager-user-interface.html
-  - title: Add and manage vCenter
+  - title: Add and manage vCenter Server
     url: /configure/add-vcenter.html
-  - title: Register VASA provider to vCenter
+  - title: Register VASA provider to vCenter Server
     url: /configure/registration-process.html
   - title: Verify registered VASA provider
     url: /configure/verify-registration.html
@@ -23,7 +23,7 @@ entries:
     url: /configure/discover-storage-systems-and-hosts.html
   - title: Add storage backend
     url: /configure/add-storage-backend.html
-  - title: Associate storage backend with vCenter
+  - title: Associate storage backend with vCenter Server
     url: /configure/associate-storage-backend.html
   - title: Configure network access
     url: /configure/configure-network-access.html

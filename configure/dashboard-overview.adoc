@@ -11,8 +11,8 @@ summary: 'When you select NetApp ONTAP tools Plug-in icon in the shortcuts secti
 [.lead]
 When you select NetApp ONTAP tools Plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to *Overview* page. This page acts like the dashboard providing you the summary of the ONTAP tools plug-in.
 
-In the case of Enhanced Linked Mode setup(ELM), the vCenter Server select dropdown appears and you can select a desired vCenter to see the data relevant to it. This dropdown is available for all the other listing views of the plugin. 
-vCenter selection made in one page persists across the tabs of the plug-in. 
+In the case of Enhanced Linked Mode setup(ELM), the vCenter Server select dropdown appears and you can select a desired vCenter Server to see the data relevant to it. This dropdown is available for all the other listing views of the plugin. 
+vCenter Server selection made in one page persists across the tabs of the plug-in. 
 image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
 The dashboard has several cards showing different elements of the system. The following table shows the different cards and what they represent.
@@ -27,10 +27,10 @@ Storage backends status shows as "Unhealthy" if any one of the storage backends 
 
 When you click on the "Unhealthy" status, a tool tip opens with the status of the storage backends. The cluster names are hyperlinked, you can click on the link to open the storage backend summary page for more details.
 
-Other VASA Provider (VP) states link shows the current state of the VP that is registered in the vCenter.
+Other VASA Provider (VP) states link shows the current state of the VP that is registered in the vCenter Server.
 
 |Storage Backends - Capacity
-|This card shows the aggregated used and available capacity of all storage backends for the selected vCenter.
+|This card shows the aggregated used and available capacity of all storage backends for the selected vCenter Server instance.
 
 |Virtual machines
 |This card shows the top 10 VMs sorted by a performance metric. You can click on the header to get the top 10 VMs for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache.

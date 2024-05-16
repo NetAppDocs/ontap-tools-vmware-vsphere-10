@@ -23,7 +23,7 @@ entries:
     url: /manage/manage-storage-threshold.html
   - title: Manage storage backend
     url: /manage/storage-backend.html
-  - title: Manage vCenter
+  - title: Manage vCenter Server instance
     url: /manage/manage-vcenter.html
   - title: Manage certificates
     url: /manage/certificate-manage.html

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger
 summary: 'A workflow is a sequence of one or more steps needed to accomplish a specific administrative task or goal.'
 ---
-= Onboard storage backend (SVM or Cluster) with vCenter
+= Onboard storage backend (SVM or Cluster) with a vCenter Server instance
 :icons: font
 :imagesdir: ../media/
 

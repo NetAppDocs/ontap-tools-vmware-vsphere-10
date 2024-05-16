@@ -29,7 +29,7 @@ These values are set automatically on the ESXi host when the Recommended Setting
 
 . Click *Settings* in ONTAP tools home page.
 . Click *NFS VAAI Tools* tab.
-. When the VAAI plug-in in uploaded to vCenter, select *Change* in the *Existing version* section. If a VAAI plug-in is not  uploaded to the vCenter, select *Upload* button.
+. When the VAAI plug-in in uploaded to vCenter Server, select *Change* in the *Existing version* section. If a VAAI plug-in is not  uploaded to the vCenter Server, select *Upload* button.
 . Browse and select `.vib` file, and then click *Upload* to upload the file to ONTAP tools.
 . Click on the *INSTALL ON EXSI HOST*, select the ESXi host on which you want to install the NFS VAAI plug-in, and then click *Install*.
 +

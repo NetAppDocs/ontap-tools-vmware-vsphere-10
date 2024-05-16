@@ -11,7 +11,7 @@ summary: 'In ONTAP, export polices are used to provide volume data path access t
 [.lead]
 In ONTAP, export polices are used to provide volume data path access to hosts and initiator groups (igroups) are used to provide logical unit number (LUN) data path access to ESXi hosts.
 
-When virtual volume datastores are created or mounted to hosts in vCenter, the hosts need to be given access to volumes (NFS) or LUNs (iSCSI) depending on the protocol type of the datastore.
+When virtual volume datastores are created or mounted to hosts in vCenter Server, the hosts need to be given access to volumes (NFS) or LUNs (iSCSI) depending on the protocol type of the datastore.
 
 The export policy is dynamic and the new export policy is created in format of trident-uuid. On your ONTAP System Manager, go to *Storage* > *Storage VMs* > *[storage VM name]* > *Settings* > *Export Policies* to see the export policy.
 

@@ -17,7 +17,7 @@ entries:
         url: /automation/storage-workflow.html
       - title: SVM aggregate mapping requirements
         url: /automation/svm-workflow.html
-      - title: Onboard storage backend (SVM or Cluster) with vCenter
+      - title: Onboard storage backend (SVM or Cluster) with a vCenter Server instance
         url: /automation/onboard-svm-workflow.html
       - title: Create vVols datastore
         url: /automation/create-vvol-workflow.html

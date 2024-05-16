@@ -2,7 +2,7 @@
 permalink: manage/manage-storage-threshold.html
 sidebar: sidebar
 keywords:
-summary: 'You can set the threshold to receive notifications in vCenter when the volume and the aggregate capacity reaches certain levels.
+summary: 'You can set the threshold to receive notifications in vCenter Server when the volume and the aggregate capacity reaches certain levels.
 '
 ---
 = Manage Storage threshold
@@ -10,7 +10,7 @@ summary: 'You can set the threshold to receive notifications in vCenter when the
 :imagesdir: ../media/
 
 [.lead]
-You can set the threshold to receive notifications in vCenter when the volume and the aggregate capacity reaches certain levels.
+You can set the threshold to receive notifications in vCenter Server when the volume and the aggregate capacity reaches certain levels.
 
 .Steps:
 . Log in to the vSphere client using `\https://vcenterip/ui`

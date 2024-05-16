@@ -4,42 +4,42 @@ sidebar: sidebar
 keywords:
 summary: 'vCenters are central management platforms that allow you to control hosts, virtual machines, and storage backends.'
 ---
-= Manage vCenter
+= Manage vCenter Server instance
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-vCenters are central management platforms that allow you to control hosts, virtual machines, and storage backends.
+vCenter Servers are central management platforms that allow you to control hosts, virtual machines, and storage backends.
 
-== Associate or Dissociate storage backend with vCenter
+== Associate or Dissociate storage backend with vCenter Server instance
 
-vCenter listing page shows the associated number of storage backends. Each vCenter has the option to Associate or Disassociate a storage backend 
-This task helps you to create mapping between storage backend and onboarded vCenter globally.
+vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to Associate or Disassociate a storage backend 
+This task helps you to create mapping between storage backend and onboarded vCenter Server instance globally.
 
 *Steps*
 
-. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
-. Select vCenters from the sidebar.
-. Click on the vertical ellipses against the vCenter that you want to associate or dissociate with storage backends.
+. Select vCenter Server instances from the sidebar.
+. Click on the vertical ellipses against the vCenter Server that you want to associate or dissociate with storage backends.
 . Select *Associate or Dissociate storage backend* depending on what action you want to perform.
 
-== Modify vCenter
-Follow the steps below to modify the vCenters.
+== Modify vCenter Server instance
+Follow the steps below to modify the vCenter Server instances.
 
-. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
-. Select vCenters from the sidebar
-. Click on the vertical ellipses against the vCenter that you want to modify and select *Modify*.
-. Modify the vCenter details and select *Modify*.
+. Select vCenter Server instances from the sidebar
+. Click on the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
+. Modify the vCenter Server instance details and select *Modify*.
 
-== Remove vCenter
-You need to remove all the storage backends attached to the vCenter before removing it. 
+== Remove vCenter Server instance
+You need to remove all the storage backends attached to the vCenter Server before removing it. 
 
-. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
-. Select vCenters from the sidebar
-. Click on the vertical ellipses against the vCenter that you want remove and select *Remove*.
+. Select vCenter Server instances from the sidebar
+. Click on the vertical ellipses against the vCenter Server that you want remove and select *Remove*.
 +
 [NOTE]
-Once you remove the vCenter, it will no longer be maintained by the application.
+Once you remove the vCenter Server instances, it will no longer be maintained by the application.

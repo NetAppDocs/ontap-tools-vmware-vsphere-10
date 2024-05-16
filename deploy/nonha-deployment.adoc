@@ -39,7 +39,7 @@ The advanced deployment option uses Trident as storage backend and the easy depl
 +
 image:../media/ha-deployment-sys-config.png[system configuration]
 Enter the following details:
-.. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter.
+.. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter Server.
 .. The *Enable ASUP* checkbox is selected by default.
 +
 The AutoSupport can be enabled or disabled only during deployment. 
@@ -51,16 +51,16 @@ The AutoSupport can be enabled or disabled only during deployment.
 +
 image:../media/ha-deploy-config.png[Deployment Configuration]
 
-.. Enter a free IP Address in the Virtual IP address for Kubernetes Control Plane. You need this for Kubernetes API Server.
-.. Select the checkbox against *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
+.. Enter an available IP Address in the Virtual IP address for the Kubernetes Control Plane. You need this for the Kubernetes API Server.
+.. Select the *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
 +
 [NOTE]
 When SVM scope is enabled, you should have already enabled SVM support with management IP address.
 .. Select either NFS or iSCSI in the *Protocol* field. 
 .. Enter the ONTAP Cluster or the SVM Management IP address in *ONTAP/SVM Management LIF*.
 .. Enter the ONTAP Cluster or the SVM *ONTAP/SVM Data LIF*.
-.. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or you can create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
-.. Enter the ONTAP/SVM Username. ONTAP/SVM username and Password is required for Trident to create volumes for storing the data of services in case of advanced or HA deployment and also to recover the data from volumes during node failure.
+.. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
+.. Enter the ONTAP/SVM Username. ONTAP/SVM username and Password is required for Trident to create volumes for storing the data of services in case of advanced or HA deployment and to recover the data from volumes during node failure.
 .. Enter the ONTAP/SVM Password. 
 .. Primary VM is enabled by default. Do not alter this choice.
 . In *Customize template* > *Node Configuration* window enter the network properties of the OVA. 
@@ -70,7 +70,7 @@ The information provided here will be validated for proper patterns during insta
 +
 .. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported.
 .. Enter IP Address (IPV4) mapped to the host name. 
-.. Enter IPV6 Address on the deployed network only when you need dual stalk.
+.. Enter the IPV6 Address on the deployed network only when you need dual stalk.
 .. Specify the prefix length only for IPV6. 
 .. Specify the subnet to use on the deployed network in Netmask (only for IPV4) field. 
 .. Specify the Gateway on the deployed network.
@@ -78,18 +78,13 @@ The information provided here will be validated for proper patterns during insta
 .. Specify the Secondary DNS server IP address.
 .. Specify the Search Domain name to use when resolving the hostname.
 .. Specify the IPV6 gateway on the deployed network only when you need dual stack.
-. Review the details in the *Ready to complete* window, select *FINISH*.
+. Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the task gets created, the progress is shown in the vSphere task bar.
 . Power on the VM after the completion of the task.
 +
 The installation begins. You can track the installation progress in VM’s web console.
 As part of the installation, Node configurations are validated. The inputs provided under different sections under the *Customize template* in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
-. To make necessary changes in the dialog prompt, follow the below steps:
-.. Double click on the web console to start interacting with the console.
-.. Use UP and DOWN arrow keys on your keyboard to navigate across the fields shown.
-.. Use the RIGHT and LEFT arrow keys on your keyboard to navigate to the right or left end of the value provided to the field.
-.. Use TAB to navigate across the panel to enter your values, *OK* or *CANCEL*.
-.. Use ENTER to select either *OK* or *CANCEL*.
-. On selecting *OK* or *CANCEL*, the values provided would again be validated. You have the provision to correct any values for up to three times. If you fail to correct within the 3 attempts, the product installation stops, and you are advised to try the installation on a fresh VM.
-. After successful installation, web console shows the state of ONTAP tools for VMware vSphere.
+. Make necessary changes in the dialog prompt. Use tab button to navigate across the panel to enter your values, *OK* or *Cancel*.
+. On selecting *OK*, the values provided would again be validated. You have the provision to correct any values up to three times. If you fail to correct within the 3 attempts, the product installation stops, and you are advised to try the installation on a fresh VM.
+. After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.

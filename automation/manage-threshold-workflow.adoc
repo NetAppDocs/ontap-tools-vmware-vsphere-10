@@ -16,7 +16,7 @@ GET​/virtualization​/api​/v1​/vcenters​/{vcguid}​/storage-thresholds
 ----
 
 Examples:
-Get the Storage thresholds per vCenter by vCenter guid
+Get the Storage thresholds per vCenter Server instance by vCenter guid
 ----
 GET "/api/v1/vcenters/beded9ad-6bbb-4c9e-b4c6-691250bfe2da/storage-thresholds"
 ----

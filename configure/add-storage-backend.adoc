@@ -14,20 +14,20 @@ Storage backends are systems that the ESXi hosts use for data storage.
 
 *About this task*
 
-This task helps you to onboard the ONTAP cluster. When you add storage backend using ONTAP tools Manager UI, the storage backend is added to the global cluster. Associate the global cluster with vCenter to enable direct SVM for vVols datastore provisioning.
+This task helps you to onboard the ONTAP cluster. When you add storage backend using ONTAP tools Manager, the storage backend is added to the global cluster. Associate the global cluster with a vCenter Server instance to enable direct SVM for vVols datastore provisioning.
 
 [NOTE]
 When you add storage backend using the vSphere client  UI, vVols datastore does not support direct SVM.
 
-== Add storage backend using ONTAP tools Manager UI
+== Add storage backend using ONTAP tools Manager
 
 [NOTE]
-Storage backend is global when added from ONTAP tools Manager or commons APIs and they are local when added from the vCenter APIs.
+Storage backend is global when added from ONTAP tools Manager or commons APIs and they are local when added from the vCenter Server APIs.
 Example: For multi-tenant setup, you can add storage backend (cluster) globally and SVM locally to use direct SVM credentials.
 
 *Steps*
 
-. Launch ONTAP tools Manager UI using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
+. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with ONTAP tools administrator credentials provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select *Add*. 
