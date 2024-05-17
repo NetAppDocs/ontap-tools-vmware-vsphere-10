@@ -12,6 +12,11 @@ summary: 'When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10.1, a r
 When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10.1, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.1, the same recovery volume is used and the details are refreshed. 
 Upgrade is supported for both HA and non-HA deployments.
 
+*Before you begin*
+
+From the log bundle, delete the completed pods with prefix “generate-support-bundle-job” before performing the upgrade.
+If support bundle generation is in progress, wait for it to complete and then delete the pod.
+
 *Steps*
 
 . From the vCenter Server, open a console to ONTAP tools.

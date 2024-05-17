@@ -32,7 +32,7 @@ Example: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM>
 . Read and accept the license agreement and select *Next*.
 . In the *Configuration* window, select *Easy deployment(S)*, *Easy deployment(M)*, or *Advanced deployment(S)* or *Advanced deployment(M)*  configuration. 
 +
-The advanced deployment option uses Trident as storage backend and the easy deployment uses local storage.
+The advanced deployment option uses Trident as a dynamic storage provisioner for ONTAP to create volumes and the easy deployment uses local storage to create volumes.
 . Select the datastore where you need to deploy the OVA and select *Next*.
 . Select the source and destination network and select *Next*.
 . Select *Customize template* > *system configuration* window. 
@@ -58,7 +58,7 @@ image:../media/ha-deploy-config.png[Deployment Configuration]
 When SVM scope is enabled, you should have already enabled SVM support with management IP address.
 .. Select either NFS or iSCSI in the *Protocol* field. 
 .. Enter the ONTAP Cluster or the SVM Management IP address in *ONTAP/SVM Management LIF*.
-.. Enter the ONTAP Cluster or the SVM *ONTAP/SVM Data LIF*.
+.. Enter the ONTAP Cluster or the SVM *ONTAP/SVM Data LIF*. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then iSCSI data LIF should be provided.
 .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
 .. Enter the ONTAP/SVM Username. ONTAP/SVM username and Password is required for Trident to create volumes for storing the data of services in case of advanced or HA deployment and to recover the data from volumes during node failure.
 .. Enter the ONTAP/SVM Password. 
@@ -68,8 +68,8 @@ When SVM scope is enabled, you should have already enabled SVM support with mana
 [NOTE]
 The information provided here will be validated for proper patterns during installation process. In case of discrepancy, an error message will be displayed on the web console, and you will be prompted to correct any incorrect information provided.
 +
-.. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported.
-.. Enter IP Address (IPV4) mapped to the host name. 
+.. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
+.. Enter IP Address (IPV4) mapped to the host name. In case of dual stack, provide any available IPv4 IP address that is in the same VLAN as the IPv6 address.
 .. Enter the IPV6 Address on the deployed network only when you need dual stalk.
 .. Specify the prefix length only for IPV6. 
 .. Specify the subnet to use on the deployed network in Netmask (only for IPV4) field. 
