@@ -13,6 +13,8 @@ This page outlines the error codes for ONTAP tools for VMware vSphere deployment
 The error codes are five digits long, where the first two digits represent the script that encountered the issue, and the last three digits represent the specific workflow within that script.
 
 All error logs are recorded in the ansible-perl-errors.log file to facilitate easy tracking and resolution of issues. This log file contains the error code and the failed Ansible task. 
+[NOTE]
+The error codes provided on this page is for reference only. Contact the support team if error persists or if there's no resolution mentioned.
 
 The following table lists the error codes and the corresponding file names.
 
@@ -34,40 +36,42 @@ The following table lists the error codes and the corresponding file names.
 The last three digits of the error code indicate the specific workflow error within the script:
 
 |===
-|*Deployment error code*|*Workflow*
-|050 |Ssh Key generation failed
-|051
-|Failed deploying secondary VMs
-|052
-|Copy SSH Keys failed
-|053
-|Failed installing RKE2
-|054
-|Failed setting kubeconfig
-|055
-|Failed deploying registry
-|056
-|Login ISCSI has failed
-|057
-|Trident deployment has failed
-|058
-|Trident import has failed
-|059
-|KubeVip deployment has failed
-|060
-|Operator deployment has failed
-|061
-|Services deployment has failed
-|062
-|VASA Provider and SRA deployment has failed
-|063
-|Copying contents to recovery volume has failed
-|064
-|version.xml verification failed
-|065
-|Swagger page URL is not reachable
-|066
-|Post deployment steps failed
+|*Deployment error code*|*Workflow* |*Resolution*
+|050 |Ssh Key generation failed |Restart the primary virtual machine (VM).
+|051 |Failed deploying secondary VMs |
+* If the second and third VMs are created, then ensure that enough CPU/memory resources are available before you power on the secondary VMs and restart the primary VM.
+
+* If the second and third VMs are in deploy ONTAP tools template task, wait for the task to be completed, power on the VMs and reboot the primary VM.
+
+* Redeploy.
+|052 |Copy SSH Keys failed |Restart the primary VM.
+
+|053 |Failed installing RKE2 |Either run the following and restart the primary VM or redeploy:
+sudo rke2-killall.sh (all VMs)
+sudo rke2-uninstall.sh (all VMs).
+|054 |Failed setting kubeconfig |Redeploy
+|055 |Failed deploying registry |If the registry pod is present, wait for the pod to be ready then restart the primary VM or else Redeploy.
+|056 |Login ISCSI has failed |Make sure that iSCSI protocol is enabled and configured properly on ONTAP. Ensure that the iSCSI Data LIF IP provided is correct and online. Restart the VM if previous points are correct. Else, Redeploy.
+|057 |Trident deployment has failed |*Ensure Management LIF and Data LIF IPs are reachable from VM. 
+
+*Ensure NFS or iSCSI protocol is enabled and configured properly on ONTAP.
+
+*Ensure that the NFS/iSCSI DataLif IP provided is correct and online.
+
+*Ensure that the username, password provided are correct and the user has sufficient privileges to create volume.
+
+* Restart if all the above points are correct. Else, Redeploy.
+|058 |Trident import has failed |*Ensure that the username, password provided are correct and the user has sufficient privileges to create, mount, clone, delete volumes.
+
+*Ensure same ONTAP setup is used to recover the setup and retry recovery.
+|059 |KubeVip deployment has failed | Ensure virtual IP address for kubernetes control plane and Load balancer IP address provided during deployment belong to same VLAN and are free IPs. Restart if all the previous points are correct. Else, Redeploy.
+|060 |Operator deployment has failed |Restart
+|061 |Services deployment has failed |Perform basic kubernetes debugging like get pods, get rs, get svc, and so on in ntv-system namespace for more details and error logs at /var/log/ansible-perl-errors.log and /var/log/ansible-run.log and Redeploy.
+|062 |VASA Provider and SRA deployment has failed |Refer to the error logs at /var/log/ansible-perl-errors.log for more details and Redeploy.
+|064 |version.xml verification failed |Redeploy
+|065 |Swagger page URL is not reachable |Redeploy
+|066 |Post deployment steps failed |-
+|088 |Configuring log rotate for journald has failed |Restart the primary VM.
 |===
 
 |===
@@ -83,55 +87,44 @@ The last three digits of the error code indicate the specific workflow error wit
 |===
 
 |===
-|*Upgrade error code* |*Workflow*
-|068
-|Debian packages rollback has failed
-|069
-|Failed restoring files
-|070
-|Failed deleting backup
-|071
-|Kubernetes cluster was not healthy
-|072
-|CR file does not exist in jail disk
-|073
-|Applying the CR failed while setting force reconcile flag to false
-|074
-|Mount ISO has failed
-|075
-|Upgrade pre-checks has failed
-|076
-|Registry upgrade has failed
-|077
-|Registry rollback has failed
-|078
-|Operator upgrade has failed
-|079
-|Operator rollback has failed
-|080
-|Services upgrade has failed
-|081
-|Services rollback has failed
-|082
-|Deleting old images from container failed
-|083
-|Deleting backup has failed
-|084
-|Changing JobManager back to Production failed
-|085
-|failed creating CA certificate secrets
-|086
-|failed creating server/private-key certificate secrets
-|087
-|Failed! to complete post 10.0 to 10.1 upgrade steps
+|*Upgrade error code* |*Workflow* |*Resolution*
+|063 |Copying contents to recovery volume has failed |Perform snapshot based recovery.
+|068 |Debian packages rollback has failed |Perform snapshot based recovery.
+|069 |Failed restoring files |Perform snapshot based recovery.
+|070 |Failed deleting backup |Perform snapshot based recovery.
+|071 |Kubernetes cluster was not healthy |Perform snapshot based recovery.
+|072 |CR file does not exist in jail disk |Perform snapshot based recovery.
+|073 |Applying the CR failed while setting force reconcile flag to false |Perform snapshot based recovery.
+|074 |Mount ISO has failed |Retry the upgrade.
+|075 |Upgrade pre-checks has failed |Retry the upgrade.
+|076 |Registry upgrade has failed |Perform snapshot based recovery.
+|077 |Registry rollback has failed |Perform snapshot based recovery.
+|078 |Operator upgrade has failed |Perform snapshot based recovery.
+|079 |Operator rollback has failed |Perform snapshot based recovery.
+|080 |Services upgrade has failed |Perform snapshot based recovery.
+|081 |Services rollback has failed |Perform snapshot based recovery.
+|082 |Deleting old images from container failed |Perform snapshot based recovery.
+|083 |Deleting backup has failed |Perform snapshot based recovery.
+|084 |Changing JobManager back to Production failed |Perform snapshot based recovery.
+|085 |failed creating CA certificate secrets |Perform snapshot based recovery.
+|086 |failed creating server/private-key certificate secrets |Perform snapshot based recovery.
+|087 |Failed! to complete post 10.0 to 10.1 upgrade steps |Post upgrade steps failed. 
+|088 |Configuring log rotate for journald has failed |Retry the upgrade.
 |===
 
 |===
-|*Recovery error code* |*Workflow*
-|104
-|Post recovery steps have failed.
-|105
-|Copying contents to recovery volume has failed.
-|106
-|Failed to mount recovery volume.
+|*Recovery error code* |*Workflow* |*Resolution*
+|104 |Post recovery steps have failed. |-
+|105 |Copying contents to recovery volume has failed. |-
+|106 |Failed to mount recovery volume. |* Ensure that the same SVM is used and recovery volume is present in the SVM. (Recovery volume name starts with otvng_trident_recovery)
+
+* Ensure Management LIF and Data LIF IP addresses are reachable from VM.
+
+* Ensure NFS/iSCSI protocol is enabled and configured properly on ONTAP.
+
+* Ensure that the NFS/iSCSI Dat LIF IP address provided is correct and online.
+
+* Ensure that the username, password, protocol provided are correct and the user has sufficient privileges to create, mount, clone, delete.
+
+* Retry the recovery
 |===

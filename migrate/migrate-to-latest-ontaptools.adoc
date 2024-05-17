@@ -48,7 +48,7 @@ Perform these steps on both protection and recovery sites.
 . Install ONTAP tools for VMware vSphere 10.1 SRA adapter on both protection and recovery sites using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the SRM appliance]
 . In the SRM UI page, perform *Discover Arrays* and *Discover Devices* operations and verify that the devices are showing up as it was before the migration. 
 
-== VAS provider migration steps
+== VASA provider migration steps
 
 . Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere 9.10D2 and 9.11D4. To enable the port, log in to CLI with root user and run the following command:
 +
