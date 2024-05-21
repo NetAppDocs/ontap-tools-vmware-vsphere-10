@@ -14,6 +14,8 @@ You can create vVols datastore with new volumes or with existing volumes. You ca
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
+Generate a JWT token before creating datastores or increase the SAML token expiry by setting 'Maximum Bearer Token Lifetime' to 60m on vCenter.
+
 You need to pass x-auth for the API. You can generate this x-auth from the new API added under Auth in Swagger.
 
 /virtualization/api/v1/auth/vcenter-login
