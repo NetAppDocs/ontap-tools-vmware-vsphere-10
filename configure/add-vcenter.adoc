@@ -51,5 +51,5 @@ You cannot remove a vCenter Server instance if there is a storage mapping attach
 
 When you remove vCenter Server instances in ONTAP tools, the following actions are performed automatically: 
 
-* Plug-in is unregistered
-* Plug-in privileges and plug-in roles are removed
+* Plug-in is unregistered.
+* Plug-in privileges and plug-in roles are removed.

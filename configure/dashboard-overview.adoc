@@ -37,7 +37,7 @@ Other VASA Provider (VP) states link shows the current state of the VP that is r
 
 |Datastores
 |This card shows the Top 10 datastores sorted by a performance metric.
-You can click on the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a *Datastore type* drop-down to select the type of the datastores - NFS, VMFS, or vVols.
+You can click on the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a Datastore type drop-down to select the type of the datastores - NFS, VMFS, or vVols.
 |ESXi Host compliance card
 |This card shows overall compliance status of all ESXi Hosts (for the selected vCenter) settings with respect to the recommended NetApp host settings by settings group/category.
 You can click on Apply Recommended Settings link to apply the recommended settings. You can click on issues/unknown to see the list of hosts.

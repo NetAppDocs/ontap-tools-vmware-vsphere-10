@@ -9,9 +9,9 @@ summary: 'If you lose your ONTAP tools setup, but have your ONTAP working, you c
 :imagesdir: ../media/
 
 [.lead]
-If you lose your ONTAP tools for VMware vSphere setup, you can recover your ONTAP tools setup using the ONTAP data management software.
+If you lose your ONTAP tools for VMware vSphere setup, you can recover the ONTAP tools setup using the data available in the ONTAP volume data.
 When you lose the setup, bring down the setup gracefully.
-You can recover both the single-node deployment and the HA three nodes deployment. 
+You can recover both the single-node deployment and the HA three nodes deployment configurations. 
 [NOTE]
 You cannot recover your ONTAP tools setup if there are issues with vCenter Server or ONTAP data management software. 
 

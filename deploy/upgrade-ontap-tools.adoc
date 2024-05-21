@@ -14,6 +14,28 @@ Upgrade is supported for both HA and non-HA deployments.
 
 *Before you begin*
 
+You need to complete the following steps before proceeding with the upgrade task:
+
+*Take Backup of MongoDB*
++
+Run the following commands to take a backup of mongoDB:
+* kn exec -it ntv-mongodb-0 sh - kn is an alias of kubectl -n ntv-system.
+* env | grep MONGODB_ROOT_PASSWORD - run this command inside the pod.
+* 'exit' - run this to come out of the pod.
+* kn exec ntv-mongodb-0 --mongodump -u root -p MONGODB_ROOT_PASSWORD --archive=/tmp/mongodb-backup.gz --gzip - run this command to replace MONGO_ROOT_PASSWORD set from above command.
+* kn cp ntv-mongodb-0:/tmp/mongodb-backup.gz ./mongodb-backup.gz - run this command to copy the mongodb backup created using above command from pod to host.
+
+*Take the snapshot of all the volumes*
++
+Run 'kn get pvc' and save the output of the command. Save the output as you delete and recreate few volumes.
+Now take snapshots of all the volumes one by one using one pof the following methods:
+* From CLi, run the command _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
+* From ONTAP system manager user interface search the volume by its name in search bar then open that volume by clicking on the name. Go to snapshot and add the snapshot of that volume.
+
+*Take the snapshot of ONTAP tools for VMware vSphere VMs in vCenter (3VMs incase of HA Deployment, 1 VM incase of non-HA deployment)*
+* In the vSPhere client user interface, select the VM.
+* Click on *Take Snapshot* button.
+
 From the log bundle, delete the completed pods with prefix “generate-support-bundle-job” before performing the upgrade.
 If support bundle generation is in progress, wait for it to complete and then delete the pod.
 
@@ -21,7 +43,11 @@ If support bundle generation is in progress, wait for it to complete and then de
 
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
-. Enter *3* to select the System Configuration menu.
+. Enter *4* to select Support and Diagnostics.
+. Enter *2* to select Enable remote diagnostic access.
+. Enter *y* to set the password of your choice.
+. Login to VM IP from the terminal/putty with user as 'diag' and password as it was set in previous step.
+. Go back to the main menu, and enter *3* to select the System Configuration menu.
 . Enter *7* to select the upgrade option.
 . When you upgrade, the following actions are performed automatically:
 .. Certificate upgrade
