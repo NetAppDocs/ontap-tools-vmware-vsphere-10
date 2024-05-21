@@ -12,7 +12,7 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.
 
 [NOTE]
-It is recommended to migrate classic setup only if the setup is servicing the VASA provider feature alone. If you have NVMe datastores and vVol replication, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.1.
+It is recommended to migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA provider feature alone. If you have NVMe datastores and vVol replication, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.1.
 
 *About this task* 
 
@@ -32,7 +32,7 @@ As an existing user, you need to take the OVA backup from your current release b
 
 *Before you begin*
 
-Before migrating, ensure that one of the sites is in protected state and the other is in recovery state. 
+Before migrating, ensure that one of the sites is in a protected state and the other is in recovery state. 
 
 [NOTE]
 Do not migrate if the failover just completed and re-protect is pending. Complete the re-protect and then perform the migration.
@@ -50,7 +50,7 @@ Perform these steps on both protection and recovery sites.
 
 == VASA provider migration steps
 
-. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere 9.10D2 and 9.11D4. To enable the port, log in to CLI with root user and run the following command:
+. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere. To enable the port, log in to CLI with root user and run the following command:
 +
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT

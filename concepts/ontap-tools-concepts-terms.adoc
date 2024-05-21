@@ -54,7 +54,7 @@ VMFS is a clustered file system specifically designed for storing virtual machin
 A LUN is a number used to identify a logical unit within a Storage Area Network (SAN). These addressable devices are typically logical disks accessed through the Small Computer System Interface (SCSI) protocol or one of its encapsulated derivatives.
 
 === Open Virtual Appliance (OVA)
-OVA is an open standard for packaging and distributing virtual appliances or software that must be run in virtual machines. 
+OVA is an open standard for packaging and distributing virtual appliances or software that must be run on virtual machines. 
 
 === Zero RPO
-RPO stands for recovery point objective, which is the amount of data loss deemed acceptable during a given time period. Zero RPO signifies that no data loss is acceptable.
+RPO stands for recovery point objective, which is the amount of data loss deemed acceptable during a given time. Zero RPO signifies that no data loss is acceptable.

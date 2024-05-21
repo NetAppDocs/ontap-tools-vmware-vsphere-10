@@ -129,7 +129,7 @@ By default, ONTAP tools for VMware vSphere returns a maximum of 10,000 objects f
 
 `max_records=20`
 
-The number of objects actually returned can be less than the maximum in effect, based on the related time constraint as well as the total number of objects in the system.
+The number of objects returned can be less than the maximum in effect, based on the related time constraint as well as the total number of objects in the system.
 
 === Limiting the time used to retrieve the objects
 
@@ -137,7 +137,7 @@ By default, ONTAP tools for VMware vSphere returns as many objects as possible w
 
 `return_timeout=5`
 
-The number of objects actually returned can be less than the maximum in effect, based on the related constraint on the number of objects as well as the total number of objects in the system.
+The number of objects returned can be less than the maximum in effect, based on the related constraint on the number of objects as well as the total number of objects in the system.
 
 === Narrowing the result set
 

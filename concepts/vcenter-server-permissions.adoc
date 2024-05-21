@@ -25,11 +25,9 @@ The object is the target for the tasks.
 +
 The user or group defines who can perform the task.
 
-As the following diagram illustrates, you should have all three elements in order to have a permission.
-
 NOTE: In this diagram, the gray boxes indicate components that exist in the vCenter Server, and the white boxes indicate components that exist in the operating system where the vCenter Server is running.
 
-image::../media/permission-updated_graphic.gif["permission components illustration"]
+image:../media/permission-updated-graphic.gif["permission components illustration"]
 
 == Privileges
 
@@ -51,7 +49,7 @@ If you change the privileges within a permission, the user that is associated wi
 
 == vSphere objects
 
-Permissions are associated with vSphere objects, such as the vCenter Server, ESXi hosts, virtual machines, datastores, datacenters, and folders. You can assign permissions to any vSphere object. Based on the permission that is assigned to a vSphere object, the vCenter Server determines who can perform which tasks on that object. For ONTAP tools specific tasks, permissions are assigned and validated only at the root-folder level (vCenter Server) and not on any other entity. Except for VAAI plug-in operation, where permissions are validated against the concerned ESXi .
+Permissions are associated with vSphere objects, such as the vCenter Server, ESXi hosts, virtual machines, datastores, datacenters, and folders. You can assign permissions to any vSphere object. Based on the permission that is assigned to a vSphere object, the vCenter Server determines who can perform which tasks on that object. For ONTAP tools specific tasks, permissions are assigned and validated only at the root-folder level (vCenter Server) and not on any other entity. Except for VAAI plug-in operation, where permissions are validated against the concerned ESXi host.
 
 == Users and groups
 

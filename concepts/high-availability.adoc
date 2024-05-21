@@ -21,7 +21,7 @@ Only single node failure is supported.
 * Virtual machine failure (Guest OS failure)
 * Application (ONTAP tools) crash
 
-No additional configuration is required for ONTAP tools to provide high-availability (HA).
+No additional configuration is required for ONTAP tools to provide high availability (HA).
 
 NOTE: ONTAP tools for VMware vSphere does not support vCenter HA.
 

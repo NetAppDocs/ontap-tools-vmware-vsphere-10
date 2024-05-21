@@ -9,7 +9,7 @@ summary: 'vCenter Server instances are the central management platforms that all
 :imagesdir: ../media/
 
 [.lead]
-vCenters Server provides the central management platform that allows you to control hosts, virtual machines (VMs), and storage backends.
+vCenter Server provides the central management platform that allows you to control hosts, virtual machines (VMs), and storage backends.
 
 == Add a vCenter Server instance
 
@@ -22,9 +22,9 @@ You can add and manage multiple vCenter Server instances with one instance of ON
 . Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
 . Log in with the ONTAP tools administrator credentials you provided during deployment. 
 . Select *vCenters* from the sidebar
-. Select *ADD* to onboard vCenter Server instances and provide vCenter IP Address/Hostname, username, password, and port details. 
+. Select *Add* to onboard vCenter Server instances and provide vCenter IP Address/Hostname, username, password, and port details. 
 
-When you a add vCenter Server instance to ONTAP tools, the following actions are performed automatically:
+When you add a vCenter Server instance to ONTAP tools, the following actions are performed automatically:
 
 * vCenter Client Plug-in is registered
 * Custom privileges for the plug-ins and APIs are pushed to the vCenter Server instance
@@ -43,7 +43,7 @@ You can unregister the ONTAP tools for VMware vSphere Plug-in from a vCenter Ser
 *Steps*
 
 . Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
-. Log in with ONTAP tools administrator credentials provided during deployment. 
+. Log in with the ONTAP tools administrator credentials you provided during deployment. 
 . Select vCenters from the sidebar.
 . Click on the vertical ellipses against the vCenter you want to remove and select the *Remove* option. 
 [NOTE]

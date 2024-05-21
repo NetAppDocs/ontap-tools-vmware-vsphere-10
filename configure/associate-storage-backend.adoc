@@ -18,7 +18,7 @@ This task helps you to create mapping between storage backend and the onboarded 
 *Steps*
 
 . Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
-. Log in with ONTAP tools administrator credentials provided during deployment. 
+. Log in with the ONTAP tools administrator credentials you provided during deployment. 
 . Select vCenter from the sidebar.
 . Click on the vertical ellipses against the vCenter that you want to associate with storage backends.
 . Select storage backend from the dropdown in the pop up.

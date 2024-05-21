@@ -16,8 +16,8 @@ Delete datastore action deletes the datastore when there are no vVols on the sel
 . From the vSphere Client Home page, click *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the datastore.
 . Right click on the vVol datastore and select *NetApp ONTAP tools* > *Remove storage from datastore*. 
-. Select volumes which do not have vVols and click *REMOVE*.
+. Select volumes which do not have vVols and click *Remove*.
 +
 [NOTE]
 The option to select the volume on which the vVols is residing is disabled.
-. In the *Remove storage* pop-up, select *Delete volumes from ONTAP cluster* checkbox to delete the volumes from datastore and from ONTAP storage and click *DELETE*.
+. In the *Remove storage* pop-up, select *Delete volumes from ONTAP cluster* checkbox to delete the volumes from datastore and from ONTAP storage and click *Delete*.

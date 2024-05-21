@@ -12,7 +12,7 @@ summary: 'You can create vVols datastore with new volumes or with existing volum
 
 Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
-Create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore. The user interface is self explanatory, use these steps as guidelines.
+Create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore. The user interface is self-explanatory, use these steps as guidelines.
  
 == Create vVols datastore
 
@@ -83,11 +83,10 @@ Check the following items before proceeding:
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
 . In the *Type* pane, select VMFS in *Datastore Type*.
-. In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. 
-. In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
+. In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
 . Select Platform and storage VM in the Storage pane. Select Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create new igroup with a custom name.
 +
 If you choose *Any* option in the platform dropdown you can see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag.
-. Select the *Aggregate* from the drop-down. Select the *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
+. From the storage attributes pane, select the *Aggregate* from the drop-down. Select the *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
 . Review the datastore details in the *Summary* pane and click *Finish*.
 Datastore is created and mounted on all the hosts.

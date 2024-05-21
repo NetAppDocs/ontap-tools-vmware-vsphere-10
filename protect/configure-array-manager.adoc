@@ -49,7 +49,6 @@ You can enter the source volume at the protected site and the replicated destina
 +
 For example, if you want to exclude volume _src_vol1_ that is in a SnapMirror relationship with volume _dst_vol1_, you should specify _src_vol1_ in the protected site field and _dst_vol1_ in the recovery site field.
 . Click *Next*.
-. Verify that the array is discovered and displayed at the bottom of the Add Array Manager window.
-. Click *Finish*.
+. Verify that the array is discovered and displayed at the bottom of the Add Array Manager window and click *Finish*.
 
 You can follow the same steps for the recovery site by using the appropriate SVM management IP addresses and credentials. On the Enable Array Pairs screen of the Add Array Manager wizard, you should verify that the correct array pair is selected, and that it shows as ready to be enabled.

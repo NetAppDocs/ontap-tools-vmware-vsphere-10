@@ -19,5 +19,5 @@ You can choose to allow a few specific ESXi host addresses for datastore mount o
 . In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Settings* > *Manage Network Access* > *Edit*. 
 +
-Use comma(,) to separate the IP addresses. You can specify a specific IP address, or a range of IP addresses or IPv6 addresses.
+Use comma (,) to separate the IP addresses. You can specify a specific IP address, or a range of IP addresses or IPv6 addresses.
 . Click *SAVE*. 

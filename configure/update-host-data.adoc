@@ -14,5 +14,5 @@ You can run an on-demand discovery on the ESXi host to get the latest updates on
 *Steps*
 
 . From the VMware vSphere Web Client Home page, click *Hosts and Clusters*.
-. Right-click a host, and then select *Actions* > *NetApp ONTAP tools* > *Update host data*.
-. In the *Update Host and Storage Data* op-up window select *Yes* to restart the discovery of all connected storage systems.
+. Right-click a host, and then select *NetApp ONTAP tools* > *Update host data*.
+. In the *Update Host Data* pop-up window, select *Yes* to restart the discovery of all connected storage systems.

@@ -25,21 +25,21 @@ You can create users at cluster or direct storage virtual machines (SVMs) level.
 . Extract the downloaded _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_ file.
 . Access ONTAP System Manager using the cluster management IP address of the cluster.
 . Log in as the cluster or SVM user.
-. Select *CLUSTER* > *Settings* > *Users and Roles* pane.
+. Select *Cluster* > *Settings* > *Users and Roles* pane.
 . Select *Add* under Users.
 . In the *Add User* dialog box, select *Virtualization products*.
 . *Browse* to select and upload the ONTAP Privileges JSON file.
 +
-The PRODUCT field is auto populated.
+The Product field is auto populated.
 
-. Select the required capability from the PRODUCT CAPABILITY drop-down menu.
+. Select the required capability from the product capability drop-down menu.
 +
-The *ROLE* field is auto populated based on the product capability selected.
+The *Role* field is auto populated based on the product capability selected.
 
 . Enter the required username and password.
 . Select the privileges (Discovery, Create Storage, Modify Storage, Destroy Storage, NAS/SAN Role) required for the user, and then click *Add*.
 
-The new role and user is added, and you can see the detailed privileges under the role that you have configured.
+The new role and user are added, and you can see the detailed privileges under the role that you have configured.
 // edited for 10.0 release
 
 NOTE: The uninstall operation does not remove ONTAP tool roles but removes the localized names for the ONTAP tool specific privileges and appends the prefix `XXX missing privilege` to them. When you reinstall ONTAP tools or upgrade to a newer version, all the standard ONTAP tools roles and ONTAP tools-specific privileges are restored.
@@ -66,18 +66,18 @@ Follow the instructions in this section to create the user and roles manually wi
 
 . Access ONTAP System Manager. To access ONTAP system manager use the cluster management IP address of the cluster.
 . Log in as the cluster or SVM user.
-. Select *CLUSTER* > *Settings* > *Users and Roles* pane.
+. Select *Cluster* > *Settings* > *Users and Roles* pane.
 . Create Roles:
 .. Select *Add* under *Roles* table.
-.. Enter the *ROLE NAME* and *Role Attributes* details. 
+.. Enter the *Role name* and *Role Attributes* details. 
 +
-Add the *REST API PATH* and the respective access from the drop down.
+Add the *REST API Path* and the respective access from the drop down.
 .. Add all the needed APIs and save the changes.
 . Create Users:
 .. Select *Add* under *Users* table.
 .. In the *Add User* dialog box, select *System Manager*.
-.. Enter the *USERNAME*.
-.. Select the *ROLE* from the options created in the *Create Roles* step above.
+.. Enter the *Username*.
+.. Select the *Role* from the options created in the *Create Roles* step above.
 .. Enter the applications to give access to and the authentication method. The ONTAPI and HTTP are the required application and the authentication type is *Password*. 
 .. Set the *Password for the User* and *Save* the user.
  
@@ -91,7 +91,7 @@ Using APIs:
 
 |===
 
-|API|ACCESS LEVEL|USED FOR
+|API|Access level| Used for
 
 |/api/cluster |Read-Only |Cluster Configuration Discovery
 |/api/cluster/licensing/licenses |Read-Only |License Check for Protocol specific licenses

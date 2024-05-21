@@ -13,7 +13,7 @@ entries:
     url: /configure/install-nfs-vaai-plug-in.html    
   - title: Update host data
     url: /configure/update-host-data.html
-  - title: Configure ESXi settings
+  - title: Configure ESXi host settings
     entries:
       - title: Configure ESXi server multipath and timeout settings
         url: /configure/configure-esx-server-multipath-and-timeout-settings.html

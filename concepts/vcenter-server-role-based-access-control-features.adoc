@@ -68,4 +68,4 @@ In this case, you would clone the necessary ONTAP tools roles and then edit the 
 == Permissions for ONTAP storage backends and vSphere objects
 
 If the vCenter Server permission is sufficient, ONTAP tools then checks the ONTAP RBAC privileges (your ONTAP role) that are associated with the storage backends credentials (the username and password) to determine whether you have sufficient privileges to perform the storage operations that are required by that ONTAP tools task on that storage backend. If you have the correct ONTAP privileges, you can access the
-storage backends and perform ONTAP tools task. The ONTAP roles determine ONTAP tools tasks that you can perform on the storage backend.
+storage backends and perform ONTAP tools tasks. The ONTAP roles determine ONTAP tools tasks that you can perform on the storage backend.

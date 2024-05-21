@@ -15,7 +15,7 @@ To create new user roles, you should log in as an administrator of the storage s
 
 Each ONTAP role has an associated username and password pair, which constitute the credentials of the role. If you do not log in by using these credentials, you cannot access the storage operations that are associated with the role.
 
-As a security measure, ONTAP tools specific ONTAP roles are ordered hierarchically. This means the first role is the most restrictive and has only the privileges associated with the most basic set of ONTAP tools storage operations. The next role includes both its own privileges and all the privileges that are associated with the previous role. Each additional role is less restrictive regarding the supported storage operations.
+As a security measure, ONTAP tools specific ONTAP roles are ordered hierarchically. This means the first role is the most restrictive and has only the privileges associated with the most basic set of ONTAP tools storage operations. The next role includes its own privileges and all the privileges associated with the previous role. Each additional role is less restrictive regarding the supported storage operations.
 
 The following are some of the recommended ONTAP RBAC roles when using ONTAP tools. After you create these roles, you can assign them to users who must perform tasks related to storage, such as provisioning virtual machines.
 

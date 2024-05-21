@@ -20,4 +20,4 @@ NOTE: This view is applicable for the VM which has at least one ONTAP tools mana
 . Click the *Monitor* tab in the right side pane. 
 . Select *NetApp ONTAP tools* > *Storage*. The *Storage* details appear on the right pane. You can see the list of vVols that are present on the VM.
 +
-You can use the *Manage Columns* option to hide or show different columns.
+You can use the 'Manage Columns' option to hide or show different columns.

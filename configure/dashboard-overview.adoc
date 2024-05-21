@@ -9,9 +9,9 @@ summary: 'When you select NetApp ONTAP tools Plug-in icon in the shortcuts secti
 :imagesdir: ../media/
 
 [.lead]
-When you select NetApp ONTAP tools Plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to *Overview* page. This page acts like the dashboard providing you the summary of the ONTAP tools plug-in.
+When you select NetApp ONTAP tools Plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to overview page. This page acts like the dashboard providing you the summary of the ONTAP tools plug-in.
 
-In the case of Enhanced Linked Mode setup(ELM), the vCenter Server select dropdown appears and you can select a desired vCenter Server to see the data relevant to it. This dropdown is available for all the other listing views of the plugin. 
+In the case of Enhanced Linked Mode setup (ELM), the vCenter Server select dropdown appears and you can select a desired vCenter Server to see the data relevant to it. This dropdown is available for all the other listing views of the plugin. 
 vCenter Server selection made in one page persists across the tabs of the plug-in. 
 image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
@@ -33,12 +33,12 @@ Other VASA Provider (VP) states link shows the current state of the VP that is r
 |This card shows the aggregated used and available capacity of all storage backends for the selected vCenter Server instance.
 
 |Virtual machines
-|This card shows the top 10 VMs sorted by a performance metric. You can click on the header to get the top 10 VMs for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache.
+|This card shows the top 10 VMs sorted by performance metric. You can click on the header to get the top 10 VMs for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache.
 
 |Datastores
 |This card shows the Top 10 datastores sorted by a performance metric.
 You can click on the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a *Datastore type* drop-down to select the type of the datastores - NFS, VMFS, or vVols.
 |ESXi Host compliance card
-|This card shows overall compliance status of all ESXi Hosts(for the selected vCenter) settings with respect to the recommended NetApp host settings by settings group/category.
-You can click on *Apply Recommended Settings* link to apply the recommended settings. You can click on issues/unknown to see the list of hosts.
+|This card shows overall compliance status of all ESXi Hosts (for the selected vCenter) settings with respect to the recommended NetApp host settings by settings group/category.
+You can click on Apply Recommended Settings link to apply the recommended settings. You can click on issues/unknown to see the list of hosts.
 |===

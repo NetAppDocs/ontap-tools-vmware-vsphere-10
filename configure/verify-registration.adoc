@@ -22,4 +22,4 @@ Verify that the onboarded VASA provider is listed under VASA Provider from vCent
 .	To verify VASA Provider from the remote plug-in UI follow these steps:
 .. Log in to the vSphere client using `\https://vcenterip/ui`
 .. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
-.. You can see the registered VASA Provider in the *Overview* page and in the *Settings* > *VASA provider settings* page.
+.. You can see the registered VASA Provider in the overview page and in the *Settings* > *VASA provider settings* page.

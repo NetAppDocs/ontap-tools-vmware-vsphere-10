@@ -21,6 +21,6 @@ From vSphere 7.0U3 to vSphere 8.0 versions even though the options appear, the a
 . In the navigation pane, select the datacenter that contains the host.
 . Repeat Step 2 for any additional hosts.
 . To mount NFS/VMFS datastores on host or host cluster, right-click on it, and then select *NetApp ONTAP tools* > *Mount Datastores*.
-. Select the datastores that you want to mount, and then click *MOUNT*.
+. Select the datastores that you want to mount, and then click *Mount*.
 
 You can track the progress in the Recent Task panel.

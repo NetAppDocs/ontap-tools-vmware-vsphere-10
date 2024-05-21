@@ -24,11 +24,11 @@ You should ensure that both the source and target sites are configured for the f
 
 . Log in to your vCenter Server, and then click *Site Recovery* > *Protection Groups*.
 . In the *Protection Groups* pane, click *New*.
-. Specify a name and description for the protection group, direction, and then click *NEXT*.
+. Specify a name and description for the protection group, direction, and then click *Next*.
 . In the *Type* field, select the *Type field option...* as Datastore groups (array-based replication) for NFS and VMFS datastore.
 The fault domain is nothing but SVMs with replication enabled. The SVMs that have only peering implemented and have no issues are displayed.
 
-. In the Replication groups tab, select either the enabled array pair or the replication groups that have the virtual machine you configured, and then click *NEXT*.
+. In the Replication groups tab, select either the enabled array pair or the replication groups that have the virtual machine you configured, and then click *Next*.
 +
 All the virtual machines on the replication group are added to the protection group.
 

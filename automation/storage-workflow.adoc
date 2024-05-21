@@ -22,8 +22,8 @@ POST
 See Onboard storage backend (SVM or Cluster) workflow and get ID from post storage backend API response.
 
 Discovery from this API endpoint is supported only for local scoped storage backends and not for the global scoped storage backends.
-If the storage backend type is cluster, discovery implicitly runs for the child svms.
-If the storage backend type is svm, discovery only runs for the selected svm.
+If the storage backend type is cluster, discovery implicitly runs for the child SVMs.
+If the storage backend type is SVM, discovery only runs for the selected SVM.
 
 Example:
 

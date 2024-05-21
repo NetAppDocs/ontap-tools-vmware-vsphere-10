@@ -15,14 +15,14 @@ When you're managing multiple vCenter Server instances and you want to enable vV
 *Steps*
 
 . Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
-. Log in with ONTAP tools administrator credentials provided during deployment. 
+. Log in with the ONTAP tools administrator credentials you provided during deployment.
 . Select *Certificates* > *VASA provider* > *Renew* option to renew the certificates.
 [NOTE]
 The system will be offline till the certificate is renewed.
-. To upgrade the self-signed certificate to custom CA certificate, select *Certificates* > *VASA provider* > *UPGRADE TO CA* option.
+. To upgrade the self-signed certificate to custom CA certificate, select *Certificates* > *VASA provider* > *Upgrade to CA* option.
 .. In the *upgrade certificate to custom CA* pop-up, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files. The tool tip provides description of the certificates.
 .. Enter the domain name for which you generated this certificate.
-.. Click *UPGRADE*
+.. Click *Upgrade*
 +
 [NOTE]
 The system will be offline till the upgrade is complete.
