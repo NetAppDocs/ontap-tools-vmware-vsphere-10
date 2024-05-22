@@ -72,6 +72,8 @@ sudo rke2-uninstall.sh (all VMs).
 |065 |Swagger page URL is not reachable |Redeploy
 |066 |Post deployment steps failed |-
 |088 |Configuring log rotate for journald has failed |Restart the primary VM.
+|089 |Changing ownership of summary log rotate config file has failed |Restart the primary VM.
+
 |===
 
 |===

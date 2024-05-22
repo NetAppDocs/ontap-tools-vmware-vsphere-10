@@ -46,13 +46,18 @@ Run the following commands to take a backup of mongoDB:
 *Take the snapshot of ONTAP tools for VMware vSphere VMs in vCenter (3VMs incase of HA Deployment, 1 VM incase of non-HA deployment)*
 
 * In the vSphere client user interface, select the VM.
-* Click on *Take Snapshot* button.
+* Go to the snapshots tab and click the *Take Snapshot* button.
 
 From the log bundle, delete the completed pods with prefix “generate-support-bundle-job” before performing the upgrade.
 If support bundle generation is in progress, wait for it to complete and then delete the pod.
 
 *Steps*
 
+. Upload ONTAP tools VMware vSphere upgrade ISO to content library.
+. In the primary VM page, select the *Actions* > *Edit Settings* 
+. In the edit settings window under *CD/DVD drive* field select content library ISO file. 
+. Select the ISO file and click *OK*. Choose the connected checkbox across the *CD/DVD drive* field.
+image:../media/primaryvm-edit-settings.png[Edit settings]
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
 . Enter *3* to select the System Configuration menu.
