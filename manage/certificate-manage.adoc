@@ -2,15 +2,14 @@
 permalink: manage/certificate-manage.html
 sidebar: sidebar
 keywords:
-summary: 'Single instance of ONTAP tools can manage multiple vCenter Server instances. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenter Server instances by default.'
+summary: 'Single instance of ONTAP tools can manage multiple vCenter Server instances. ONTAP tools is deployed with a self-signed certificate for VASA Provider. With this, only one vCenter Server instance can be managed for vVols datastores.'
 ---
 = Manage certificates
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Single instance of ONTAP tools can manage multiple vCenter Server instances. When ONTAP tools is deployed, self-signed certificate is assigned to all vCenter Server instances by default.
-When you're managing multiple vCenter Server instances and you want to enable vVols capability on multiple vCenter Server instances then you need to change the self-signed certificate to custom CA certificate using ONTAP tools Manager interface. You can use the same interface to renew or refresh all certificates.
+Single instance of ONTAP tools can manage multiple vCenter Server instances. ONTAP tools is deployed with a self-signed certificate for VASA Provider. With this, only one vCenter Server instance can be managed for vVols datastores. When you're managing multiple vCenter Server instances and you want to enable vVols capability on multiple vCenter Server instances then you need to change the self-signed certificate to custom CA certificate using ONTAP tools Manager interface. You can use the same interface to renew or refresh all certificates.
 
 [NOTE]
 A different load balancer IP address mapped to different domains is not supported when you upgrade self-signed to custom CA.
