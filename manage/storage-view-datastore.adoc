@@ -19,7 +19,7 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 . Click the *Configure* tab in the right side pane. 
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. The *Storage details* and *NFS details* appear on the right pane.
 +
-* The storage details page contains information about storage backends, aggregate, and  volume.
+* The storage details page contains information about storage backends, aggregate, and volume.
 * The NFS details page contains data related to the NFS datastore.
 
 == ONTAP storage views for VMFS datastores
@@ -29,7 +29,7 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 . Click the *Configure* tab in the right side pane. 
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. The *Storage details* and *LUN details* appear on the right pane.
 +
-* The storage details page contains information about storage backends, aggregate, and  volume.
+* The storage details page contains information about storage backends, aggregate, and volume.
 * The LUN details page contains data related to the LUN.
 
 == ONTAP storage views for vVols datastores
@@ -40,4 +40,4 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. 
 . The ONTAP storage view lists all the volumes. You can expand or remove storage from the ONTAP storage pane.
 +
-Follow the instructions in link:../manage/expand-storage-of-vvol-datastore.html[Expand vVols Datastores] section  to add vVols datastore and link:../manage/remove-storage-from-a-vvols-datastore.html[Shrink vVols datastores] section to delete the datastore.
+Follow the instructions in link:../manage/expand-storage-of-vvol-datastore.html[Expand vVols Datastores] section to add vVols datastore and link:../manage/remove-storage-from-a-vvols-datastore.html[Shrink vVols datastores] section to delete the datastore.

@@ -2,18 +2,18 @@
 permalink: deploy/recovery-deployment.html
 sidebar: sidebar
 keywords:
-summary: 'If you lose your ONTAP tools setup, but have your ONTAP working, you can recover ONTAP tools setup using the ONTAP. When you lose the setup, bring down the setup gracefully.'
+summary: 'If you lose your ONTAP tools for VMware vSphere setup, but have your ONTAP working, you can recover ONTAP tools for VMware vSphere setup using the ONTAP. When you lose the setup, bring down the setup gracefully.'
 ---
-= Recover your ONTAP tools setup
+= Recover your ONTAP tools for VMware vSphere setup
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you lose your ONTAP tools for VMware vSphere setup, you can recover the ONTAP tools setup using the data available in the ONTAP volume data.
+If you lose your ONTAP tools for VMware vSphere setup, you can recover the ONTAP tools for VMware vSphere setup using the data available in the ONTAP volume data.
 When you lose the setup, bring down the setup gracefully.
 You can recover both the single-node deployment and the HA three nodes deployment configurations. 
 [NOTE]
-You cannot recover your ONTAP tools setup if there are issues with vCenter Server or ONTAP data management software. 
+You cannot recover your ONTAP tools for VMware vSphere setup if there are issues with vCenter Server or ONTAP data management software. 
 
 *Steps*
 
@@ -28,7 +28,7 @@ You should use the same OVA build that you used for installing the recovery setu
 . Select the host and select *Next*.
 . Review the summary of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
-. In the *Configuration* window, select *Recovery*  option.
+. In the *Configuration* window, select *Recovery* option.
 . In the *Select storage* window, select the storage for the configurations and disk files.
 . In the *Select networks* window, select a destination network for each source network.
 [NOTE]
@@ -37,12 +37,12 @@ You need to retain the load balancer IP address and the Kubernetes API Server IP
 .. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter Server. This can be different from the username and password provided during initial deployment. 
 .. The *Enable ASUP* checkbox is selected by default.
 +
-The AutoSupport can be enabled or disabled only during deployment. 
+AutoSupport can be enabled or disabled only during deployment. 
 .. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission.
 .. Administrator Username and Administrator Password: This is the password used to log in to ONTAP Tools Manager. This can be different from the username and password provided during initial deployment.
 .. Enter your NTP server information in the *NTP Servers* field. 
 .. Maintenance user password: This is used to grant access to maintenance console options.
-. In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be same as the ones provided during initial deployment with the exception of data LIF value.
+. In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be the same as the ones provided during initial deployment with the exception of data LIF value.
 [NOTE]
 The storage SVM name should not be changed as that is where the recovery data is stored. This applies for direct SVM as well.
 . In the case of HA-deployment recovery, provide the following details:

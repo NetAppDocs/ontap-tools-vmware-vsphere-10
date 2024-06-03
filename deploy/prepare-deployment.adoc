@@ -10,18 +10,18 @@ summary: 'You should deploy ONTAP tools for VMware vSphere in your environment, 
 
 [.lead]
 You should be aware of the basic storage backend requirements, application requirements, and license requirements before you begin deploying ONTAP tools for VMware vSphere. 
-Plan your deployment in advance and decide how you want to configure ONTAP tools in your environment. 
+Plan your deployment in advance and decide how you want to configure ONTAP tools for VMware vSphere in your environment. 
 
 == Preparing for deployment 
 
-Following are ONTAP tools requirements before proceeding with the deployment: 
+Following are ONTAP tools for VMware vSphere requirements before proceeding with the deployment: 
 
 . Configure and set up your vCenter Server environment. 
 . Download the _.ova_ file. 
 . (Optional) Used for automation user - Gather the Postman collections JSON file provided by NetApp. 
 . Parent vCenter Server Credentials to deploy the OVA. 
-. Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere] section.  
-. The login credentials for your vCenter Server instance to which the ONTAP tools will connect to post deployment for registration. 
+. Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere] section.
+. The login credentials for your vCenter Server instance to which the ONTAP tools for VMware vSphere will connect to post deployment for registration. 
 . Delete the browser cache.
 . For non-HA deployment, you need three free IP addresses - one free IP address for load balancer and one free IP address for the Kubernetes control plane and one IP address for node. For HA deployment, along with these three IP addresses you'll need two more IP addresses for second and third nodes.
 Host names should be mapped to the free IP addresses on the DNS before assigning. All the five IP addresses should be on the same VLAN that is selected for deployment. 

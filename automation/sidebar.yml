@@ -3,11 +3,11 @@ title: Automate using REST APIs
 entries:
   - title: Overview of REST APIs
     url: /automation/overview-rest-apis.html
-  - title: How to access ONTAP tools REST API
+  - title: How to access ONTAP tools for VMware vSphere REST API
     url: /automation/how-to-access-rest-api.html
   - title: Input variables controlling an API request
     url: /automation/input-variables-control-an-api-request.html
-  - title: Access ONTAP tools API reference documentation through the Swagger UI
+  - title: Access ONTAP tools for VMware vSphere API reference documentation through the Swagger UI
     url: /automation/how-to-access-rest-api-doc-through-the-swagger-user-interface.html
   - title: Get started with the REST API
     url: /automation/get-started-with-the-rest-api.html

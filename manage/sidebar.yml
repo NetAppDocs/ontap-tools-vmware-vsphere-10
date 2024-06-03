@@ -29,9 +29,9 @@ entries:
     url: /manage/certificate-manage.html
   - title: Manage igroup and export policies
     url: /manage/igroup-management.html
-  - title: Access ONTAP tools maintenance console
+  - title: Access ONTAP tools for VMware vSphere maintenance console
     entries:
-    - title: Overview of ONTAP tools maintenance console
+    - title: Overview of ONTAP tools for VMware vSphere maintenance console
       url: /manage/maintenance-console.html
     - title: Configure remote diagnostic access
       url: /manage/configure-remote-diagnostic-access.html

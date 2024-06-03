@@ -9,7 +9,7 @@ summary: 'ONTAP tools for VMware vSphere supports a high-availability \(HA\) con
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools for VMware vSphere supports a high-availability (HA) configuration to help provide uninterrupted functionality of ONTAP tools during failure.
+ONTAP tools for VMware vSphere supports a high-availability (HA) configuration to help provide uninterrupted functionality of ONTAP tools for VMware vSphere during failure.
 
 High-availability (HA) solution provides for rapid recovery from outages caused by:
 
@@ -21,7 +21,7 @@ Only single node failure is supported.
 * Virtual machine failure (Guest OS failure)
 * Application (ONTAP tools) crash
 
-No additional configuration is required for ONTAP tools to provide high availability (HA).
+No additional configuration is required for ONTAP tools for VMware vSphere to provide high availability (HA).
 
 NOTE: ONTAP tools for VMware vSphere does not support vCenter HA.
 

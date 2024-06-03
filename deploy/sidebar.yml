@@ -13,7 +13,7 @@ entries:
     url: /deploy/ha-three-node-deployment.html
   - title: Upgrade ONTAP tools 
     url: /deploy/upgrade-ontap-tools.html
-  - title: Recover your ONTAP tools setup
+  - title: Recover your ONTAP tools for VMware vSphere setup
     url: /deploy/recovery-deployment.html
   - title: Deployment error codes
     url: /deploy/deployment-error-codes.html

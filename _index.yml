@@ -8,13 +8,13 @@ indexpage:
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3319071
         - title: Learn about ONTAP tools for VMware vSphere
           url: /concepts/ontap-tools-overview.html
-        - title: Deploy ONTAP tools
+        - title: Deploy ONTAP tools for VMware vSphere
           url: /deploy/prepare-deployment.html
-        - title: Upgrade to the latest release of ONTAP tools
+        - title: Upgrade to the latest release of ONTAP tools for VMware vSphere
           url: /deploy/upgrade-ontap-tools.html
-        - title: Migrate ONTAP tools
+        - title: Migrate ONTAP tools for VMware vSphere
           url: migrate/migrate-to-latest-ontaptools.html
-    - title: Use ONTAP tools
+    - title: Use ONTAP tools for VMware vSphere
       links:
       - title: Configure role-based access control
         url: /concepts/vcenter-server-role-based-access-control-features.html

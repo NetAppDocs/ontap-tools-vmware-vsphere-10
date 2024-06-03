@@ -29,7 +29,7 @@ entries:
     url: /configure/configure-network-access.html
   - title: Configure ONTAP user roles and privileges
     url: /configure/configure-user-role-and-privileges.html
-  - title: NetApp ONTAP tools Plugin Dashboard overview
+  - title: NetApp ONTAP tools for VMware vSphere plugin Dashboard overview
     url: /configure/dashboard-overview.html
   - title: Create datastore
     url: /configure/create-vvols-datastore.html    

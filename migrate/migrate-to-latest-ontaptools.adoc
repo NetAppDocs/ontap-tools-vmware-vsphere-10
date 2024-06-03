@@ -25,7 +25,7 @@ As an existing user, you need to take the OVA backup from your current release b
 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.1 release. 
 . Add the vCenter Server instance that you want to migrate to ONTAP tools for VMware vSphere 10.1 release. See link:../configure/add-vcenter.html[Add and manage vCenter Server instances]
-. Onboard storage backend locally from the ONTAP tools plug-in vCenter APIs. Add storage as a locally scoped storage for migration.
+. Onboard storage backend locally from the ONTAP tools for VMware vSphere plug-in vCenter APIs. Add storage as a locally scoped storage for migration.
 . The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xx is visible in ONTAP tools for VMware vSphere 10.1 only after the datastore discovery job is triggered, which might take up to 30 minutes to trigger. Verify if the datastores are visible in the Overview page of the ONTAP tools for VMware vSphere Plugin UI page. 
 
 == SRA migration steps
@@ -121,8 +121,8 @@ A job object is returned. You should save the job identifier to use it in the ne
 https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
-. Add ONTAP tools storage provider 10.1 to the vCenter Server and link:../configure/registration-process.html[Register VASA Provider to vCenter Server].
-. Stop ONTAP tools storage provider 9.10/9.11/9.12/9.13 VASA Provider service from maintenance console.
+. Add ONTAP tools for VMware vSphere storage provider 10.1 to the vCenter Server and link:../configure/registration-process.html[Register VASA Provider to vCenter Server].
+. Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from maintenance console.
 +
 [Note] 
 Do not delete the VASA provider.
@@ -171,7 +171,7 @@ A job object is returned. You should save the job identifier to use it in the ne
 }
 // URI <https://10.60.24.125:8443/virtualization/api/v1/migration/migrate>
 
-Request body is empty  for patch operation.
+Request body is empty for patch operation.
 
 [NOTE]
 uuid is the migration uuid returned in the response of post migrate API.
@@ -206,7 +206,7 @@ This API deletes migration by Migration Id and deletes migration on the given vC
 After successful migration and after you register ONTAP tools 10.1 to the vCenter Server, do the following:
 
 * Refresh the certificate on all the hosts.
-* Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that  are present in the setup. When you don't wait, the operations may fail intermittently.
+* Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that are present in the setup. When you don't wait, the operations may fail intermittently.
 
 
 

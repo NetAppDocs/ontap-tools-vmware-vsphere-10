@@ -2,7 +2,7 @@
 permalink: manage/collect-the-log-files.html
 sidebar: sidebar
 keywords:
-summary: 'You can collect log files for ONTAP tools for VMware vSphere from the options available in ONTAP tools graphical user interface \(GUI\). Technical support might ask you to collect the log files to help troubleshoot a problem.'
+summary: 'You can collect log files for ONTAP tools for VMware vSphere from the options available in ONTAP tools for VMware vSphere graphical user interface \(GUI\). Technical support might ask you to collect the log files to help troubleshoot a problem.'
 ---
 = Collect the log files
 :icons: font
@@ -16,8 +16,8 @@ Generating logs from the ONTAP tools Manager includes all logs for all vCenter S
 
 *Steps*
 
-. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
-. Log in with the ONTAP tools administrator credentials you provided during deployment. 
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select *Log Bundles* from the sidebar.
 +
 This operation can take several minutes.
@@ -30,7 +30,7 @@ Follow the steps below to generate log bundle using the vCenter client UI:
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. From the vSphere Client Home page, go to *Support* > *Log bundle* > *Generate*.
+. From the vSphere Client home page, go to *Support* > *Log bundle* > *Generate*.
 . Provide the log bundle label and generate the log bundle.
 You can see the download option when the files are generated. Downloading may take some time.
 

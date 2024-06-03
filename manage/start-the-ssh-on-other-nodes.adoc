@@ -21,7 +21,7 @@ Perform this procedure on each of the nodes, before you upgrade.
 
 *Steps*
 
-. From the vCenter Server, open a console to VASA Provider.
+. From vCenter Server, open a console to VASA Provider.
 . Log in as the maintenance user.
 . Enter `4` to select Support and Diagnostics.
 . Enter `1` to select Access diagnostic shell.

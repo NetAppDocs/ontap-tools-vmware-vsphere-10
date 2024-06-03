@@ -2,20 +2,20 @@
 permalink: manage/reports.html
 sidebar: sidebar
 keywords:
-summary: 'ONTAP tools plug-in provides reports for virtual machines and datastores.'
+summary: 'ONTAP tools for VMware vSphere plug-in provides reports for virtual machines and datastores.'
 ---
 = ONTAP tool reports
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools plug-in provides reports for virtual machines and datastores. 
-When you select NetApp ONTAP tools Plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to Overview page.
+ONTAP tools for VMware vSphere plug-in provides reports for virtual machines and datastores. 
+When you select NetApp ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to Overview page.
 Select the Reports tab to view the virtual machine and the datastores report.
 
 Virtual Machines report shows the list of discovered virtual machines (should have at least one disk from ONTAP storage based datastores) with performance metrics.
 When you expand the VM record, all the disk related datastore info is displayed.
 
-Datastores report shows the list of discovered or recognized ONTAP tools managed Datastores that are provisioned from ONTAP storage backend of all types with performance metrics.
+Datastores report shows the list of discovered or recognized ONTAP tools for VMware vSphere managed Datastores that are provisioned from ONTAP storage backend of all types with performance metrics.
 
 You can use the 'Manage Columns' option to hide or show different columns.

@@ -1,7 +1,7 @@
 section: concepts
 title: Concepts
 entries:
-  - title: ONTAP tools overview
+  - title: ONTAP tools for VMware vSphere overview
     url: /concepts/ontap-tools-overview.html
   - title: Key concepts and terms
     url: /concepts/ontap-tools-concepts-terms.html
@@ -13,11 +13,11 @@ entries:
         url: /concepts/vcenter-server-permissions.html
       - title: Assign and modify permissions for vCenter Server
         url: /concepts/key-points-about-assign-and-modify-permissions.html
-      - title: Privileges required for ONTAP tools tasks
+      - title: Privileges required for ONTAP tools for VMware vSphere tasks
         url: /concepts/privileges-required.html
       - title: Recommended ONTAP roles
         url: /concepts/ontap-roles.html
-  - title: High availability for ONTAP tools
+  - title: High availability for ONTAP tools for VMware vSphere
     url: /concepts/high-availability.html
   - title: AutoSupport
     url: /concepts/autosupport.html

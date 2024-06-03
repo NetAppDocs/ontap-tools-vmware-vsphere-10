@@ -35,19 +35,19 @@ Recommended memory as per the size of deployment and per node is as shown in the
 == Minimum storage and application requirements:
 
 |===
-|Storage, host, and applications|Version requirements
+|Storage, host, and applications|Minimum version requirements
 
 |ONTAP
-|ONTAP 9.12.1 latest p patch, 9.13.1 latest p patch, 9.14.1 latest patch
+|Latest patch release of ONTAP 9.12.1, 9.13.1, or 9.14.1
 
 |VMware vSphere
-|Minimum supported VMware version is 7.0U3, 8.0U1, and 8.0U2
+|VMware 7.0U3, 8.0U1, or 8.0U2
 
 |ESXi hosts
-|ESXi 7.0.3 or later version 
+|ESXi 7.0.3
 
 |vCenter server
-|vCenter 7.0U3, 8.0U1, and 8.0U2 or later versions
+|vCenter 7.0U3, 8.0U1, or 8.0U2
 
 |VASA provider 
 |3.0
@@ -75,5 +75,5 @@ You should access the maintenance console by using the "`maint`" username. You c
 
 === Appliance network properties
 
-Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools and the other network parameters. The IP addresses provided should be accessible from the VLAN network that you select during the deployment. DHCP is not supported for ONTAP tools for VMware vSphere 10.1 release. All these parameters are required for proper installation and operation.
+Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools for VMware vSphere and the other network parameters. The IP addresses provided should be accessible from the VLAN network that you select during the deployment. DHCP is not supported for ONTAP tools for VMware vSphere 10.1 release. All these parameters are required for proper installation and operation.
 

@@ -12,7 +12,7 @@ summary: 'The storage view shows the list of vVols that are created by the virtu
 
 The storage view shows the list of vVols that are created by the virtual machine. 
 
-NOTE: This view is applicable for the VM which has at least one ONTAP tools managed vVols datastore related disk mounted on it.
+NOTE: This view is applicable for the VM which has at least one ONTAP tools for VMware vSphere managed vVols datastore related disk mounted on it.
 
 .Steps
 

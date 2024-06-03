@@ -2,14 +2,14 @@
 permalink: protect/configure-on-srm-appliance.html
 sidebar: sidebar
 keywords:
-summary: 'After you have deployed the SRM appliance, you should configure SRA on the SRM appliance. The successful configuration of SRA enables SRM Appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools credentials \(IP address and administrator password\) in the SRM appliance to enable communication between SRM Appliance and SRA.'
+summary: 'After you have deployed the SRM appliance, you should configure SRA on the SRM appliance. The successful configuration of SRA enables SRM Appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools for VMware vSphere credentials \(IP address and administrator password\) in the SRM appliance to enable communication between SRM Appliance and SRA.'
 ---
 = Configure SRA on the SRM appliance
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-After you have deployed the SRM appliance, you should configure SRA on the SRM appliance. The successful configuration of SRA enables SRM Appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools credentials (IP address) in the SRM appliance to enable communication between SRM Appliance and SRA.
+After you have deployed the SRM appliance, you should configure SRA on the SRM appliance. The successful configuration of SRA enables SRM Appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools for VMware vSphere credentials (IP address) in the SRM appliance to enable communication between SRM Appliance and SRA.
 
 *What you will need*
 
@@ -29,9 +29,9 @@ The configuration of SRA on SRM Appliance stores the SRA credentials in the SRM 
 . Run command `cd /var/log/vmware/srm` to navigate to the log directory.
 . At the log location enter the command to get the docker ID used by SRA: `docker ps -l`
 . To log in to the container ID, enter command: `docker exec -it -u srm <container id> sh`
-. Configure SRM with ONTAP tools IP address and password using the command: `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>'`
+. Configure SRM with ONTAP tools for VMware vSphere IP address and password using the command: `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>'`
 [NOTE]
-You need to provide the password value within single quotes to ensure that the perl script does not read the special characters in the password as a delimiter of the input.
+You need to provide the password value within single quotes to ensure that the Perl script does not read the special characters in the password as a delimiter of the input.
 
 +
 A success message confirming that the storage credentials are stored is displayed. SRA can communicate with SRA server using the provided IP address, port and credentials.

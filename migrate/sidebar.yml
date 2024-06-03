@@ -1,5 +1,5 @@
 section: migrate
 title: Migrate ONTAP tools
 entries:
-  - title: Migrate to the latest ONTAP tools version 
+  - title: Migrate to the latest ONTAP tools for VMware vSphere version 
     url: /migrate/migrate-to-latest-ontaptools.html

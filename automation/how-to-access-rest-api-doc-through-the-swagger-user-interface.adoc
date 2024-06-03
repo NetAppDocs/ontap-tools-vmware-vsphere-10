@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST API, Swagger
 summary: 'You can access the ONTAP REST API documentation through the Swagger UI at your local ONTAP system.'
 ---
-= Access ONTAP tools API reference documentation through the Swagger UI
+= Access ONTAP tools for VMware vSphere API reference documentation through the Swagger UI
 
 :icons: font
 :imagesdir: ../media/

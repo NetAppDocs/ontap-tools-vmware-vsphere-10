@@ -2,18 +2,18 @@
 permalink: configure/configure-user-role-and-privileges.html
 sidebar: sidebar
 keywords: user roles
-summary: 'You can configure new user roles for managing storage backends using the JSON file provided with ONTAP tools and ONTAP System Manager.'
+summary: 'You can configure new user roles for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.'
 ---
 = Configure ONTAP user roles and privileges
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools and ONTAP System Manager.
+You can configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.
 
 *What you'll need*
 
-* You should have downloaded the ONTAP Privileges file from ONTAP tools using _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_.
+* You should have downloaded the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_.
 * You should have logged in with administrator privileges for the storage backend.
 
 [NOTE]
@@ -42,7 +42,7 @@ The *Role* field is auto populated based on the product capability selected.
 The new role and user are added, and you can see the detailed privileges under the role that you have configured.
 // edited for 10.0 release
 
-NOTE: The uninstall operation does not remove ONTAP tool roles but removes the localized names for the ONTAP tool specific privileges and appends the prefix `XXX missing privilege` to them. When you reinstall ONTAP tools or upgrade to a newer version, all the standard ONTAP tools roles and ONTAP tools-specific privileges are restored.
+NOTE: The uninstall operation does not remove ONTAP tool roles but removes the localized names for the ONTAP tool specific privileges and appends the prefix `XXX missing privilege` to them. When you reinstall ONTAP tools for VMware vSphere or upgrade to a newer version, all the standard ONTAP tools for VMware vSphere roles and ONTAP tools-specific privileges are restored.
 
 == SVM aggregate mapping requirements
 
@@ -64,7 +64,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 Follow the instructions in this section to create the user and roles manually without using the JSON file.
 
-. Access ONTAP System Manager. To access ONTAP system manager use the cluster management IP address of the cluster.
+. Access ONTAP System Manager using the cluster management IP address of the cluster.
 . Log in as the cluster or SVM user.
 . Select *Cluster* > *Settings* > *Users and Roles* pane.
 . Create Roles:
@@ -77,8 +77,8 @@ Add the *REST API Path* and the respective access from the drop down.
 .. Select *Add* under *Users* table.
 .. In the *Add User* dialog box, select *System Manager*.
 .. Enter the *Username*.
-.. Select the *Role* from the options created in the *Create Roles* step above.
-.. Enter the applications to give access to and the authentication method. The ONTAPI and HTTP are the required application and the authentication type is *Password*. 
+.. Select *Role* from the options created in the *Create Roles* step above.
+.. Enter the applications to give access to and the authentication method. ONTAPI and HTTP are the required applications, and the authentication type is *Password*. 
 .. Set the *Password for the User* and *Save* the user.
  
 

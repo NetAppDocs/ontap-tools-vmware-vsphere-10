@@ -2,14 +2,14 @@
 permalink: configure/discover-storage-systems-and-hosts.html
 sidebar: sidebar
 keywords:
-summary: 'When you first run ONTAP tools in a vSphere Client, ONTAP tools for VMware vSphere discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.'
+summary: 'When you first run ONTAP tools for VMware vSphere in a vSphere Client, ONTAP tools for VMware vSphere discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.'
 ---
 = Discover storage systems and hosts
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When you first run ONTAP tools in a vSphere Client, ONTAP tools for VMware vSphere discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.
+When you first run ONTAP tools for VMware vSphere in a vSphere Client, ONTAP tools discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.
 
 *What you will need*
 
@@ -24,7 +24,7 @@ While discovering the storage systems, ONTAP tools for VMware vSphere collects i
 
 *Steps*
 
-. From the vSphere Client Home page, select *Hosts and Clusters*.
+. From the vSphere Client home page, select *Hosts and Clusters*.
 . Right-click the required datacenter, and then select *NetApp ONTAP tools* > *Update Host Data* .
 +
 ONTAP tools for VMware vSphere displays a *Confirm* dialog box with the following message: 
@@ -38,5 +38,5 @@ ONTAP tools for VMware vSphere displays a *Confirm* dialog box with the followin
 
 After the discovery process is complete, perform the following actions:
 
-* Use ONTAP tools to configure ESXi host settings for hosts that display the Alert icon in the Adapter Settings column, the MPIO Settings column, or the NFS Settings column.
+* Use ONTAP tools for VMware vSphere to configure ESXi host settings for hosts that display the Alert icon in the Adapter Settings column, the MPIO Settings column, or the NFS Settings column.
 * Provide the storage system credentials.

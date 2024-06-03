@@ -20,7 +20,7 @@ Follow the steps below to discover the storage backends.
 .Steps
 
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
 . Click on the vertical ellipses menu and select *Discover storage*
 
@@ -30,17 +30,17 @@ You can track the progress in the Recent Tasks panel.
 Follow the steps in this section to modify the existing storage backend.
 
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
 . Click on the vertical ellipses menu and select *Modify* to modify the credentials or the port name.
 You can track the progress in the Recent Tasks panel.
 
 You can perform the Modify operation for global ONTAP clusters using ONTAP tools Manager using the following steps
 
-. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
-. Log in with the ONTAP tools administrator credentials you provided during deployment. 
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select storage backends from the sidebar.
-. Select the  *Storage Backend* you want to modify
+. Select the Storage Backend you want to modify
 . Click on the vertical ellipses menu and select *Modify*. 
 . You can modify the credentials or the port. Enter the *Username* and *Password* to modify the storage backend.
 
@@ -50,17 +50,17 @@ You need to delete all the datastores attached to the storage backend before rem
 Follow the steps below to remove storage backend.
 
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. In the shortcuts page, click on *NetApp ONTAP tools* under plug-ins section.
+. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
 . Click on the vertical ellipses menu and select *Remove*. Ensure that the storage backend does not contain any datastores.
 You can track the progress in the Recent Tasks panel.
 
 You can perform the remove operation for global ONTAP clusters using ONTAP tools Manager.
 
-. Launch ONTAP tools Manager using `\https://loadBalanceIP:8443/virtualization/ui/` from the browser. 
-. Log in with the ONTAP tools administrator credentials you provided during deployment. 
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select *Storage Backends* from the sidebar.
-. Select the  storage backend you want to remove
+. Select the storage backend you want to remove
 . Click on the vertical ellipses menu and select *Remove*. 
 
 == Drill down view of storage backend

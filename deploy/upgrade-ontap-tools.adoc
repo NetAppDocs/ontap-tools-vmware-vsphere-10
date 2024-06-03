@@ -9,7 +9,7 @@ summary: 'When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10.1, a r
 :imagesdir: ../media/
 
 [.lead]
-When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10.1, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.1, the same recovery volume is used and the details are refreshed. 
+When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10.1, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools for VMware vSphere setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.1, the same recovery volume is used and the details are refreshed. 
 Upgrade is supported for both HA and non-HA deployments.
 
 *Before you begin*
@@ -19,7 +19,7 @@ You need to complete the following steps before proceeding with the upgrade task
 
 *Enable Diagnostics*
 
-. From the vCenter Server, open a console to ONTAP tools.
+. From vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
 . Enter *4* to select Support and Diagnostics.
 . Enter *2* to select Enable remote diagnostic access.
@@ -53,12 +53,12 @@ If support bundle generation is in progress, wait for it to complete and then de
 
 *Steps*
 
-. Upload ONTAP tools VMware vSphere upgrade ISO to content library.
-. In the primary VM page, select the *Actions* > *Edit Settings* 
+. Upload ONTAP tools for VMware vSphere upgrade ISO to content library.
+. In the primary VM page, select *Actions* > *Edit Settings* 
 . In the edit settings window under *CD/DVD drive* field select content library ISO file. 
 . Select the ISO file and click *OK*. Choose the connected checkbox across the *CD/DVD drive* field.
 image:../media/primaryvm-edit-settings.png[Edit settings]
-. From the vCenter Server, open a console to ONTAP tools.
+. From vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
 . Enter *3* to select the System Configuration menu.
 . Enter *7* to select the upgrade option.

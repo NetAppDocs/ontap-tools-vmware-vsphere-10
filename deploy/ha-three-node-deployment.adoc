@@ -50,7 +50,7 @@ image:../media/ha-deployment-sys-config.png[system configuration]
 Enter the following details:
 
 .. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter Server.
-.. The Enable AutoSupport checkbox is selected by default. The AutoSupport can be enabled or disabled only during deployment.
+.. The *Enable AutoSupport* checkbox is selected by default. AutoSupport can be enabled or disabled only during deployment.
 .. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission. 
 .. Administrator Username and Administrator Password: This is the password used to log in to ONTAP tools Manager. 
 .. Enter your NTP server information in the *NTP Servers* field. 
@@ -59,16 +59,16 @@ Enter the following details:
 +
 image:../media/ha-deploy-config.png[Deployment Configuration]
 
-.. Enter an available IP Address in the Virtual IP address for the Kubernetes Control Plane. You need this for the Kubernetes API Server.
-.. In the advanced deployment option, select the *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
+.. Enter an available IP address in the Virtual IP address for the Kubernetes control plane. You need this for the Kubernetes API Server.
+.. In the advanced deployment option, select *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
 +
 [NOTE]
 When SVM scope is enabled you should have already enabled SVM support with management IP address.
 .. Select either NFS or iSCSI in the *Protocol* field. 
 .. Enter the ONTAP Cluster or the SVM Management IP address in the *ONTAP/SVM Management LIF* field.
-.. Enter the ONTAP Cluster or the SVM ONTAP/SVM Data LIF. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then a iSCSI data LIF should be provided.
+.. Enter the ONTAP Cluster or the SVM ONTAP/SVM Data LIF. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
 .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
-.. Enter the ONTAP/SVM Username. ONTAP/SVM username and Password is required for Trident to create volumes for storing the data of services in case of advanced or HA deployment and to recover the data from volumes during node failure.  
+.. Enter the ONTAP/SVM Username. ONTAP/SVM username and Password is required for Trident to create volumes for storing the data of services in case of advanced or HA deployment and to recover the data from volumes during node failure.
 .. Enter the ONTAP/SVM Password. 
 .. Primary VM is enabled by default. Do not alter this choice.
 . In *Customize template* > *Content Library Details* window, enter the *Content Library Name* and the *OVF Template Name*.
@@ -79,7 +79,7 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 The information provided here will be validated for proper patterns during installation process. In the case of discrepancy, an error message will be displayed on the web console and you will be prompted to correct any incorrect information provided.
 +
 .. Enter the host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address. 
-.. Enter IP Address (IPV4) mapped to the host name. In case of dual stack, provide any available IPv4 IP address that is in the same VLAN as the IPv6 address.
+.. Enter IP address (IPV4) mapped to the host name. In case of dual stack, provide any available IPv4 IP address that is in the same VLAN as the IPv6 address.
 .. Enter the IPV6 Address on the deployed network only when you need dual stack.
 .. Specify the prefix length only for IPV6. 
 .. Specify the subnet to use on the deployed network in Netmask (only for IPV4) field. 
@@ -90,8 +90,8 @@ The information provided here will be validated for proper patterns during insta
 .. Specify the IPV6 gateway on the deployed network only when you need dual stack. 
 . In *Customize template* > *Node 2 Configuration* and *Node 3 Configuration* window, enter the following details:
 .. Host name 2 and 3 - Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
-.. IP Address
-.. IPV6 Address
+.. IP address
+.. IPV6 address
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
