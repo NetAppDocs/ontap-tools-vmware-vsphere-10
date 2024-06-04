@@ -52,7 +52,7 @@ AutoSupport can be enabled or disabled only during deployment.
 image:../media/ha-deploy-config.png[Deployment Configuration]
 
 .. Enter an available IP address in the Virtual IP address for the Kubernetes control plane. You need this for the Kubernetes API Server.
-.. Select *Enable SVM scoping* option when you intend to use direct SVM. To use ONTAP cluster, do not select the checkbox.
+.. Select *Enable SVM scoping* option when you intend to use the directly added SVM user account. To use ONTAP cluster, do not select the checkbox.
 +
 [NOTE]
 When SVM scope is enabled, you should have already enabled SVM support with management IP address.

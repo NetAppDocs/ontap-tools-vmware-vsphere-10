@@ -46,7 +46,7 @@ NOTE: The uninstall operation does not remove ONTAP tool roles but removes the l
 
 == SVM aggregate mapping requirements
 
-To use direct SVM credentials for provisioning datastores, internally ONTAP tools for VMware vSphere creates volumes on the aggregate specified in the datastores POST API. The ONTAP does not allow the creation of volumes on unmapped aggregates on an SVM using direct SVM credentials. To resolve this, you need to map the SVMs with the aggregates using the REST API or CLI as described here.
+To use SVM user credentials for provisioning datastores, internally ONTAP tools for VMware vSphere creates volumes on the aggregate specified in the datastores POST API. The ONTAP does not allow the creation of volumes on unmapped aggregates on an SVM using SVM user credentials. To resolve this, you need to map the SVMs with the aggregates using the ONTAP REST API or CLI as described here.
 
 REST API:
 

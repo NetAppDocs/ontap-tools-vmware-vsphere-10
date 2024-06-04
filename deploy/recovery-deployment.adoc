@@ -44,10 +44,10 @@ AutoSupport can be enabled or disabled only during deployment.
 .. Maintenance user password: This is used to grant access to maintenance console options.
 . In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be the same as the ones provided during initial deployment with the exception of data LIF value.
 [NOTE]
-The storage SVM name should not be changed as that is where the recovery data is stored. This applies for direct SVM as well.
+The storage SVM name should not be changed as that is where the recovery data is stored. This applies to directly added SVM user account as well.
 . In the case of HA-deployment recovery, provide the following details:
 .. Content library details.
-.. vCenter configuration details
+.. vCenter configuration details.
 . In *Customize template* > *Node Configuration* window enter the details as per the set up you're trying to recover, non-HA or HA setup.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
