@@ -17,6 +17,7 @@ sidebar:
     - section: configure
     - section: protect
     - section: manage
+    - section: upgrade
     - section: migrate
     - section: automation
     - title: Legal notices
