@@ -1,5 +1,5 @@
 section: upgrade
-title: Migrate ONTAP tools
+title: Upgrade ONTAP tools
 entries:
   - title: Upgrade to the latest release of ONTAP tools 
     url: /upgrade/upgrade-ontap-tools.html

@@ -13,6 +13,7 @@ You might encounter error codes during ONTAP tools for VMware vSphere upgrade op
 The error codes are five digits long, where the first two digits represent the script that encountered the issue, and the last three digits represent the specific workflow within that script.
 
 All error logs are recorded in the ansible-perl-errors.log file to facilitate easy tracking and resolution of issues. This log file contains the error code and the failed Ansible task. 
+
 [NOTE]
 The error codes provided on this page are for reference only. Contact the support team if error persists or if there's no resolution mentioned.
 
