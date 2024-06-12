@@ -1,19 +1,17 @@
 section: deploy
-title: Deploy ONTAP tools
+title: Deploy ONTAP tools for VMware vSphere
 entries:
-  - title: ONTAP tools Quick start
-    url: /deploy/qsg_10.html
-  - title: Requirements for deploying the ONTAP tools
-    url: /deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html
-  - title: How to download ONTAP tools
-    url: /deploy/concept_how_to_download_ontap_tools.html
-  - title: Deployment checklist
-    url: /deploy/deployment_checklist.html
+  - title: Prerequisites
+    url: /deploy/sizing-requirements.html
+  - title: Download ONTAP tools
+    url: /deploy/download-ontap-tools.html
   - title: Prepare to deploy ONTAP tools
-    url: /deploy/prepare_deployment.html
-  - title: How to deploy Non-HA single node configuration
-    url: /deploy/nonha_deployment.html
-  - title: How to deploy HA three node configuration
-    url: /deploy/ha_three_node.html
-
-    
+    url: /deploy/prepare-deployment.html
+  - title: Deploy non-HA single-node configuration
+    url: /deploy/nonha-deployment.html
+  - title: Deploy HA configuration
+    url: /deploy/ha-three-node-deployment.html
+  - title: Recover your ONTAP tools for VMware vSphere setup
+    url: /deploy/recovery-deployment.html
+  - title: Deployment error codes
+    url: /deploy/deployment-error-codes.html

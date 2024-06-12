@@ -1,0 +1,57 @@
+---
+permalink: concepts/ontap-tools-concepts-terms.html
+sidebar: sidebar
+keywords:
+summary: 'The following section describes the key concepts and terms used in the document.'
+---
+= Key concepts and terms
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The following section describes the key concepts and terms used in the document. 
+
+=== Certificate authority (CA)
+CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
+
+=== High Availability (HA)
+Cluster nodes are configured in HA pairs for non-disruptive operations.
+
+=== Logical unit number (LUN)
+A LUN is a number used to identify a logical unit within a Storage Area Network (SAN). These addressable devices are typically logical disks accessed through the Small Computer System Interface (SCSI) protocol or one of its encapsulated derivatives.
+
+=== ONTAP tools Manager
+ONTAP tools Manager provides more control to ONTAP tools for VMware vSphere administrator over the managed vCenter Server instances and onboarded storage backends. ONTAP tools Manger helps in management of vCenter Server instances, storage backends, certificates, passwords and Log bundle downloads.
+
+=== Open Virtual Appliance (OVA)
+OVA is an open standard for packaging and distributing virtual appliances or software that must be run on virtual machines. 
+
+=== Storage Replication Adapter (SRA)
+SRA is the storage vendor specific software that is installed inside the SRM appliance. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level and the cluster level configuration.
+
+=== Storage virtual machine (SVM)
+Like a virtual machine running on a hypervisor, SVM is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
+
+=== Virtual Machine File System (VMFS)
+VMFS is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments.
+
+=== Virtual volumes (vVols)
+vVols provide a volume-level abstraction for storage used by a virtual machine. It includes several benefits and provides an alternative to using a traditional LUN. A vVol datastore is typically associated with a single LUN which acts as a container for the vVols.
+
+=== VM Storage Policy
+VM Storage Policies are created in vCenter Server under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.
+
+=== VMware Site Recovery Manager (SRM)
+SRM provides business continuity, disaster recovery, site migration, and non-disruptive testing capabilities for VMware virtual environments.
+
+=== VMware vSphere APIs for Storage Awareness (VASA)
+VASA is a set of APIs that integrate storage arrays with vCenter Server for management and administration. The architecture is based on several components including the VASA Provider which handles communication between VMware vSphere and the storage systems.
+
+=== VMware vSphere Storage APIs - Array Integration (VAAI)
+VAAI is a set of APIs that enables communication between VMware vSphere ESXi hosts and the storage devices. The APIs include a set of primitive operations used by the hosts to offload storage operations to the array. VAAI can provide significant performance improvements for storage-intensive tasks.
+
+=== vVols datastore
+The vVols datastore is a logical datastore representation of a vVols container which is created and maintained by a VASA Provider.
+
+=== Zero RPO
+RPO stands for recovery point objective, which is the amount of data loss deemed acceptable during a given time. Zero RPO signifies that no data loss is acceptable.

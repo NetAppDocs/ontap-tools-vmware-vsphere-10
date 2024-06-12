@@ -1,0 +1,27 @@
+---
+permalink: configure/manager-user-interface.html
+sidebar: sidebar
+keywords: ontap tools manager, managerui
+summary: 'ONTAP tools Manager provides more control and power to ONTAP tools for VMware vSphere administrator, which helps in overall management of the appliance, tenants, and storage backends.'
+---
+= ONTAP tools Manager user interface
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+ONTAP tools for VMware vSphere is a multi-tenant system, which manages multiple vCenter Server instances. ONTAP tools Manager provides more control to ONTAP tools for VMware vSphere administrator over the managed vCenter Server instances and onboarded storage backends. 
+
+ONTAP tools Manager helps in:
+
+* vCenter Server instance management - Add and manage vCenter Server instances to ONTAP tools.
+* Storage backend management - Add and manage ONTAP storage clusters to ONTAP tools for VMware vSphere and map them to onboarded vCenter Server instances globally.
+* Log bundle downloads - Collect log files for ONTAP tools for VMware vSphere.
+* Certificate management - Change the self-signed certificate to a custom CA certificate and renew
+or refresh all certificates.
+* Password management - Reset OVA application password for the user.
+
+To access ONTAP tools Manager, launch `\https://loadBalanceIP:8443/virtualization/ui/` from the browser and login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
+
+
+

@@ -1,0 +1,45 @@
+---
+permalink: manage/manage-vcenter.html
+sidebar: sidebar
+keywords:
+summary: 'vCenters are central management platforms that allow you to control hosts, virtual machines, and storage backends.'
+---
+= Manage vCenter Server instance
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+vCenter Servers are central management platforms that allow you to control hosts, virtual machines, and storage backends.
+
+== Associate or Dissociate storage backend with vCenter Server instance
+
+The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to Associate or Disassociate a storage backend 
+This task helps you to create mapping between storage backend and onboarded vCenter Server instance globally.
+
+*Steps*
+
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select vCenter Server instances from the sidebar.
+. Click on the vertical ellipses against the vCenter Server that you want to associate or dissociate with storage backends.
+. Select *Associate or Dissociate storage backend* depending on what action you want to perform.
+
+== Modify vCenter Server instance
+Follow the steps below to modify the vCenter Server instances.
+
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select vCenter Server instances from the sidebar
+. Click on the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
+. Modify the vCenter Server instance details and select *Modify*.
+
+== Remove vCenter Server instance
+You need to remove all the storage backends attached to the vCenter Server before removing it. 
+
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select vCenter Server instances from the sidebar
+. Click on the vertical ellipses against the vCenter Server that you want remove and select *Remove*.
++
+[NOTE]
+Once you remove the vCenter Server instances, it will no longer be maintained by the application.

@@ -1,0 +1,30 @@
+---
+permalink: concepts/ontap-roles.html
+sidebar: sidebar
+keywords:
+summary: 'You can set up several recommended ONTAP roles for working with ONTAP tools for VMware vSphere and role-based access control \(RBAC\). These roles contain the ONTAP privileges that are required to perform the required storage operations that are executed by ONTAP tools for VMware vSphere tasks.'
+---
+= Recommended ONTAP roles for ONTAP tools for VMware vSphere
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can set up several recommended ONTAP roles for working with ONTAP tools for VMware vSphere and role-based access control (RBAC). These roles contain the ONTAP privileges required to perform the storage operations executed by ONTAP tools for VMware vSphere tasks.
+
+To create new user roles, you should log in as an administrator of the storage systems running ONTAP. You can create ONTAP roles using ONTAP System Manager 9.8P1 or later.
+
+Each ONTAP role has an associated username and password pair, which constitute the credentials of the role. If you do not log in by using these credentials, you cannot access the storage operations that are associated with the role.
+
+As a security measure, ONTAP tools for VMware vSphere specific ONTAP roles are ordered hierarchically. This means the first role is the most restrictive and has only the privileges associated with the most basic set of ONTAP tools for VMware vSphere storage operations. The next role includes its own privileges and all the privileges associated with the previous role. Each additional role is less restrictive regarding the supported storage operations.
+
+The following are some of the recommended ONTAP RBAC roles when using ONTAP tools for VMware vSphere. After you create these roles, you can assign them to users who must perform tasks related to storage, such as provisioning virtual machines.
+
+|===
+|*Role* | *privileges*
+|Discovery |This role enables you to add storage systems.
+|Create Storage |This role enables you to create storage. This role also includes all the privileges that are associated with the Discovery role.
+|Modify Storage |This role enables you to modify storage. This role also includes all the privileges that are associated with the Discovery role and the Create Storage role.
+|Destroy Storage | This role enables you to destroy storage. This role also includes all the privileges that are associated with the Discovery role, the Create Storage role, and the Modify Storage role.
+|===
+
+If you are using ONTAP tools for VMware vSphere, you should also set up a policy-based management (PBM) role. This role enables you to manage storage by using storage policies. This role requires that you also set up the "`Discovery`" role.

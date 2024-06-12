@@ -1,0 +1,61 @@
+---
+permalink: protect/configure-storage-replication-adapter-for-san-environment.html
+sidebar: sidebar
+keywords:
+summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for Site Recovery Manager \(SRM\).'
+---
+= Configure SRA for SAN and NAS environments
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You should set up the storage systems before running Storage Replication Adapter (SRA) for Site Recovery Manager (SRM).
+
+
+== Configure SRA for SAN environment
+
+*What you will need*
+
+You should have the following programs installed on the protected site and the recovery site:
+
+* SRM
++
+Documentation about installing SRM is on the VMware site.
++
+https://www.vmware.com/support/pubs/srm_pubs.html[VMware Site Recovery Manager Documentation]
+
+* SRA
++
+The adapter is installed either on SRM.
+
+*Steps*
+
+. Verify that the primary ESXi hosts are connected to the LUNs in the primary storage system on the protected site.
+. Verify that the LUNS are in igroups that have the `ostype` option set to _VMware_ on the primary storage system.
+. Verify that the ESXi hosts at the recovery site have appropriate iSCSI connectivity to the storage virtual machine (SVM). The secondary site ESXi hosts should have access to the secondary site storage, similarly the primary site ESXi hosts should have access to the primary site storage.
++
+You can do this either by verifying that the ESXi hosts have local LUNs connected on the SVM or the `iscsi show initiators` command on the SVMs. 
+Check the LUN access for the mapped LUNs in the ESXi host to verify iSCSI connectivity.
+
+== Configure SRA for NAS environment
+
+*What you will need*
+
+You should have the following programs installed on the protected site and the recovery site:
+
+* SRM
++
+Documentation about installing SRM can be found on the VMware site.
++
+https://www.vmware.com/support/pubs/srm_pubs.html[VMware Site Recovery Manager Documentation]
+
+* SRA
++
+The adapter is installed on SRM and the SRA server.
+
+*Steps*
+
+. Verify that the datastores at the protected site contain virtual machines that are registered with vCenter Server.
+. Verify that the ESXi hosts at the protected site have mounted the NFS exports volumes from the storage virtual machine (SVM).
+. Verify that valid addresses such as the IP address, host name, or FQDN on which the NFS exports are present are specified in the *NFS Addresses* field when using the Array Manager wizard to add arrays to SRM.
+. Use the `ping` command on each ESXi host at the recovery site to verify that the host has a VMkernel port that can access the IP addresses that are used to serve NFS exports from the SVM.
