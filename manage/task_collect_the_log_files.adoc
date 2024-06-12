@@ -1,0 +1,23 @@
+---
+permalink: manage/task_collect_the_log_files.html
+sidebar: sidebar
+keywords:
+summary: 'You can collect log files for ONTAP tools for VMware vSphere from the option available in the ONTAP tools graphical user interface \(GUI\). Technical support might ask you to collect the log files to help troubleshoot a problem.'
+---
+= Collect the log files
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can collect log files for ONTAP tools for VMware vSphere from the option available in the ONTAP tools manager user interface. Technical support might ask you to collect the log files to help troubleshoot a problem.
+
+*Steps*
+
+. Launch `\https://loadBalanceIP:8443/virtualization/ui/` from browser with ONTAP tools administrator credentials provided during deployment. 
+. Select *Log Bundles* from the sidebar.
++
+This operation can take several minutes.
+. Select *GENERATE* to generate the log files.
+. Enter the label for the Log Bundle and select *GENERATE*.
++
+Download the tar.gz file and send it to technical support. 

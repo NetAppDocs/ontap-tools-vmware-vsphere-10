@@ -26,9 +26,11 @@ Get Aggregate id, storage_id(SVM uuid) using ONTAP REST API.
 POST /virtualization/api/v1/vcenters/cdded9ad-6bsd-4c9e-b44g-691250bfe2df/vvols/datastores
 
 Use the following URI to check the status:
-
++
+----
 `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
-
+----
++
 Request Body for NFS datastore
 
 {
