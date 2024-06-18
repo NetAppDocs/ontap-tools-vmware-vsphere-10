@@ -1,0 +1,30 @@
+---
+permalink: automation/how-to-access-rest-api-doc-through-the-swagger-user-interface.html
+sidebar: sidebar
+keywords: REST API, Swagger
+summary: 'You can access the ONTAP REST API documentation through the Swagger UI at your local ONTAP system.'
+---
+= Access ONTAP tools for VMware vSphere API reference documentation through the Swagger UI
+
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can access the ONTAP REST API documentation through the Swagger UI at your local ONTAP system.
+
+*Before you begin*
+
+You should have the following:
+
+• IP address or host name of the ONTAP cluster management LIF
+• Username and password for an account with authority to access the ONTAP REST API
+
+.Steps
+
+. Type the URL in your browser and press *Enter*:
+_\https://<ip_address>/docs/api_
+. Sign in using the ONTAP account
++
+The ONTAP API documentation page is displayed with the API calls organized in major resource
+categories at the bottom.
+. As an example of an individual API call, scroll down to the *cluster* category and click *GET /cluster*.

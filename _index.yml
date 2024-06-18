@@ -1,30 +1,32 @@
 indexpage:
+  title: ONTAP tools for VMware vSphere documentation
   lead: ONTAP tools for VMware vSphere enables you to configure, manage, and protect your virtual datastores in your vCenter Server environment.
-  tiles:
-    # one or more tile definitions for the page
+  tiles: 
     - title: Get started
       links:
         - title: Release notes
-          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886542
+          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3319071
         - title: Learn about ONTAP tools for VMware vSphere
-          url: /concepts/concept_ontap_tools_overview.html
-        - title: ONTAP tools Quick start
-          url: /deploy/qsg_10.html
-        - title: Deploy ONTAP tools
-          url: /deploy/prepare_deployment.html
-        - title: Migrate ONTAP tools
-          url: migrate/migrate_to_ng.html
-    - title: Use ONTAP tools
+          url: /concepts/ontap-tools-overview.html
+        - title: Deploy ONTAP tools for VMware vSphere
+          url: /deploy/prepare-deployment.html
+        - title: Upgrade to the latest release of ONTAP tools for VMware vSphere
+          url: /upgrade/upgrade-ontap-tools.html
+        - title: Migrate ONTAP tools for VMware vSphere
+          url: migrate/migrate-to-latest-ontaptools.html
+    - title: Use ONTAP tools for VMware vSphere
       links:
       - title: Configure role-based access control
-        url: /concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html
+        url: /concepts/vcenter-server-role-based-access-control-features.html
       - title: Configure remote diagnostics
-        url: /manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html
+        url: /manage/configure-remote-diagnostic-access.html
       - title: Configure high availability
-        url: /concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html
+        url: /concepts/high-availability.html
+      - title: Protect your datastores
+        url: /protect/enable-storage-replication-adapter.html
     - title: More resources
       links:
-      - title: Documentation for earlier versions of ONTAP tools for VMware
+      - title: Documentation for earlier versions of ONTAP tools for VMware vSphere
         url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
       - title: NetApp Knowledge Base - ONTAP tools
         url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider

@@ -1,0 +1,30 @@
+---
+permalink: configure/configure-esx-server-multipath-and-timeout-settings.html
+sidebar: sidebar
+keywords:
+summary: 'ONTAP tools for VMware vSphere checks and sets the ESXi host multipathing settings and HBA timeout settings that work best with NetApp storage systems.'
+---
+= Configure ESXi server multipath and timeout settings
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings and HBA timeout settings that work best with NetApp storage systems.
+
+*About this task*
+
+This process might take a long time, depending on your configuration and system load. The task progress is displayed in the Recent Tasks panel. As the tasks are completed, the host status Alert icon is replaced by the Normal icon or the Pending Reboot icon.
+
+*Steps*
+
+. From the VMware vSphere Web Client home page, click *Hosts and Clusters*.
+. Right-click a host, and then select *NetApp ONTAP tools* > *Update host data*.
+. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
+. Go to ESXi Host compliance card in the Overview (Dashboard) of the ONTAP tools for VMware vSphere plug-in.
+. Select *Apply Recommended Settings* link.
+. In the *Apply recommended host settings* window, select the hosts that you want to comply with NetApp recommended host settings and click *Next*
+[NOTE]
+You can expand the ESXi host to see the current values 
+. In the settings page, select the recommended values as required.
+. In the summary pane, check the values and click *Finish*
+You can track the progress in the Recent task panel.

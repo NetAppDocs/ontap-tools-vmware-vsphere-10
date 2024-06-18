@@ -1,0 +1,106 @@
+---
+permalink: deploy/deployment-error-codes.html
+sidebar: sidebar
+keywords: upgrade
+summary: 'This page outlines the error codes for the deployment, reboot, and recovery operations of ONTAP tools for VMware vSphere system.'
+---
+= Deployment error codes
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You might encounter error codes during ONTAP tools for VMware vSphere deployment, reboot, and recovery operations. 
+The error codes are five digits long, where the first two digits represent the script that encountered the issue, and the last three digits represent the specific workflow within that script.
+
+All error logs are recorded in the ansible-perl-errors.log file to facilitate easy tracking and resolution of issues. This log file contains the error code and the failed Ansible task. 
+[NOTE]
+The error codes provided on this page are for reference only. Contact the support team if error persists or if there's no resolution mentioned.
+
+The following table lists the error codes and the corresponding file names.
+
+|===
+
+|*Error code*| *Script name*
+|00 |firstboot-network-config.pl, mode deploy
+|01 |firstboot-network-config.pl, mode upgrade
+|02 |firstboot-inputs-validation.pl
+|03 |firstboot-deploy-otv-ng.pl, deploy, ha
+|04 |firstboot-deploy-otv-ng.pl, deploy, non-ha
+|05 |firstboot-deploy-otv-ng.pl, reboot
+|06 |firstboot-deploy-otv-ng.pl, upgrade, ha
+|07 |firstboot-deploy-otv-ng.pl, upgrade, non-ha
+|08 |firstboot-otv-recovery.pl
+
+|===
+
+The last three digits of the error code indicate the specific workflow error within the script:
+
+|===
+|*Deployment error code*|*Workflow* |*Resolution*
+|050 |Ssh Key generation failed |Restart the primary virtual machine (VM).
+|051 |Failed deploying secondary VMs |
+* If the second and third VMs are created, then ensure that enough CPU/memory resources are available before you power on the secondary VMs and restart the primary VM.
+
+* If the second and third VMs are in deploy ONTAP tools for VMware vSphere template task, wait for the task to be completed, power on the VMs and reboot the primary VM.
+
+* Redeploy.
+|052 |Copy SSH Keys failed |Restart the primary VM.
+
+|053 |Failed installing RKE2 |Either run the following and restart the primary VM or redeploy:
+sudo rke2-killall.sh (all VMs)
+sudo rke2-uninstall.sh (all VMs).
+|054 |Failed setting kubeconfig |Redeploy
+|055 |Failed deploying registry |If the registry pod is present, wait for the pod to be ready then restart the primary VM or else redeploy.
+|056 |Login ISCSI has failed |Make sure that iSCSI protocol is enabled and configured properly on ONTAP. Ensure that the iSCSI Data LIF IP address provided is correct and online. Restart the VM if previous points are correct. Else, redeploy.
+|057 |Trident deployment has failed |*Ensure Management LIF and Data LIF IP addresses are reachable from VM. 
+
+*Ensure NFS or iSCSI protocol is enabled and configured properly on ONTAP.
+
+*Ensure that the NFS/iSCSI Data LIF IP address provided is correct and online.
+
+*Ensure that the user name and password provided are correct and the user has sufficient privileges to create volume.
+
+* Restart if all the above points are correct. Else, redeploy.
+|058 |Trident import has failed |*Ensure that the user name and password provided are correct and the user has sufficient privileges to create, mount, clone, and delete volumes.
+
+*Ensure that the same ONTAP setup is used to recover the setup and retry recovery.
+|059 |KubeVip deployment has failed | Ensure virtual IP address for Kubernetes control plane and load balancer IP address provided during deployment belong to same VLAN and are free IP addresses. Restart if all the previous points are correct. Else, redeploy.
+|060 |Operator deployment has failed |Restart
+|061 |Services deployment has failed |Perform basic Kubernetes debugging like get pods, get rs, get svc, and so on in ntv-system namespace for more details and error logs at /var/log/ansible-perl-errors.log and /var/log/ansible-run.log and redeploy.
+|062 |VASA Provider and SRA deployment has failed |Refer to the error logs at /var/log/ansible-perl-errors.log for more details and redeploy.
+|064 |version.xml verification failed |Redeploy
+|065 |Swagger page URL is not reachable |Redeploy
+|066 |Post deployment steps failed |-
+|088 |Configuring log rotate for journald has failed |Restart the primary VM.
+|089 |Changing ownership of summary log rotate config file has failed |Restart the primary VM.
+
+|===
+
+|===
+|*Reboot error code*|*Workflow*
+|067
+|Waiting for rke2-server timed out
+|101
+|Failed to Reset Maint/Console user password
+|102
+|Failed to Delete password file during reset Maint/Console user password
+|103
+|Failed to Update New Maint/Console user password in vault
+|===
+
+|===
+|*Recovery error code* |*Workflow* |*Resolution*
+|104 |Post recovery steps have failed. |-
+|105 |Copying contents to recovery volume has failed. |-
+|106 |Failed to mount recovery volume. |* Ensure that the same SVM is used and recovery volume is present in the SVM. (Recovery volume name starts with otvng_trident_recovery)
+
+* Ensure Management LIF and Data LIF IP addresses are reachable from VM.
+
+* Ensure NFS/iSCSI protocol is enabled and configured properly on ONTAP.
+
+* Ensure that the NFS/iSCSI Dat LIF IP address provided is correct and online.
+
+* Ensure that the username, password, protocol provided are correct and the user has sufficient privileges to create, mount, clone, delete.
+
+* Retry the recovery
+|===

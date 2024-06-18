@@ -1,0 +1,28 @@
+---
+permalink: automation/svm-workflow.html
+sidebar: sidebar
+keywords: REST APIs, swagger
+summary: 'To use SVM user credentials for provisioning datastores, ONTAP tools for VMware vSphere creates volumes on the aggregate specified in the datastores POST API.'
+---
+= SVM aggregate mapping requirements
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+To use SVM user credentials for provisioning datastores, ONTAP tools for VMware vSphere creates volumes on the aggregate specified in the datastores POST API. ONTAP does not allow the creation of volumes on unmapped aggregates on an SVM using SVM user credentials. To resolve this, map the SVMs with the aggregates using the ONTAP REST API or CLI as described here.
+
+ONTAP REST API:
+
+----
+PATCH "/api/svm/svms/f16f0935-5281-11e8-b94d-005056b46485"
+'{"aggregates":{"name":["aggr1","aggr2","aggr3"]}}'
+----
+
+ONTAP CLI:
+----
+sti115_vsim_ucs630f_aggr1 vserver show-aggregates
+AvailableVserver Aggregate State Size Type SnapLock
+Type
+svm_test sti115_vsim_ucs630f_aggr1
+online 10.11GB vmdisk non-snaplock
+----

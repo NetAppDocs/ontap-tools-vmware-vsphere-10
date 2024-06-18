@@ -1,0 +1,25 @@
+---
+permalink: configure/associate-storage-backend.html
+sidebar: sidebar
+keywords:
+summary: 'need info.'
+---
+= Associate storage backend with a vCenter Server instance
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to associate a storage backend.
+
+*About this task*
+
+This task helps you to create mapping between storage backend and the onboarded vCenter Server instance globally.
+
+*Steps*
+
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select vCenter from the sidebar.
+. Click on the vertical ellipses against the vCenter that you want to associate with storage backends.
+. Select storage backend from the dropdown in the pop up.
+. Select *Associate Storage Backend* option to associate vCenter Server instance with the required storage backend.
