@@ -40,14 +40,11 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |ONTAP
 |Latest patch release of ONTAP 9.12.1, 9.13.1, or 9.14.1
 
-|VMware vSphere
-|VMware 7.0U3, 8.0U1, or 8.0U2
-
 |ESXi hosts
 |ESXi 7.0.3
 
 |vCenter server
-|vCenter 7.0U3, 8.0U1, or 8.0U2
+|vCenter 7.0U3
 
 |VASA provider 
 |3.0
