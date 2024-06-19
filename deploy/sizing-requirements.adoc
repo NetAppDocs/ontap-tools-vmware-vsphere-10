@@ -44,7 +44,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |ESXi 7.0.3
 
 |vCenter server
-|vCenter 7.0U3, 8.0U1, or 8.0U2
+|vCenter 7.0U3
 
 |VASA provider 
 |3.0
