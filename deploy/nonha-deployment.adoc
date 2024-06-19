@@ -41,7 +41,7 @@ image:../media/ha-deployment-sys-config.png[system configuration]
 Enter the following details:
 .. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter Server.
 .. The *Enable ASUP* checkbox is selected by default.
-+
+
 AutoSupport can be enabled or disabled only during deployment. 
 .. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission.
 .. Administrator Username and Administrator Password: This is the password used to log in to ONTAP Tools Manager. 
