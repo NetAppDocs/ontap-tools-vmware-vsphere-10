@@ -19,7 +19,7 @@ Following are ONTAP tools for VMware vSphere requirements before proceeding with
 . Configure and set up your vCenter Server environment. 
 . Download the _.ova_ file. 
 . (Optional) Used for automation user - Gather the Postman collections JSON file provided by NetApp. 
-. Parent vCenter Server Credentials to deploy the OVA. 
+. Parent vCenter Server Credentials to deploy the OVA. Parent vCenter Server password should not contain these special characters($, ', ")
 . Make sure the host or the resource pool where the OVA is deployed has the minimum resources mentioned in the link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere] section.
 . The login credentials for your vCenter Server instance to which the ONTAP tools for VMware vSphere will connect to post deployment for registration. 
 . Delete the browser cache.
@@ -42,7 +42,7 @@ Host names should be mapped to the free IP addresses on the DNS before assigning
 .. Protocol
 .. Virtual IP addresses for the Kubernetes control plane. 
 .. HA / NON-HA drop down
-.. List of hostnames)
+.. List of hostnames
 .. IP addresses (string)
 .. Content library name
 .. OVF template name
