@@ -32,6 +32,9 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 . To deploy from vSphere server:
 .. Log in to the vSphere server.
 .. Navigate to the resource pool or the host where you want to deploy the OVA and right-click the required location where you want to deploy the VM, and select *Deploy OVF template...*
+[NOTE]
+Do not deploy ONTAP tools VMware vSphere virtual machine on a vVols datastore that it manages.
+
 .. You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*
 . To deploy from content library:
 .. Go to your content library and click on the library item that you want to deploy. 
