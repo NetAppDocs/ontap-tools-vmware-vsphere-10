@@ -63,4 +63,6 @@ entries:
         url: /manage/reset-app-password.html
       - title: Reset maintenance console user password
         url: /manage/reset-maint-password.html
+  - title: Clean up volumes
+    url: /manage/delete-deployment.html
 
