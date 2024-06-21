@@ -64,5 +64,5 @@ entries:
       - title: Reset maintenance console user password
         url: /manage/reset-maint-password.html
   - title: Clean up volumes post ONTAP tools for VMware vSphere deployment removal
-    url: manage/delete-deployment.html
+    url: /manage/delete-deployment.html
 
