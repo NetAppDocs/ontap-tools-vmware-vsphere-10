@@ -1,0 +1,24 @@
+---
+permalink: manage/delete-deployment.html
+sidebar: sidebar
+keywords: ONTAP tools,Storage Replication Adapter
+summary: 'After deleting ONTAP tools for VMware vSphere deployment, you should clean up the FlexVolumes created during the deployment. If you have used a dedicated ONTAP cluster for deployments, you should clean up the FlexVolumes as the deployment creates lot of FlexVolumes which are unused resulting in lowered performance.'
+---
+= Clean up volumes post ONTAP tools for VMware vSphere deployment removal
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After deleting ONTAP tools for VMware vSphere deployment, you should clean up the FlexVolumes created during the deployment. If you have used a dedicated ONTAP cluster for deployments, you should clean up the FlexVolumes as the deployment creates lot of FlexVolumes which are unused resulting in lowered performance.
+
+Use the following guidelines to clean up the FlexVolumes post removal of ONTAP tools for VMware vSphere deployment.
+
+.Steps
+
+.  Fetch list of FlexVolumes created in ONTAP from the deployment using the following commands.
+.. kubectl get nodes
+.. cat /opt/netapp/meta/ansible_vars.yaml
+. Delete VMs from vCenter Server, see link:..https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html[Remove VMs or VM Templates from vCenter Server or from the Datastore]
+. Delete volumes from ONTAP system manager, see link:..https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html[Delete a FlexVol volume]
+. Delete SAN igroups from ONTAP, see link:..https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[View and manage SAN initiators and igroups]
+
