@@ -23,7 +23,7 @@ If it is an iSCSI deployment, then you need to delete igroups as well.
 . Fetch the list of FlexVolumes created in ONTAP during the deployment using the following command.
 +
 _kubectl get persistentvolumes_
-. Delete VMs from vCenter Server, see link:..https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html[Remove VMs or VM Templates from vCenter Server or from the Datastore]
-. Delete volumes from ONTAP system manager, see link:..https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html[Delete a FlexVol volume]
-. In case of iSCSI deployment, delete SAN igroups from ONTAP, see link:..https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[View and manage SAN initiators and igroups]
+. Delete VMs from vCenter Server, see https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html[Remove VMs or VM Templates from vCenter Server or from the Datastore]
+. Delete volumes from ONTAP system manager, see https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html[Delete a FlexVol volume]
+. In case of iSCSI deployment, delete SAN igroups from ONTAP, see https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[View and manage SAN initiators and igroups]
 
