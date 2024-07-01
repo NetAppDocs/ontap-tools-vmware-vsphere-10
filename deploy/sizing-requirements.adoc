@@ -50,7 +50,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |3.0
 
 |OVA Application 
-|10.1
+|10.2
 
 |===
 
