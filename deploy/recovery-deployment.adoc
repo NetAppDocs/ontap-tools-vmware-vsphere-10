@@ -39,7 +39,7 @@ You need to retain the load balancer IP address and the Kubernetes API Server IP
 
 AutoSupport can be enabled or disabled only during deployment. 
 .. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission.
-.. Administrator Username and Administrator Password: This is the password used to log in to ONTAP Tools Manager. This can be different from the username and password provided during initial deployment.
+.. Administrator username and administrator password: This is the password used to log in to ONTAP Tools Manager. This can be different from the username and password provided during initial deployment.
 .. Enter your NTP server information in the *NTP Servers* field. 
 .. Maintenance user password: This is used to grant access to maintenance console options.
 . In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be the same as the ones provided during initial deployment with the exception of data LIF value.

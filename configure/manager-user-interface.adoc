@@ -10,7 +10,7 @@ summary: 'ONTAP tools Manager provides more control and power to ONTAP tools for
 
 [.lead]
 
-ONTAP tools for VMware vSphere is a multi-tenant system, which manages multiple vCenter Server instances. ONTAP tools Manager provides more control to ONTAP tools for VMware vSphere administrator over the managed vCenter Server instances and onboarded storage backends. 
+ONTAP tools for VMware vSphere is a multi-tenant system that can manage multiple vCenter Server instances. ONTAP tools Manager provides more control to the ONTAP tools for VMware vSphere administrator over the managed vCenter Server instances and onboarded storage backends. 
 
 ONTAP tools Manager helps in:
 
