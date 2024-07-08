@@ -13,6 +13,9 @@ summary: 'You can create vVols datastore with new volumes or with existing volum
 Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
 The create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore. The user interface is self-explanatory, use these steps as guidelines.
+
+// 10.2 content You cannot create datastores at host level if the  host is part of a host clister protection in case of uniform configurations.cluster is part
+// add this for vmfs ds The datastore creation will be supported only for VMFS type on the same storage VM(as existing datastores) as per design. The newly created datastore will be implicity protected as part of existing host cluster protection settings.
  
 == Create vVols datastore
 
@@ -60,6 +63,8 @@ Datastore is created and mounted on all the hosts.
 == Create VMFS datastore
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
+
+
 
 *Before you begin*
 
