@@ -28,7 +28,7 @@ Host names should be mapped to the free IP addresses on the DNS before assigning
 . Content library template once uploaded should not be deleted post deployment as it will be used during reboots.
 . In a multi-vCenter deployment where Custom CA certificates are mandatory, map the Domain Name on which the certificate is issued to the Virtual IP address. Perform a _nslookup_ check on the domain name to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.
 . IPv4/IPv6 supported VLAN - Pure IPV6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.
-. NTP Server which is provided to the vCenter Server for time Sync.
+. NTP Server which is provided to the vCenter Server for time sync.
 . Static IP address Configuration details for the Node or VM where the OVA is being deployed (Mandatory) and other details. 
 .. vCenter Server hostname (vCenter where the OVA is deployed)
 .. vCenter Server username (vCenter where the OVA is deployed)
