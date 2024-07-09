@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'In ONTAP, export polices are used to provide volume data path access to hosts and igroups are used to provide LUN data path access to ESXi hosts.'
 ---
-= Manage igroup and export policies
+= Manage igroups and export policies
 :icons: font
 :imagesdir: ../media/
 
@@ -13,13 +13,13 @@ In ONTAP, export polices are used to provide volume data path access to hosts an
 
 When virtual volume datastores are created or mounted to hosts in vCenter Server, the hosts need to be given access to volumes (NFS) or LUNs (iSCSI) depending on the protocol type of the datastore.
 
-The export policy is dynamic and the new export policy is created in format of trident-uuid. On your ONTAP System Manager, go to *Storage* > *Storage VMs* > *[storage VM name]* > *Settings* > *Export Policies* to see the export policy.
+The export policy is dynamic and the new export policy is created with the naming format of trident-uuid. On your ONTAP System Manager, go to *Storage* > *Storage VMs* > *[storage VM name]* > *Settings* > *Export Policies* to see the export policy.
 
 The igroups and export policies in ONTAP tools for VMware vSphere are managed in an efficient manner and provide the following benefits:
 
 * Supports migrated export policies and igroups.
-* No interruption of Virtual Machine input and output operations.
+* No interruption of virtual machine input and output operations.
 * Supports mounting on additional hosts without manual intervention.
 * Minimizes the need for managing the number of igroups and export policies.
-* A garbage collector automatically deletes all the unused managed igroups and export Policies periodically.
-* If datastore is provisioned at host cluster level, then igroup is created with all host initiators under the host cluster that are added to the igroup.
+* A garbage collector automatically deletes all the unused managed igroups and export policies periodically.
+* If a datastore is provisioned at the host cluster level, then igroup is created with all host initiators under the host cluster that are added to the igroup.

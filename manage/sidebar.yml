@@ -5,7 +5,7 @@ entries:
     entries:
       - title: Mount NFS and VMFS datastores
         url: /manage/mount-datastores-on-host.html
-      - title: Mount vVols datastore
+      - title: Mount a vVols datastore
         url: /manage/mount-a-vvols-datastore.html
       - title: Resize NFS and VMFS datastores
         url: /manage/resize-datastores.html
@@ -27,7 +27,7 @@ entries:
     url: /manage/manage-vcenter.html
   - title: Manage certificates
     url: /manage/certificate-manage.html
-  - title: Manage igroup and export policies
+  - title: Manage igroups and export policies
     url: /manage/igroup-management.html
   - title: Access ONTAP tools for VMware vSphere maintenance console
     entries:
@@ -35,7 +35,7 @@ entries:
       url: /manage/maintenance-console.html
     - title: Configure remote diagnostic access
       url: /manage/configure-remote-diagnostic-access.html
-    - title: Start the SSH on other nodes
+    - title: Start SSH on other nodes
       url: /manage/start-the-ssh-on-other-nodes.html
     - title: Update the vCenter and ONTAP credentials
       url: /manage/update-vcenter-credentials.html

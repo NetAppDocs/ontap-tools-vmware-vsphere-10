@@ -11,9 +11,9 @@ summary: 'vCenters are central management platforms that allow you to control ho
 [.lead]
 vCenter Servers are central management platforms that allow you to control hosts, virtual machines, and storage backends.
 
-== Associate or Dissociate storage backend with vCenter Server instance
+== Associate or dissociate storage backends with vCenter Server instance
 
-The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to Associate or Disassociate a storage backend 
+The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to associate or disassociate a storage backend.
 This task helps you to create mapping between storage backend and onboarded vCenter Server instance globally.
 
 *Steps*
