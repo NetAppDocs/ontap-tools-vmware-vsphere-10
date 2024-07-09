@@ -25,7 +25,7 @@ The dashboard has several cards showing different elements of the system. The fo
 Storage backends status shows as "Healthy" when all the storage backends status is normal.
 Storage backends status shows as "Unhealthy" if any one of the storage backends have an issue (Unknown/Unreachable/Degraded status). 
 
-When you click on the "Unhealthy" status, a tool tip opens with the status of the storage backends. The cluster names are hyperlinked, you can click on the link to open the storage backend summary page for more details.
+When you click on the "Unhealthy" status, a tool tip opens with the status of the storage backends. You can click on any storage backend for more details. 
 
 Other VASA Provider (VP) states link shows the current state of the VP that is registered in the vCenter Server.
 

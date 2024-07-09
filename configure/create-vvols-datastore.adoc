@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can create vVols datastore with new volumes or with existing volumes. You can also create vVols datastore with the combination of existing volumes and new volumes.'
 ---
-= Create datastore
+= Create a datastore
 :icons: font
 :imagesdir: ../media/
 
@@ -12,45 +12,45 @@ summary: 'You can create vVols datastore with new volumes or with existing volum
 
 Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
-The create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore. The user interface is self-explanatory, use these steps as guidelines.
-
+The create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore.
 // 10.2 content You cannot create datastores at host level if the  host is part of a host clister protection in case of uniform configurations.cluster is part
 // add this for vmfs ds The datastore creation will be supported only for VMFS type on the same storage VM(as existing datastores) as per design. The newly created datastore will be implicity protected as part of existing host cluster protection settings.
- 
-== Create vVols datastore
 
-You can create vVols datastore with new volumes or with existing volumes. You cannot create vVols datastore with the combination of existing volumes and new volumes.
+
+== Create a vVols datastore
+
+You can create a vVols datastore with either new volumes or existing volumes. You cannot create vVols datastore with the mix of existing and new volumes.
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. Right-click a host system or a host cluster or a datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*
+. Right-click a host system or a host cluster or a datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select vVols in *Datastore Type*.
 +
 [NOTE]
 You get vVols option only if the VASA provider is registered with the selected vCenter.
 . In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
-. In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, depending on your choice, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol).
+. In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol) as applicable.
 [NOTE]
 * Platform and asymmetric options help you to filter out the SVMs dropdown options. You should select the SVM to create or use the volume(s) for datastore creation. 
-* *Asymmetric* toggle button is visible only if iSCSI was selected in the previous step and performance or capacity is selected in the platform drop-down.
+* The *Asymmetric* toggle button is visible only if iSCSI was selected in the previous step and performance or capacity is selected in the platform drop-down.
 * Asymmetric is true for AFF platform and false for ASA platform.
 . In the *Storage attributes* pane, you can either create new volumes or use the existing volumes. When creating new volume, you can enable QoS on the datastore.
 . Review your selection in the *Summary* pane and click *Finish*.
-Datastore is created and mounted on all the hosts.
+The vVols Datastore is created and mounted on all the hosts.
 
-== Create NFS datastore
+== Create an NFS datastore
 //10.1 addition
-VMware Network File System (NFS) datastore is a type of storage that uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
+A VMware Network File System (NFS) datastore uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. Right-click a Host System or a Host Cluster or a Datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*
+. Right-click a Host System or a Host Cluster or a Datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select NFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and Kerberos Authentication.
 [NOTE]
-Kerberos Authentication is available only when NFS 4.1 protocol is selected. 
+Kerberos Authentication is available only when the NFS 4.1 protocol is selected. 
 . In the *Storage* pane, select *Platform* and *Storage VM*. You can select *custom Export Policy* in the *Advanced Option* section.
 [NOTE]
 * *Asymmetric* toggle button is visible only if performance or capacity is selected in the platform drop-down.
@@ -58,9 +58,9 @@ Kerberos Authentication is available only when NFS 4.1 protocol is selected.
 . In the *Storage Attributes* pane, select the aggregate for creation of volume. In the advanced options choose *Space Reserve* and *Enable QoS* as required.
 . Review the selections in the *Summary* pane and click *Finish*.
 
-Datastore is created and mounted on all the hosts.
+The NFS datastore is created and mounted on all the hosts.
 
-== Create VMFS datastore
+== Create a VMFS datastore
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
@@ -86,12 +86,12 @@ Check the following items before proceeding:
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*
+. Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select VMFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
-. Select Platform and storage VM in the Storage pane. Select Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create new igroup with a custom name.
+. Select Platform and storage VM in the Storage pane. Select the Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
-If you choose *Any* option in the platform dropdown you can see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag.
-. From the storage attributes pane, select *Aggregate* from the drop-down. Select *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
+If you choose the *Any* option in the platform dropdown you can see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag.
+. From the storage attributes pane, select *Aggregate* from the drop-down menu. Select *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
 . Review the datastore details in the *Summary* pane and click *Finish*.
-Datastore is created and mounted on all the hosts.
+The VMFS datastore is created and mounted on all the hosts.

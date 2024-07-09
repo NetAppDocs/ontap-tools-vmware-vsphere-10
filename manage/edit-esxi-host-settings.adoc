@@ -23,9 +23,9 @@ If there is an issue with your ESXi host settings, the issue is displayed in the
 . In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
 . Go to *ESXi Host compliance* portlet in the Overview (Dashboard) of the ONTAP tools for VMware vSphere plug-in.
 . Select *Apply Recommended Settings* link.
-. In the *Apply recommended host settings* window, select the hosts that you want to comply with NetApp recommended host settings and click *Next*
+. In the *Apply recommended host settings* window, select the hosts that you want to comply with NetApp recommended host settings and click *Next*.
 [NOTE]
-You can expand the ESXi host to see the current values 
+You can expand the ESXi host to see the current values.
 . In the settings page, select the recommended values as required.
-. In the summary pane, check the values and click *Finish*
+. In the summary pane, check the values and click *Finish*.
 You can track the progress in the Recent task panel.
