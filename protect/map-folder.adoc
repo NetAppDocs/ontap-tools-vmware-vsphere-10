@@ -25,10 +25,10 @@ You should have connected the protected and recovery sites.
 The Create Folder Mapping wizard appears.
 
 . In the Create Folder Mapping wizard, perform the following:
- .. Select *Automatically Prepare Mappings for Folders with Matching Names*, and click *Next*.
- .. Select the required data center objects for the protected and recovery sites, and click *Add Mappings*.
+ .. Select *Automatically Prepare Mappings for Folders with Matching Names* and click *Next*.
+ .. Select the required data center objects for the protected and recovery sites and click *Add Mappings*.
  .. Click *Next* after mappings are created successfully.
- .. Select the object used earlier to create reverse mapping, then click *Finish*.
+ .. Select the object used earlier to create reverse mapping and then click *Finish*.
 
 *Result*
 

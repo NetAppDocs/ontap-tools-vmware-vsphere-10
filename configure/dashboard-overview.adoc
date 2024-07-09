@@ -2,14 +2,14 @@
 permalink: configure/dashboard-overview.html
 sidebar: sidebar
 keywords: user roles
-summary: 'When you select NetApp ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to Overview page. This page acts like the dashboard providing you the summary of the ONTAP tools for VMware vSphere plug-in..'
+summary: 'When you select the NetApp ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts like the dashboard providing you the summary of the ONTAP tools for VMware vSphere plug-in.'
 ---
 = NetApp ONTAP tools for VMware vSphere plug-in Dashboard overview
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When you select NetApp ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to overview page. This page acts like the dashboard providing you the summary of the ONTAP tools for VMware vSphere plug-in.
+When you select the NetApp ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts like the dashboard providing you the summary of the ONTAP tools for VMware vSphere plug-in.
 
 In the case of Enhanced Linked Mode setup (ELM), the vCenter Server select dropdown appears and you can select a desired vCenter Server to see the data relevant to it. This dropdown is available for all the other listing views of the plugin. 
 vCenter Server selection made in one page persists across the tabs of the plug-in. 

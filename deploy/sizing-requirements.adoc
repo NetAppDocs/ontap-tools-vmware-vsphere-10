@@ -32,7 +32,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |16
 |32
 |===
-== Minimum storage and application requirements:
+== Minimum storage and application requirements
 
 |===
 |Storage, host, and applications|Minimum version requirements

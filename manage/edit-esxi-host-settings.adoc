@@ -13,8 +13,6 @@ You can use the dashboard of ONTAP tools for VMware vSphere to edit your ESXi ho
 
 *What you will need*
 
-You should have configured an ESXi host system for your vCenter Server instance.
-
 If there is an issue with your ESXi host settings, the issue is displayed in the ESXi host systems portlet of the dashboard. You can click the issue to view the host name or the IP address of the ESXi host that has the issue.
 
 *Steps*

@@ -25,9 +25,9 @@ Create the content library using the following steps:
 
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Select the horizontal ellipses next to vSphere client and select *Content library*.
-. Select *Create* on the right side of the page.
+. Select *Create* on the right of the page.
 . Provide a name for the library and create the content library.
 . Navigate to the content library you created.
-. Select *Actions* in the right side of the page and select *Import item* and import the OVA file.
+. Select *Actions* in the right of the page and select *Import item* and import the OVA file.
 
 // updated for 10.0 release
