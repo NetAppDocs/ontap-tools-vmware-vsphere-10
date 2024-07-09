@@ -26,6 +26,9 @@ ONTAP tools Manager provides more control to ONTAP tools for VMware vSphere admi
 === Open Virtual Appliance (OVA)
 OVA is an open standard for packaging and distributing virtual appliances or software that must be run on virtual machines. 
 
+=== SnapMirror Active  (SMAS)
+SnapMirror active sync enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. Manual intervention nor custom scripting are required to trigger a failover with SnapMirror active sync.
+
 === Storage Replication Adapter (SRA)
 SRA is the storage vendor specific software that is installed inside the SRM appliance. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level and the cluster level configuration.
 

@@ -1,0 +1,37 @@
+---
+permalink: manage/protect-cluster.html
+sidebar: sidebar
+keywords: vVols datastore,delete vVol
+summary: 'Delete datastore action deletes the datastore. In the case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.'
+---
+= Protect host cluster
+:icons: font
+:imagesdir: ../media/
+// new topic for 10.2 content
+[.lead]
+ONTAP tools for VMware vSphere manages protection of a host cluster.
+All the datastores belonging to the selected SVM (and mounted on one or more hosts of the cluster) is protected (for SMas) under a host cluster.
+
+.Prerequisites
+Ensure the following conditions are met before you protect the host cluster:
+. The host cluster has Datastores only from one SVM. The SVM (SB) version should be greater than 9.15.1
+. Any datastore mounted on the host cluster should not be mounted on any host outside of the cluster.
+. All Datastores mounted on the host cluster must be VMFS datastores.
+. Any FlexVol/LUN forming Datastores mounted on the Host Cluster should not be part of any existing CG.
+. Any FlexVol or LUN should not be part of a SnapMirror relationship
+
+.Steps
+
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. Right-click a host cluster, and then select *NetApp ONTAP tools* > *Protect Cluster*.
+. In the protect cluster window, enter the protection Settings for the datastores to be protected.
+The Host Cluster can have datastores only from one SVM (Cluster).
+. Select one of the target ONTAP cluster and Storage VM option.
+. Select *Enable local Snapshot* checkbox to attach a local snapshot policy to the backing volumes of the datastores.
+. Select *Enable SnapMirror* checkbox to and *Add Relationship* to protect the datastores with the selected AutomatedFailoverDuplex policy, target cluster and target storage VM.
+. For uniform configuration select *Uniform Host Configuration* toggle button to true.
+. Provides *Host Proximity* or *Access* for each host, depending on the uniform host configuration toggle button selection.
+. Select *Add*.
+. Review the summary Page and select Protect.
+
+A task is created on the vCenter. Use the generated JobID to monitor the task. 

@@ -11,7 +11,7 @@ summary: 'If you lose your ONTAP tools for VMware vSphere setup, but have your O
 [.lead]
 If you lose your ONTAP tools for VMware vSphere setup, you can recover the ONTAP tools for VMware vSphere setup using the data available in the ONTAP volume data.
 When you lose the setup, bring down the setup gracefully.
- 
+
 [NOTE]
 You cannot recover your ONTAP tools for VMware vSphere setup if there are issues with vCenter Server or ONTAP data management software. 
 

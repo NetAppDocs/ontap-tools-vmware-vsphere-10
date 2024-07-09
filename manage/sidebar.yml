@@ -65,4 +65,6 @@ entries:
         url: /manage/reset-maint-password.html
   - title: Clean up volumes
     url: /manage/delete-deployment.html
+  - title: Protect host cluster
+    url: /manage/protect-cluster.html
 

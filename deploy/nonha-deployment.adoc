@@ -59,7 +59,8 @@ image:../media/ha-deploy-config.png[Deployment Configuration]
 +
 [NOTE]
 When SVM scope is enabled, you should have already enabled SVM support with management IP address.
-.. Select either NFS or iSCSI in the *Protocol* field. 
+.. Select either NFS, iSCSI, NVME/TCP, or NVME/FC in the *Protocol* field. 
+// 10.2 updates
 .. Enter the ONTAP Cluster or the SVM Management IP address in the *ONTAP/SVM Management LIF* field.
 .. Enter the ONTAP Cluster or the SVM ONTAP/SVM Data LIF. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
 .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
@@ -73,7 +74,7 @@ The information provided here will be validated for proper patterns during insta
 +
 .. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 .. Enter IP address (IPV4) mapped to the host name. In case of dual stack, provide any available IPv4 IP address that is in the same VLAN as the IPv6 address.
-.. Enter the IPV6 Address on the deployed network only when you need dual stalk.
+.. Enter the IPV6 address on the deployed network only when you need dual stalk.
 .. Specify the prefix length only for IPV6. 
 .. Specify the subnet to use on the deployed network in Netmask (only for IPV4) field. 
 .. Specify the Gateway on the deployed network.
@@ -89,5 +90,5 @@ As the deployment task gets created, the progress is shown in the vSphere task b
 The installation begins. You can track the installation progress in VM’s web console.
 As part of the installation, node configurations are validated. The inputs provided under different sections under the Customize template in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
 . Make necessary changes in the dialog prompt. Use tab button to navigate across the panel to enter your values, *OK* or *Cancel*.
-. On selecting *OK*, the values provided would again be validated. You have the provision to correct any values up to three times. If you fail to correct within the 3 attempts, the product installation stops, and you are advised to try the installation on a fresh VM.
+. On selecting *OK*, the values provided would again be validated. ONTAP Tools for VMware allows you three attempts to correct any invalid values. If you are unable  to correct issues after three attempts, the product installation stops and you are advised to try the installation on a fresh VM. 
 . After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.
