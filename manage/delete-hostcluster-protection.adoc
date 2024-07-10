@@ -1,0 +1,17 @@
+---
+permalink: manage/delete-hostcluster-protection.html
+sidebar: sidebar
+keywords: vVols datastore,delete vVol
+summary: 'When you remove the host cluster protection makes the datastores unprotected.'
+---
+= Remove host cluster protection
+:icons: font
+:imagesdir: ../media/
+// new topic for 10.2 content
+[.lead]
+When you remove the host cluster protection makes the datastores unprotected.
+
+.Steps
+
+. To view protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster protection*.
+. In the Host cluster protection window, click on the kebab menu against the cluster and select *Remove protection*.

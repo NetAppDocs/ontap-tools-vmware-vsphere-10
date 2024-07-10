@@ -2,14 +2,14 @@
 permalink: manage/protect-cluster.html
 sidebar: sidebar
 keywords: vVols datastore,delete vVol
-summary: 'Delete datastore action deletes the datastore. In the case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.'
+summary: 'ONTAP tools for VMware vSphere manages protection of host clusters.'
 ---
 = Protect host cluster
 :icons: font
 :imagesdir: ../media/
 // new topic for 10.2 content
 [.lead]
-ONTAP tools for VMware vSphere manages protection of host clusters.
+ONTAP tools for VMware vSphere manages protection of host clusters. 
 All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
 
 .Prerequisites
