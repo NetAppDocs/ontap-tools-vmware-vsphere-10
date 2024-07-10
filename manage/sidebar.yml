@@ -70,7 +70,7 @@ entries:
       - title: Create host cluster protection
         url: /manage/protect-cluster.html
       - title: Edit host cluster protection
-        url: /manage/edit-hostcluster-protection
+        url: /manage/edit-hostcluster-protection.html
       - title: Delete an active relationship
         url: /manage/delete-active-relationship.html
       - title: Remove host cluster protection

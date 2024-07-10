@@ -9,8 +9,7 @@ summary: 'You need to consider the following points before you delete host clust
 :imagesdir: ../media/
 // new topic for 10.2 content
 [.lead]
-You need to consider the following points before you delete host cluster protection: 
-
+You need to consider the following points before you delete host cluster protection:
 * To delete an async relationship, you need to onboard the destination site Cluster/SVM as storage backend in ONTAP tools for VMware vSphere.
 * To delete an automated_failover_duplex type relationship, you do not need to onboard the destination site Cluster/SVM as storage backend in ONTAP tools for VMware vSphere.
 * You cannot delete the last SnapMirror relationship.
