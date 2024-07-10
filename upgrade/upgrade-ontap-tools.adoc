@@ -16,7 +16,6 @@ Upgrade is supported for both HA and non-HA deployments.
 
 You need to complete the following steps before proceeding with the upgrade task:
 
-
 *Enable Diagnostics*
 
 . From vCenter Server, open a console to ONTAP tools.
