@@ -9,6 +9,7 @@ summary: 'When you remove the host cluster protection makes the datastores unpro
 :imagesdir: ../media/
 // new topic for 10.2 content
 [.lead]
+
 When you remove the host cluster protection makes the datastores unprotected.
 
 .Steps
