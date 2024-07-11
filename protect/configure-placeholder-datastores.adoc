@@ -26,4 +26,4 @@ You should configure a placeholder datastore to hold a place in the vCenter inve
 +
 NOTE: Placeholder datastores can be local or remote and should not be replicated.
 
-. Repeat the steps 3 to 5 to configure a placeholder datastore for the recovery site.
+. Repeat steps 3 to 5 to configure a placeholder datastore for the recovery site.

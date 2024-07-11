@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'need info.'
 ---
-= Associate storage backend with a vCenter Server instance
+= Associate a storage backend with a vCenter Server instance
 :icons: font
 :imagesdir: ../media/
 

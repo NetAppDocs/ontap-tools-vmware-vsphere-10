@@ -21,9 +21,9 @@ entries:
         url: /configure/esxi-host-values.html
   - title: Discover storage systems and hosts
     url: /configure/discover-storage-systems-and-hosts.html
-  - title: Add storage backend
+  - title: Add a storage backend
     url: /configure/add-storage-backend.html
-  - title: Associate storage backend with vCenter Server
+  - title: Associate a storage backend with a vCenter Server instance
     url: /configure/associate-storage-backend.html
   - title: Configure network access
     url: /configure/configure-network-access.html
@@ -31,5 +31,5 @@ entries:
     url: /configure/configure-user-role-and-privileges.html
   - title: NetApp ONTAP tools for VMware vSphere plugin Dashboard overview
     url: /configure/dashboard-overview.html
-  - title: Create datastore
+  - title: Create a datastore
     url: /configure/create-vvols-datastore.html    

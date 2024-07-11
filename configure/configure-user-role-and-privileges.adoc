@@ -88,8 +88,8 @@ Add the *REST API Path* and the respective access from the drop down.
 
 == List of minimum privileges required for non-admin global scoped cluster user
 
-The minimum privileges required for non-admin global scoped cluster user created without using the users JSON file is listed in this section. 
-If cluster is added in local scope, it is recommended to use the JSON file to create the users, as ONTAP tools for VMware vSphere requires more than just the Read privileges for provisioning on ONTAP.
+The minimum privileges required for non-admin global scoped cluster user created without using the users JSON file are listed in this section. 
+If a cluster is added in local scope, it is recommended to use the JSON file to create the users, as ONTAP tools for VMware vSphere requires more than just the Read privileges for provisioning on ONTAP.
 
 Using APIs:
 

@@ -2,14 +2,14 @@
 permalink: upgrade/upgrade-ontap-tools.html
 sidebar: sidebar
 keywords: upgrade
-summary: 'When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10.1, a recovery volume is created and all the necessary details are taken into the recovery volume.'
+summary: 'When you upgrade from ONTAP tools for VMware vSphere 10.0 and 10.1 to 10.2, a recovery volume is created and all the necessary details are taken into the recovery volume.'
 ---
 = Upgrade to the latest release of ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When you upgrade from ONTAP tools for VMware vSphere 10.0 to 10.1, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools for VMware vSphere setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.1, the same recovery volume is used and the details are refreshed. 
+When you upgrade from ONTAP tools for VMware vSphere 10.0 and 10.1 to 10.2, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools for VMware vSphere setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.2, the same recovery volume is used and the details are refreshed. 
 Upgrade is supported for both HA and non-HA deployments.
 
 *Before you begin*
@@ -43,7 +43,7 @@ Run the following commands to take a backup of mongoDB:
 ** From CLI, run the command _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
 ** From ONTAP system manager user interface search the volume by its name in the search bar then open that volume by clicking on the name. Go to snapshot and add the snapshot of that volume.
 
-*Take the snapshot of ONTAP tools for VMware vSphere VMs in vCenter (3VMs incase of HA Deployment, 1 VM incase of non-HA deployment)*
+*Take the snapshot of ONTAP tools for VMware vSphere VMs in vCenter (3VMs in case of HA Deployment, 1 VM in case of non-HA deployment)*
 
 * In the vSphere client user interface, select the VM.
 * Go to the snapshots tab and click the *Take Snapshot* button.
