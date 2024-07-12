@@ -27,10 +27,10 @@ NOTE: In Site Recovery Manager (SRM), resources can be resource pools, ESXi host
 The Create Resource Mapping wizard appears.
 
 . In the Create Resource Mapping wizard, perform the following:
- .. Select *Automatically Prepare Mappings for Resource with Matching Names*, and click *Next*.
- .. Select the required data center objects for the protected and recovery sites, and click *Add Mappings*.
+ .. Select *Automatically Prepare Mappings for Resource with Matching Names* and click *Next*.
+ .. Select the required data center objects for the protected and recovery sites and click *Add Mappings*.
  .. Click *Next* after mappings are created successfully.
- .. Select the object used earlier to create reverse mapping, then click *Finish*.
+ .. Select the object used earlier to create reverse mapping and then click *Finish*.
 
 *Result*
 

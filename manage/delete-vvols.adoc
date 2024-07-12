@@ -11,7 +11,7 @@ summary: 'Delete datastore action deletes the datastore. In the case of NFS or V
 [.lead]
 Remove storage from datastore action is supported on all ONTAP tools for VMware vSphere discovered or managed vVols datastores in the vCenter Server. This action allows the removal of volumes from the vVols datastore.
 
-Remove option is disabled when there are vVols residing on a particular volume. In addition to removing volumes from datastore, you can delete the selected volume on ONTAP storage.
+The remove option is disabled when there are vVols residing on a particular volume. In addition to removing volumes from datastore, you can delete the selected volume on ONTAP storage.
 
 Delete datastore task from ONTAP tools for VMware vSphere in the VCenter Server does the following: 
 

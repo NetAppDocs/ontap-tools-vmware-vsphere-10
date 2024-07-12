@@ -34,9 +34,9 @@ Use the default value.
 
 == MPIO Settings
 
-Configures preferred paths for NetApp storage systems. The MPIO settings determine which of the available paths are optimized (as opposed to non-optimized paths that traverse the interconnect cable) and they set the preferred path to one of those paths.
+MPIO settings define preferred paths for NetApp storage systems. The MPIO settings determine which of the available paths are optimized (as opposed to non-optimized paths that traverse the interconnect cable) and they set the preferred path to one of those paths.
 
-In high-performance environments or when testing performance with a single LUN datastore, consider changing the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) from the default IOPS setting of 1000 to a value of 1.
+In high-performance environments, or when you are testing performance with a single LUN datastore, consider changing the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) from the default IOPS setting of 1000 to a value of 1.
 
 == NFS settings
 

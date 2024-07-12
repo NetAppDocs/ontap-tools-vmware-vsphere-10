@@ -35,4 +35,4 @@ Follow the steps below to generate log bundle using the vCenter client UI:
 You can see the download option when the files are generated. Downloading may take some time.
 
 [NOTE]
-The log bundle generated replaces the log bundle that was generated within the last last 3 days or 72 hrs.
+The log bundle generated replaces the log bundle that was generated within the last 3 days or 72 hrs.
