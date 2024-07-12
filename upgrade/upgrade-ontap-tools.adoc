@@ -22,6 +22,7 @@ You need to complete the following steps before proceeding with the upgrade task
 . Log in as the maintenance user.
 . Enter *4* to select Support and Diagnostics.
 . Enter *2* to select Enable remote diagnostic access.
+//10.2 change
 . Enter *y* to set the password of your choice.
 . Login to VM IP address from the terminal/putty with user as 'diag' and password that was set in the previous step.
 

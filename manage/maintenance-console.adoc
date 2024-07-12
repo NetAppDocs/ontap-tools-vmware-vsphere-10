@@ -34,7 +34,7 @@ a|
 
 . Reboot virtual machine
 . Shutdown virtual machine
-. Generate token to reset manager UI password
+. Change 'maint' user password
 . Change time zone
 . Add new NTP server
 . Increase jail disk size (/jail)

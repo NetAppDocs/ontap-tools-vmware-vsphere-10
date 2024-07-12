@@ -36,8 +36,8 @@ You need to retain the load balancer IP address and the Kubernetes API Server IP
 . Select *Customize template* > *system configuration* window. Enter the following details:
 .. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter Server. This can be different from the username and password provided during initial deployment. 
 .. The *Enable ASUP* checkbox is selected by default.
-
-AutoSupport can be enabled or disabled only during deployment. 
++
+AutoSupport can be disabled only during deployment. 
 .. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission.
 .. Administrator username and administrator password: This is the password used to log in to ONTAP Tools Manager. This can be different from the username and password provided during initial deployment.
 .. Enter your NTP server information in the *NTP Servers* field. 

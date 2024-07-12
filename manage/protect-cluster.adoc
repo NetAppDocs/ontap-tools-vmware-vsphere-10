@@ -18,7 +18,8 @@ Ensure the following conditions are met before you protect the host cluster:
 . Any datastore mounted on the host cluster should not be mounted on any host outside of the cluster.
 . All Datastores mounted on the host cluster must be VMFS datastores.
 . Any FlexVol/LUN forming Datastores mounted on the host cluster should not be part of any existing consistency group (CG).
-. Any FlexVol or LUN should not be part of a SnapMirror relationship.
+. Any FlexVol/LUN forming Datastores mounted on the host cluster should not be part of any existing SnapMirror relationship.
+. The host cluster should have atleast one VMFS datastore.
 
 .Steps
 
