@@ -72,7 +72,7 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 .. Enter the ONTAP Cluster or the SVM ONTAP/SVM Data LIF. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
 .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
 .. Enter the ONTAP/SVM username. ONTAP/SVM username and Password is required for Trident to create volumes for storing the data of services in case of advanced or HA deployment and to recover the data from volumes during node failure.
-.. Enter the ONTAP/SVM Password. The ONTAP/SVM login password for this storage VM should not contain these special characters($,',").
+.. Enter the ONTAP/SVM Password.
 .. Primary VM is enabled by default. Do not alter this choice.
 . In *Customize template* > *Content Library Details* window, enter the *Content Library Name* and the *OVF Template Name*.
 . In *Customize template* > *vCenter Configuration* window, provide the details of the vCenter Server where the content library is hosted.
