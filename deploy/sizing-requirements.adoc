@@ -38,8 +38,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |Storage, host, and applications|Minimum version requirements
 
 |ONTAP
-|Latest patch release of ONTAP 9.13.1, 9.14.1, and 9.15.1.
-//10.2 updates
+|Latest patch release of ONTAP 9.12.1, 9.13.1, or 9.14.1
 
 |ESXi hosts
 |ESXi 7.0.3
@@ -51,7 +50,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |3.0
 
 |OVA Application 
-|10.2
+|10.1
 
 |===
 
