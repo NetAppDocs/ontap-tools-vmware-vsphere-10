@@ -59,8 +59,7 @@ image:../media/ha-deploy-config.png[Deployment Configuration]
 +
 [NOTE]
 When SVM scope is enabled, you should have already enabled SVM support with management IP address.
-.. Select either NFS, iSCSI, NVME/TCP, or NVME/FC in the *Protocol* field. 
-// 10.2 updates
+.. Select either NFS or iSCSI in the *Protocol* field. 
 .. Enter the ONTAP Cluster or the SVM Management IP address in the *ONTAP/SVM Management LIF* field.
 .. Enter the ONTAP Cluster or the SVM ONTAP/SVM Data LIF. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
 .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
