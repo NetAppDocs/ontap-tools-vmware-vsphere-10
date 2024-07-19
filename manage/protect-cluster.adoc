@@ -28,7 +28,7 @@ Ensure the following conditions are met before you protect the host cluster:
 . In the protect cluster window, the datastore type and source storage VM are auto populated. Select the datastores link to view the datastores that are protected.
 . Enter the *consistency group name*.
 . Select *Add Relationship*.
-. In the Add SnapMirror Relationship window, select the target storage VM and the policy type.
+. In the Add SnapMirror Relationship window, select the *Target storage VM* and the *Policy* type.
 +
 The policy type can be asynchronous or AutomatedFailOverDuplex. 
 +
@@ -36,8 +36,8 @@ When you add SnapMirror relationship as AutomatedFailOverDuplex type policy, it 
 +
 In AutomatedFailOverDuplex policy type, there is uniform and non-uniform host configuration. 
 When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. 
-When you choose to have a non-uniform host configuration, you need to select the host access (source/target) for each host inside that cluster.
-. Select *Add*
+. select the host access (source/target) for each host inside that cluster if you choose to have a non-uniform host configuration.
+. Select *Add*.
 . In the *Protect cluster* window you can edit or delete the relationships using the kebab menu options.
 .  Select *Protect* button.
 +

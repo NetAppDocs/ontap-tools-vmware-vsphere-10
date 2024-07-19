@@ -9,12 +9,17 @@ summary: 'When you upgrade from ONTAP tools for VMware vSphere 10.0 and 10.1 to 
 :imagesdir: ../media/
 
 [.lead]
-When you upgrade from ONTAP tools for VMware vSphere 10.0 and 10.1 to 10.2, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools for VMware vSphere setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.2, the same recovery volume is used and the details are refreshed. 
+When you upgrade from ONTAP tools for VMware vSphere 10.1 to 10.2, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools for VMware vSphere setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.2, the same recovery volume is used and the details are refreshed. 
 Upgrade is supported for both HA and non-HA deployments.
+
+[NOTE]
+To upgrade from ONTAP tools for VMware vSphere 10.0 to 10.2 release, you need to first upgrade to ONTAP tools for VMware vSphere 10.1 and then to 10.2 release.
+
+// content changed for 10.2 release
 
 *Before you begin*
 
-You need to complete the following steps before proceeding with the upgrade task:
+If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
 
 *Enable Diagnostics*
 

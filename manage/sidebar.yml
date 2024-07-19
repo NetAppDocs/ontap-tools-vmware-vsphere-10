@@ -5,6 +5,8 @@ entries:
     entries:
       - title: Mount NFS and VMFS datastores
         url: /manage/mount-datastores-on-host.html
+      - title: Unmount NFS and VMFS datastores
+        url: /manage/unmount-datastores-on-host.html
       - title: Mount a vVols datastore
         url: /manage/mount-a-vvols-datastore.html
       - title: Resize NFS and VMFS datastores
@@ -14,7 +16,7 @@ entries:
       - title: Shrink vVols datastores
         url: /manage/remove-storage-from-a-vvols-datastore.html
       - title: Delete datastores
-        url: /manage/delete-vvols.html  
+        url: /manage/delete-ds.html  
       - title: ONTAP storage views for datastores
         url: /manage/storage-view-datastore.html  
       - title: Virtual machine storage view
@@ -69,10 +71,8 @@ entries:
     entries:
       - title: Create host cluster protection
         url: /manage/protect-cluster.html
-      - title: Edit host cluster protection
+      - title: Edit or delete host cluster protection
         url: /manage/edit-hostcluster-protection.html
-      - title: Delete an active relationship
-        url: /manage/delete-active-relationship.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
 
