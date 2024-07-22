@@ -4,16 +4,18 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol
 summary: 'ONTAP tools for VMware vSphere manages protection of host clusters.'
 ---
-= Protect host cluster
+= Create host cluster protection
 :icons: font
 :imagesdir: ../media/
 // new topic for 10.2 content
 [.lead]
+
 ONTAP tools for VMware vSphere manages protection of host clusters. 
 All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
 
 .Prerequisites
 Ensure the following conditions are met before you protect the host cluster:
+
 . The host cluster has Datastores only from one SVM. 
 . Any datastore mounted on the host cluster should not be mounted on any host outside of the cluster.
 . All Datastores mounted on the host cluster must be VMFS datastores.
@@ -41,7 +43,7 @@ When you select the *uniform host configuration* toggle button, the host initiat
 . In the *Protect cluster* window you can edit or delete the relationships using the kebab menu options.
 .  Select *Protect* button.
 +
-A job is created in vCenter and the cluster is protected. Use the generated JobID to monitor the task. 
+A job is created in vCenter server and the cluster is protected. Use the generated JobID to monitor the task. 
 +
 If there are errors in creating protection for the cluster a pop-up window appears to show the errors.
 . To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster protection*.

@@ -9,6 +9,7 @@ summary: 'You can edit the SnapMirror relationships of the protected host cluste
 :imagesdir: ../media/
 // new topic for 10.2 content
 [.lead]
+
 You can edit the SnapMirror relationships of the protected host cluster. You can add, modify, and delete the relationships. However, you cannot edit consistency group name. 
 
 When new hosts are added to the host cluster, you need to configure their proximity or access to source/target in order to ensure seamless protection.
