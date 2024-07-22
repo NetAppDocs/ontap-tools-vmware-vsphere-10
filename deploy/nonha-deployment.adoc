@@ -77,10 +77,10 @@ The information provided here will be validated for proper patterns during insta
 .. Enter the IPV6 address on the deployed network only when you need dual stalk.
 .. Specify the prefix length only for IPV6. 
 .. Specify the subnet to use on the deployed network in Netmask (only for IPV4) field. 
-.. Specify the Gateway on the deployed network.
-.. Specify the Primary DNS server IP address.
-.. Specify the Secondary DNS server IP address.
-.. Specify the Search Domain name to use when resolving the hostname.
+.. Specify the gateway on the deployed network.
+.. Specify the primary DNS server IP address.
+.. Specify the secondary DNS server IP address.
+.. Specify the search Domain name to use when resolving the hostname.
 .. Specify the IPV6 gateway on the deployed network only when you need dual stack.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
