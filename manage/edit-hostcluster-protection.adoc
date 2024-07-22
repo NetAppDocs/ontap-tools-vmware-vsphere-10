@@ -14,6 +14,7 @@ You can edit the SnapMirror relationships of the protected host cluster. You can
 When new hosts are added to the host cluster, you need to configure their proximity or access to source/target in order to ensure seamless protection.
 
 You need to consider the following points before you delete host cluster protection:
+
 * You cannot delete the last SnapMirror relationship.
 * You can delete/unprotect the cluster using the protection settings UI kebab menu. 
 * When you delete a relationship respective relationship on ONTAP is also deleted.
