@@ -14,7 +14,7 @@ When you remove the host cluster protection makes the datastores unprotected.
 
 .Steps
 
-. To view protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster protection*.
+. To view protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*.
 +
 In this page, you can monitor all the protected host clusters along with its protection state, SnapMirror relationship, and its corresponding SnapMirror status.
 . In the Host cluster protection window, click on the kebab menu against the cluster and select *Remove protection*.

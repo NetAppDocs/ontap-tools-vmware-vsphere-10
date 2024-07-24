@@ -21,7 +21,7 @@ Ensure the following conditions are met before you protect the host cluster:
 . All Datastores mounted on the host cluster must be VMFS datastores.
 . Any FlexVol/LUN forming Datastores mounted on the host cluster should not be part of any existing consistency group (CG).
 . Any FlexVol/LUN forming Datastores mounted on the host cluster should not be part of any existing SnapMirror relationship.
-. The host cluster should have atleast one VMFS datastore.
+. The host cluster should have at least one VMFS datastore.
 
 .Steps
 
@@ -46,4 +46,4 @@ When you select the *uniform host configuration* toggle button, the host initiat
 A job is created in vCenter server and the cluster is protected. Use the generated JobID to monitor the task. 
 +
 If there are errors in creating protection for the cluster a pop-up window appears to show the errors.
-. To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster protection*.
+. To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*.
