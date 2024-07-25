@@ -15,25 +15,25 @@ You can perform the following tasks as part of modify protection:
 . Add new datastores or hosts to the protected cluster.
 . Add new SnapMirror relationships to the protection settings.
 . Delete existing SnapMirror relationships from the protection settings.
-. Modify an existing SnapMirror relationship
+. Modify an existing SnapMirror relationship.
 
 == Add new datastores or hosts
 
-If the host cluster has new datastores created or new hosts added to the host cluster after protection, the new datastores will be eligible to be mounted as part of modify workflow.
-User adds new hosts to the protected cluster or add create new datastores on host cluster using vCenter native UI.
+If the host cluster has new datastores created or new hosts added after protection, you can protect the new datastores and hosts with this procedure. You can add new hosts to the protected cluster or create new datastores on host cluster using vCenter native user interface.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . To edit the properties of a protected cluster, you can either
 .. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*. Click on the kebab menu against the cluster and select *Edit* or
 .. Right-click a host cluster, and then select *NetApp ONTAP tools* > *Protect Cluster*.
-. If you have created a datastore in vCenter native UI, then that datastore is shown as unprotected. The UI shows all datastores in the cluster and their protection status in a dialog box. Select *Protect* button to enable complete protection.
+. If you have created a datastore in vCenter native user interface, then that datastore is shown as unprotected. The user interface shows all datastores in the cluster and their protection status in a dialog box. Select *Protect* button to enable complete protection.
 . If you have added a new ESXi host, the protection status shows as partially protected. Select the kebab menu under the SnapMirror settings and select *Edit* to set the proximity of the newly added ESXi host.
 +
 [NOTE]
 In case of Asynchronous type relationship, edit action is not supported as you cannot add the target SVM for tertiary site to the same ONTAP tools instance. However, you can use the system manager or CLI of the target SVM to change the relationship configuration.
 . Click *Save* after making the necessary changes.
 . You can see the changes in the *Protect Cluster* window.
+
 A vCenter task is created and you can track the progress in the *Recent task* panel.
 
 == Add a new SnapMirror relationship
@@ -53,9 +53,9 @@ A vCenter task is created and you can track the progress in the *Recent task* pa
 == Delete an existing SnapMirror relationship
 To delete an asynchronous SnapMirror relationship, site B SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere. 
 You cannot delete the last SnapMirror relationship. When you delete a relationship, respective relationship on ONTAP are also removed.
-Whe you delete an AutomatedFailOverDuplex SnapMirror relationship, the datastores on the destination are unmapped and consistency group, LUNs, volumes and igroups are removed from the destination ONTAP cluster.
+When you delete an AutomatedFailOverDuplex SnapMirror relationship, the datastores on the destination are unmapped and consistency group, LUNs, volumes, and igroups are removed from the destination ONTAP cluster.
 
-Deleting the relationship triggers rescan on site B to remove the unmapped LUN as active path from hosts.
+Deleting the relationship triggers rescan on site B to remove the unmapped LUN as active path from the hosts.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
@@ -70,12 +70,12 @@ A vCenter task is created and you can track the progress in the *Recent task* pa
 To modify an asynchronous SnapMirror relationship, site B SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere.
 If it is an AutomatedFailOverDuplex SnapMirror relationship, you can modify the host proximity in case of uniform configuration and the host access in case of non-uniform configuration.
 You can not inter change asynchronous and AutomatedFailOverDuplex policy types.
-You can edit the AutomatedFailOverDuplex type relationship only for host proximity. You can add the proximity for the newly discovered hosts on the cluster.
+You can add the proximity for the newly discovered hosts on the cluster.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . To edit the properties of a protected cluster, you can either
-.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*. Click on the kebab menu against the cluster and select *Edit* or
+1.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*. Click on the kebab menu against the cluster and select *Edit* or
 .. Right-click a host cluster, and then select *NetApp ONTAP tools* > *Protect Cluster*.
 . If AutomatedFailOverDuplex policy type is selected, add host proximity or host access details.
 . Select *Protect* button.
