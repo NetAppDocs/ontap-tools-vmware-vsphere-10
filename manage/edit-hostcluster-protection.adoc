@@ -72,6 +72,9 @@ If it is an AutomatedFailOverDuplex SnapMirror relationship, you can modify the 
 You can not inter change asynchronous and AutomatedFailOverDuplex policy types.
 You can add the proximity for the newly discovered hosts on the cluster.
 
+[NOTE]
+You can not edit an existing asynchronous SnapMirror relationship.
+
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . To edit the properties of a protected cluster, you can either
