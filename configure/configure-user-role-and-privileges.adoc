@@ -21,9 +21,6 @@ You can create users at cluster or directly at storage virtual machines (SVMs) l
 
 * You should have logged in with administrator privileges for the storage backend.
 
-[NOTE]
-You can create users at cluster level or at SVM level. You can also create users without using the user_roles.json file and if done so, you need to have a minimum set of privileges at SVM level.
-
 *Steps*
 
 . Extract the downloaded _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_ file.

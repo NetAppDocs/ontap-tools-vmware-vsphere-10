@@ -40,7 +40,7 @@ You get vVols option only if the VASA provider is registered with the selected v
 [NOTE]
 * Platform and asymmetric options help you to filter out the SVMs dropdown options. You should select the SVM to create or use the volume(s) for datastore creation. 
 * The *Asymmetric* toggle button is visible only if iSCSI was selected in the previous step and performance or capacity is selected in the platform drop-down.
-* Asymmetric is true for AFF platform and false for ASA platform.
+* Select the *Asymmetric* toggle button for AFF platform and disable it for ASA platform.
 . In the *Storage attributes* pane, you can either create new volumes or use the existing volumes. When creating new volume, you can enable QoS on the datastore.
 . Review your selection in the *Summary* pane and click *Finish*.
 The vVols Datastore is created and mounted on all the hosts.
@@ -53,7 +53,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select NFS in *Datastore Type*.
-. In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and Kerberos Authentication.
+. In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
 [NOTE]
 Kerberos Authentication is available only when the NFS 4.1 protocol is selected. 
 . In the *Storage* pane, select *Platform* and *Storage VM*. You can select *custom Export Policy* in the *Advanced Option* section.

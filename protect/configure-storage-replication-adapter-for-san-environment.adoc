@@ -26,7 +26,7 @@ https://www.vmware.com/support/pubs/srm_pubs.html[VMware Site Recovery Manager D
 
 * SRA
 +
-The adapter is installed either on SRM.
+The adapter is installed on SRM.
 
 *Steps*
 

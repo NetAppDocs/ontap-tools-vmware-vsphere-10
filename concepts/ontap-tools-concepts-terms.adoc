@@ -17,6 +17,9 @@ CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 === Consistency group
 A consistency group is a collection of volumes that are managed as a single unit. In ONTAP, consistency groups provide easy management and a protection guarantee for an application workload spanning multiple volumes. Learn more about https://docs.netapp.com/us-en/ontap/consistency-groups/index.html[consistency group].
 
+=== Dual stack
+A dual-stack network is a networking environment that supports the simultaneous use of both IPv4 and IPv6 addresses.
+
 === High Availability (HA)
 Cluster nodes are configured in HA pairs for non-disruptive operations.
 

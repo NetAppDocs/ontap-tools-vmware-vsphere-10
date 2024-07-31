@@ -21,7 +21,7 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 Recommended memory as per the size of deployment and per node is as shown in the table below:
 
 |===
-|Type of deployment|CPUs|Memory (GB)
+|*Type of deployment*|*CPUs*|*Memory (GB)*
 |Small (S)
 |8
 |16
