@@ -12,12 +12,12 @@ summary: 'Provides important information about this release of ONTAP tools for V
 
 |===
 
-|Feature |ONTAP tools for VMware vSphere 9.13P1|ONTAP tools for VMware vSphere 10.1|ONTAP tools for VMware vSphere 10.2
+|*Feature* |*ONTAP tools for VMware vSphere 9.13P1*|*ONTAP tools for VMware vSphere 10.1*|*ONTAP tools for VMware vSphere 10.2*
 
-|Key value proposition
-|Reduce risk while streamlining and simplifying day-0 to day-2 operations with a feature-rich, broadly adopted, and mature product with enhanced compliance capabilities and automated host configuration
-|Evolving ONTAP tools 10.x towards 9.x parity while extending high availability, performance, and scale limits​
-|?
+// |Key value proposition
+// |Reduce risk while streamlining and simplifying day-0 to day-2 operations with a feature-rich, broadly adopted, and mature product with enhanced compliance capabilities and automated host configuration
+// |Evolving ONTAP tools 10.x towards 9.x parity while extending high availability, performance, and scale limits​
+// |?
 |ONTAP release qualification
 |9.9.1 to 9.15.1
 |9.12.1 to 9.14.1
