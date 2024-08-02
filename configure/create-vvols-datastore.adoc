@@ -10,7 +10,7 @@ summary: 'You can create vVols datastore with new volumes or with existing volum
 
 [.lead]
 
-Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
+When you create a datastore at host cluster level, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
 The create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore.
 
@@ -20,13 +20,13 @@ You can create a vVols datastore with either new volumes or existing volumes. Yo
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
+.Before you begin
+Ensure that VASA provider is registered with the selected vCenter.
+
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a host system or a host cluster or a datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select vVols in *Datastore Type*.
-+
-[NOTE]
-You get vVols option only if the VASA provider is registered with the selected vCenter.
 . In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
 . In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol) as applicable.
 [NOTE]
