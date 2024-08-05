@@ -61,26 +61,6 @@ The NFS datastore is created and mounted on all the hosts.
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
-
-
-*Before you begin*
-
-Check the following items before proceeding: 
-
-* Check if all target hosts are healthy and check if the host supports protocol.
-* Create a new volume (min size 2GB)
-* Set Volume options with QOS
-* Create LUN of type VMware
-* Get initiators for all target hosts
-* Create/reuse igroup based on matching initiators
-* Map LUN to igroup
-* Add iSCSI targets to ESXi hosts
-* Rescan Host Bus Adapters (HBAs) on all hosts
-* Mount volume as VMFS6 datastore (for 6.5+ hosts)
-* Rescan VMFS storage on ESXi hosts
-* Move datastore to datastore-cluster
-* Rebalance iSCSI paths
-
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*.
