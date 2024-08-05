@@ -47,3 +47,47 @@ Host names should be mapped to the free IP addresses on the DNS before assigning
 .. Content library name
 .. OVF template name
 .. IPv6 gateway (optional)
+
+== Deployment size guidelines for vVols datastore
+
+|===
+
+|*Deployment* | *Type* | *Number of vVols* |*Number of hosts* | *Number of VMs (8vVols per VM)* |*Number of vVols datastores* | *Protocol type*
+
+|Easy Deployment |Small (S) |~12K| 32| ~1500  |4|NFS, iSCSI
+|Easy Deployment |Medium (M) |~24K| 64| ~3000  |4|NFS, iSCSI
+|High-Availability |Small (S) |~24K| 64| ~3000  |4|NFS, iSCSI
+|High-Availability |Medium (M) |~50k| 128| ~6200 |6|NFS, iSCSI
+|High-Availability |Large (L) |~100k| 256| ~12000 |12|NFS, iSCSI
+|===
+
+== Deployment size guidelines for NFS and VMFS datastore
+
+|===
+
+|*Deployment* |*Type* |*Number of hosts* |*Number of NFS/VMFS datastores (NFS3, NFS 4.1 , VMFS)* |*Recommended host settings* |*VAAI Plugin Installation*
+|Easy Deployment 
+|Medium (M) 
+|64
+|-  
+|64 hosts concurrently 
+|-
+
+|High-Availability 
+|Small (S) 
+|64
+|650 datastores mounted on 32 hosts: ~400 (NFS3), ~200(VMFS), ~50(NFS4.1 -No Kerberos)   
+|64 hosts concurrently 
+|64 hosts concurrently 
+
+|High-Availability 
+|Large (L) 
+|350 
+|970 datastores 
+|128 hosts concurrently 
+|200 hosts concurrently from single vCenter
+
+|===
+
+
+
