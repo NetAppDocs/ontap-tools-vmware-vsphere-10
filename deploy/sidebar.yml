@@ -5,6 +5,8 @@ entries:
     url: /deploy/sizing-requirements.html
   - title: Download ONTAP tools
     url: /deploy/download-ontap-tools.html
+  - title: Configuration limits to deploy ONTAP tools for VMware vSphere
+    url: /deploy/config-limits.html
   - title: Prepare to deploy ONTAP tools
     url: /deploy/prepare-deployment.html
   - title: Deploy non-HA single-node configuration
