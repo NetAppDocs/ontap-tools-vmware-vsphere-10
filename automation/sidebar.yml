@@ -11,23 +11,3 @@ entries:
     url: /automation/how-to-access-rest-api-doc-through-the-swagger-user-interface.html
   - title: Get started with the REST API
     url: /automation/get-started-with-the-rest-api.html
-  - title: Workflows
-    entries:
-      - title: Storage discovery
-        url: /automation/storage-workflow.html
-      - title: SVM aggregate mapping requirements
-        url: /automation/svm-workflow.html
-      - title: Onboard storage backend (SVM or Cluster) with a vCenter Server instance
-        url: /automation/onboard-svm-workflow.html
-      - title: Create vVols datastore
-        url: /automation/create-vvol-workflow.html
-      - title: Mount and unmount a vVols datastore
-        url: /automation/mount-unmount-workflow.html
-      - title: Expand or shrink Storage of vVol Datastore
-        url: /automation/expand-shrink-workflow.html
-      - title: Delete vVols datastore
-        url: /automation/delete-vvol-workflow.html
-      - title: Manage storage threshold
-        url: /automation/manage-threshold-workflow.html
-      - title: Manage network access
-        url: /automation/manage-network-workflows.html
