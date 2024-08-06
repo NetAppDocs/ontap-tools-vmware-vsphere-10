@@ -12,14 +12,15 @@ summary: 'Configuration limits to deploy ONTAP tools for VMware vSphere'
  
 |===
 
-|*Deployment* | *Type* | *Number of vVols* |*Number of hosts* | *Number of VMs (8vVols per VM)* |*Number of vVols datastores* | *Protocol type*
+|*Deployment* | *Type* | *Number of vVols* |*Number of hosts* | *Protocol type*
 
-|Easy Deployment |Small (S) |~12K| 32| ~1500  |4|NFS, iSCSI
-|Easy Deployment |Medium (M) |~24K| 64| ~3000  |4|NFS, iSCSI
-|High-Availability |Small (S) |~24K| 64| ~3000  |4|NFS, iSCSI
-|High-Availability |Medium (M) |~50k| 128| ~6200 |6|NFS, iSCSI
-|High-Availability |Large (L) |~100k| 256 | ~12000 |12|NFS, iSCSI
+|Easy Deployment |Small (S) |~12K| 32 |NFS, iSCSI
+|Easy Deployment |Medium (M) |~24K| 64 |NFS, iSCSI
+|High-Availability |Small (S) |~24K| 64 |NFS, iSCSI
+|High-Availability |Medium (M) |~50k| 128 |NFS, iSCSI
+|High-Availability |Large (L) |~100k| 256
+[NOTE]
+The number of hosts in the table shows the total number of host from multiple vCenters. |NFS, iSCSI
 |===
 
-[NOTE]
-The number of hosts in the table shows the total number of host from multiple vCenters.
+
