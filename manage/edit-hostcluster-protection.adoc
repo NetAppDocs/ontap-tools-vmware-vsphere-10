@@ -10,7 +10,7 @@ summary: 'You can edit the SnapMirror relationships of the protected host cluste
 // new topic for 10.2 content
 [.lead]
 
-You can perform the following tasks as part of modify protection:
+You can perform the following tasks as part of modify protection. You can perform all the changes in the same workflow.
 
 . Add new datastores or hosts to the protected cluster.
 . Add new SnapMirror relationships to the protection settings.
@@ -70,7 +70,7 @@ A vCenter task is created and you can track the progress in the *Recent task* pa
 To modify an asynchronous SnapMirror relationship, site B SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere.
 If it is an AutomatedFailOverDuplex SnapMirror relationship, you can modify the host proximity in case of uniform configuration and the host access in case of non-uniform configuration.
 You cannot interchange asynchronous and AutomatedFailOverDuplex policy types.
-You can add the proximity for the newly discovered hosts on the cluster.
+You can set the proximity or access for the newly discovered hosts on the cluster.
 
 [NOTE]
 You cannot edit an existing asynchronous SnapMirror relationship.

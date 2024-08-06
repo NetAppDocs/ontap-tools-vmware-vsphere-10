@@ -20,6 +20,7 @@ The create Datastore action wizard supports creation of NFS, VMFS, and vVols dat
 * You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type(uniform/non-uniform config).
 * You can create a VMFS datastore on a host, only when it has an async relationship. 
 
+For details on how to create a host cluster protection, refer to link:../manage/protect-cluster.html[Create host cluster protection].
 //10.2 updates - notes
 
 == Create a vVols datastore
@@ -36,7 +37,7 @@ Check to ensure root aggregates are not mapped to SVM.
 [NOTE]
 You get vVols option only if the VASA provider is registered with the selected vCenter.
 . In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
-. In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol) as applicable.
+. In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI amd FC protocol) as applicable.
 [NOTE]
 * Platform and asymmetric options help you to filter out the SVMs dropdown options. You should select the SVM to create or use the volume(s) for datastore creation. 
 * The *Asymmetric* toggle button is visible only if iSCSI was selected in the previous step and performance or capacity is selected in the platform drop-down.
@@ -69,24 +70,6 @@ The NFS datastore is created and mounted on all the hosts.
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
-*Before you begin*
-
-Check the following items before proceeding: 
-
-* Check if all target hosts are healthy and check if the host supports protocol.
-* Create a new volume (min size 2GB)
-* Set Volume options with QOS
-* Create LUN of type VMware
-* Get initiators for all target hosts
-* Create/reuse igroup based on matching initiators
-* Map LUN to igroup
-* Add iSCSI targets to ESXi hosts
-* Rescan Host Bus Adapters (HBAs) on all hosts
-* Mount volume as VMFS6 datastore (for 6.5+ hosts)
-* Rescan VMFS storage on ESXi hosts
-* Move datastore to datastore-cluster
-* Rebalance iSCSI paths
-
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*.
@@ -95,11 +78,11 @@ Check the following items before proceeding:
 . Select Platform and storage VM in the *Storage* pane. Select the Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
 If you choose the *Any* option in the platform dropdown you can see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag.
-When the protocol is selected as FC, NVMe/FC, or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of *Storage* pane. 
+When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of *Storage* pane. 
 . From the *storage attributes* pane, select *Aggregate* from the drop-down menu. Select *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
 +
 [NOTE]
-For VMFS datastore creation with FC, NVMe/FC, or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
+For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
 
 //10.2 update
 . Review the datastore details in the *Summary* pane and click *Finish*.

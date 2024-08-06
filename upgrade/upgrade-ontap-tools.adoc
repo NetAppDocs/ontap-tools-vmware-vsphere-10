@@ -60,7 +60,7 @@ If support bundle generation is in progress, wait for it to complete and then de
 
 . Upload ONTAP tools for VMware vSphere upgrade ISO to content library.
 . In the primary VM page, select *Actions* > *Edit Settings* 
-. In the edit settings window under *CD/DVD drive* field select content library ISO file. 
+. In the edit settings window under *CD/DVD drive* field, select content library ISO file. 
 . Select the ISO file and click *OK*. Choose the connected checkbox across the *CD/DVD drive* field.
 image:../media/primaryvm-edit-settings.png[Edit settings]
 . From vCenter Server, open a console to ONTAP tools.

@@ -3,17 +3,17 @@ title: Manage ONTAP tools
 entries:
   - title: Manage datastores
     entries:
-      - title: Mount NFS and VMFS datastores
+      - title: Mount NFS and VMFS datastore
         url: /manage/mount-datastores-on-host.html
-      - title: Unmount NFS and VMFS datastores
+      - title: Unmount NFS and VMFS datastore
         url: /manage/unmount-datastores-on-host.html
       - title: Mount a vVols datastore
         url: /manage/mount-a-vvols-datastore.html
-      - title: Resize NFS and VMFS datastores
+      - title: Resize NFS and VMFS datastore
         url: /manage/resize-datastores.html
-      - title: Expand vVol Datastores
+      - title: Expand vVol datastore
         url: /manage/expand-storage-of-vvol-datastore.html
-      - title: Shrink vVols datastores
+      - title: Shrink vVols datastore
         url: /manage/remove-storage-from-a-vvols-datastore.html
       - title: Delete datastores
         url: /manage/delete-ds.html  
