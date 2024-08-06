@@ -1,5 +1,5 @@
 ---
-permalink: manage/protect-cluster.html
+permalink: configure/protect-cluster.html
 sidebar: sidebar
 keywords: vVols datastore,delete vVol
 summary: 'ONTAP tools for VMware vSphere manages protection of host clusters.'
@@ -14,7 +14,7 @@ ONTAP tools for VMware vSphere manages protection of host clusters.
 All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
 
 .Prerequisites
-Ensure the following conditions are met before you protect the host cluster. If the below prerequisites are not met, Protect Cluster action shows an error and does not proceed with protection creation.
+If the below prerequisites are not met, protect cluster action shows an error and does not proceed with creating the protection.
 
 * The host cluster has datastores only from one SVM. 
 * Datastore mounted on the host cluster should not be mounted on any host outside of the cluster.
@@ -26,8 +26,8 @@ Ensure the following conditions are met before you protect the host cluster. If 
 .Steps
 
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. Right-click a host cluster, and then select *NetApp ONTAP tools* > *Protect Cluster*.
-. In the protect cluster window, the datastore type and source storage virtual machine (VM) are auto populated. Select the datastores link to view the datastores that are protected.
+. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
+. In the protect cluster window, the datastore type and source storage virtual machine (VM) details are auto populated. Select the datastores link to view the datastores that are protected.
 . Enter the *consistency group name*.
 . Select *Add Relationship*.
 . In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.

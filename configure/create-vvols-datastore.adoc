@@ -20,7 +20,6 @@ The create Datastore action wizard supports creation of NFS, VMFS, and vVols dat
 * You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type(uniform/non-uniform config).
 * You can create a VMFS datastore on a host, only when it has an async relationship. 
 
-For details on how to create a host cluster protection, refer to link:../manage/protect-cluster.html[Create host cluster protection].
 //10.2 updates - notes
 
 == Create a vVols datastore
@@ -31,7 +30,7 @@ Check to ensure root aggregates are not mapped to SVM.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. Right-click a host system or a host cluster or a datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
+. Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select vVols in *Datastore Type*.
 +
 [NOTE]
@@ -52,7 +51,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. Right-click a Host System or a Host Cluster or a Datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
+. Right-click a Host System or a Host Cluster or a Datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select NFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
 [NOTE]
@@ -72,7 +71,7 @@ Virtual Machine File System (VMFS) is a clustered file system specifically desig
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
-. Right-click a Host System or a Host Cluster or a Datastore, and then select *NetApp ONTAP tools* > *Create Datastore*.
+. Right-click a Host System or a Host Cluster or a Datastore and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select VMFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
 . Select Platform and storage VM in the *Storage* pane. Select the Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.

@@ -12,10 +12,10 @@ summary: 'You can edit the SnapMirror relationships of the protected host cluste
 
 You can perform the following tasks as part of modify protection. You can perform all the changes in the same workflow.
 
-. Add new datastores or hosts to the protected cluster.
-. Add new SnapMirror relationships to the protection settings.
-. Delete existing SnapMirror relationships from the protection settings.
-. Modify an existing SnapMirror relationship.
+* Add new datastores or hosts to the protected cluster.
+* Add new SnapMirror relationships to the protection settings.
+* Delete existing SnapMirror relationships from the protection settings.
+* Modify an existing SnapMirror relationship.
 
 == Add new datastores or hosts
 
@@ -52,7 +52,7 @@ A vCenter task is created and you can track the progress in the *Recent task* pa
 
 == Delete an existing SnapMirror relationship
 To delete an asynchronous SnapMirror relationship, site B SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere. 
-You cannot delete all the SnapMirror relationships. When you delete a relationship, respective relationship on ONTAP is also removed.
+You cannot delete all the SnapMirror relationships. When you delete a relationship, respective relationship on ONTAP cluster is also removed.
 When you delete an AutomatedFailOverDuplex SnapMirror relationship, the datastores on the destination are unmapped and consistency group, LUNs, volumes, and igroups are removed from the destination ONTAP cluster.
 
 Deleting the relationship triggers a rescan on site B to remove the unmapped LUN as active path from the hosts.

@@ -69,8 +69,6 @@ entries:
     url: /manage/delete-deployment.html
   - title: Manage host cluster protection
     entries:
-      - title: Create host cluster protection
-        url: /manage/protect-cluster.html
       - title: Modify host cluster protection
         url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
