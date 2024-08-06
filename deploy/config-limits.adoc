@@ -23,4 +23,4 @@ summary: 'Configuration limits to deploy ONTAP tools for VMware vSphere'
 The number of hosts in the table shows the total number of host from multiple vCenters. |NFS, iSCSI
 |===
 
-
+For details host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere]
