@@ -27,7 +27,7 @@ The user or group defines who can perform the task.
 
 NOTE: In this diagram, the gray boxes indicate components that exist in the vCenter Server, and the white boxes indicate components that exist in the operating system where the vCenter Server is running.
 
-image:../media/permission-updated-graphic.gif["permission components illustration"]
+image:../media/permission-updated-graphic.gif[permission components illustration]
 
 == Privileges
 
