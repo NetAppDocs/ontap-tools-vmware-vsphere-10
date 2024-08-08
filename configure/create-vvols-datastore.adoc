@@ -69,6 +69,33 @@ The NFS datastore is created and mounted on all the hosts.
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
+.Before you begin
+Check the following items before proceeding: 
+
+* For Each Protocol on ONTAP Side, respective services and LIF’s need to be enabled. 
+* For NVMe/TCP protocol, perform the following steps to configure ESXi host:
+
+. Review the https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=san&productid=49677&releases_filter=589,578,518,508,448&deviceCategory=san&details=1&partner=399&Protocols=1&transportTypes=3&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc[VMware Compatibility Guide]
+[NOTE] 
+VMware vSphere 7.0 U3 and later versions support NVMe/TCP protocol, however vSphere 8.0 and later version is recommended. 
+. Validate if the NIC vendor supports ESXi NIC with NVMe/TCP protocol. 
+. Configure the ESXi Network Interface Card (NIC) for NVMe/TCP according to the NIC vendor specifications. 
+. For vSphere 7, follow the instructions on the VMware site https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D047AFDD-BC68-498B-8488-321753C408C2.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2[Configure VMkernel Binding for the NVMe over TCP Adapter] to configure NVMe/TCP port binding. For vSphere 8, follow https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-5F776E6E-62B1-445D-854C-BEA689DD4C92.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2[Configuring NVMe over TCP on ESXi] to configure the NVMe/TCP port binding. 
+. For vSphere 7, follow the instructions on the VMware site https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E.html[Enable NVMe over RDMA or NVMe over TCP Software Adapters] to configure NVMe/TCP software adapters. For vSphere 8, follow https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-F4B42510-9E6D-4446-816A-5012866E0038.html#GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E[Add Software NVMe over RDMA or NVMe over TCP Adapters] to configure NVMe/TCP software adapters.
+. Run link:../configure/update-host-data.html[Update host data] action on the ESXi host.
+
+* For NVME/FC protocol, perform the following steps to configure the ESXi host:
+. Enable NVMe over Fabrics(NVMe-oF) on your ESXi host(s). 
+. Complete SCSI zoning. 
+. Ensure that ESXi hosts and the ONTAP system are connected at a physical and a logical layer.
+
+To configure an ONTAP SVM for FC protocol, refer to https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-fc-task.html[Configure an SVM for FC].
+
+For  information on using NVMe/FC protocol with vSphere 8.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[NVMe-oF Host Configuration for ESXi 8.x with ONTAP].
+
+For more information on using NVMe/FC with vSphere 7.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[ONTAP NVMe/FC Host Configuration guide] and http://www.netapp.com/us/media/tr-4684.pdf[TR-4684].
+
+
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datastore and select *NetApp ONTAP tools* > *Create Datastore*.
