@@ -52,6 +52,19 @@ For details host system sizing requirements per node, refer to link:../deploy/si
 
 |===
 
+The following table shows the number of SRM and the corresponding ONTAP tools for VMware vSphere deployment size.
+
+|===
+|*Number of SRM instances* |*ONTAP tools deployment Size*
+|2	
+|Small
+|2-4	
+|Medium
+|4	
+|Large
+
+|===
+
 //For configuration limit details of ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA), refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/ONTAP_Tools_for_VMware_vSphere:_Sizing_Guide_for_ONTAP_tools_for_VMware_vSphere[Sizing Guide for ONTAP tools for VMware vSphere].
 
 For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html[Operational Limits of VMware Live Site Recovery].
