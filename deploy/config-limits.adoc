@@ -1,0 +1,70 @@
+---
+permalink: deploy/config-limits.html
+sidebar: sidebar
+keywords: ONTAP tools,Storage Replication Adapter
+summary: 'Configuration limits to deploy ONTAP tools for VMware vSphere'
+---
+= Configuration limits to deploy ONTAP tools for VMware vSphere
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can use the following table as a guide to configure ONTAP tools for VMware vSphere.
+|===
+
+|*Deployment* | *Type* | *Number of vVols* |*Number of hosts* | *Protocol type*
+
+|Easy Deployment |Small (S) |~12K| 32 |NFS, iSCSI
+|Easy Deployment |Medium (M) |~24K| 64 |NFS, iSCSI
+|High-Availability |Small (S) |~24K| 64 |NFS, iSCSI
+|High-Availability |Medium (M) |~50k| 128 |NFS, iSCSI
+|High-Availability |Large (L) |~100k| 256
+[NOTE]
+The number of hosts in the table shows the total number of host from multiple vCenters. |NFS, iSCSI
+|===
+
+For details host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
+
+== ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
+
+|===
+|*vCenter Deployment size* |*Small* |*Medium*
+
+|Total number of virtual machines configured for protection using array-based replication
+|2000
+|5000
+
+|Total number of array-based replication protection groups
+|250
+|250
+
+|Total number of protection groups per recovery plan
+|50
+|50
+
+|Number of replicated datastores
+|255
+|255
+
+|Number of VMs
+|4000
+|7000
+
+|===
+
+The following table shows the number of SRM and the corresponding ONTAP tools for VMware vSphere deployment size.
+
+|===
+|*Number of SRM instances* |*ONTAP tools deployment Size*
+|2	
+|Small
+|2-4	
+|Medium
+|4	
+|Large
+
+|===
+
+//For configuration limit details of ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA), refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/ONTAP_Tools_for_VMware_vSphere:_Sizing_Guide_for_ONTAP_tools_for_VMware_vSphere[Sizing Guide for ONTAP tools for VMware vSphere].
+
+For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html[Operational Limits of VMware Live Site Recovery].

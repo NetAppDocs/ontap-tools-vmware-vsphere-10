@@ -3,6 +3,8 @@ title: Deploy ONTAP tools for VMware vSphere
 entries:
   - title: Prerequisites
     url: /deploy/sizing-requirements.html
+  - title: Configuration limits
+    url: /deploy/config-limits.html
   - title: Download ONTAP tools
     url: /deploy/download-ontap-tools.html
   - title: Prepare to deploy ONTAP tools
