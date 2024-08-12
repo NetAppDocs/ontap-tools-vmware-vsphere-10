@@ -27,28 +27,20 @@ For details host system sizing requirements per node, refer to link:../deploy/si
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
 
-|===
-|*vCenter Deployment size* |*Small* |*Medium*
+The following table shows the numbers supported per instance on ONTAP tools for VMware vSphere.
 
-|Total number of virtual machines configured for protection using array-based replication
-|2000
-|5000
+|===
+
+|Total number of virtual machines configured for protection using array-based replication |5000
 
 |Total number of array-based replication protection groups
-|250
 |250
 
 |Total number of protection groups per recovery plan
 |50
-|50
 
 |Number of replicated datastores
 |255
-|255
-
-|Number of VMs
-|4000
-|7000
 
 |===
 
