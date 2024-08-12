@@ -14,3 +14,60 @@ REST APIs can be used to perform several ONTAP tools for VMware vSphere manageme
 You can access the Swagger web page available at _\https://loadbalancerIP:8443/_ to display the REST API documentation, as well as to manually issue an API call.
 [NOTE]
 All the APIs have request body and examples mentioned in the swagger page. The workflows and examples provided in this section are for reference purposes only. 
+
+== How to access ONTAP tools for VMware vSphere REST API
+
+You can access the ONTAP REST API in several different ways.
+
+== Network considerations
+You can connect to the REST API through the following interfaces:
+ 
+* Cluster management LIF
+* Node management LIF
+* SVM management LIF
+
+The LIF you choose to use should be configured to support the HTTPS management protocol. Also, the firewall configuration in your network should allow the HTTPS traffic.
+
+[NOTE]
+You should always use a cluster management LIF. This will load balance the API requests across all the nodes and avoid nodes that are offline or experiencing connectivity issues. If you have multiple cluster management LIFs configured, they are all equivalent regarding access to the REST API.
+
+== ONTAP tools for VMware vSphere API online documentation page
+
+You can access the Swagger from the hyperlink in the support page of the NetAPP ONTAP tools for VMware vSphere plug-in.
+
+The format of the URL used to access the documentation page for the most recent version of the API is:
+
+\`https://<loadbalancer_ip_address>/docs/api`
+
+== Custom software and tools
+
+You can access ONTAP tools for VMware vSphere API using any of several different programming languages and tools. Popular choices include Python, Java, Curl, and PowerShell. A program, script, or tool that uses the API acts as a REST web services client. Using a programming language enables a deeper understanding of the API and provides an opportunity to automate ONTAP tools for VMware vSphere administration.
+
+The format of the base URL used to directly access the most recent version of the API is:
+
+\`https://<loadbalancer_ip_address>/api`
+
+To access a specific API version where multiple versions are supported, the format of the URL is:
+
+\`https://<loadbalancer_ip_address>/api/v1`
+
+== Access ONTAP tools for VMware vSphere API reference documentation through the Swagger UI
+
+You can access the ONTAP REST API documentation through the Swagger UI at your local ONTAP system.
+
+*Before you begin*
+
+You should have the following:
+
+• IP address or host name of the ONTAP cluster management LIF
+• Username and password for an account with authority to access the ONTAP REST API
+
+.Steps
+
+. Type the URL in your browser and press *Enter*:
+_\https://<ip_address>/docs/api_
+. Sign in using the ONTAP account
++
+The ONTAP API documentation page is displayed with the API calls organized in major resource
+categories at the bottom.
+. As an example of an individual API call, scroll down to the *cluster* category and click *GET /cluster*.

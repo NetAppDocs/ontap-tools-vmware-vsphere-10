@@ -27,7 +27,7 @@ For details host system sizing requirements per node, refer to link:../deploy/si
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
 
-The following table shows the numbers supported per instance on ONTAP tools for VMware vSphere.
+The following table shows the numbers supported per SRM instance using ONTAP tools for VMware vSphere.
 
 |===
 
