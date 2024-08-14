@@ -19,11 +19,12 @@ You can use the following table as a guide to configure ONTAP tools for VMware v
 |High-Availability |Small (S) |~24K| 64 |NFS, iSCSI
 |High-Availability |Medium (M) |~50k| 128 |NFS, iSCSI
 |High-Availability |Large (L) |~100k| 256
+
 [NOTE]
 The number of hosts in the table shows the total number of host from multiple vCenters. |NFS, iSCSI
 |===
 
-For details host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
+For details on host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
 
