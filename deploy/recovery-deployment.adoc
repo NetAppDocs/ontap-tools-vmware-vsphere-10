@@ -34,17 +34,30 @@ You should use the same OVA build that you used for installing the recovery setu
 [NOTE]
 You need to retain the load balancer IP address and the Kubernetes API Server IP address. You can change the node IP address or you can retain the same IP address.
 . Select *Customize template* > *system configuration* window. Enter the following details:
-.. Application username and password: This username and password is used for registering both VASA provider and SRA in the vCenter Server. This can be different from the username and password provided during initial deployment. 
-.. The *Enable ASUP* checkbox is selected by default.
 +
-AutoSupport can be disabled only during deployment. 
-.. In the *ASUP Proxy URL* field, provide this URL to avoid firewall blockage for AutoSupport data transmission.
-.. Administrator username and administrator password: This is the password used to log in to ONTAP Tools Manager. This can be different from the username and password provided during initial deployment.
-.. Enter your NTP server information in the *NTP Servers* field. 
-.. Maintenance user password: This is used to grant access to maintenance console options.
-. In *Customize template* > *Deployment Configuration* window, enter the details provided during deployment. All the values in this section should be the same as the ones provided during initial deployment with the exception of data LIF value.
++
+image:../media/ha-deployment-sys-config-102.png[system configuration]
+Enter the following details:
+.. Administrator username and password
+.. Maintenance console password
+.. VASA provider/SRA user name and password
+.. ONTAP tools IP address
+.. Node Interconnect IP address
+.. NTP server
+.. Enable AutoSupport
+.. AutoSupport proxy URL
+. (For HA deployment only) Select *Customize template* > *External storage configuration* window.
++
+Enter the following details
+.. Select the Protocol type.
+.. Enter the ONTAP cluster management IP address in the *ONTAP management LIF* field.
+.. Enter the ONTAP cluster data LIF in the *ONTAP data LIF* field. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
+.. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
+.. Enter ONTAP user name and password.
+.. Select *Enable SVM scoping* option if you intend to use the directly added SVM user account. To use ONTAP cluster, do not select the checkbox.
++
 [NOTE]
-The storage SVM name should not be changed as that is where the recovery data is stored. This applies to directly added SVM user account as well.
+When SVM scope is enabled you should have already enabled SVM support with management IP address.  
 . In the case of HA-deployment recovery, provide the following details:
 .. Content library details.
 .. vCenter configuration details.
