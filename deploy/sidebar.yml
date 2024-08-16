@@ -13,7 +13,7 @@ entries:
     url: /deploy/nonha-deployment.html
   - title: Deploy HA configuration
     url: /deploy/ha-three-node-deployment.html
-  - title: Recover your ONTAP tools for VMware vSphere setup
+  - title: Recover
     url: /deploy/recovery-deployment.html
   - title: Deployment error codes
     url: /deploy/deployment-error-codes.html
