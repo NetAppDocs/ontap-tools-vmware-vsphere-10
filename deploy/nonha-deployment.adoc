@@ -23,18 +23,18 @@ For example, log in to ONTAP > run the command _network route create -vserver <S
 *Steps*
 
 . Log in to the vSphere server.
-. Navigate to the resource pool that you created or the cluster or the host where you want to deploy the OVA.
+. Navigate to the resource pool that you have created or to the cluster or the host where you want to deploy the OVA.
 . Right-click the required location and select *Deploy OVF template...*.
 [NOTE]
 Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastore that it manages.
-. You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*.
+. Select the OVA file either through the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then click *Next*.
 . Select a computer resource and click *Next*.
 . Review the details of the template and click *Next*.
 . Read and accept the license agreement.
 . Select the deployment configuration and click *Next*.
 +
 The advanced deployment options use Trident as a dynamic storage provisioner for ONTAP to create volumes and the easy deployment uses local storage to create volumes.
-. Select the storage for the configuration and disk files and click *Next*.
+. Select the storage for the configuration and the disk files and click *Next*.
 . Select the destination network for each source network and click *Next*.
 . Select *Customize template* > *System configuration* window. 
 +
@@ -43,21 +43,21 @@ Enter the following details:
 
 .. Administrator username and password
 .. Maintenance console password
-.. VASA provider/SRA user name and password
+.. VASA provider/SRA username and password
 .. ONTAP tools IP address
 .. Node Interconnect IP address
 .. NTP server
-.. Enable AutoSupport
+.. Enable AutoSupport option
 .. AutoSupport proxy URL
 . (Only for *Advanced small* and *Advanced medium* deployments) Select *Customize template* > *External storage configuration* window.
 +
-Enter the following details
+Enter the following details:
 
-.. Select the Protocol type.
+.. Select the protocol type.
 .. Enter the ONTAP cluster management IP address in the *ONTAP management LIF* field.
 .. Enter the ONTAP cluster data LIF in the *ONTAP data LIF* field. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
 .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
-.. Enter ONTAP user name and password.
+.. Enter ONTAP username and password.
 .. Select *Enable SVM scoping* option if you intend to use the directly added SVM user account. To use ONTAP cluster, do not select the checkbox.
 +
 [NOTE]
@@ -65,7 +65,7 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 . In *Customize template* > *Node Configuration* window, enter the following details: 
 +
 [NOTE]
-The information provided here will be validated for proper patterns during installation process. In case of discrepancy, an error message will be displayed on the web console, and you will be prompted to correct any incorrect information provided.
+The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
 +
 .. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 .. Specify the primary DNS server IP address.
@@ -83,6 +83,8 @@ As the deployment task gets created, the progress is shown in the vSphere task b
 +
 The installation begins. You can track the installation progress in VM’s web console.
 As part of the installation, node configurations are validated. The inputs provided under different sections under the Customize template in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
-. Make necessary changes in the dialog prompt. Use tab button to navigate across the panel to enter your values, *OK* or *Cancel*.
-. On selecting *OK*, the values provided would again be validated. ONTAP Tools for VMware allows you three attempts to correct any invalid values. If you are unable  to correct issues after three attempts, the product installation stops and you are advised to try the installation on a fresh VM. 
-. After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.
+. Make necessary changes in the dialog prompt. Use tab button to navigate across the panel and select *OK*.
++
+On selecting *OK*, the values provided is validated again. ONTAP tools for VMware vSphere allows you three attempts to correct any invalid values. If you are unable  to correct issues after three attempts, the product installation stops and you are advised to try the installation on a fresh VM. 
+
+After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.

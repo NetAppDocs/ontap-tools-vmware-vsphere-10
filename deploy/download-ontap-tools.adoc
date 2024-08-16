@@ -13,7 +13,7 @@ You can download the `.zip` file that contains binaries (_.ova_) and signed cert
 
 When the deployment is complete, ONTAP tools for VMware vSphere and VASA products are installed in your environment. By default, ONTAP tools for VMware vSphere starts working as soon as you decide on the deployment model and choose whether to enable VASA Provider based on your requirements. See link:../configure/registration-process.html[Register the VASA Provider with a vCenter Server instance] for details.
 
-== Content library
+== Create content library
 
 A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
 [NOTE]
