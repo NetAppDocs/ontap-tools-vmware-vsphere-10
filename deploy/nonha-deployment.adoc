@@ -17,8 +17,8 @@ You can deploy a non-HA single-node configuration in either a small or medium co
 
 *Before you begin*
 
-Make sure the network route is present. Storage data network needs to be accessible from VM management network.
-Example: C1_sti67-vsim-ucs154k_1679633108::> network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>
+Make sure the network route is present. Storage data network must be accessible from VM management network.
+For example, log in to ONTAP > run the command _network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>_
 
 *Steps*
 
@@ -30,7 +30,7 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 . You can either enter the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*.
 . Select a computer resource and click *Next*.
 . Review the details of the template and click *Next*.
-. Read and accept the license agreement and click *Next*.
+. Read and accept the license agreement.
 . Select the deployment configuration and click *Next*.
 +
 The advanced deployment options use Trident as a dynamic storage provisioner for ONTAP to create volumes and the easy deployment uses local storage to create volumes.
@@ -40,6 +40,7 @@ The advanced deployment options use Trident as a dynamic storage provisioner for
 +
 image:../media/ha-deployment-sys-config-102.png[system configuration]
 Enter the following details:
+
 .. Administrator username and password
 .. Maintenance console password
 .. VASA provider/SRA user name and password
@@ -51,6 +52,7 @@ Enter the following details:
 . (Only for *Advanced small* and *Advanced medium* deployments) Select *Customize template* > *External storage configuration* window.
 +
 Enter the following details
+
 .. Select the Protocol type.
 .. Enter the ONTAP cluster management IP address in the *ONTAP management LIF* field.
 .. Enter the ONTAP cluster data LIF in the *ONTAP data LIF* field. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
