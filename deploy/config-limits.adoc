@@ -49,11 +49,11 @@ The following table shows the number of SRM and the corresponding ONTAP tools fo
 
 |===
 |*Number of SRM instances* |*ONTAP tools deployment Size*
-|2	
+|Upto 4
 |Small
-|2-4	
+|4 to 8	
 |Medium
-|4	
+|More than 8	
 |Large
 
 |===
