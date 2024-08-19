@@ -44,12 +44,11 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 . Select the deployment configuration and click *Next*.
 . Select the storage for the configuration and the disk files and click *Next*.
 . Select the destination network for each source network and click *Next*.
-. Select *Customize template* window, fill in the required fields and click *Next*. 
-+
-[NOTE]
+. In the *Customize template* window, fill in the required fields and click *Next*. 
+[NOTE] 
 * When SVM scope is enabled you should have already enabled SVM support with management IP address.  
 * The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
-* Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
+* Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.

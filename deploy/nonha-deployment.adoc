@@ -36,46 +36,12 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 The advanced deployment options use Trident as a dynamic storage provisioner for ONTAP to create volumes and the easy deployment uses local storage to create volumes.
 . Select the storage for the configuration and the disk files and click *Next*.
 . Select the destination network for each source network and click *Next*.
-. Select *Customize template* > *System configuration* window. 
-+
-image:../media/ha-deployment-sys-config-102.png[system configuration]
-Enter the following details:
-
-.. Administrator username and password
-.. Maintenance console password
-.. VASA provider/SRA username and password
-.. ONTAP tools IP address
-.. Node Interconnect IP address
-.. NTP server
-.. Enable AutoSupport option
-.. AutoSupport proxy URL
-. (Only for *Advanced small* and *Advanced medium* deployments) Select *Customize template* > *External storage configuration* window.
-+
-Enter the following details:
-
-.. Select the protocol type.
-.. Enter the ONTAP cluster management IP address in the *ONTAP management LIF* field.
-.. Enter the ONTAP cluster data LIF in the *ONTAP data LIF* field. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
-.. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
-.. Enter ONTAP username and password.
-.. Select *Enable SVM scoping* option if you intend to use the directly added SVM user account. To use ONTAP cluster, do not select the checkbox.
+. In the *Customize template*, enter the required details and click *Next*
 +
 [NOTE]
-When SVM scope is enabled you should have already enabled SVM support with management IP address.  
-. In *Customize template* > *Node Configuration* window, enter the following details: 
-+
-[NOTE]
-The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
-+
-.. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
-.. Specify the primary DNS server IP address.
-.. Specify the secondary DNS server IP address.
-.. Specify the search Domain name to use when resolving the hostname.
-.. Enter IP address (IPV4) mapped to the host name. In case of dual stack, provide any available IPv4 IP address that is in the same VLAN as the IPv6 address.
-.. Specify the subnet mask to use on the deployed network in Netmask (only for IPV4) field. 
-.. Enter the IPV6 address on the deployed network only when you need dual stalk.
-.. Specify the prefix length only if IPv6 address is selected. 
-.. Specify the IPv6 gateway address on the deployed network.
+* When SVM scope is enabled you should have already enabled SVM support with management IP address.  
+* The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
+* Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
@@ -88,3 +54,42 @@ As part of the installation, node configurations are validated. The inputs provi
 On selecting *OK*, the values provided is validated again. ONTAP tools for VMware vSphere allows you three attempts to correct any invalid values. If you are unable  to correct issues after three attempts, the product installation stops and you are advised to try the installation on a fresh VM. 
 
 After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.
+
+
+
+// > *System configuration* window. 
+// .. Administrator username and password
+// .. Maintenance console password
+// .. VASA provider/SRA username and password
+// .. ONTAP tools IP address
+// .. Node Interconnect IP address
+// .. NTP server
+// .. Enable AutoSupport option
+// .. AutoSupport proxy URL
+// . (Only for *Advanced small* and *Advanced medium* deployments) Select *Customize template* > *External storage configuration* window.
+// +
+// Enter the following details:
+//
+// .. Select the protocol type.
+// .. Enter the ONTAP cluster management IP address in the *ONTAP management LIF* field.
+// .. Enter the ONTAP cluster data LIF in the *ONTAP data LIF* field. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
+// .. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
+// .. Enter ONTAP username and password.
+// .. Select *Enable SVM scoping* option if you intend to use the directly added SVM user account. To use ONTAP cluster, do not select the checkbox.
+// +
+// [NOTE]
+// When SVM scope is enabled you should have already enabled SVM support with management IP address.  
+// . In *Customize template* > *Node Configuration* window, enter the following details: 
+// +
+// [NOTE]
+// The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
+// +
+// .. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
+// .. Specify the primary DNS server IP address.
+// .. Specify the secondary DNS server IP address.
+// .. Specify the search Domain name to use when resolving the hostname.
+// .. Enter IP address (IPV4) mapped to the host name. In case of dual stack, provide any available IPv4 IP address that is in the same VLAN as the IPv6 address.
+// .. Specify the subnet mask to use on the deployed network in Netmask (only for IPV4) field. 
+// .. Enter the IPV6 address on the deployed network only when you need dual stalk.
+// .. Specify the prefix length only if IPv6 address is selected. 
+// .. Specify the IPv6 gateway address on the deployed network.

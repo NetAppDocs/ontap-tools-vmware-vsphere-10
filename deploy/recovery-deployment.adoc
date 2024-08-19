@@ -61,7 +61,7 @@ When SVM scope is enabled you should have already enabled SVM support with manag
 . In the case of HA-deployment recovery, provide the following details:
 .. Content library details.
 .. vCenter configuration details.
-. In *Customize template* > *Node Configuration* window, enter the details as per the set up you're trying to recover, non-HA or HA setup.
+. In *Customize template* > *Node Configuration* window, enter the details as per the set up that you're trying to recover.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
