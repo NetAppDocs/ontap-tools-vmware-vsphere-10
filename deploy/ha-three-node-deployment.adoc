@@ -44,53 +44,12 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 . Select the deployment configuration and click *Next*.
 . Select the storage for the configuration and the disk files and click *Next*.
 . Select the destination network for each source network and click *Next*.
-. Select *Customize template* > *System configuration* window. 
-+
-image:../media/ha-deployment-sys-config-102.png[system configuration]
-Enter the following details:
-
-.. Administrator username and password
-.. Maintenance console password
-.. VASA provider/SRA user name and password
-.. ONTAP tools IP address
-.. Node Interconnect IP address
-.. NTP server
-.. Enable AutoSupport
-.. AutoSupport proxy URL
-. Select *Customize template* > *External storage configuration* window.
-+
-Enter the following details
-
-.. Select the Protocol type.
-.. Enter the ONTAP cluster management IP address in the *ONTAP management LIF* field.
-.. Enter the ONTAP cluster data LIF in the *ONTAP data LIF* field. The data LIF should belong to the protocol selected. For example, if iSCSI protocol selected, then an iSCSI data LIF should be provided.
-.. For Storage VM, you can choose to provide your ONTAP’s default storage VM details or create a new storage VM. Do not enter the value in *Storage VM* field when Enable SVM scoping is selected as this field is ignored.
-.. Enter ONTAP user name and password.
-.. Select *Enable SVM scoping* option if you intend to use the directly added SVM user account. To use ONTAP cluster, do not select the checkbox.
+. Select *Customize template* window, fill in the required fields and click *Next*. 
 +
 [NOTE]
-When SVM scope is enabled you should have already enabled SVM support with management IP address.  
-. In *Customize template* > *Content Library Details* window, enter the *Content library name* and the *OVF template name*.
-. In *Customize template* > *vCenter Configuration* window, provide the details of the vCenter Server where the content library is hosted.
-. In *Customize template* > *Node Configuration* window, enter the following details: 
-+
-[NOTE]
-The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
-+
-.. Enter the Host name. Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
-.. Specify the primary DNS server IP address.
-.. Specify the secondary DNS server IP address.
-.. Specify the search Domain name to use when resolving the hostname.
-.. Enter IP address (IPv4) mapped to the host name. In case of dual stack, provide any available IPv4 IP address that is in the same VLAN as the IPv6 address.
-.. Specify the subnet mask to use on the deployed network in Netmask (only for IPV4) field. 
-.. Specify the IPv4 gateway address on the deployed network.
-.. Enter the IPV6 address on the deployed network only when you need dual stalk.
-.. Specify the prefix length only if IPv6 address is selected. 
-.. Specify the IPv6 gateway address on the deployed network.
-. In *Customize template* > *Node 2 Configuration* and *Node 3 Configuration* windows, enter the following details:
-.. Host name 2 and 3 - Host names that consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character only are supported. If you want to configure dual stack, specify the host name mapped to IPv6 address.
-.. IP address
-.. IPV6 address
+* When SVM scope is enabled you should have already enabled SVM support with management IP address.  
+* The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
+* Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
