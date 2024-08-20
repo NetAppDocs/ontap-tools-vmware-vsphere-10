@@ -51,11 +51,11 @@ A vCenter task is created and you can track the progress in the *Recent task* pa
 A vCenter task is created and you can track the progress in the *Recent task* panel.
 
 == Delete an existing SnapMirror relationship
-To delete an asynchronous SnapMirror relationship, site B SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere. 
+To delete an asynchronous SnapMirror relationship, secondary site SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere. 
 You cannot delete all the SnapMirror relationships. When you delete a relationship, respective relationship on ONTAP cluster is also removed.
 When you delete an AutomatedFailOverDuplex SnapMirror relationship, the datastores on the destination are unmapped and consistency group, LUNs, volumes, and igroups are removed from the destination ONTAP cluster.
 
-Deleting the relationship triggers a rescan on site B to remove the unmapped LUN as active path from the hosts.
+Deleting the relationship triggers a rescan on secondary site to remove the unmapped LUN as active path from the hosts.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
@@ -67,7 +67,7 @@ Deleting the relationship triggers a rescan on site B to remove the unmapped LUN
 A vCenter task is created and you can track the progress in the *Recent task* panel.
 
 == Modify an existing SnapMirror relationship
-To modify an asynchronous SnapMirror relationship, site B SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere.
+To modify an asynchronous SnapMirror relationship, secondary site SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere.
 If it is an AutomatedFailOverDuplex SnapMirror relationship, you can modify the host proximity in case of uniform configuration and the host access in case of non-uniform configuration.
 You cannot interchange asynchronous and AutomatedFailOverDuplex policy types.
 You can set the proximity or access for the newly discovered hosts on the cluster.
