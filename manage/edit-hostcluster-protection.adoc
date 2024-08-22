@@ -17,6 +17,17 @@ You can perform the following tasks as part of modify protection. You can perfor
 * Delete existing SnapMirror relationships from the protection settings.
 * Modify an existing SnapMirror relationship.
 
+== Monitor host cluster protection
+Use this procedure to monitor the status of the host cluster protection. You can monitor every protected host cluster along with its protection state, SnapMirror relationships, datastores, and corresponding SnapMirror status.
+
+.Steps
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*. 
++
+The icon under the protection column shows the status of the protection
+. Hover over the icon to see more details.
+
+
 == Add new datastores or hosts
 
 Use this procedure to protect the newly added datastores or hosts. You can add new hosts to the protected cluster or create new datastores on host cluster using the vCenter native user interface.
@@ -24,7 +35,7 @@ Use this procedure to protect the newly added datastores or hosts. You can add n
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . To edit the properties of a protected cluster, you can either
-.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*, click on the kebab menu against the cluster and select *Edit* or
+.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, click on the kebab menu against the cluster and select *Edit* or
 .. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . If you have created a datastore in vCenter native user interface, then that datastore is shown as unprotected. The user interface shows all datastores in the cluster and their protection status in a dialog box. Select *Protect* button to enable complete protection.
 . If you have added a new ESXi host, the protection status shows as partially protected. Select the kebab menu under the SnapMirror settings and select *Edit* to set the proximity of the newly added ESXi host.
@@ -41,7 +52,7 @@ A vCenter task is created and you can track the progress in the *Recent task* pa
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . To edit the properties of a protected cluster, you can either
-.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*, click on the kebab menu against the cluster and select *Edit* or
+.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, click on the kebab menu against the cluster and select *Edit* or
 .. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . Select *Add relationship*. 
 . Add new relationship as either *Asynchronous* or *AutomatedFailOverDuplex* policy type.
@@ -60,7 +71,7 @@ Deleting the relationship triggers a rescan on secondary site to remove the unma
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . To edit the properties of a protected cluster, you can either
-.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*, click on the kebab menu against the cluster and select *Edit* or
+.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, click on the kebab menu against the cluster and select *Edit* or
 .. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*. 
 . Select the kebab menu under the SnapMirror settings and select *Delete*.
 
@@ -78,7 +89,7 @@ You cannot edit an existing asynchronous SnapMirror relationship.
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . To edit the properties of a protected cluster, you can either
-.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationship*, click on the kebab menu against the cluster and select *Edit* or
+.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, click on the kebab menu against the cluster and select *Edit* or
 .. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . If AutomatedFailOverDuplex policy type is selected, add host proximity or host access details.
 . Select *Protect* button.
