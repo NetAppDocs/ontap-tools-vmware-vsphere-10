@@ -69,7 +69,7 @@ A vCenter task is created and you can track the progress in the *Recent task* pa
 == Modify an existing SnapMirror relationship
 To modify an asynchronous SnapMirror relationship, secondary site SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere.
 If it is an AutomatedFailOverDuplex SnapMirror relationship, you can modify the host proximity in case of uniform configuration and the host access in case of non-uniform configuration.
-You cannot interchange asynchronous and AutomatedFailOverDuplex policy types.
+You cannot interchange Asynchronous and AutomatedFailOverDuplex policy types.
 You can set the proximity or access for the newly discovered hosts on the cluster.
 
 [NOTE]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade
 summary: 'Upgrade is supported for both HA and non-HA deployments.'
 ---
-= Upgrade to the latest release of ONTAP tools
+= Upgrade from ONTAP tools for VMware vSphere 10.x to 10.2
 :icons: font
 :imagesdir: ../media/
 

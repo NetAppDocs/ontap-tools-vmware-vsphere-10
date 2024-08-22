@@ -17,7 +17,7 @@ The create Datastore action wizard supports creation of NFS, VMFS, and vVols dat
 [NOTE]
 * You can create only VMFS datastores on a protected cluster. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
 * You cannot create a datastore on a datacenter that has one or more protected host clusters.
-* You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type(uniform/non-uniform config).
+* You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type (uniform/non-uniform config).
 * You can create a VMFS datastore on a host, only when it has an async relationship. 
 
 //10.2 updates - notes
