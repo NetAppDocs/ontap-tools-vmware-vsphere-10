@@ -32,6 +32,9 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |16
 |32
 |===
+
+Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP tools for VMware vSphere] for more details.
+
 == Minimum storage and application requirements
 
 |===
@@ -53,7 +56,6 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |10.1
 
 |===
-
 
 The Interoperability Matrix Tool (IMT) contains the latest information about the supported versions of ONTAP, vCenter Server, ESXi hosts, and plug-in applications.
 
