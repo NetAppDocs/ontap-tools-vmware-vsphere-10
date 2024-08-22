@@ -10,7 +10,7 @@ summary: 'You can create vVols datastore with new volumes or with existing volum
 
 [.lead]
 
-Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
+When you create a datastore at host cluster level, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
 The create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore.
 
@@ -20,19 +20,19 @@ You can create a vVols datastore with either new volumes or existing volumes. Yo
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
+.Before you begin
+Ensure that VASA provider is registered with the selected vCenter.
+
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a host system or a host cluster or a datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select vVols in *Datastore Type*.
-+
-[NOTE]
-You get vVols option only if the VASA provider is registered with the selected vCenter.
 . In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
 . In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI protocol) as applicable.
 [NOTE]
 * Platform and asymmetric options help you to filter out the SVMs dropdown options. You should select the SVM to create or use the volume(s) for datastore creation. 
 * The *Asymmetric* toggle button is visible only if iSCSI was selected in the previous step and performance or capacity is selected in the platform drop-down.
-* Asymmetric is true for AFF platform and false for ASA platform.
+* Select the *Asymmetric* toggle button for AFF platform and disable it for ASA platform.
 . In the *Storage attributes* pane, you can either create new volumes or use the existing volumes. When creating new volume, you can enable QoS on the datastore.
 . Review your selection in the *Summary* pane and click *Finish*.
 The vVols Datastore is created and mounted on all the hosts.
@@ -45,7 +45,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datacenter, and then select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select NFS in *Datastore Type*.
-. In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and Kerberos Authentication.
+. In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
 [NOTE]
 Kerberos Authentication is available only when the NFS 4.1 protocol is selected. 
 . In the *Storage* pane, select *Platform* and *Storage VM*. You can select *custom Export Policy* in the *Advanced Option* section.
@@ -60,26 +60,6 @@ The NFS datastore is created and mounted on all the hosts.
 == Create a VMFS datastore
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
-
-
-
-*Before you begin*
-
-Check the following items before proceeding: 
-
-* Check if all target hosts are healthy and check if the host supports protocol.
-* Create a new volume (min size 2GB)
-* Set Volume options with QOS
-* Create LUN of type VMware
-* Get initiators for all target hosts
-* Create/reuse igroup based on matching initiators
-* Map LUN to igroup
-* Add iSCSI targets to ESXi hosts
-* Rescan Host Bus Adapters (HBAs) on all hosts
-* Mount volume as VMFS6 datastore (for 6.5+ hosts)
-* Rescan VMFS storage on ESXi hosts
-* Move datastore to datastore-cluster
-* Rebalance iSCSI paths
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`

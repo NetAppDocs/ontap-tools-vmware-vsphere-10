@@ -20,7 +20,7 @@ indexpage:
         url: /concepts/vcenter-server-role-based-access-control-features.html
       - title: Configure remote diagnostics
         url: /manage/configure-remote-diagnostic-access.html
-      - title: Configure high availability
+      - title: High availability for ONTAP tools for VMware vSphere
         url: /concepts/high-availability.html
       - title: Protect your datastores
         url: /protect/enable-storage-replication-adapter.html

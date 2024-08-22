@@ -22,11 +22,11 @@ You should have the following programs installed on the protected site and the r
 +
 Documentation about installing SRM is on the VMware site.
 +
-https://www.vmware.com/support/pubs/srm_pubs.html[VMware Site Recovery Manager Documentation]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html[VMware Site Recovery Manager Documentation]
 
 * SRA
 +
-The adapter is installed either on SRM.
+The adapter is installed on SRM.
 
 *Steps*
 
@@ -47,7 +47,7 @@ You should have the following programs installed on the protected site and the r
 +
 Documentation about installing SRM can be found on the VMware site.
 +
-https://www.vmware.com/support/pubs/srm_pubs.html[VMware Site Recovery Manager Documentation]
+https://docs.vmware.com/en/Site-Recovery-Manager/index.html[VMware Site Recovery Manager Documentation]
 
 * SRA
 +
