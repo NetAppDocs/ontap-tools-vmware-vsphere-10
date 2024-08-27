@@ -18,7 +18,7 @@ You can perform the following tasks as part of modify protection. You can perfor
 * Modify an existing SnapMirror relationship.
 
 == Monitor host cluster protection
-Use this procedure to monitor the status of the host cluster protection. You can monitor every protected host cluster along with its protection state, SnapMirror relationships, datastores, and corresponding SnapMirror status.
+Use this procedure to monitor the status of the host cluster protection. You can monitor every protected host cluster along with its protection state, SnapMirror relationships, datastores, and the corresponding SnapMirror status.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
