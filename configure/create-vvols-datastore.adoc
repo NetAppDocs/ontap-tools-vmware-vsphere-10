@@ -10,7 +10,7 @@ summary: 'You can create vVols datastore with new volumes or with existing volum
 
 [.lead]
 
-Depending on the destination chosen for action, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
+When you create a datastore at host cluster level, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
 The create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore.
 
@@ -28,13 +28,13 @@ You can create a vVols datastore with either new volumes or existing volumes. Yo
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
+.Before you begin
+Ensure that VASA provider is registered with the selected vCenter.
+
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select vVols in *Datastore Type*.
-+
-[NOTE]
-You get vVols option only if the VASA provider is registered with the selected vCenter.
 . In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
 . In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI amd FC protocol) as applicable.
 [NOTE]
@@ -68,7 +68,6 @@ The NFS datastore is created and mounted on all the hosts.
 == Create a VMFS datastore
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
-
 .Before you begin
 Check the following items before proceeding:
 
@@ -95,8 +94,6 @@ To configure an ONTAP SVM for FC protocol, refer to https://docs.netapp.com/us-e
 For more information on using NVMe/FC protocol with VMware vSphere 8.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[NVMe-oF Host Configuration for ESXi 8.x with ONTAP].
 
 For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[ONTAP NVMe/FC Host Configuration guide] and http://www.netapp.com/us/media/tr-4684.pdf[TR-4684].
-
-
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`

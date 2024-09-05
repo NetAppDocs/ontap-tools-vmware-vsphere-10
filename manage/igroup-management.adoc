@@ -9,7 +9,7 @@ summary: 'In ONTAP, export polices are used to provide volume data path access t
 :imagesdir: ../media/
 
 [.lead]
-In ONTAP, export polices are used to provide volume data path access to hosts and initiator groups (igroups) are used to provide logical unit number (LUN) data path access to ESXi hosts.
+In ONTAP, export polices are used to provide volume data path access to hosts and initiator groups (igroups) are used to provide logical unit number (LUN) data path access to ESXi hosts. ONTAP tools for VMware vSphere makes igroup creation easy and intuitive and provides rich end-to-end workflows. To ensure consistency, direct  iGroup creation on storage platforms is not supported.
 
 When virtual volume datastores are created or mounted to hosts in vCenter Server, the hosts need to be given access to volumes (NFS) or LUNs (iSCSI) depending on the protocol type of the datastore.
 

@@ -9,8 +9,7 @@ summary: 'ONTAP tools for VMware vSphere is a collection of tools for lifecycle 
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools for VMware vSphere is a set of tools for virtual machine lifecycle management. ONTAP tools for VMware vSphere integrates with the VMware ecosystem to help in datastore provisioning and in providing basic protection for virtual machines. 
-
+ONTAP tools for VMware vSphere is a set of tools for virtual machine lifecycle management. It integrates with the VMware ecosystem to help in datastore provisioning and in providing basic protection for virtual machines. 
 ONTAP tools for VMware vSphere is a collection of horizontally scalable, event-driven, microservices deployed as an Open Virtual Appliance (OVA). This release has REST API integration with ONTAP.
 
 ONTAP tools for VMware vSphere consists of:
