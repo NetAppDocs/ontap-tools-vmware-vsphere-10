@@ -54,7 +54,7 @@ Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP 
 |3.0
 
 |OVA Application 
-|10.1
+|10.2
 
 |===
 
