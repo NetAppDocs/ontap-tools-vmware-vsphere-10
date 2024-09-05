@@ -26,27 +26,6 @@ The number of hosts in the table shows the total number of host from multiple vC
 For details on host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
-
-The following table shows the numbers supported per SRM instance using ONTAP tools for VMware vSphere.
-
-|===
-
-|Total number of virtual machines configured for protection using array-based replication |5000
-
-|Total number of array-based replication protection groups
-|250
-
-|Total number of protection groups per recovery plan
-|50
-
-|Number of replicated datastores
-|255
-
-|===
-
-For details host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
-
-== ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
 The following table shows the numbers supported per SRM instance using ONTAP tools for VMware vSphere.
 
 |===

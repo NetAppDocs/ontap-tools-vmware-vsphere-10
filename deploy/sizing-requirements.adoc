@@ -42,7 +42,7 @@ Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP 
 |Storage, host, and applications|Minimum version requirements
 
 |ONTAP
-|Latest patch release of ONTAP 9.12.1, 9.13.1, or 9.14.1
+|Latest patch release of ONTAP 9.12.1, 9.13.1, 9.14.1, and 9.15.1. 
 
 |ESXi hosts
 |ESXi 7.0.3
