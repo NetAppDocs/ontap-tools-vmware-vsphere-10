@@ -3,18 +3,20 @@ title: Manage ONTAP tools
 entries:
   - title: Manage datastores
     entries:
-      - title: Mount NFS and VMFS datastores
+      - title: Mount NFS and VMFS datastore
         url: /manage/mount-datastores-on-host.html
+      - title: Unmount NFS and VMFS datastore
+        url: /manage/unmount-datastores-on-host.html
       - title: Mount a vVols datastore
         url: /manage/mount-a-vvols-datastore.html
-      - title: Resize NFS and VMFS datastores
+      - title: Resize NFS and VMFS datastore
         url: /manage/resize-datastores.html
-      - title: Expand vVol Datastores
+      - title: Expand vVol datastore
         url: /manage/expand-storage-of-vvol-datastore.html
-      - title: Shrink vVols datastores
+      - title: Shrink vVols datastore
         url: /manage/remove-storage-from-a-vvols-datastore.html
       - title: Delete datastores
-        url: /manage/delete-vvols.html  
+        url: /manage/delete-ds.html  
       - title: ONTAP storage views for datastores
         url: /manage/storage-view-datastore.html  
       - title: Virtual machine storage view
@@ -37,7 +39,7 @@ entries:
       url: /manage/configure-remote-diagnostic-access.html
     - title: Start SSH on other nodes
       url: /manage/start-the-ssh-on-other-nodes.html
-    - title: Update the vCenter and ONTAP credentials
+    - title: Update the vCenter server and ONTAP credentials
       url: /manage/update-vcenter-credentials.html
   - title: ONTAP tool reports
     url: /manage/reports.html
@@ -65,3 +67,9 @@ entries:
         url: /manage/reset-maint-password.html
   - title: Clean up volumes
     url: /manage/delete-deployment.html
+  - title: Manage host cluster protection
+    entries:
+      - title: Modify host cluster protection
+        url: /manage/edit-hostcluster-protection.html
+      - title: Remove host cluster protection
+        url: /manage/delete-hostcluster-protection.html

@@ -22,7 +22,7 @@ SRA supports cluster-level management and SVM-level management. If you add stora
 
 *Steps*
 
-. In SRM, click *Array Managers*, and then click *Add Array Manager*.
+. In SRM, click *Array Managers* and click *Add Array Manager*.
 . Enter the following information to describe the array in SRM:
  .. Enter a name to identify the array manager in the *Display Name* field.
  .. In the *SRA Type* field, select *NetApp Storage Replication Adapter for ONTAP*.

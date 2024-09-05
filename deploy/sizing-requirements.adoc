@@ -21,7 +21,8 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 Recommended memory as per the size of deployment and per node is as shown in the table below:
 
 |===
-|*Type of deployment*|*CPUs* |*Memory (GB)*
+
+|*Type of deployment*|*CPUs*|*Memory (GB)*
 |Small (S)
 |8
 |16
@@ -60,19 +61,3 @@ Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP 
 The Interoperability Matrix Tool (IMT) contains the latest information about the supported versions of ONTAP, vCenter Server, ESXi hosts, and plug-in applications.
 
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT[Interoperability Matrix Tool^]
-
-== Additional deployment considerations
-You should consider a few requirements while customizing the deployment of ONTAP tools.
-
-=== Application user password
-
-This is the password assigned to the administrator account. For security reasons, it is recommended that the password length is eight to thirty characters long and contains a minimum of one upper, one lower, one digit, and one special character.
-
-=== Appliance maintenance console credentials
-
-You should access the maintenance console by using the "`maint`" username. You can set the password for the "`maint`" user during deployment. You can use the Restart guest OS option available during VM restart in vCenter Server to change the password.
-
-=== Appliance network properties
-
-Specify a valid DNS hostname (unqualified) as well as the static IP address for ONTAP tools for VMware vSphere and the other network parameters. The IP addresses provided should be accessible from the VLAN network that you select during the deployment. DHCP is not supported for ONTAP tools for VMware vSphere 10.1 release. All these parameters are required for proper installation and operation.
-

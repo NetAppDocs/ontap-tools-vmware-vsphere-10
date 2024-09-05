@@ -1,0 +1,32 @@
+---
+permalink: manage/unmount-datastores-on-host.html
+sidebar: sidebar
+keywords:
+summary: 'Unmount datastore action unmounts a NFS or VMFS datastore from ESXi hosts. Unmount datastore action is enabled for NFS and VMFS datastores that are discovered or managed by the ONTAP tools for VMware vSphere.'
+---
+= Unmount NFS and VMFS datastores
+:icons: font
+:imagesdir: ../media/
+//10.2 new topic
+[.lead]
+
+Unmount datastore action unmounts a NFS or VMFS datastore from ESXi hosts. Unmount datastore action is enabled for NFS and VMFS datastores that are discovered or managed by the ONTAP tools for VMware vSphere.
+
+*Steps*
+
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. Right-click a NFS or VMFS datastore object and select *Unmount datastore*.
++
+A dialog box opens and lists the ESXi hosts that the datastore is mounted on. 
+When the operation is performed on a protected datastore, a warning message is displayed on the screen.
+. Select one or more ESXi hosts to unmount the datastore.
++
+You cannot unmount the datastore from all hosts. The UI suggests that you use the delete datastore operation instead.
+. Select the *Unmount* button.
++
+If the datastore is part of a protected host cluster, a warning message is displayed. 
+
+[NOTE]
+If the protected datastore is unmounted the exiting protection setting may result in partial protection. Refer to link:../manage/edit-hostcluster-protection.html[Modify protected host cluster] to enable complete protection.
+
+You can track the progress in the Recent Task panel.

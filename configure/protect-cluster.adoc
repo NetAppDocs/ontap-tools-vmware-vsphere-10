@@ -1,0 +1,47 @@
+---
+permalink: configure/protect-cluster.html
+sidebar: sidebar
+keywords: vVols datastore,delete vVol
+summary: 'ONTAP tools for VMware vSphere manages protection of host clusters.'
+---
+= Create host cluster protection
+:icons: font
+:imagesdir: ../media/
+// new topic for 10.2 content
+[.lead]
+
+ONTAP tools for VMware vSphere manages protection of host clusters. 
+All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
+
+.Prerequisites
+Ensure the following prerequisites are met:
+
+* The host cluster has datastores only from one SVM. 
+* Datastore mounted on the host cluster should not be mounted on any host outside of the cluster.
+* All Datastores mounted on the host cluster must be VMFS datastores with iSCSI/FC protocol. VMFS datastores with NVMe/FC and NVMe/TCP protocols are not supported.
+* FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing consistency group (CG).
+* FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing SnapMirror relationship.
+* The host cluster should have at least one datastore.
+
+.Steps
+
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
+. In the protect cluster window, the datastore type and source storage virtual machine (VM) details are auto populated. Select the datastores link to view the datastores that are protected.
+. Enter the *consistency group name*.
+. Select *Add Relationship*.
+. In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
++
+The policy type can be Asynchronous or AutomatedFailOverDuplex. 
++
+When you add SnapMirror relationship as AutomatedFailOverDuplex type policy, it is mandatory to add the target storage VM as storage backend to the same vCenter where ONTAP tools for VMware vSphere is deployed.
++
+In AutomatedFailOverDuplex policy type, there is uniform and non-uniform host configuration. 
+When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For details, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms]
+. If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
+. Select *Add*.
+. In the *Protect cluster* window, during create operation, only delete action is supported. You can delete and add the protection again. During Modify host cluster protection operation, edit option is available. You can edit or delete the relationships using the kebab menu options.
+.  Select *Protect* button.
++
+A vCenter task is created with job ID details and the progress is shown in the Recent tasks panel. This is an asynchronous task, user interface shows only the request submission status and does not wait for the task completion. 
+. To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*.

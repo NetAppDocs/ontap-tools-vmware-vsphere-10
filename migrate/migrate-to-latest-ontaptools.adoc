@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate
 summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.'
 ---
-= Migrate to the latest release of ONTAP tools
+= Migrate from ONTAP tools for VMware vSphere 9.x to 10.2
 :icons: font
 :imagesdir: ../media/
 
@@ -12,9 +12,9 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.
 
 [NOTE]
-It is recommended to migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA provider feature alone. If you have NVMe datastores and vVol replication, it is not recommended to migrate the setup to ONTAP tools for VMware vSphere 10.1.
+It is recommended to migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA provider feature alone.
 
-*About this task* 
+*About this task*
 
 Migration is supported from ONTAP tools for VMware vSphere 9.10D2, 9.11D4, 9.12, and 9.13 releases to 10.1 release. 
 
@@ -23,6 +23,10 @@ As an existing user, you need to take the OVA backup from your current release b
 
 == Common migration steps
 
+. Deploy OVA for ONTAP tools for VMware vSphere 10.2 release. 
+. Add the vCenter Server instance that you want to migrate to ONTAP tools for VMware vSphere 10.2 release. See link:../configure/add-vcenter.html[Add and manage vCenter Server instances]
+. Onboard storage backend locally from the ONTAP tools for VMware vSphere plug-in vCenter server APIs. Add storage as a locally scoped storage for migration.
+. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xx is visible in ONTAP tools for VMware vSphere 10.2 only after the datastore discovery job is triggered, which might take up to 30 minutes to trigger. Verify if the datastores are visible in the Overview page of the ONTAP tools for VMware vSphere Plugin UI page. 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.1 release. 
 . Add the vCenter Server instance that you want to migrate to ONTAP tools for VMware vSphere 10.1 release. See link:../configure/add-vcenter.html[Add and manage vCenter Server instances]
 . Onboard storage backend locally from the ONTAP tools for VMware vSphere plug-in vCenter APIs. Add storage as a locally scoped storage for migration.
@@ -55,9 +59,10 @@ Perform these steps on both protection and recovery sites.
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
-. Deploy OVA for ONTAP tools for VMware vSphere 10.1 release.
-. Add the vCenter Server instance that you want to migrate to ONTAP tools for VMware vSphere 10.1 release. See link:../configure/add-vcenter.html[Add a vCenter Server instance]. 
-. Onboard storage backend locally from the remote plug-in vCenter APIs. Add storage as local scoped for migration.
+
+. Deploy OVA for ONTAP tools for VMware vSphere 10.2 release.
+. Add the vCenter Server instance that you want to migrate to ONTAP tools for VMware vSphere 10.2 release. See link:../configure/add-vcenter.html[Add a vCenter Server instance]. 
+. Onboard storage backend locally from the remote plug-in vCenter server APIs. Add storage as local scoped for migration.
 . Issue the following API call to migrate:
 +
 ====

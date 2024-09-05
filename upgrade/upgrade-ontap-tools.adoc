@@ -2,20 +2,23 @@
 permalink: upgrade/upgrade-ontap-tools.html
 sidebar: sidebar
 keywords: upgrade
-summary: 'When you upgrade from ONTAP tools for VMware vSphere 10.0 and 10.1 to 10.1, a recovery volume is created and all the necessary details are taken into the recovery volume.'
+summary: 'Upgrade is supported for both HA and non-HA deployments.'
 ---
-= Upgrade to the latest release of ONTAP tools
+= Upgrade from ONTAP tools for VMware vSphere 10.x to 10.2
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When you upgrade from ONTAP tools for VMware vSphere 10.0 and 10.1 to 10.1, a recovery volume is created and all the necessary details are taken into the recovery volume. The recovery volume can be used to recover the ONTAP tools for VMware vSphere setup if you need to recover your configuration. If you’re performing a patch-level upgrade of ONTAP tools for VMware vSphere 10.1, the same recovery volume is used and the details are refreshed. 
 Upgrade is supported for both HA and non-HA deployments.
+
+[NOTE]
+To upgrade from ONTAP tools for VMware vSphere 10.0 to 10.2 release, you need to first upgrade to ONTAP tools for VMware vSphere 10.1 and then to 10.2 release.
+
+// content changed for 10.2 release
 
 *Before you begin*
 
-You need to complete the following steps before proceeding with the upgrade task:
-
+If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
 
 *Enable Diagnostics*
 
@@ -23,6 +26,7 @@ You need to complete the following steps before proceeding with the upgrade task
 . Log in as the maintenance user.
 . Enter *4* to select Support and Diagnostics.
 . Enter *2* to select Enable remote diagnostic access.
+//10.2 change
 . Enter *y* to set the password of your choice.
 . Login to VM IP address from the terminal/putty with user as 'diag' and password that was set in the previous step.
 
@@ -55,7 +59,7 @@ If support bundle generation is in progress, wait for it to complete and then de
 
 . Upload ONTAP tools for VMware vSphere upgrade ISO to content library.
 . In the primary VM page, select *Actions* > *Edit Settings* 
-. In the edit settings window under *CD/DVD drive* field select content library ISO file. 
+. In the edit settings window under *CD/DVD drive* field, select content library ISO file. 
 . Select the ISO file and click *OK*. Choose the connected checkbox across the *CD/DVD drive* field.
 image:../media/primaryvm-edit-settings.png[Edit settings]
 . From vCenter Server, open a console to ONTAP tools.
