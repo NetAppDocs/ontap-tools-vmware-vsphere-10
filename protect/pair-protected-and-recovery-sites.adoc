@@ -21,7 +21,7 @@ Storage Replication Adapter (SRA) does not support fan-out SnapMirror configurat
 
 *Steps*
 
-. Double-click *Site Recovery* on the vSphere Client home page, and then click *Sites*.
+. Double-click *Site Recovery* on the vSphere Client home page and click *Sites*.
 . Click *Objects* > *Actions* > *Pair Sites*.
 . In the Pair Site Recovery Manager Servers dialog box, enter the address of the protected site's Platform Services Controller, and then click *Next*.
 . In the Select vCenter Server section, do the following:

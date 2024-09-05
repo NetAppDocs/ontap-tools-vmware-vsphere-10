@@ -18,10 +18,30 @@ You can use the following table as a guide to configure ONTAP tools for VMware v
 |Easy Deployment |Medium (M) |~24K| 64 |NFS, iSCSI
 |High-Availability |Small (S) |~24K| 64 |NFS, iSCSI
 |High-Availability |Medium (M) |~50k| 128 |NFS, iSCSI
-|High-Availability |Large (L) |~100k| 256
-
-[NOTE]
+|High-Availability |Large (L) |~100k| 256 [NOTE]
 The number of hosts in the table shows the total number of host from multiple vCenters. |NFS, iSCSI
+
+|===
+
+For details on host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
+
+== ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
+
+The following table shows the numbers supported per SRM instance using ONTAP tools for VMware vSphere.
+
+|===
+
+|Total number of virtual machines configured for protection using array-based replication |5000
+
+|Total number of array-based replication protection groups
+|250
+
+|Total number of protection groups per recovery plan
+|50
+
+|Number of replicated datastores
+|255
+
 |===
 
 For details host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
@@ -62,9 +82,11 @@ The following table shows the number of SRM and the corresponding ONTAP tools fo
 |Small
 |4 to 8	
 |Medium
-|More than 8
+|More than 8	
 |Large
 
 |===
+
+//For configuration limit details of ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA), refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/ONTAP_Tools_for_VMware_vSphere:_Sizing_Guide_for_ONTAP_tools_for_VMware_vSphere[Sizing Guide for ONTAP tools for VMware vSphere].
 
 For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html[Operational Limits of VMware Live Site Recovery].

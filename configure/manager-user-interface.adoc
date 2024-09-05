@@ -18,7 +18,7 @@ ONTAP tools Manager helps in:
 * Storage backend management - Add and manage ONTAP storage clusters to ONTAP tools for VMware vSphere and map them to onboarded vCenter Server instances globally.
 * Log bundle downloads - Collect log files for ONTAP tools for VMware vSphere.
 * Certificate management - Change the self-signed certificate to a custom CA certificate and renew
-or refresh all certificates.
+or refresh all certificates of VASA provider.
 * Password management - Reset OVA application password for the user.
 
 To access ONTAP tools Manager, launch `\https://loadBalanceIP:8443/virtualization/ui/` from the browser and login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.

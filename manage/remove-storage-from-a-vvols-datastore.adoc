@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore
 summary: 'Delete datastore action deletes the datastore when there are no vVols on the selected datastore.'
 ---
-= Shrink vVols datastores
+= Shrink vVols datastore
 :icons: font
 :imagesdir: ../media/
 

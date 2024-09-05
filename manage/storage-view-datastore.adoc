@@ -27,11 +27,13 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 
 . From the vSphere Client navigate to the VMFS datastore.
 . Click the *Configure* tab in the right pane. 
-. Select *NetApp ONTAP tools* > *ONTAP Storage*. The *Storage details* and *LUN details* appear on the right pane.
+. Select *NetApp ONTAP tools* > *ONTAP Storage*. The *Storage details* and *LUN details* or *Namespace details* in case of NVMe/TCP or NVMe/FC protocol appear on the right pane.
 +
 * The storage details page contains information about storage backends, aggregate, and volume.
 * The LUN details page contains data related to the LUN.
+* When using NVMe/TCP or NVMe/FC protocol for VMFS datastore, the Namespace details page contains data related to Namespace.
 
+//10.2 updates
 == ONTAP storage views for vVols datastores
 .Steps
 
@@ -40,4 +42,4 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. 
 . The ONTAP storage view lists all the volumes. You can expand or remove storage from the ONTAP storage pane.
 +
-Follow the instructions in link:../manage/expand-storage-of-vvol-datastore.html[Expand vVols Datastores] section to add vVols datastore and link:../manage/remove-storage-from-a-vvols-datastore.html[Shrink vVols datastores] section to delete the datastore.
+Follow the instructions in link:../manage/expand-storage-of-vvol-datastore.html[Expand vVols Datastore] section to add vVols datastore and link:../manage/remove-storage-from-a-vvols-datastore.html[Shrink vVols datastore] section to delete the datastore.
