@@ -42,6 +42,8 @@ The following table shows the numbers supported per SRM instance using ONTAP too
 |Number of replicated datastores
 |255
 
+|===
+
 For details host system sizing requirements per node, refer to link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
