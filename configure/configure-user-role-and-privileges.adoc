@@ -106,3 +106,53 @@ Using APIs:
 |/api |Read-Only | Cluster users should have this privilege to get the correct storage backend status. Otherwise, ONTAP tools Manager shows "unknown" storage backend status.
 |===
  
+=== Upgrade ONTAP tools for VMware vSphere 10.1 user to 10.2 user
+
+If the ONTAP tools for VMware vSphere 10.1 user is a cluster scoped user created using the json file, then run the following commands on the ONTAP CLI using the admin user to upgrade to 10.2 release.
+
+For Product Capabilities: VSC, VSC & VASA Provider, (VSC & SRA), (VSC, VASA Provider and SRA) 
+cluster privileges:
+----
+security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace show" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem show" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host show" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map show" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme show-interface" -access read
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host add" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map add" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace delete" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem delete" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host remove" -access all
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all
+----
+If the ONTAP tools for VMware vSphere 10.1 user is a SVM scoped user created using the json file, then run the following commands on the ONTAP CLI using admin user to upgrade to 10.2 release.
+
+SVM privileges:
+
+----
+security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace show" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem show" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host show" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map show" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme show-interface" -access read -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host add" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map add" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace delete" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem delete" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host remove" -access all -vserver <vserver-name>
+security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all -vserver <vserver-name>
+
+----
+
+Adding command "vserver nvme namespace show" and "vserver nvme subsystem show" to the existing role adds the following necessary commands.
+
+----
+vserver nvme namespace create
+
+vserver nvme namespace modify
+
+vserver nvme subsystem create
+
+vserver nvme subsystem modify
+
+----
