@@ -2,18 +2,18 @@
 permalink: protect/configure-array-manager.html
 sidebar: sidebar
 keywords:
-summary: 'You can configure Storage Replication Adapter \(SRA\) by using the Array Manager wizard of Site Recovery Manager \(SRM\) to enable interactions between SRM and storage virtual machines \(SVMs\).'
+summary: 'You can configure Storage Replication Adapter \(SRA\) by using the Array Manager wizard of VMware Live Site Recovery to enable interactions between VMware Live Site Recovery and storage virtual machines \(SVMs\).'
 ---
 = Configure SRA using array manager
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can configure Storage Replication Adapter (SRA) by using the Array Manager wizard of Site Recovery Manager (SRM) to enable interactions between SRM and storage virtual machines (SVMs).
+You can configure Storage Replication Adapter (SRA) by using the Array Manager wizard of VMware Live Site Recovery to enable interactions between VMware Live Site Recovery and storage virtual machines (SVMs).
 
 *What you will need*
 
-* You should have paired the protected sites and recovery sites in SRM.
+* You should have paired the protected sites and recovery sites in VMware Live Site Recovery.
 * You should have configured your onboarded storage before configuring the array manager.
 * You should have configured and replicated the SnapMirror relationships between the protected sites and recovery sites.
 * You should have enabled the SVM management LIFs to enable multitenancy.
@@ -22,8 +22,8 @@ SRA supports cluster-level management and SVM-level management. If you add stora
 
 *Steps*
 
-. In SRM, click *Array Managers* and click *Add Array Manager*.
-. Enter the following information to describe the array in SRM:
+. In VMware Live Site Recovery, click *Array Managers* and click *Add Array Manager*.
+. Enter the following information to describe the array in VMware Live Site Recovery:
  .. Enter a name to identify the array manager in the *Display Name* field.
  .. In the *SRA Type* field, select *NetApp Storage Replication Adapter for ONTAP*.
  .. Enter the information to connect to the cluster or the SVM:

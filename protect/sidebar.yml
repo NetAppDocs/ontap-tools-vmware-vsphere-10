@@ -9,7 +9,7 @@ entries:
         url: /protect/configure-storage-replication-adapter-for-san-environment.html
       - title: Configure SRA for highly scaled environments
         url: /protect/configure-storage-replication-adapter-for-highly-scaled-environment.html
-  - title: Configure SRA on the SRM appliance
+  - title: Configure SRA on VMware Live Site Recovery appliance
     url: /protect/configure-on-srm-appliance.html
   - title: Update SRA credentials
     url: /protect/update-credentials.html

@@ -112,7 +112,13 @@ Using APIs:
 
 If the ONTAP tools for VMware vSphere 10.1 user is a cluster scoped user created using the json file, then run the following commands on the ONTAP CLI using the admin user to upgrade to 10.2 release.
 
-For Product Capabilities: VSC, VSC & VASA Provider, (VSC & SRA), (VSC, VASA Provider and SRA) 
+For product capabilities: 
+
+* VSC
+* VSC and VASA Provider
+* VSC and SRA
+* VSC, VASA Provider, and SRA.
+
 cluster privileges:
 
 _security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace show" -access all_
