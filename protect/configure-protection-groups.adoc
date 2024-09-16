@@ -15,7 +15,7 @@ You should create protection groups to protect a group of virtual machines on th
 
 You should ensure that both the source and target sites are configured for the following:
 
-* Same version of SRM installed
+* Same version of VMware Live Site Recovery installed
 * Virtual machines
 * Paired protected and recovery sites
 * Source and destination datastores should be mounted on respective sites
