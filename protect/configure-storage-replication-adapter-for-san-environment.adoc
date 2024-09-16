@@ -2,14 +2,14 @@
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html
 sidebar: sidebar
 keywords:
-summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for Site Recovery Manager \(SRM\).'
+summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for VMware Live Site Recovery.'
 ---
 = Configure SRA for SAN and NAS environments
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You should set up the storage systems before running Storage Replication Adapter (SRA) for Site Recovery Manager (SRM).
+You should set up the storage systems before running Storage Replication Adapter (SRA) for VMware Live Site Recovery.
 
 
 == Configure SRA for SAN environments
@@ -18,15 +18,15 @@ You should set up the storage systems before running Storage Replication Adapter
 
 You should have the following programs installed on the protected site and the recovery site:
 
-* SRM
+* VMware Live Site Recovery
 +
-Documentation about installing SRM is on the VMware site.
+Documentation about installing VMware Live Site Recovery is on the VMware site.
 +
-https://docs.vmware.com/en/Site-Recovery-Manager/index.html[VMware Site Recovery Manager Documentation]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html[About VMware Live Site Recovery]
 
 * SRA
 +
-The adapter is installed on SRM.
+The adapter is installed on VMware Live Site Recovery.
 
 *Steps*
 
@@ -43,19 +43,19 @@ Check the LUN access for the mapped LUNs in the ESXi host to verify iSCSI connec
 
 You should have the following programs installed on the protected site and the recovery site:
 
-* SRM
+* VMware Live Site Recovery
 +
-Documentation about installing SRM can be found on the VMware site.
+Documentation about installing VMware Live Site Recovery can be found on the VMware site.
 +
-https://docs.vmware.com/en/Site-Recovery-Manager/index.html[VMware Site Recovery Manager Documentation]
+https://docs.vmware.com/en/VMware-Live-Site-Recovery/9.0/vmware-live-site-recovery/GUID-1F66BEEA-7344-45C7-BDD4-D87734906F16.html[About VMware Live Site Recovery]
 
 * SRA
 +
-The adapter is installed on SRM and the SRA server.
+The adapter is installed on VMware Live Site Recovery and the SRA server.
 
 *Steps*
 
 . Verify that the datastores at the protected site contain virtual machines that are registered with vCenter Server.
 . Verify that the ESXi hosts at the protected site have mounted the NFS exports volumes from the storage virtual machine (SVM).
-. Verify that valid addresses such as the IP address, host name, or FQDN on which the NFS exports are present are specified in the *NFS Addresses* field when using the Array Manager wizard to add arrays to SRM.
+. Verify that valid addresses such as the IP address, host name, or FQDN on which the NFS exports are present are specified in the *NFS Addresses* field when using the Array Manager wizard to add arrays to VMware Live Site Recovery.
 . Use the `ping` command on each ESXi host at the recovery site to verify that the host has a VMkernel port that can access the IP addresses that are used to serve NFS exports from the SVM.

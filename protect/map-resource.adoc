@@ -15,7 +15,7 @@ You should map your resources on the protected site and recovery site so that vi
 
 You should have connected the protected and recovery sites.
 
-NOTE: In Site Recovery Manager (SRM), resources can be resource pools, ESXi hosts, or vSphere clusters.
+NOTE: In VMware Live Site Recovery, resources can be resource pools, ESXi hosts, or vSphere clusters.
 
 *Steps*
 
