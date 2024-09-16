@@ -62,7 +62,7 @@ vVols provide a volume-level abstraction for storage used by a virtual machine. 
 === VM Storage Policy
 VM Storage Policies are created in vCenter Server under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.
 
-=== VVMware Live Site Recovery
+=== VMware Live Site Recovery
 VMware Live Site Recovery provides business continuity, disaster recovery, site migration, and non-disruptive testing capabilities for VMware virtual environments.
 
 === VMware vSphere APIs for Storage Awareness (VASA)

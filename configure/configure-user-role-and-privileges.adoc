@@ -119,7 +119,7 @@ For product capabilities:
 * VSC and SRA
 * VSC, VASA Provider, and SRA.
 
-cluster privileges:
+Cluster privileges:
 
 _security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace show" -access all_
 
@@ -143,7 +143,7 @@ _security login role create -role <existing-role-name> -cmddirname "vserver nvme
 
 _security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all_
 
-If the ONTAP tools for VMware vSphere 10.1 user is a SVM scoped user created using the json file, then run the following commands on the ONTAP CLI using admin user to upgrade to 10.2 release.
+If the ONTAP tools for VMware vSphere 10.1 user is a SVM scoped user created using the json file, then run the following commands on the ONTAP CLI using the admin user to upgrade to 10.2 release.
 
 SVM privileges:
 
