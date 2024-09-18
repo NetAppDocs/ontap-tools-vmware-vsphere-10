@@ -68,7 +68,9 @@ The NFS datastore is created and mounted on all the hosts.
 == Create a VMFS datastore
 
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
+
 .Before you begin
+
 Check the following items before proceeding:
 
 * For each protocol on ONTAP storage side, respective services and LIF’s need to be enabled. 
