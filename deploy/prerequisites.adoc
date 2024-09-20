@@ -1,0 +1,145 @@
+---
+permalink: deploy/prerequisites.html
+sidebar: sidebar
+keywords: ONTAP tools,Storage Replication Adapter
+summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
+---
+= Prerequisites for deploying ONTAP tools for VMware vSphere
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
+
+You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools for VMware vSphere on a supported vSphere client that includes ESXi system.
+
+== System requirements
+
+* *Installation package space requirements per node*
+** 10 GB for thin provisioned installations
+** 248 GB for thick provisioned installations
+
+* *Host system sizing requirements per node*
+Recommended memory as per the size of deployment and per node is as shown in the table below:
+
+|===
+
+|*Type of deployment*|*CPUs*|*Memory (GB)*
+|Small (S)
+|8
+|16
+|Medium (M)
+|12
+|24
+|Large (L)
+|16
+|32
+|===
+
+Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP tools for VMware vSphere] for more details.
+
+=== Minimum storage and application requirements
+
+|===
+|Storage, host, and applications|Minimum version requirements
+
+|ONTAP
+|Latest patch release of ONTAP 9.12.1, 9.13.1, 9.14.1, and 9.15.1. 
+
+|ESXi hosts
+|ESXi 7.0.3
+
+|vCenter server
+|vCenter 7.0U3
+
+|VASA provider 
+|3.0
+
+|OVA Application 
+|10.2
+
+|===
+
+The Interoperability Matrix Tool (IMT) contains the latest information about the supported versions of ONTAP, vCenter Server, ESXi hosts, and plug-in applications.
+
+https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT[Interoperability Matrix Tool^]
+
+
+== Configuration limits to deploy ONTAP tools for VMware vSphere
+
+You can use the following table as a guide to configure ONTAP tools for VMware vSphere.
+|===
+
+|*Deployment* | *Type* | *Number of vVols* |*Number of hosts* | *Protocol type*
+
+|Easy Deployment |Small (S) |~12K| 32 |NFS, iSCSI
+|Easy Deployment |Medium (M) |~24K| 64 |NFS, iSCSI
+|High-Availability |Small (S) |~24K| 64 |NFS, iSCSI
+|High-Availability |Medium (M) |~50k| 128 |NFS, iSCSI
+|High-Availability |Large (L) |~100k| 256 [NOTE]
+The number of hosts in the table shows the total number of host from multiple vCenters. |NFS, iSCSI
+
+|===
+
+For details on host system sizing requirements per node, refer to link:../deploy/prerequisites.html[Prerequisites for deploying ONTAP tools for VMware vSphere].
+
+== ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
+The following table shows the numbers supported per VMware Live Site Recovery instance using ONTAP tools for VMware vSphere.
+
+|===
+|*vCenter Deployment size* |*Small* |*Medium*
+
+|Total number of virtual machines configured for protection using array-based replication
+|2000
+|5000
+
+|Total number of array-based replication protection groups
+|250
+|250
+
+|Total number of protection groups per recovery plan
+|50
+|50
+
+|Number of replicated datastores
+|255
+|255
+
+|Number of VMs
+|4000
+|7000
+
+|===
+
+The following table shows the number of VMware Live Site Recovery and the corresponding ONTAP tools for VMware vSphere deployment size.
+
+|===
+|*Number of VMware Live Site Recovery instances* |*ONTAP tools deployment Size*
+|Upto 4
+|Small
+|4 to 8	
+|Medium
+|More than 8	
+|Large
+
+|===
+
+//For configuration limit details of ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA), refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/ONTAP_Tools_for_VMware_vSphere:_Sizing_Guide_for_ONTAP_tools_for_VMware_vSphere[Sizing Guide for ONTAP tools for VMware vSphere].
+
+For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html[Operational Limits of VMware Live Site Recovery].
+
+== Prepare to deploy ONTAP tools for VMware vSphere
+
+Ensure the following items are in place before you proceed with the deployment:
+
+* vCenter Server environment is set up and configured. 
+* (Optional) For automation user - NetApp provided Postman collections JSON file is gathered. 
+* Parent vCenter Server Credentials to deploy the OVA are in place. Parent vCenter Server password should not contain these special characters($, ', ").
+* The login credentials for your vCenter Server instance to which the ONTAP tools for VMware vSphere will connect to post deployment for registration. 
+* Browser cache is deleted.
+* Three free IP addresses are available for non-HA deployment - one free IP address for load balancer and one free IP address for the Kubernetes control plane and one IP address for node. For HA deployment, along with these three IP addresses you'll need two more IP addresses for second and third nodes.
+Host names should be mapped to the free IP addresses on the DNS before assigning. All the five IP addresses should be on the same VLAN that is selected for deployment. 
+* Domain Name on which the certificate is issued is mapped to  the Virtual IP address in a multi-vCenter deployment where Custom CA certificates are mandatory. _nslookup_ check on the domain name is performed to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.
+
+//* In a multi-vCenter deployment where Custom CA certificates are mandatory, map the Domain Name on which the certificate is issued to the Virtual IP address. Perform a _nslookup_ check on the domain name to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.
+// * IPv4/IPv6 supported VLAN - Pure IPV6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.

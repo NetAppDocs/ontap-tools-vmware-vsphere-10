@@ -49,4 +49,4 @@ The values provided are validated again. ONTAP tools for VMware vSphere allows y
 
 After successful installation, the web console shows the state of ONTAP tools for VMware vSphere. 
 
-After successful installation, you should manually edit the hardware requirements as per the guidelines in the link:../deploy/sizing-requirements.html[Prerequisites for deploying ONTAP tools for VMware vSphere] page. 
+After successful installation, you should manually edit the hardware requirements as per the guidelines in the link:../deploy/prerequisites.html[Prerequisites for deploying ONTAP tools for VMware vSphere] page. 

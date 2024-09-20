@@ -19,8 +19,27 @@ You can configure HA three nodes in either small, medium, or large configuration
 *Before you begin*
 
 This task gives you instructions on how to install HA three nodes in small, medium, or high configurations.
+
+Creating the content library is a mandatory prerequisite step for deploying HA three nodes configuration.
+A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
 [NOTE]
-Creating the content library is a mandatory step for deploying HA three nodes configuration. Refer to link:../deploy/download-ontap-tools.html[Create content library] section for the procedure. For more information, refer to https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library] blog.
+You should store the content library on a shared datastore, such that all hosts in a cluster can access it.
+You need to create a content library to store the OVA before deploying the OVA in HA configuration.
+[NOTE]
+Content library template once uploaded should not be deleted post deployment, as it will be used during reboots.
+
+Create the content library using the following steps:
+
+. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
+. Log in to the vSphere client using `\https://vcenterip/ui`
+. Select the horizontal ellipses next to vSphere client and select *Content library*.
+. Select *Create* on the right of the page.
+. Provide a name for the library and create the content library.
+. Navigate to the content library you created.
+. Select *Actions* in the right of the page and select *Import item* and import the OVA file.
+
+[NOTE]
+For more information, refer to https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library] blog.
 
 Make sure you have imported your OVA into your content library. Keep the name of the content library and the library item name that you have given to your OVA item handy.
 
@@ -29,6 +48,7 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 
 *Steps*
 
+. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
 . Log in to the vSphere server.
 . Navigate to the resource pool that you have created or to the cluster or to the host where you want to deploy the OVA.
 . Right-click the required location and select *Deploy OVF template...*.
@@ -49,6 +69,9 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 * When SVM scope is enabled you should have already enabled SVM support with management IP address.  
 * The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
 * Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
+[NOTE]
+Pure IPV6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.
+// restructuring
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.

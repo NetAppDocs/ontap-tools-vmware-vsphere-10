@@ -22,6 +22,7 @@ For example, log in to ONTAP > run the command _network route create -vserver <S
 
 *Steps*
 
+. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
 . Log in to the vSphere server.
 . Navigate to the resource pool that you have created or to the cluster or to the host where you want to deploy the OVA.
 . Right-click the required location and select *Deploy OVF template...*.
