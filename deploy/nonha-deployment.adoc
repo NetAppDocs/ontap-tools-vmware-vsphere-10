@@ -17,7 +17,7 @@ You can deploy ONTAP tools for VMware vSphere in two configurations:
 [role="tabbed-block"]
 ====
 
-. non-HA single-node configuration
+.non-HA single-node configuration
 --
 
 You can deploy a non-HA single-node configuration in either a small or medium configuration. 
@@ -57,7 +57,7 @@ The advanced deployment options use Trident as a dynamic storage provisioner for
 
 --
 
-. HA configuration
+.HA configuration
 
 --
 
