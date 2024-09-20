@@ -1,0 +1,5 @@
+section: recover
+title: Recover ONTAP tools
+entries:
+  - title: Recover your ONTAP tools for VMware vSphere setup
+    url: /recover/recovery-deployment.html
