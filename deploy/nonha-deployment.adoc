@@ -9,6 +9,10 @@ summary: 'You can configure non-HA single-node in either small or medium configu
 :imagesdir: ../media/
 
 [.lead]
+You can deploy ONTAP tools for VMware vSphere in two configurations:
+
+* Non-HA single-node configuration
+* HA configuration
 
 [role="tabbed-block"]
 ====
@@ -50,20 +54,8 @@ The advanced deployment options use Trident as a dynamic storage provisioner for
 * The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
 * Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 . Review the details in the *Ready to complete* window, select *Finish*.
-+
-As the deployment task gets created, the progress is shown in the vSphere task bar.
-. Power on the VM after the completion of the task.
-+
-The installation begins. You can track the installation progress in VM’s web console.
-As part of the installation, node configurations are validated. The inputs provided under different sections under the Customize template in the OVF form are validated. In case of any discrepancies, a dialog prompts you to take corrective action.
-. Make necessary changes in the dialog prompt. Use tab button to navigate across the panel and select *OK*.
-+
-The values provided are validated again. ONTAP tools for VMware vSphere allows you three attempts to correct any invalid values. If you are unable  to correct issues after three attempts, the product installation stops and you are advised to try the installation on a fresh VM. 
-
-After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.
 
 --
-
 
 . HA configuration
 
@@ -132,18 +124,19 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 Pure IPV6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.
 // restructuring
 . Review the details in the *Ready to complete* window, select *Finish*.
-+
-As the deployment task gets created, the progress is shown in the vSphere task bar.
-. Power on the VM after the completion of the task.
-+
-The installation begins. You can track the installation progress in VM’s web console.
-As part of the installation, node configurations are validated. The inputs provided under different sections under the Customize template in the OVF form are validated. In the case of any discrepancies, a dialog prompts you to take corrective action.
-. Make necessary changes in the dialog prompt. Use tab button to navigate across the panel and select *OK*.
-+
-The values provided are validated again. ONTAP tools for VMware vSphere allows you three attempts to correct any invalid values. If you are unable  to correct issues after three attempts, the product installation stops and you are advised to try the installation on a fresh VM. 
-
-After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.
 
 --
 
 ====
+
+As the deployment task gets created, the progress is shown in the vSphere task bar.
+
+Power on the VM after the completion of the task.
+
+The installation begins. You can track the installation progress in VM’s web console.
+As part of the installation, node configurations are validated. The inputs provided under different sections under the Customize template in the OVF form are validated. In the case of any discrepancies, a dialog prompts you to take corrective action.
+. Make necessary changes in the dialog prompt. Use tab button to navigate across the panel and select *OK*.
+
+The values provided are validated again. ONTAP tools for VMware vSphere allows you three attempts to correct any invalid values. If you are unable  to correct issues after three attempts, the product installation stops and you are advised to try the installation on a fresh VM. 
+
+After successful installation, the web console shows the state of ONTAP tools for VMware vSphere.
