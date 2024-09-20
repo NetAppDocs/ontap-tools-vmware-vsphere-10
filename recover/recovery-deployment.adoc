@@ -1,5 +1,5 @@
 ---
-permalink: deploy/recovery-deployment.html
+permalink: recover/recovery-deployment.html
 sidebar: sidebar
 keywords:
 summary: 'If you lose your ONTAP tools for VMware vSphere setup, but have your ONTAP working, you can recover ONTAP tools for VMware vSphere setup using the ONTAP. When you lose the setup, bring down the setup gracefully.'
