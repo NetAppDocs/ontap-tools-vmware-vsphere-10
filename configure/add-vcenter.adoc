@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'vCenter Server instances are the central management platforms that allow you to control hosts, virtual machines (VM), and storage backends.'
 ---
-= Add and manage vCenter Server instances
+= Add and register vCenter Server instances
 :icons: font
 :imagesdir: ../media/
 
@@ -35,21 +35,3 @@ When you add a vCenter Server instance to ONTAP tools, the following actions are
 When you add a vCenter Server instance, ONTAP tools for VMware vSphere plug-in is registered automatically to vCenter Server as a remote plug-in. The plug-in is visible on the vSphere user interface shortcuts.
  
 The plug-in is registered with a key _com.netapp.otv_ to the vCenter Server instance and can be seen in the ExtensionManager of the vCenter Server instance.
-
-== Unregister ONTAP tools for VMware vSphere plug-in
-
-You can unregister the ONTAP tools for VMware vSphere Plug-in from a vCenter Server instance using the following steps.
-
-*Steps*
-
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
-. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select vCenters from the sidebar.
-. Click on the vertical ellipses against the vCenter you want to remove and select the *Remove* option. 
-[NOTE]
-You cannot remove a vCenter Server instance if there is a storage mapping attached to it. You need to remove the mapping before removing the vCenter Server instance.
-
-When you remove vCenter Server instances in ONTAP tools, the following actions are performed automatically: 
-
-* Plug-in is unregistered.
-* Plug-in privileges and plug-in roles are removed.

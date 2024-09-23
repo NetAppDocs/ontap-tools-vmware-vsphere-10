@@ -38,7 +38,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 
 Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP tools for VMware vSphere] for more details.
 
-=== Minimum storage and application requirements
+== Minimum storage and application requirements
 
 |===
 |Storage, host, and applications|Minimum version requirements
@@ -128,18 +128,18 @@ The following table shows the number of VMware Live Site Recovery and the corres
 
 For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html[Operational Limits of VMware Live Site Recovery].
 
-== Prepare to deploy ONTAP tools for VMware vSphere
+== Pre-deployment checks
 
 Ensure the following items are in place before you proceed with the deployment:
 
 * vCenter Server environment is set up and configured. 
 * (Optional) For automation user - NetApp provided Postman collections JSON file is gathered. 
-* Parent vCenter Server Credentials to deploy the OVA are in place. Parent vCenter Server password should not contain these special characters($, ', ").
-* The login credentials for your vCenter Server instance to which the ONTAP tools for VMware vSphere will connect to post deployment for registration. 
+* Parent vCenter Server Credentials to deploy the OVA are in place. 
++
+[NOTE]
+Parent vCenter Server password should not contain these special characters($, ', ").
+* You have the login credentials for your vCenter Server instance to which the ONTAP tools for VMware vSphere will connect to post deployment, for registration. 
 * Browser cache is deleted.
-* Three free IP addresses are available for non-HA deployment - one free IP address for load balancer and one free IP address for the Kubernetes control plane and one IP address for node. For HA deployment, along with these three IP addresses you'll need two more IP addresses for second and third nodes.
+* Ensure that you have three free IP addresses available for non-HA deployment - one free IP address for load balancer and one free IP address for the Kubernetes control plane and one IP address for node. For HA deployment, along with these three IP addresses you'll need two more IP addresses for second and third nodes.
 Host names should be mapped to the free IP addresses on the DNS before assigning. All the five IP addresses should be on the same VLAN that is selected for deployment. 
-* Domain Name on which the certificate is issued is mapped to  the Virtual IP address in a multi-vCenter deployment where Custom CA certificates are mandatory. _nslookup_ check on the domain name is performed to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.
-
-//* In a multi-vCenter deployment where Custom CA certificates are mandatory, map the Domain Name on which the certificate is issued to the Virtual IP address. Perform a _nslookup_ check on the domain name to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.
-// * IPv4/IPv6 supported VLAN - Pure IPV6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.
+* Ensure that domain Name on which the certificate is issued is mapped to  the Virtual IP address in a multi-vCenter deployment where Custom CA certificates are mandatory. _nslookup_ check on the domain name is performed to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.

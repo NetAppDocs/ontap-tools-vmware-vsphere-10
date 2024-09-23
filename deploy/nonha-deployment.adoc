@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can configure non-HA single-node in either small or medium configurations.'
 ---
-= Deploy non-HA single-node configuration
+= Deploy ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
@@ -17,7 +17,7 @@ You can deploy ONTAP tools for VMware vSphere in two configurations:
 [role="tabbed-block"]
 ====
 
-.non-HA single-node configuration
+.Non-HA single-node configuration
 --
 
 You can deploy a non-HA single-node configuration in either a small or medium configuration. 

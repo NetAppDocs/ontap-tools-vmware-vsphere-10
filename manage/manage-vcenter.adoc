@@ -43,3 +43,8 @@ You need to remove all the storage backends attached to the vCenter Server befor
 +
 [NOTE]
 Once you remove the vCenter Server instances, it will no longer be maintained by the application.
+
+When you remove vCenter Server instances in ONTAP tools, the following actions are performed automatically: 
+
+* Plug-in is unregistered.
+* Plug-in privileges and plug-in roles are removed.
