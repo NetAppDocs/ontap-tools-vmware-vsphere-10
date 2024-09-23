@@ -53,6 +53,9 @@ The advanced deployment options use Trident as a dynamic storage provisioner for
 * When SVM scope is enabled you should have already enabled SVM support with management IP address.  
 * The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
 * Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
++
+[NOTE]
+Pure IPV6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.
 . Review the details in the *Ready to complete* window, select *Finish*.
 
 --
