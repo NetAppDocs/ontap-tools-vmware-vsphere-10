@@ -3,7 +3,7 @@ title: Configure ONTAP tools
 entries:
   - title: ONTAP tools Manager user interface
     url: /configure/manager-user-interface.html
-  - title: Add and manage vCenter Server
+  - title: Add vCenter Server
     url: /configure/add-vcenter.html
   - title: Register VASA provider to vCenter Server
     url: /configure/registration-process.html

@@ -4,14 +4,12 @@ sidebar: sidebar
 keywords:
 summary: 'vCenter Server instances are the central management platforms that allow you to control hosts, virtual machines (VM), and storage backends.'
 ---
-= Add and register vCenter Server instances
+= Add vCenter Server instances
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 vCenter Server provides the central management platform that allows you to control hosts, virtual machines (VMs), and storage backends.
-
-== Add a vCenter Server instance
 
 *About this task*
 
@@ -29,8 +27,6 @@ When you add a vCenter Server instance to ONTAP tools, the following actions are
 * The vCenter Client Plug-in is registered
 * Custom privileges for the plug-ins and APIs are pushed to the vCenter Server instance
 * Custom roles are created to manage the users.
-
-== Register ONTAP tools for VMware vSphere plug-in with vCenter Server instance
 
 When you add a vCenter Server instance, ONTAP tools for VMware vSphere plug-in is registered automatically to vCenter Server as a remote plug-in. The plug-in is visible on the vSphere user interface shortcuts.
  
