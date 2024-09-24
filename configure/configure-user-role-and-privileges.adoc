@@ -106,7 +106,7 @@ Using APIs:
 |/api |Read-Only | Cluster users should have this privilege to get the correct storage backend status. Otherwise, ONTAP tools Manager shows "unknown" storage backend status.
 |===
  
-=== Upgrade ONTAP tools for VMware vSphere 10.1 user to 10.2 user
+== Upgrade ONTAP tools for VMware vSphere 10.1 user to 10.2 user
 
 // updated this topic for https://jira.ngage.netapp.com/browse/OTVDOC-127
 
