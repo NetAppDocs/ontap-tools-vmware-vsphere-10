@@ -22,7 +22,11 @@ The create Datastore action wizard supports creation of NFS, VMFS, and vVols dat
 
 //10.2 updates - notes
 
-== Create a vVols datastore
+[role="tabbed-block"]
+====
+
+.Create a vVols datastore
+--
 
 You can create a vVols datastore with either new volumes or existing volumes. You cannot create vVols datastore with the mix of existing and new volumes.
 [NOTE]
@@ -45,7 +49,11 @@ Ensure that VASA provider is registered with the selected vCenter.
 . Review your selection in the *Summary* pane and click *Finish*.
 The vVols Datastore is created and mounted on all the hosts.
 
-== Create an NFS datastore
+--
+
+.Create an NFS datastore
+
+--
 //10.1 addition
 A VMware Network File System (NFS) datastore uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
 
@@ -65,8 +73,11 @@ Kerberos Authentication is available only when the NFS 4.1 protocol is selected.
 
 The NFS datastore is created and mounted on all the hosts.
 
-== Create a VMFS datastore
+--
 
+.Create a VMFS datastore
+
+--
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
 .Before you begin
@@ -117,3 +128,5 @@ For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the
 [NOTE]
 If you're creating the datastore on a protected cluster, you can see a readonly message "The datastore is being mounted on a protected Cluster."
 The VMFS datastore is created and mounted on all the hosts.
+
+--
