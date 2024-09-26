@@ -21,11 +21,11 @@ entries:
         url: /manage/storage-view-datastore.html  
       - title: Virtual machine storage view
         url: /manage/virtual-machine-storage-view-datastore.html  
-  - title: Manage storage threshold
+  - title: Manage storage thresholds
     url: /manage/manage-storage-threshold.html
-  - title: Manage storage backend
+  - title: Manage storage backends
     url: /manage/storage-backend.html
-  - title: Manage vCenter Server instance
+  - title: Manage vCenter Server instances
     url: /manage/manage-vcenter.html
   - title: Manage certificates
     url: /manage/certificate-manage.html
