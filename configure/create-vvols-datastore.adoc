@@ -121,7 +121,6 @@ When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem 
 +
 [NOTE]
 For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
-
 //10.2 update
 . Review the datastore details in the *Summary* pane and click *Finish*.
 +
