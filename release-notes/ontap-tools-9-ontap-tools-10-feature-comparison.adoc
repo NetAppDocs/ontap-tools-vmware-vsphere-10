@@ -22,7 +22,7 @@ Streamline and simplify day-0 to day-2 operations with enhanced security, compli
 |
 Evolving ONTAP tools 10.x towards 9.x parity while extending high availability, performance, and scale limits
 |
-Expanding support to include fibre channel for VMFS and vVols, and NVMe-oF/FC, NVMe-oF/TCP for VMFS only. Ease of use for NetApp® SnapMirror®, simple setup for vSphere metro storage clusters, and three-site SRM support
+Expanded support to include FC for VMFS and vVols, and NVMe-oF/FC, NVMe-oF/TCP for VMFS only. Ease of use for NetApp SnapMirror, simple setup for vSphere metro storage clusters, and three-site SRM support
 |
 ONTAP release qualification
 |
@@ -66,15 +66,15 @@ Hosts and VMs: 300 Hosts, up to 10K VMs
 
 Datastores: 600 NFS, up to 50 VMFS, up to 250 vVols
 
-vVols: Up to 14K
+vVols: Up to 14,000
 |
 Hosts and VMs: 600 Hosts
 
-vVols: Up to 140K
+vVols: Up to 140,000
 |
 Hosts and VMs: 600 Hosts
 
-vVols: Up to 140K
+vVols: Up to 140,000
 |
 Observability
 |
@@ -100,6 +100,6 @@ SCV integration and interoperable for backup
 |
 SRA replication for iSCSI VMFS and NFS v3 datastores
 |
-SRA replication for iSCSI VMFS and NFS v3 datastores, 3-site protection combining SMAS and SRM.
+SRA replication for iSCSI VMFS and NFS v3 datastores three-site protection combining SMAS and SRM.
 
 |===
