@@ -101,5 +101,12 @@ SCV integration and interoperable for backup
 SRA replication for iSCSI VMFS and NFS v3 datastores
 |
 SRA replication for iSCSI VMFS and NFS v3 datastores three-site protection combining SMAS and SRM.
-
+|
+VASA provider support
+|
+VASA 4.0
+|
+VASA 3.0
+|
+VASA 3.0
 |===

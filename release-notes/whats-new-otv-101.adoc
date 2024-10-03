@@ -20,11 +20,16 @@ ONTAP tools for VMware vSphere 10.2 supports both NVMe/FC and NVMe/TCP protocols
 a|
 xref:../configure/create-vvols-datastore.html[Fibre Channel (FC) protocol support] 
 a|
-ONTAP tools for VMware vSphere 10.2 supports the FC protocol to provision vVols datastores. The benefits of FC protocol support include high performance, reliability and stability, scalability, enhanced security, and efficient resource management. 
+ONTAP tools for VMware vSphere 10.2 supports the FC protocol to provision vVols and VMFS datastores. The benefits of FC protocol support include high performance, reliability and stability, scalability, enhanced security, and efficient resource management. 
 a|
 xref:../configure/protect-cluster.html[SnapMirror active sync] 
 a|
 SnapMirror active sync support with ONTAP tools for VMware vSphere 10.2 includes an all-new protect cluster capability that provides an end-to-end configuration workflow to build out a vSphere Metro Storage  within the vCenter UI. This enables stretched cluster configurations wherein business services continue to operate even through a complete site failure, supporting applications to fail over transparently using a secondary copy.   
+
+[NOTE]
+====
+The SnapMirror wizard can configure SnapMirror async and sync in addition to SnapMirror active sync.
+====
 a|
 xref:../protect/enable-storage-replication-adapter.html[Storage Replication Adapter (SRA) enhancements] 
 a|
