@@ -1,0 +1,112 @@
+---
+permalink: release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html
+sidebar: sidebar
+keywords: release notes, feature, comparison
+summary: "Learn about the ONTAP tools for VMware vSphere 9 and ONTAP tools for VMware vSphere 10 feature comparison"
+---
+= ONTAP tools for VMware vSphere 9 and ONTAP tools for VMware vSphere 10 feature comparison
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+
+Learn whether migrating from ONTAP tools for VMware vSphere 9 to ONTAP tools for VMware vSphere 10.1 or VMware vSphere 10.2 is right for you. For the most up-to-date compatibility information see https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^].
+
+[cols="20%,25%,25%,30%",options="header"]
+|===
+| Feature | ONTAP tools 9.13 | ONTAP tools 10.1 | ONTAP tools 10.2
+|
+Key value proposition
+|
+Streamline and simplify day-0 to day-2 operations with enhanced security, compliance and automation capabilities
+|
+Evolving ONTAP tools 10.x towards 9.x parity while extending high availability, performance, and scale limits
+|
+Expanded support to include FC for VMFS and vVols, and NVMe-oF/FC, NVMe-oF/TCP for VMFS only. Ease of use for NetApp SnapMirror, simple setup for vSphere metro storage clusters, and three-site SRM support
+|
+ONTAP release qualification
+|
+ONTAP 9.9.1 to ONTAP 9.15.1
+|
+ONTAP 9.12.1 to ONTAP 9.14.1
+|
+ONTAP 9.12.1 to ONTAP 9.15.1
+|
+VMware release support
+|
+vSphere 7.x-8.x
+
+VMware Site Recovery Manager (SRM) 8.5 to VMware Live Site Recovery 9.0
+|
+vSphere 7.x-8.x
+
+VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0
+|
+vSphere 7.x-8.x
+
+VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0 
+|
+Protocol support
+|
+NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI and FCP)
+
+vVols datastores: iSCSI, FCP, NVMe/FC, NFS v3
+|
+NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI)
+
+vVols datastores: iSCSI, NFS v3
+|
+NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI/FCP/NVMe-oF)
+
+vVols datastores: iSCSI, FCP, NFS v3
+|
+Scalability
+|
+Hosts and VMs: 300 Hosts, up to 10K VMs 
+
+Datastores: 600 NFS, up to 50 VMFS, up to 250 vVols
+
+vVols: Up to 14,000
+|
+Hosts and VMs: 600 Hosts
+
+vVols: Up to 140,000
+|
+Hosts and VMs: 600 Hosts
+
+vVols: Up to 140,000
+|
+Observability
+|
+Performance, capacity, and host compliance dashboards
+
+Dynamic VM and datastore reports
+|
+Updated performance, capacity, and host compliance dashboards
+
+Dynamic VM and datastore reports
+|
+Updated performance, capacity, and host compliance dashboards
+
+Dynamic VM and datastore reports
+|
+Data protection
+|
+SRA replication for VMFS and NFS
+
+FlexVols based replication for vVols
+
+SCV integration and interoperable for backup
+|
+SRA replication for iSCSI VMFS and NFS v3 datastores
+|
+SRA replication for iSCSI VMFS and NFS v3 datastores three-site protection combining SMAS and SRM.
+|
+VASA provider support
+|
+VASA 4.0
+|
+VASA 3.0
+|
+VASA 3.0
+|===

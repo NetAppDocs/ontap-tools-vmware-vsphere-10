@@ -1,0 +1,39 @@
+---
+permalink: release-notes/whats-new-otv-102.html
+sidebar: sidebar
+keywords: what's new, release notes, otv, 10.2, ONTAP tools for VMware vSphere
+summary: "Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.2."
+---
+
+= What's new in ONTAP tools for VMware vSphere 10.2
+
+[.lead]
+Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.2.
+
+[cols="30%,70%",options="header"]
+|===
+| Update | Description
+a|
+xref:../manage/storage-view-datastore.html#ontap-storage-views-for-nfs-datastores[NVMe protocol support]
+a|
+ONTAP tools for VMware vSphere 10.2 supports both NVMe/FC and NVMe/TCP protocols to provision VMFS datastores. The seamless integrated workflows within the vCenter interface eases datastore provisioning. The benefits of using NVMe/FC and NVMe/TCP protocols to provision VMFS datastores include optimized performance, massive scalability and efficient handling of multiple data requests, significant reductions in latency, and efficient resource management. NVMe-based storage IO has up to 50% lower CPU utilization when compared to legacy data protocols. 
+a|
+xref:../configure/create-vvols-datastore.html[Fibre Channel (FC) protocol support] 
+a|
+ONTAP tools for VMware vSphere 10.2 supports the FC protocol to provision vVols and VMFS datastores. The benefits of FC protocol support include high performance, reliability and stability, scalability, enhanced security, and efficient resource management. 
+a|
+xref:../configure/protect-cluster.html[SnapMirror active sync] 
+a|
+SnapMirror active sync support with ONTAP tools for VMware vSphere 10.2 includes an all-new protect cluster capability that provides an end-to-end configuration workflow to build out a vSphere Metro Storage  within the vCenter UI. This enables stretched cluster configurations wherein business services continue to operate even through a complete site failure, supporting applications to fail over transparently using a secondary copy.   
+
+[NOTE]
+====
+The SnapMirror wizard can configure SnapMirror async and sync in addition to SnapMirror active sync.
+====
+a|
+xref:../protect/enable-storage-replication-adapter.html[Storage Replication Adapter (SRA) enhancements] 
+a|
+SRA implements the VMware Site Recovery Manager (SRM) specification-based disaster recovery (DR) solution. SnapMirror active sync through SRM integration supports the disaster recovery planning and orchestrating solution to provide transparent application failover.
+|===
+
+
