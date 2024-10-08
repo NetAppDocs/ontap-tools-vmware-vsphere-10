@@ -1,0 +1,9 @@
+section: release-notes
+title: Release notes
+entries:
+  - title: Release Notes
+    url: /release-notes/release-notes.html
+  - title: What's new in ONTAP tools for VMware vSphere 10.2
+    url: /release-notes/whats-new-otv-102.html
+  - title: ONTAP tools 9 and ONTAP tools 10 feature comparison
+    url: /release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html
