@@ -10,7 +10,7 @@ summary: 'Provides important information about this release of ONTAP tools for V
 
 [.lead]
 
-Learn about the new and enhanced features available in ONTAP tools for VMware vSphere 10.2.
+Learn about the new and enhanced features available in ONTAP tools for VMware vSphere 10.3.
 
 For a complete list of new features and enhancements, see xref:whats-new-otv-102.adoc[What's new in ONTAP tools for VMware vSphere 10.2].
 

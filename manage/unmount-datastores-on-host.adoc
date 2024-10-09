@@ -7,7 +7,7 @@ summary: 'Unmount datastore action unmounts a NFS or VMFS datastore from ESXi ho
 = Unmount NFS and VMFS datastores
 :icons: font
 :imagesdir: ../media/
-//10.2 new topic
+
 [.lead]
 
 Unmount datastore action unmounts a NFS or VMFS datastore from ESXi hosts. Unmount datastore action is enabled for NFS and VMFS datastores that are discovered or managed by the ONTAP tools for VMware vSphere.

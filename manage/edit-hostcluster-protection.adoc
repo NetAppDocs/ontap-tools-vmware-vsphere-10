@@ -7,7 +7,7 @@ summary: 'You can edit the SnapMirror relationships of the protected host cluste
 = Modify protected host cluster
 :icons: font
 :imagesdir: ../media/
-// new topic for 10.2 content
+
 [.lead]
 
 You can perform the following tasks as part of modify protection. You can perform all the changes in the same workflow.

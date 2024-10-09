@@ -33,7 +33,6 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 * The LUN details page contains data related to the LUN.
 * When using NVMe/TCP or NVMe/FC protocol for VMFS datastore, the Namespace details page contains data related to Namespace.
 
-//10.2 updates
 == ONTAP storage views for vVols datastores
 .Steps
 

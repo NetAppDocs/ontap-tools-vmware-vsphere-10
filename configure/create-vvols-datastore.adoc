@@ -20,7 +20,6 @@ The create Datastore action wizard supports creation of NFS, VMFS, and vVols dat
 * You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type (uniform/non-uniform config).
 * You can create a VMFS datastore on a host, only when it has an async relationship. 
 
-//10.2 updates - notes
 
 [role="tabbed-block"]
 ====
@@ -121,7 +120,7 @@ When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem 
 +
 [NOTE]
 For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
-//10.2 update
+
 . Review the datastore details in the *Summary* pane and click *Finish*.
 +
 [NOTE]

@@ -14,8 +14,6 @@ Upgrade is supported for both HA and non-HA deployments.
 [NOTE]
 To upgrade from ONTAP tools for VMware vSphere 10.0 to 10.2 release, you need to first upgrade to ONTAP tools for VMware vSphere 10.1 and then to 10.2 release.
 
-// content changed for 10.2 release
-
 *Before you begin*
 
 If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
@@ -26,7 +24,7 @@ If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need t
 . Log in as the maintenance user.
 . Enter *4* to select Support and Diagnostics.
 . Enter *2* to select Enable remote diagnostic access.
-//10.2 change
+
 . Enter *y* to set the password of your choice.
 . Login to VM IP address from the terminal/putty with user as 'diag' and password that was set in the previous step.
 

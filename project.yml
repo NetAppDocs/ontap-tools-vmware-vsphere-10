@@ -1,5 +1,5 @@
 settings:
-  name: ONTAP tools for VMware vSphere 10.2
+  name: ONTAP tools for VMware vSphere 10.3
   internal:
     pdf_enabled: true
   prod:
@@ -8,7 +8,7 @@ settings:
 
 sidebar: 
   entries:
-    - title: ONTAP tools for VMware vSphere 10.2 docs
+    - title: ONTAP tools for VMware vSphere 10.3 docs
       url: /index.html
     - section: release-notes
     - section: concepts

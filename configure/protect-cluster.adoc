@@ -7,7 +7,7 @@ summary: 'ONTAP tools for VMware vSphere manages protection of host clusters.'
 = Create host cluster protection
 :icons: font
 :imagesdir: ../media/
-// new topic for 10.2 content
+
 [.lead]
 
 ONTAP tools for VMware vSphere manages protection of host clusters. 

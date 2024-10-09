@@ -2,13 +2,13 @@
 permalink: release-notes/whats-new-otv-102.html
 sidebar: sidebar
 keywords: what's new, release notes, otv, 10.2, ONTAP tools for VMware vSphere
-summary: "Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.2."
+summary: "Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.3."
 ---
 
-= What's new in ONTAP tools for VMware vSphere 10.2
+= What's new in ONTAP tools for VMware vSphere 10.3
 
 [.lead]
-Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.2.
+Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.3.
 
 [cols="30%,70%",options="header"]
 |===
