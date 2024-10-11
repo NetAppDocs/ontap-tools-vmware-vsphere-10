@@ -24,19 +24,31 @@ Recommended memory as per the size of deployment and per node is as shown in the
 
 |===
 
-|*Type of deployment*|*CPUs*|*Memory (GB)*
-|Small (S)
-|8
-|16
-|Medium (M)
-|12
-|24
-|Large (L)
-|16
-|32
+|*Type of deployment*| *CPUs* |*Memory (GB)* |*Disk space (GB) thick provisioned*
+|Non-HA small
+|9
+|18
+|350
+|Non-HA medium
+|13
+|26
+|350
+|HA small
+|27
+|54
+|1050
+|HA medium
+|39
+|78
+|1050
+|HA large
+|51
+|102
+|1050
 |===
 
-Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP tools for VMware vSphere] for more details.
+// updated for 10.3
+See _Configuration limits to deploy ONTAP tools for VMware vSphere_ section for more details.
 
 == Minimum storage and application requirements
 
@@ -44,7 +56,9 @@ Refer to link:../deploy/config-limits.html[Configuration limits to deploy ONTAP 
 |Storage, host, and applications|Minimum version requirements
 
 |ONTAP
-|Latest patch release of ONTAP 9.12.1, 9.13.1, 9.14.1, and 9.15.1. 
+|9.14.1, 9.15.1, and 9.16.0.
+
+FAS, ASA A-Series, ASA C-Series, AFF A-Series, and AFF C-Series 
 
 |ESXi hosts
 |ESXi 7.0.3

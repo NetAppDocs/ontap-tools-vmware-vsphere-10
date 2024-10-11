@@ -31,7 +31,10 @@ Other VASA Provider (VP) states link shows the current state of the VP that is r
 
 |Storage Backends - Capacity
 |This card shows the aggregated used and available capacity of all storage backends for the selected vCenter Server instance.
+[NOTE]
+In case of ASA r2 SVM systems, the capacity data is not shown. 
 
+// 10.3 updates for ASA r2
 |Virtual machines
 |This card shows the top 10 VMs sorted by performance metric. You can click on the header to get the top 10 VMs for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache.
 

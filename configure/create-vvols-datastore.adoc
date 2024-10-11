@@ -111,12 +111,17 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . Right-click a Host System or a Host Cluster or a Datastore and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select VMFS in *Datastore Type*.
-. In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. In the *Advanced options* section of the pane, select the Datastore cluster you want to add this datastore to. 
+. In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. 
+If you choose to add the new datastore to an existing VMFS datastore cluster, select the datastore cluster selector under the *Advanced Options*. 
 . Select Platform and storage VM in the *Storage* pane. Select the Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
 If you choose the *Any* option in the platform dropdown you can see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag.
 When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of *Storage* pane. 
-. From the *storage attributes* pane, select *Aggregate* from the drop-down menu. Select *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
+. From the *storage attributes* pane, select *Aggregate* from the drop-down menu. 
+[NOTE]
+For ASA r2 storage systems, *Aggregate* option is not available.
+// updated for 10.3 ASA r2
+. Select *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
 +
 [NOTE]
 For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.

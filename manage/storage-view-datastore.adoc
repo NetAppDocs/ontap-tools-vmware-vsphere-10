@@ -32,7 +32,9 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 * The storage details page contains information about storage backends, aggregate, and volume.
 * The LUN details page contains data related to the LUN.
 * When using NVMe/TCP or NVMe/FC protocol for VMFS datastore, the Namespace details page contains data related to Namespace.
+* Volume and aggregate details are not displayed for ASA r2 system based datastores.
 
+// updated for 10.3 ASA r2
 == ONTAP storage views for vVols datastores
 .Steps
 

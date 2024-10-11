@@ -4,12 +4,21 @@ sidebar: sidebar
 keywords: upgrade
 summary: 'Upgrade is supported for both HA and non-HA deployments.'
 ---
-= Upgrade from ONTAP tools for VMware vSphere 10.x to 10.2
+= Upgrade from ONTAP tools for VMware vSphere 10.x to 10.3
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Upgrade is supported for both HA and non-HA deployments.
+Upgrade is supported for both HA and non-HA deployments. The supported upgrade paths are:
+
+* ONTAP tools for VMware vSphere 10.2 easy small to ONTAP tools for VMware vSphere 10.3 non-HA small
+* ONTAP tools for VMware vSphere 10.2 easy medium to ONTAP tools for VMware vSphere 10.3 non-HA medium
+* ONTAP tools for VMware vSphere 10.2 advanced small to ONTAP tools for VMware vSphere 10.3 non-HA small
+* ONTAP tools for VMware vSphere 10.2 advanced medium to ONTAP tools for VMware vSphere 10.3 non-HA medium
+* ONTAP tools for VMware vSphere 10.2 HA small to ONTAP tools for VMware vSphere 10.3 HA small
+* ONTAP tools for VMware vSphere 10.2 HA medium to ONTAP tools for VMware vSphere 10.3 HA medium
+* ONTAP tools for VMware vSphere 10.2 HA large to ONTAP tools for VMware vSphere 10.3 HA large
+// otv10.3 updates
 
 [NOTE]
 To upgrade from ONTAP tools for VMware vSphere 10.0 to 10.2 release, you need to first upgrade to ONTAP tools for VMware vSphere 10.1 and then to 10.2 release.
