@@ -138,3 +138,5 @@ If you're creating the datastore on a protected cluster, you can see a readonly 
 The VMFS datastore is created and mounted on all the hosts.
 
 --
+
+====

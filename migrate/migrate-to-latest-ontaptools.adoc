@@ -14,6 +14,11 @@ When migrating storage data, storage backends are onboarded manually using REST 
 [NOTE]
 It is recommended to migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA provider feature alone.
 
+[NOTE]
+After migrating from ONTAP tools for VMware vSpher 9.x to 10.3, vVols datastores with the NVMe/FC protocol do not work because ONTAP tools 10.3 only supports NVMe-oF with VMFS datastores.
+
+//updated for 10.3 jira OTVDOC-147
+
 *About this task*
 
 Migration is supported from ONTAP tools for VMware vSphere 9.10D2, 9.11D4, 9.12D1, and 9.13D2 releases to 10.3 release. 
