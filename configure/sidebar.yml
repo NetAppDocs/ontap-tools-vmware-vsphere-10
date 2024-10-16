@@ -1,8 +1,6 @@
 section: configure
 title: Configure ONTAP tools
 entries:
-  - title: ONTAP tools Manager user interface
-    url: /configure/manager-user-interface.html
   - title: Add vCenter Server
     url: /configure/add-vcenter.html
   - title: Register VASA provider to vCenter Server
@@ -29,8 +27,6 @@ entries:
     url: /configure/associate-storage-backend.html
   - title: Configure network access
     url: /configure/configure-network-access.html
-  - title: NetApp ONTAP tools for VMware vSphere plugin Dashboard overview
-    url: /configure/dashboard-overview.html
   - title: Create host cluster protection
     url: /configure/protect-cluster.html
   - title: Create a datastore

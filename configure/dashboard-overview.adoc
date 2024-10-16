@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: user roles
 summary: 'When you select the NetApp ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts like the dashboard providing you the summary of the ONTAP tools for VMware vSphere plug-in.'
 ---
-= NetApp ONTAP tools for VMware vSphere plug-in Dashboard overview
+= NetApp ONTAP tools for VMware vSphere plug-in dashboard overview
 :icons: font
 :imagesdir: ../media/
 

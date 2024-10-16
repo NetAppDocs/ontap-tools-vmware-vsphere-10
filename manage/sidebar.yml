@@ -1,6 +1,10 @@
 section: manage
 title: Manage ONTAP tools
 entries:
+  - title: NetApp ONTAP tools for VMware vSphere plugin dashboard overview
+    url: /configure/dashboard-overview.html
+  - title: ONTAP tools Manager user interface
+    url: /configure/manager-user-interface.html
   - title: Manage datastores
     entries:
       - title: Mount NFS and VMFS datastore
