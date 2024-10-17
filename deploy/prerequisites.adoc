@@ -155,5 +155,5 @@ Parent vCenter Server password should not contain these special characters($, ',
 * You have the login credentials for your vCenter Server instance to which the ONTAP tools for VMware vSphere will connect to post deployment, for registration. 
 * Browser cache is deleted.
 * Ensure that you have three free IP addresses available for non-HA deployment - one free IP address for load balancer and one free IP address for the Kubernetes control plane and one IP address for node. For HA deployment, along with these three IP addresses you'll need two more IP addresses for second and third nodes.
-Host names should be mapped to the free IP addresses on the DNS before assigning. All the five IP addresses should be on the same VLAN that is selected for deployment. 
+Host names should be mapped to the free IP addresses on the DNS before assigning for both HA and non-HA deployments. All the five IP addresses in the HA deployment should be on the same VLAN.  
 * Ensure that domain Name on which the certificate is issued is mapped to  the Virtual IP address in a multi-vCenter deployment where Custom CA certificates are mandatory. _nslookup_ check on the domain name is performed to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.

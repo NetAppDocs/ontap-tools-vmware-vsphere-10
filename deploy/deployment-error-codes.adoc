@@ -52,18 +52,6 @@ sudo rke2-uninstall.sh (all VMs).
 |054 |Failed setting kubeconfig |Redeploy
 |055 |Failed deploying registry |If the registry pod is present, wait for the pod to be ready then restart the primary VM or else redeploy.
 |056 |Login ISCSI has failed |Make sure that iSCSI protocol is enabled and configured properly on ONTAP. Ensure that the iSCSI Data LIF IP address provided is correct and online. Restart the VM if previous points are correct. Else, redeploy.
-|057 |Trident deployment has failed |*Ensure Management LIF and Data LIF IP addresses are reachable from VM. 
-
-*Ensure NFS or iSCSI protocol is enabled and configured properly on ONTAP.
-
-*Ensure that the NFS/iSCSI Data LIF IP address provided is correct and online.
-
-*Ensure that the user name and password provided are correct and the user has sufficient privileges to create volume.
-
-* Restart if all the above points are correct. Else, redeploy.
-|058 |Trident import has failed |*Ensure that the user name and password provided are correct and the user has sufficient privileges to create, mount, clone, and delete volumes.
-
-*Ensure that the same ONTAP setup is used to recover the setup and retry recovery.
 |059 |KubeVip deployment has failed | Ensure virtual IP address for Kubernetes control plane and load balancer IP address provided during deployment belong to same VLAN and are free IP addresses. Restart if all the previous points are correct. Else, redeploy.
 |060 |Operator deployment has failed |Restart
 |061 |Services deployment has failed |Perform basic Kubernetes debugging like get pods, get rs, get svc, and so on in ntv-system namespace for more details and error logs at /var/log/ansible-perl-errors.log and /var/log/ansible-run.log and redeploy.
@@ -92,7 +80,7 @@ sudo rke2-uninstall.sh (all VMs).
 |*Recovery error code* |*Workflow* |*Resolution*
 |104 |Post recovery steps have failed. |-
 |105 |Copying contents to recovery volume has failed. |-
-|106 |Failed to mount recovery volume. |* Ensure that the same SVM is used and recovery volume is present in the SVM. (Recovery volume name starts with otvng_trident_recovery)
+|106 |Failed to mount recovery volume. |* Ensure that the same SVM is used and recovery volume is present in the SVM. 
 
 * Ensure Management LIF and Data LIF IP addresses are reachable from VM.
 

@@ -63,8 +63,6 @@ The last three digits of the error code indicate the specific workflow error wit
 |089 |Changing ownership of summary log rotate config file has failed |Retry the upgrade.
 |091 |iSCSI upgrade has failed |Retry the upgrade.
 |092 |iSCSI rollback has failed |Retry the upgrade.
-|093 |trident upgrade has failed |Retry the upgrade.
-|094 |trident rollback has failed |Retry the upgrade.
 |095 |Debian Upgrade failed |No recovery for debian upgrade. Services are upgraded and new pods will be running
 |===
 Learn more about https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1[How to restore ONTAP tools for VMware vSphere if upgrade fails from version 10.0 to 10.1]
