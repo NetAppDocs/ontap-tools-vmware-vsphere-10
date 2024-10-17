@@ -2,15 +2,14 @@
 permalink: deploy/ontap-tools-deployment.html
 sidebar: sidebar
 keywords:
-summary: 'You can configure non-HA single-node in either small or medium configurations.'
+summary: 'ONTAP tools for VMware vSphere appliance is always deployed as small sized single node with core services to support NFS/VMFS datastores.'
 ---
 = Deploy ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When you deploy ONTAP tools for VMware vSphere for the first time it is deployed in a single node, small node size configuration with traditional node capabilities.
-
+ONTAP tools for VMware vSphere appliance is always deployed as small sized single node with core services to support NFS/VMFS datastores.
 
 *Before you begin*
 

@@ -5,6 +5,8 @@ entries:
     url: /configure/dashboard-overview.html
   - title: ONTAP tools Manager user interface
     url: /configure/manager-user-interface.html
+  - title: Edit appliance settings
+    url: /manage/edit-appliance-settings.html
   - title: Manage datastores
     entries:
       - title: Mount NFS and VMFS datastore
