@@ -47,7 +47,7 @@ entries:
       url: /manage/start-the-ssh-on-other-nodes.html
     - title: Update the vCenter server and ONTAP credentials
       url: /manage/update-vcenter-credentials.html
-  - title: ONTAP tool reports
+  - title: ONTAP tools reports
     url: /manage/reports.html
   - title: Collect the log files
     url: /manage/collect-the-log-files.html
@@ -79,3 +79,6 @@ entries:
         url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
+  - title: Manage AutoSupport settings
+    url: /manage/manage-autosupport.html
+

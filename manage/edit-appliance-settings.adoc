@@ -9,8 +9,9 @@ summary: 'You can change the administrator password using ONTAP tools Manager.'
 :imagesdir: ../media/
 
 [.lead]
-Use the ONTAP tools Manager user interface to scale up the node size, manage services, and upgrade ONTAP tools for VMware vSphere to High Availability (HA) setup.
+Use the ONTAP tools Manager to scale up the node size, manage services, and upgrade ONTAP tools for VMware vSphere to High Availability (HA) setup.
 
+// new content for 10.3
 *Steps*
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
@@ -18,13 +19,15 @@ Use the ONTAP tools Manager user interface to scale up the node size, manage ser
 . Click on the *Edit Appliance Settings* in overview section.
 . In the *Services* section of the *Edit Appliance Settings* window, you can enable optional services like VASA provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
 +
-When enabling the services for the first time, you need to create the VASA provider/SRA credentials. vSphere admin uses this user credentials to register/enable the VASA provider/SRA on vCenter.
+When enabling the services for the first time, you need to create VASA provider/SRA credentials. This is used to register/enable the VASA provider/SRA on vCenter.
 [NOTE]
 To disable any of the optional services enabled earlier, ensure that no vCenters that are managed by ONTAP tools are using these services.
 *Allow import of vVols configuration* option is shown only when the VASA provider service is enabled. This option enables the supporting services to support the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.3.
 . In the *Configuration* section of the *Edit Appliance Settings* window, you can scale up each ONTAP tools node size and enable HA configuration as per your requirement.
 +
 If you choose to scale up the node size or enable HA config or both, you need to provide the vCenter credential. Here, vCenter refers to the vCenter where the first node or all HA node VMs are created.
++
+when ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for new edit submission.
 +
 [NOTE]
 You are only allowed to scale-up the ONTAP tools node size. You cannot scale-down the node size from the current node size.
@@ -38,5 +41,5 @@ You are only allowed to scale-up the ONTAP tools node size. You cannot scale-dow
 Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the final page of the wizard.
 . In the *summary* section of the *Edit Appliance Settings* window, review the details and click *Save* to apply the changes.
 
-You can track the edit appliance settings job status from jobs view using the job id.
+You can track the edit appliance settings job status from jobs view using the job ID.
 

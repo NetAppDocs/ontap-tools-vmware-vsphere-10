@@ -13,14 +13,14 @@ ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings 
 
 *About this task*
 
-This process might take a long time, depending on your configuration and system load. The task progress is displayed in the Recent Tasks panel. As the tasks are completed, the host status Alert icon is replaced by the Normal icon or the Pending Reboot icon.
+This process might take a long time, depending on your configuration and system load. The task progress is displayed in the *Recent Tasks* panel. As the tasks are completed, the host status alert icon is replaced by the normal icon or the pending reboot icon.
 
 *Steps*
 
-. From the VMware vSphere Web Client home page, click *Hosts and Clusters*.
+. From the VMware vSphere Web client home page, click *Hosts and Clusters*.
 . Right-click a host and select *NetApp ONTAP tools* > *Update host data*.
 . In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
-. Go to ESXi Host compliance card in the Overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
+. Go to *ESXi Host compliance* card in the overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
 . Select *Apply Recommended Settings* link.
 . In the *Apply recommended host settings* window, select the hosts that you want to comply with NetApp recommended host settings and click *Next*.
 [NOTE]

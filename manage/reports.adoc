@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'ONTAP tools for VMware vSphere plug-in provides reports for virtual machines and datastores.'
 ---
-= ONTAP tool reports
+= ONTAP tools reports
 :icons: font
 :imagesdir: ../media/
 

@@ -43,7 +43,7 @@ The *Role* field is auto populated based on the product capability selected.
 The new role and user are added, and you can see the detailed privileges under the role that you have configured.
 // edited for 10.0 release
 
-NOTE: The uninstall operation does not remove ONTAP tool roles but removes the localized names for the ONTAP tool specific privileges and appends the prefix `XXX missing privilege` to them. When you reinstall ONTAP tools for VMware vSphere or upgrade to a newer version, all the standard ONTAP tools for VMware vSphere roles and ONTAP tools-specific privileges are restored.
+NOTE: The uninstall operation does not remove ONTAP tools roles but removes the localized names for the ONTAP tools specific privileges and appends the prefix `XXX missing privilege` to them. When you reinstall ONTAP tools for VMware vSphere or upgrade to a newer version, all the standard ONTAP tools for VMware vSphere roles and ONTAP tools-specific privileges are restored.
 
 == SVM aggregate mapping requirements
 
