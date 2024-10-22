@@ -34,7 +34,7 @@ The configuration of SRA on VMware Live Site Recovery appliance stores the SRA c
 [NOTE]
 You need to provide the password value within single quotes to ensure that the Perl script does not read the special characters in the password as a delimiter of the input.
 [NOTE]
-The application username and password is set during the ONTAP tools deployment.  This is needed for VASA provider/SRA registration.
+The application username and password is set during the ONTAP tools deployment. This is needed for VASA provider/SRA registration.
 . Rescan the adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
 
 A success message confirming that the storage credentials are stored is displayed. SRA can communicate with SRA server using the provided IP address, port and credentials.
