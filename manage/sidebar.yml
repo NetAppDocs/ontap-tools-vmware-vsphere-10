@@ -35,8 +35,6 @@ entries:
     url: /manage/manage-vcenter.html
   - title: Manage certificates
     url: /manage/certificate-manage.html
-  - title: Manage igroups and export policies
-    url: /manage/igroup-management.html
   - title: Access ONTAP tools for VMware vSphere maintenance console
     entries:
     - title: Overview of ONTAP tools for VMware vSphere maintenance console
