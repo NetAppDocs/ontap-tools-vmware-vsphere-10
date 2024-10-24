@@ -27,7 +27,5 @@ entries:
     url: /configure/associate-storage-backend.html
   - title: Configure network access
     url: /configure/configure-network-access.html
-  - title: Create host cluster protection
-    url: /configure/protect-cluster.html
   - title: Create a datastore
     url: /configure/create-vvols-datastore.html    
