@@ -1,8 +1,6 @@
 section: configure
 title: Configure ONTAP tools
 entries:
-  - title: ONTAP tools Manager user interface
-    url: /configure/manager-user-interface.html
   - title: Add vCenter Server
     url: /configure/add-vcenter.html
   - title: Register VASA provider to vCenter Server
@@ -17,8 +15,6 @@ entries:
         url: /configure/configure-esx-server-multipath-and-timeout-settings.html
       - title: Set ESXi host values
         url: /configure/esxi-host-values.html
-  - title: Discover storage systems and hosts
-    url: /configure/discover-storage-systems-and-hosts.html
   - title: Configure ONTAP user roles and privileges
     url: /configure/configure-user-role-and-privileges.html
   - title: Add a storage backend
