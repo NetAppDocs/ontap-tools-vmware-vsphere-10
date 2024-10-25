@@ -11,35 +11,38 @@ summary: 'You can change the administrator password using ONTAP tools Manager.'
 [.lead]
 Use the ONTAP tools Manager to scale up the node size, manage services, and upgrade ONTAP tools for VMware vSphere to High Availability (HA) setup.
 
+The ONTAP tools appliance is initially deployed in a single node non-HA configuration. You can edit the configuration in the *Edit appliance settings* window. 
+
 // new content for 10.3
 *Steps*
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
-. Click on the *Edit Appliance Settings* in overview section.
-. In the *Services* section of the *Edit Appliance Settings* window, you can enable optional services like VASA provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
+. Click on the *Edit Appliance Settings* in the overview section.
+. In *Services* section you can enable optional services like VASA provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
 +
-When enabling the services for the first time, you need to create VASA provider/SRA credentials. This is used to register/enable the VASA provider/SRA on vCenter.
+When enabling the services for the first time, you need to create VASA provider/SRA credentials. This is used to register or enable the VASA provider/SRA services on the vCenter Server.
 [NOTE]
-To disable any of the optional services enabled earlier, ensure that no vCenters that are managed by ONTAP tools are using these services.
-*Allow import of vVols configuration* option is shown only when the VASA provider service is enabled. This option enables the supporting services to support the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.3.
-. In the *Configuration* section of the *Edit Appliance Settings* window, you can scale up each ONTAP tools node size and enable HA configuration as per your requirement.
+To disable any of the optional services, ensure that no vCenter Servers that are managed by ONTAP tools are using these services.
 +
-If you choose to scale up the node size or enable HA config or both, you need to provide the vCenter credential. Here, vCenter refers to the vCenter where the first node or all HA node VMs are created.
+*Allow import of vVols configuration* option is shown only when the VASA provider service is enabled. This option enables the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.3.
+. In the *Configuration* section you can scale up each ONTAP tools node size and enable HA configuration as per your requirement. You need the vCenter Server credentials to make any changes.
 +
 when ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for new edit submission.
 +
 [NOTE]
-You are only allowed to scale-up the ONTAP tools node size. You cannot scale-down the node size from the current node size.
-. Use the HA toggle button to enable the HA configuration. When you choose HA configuration, an additional *HA settings* page is included for HA related inputs.
+You are only allowed to scale-up the ONTAP tools node size. You cannot scale-down the node from the current size to a smaller size.
+. Use the HA toggle button to enable the HA configuration. When you choose HA configuration, an additional *HA settings* page appears for HA related inputs.
 +
 [NOTE]
-* The content library must belong to same vCenter where the ONTAP tools node VMs are running, vCenter credentials is used to validate and download the OVA template for appliance changes. 
+* The content library should belong to same vCenter Server where the ONTAP tools node VMs are running. vCenter Server credentials are used to validate and download the OVA template for appliance changes. 
 * Once enabled, you cannot revert from HA configuration to non-HA single node configuration.
-. In the *HA settings* section of the *Edit Appliance Settings* window, you can enter the details of Node 2 and Node 3. Node 1 is the ONTAP tools default node deployed as part of the OVA. ONTAP tools for VMware vSphere supports 3 nodes in HA setup.
+. In *HA settings* section of the *Edit Appliance Settings* window, you can enter the details of Node 2 and Node 3. Node 1 is the ONTAP tools default node deployed as part of the OVA. ONTAP tools for VMware vSphere supports three nodes in HA setup.
 [NOTE]
-Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the final page of the wizard.
-. In the *summary* section of the *Edit Appliance Settings* window, review the details and click *Save* to apply the changes.
+Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the final page of the wizard. Only when IPv6 address in enabled on first node you can enter IPv6 details for other two nodes. 
++
+The inputs are validated each time you move to the next window.
+. In the *summary* section review the details and click *Save* to apply the changes.
 
-You can track the edit appliance settings job status from jobs view using the job ID.
+The *Overview* page shows the status of the deployment. You can also track the edit appliance settings job status from jobs view using the job ID.
 
