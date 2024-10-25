@@ -12,13 +12,13 @@ summary: 'When you create a datastore at host cluster level, the datastore is cr
 
 When you create a datastore at host cluster level, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
 
-The create Datastore action wizard supports creation of NFS, VMFS, and vVols datastore.
+The create datastore action wizard supports creation of NFS, VMFS, and vVols datastores.
 
 [NOTE]
-* You can create only VMFS datastores on a protected cluster. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
+* You can only create a VMFS datastores on a protected cluster. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
 * You cannot create a datastore on a datacenter that has one or more protected host clusters.
 * You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type (uniform/non-uniform config).
-* You can create a VMFS datastore on a host, only when it has an async relationship. 
+* You can create a VMFS datastore on a host, only when it has an asynchronous relationship. 
 
 
 [role="tabbed-block"]
@@ -98,7 +98,7 @@ VMware vSphere 7.0 U3 and later versions support NVMe/TCP protocol. However, VMw
 . Configure the ESXi NIC for NVMe/TCP according to the NIC vendor specifications. 
 . When using VMware vSphere 7 release, follow the instructions on the VMware site https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D047AFDD-BC68-498B-8488-321753C408C2.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2[Configure VMkernel Binding for the NVMe over TCP Adapter] to configure NVMe/TCP port binding. When using VMware vSphere 8 release, follow https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-5F776E6E-62B1-445D-854C-BEA689DD4C92.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2[Configuring NVMe over TCP on ESXi], to configure the NVMe/TCP port binding. 
 . For VMware vSphere 7 release, follow the instructions on the VMware site https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E.html[Enable NVMe over RDMA or NVMe over TCP Software Adapters] to configure NVMe/TCP software adapters. For VMware vSphere 8 release, follow https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-F4B42510-9E6D-4446-816A-5012866E0038.html#GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E[Add Software NVMe over RDMA or NVMe over TCP Adapters] to configure the NVMe/TCP software adapters.
-. Run link:../configure/update-host-data.html[Update host data] action on the ESXi host.
+. Run link:../configure/discover-storage-systems-and-hosts.html[Discover storage systems and hosts] action on the ESXi host.
 For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429[How to Configure NVMe/TCP with vSphere 8.0 Update 1 and ONTAP 9.13.1 for VMFS Datastores] 
 
 * If you are using the NVME/FC protocol, perform the following steps to configure the ESXi host:
