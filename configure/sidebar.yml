@@ -1,8 +1,6 @@
 section: configure
 title: Configure ONTAP tools
 entries:
-  - title: ONTAP tools Manager user interface
-    url: /configure/manager-user-interface.html
   - title: Add vCenter Server
     url: /configure/add-vcenter.html
   - title: Register VASA provider to vCenter Server
@@ -10,17 +8,13 @@ entries:
   - title: Verify registered VASA provider
     url: /configure/verify-registration.html
   - title: Install the NFS VAAI plug-in
-    url: /configure/install-nfs-vaai-plug-in.html    
-  - title: Update host data
-    url: /configure/update-host-data.html
+    url: /configure/install-nfs-vaai-plug-in.html 
   - title: Configure ESXi host settings
     entries:
       - title: Configure ESXi server multipath and timeout settings
         url: /configure/configure-esx-server-multipath-and-timeout-settings.html
       - title: Set ESXi host values
         url: /configure/esxi-host-values.html
-  - title: Discover storage systems and hosts
-    url: /configure/discover-storage-systems-and-hosts.html
   - title: Configure ONTAP user roles and privileges
     url: /configure/configure-user-role-and-privileges.html
   - title: Add a storage backend
@@ -29,9 +23,3 @@ entries:
     url: /configure/associate-storage-backend.html
   - title: Configure network access
     url: /configure/configure-network-access.html
-  - title: NetApp ONTAP tools for VMware vSphere plugin Dashboard overview
-    url: /configure/dashboard-overview.html
-  - title: Create host cluster protection
-    url: /configure/protect-cluster.html
-  - title: Create a datastore
-    url: /configure/create-vvols-datastore.html    
