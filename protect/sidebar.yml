@@ -1,20 +1,22 @@
 section: protect
 title: Protect datastores and virtual machines
 entries:
-  - title: Enable SRA to protect datastores
-    url: /protect/enable-storage-replication-adapter.html
-  - title: Configure storage system for disaster recovery
+  - title: Protect using host cluster protection
     entries:
+      - title: Create host cluster protection
+        url: /configure/protect-cluster.html
+  - title: Protect using SRA protection
+    entries:
+      - title: Enable SRA to protect datastores
+        url: /protect/enable-storage-replication-adapter.html
       - title: Configure SRA for SAN and NAS environments
         url: /protect/configure-storage-replication-adapter-for-san-environment.html
       - title: Configure SRA for highly scaled environments
         url: /protect/configure-storage-replication-adapter-for-highly-scaled-environment.html
-  - title: Configure SRA on VMware Live Site Recovery appliance
-    url: /protect/configure-on-srm-appliance.html
-  - title: Update SRA credentials
-    url: /protect/update-credentials.html
-  - title: Configure protected and recovery sites
-    entries:
+      - title: Configure SRA on VMware Live Site Recovery appliance
+        url: /protect/configure-on-srm-appliance.html
+      - title: Update SRA credentials
+        url: /protect/update-credentials.html
       - title: Configure protection groups
         url: /protect/configure-protection-groups.html
       - title: Pair protected and recovery sites
