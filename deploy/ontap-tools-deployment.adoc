@@ -13,13 +13,13 @@ ONTAP tools for VMware vSphere appliance is always deployed as small sized singl
 
 *Before you begin*
 
-Make sure the network route is present. Storage data network must be accessible from VM management network.
+Make sure the network route is present and the storage data network is accessible from VM management network.
 For example, log in to ONTAP > run the command _network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>_
 
 A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
 [NOTE]
 You should store the content library on a shared datastore, such that all hosts in a cluster can access it.
-You need to create a content library to store the OVA before deploying the OVA in HA configuration.
+You need to create a content library to store the OVA before changing the appliance settings to HA configuration.
 [NOTE]
 Content library template once uploaded should not be deleted post deployment, as it will be used during reboots.
 
@@ -36,7 +36,7 @@ Create the content library using the following steps:
 [NOTE]
 For more information, refer to https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library] blog.
 
-Make sure you have imported your OVA into your content library. Keep the name of the content library and the library item name that you have given to your OVA item handy.
+Make sure you have imported the OVA into your content library.
 
 [NOTE]
 Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to 'Conservative' during the installation of ONTAP tools. This ensures that VM's do not migrate during the installation.
@@ -73,4 +73,4 @@ As the deployment task gets created, the progress is shown in the vSphere task b
 
 You can track the progress of the installation within the VM's web console.
 
-In case of any discrepancies in the values entered in the OVF form, a dialog box will prompt you to take corrective action. Make the necessary changes within the dialog box, utilizing the tab button to navigate and select "OK." You have three attempts to rectify any issues. If issues persist after three attempts, the installation process will cease, and it is recommended to retry the installation on a fresh VM.
+In case of any discrepancies in the values entered in the OVF form, a dialog box will prompt you to take corrective action. Make the necessary changes within the dialog box, utilizing the tab button to navigate and select "OK." You have three attempts to rectify any issues. If issues persist after three attempts, the installation process will cease, and it is recommended that you retry the installation on a fresh VM.

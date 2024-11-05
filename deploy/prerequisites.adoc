@@ -48,8 +48,6 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |===
 
 // updated for 10.3
-See _Configuration limits to deploy ONTAP tools for VMware vSphere_ section for more details.
-
 == Minimum storage and application requirements
 
 |===

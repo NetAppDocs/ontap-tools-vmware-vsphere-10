@@ -31,7 +31,7 @@ You can create a vVols datastore with either new volumes or existing volumes. Yo
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
-Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore using ASA r2 type of ONTAP storage.
+Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore using ASA r2 type of ONTAP storage. The vVols datastore created on ASA r2 platform is created with space-efficiency as THIN.vVol. VASA provider creates a container and the desired protocol endpoints during create vVol datastore workflow. This container will not have any backing volumes.
 
 .Before you begin
 Ensure that VASA provider is registered with the selected vCenter.
@@ -41,15 +41,16 @@ Ensure that VASA provider is registered with the selected vCenter.
 . Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select vVols in *Datastore Type*.
 . In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
-. In the *Storage* pane, select *Platform* and *storage VM*. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI amd FC protocol) as applicable.
 [NOTE]
-* Platform and asymmetric options help you to filter out the SVMs dropdown options. You should select the SVM to create or use the volume(s) for datastore creation. 
-* The *Asymmetric* toggle button is visible only if iSCSI was selected in the previous step and performance or capacity is selected in the platform drop-down.
+ASA r2 storage type supports only iSCSI and FC protocol for vVols.
+. In the *Storage* pane, select the storage VM where you want to create the datastore. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI amd FC protocol) as applicable.
+[NOTE]
+* The *Asymmetric* toggle button is visible only if iSCSI was selected in the previous step. Asymmetric options help you to filter out the SVMs dropdown options. You should select the SVM to create or use the volume(s) for datastore creation. 
 * Select the *Asymmetric* toggle button for AFF platform and disable it for ASA platform.
-* In ASA r2 storage type SVM, storage units(LUN/namespace) are not created as datastore is only a logical container in ASA r2 storage type.
+* In ASA r2 storage type SVM, storage units(LUN/namespace) are not created as datastore is only a logical container.
 
 //10.3 update for ASA r2
-. In the *Storage attributes* pane, you can either create new volumes or use the existing volumes. When creating new volume, you can enable QoS on the datastore. This step is not applicable for vVols datastores using ASA r2 type of ONTAP storage.
+. In the *Storage attributes* pane, you can either create new volumes or use the existing volumes. When creating new volume, you can enable QoS on the datastore. This step is not applicable for vVols datastores using ASA r2 type of ONTAP storage as vVol datastore does not have backing volumes. There would be one volume created on every LUN create request by default.
 . Review your selection in the *Summary* pane and click *Finish*.
 The vVols Datastore is created and mounted on all the hosts.
 
@@ -118,16 +119,20 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 . In the *Type* pane, select VMFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. 
 If you choose to add the new datastore to an existing VMFS datastore cluster, select the datastore cluster selector under the *Advanced Options*. 
-. Select Platform and storage VM in the *Storage* pane. Select the Asymmetric toggle button. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.
+. Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
-If you choose the *Any* option in the platform dropdown you can see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag.
 When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of *Storage* pane. 
-. From the *storage attributes* pane, select *Aggregate* from the drop-down menu. 
+. From the *storage attributes* pane:
+.. Select *Aggregate* from the drop-down menu. 
 [NOTE]
-For ASA r2 storage systems, *Aggregate* option is not available.
+For ASA r2 storage systems, *Aggregate* option is not required as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 type SVM, the storage attributes page shows the options to enable QoS.
 // updated for 10.3 ASA r2
-. Select *Space Reserve*, *Use existing volume*, and *Enable QoS* options as required from the *Advanced options* section and provide the details as required.
+.. As per the selected protocol a storage unit(LUN/Namespace) is created with space reserve of type Thin.
+.. Select *Use existing volume*, and *Enable QoS* options as required and provide the details as required.
 +
+[NOTE]
+In ASA r2 storage type, the volume creation or selection is not applicable for storage unit creation(LUN/Namespace), therefore these options are not shown.
+
 [NOTE]
 For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
 
