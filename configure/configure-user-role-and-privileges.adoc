@@ -117,6 +117,8 @@ Creating ONTAP tools for VMware vSphere ONTAP API based user with discovery, cre
 
 To create a cluster scoped user with all privileges mentioned above, run the following commands:
 
+----
+
 _security login rest-role create -role <role-name> -api /api/application/consistency-groups -access all_
 
 _security login rest-role create -role <role-name> -api /api/private/cli/snapmirror -access all_
@@ -207,14 +209,19 @@ _security login rest-role create -role <role-name> -api /api/svm/peers -access r
 
 _security login rest-role create -role <role-name> -api /api/svm/svms -access readonly_
 
+----
+
 Additionally, for ONTAP Versions 9.16.0 and above run the following command:
 
+----
 _security login rest-role create -role <role-name> -api /api/storage/storage-units -access all_
+----
 
 === Create ONTAP tools for VMware vSphere ONTAP API based SVM scoped user
 
 To create a SVM scoped user with all the privileges, run the following commands:
 
+----
 _security login rest-role create -role <role-name> -api /api/application/consistency-groups -access all -vserver <vserver-name>_
 
 _security login rest-role create -role <role-name> -api /api/private/cli/snapmirror -access all -vserver <vserver-name>_
@@ -295,18 +302,28 @@ Additionally, for ONTAP Versions 9.16.0 and above run the following command:
 
 _security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>_
 
+----
+
 To create a new API based user using the above created API based roles, run the following command:
 
+----
 _security login create -user-or-group-name <user-name> -application http -authentication-method password -role <role-name> -vserver <cluster-or-vserver-name>_
+
+----
 
 Example: 
 
+----
 _security login create -user-or-group-name testvpsraall -application http -authentication-method password -role OTV_10_VP_SRA_Discovery_Create_Modify_Destroy -vserver C1_sti160-cluster_
+----
 
 To unlock the account, to enable access to the management interface run the following command:
 
+----
 _security login unlock -user <user-name> -vserver <cluster-or-vserver-name>_
+----
 
 Example: 
-
+----
 _security login unlock -username testvpsraall -vserver C1_sti160-cluster_
+----
