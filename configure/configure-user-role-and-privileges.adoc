@@ -106,86 +106,11 @@ Using APIs:
 |/api |Read-Only | Cluster users should have this privilege to get the correct storage backend status. Otherwise, ONTAP tools Manager shows "unknown" storage backend status.
 |===
  
-== Upgrade ONTAP tools for VMware vSphere 10.1 user to 10.2 user
 
-// updated this topic for https://jira.ngage.netapp.com/browse/OTVDOC-127
-
-If the ONTAP tools for VMware vSphere 10.1 user is a cluster scoped user created using the json file, then run the following commands on the ONTAP CLI using the admin user to upgrade to 10.2 release.
-
-For product capabilities: 
-
-* VSC
-* VSC and VASA Provider
-* VSC and SRA
-* VSC, VASA Provider, and SRA.
-
-Cluster privileges:
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace show" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem show" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host show" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map show" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme show-interface" -access read_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host add" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map add" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace delete" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem delete" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host remove" -access all_
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all_
-
-If the ONTAP tools for VMware vSphere 10.1 user is a SVM scoped user created using the json file, then run the following commands on the ONTAP CLI using the admin user to upgrade to 10.2 release.
-
-SVM privileges:
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace show" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem show" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host show" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map show" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme show-interface" -access read -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host add" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map add" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme namespace delete" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem delete" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem host remove" -access all -vserver <vserver-name>__
-
-_security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all -vserver <vserver-name>__
-
-Adding command _vserver nvme namespace show_ and _vserver nvme subsystem show_ to the existing role adds the following commands.
-
-----
-vserver nvme namespace create
-
-vserver nvme namespace modify
-
-vserver nvme subsystem create
-
-vserver nvme subsystem modify
-
-----
-
-== Create ONTAP tools for VMware vSphere ONTAP API based user
+== Create ONTAP tools for VMware vSphere ONTAP API based cluster scoped user
 
 // 10.3 updates OTVDOC-163 - jani
-
+[NOTE]
 You need discovery, create, modify, and destroy Privileges to perform PATCH operations and automatic rollback in case of failure on datastores. Lack of these all these privileges together leads to workflow disruptions and cleanup issues.
 
 Creating ONTAP tools for VMware vSphere ONTAP API based user with discovery, create storage, modify storage, destroy storage privileges enables initiating discoveries and manage ONTAP tools workflows.
@@ -285,6 +210,8 @@ _security login rest-role create -role <role-name> -api /api/svm/svms -access re
 Additionally, for ONTAP Versions 9.16.0 and above run the following command:
 
 _security login rest-role create -role <role-name> -api /api/storage/storage-units -access all_
+
+=== Create ONTAP tools for VMware vSphere ONTAP API based SVM scoped user
 
 To create a SVM scoped user with all the privileges, run the following commands:
 
