@@ -21,7 +21,7 @@ After migrating from ONTAP tools for VMware vSpher 9.x to 10.3, vVols datastores
 
 *About this task*
 
-Migration is supported from ONTAP tools for VMware vSphere 9.10D2, 9.11D4, 9.12D1, and 9.13D2 releases to 10.3 release. 
+Migration is supported from ONTAP tools for VMware vSphere 9.12D1 and 9.13D2 releases to 10.3 release. 
 
 [NOTE]
 As an existing user, you need to take the OVA backup from your current release before upgrading to the patch releases. 

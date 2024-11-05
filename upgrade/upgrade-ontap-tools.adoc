@@ -10,14 +10,16 @@ summary: 'Upgrade is supported for both HA and non-HA deployments.'
 
 [.lead]
 Upgrade is supported for both HA and non-HA deployments. The supported upgrade paths are:
-
-* ONTAP tools for VMware vSphere 10.2 easy small to ONTAP tools for VMware vSphere 10.3 non-HA small
-* ONTAP tools for VMware vSphere 10.2 easy medium to ONTAP tools for VMware vSphere 10.3 non-HA medium
-* ONTAP tools for VMware vSphere 10.2 advanced small to ONTAP tools for VMware vSphere 10.3 non-HA small
-* ONTAP tools for VMware vSphere 10.2 advanced medium to ONTAP tools for VMware vSphere 10.3 non-HA medium
-* ONTAP tools for VMware vSphere 10.2 HA small to ONTAP tools for VMware vSphere 10.3 HA small
-* ONTAP tools for VMware vSphere 10.2 HA medium to ONTAP tools for VMware vSphere 10.3 HA medium
-* ONTAP tools for VMware vSphere 10.2 HA large to ONTAP tools for VMware vSphere 10.3 HA large
+|===
+|From ONTAP tools for VMware vSphere 10.1 and 10.2 configuration | To ONTAP tools for VMware vSphere 10.3 configuration
+|Easy small |  Non-HA and advanced small
+|Easy medium | Non-HA and advanced medium
+|Advanced small |Non-HA and advanced small
+|Advanced medium |Non-HA and advanced medium
+|HA small |HA small
+|HA medium |HA medium
+|HA large |HA large
+|===
 // otv10.3 updates
 
 [NOTE]
