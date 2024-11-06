@@ -13,7 +13,7 @@ ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings 
 
 *About this task*
 
-This process might take a long time, depending on your configuration and system load. The task progress is displayed in the *Recent Tasks* panel. As the tasks are completed, the host status alert icon is replaced by the normal icon or the pending reboot icon.
+This process might take a long time, depending on your configuration and system load. The task progress is displayed in the *Recent tasks* panel. As the tasks are completed, the host status alert icon is replaced by the normal icon or the pending reboot icon.
 
 *Steps*
 
@@ -27,4 +27,4 @@ This process might take a long time, depending on your configuration and system 
 You can expand the ESXi host to see the current values.
 . In the settings page, select the recommended values as required.
 . In the summary pane, check the values and click *Finish*.
-You can track the progress in the Recent task panel.
+You can track the progress in the recent task panel.

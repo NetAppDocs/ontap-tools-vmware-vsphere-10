@@ -19,13 +19,13 @@ The ONTAP tools appliance is initially deployed in a single node non-HA configur
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Click on the *Edit Appliance Settings* in the overview section.
-. In *Services* section you can enable optional services like VASA provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
+. In *Services* section you can enable optional services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
 +
-When enabling the services for the first time, you need to create VASA provider/SRA credentials. This is used to register or enable the VASA provider/SRA services on the vCenter Server.
+When enabling the services for the first time, you need to create VASA Provider/SRA credentials. This is used to register or enable the VASA Provider/SRA services on the vCenter Server.
 [NOTE]
 To disable any of the optional services, ensure that no vCenter Servers that are managed by ONTAP tools are using these services.
 +
-*Allow import of vVols configuration* option is shown only when the VASA provider service is enabled. This option enables the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.3.
+*Allow import of vVols configuration* option is shown only when the VASA Provider service is enabled. This option enables the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.3.
 . In the *Configuration* section you can scale up each ONTAP tools node size and enable HA configuration as per your requirement. You need the vCenter Server credentials to make any changes.
 +
 when ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for new edit submission.

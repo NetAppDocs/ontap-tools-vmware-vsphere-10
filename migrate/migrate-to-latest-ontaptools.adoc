@@ -2,17 +2,17 @@
 permalink: migrate/migrate-to-latest-ontaptools.html
 sidebar: sidebar
 keywords: migrate
-summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.'
+summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.'
 ---
 = Migrate from ONTAP tools for VMware vSphere 9.x to 10.3
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA provider data, data is exported from existing Derby database and imported into the MongoDB database.
+When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.
 
 [NOTE]
-It is recommended to migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA provider feature alone.
+It is recommended to migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA Provider feature alone.
 
 [NOTE]
 After migrating from ONTAP tools for VMware vSpher 9.x to 10.3, vVols datastores with the NVMe/FC protocol do not work because ONTAP tools 10.3 only supports NVMe-oF with VMFS datastores.
@@ -55,7 +55,7 @@ Perform these steps on both protection and recovery sites.
 . Install ONTAP tools for VMware vSphere 10.3 SRA adapter on both protection and recovery sites using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on VMware Live Site Recovery appliance]
 . In the VMware Live Site Recovery UI page, perform *Discover Arrays* and *Discover Devices* operations and verify that the devices are showing up as it was before the migration. 
 
-== VASA provider migration steps
+== VASA Provider migration steps
 
 . Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere. To enable the port, log in to CLI with root user and run the following command:
 +
@@ -133,9 +133,9 @@ Once the job is completed, validate the migration report. You can see the report
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from maintenance console.
 +
 [Note] 
-Do not delete the VASA provider.
+Do not delete the VASA Provider.
 +
-Once the old VASA provider is stopped, vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
+Once the old VASA Provider is stopped, vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
 . Perform the patch migrate using the following API:
 +
 ====

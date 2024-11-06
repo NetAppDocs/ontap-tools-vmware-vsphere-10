@@ -24,4 +24,4 @@ Mounting a datastore provides storage access to additional (NFS/VMFS) hosts. You
 . To mount NFS/VMFS datastores on host or host cluster, right-click on it and select *NetApp ONTAP tools* > *Mount Datastores*.
 . Select the datastores that you want to mount and click *Mount*.
 
-You can track the progress in the Recent Task panel.
+You can track the progress in the recent task panel.

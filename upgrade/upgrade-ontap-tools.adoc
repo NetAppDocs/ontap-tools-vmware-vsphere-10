@@ -64,6 +64,16 @@ Run the following commands to take a backup of mongoDB:
 From the log bundle, delete the completed pods with prefix “generate-support-bundle-job” before performing the upgrade.
 If support bundle generation is in progress, wait for it to complete and then delete the pod.
 
+You need to add an additional Hard Disk Drive (HDD) of size 100GB for any type of upgrade. Perform the following task to add HDD.
+
+. Select the VM in single node configuration or select all the three VMs in HA configuration.
+. Right click on the VM(s) and select *Add New Device* > *Hard Disk*
+. In the *New Hard disk* field, add HDD of 100 GB of size.
+. Click *Apply*  
+
+A new HDD will be created. Rook-Ceph will use this HDD to create or replicate the volumes.
+
+
 *Steps*
 
 . Upload ONTAP tools for VMware vSphere upgrade ISO to content library.

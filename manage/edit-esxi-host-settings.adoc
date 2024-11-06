@@ -26,4 +26,4 @@ If there is an issue with your ESXi host settings, the issue is displayed in the
 You can expand the ESXi host to see the current values.
 . In the settings page, select the recommended values as required.
 . In the summary pane, check the values and click *Finish*.
-You can track the progress in the Recent task panel.
+You can track the progress in the recent task panel.

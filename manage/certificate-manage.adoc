@@ -18,10 +18,10 @@ A different load balancer IP address mapped to different domains is not supporte
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
-. Select *Certificates* > *VASA provider* or *ONTAP tools* > *Renew* option to renew the certificates.
+. Select *Certificates* > *VASA Provider* or *ONTAP tools* > *Renew* option to renew the certificates.
 [NOTE]
 The system will be offline till the certificate is renewed and you will be logged out of the user interface.
-. To upgrade the self-signed certificate to custom CA certificate, select *Certificates* > *VASA provider* or *ONTAP tools* > *Upgrade to CA* option.
+. To upgrade the self-signed certificate to custom CA certificate, select *Certificates* > *VASA Provider* or *ONTAP tools* > *Upgrade to CA* option.
 .. In the *Upgrade certificate to custom CA* pop-up, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files. The tool tip provides description of the certificates.
 .. Enter the domain name for which you generated this certificate.
 .. Click *Upgrade*.

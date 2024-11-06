@@ -31,10 +31,10 @@ You can create a vVols datastore with either new volumes or existing volumes. Yo
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
-Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore using ASA r2 type of ONTAP storage. The vVols datastore created on ASA r2 platform is created with space-efficiency as THIN.vVol. VASA provider creates a container and the desired protocol endpoints during create vVol datastore workflow. This container will not have any backing volumes.
+Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore using ASA r2 type of ONTAP storage. The vVols datastore created on ASA r2 platform is created with space-efficiency as THIN.vVol. VASA Provider creates a container and the desired protocol endpoints during create vVol datastore workflow. This container will not have any backing volumes.
 
 .Before you begin
-Ensure that VASA provider is registered with the selected vCenter.
+Ensure that VASA Provider is registered with the selected vCenter.
 
 .Steps
 . Log in to the vSphere client using `\https://vcenterip/ui`

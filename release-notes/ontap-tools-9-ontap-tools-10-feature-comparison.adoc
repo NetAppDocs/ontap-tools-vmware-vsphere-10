@@ -103,7 +103,7 @@ SRA replication for iSCSI VMFS and NFS v3 datastores
 |
 SRA replication for iSCSI VMFS and NFS v3 datastores three-site protection combining SMAS and SRM.
 |
-VASA provider support
+VASA Provider support
 |
 VASA 4.0
 |

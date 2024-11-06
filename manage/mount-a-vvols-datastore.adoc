@@ -18,4 +18,4 @@ You can mount a VMware Virtual Volumes (vVols) datastore to one or more addition
 . Right-click the datastore and select *NetApp ONTAP tools* > *Mount datastore*.
 . In the *Mount datastores on Hosts* dialog box, select the hosts on which you want to mount the datastore, and then click *Mount*.
 
-You can track the progress in the Recent Task panel.
+You can track the progress in the recent task panel.
