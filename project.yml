@@ -8,7 +8,7 @@ settings:
 
 sidebar: 
   entries:
-    - title: ONTAP tools for VMware vSphere 10.3 docs
+    - title: ONTAP tools for VMware vSphere 10.3
       url: /index.html
     - section: release-notes
     - section: concepts
