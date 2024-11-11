@@ -12,8 +12,8 @@ summary: 'Upgrade is supported for both HA and non-HA deployments.'
 Upgrade is supported for both HA and non-HA deployments. The supported upgrade paths are:
 |===
 |From ONTAP tools for VMware vSphere 10.1 and 10.2 configuration | To ONTAP tools for VMware vSphere 10.3 configuration
-|Easy small |  Non-HA and advanced small
-|Easy medium | Non-HA and advanced medium
+|Non-HA small |  Non-HA and advanced small
+|Non-HA medium | Non-HA and advanced medium
 |Advanced small |Non-HA and advanced small
 |Advanced medium |Non-HA and advanced medium
 |HA small |HA small

@@ -13,9 +13,6 @@ ONTAP tools for VMware vSphere appliance is always deployed as small sized singl
 
 *Before you begin*
 
-Make sure the network route is present and the storage data network is accessible from VM management network.
-For example, log in to ONTAP > run the command _network route create -vserver <SVM> -destination 0.0.0.0/0 -gateway <gateway_ip>_
-
 A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
 [NOTE]
 You should store the content library on a shared datastore, such that all hosts in a cluster can access it.
@@ -61,7 +58,7 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 . Select the destination network for each source network and click *Next*.
 . In the *Customize template* window, fill in the required fields and click *Next*. 
 [NOTE] 
-* When SVM scope is enabled you should have already enabled SVM support with management IP address.  
+
 * The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
 * Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 [NOTE]
