@@ -140,6 +140,45 @@ The following table shows the number of VMware Live Site Recovery and the corres
 
 For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html[Operational Limits of VMware Live Site Recovery].
 
+== Port requirements
+
+|===
+|*Port* |*Description*
+|22(TCP) |Ansible uses this SSH port for communication during cluster provisioning. This port is required for functionalities like changing maintenance user password, status messages, and to update values on all the three nodes in case of HA configuration.
+
+|443(TCP) |This is the pass through port for incoming communication for the VASA provider service. VASA provider self-signed certificate and custom CA certificate are hosted on this port.
+
+|8443(TCP) |This port hosts the API documentation through swagger and the Manager user interface application.
+
+|2379(TCP) |This is the default port for client requests such as get, put, delete, or watch for keys in the etcd key value store.
+
+|2380(TCP) |This is the default port for server-to-server communication for the etcd cluster used for the raft consensus algorithm that etcd relies on for data replication and consistency.
+
+|7472(TCP+UDP) |This is the prometheus metrics service port.
+
+|7946(TCP+UDP) |This port is used for docker's container network discovery.
+
+|9083(TCP) |This port is an internally used service port for VASA provider service.
+
+|1162(UDP) | This is the SNMP trap packets port.
+
+|6443(TCP) |Source --> RKE2 agents nodes Destination --> REK2 server nodes Description --> Kubernetes API
+
+|9345(TCP) |Source --> RKE2 agents nodes Destination --> REK2 server nodes Description --> REK2 supervisor API
+
+|8472(TCP+UDP) |All nodes need to be able to reach other nodes over UDP port 8472 when flannel VXLAN is used. Source --> all RKE2 nodes Destination --> all REK2 nodes Description --> Canal CNI with VXLAN
+
+|10250(TCP) |Source --> all RKE2 nodes Destination --> all REK2 nodes Description --> Kubelet metrics
+
+|30000-32767(TCP) |Source --> all RKE2 nodes Destination --> all REK2 nodes Description --> NodePort port range
+
+|123(TCP) |Ntpd uses this port to perform validation of the ntp server.
+
+|===
+
+
+
+
 == Pre-deployment checks
 
 Ensure the following items are in place before you proceed with the deployment:
