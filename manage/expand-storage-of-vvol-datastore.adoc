@@ -4,13 +4,16 @@ sidebar: sidebar
 keywords: virtual volume datastores
 summary: 'When you right click on datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section.'
 ---
-= Expand vVols Datastore
+= Expand vVols datastore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
 When you right click on datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section. Specific actions are enabled depending on the type of datastore and the current user privileges.
+
+[NOTE]
+Expand vVols datastore operation is not supported for ASA r2 based vVols datastore.
 
 *Steps*
 

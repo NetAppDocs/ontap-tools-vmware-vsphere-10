@@ -77,6 +77,4 @@ entries:
         url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
-  - title: Manage AutoSupport settings
-    url: /manage/manage-autosupport.html
 

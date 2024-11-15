@@ -15,6 +15,13 @@ In the case of Enhanced Linked Mode setup (ELM), the vCenter Server select dropd
 vCenter Server selection made in one page persists across the tabs of the plug-in. 
 image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
+From the overview page, you can run the *Discovery* action. Discovery action runs the discovery at vCenter level to detect any newly added or updated storage backends, hosts, and datastores. You can run an on-demand discovery of entities without having to wait for the scheduled discovery.
+
+[NOTE]
+Action button will be enabled only if you have the privilege to perform the discovery action.
+
+Once the discovery request is submitted, you can track the progress of the action in the recent tasks panel.
+
 The dashboard has several cards showing different elements of the system. The following table shows the different cards and what they represent.
 
 |===

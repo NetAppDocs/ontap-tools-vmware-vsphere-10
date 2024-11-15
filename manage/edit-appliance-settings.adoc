@@ -31,7 +31,7 @@ To disable any of the optional services, ensure that no vCenter Servers that are
 when ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for new edit submission.
 +
 [NOTE]
-You are only allowed to scale-up the ONTAP tools node size. You cannot scale-down the node from the current size to a smaller size.
+You are only allowed to scale-up the ONTAP tools node size. You cannot scale-down the node from the current size to a smaller size. For non-HA maximum supported configuration is medium. For HA medium and large configurations are supported.
 . Use the HA toggle button to enable the HA configuration. When you choose HA configuration, an additional *HA settings* page appears for HA related inputs.
 +
 [NOTE]
@@ -46,3 +46,4 @@ The inputs are validated each time you move to the next window.
 
 The *Overview* page shows the status of the deployment. You can also track the edit appliance settings job status from jobs view using the job ID.
 
+The *Alerts* tab on the left panel lists alerts for ONTAP tools for VMware vSphere.

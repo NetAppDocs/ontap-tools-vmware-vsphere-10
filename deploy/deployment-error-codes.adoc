@@ -24,11 +24,11 @@ The following table lists the error codes and the corresponding file names.
 |00 |firstboot-network-config.pl, mode deploy
 |01 |firstboot-network-config.pl, mode upgrade
 |02 |firstboot-inputs-validation.pl
-|03 |firstboot-deploy-otv-ng.pl, deploy, ha
-|04 |firstboot-deploy-otv-ng.pl, deploy, non-ha
+|03 |firstboot-deploy-otv-ng.pl, deploy, HA
+|04 |firstboot-deploy-otv-ng.pl, deploy, non-HA
 |05 |firstboot-deploy-otv-ng.pl, reboot
-|06 |firstboot-deploy-otv-ng.pl, upgrade, ha
-|07 |firstboot-deploy-otv-ng.pl, upgrade, non-ha
+|06 |firstboot-deploy-otv-ng.pl, upgrade, HA
+|07 |firstboot-deploy-otv-ng.pl, upgrade, non-HA
 |08 |firstboot-otv-recovery.pl
 
 |===
@@ -61,34 +61,21 @@ sudo rke2-uninstall.sh (all VMs).
 |066 |Post deployment steps failed |-
 |088 |Configuring log rotate for journald has failed |Restart the primary VM.
 |089 |Changing ownership of summary log rotate config file has failed |Restart the primary VM.
+|090 |Setting unique initiator name has failed |Restart the primary VM.
+|096 |Install Rook Ceph |-
 
 |===
 
 |===
 |*Reboot error code*|*Workflow*
 |067
-|Waiting for rke2-server timed out
+|Waiting for rke2-server timed out.
 |101
-|Failed to Reset Maint/Console user password
+|Failed to Reset Maint/Console user password.
 |102
-|Failed to Delete password file during reset Maint/Console user password
+|Failed to Delete password file during reset Maint/Console user password.
 |103
-|Failed to Update New Maint/Console user password in vault
-|===
-
-|===
-|*Recovery error code* |*Workflow* |*Resolution*
-|104 |Post recovery steps have failed. |-
-|105 |Copying contents to recovery volume has failed. |-
-|106 |Failed to mount recovery volume. |* Ensure that the same SVM is used and recovery volume is present in the SVM. 
-
-* Ensure Management LIF and Data LIF IP addresses are reachable from VM.
-
-* Ensure NFS/iSCSI protocol is enabled and configured properly on ONTAP.
-
-* Ensure that the NFS/iSCSI Dat LIF IP address provided is correct and online.
-
-* Ensure that the username, password, protocol provided are correct and the user has sufficient privileges to create, mount, clone, delete.
-
-* Retry the recovery
+|Failed to Update New Maint/Console user password in vault.
+|088 |Configuring log rotate for journald has failed.
+|089 |Changing ownership of summary log rotate config file has failed.
 |===

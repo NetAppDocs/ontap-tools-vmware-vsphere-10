@@ -97,13 +97,15 @@ Using APIs:
 |/api/cluster |Read-Only |Cluster Configuration Discovery
 |/api/cluster/licensing/licenses |Read-Only |License Check for Protocol specific licenses
 |/api/cluster/nodes	|Read-Only	|Platform type discovery
+|/api/security/accounts |Read-Only |Privilege Discovery
+|/api/security/roles |Read-Only |Privilege Discovery
 |/api/storage/aggregates	|Read-Only	|Aggregate space check during Datastore/Volume provisioning
 |/api/storage/cluster	|Read-Only	|To get the Cluster level Space and Efficiency Data
 |/api/storage/disks	|Read-Only	|To get the Disks associated in an Aggregate
 |/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM Policy management
 |/api/svm/svms	|Read-Only	|To get SVM configuration in the case the Cluster is added locally.
 |/api/network/ip/interfaces |Read-Only |Add Storage Backend - To identify the management LIF scope is Cluster/SVM
-|/api |Read-Only | Cluster users should have this privilege to get the correct storage backend status. Otherwise, ONTAP tools Manager shows "unknown" storage backend status.
+
 |===
  
 

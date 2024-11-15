@@ -23,7 +23,7 @@ Upgrade is supported for both HA and non-HA deployments. The supported upgrade p
 // otv10.3 updates
 
 [NOTE]
-To upgrade from ONTAP tools for VMware vSphere 10.0 to 10.2 release, you need to first upgrade to ONTAP tools for VMware vSphere 10.1 and then to 10.2 release.
+To upgrade from ONTAP tools for VMware vSphere 10.0 to 10.3 release, you need to first upgrade to ONTAP tools for VMware vSphere 10.1 and then to 10.3 release.'
 
 *Before you begin*
 
@@ -88,4 +88,10 @@ image:../media/primaryvm-edit-settings.png[Edit settings]
 . When you upgrade, the following actions are performed automatically:
 .. Certificate upgrade
 .. Remote plug-in upgrade
+
+After upgrading to ONTAP tools for VMware vSphere 10.3, you can: 
+
+* Disable the services from manager UI
+* Move from a non-HA set up to HA set up
+* Scale up a non-HA small configuration to a non-HA medium or to a HA medium or large configuration.
 
