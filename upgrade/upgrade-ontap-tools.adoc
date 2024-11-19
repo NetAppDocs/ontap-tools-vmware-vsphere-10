@@ -95,3 +95,8 @@ After upgrading to ONTAP tools for VMware vSphere 10.3, you can:
 * Move from a non-HA set up to HA set up
 * Scale up a non-HA small configuration to a non-HA medium or to a HA medium or large configuration.
 
+*After you finish*
+
+After you upgrade from previous releases of ONTAP tools for VMware vSphere to 10.3 release, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
+
+

@@ -23,3 +23,19 @@ VASA Provider Settings section shows the VASA Provider registration state for th
 . If you want to unregister the VASA Provider, perform the following steps:
 .. To unregister the VASA Provider select *Unregister* option at the bottom of the screen.
 .. In the *Unregister VASA Provider* page, you can see the name of the VASA Provider. In this page provide the application user credentials and click *Unregister*.
+
+*After you finish*
+
+Verify that the onboarded VASA Provider is listed under VASA Provider from vCenter client UI and from remote plug-in UI.
+
+*Steps*
+
+.	To verify VASA Provider from vCenter client UI follow these steps:
+.. Navigate to vCenter Server.
+..	Log in with the administrator credentials. 
+..	Select *Storage Providers* > *Configure*.
+..	Under Storage Provider/storage backends verify that the onboarded VASA Provider is listed correctly.
+.	To verify VASA Provider from the remote plug-in UI follow these steps:
+.. Log in to the vSphere client using `\https://vcenterip/ui`
+.. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
+.. You can see the registered VASA Provider in the overview page and in the *Settings* > *VASA Provider settings* page.

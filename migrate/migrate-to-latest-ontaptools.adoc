@@ -129,7 +129,7 @@ A job object is returned. You should save the job identifier to use it in the ne
 https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
-. Add ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register VASA Provider to vCenter Server].
+. Add ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider with a vCenter Server instance].
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from maintenance console.
 +
 [Note] 
@@ -216,5 +216,6 @@ After successful migration and after you register ONTAP tools 10.3 to the vCente
 * Refresh the certificate on all the hosts.
 * Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that are present in the setup. When you don't wait, the operations may fail intermittently.
 
+*After you finish*
 
-
+After you migrate from old releases of ONTAP tools for VMware vSphere to 10.3 release, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.

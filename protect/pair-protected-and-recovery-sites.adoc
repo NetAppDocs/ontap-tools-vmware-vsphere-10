@@ -12,7 +12,7 @@ summary: 'You should pair the protected and recovery sites created using your vS
 You should pair the protected and recovery sites created using your vSphere Client to enable Storage Replication Adapter (SRA) to discover the storage systems.
 
 [NOTE]
-Storage Replication Adapter (SRA) does not support fan-out SnapMirror configurations. SnapMirror fan-out configurations are those where a source volume is replicated to two different destinations. These create a problem during recovery when VMware Live Site Recovery needs to recover the virtual machine from its destination. 
+Storage Replication Adapter (SRA) supports fan-out with with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two async SnapMirror on consistency group or fan-out SnapMirrors on Volume is not supported. 
 
 *What you will need*
 

@@ -60,5 +60,7 @@ a|
 
 . Access diagnostic shell
 . Enable remote diagnostic access
+. Provide vCenter credentials for backup
+. Take backup
 
 |===

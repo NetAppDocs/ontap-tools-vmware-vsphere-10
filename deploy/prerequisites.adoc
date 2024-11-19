@@ -142,6 +142,8 @@ For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/s
 
 == Port requirements
 
+The following table outlines the network ports that NetApp uses and their purposes. Ensure these ports are open and accessible to facilitate proper operation and communication within the system. Ensure that the necessary network configurations are in place to allow traffic on these ports for the associated services to function correctly. Depending on your security policies, you may need to configure firewalls or other security appliances to permit this traffic within your network.
+
 |===
 |*Port* |*Description*
 |22(TCP) |Ansible uses this SSH port for communication during cluster provisioning. This port is required for functionalities like changing maintenance user password, status messages, and to update values on all the three nodes in case of HA configuration.
@@ -162,15 +164,15 @@ For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/s
 
 |1162(UDP) | This is the SNMP trap packets port.
 
-|6443(TCP) |Source --> RKE2 agents nodes Destination --> REK2 server nodes Description --> Kubernetes API
+|6443(TCP) |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: Kubernetes API
 
-|9345(TCP) |Source --> RKE2 agents nodes Destination --> REK2 server nodes Description --> REK2 supervisor API
+|9345(TCP) |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: REK2 supervisor API
 
-|8472(TCP+UDP) |All nodes need to be able to reach other nodes over UDP port 8472 when flannel VXLAN is used. Source --> all RKE2 nodes Destination --> all REK2 nodes Description --> Canal CNI with VXLAN
+|8472(TCP+UDP) |All nodes need to be able to reach other nodes over UDP port 8472 when flannel VXLAN is used. Source: all RKE2 nodes. Destination: all REK2 nodes. Description: Canal CNI with VXLAN
 
-|10250(TCP) |Source --> all RKE2 nodes Destination --> all REK2 nodes Description --> Kubelet metrics
+|10250(TCP) |Source: all RKE2 nodes. Destination: all REK2 nodes. Description: Kubelet metrics
 
-|30000-32767(TCP) |Source --> all RKE2 nodes Destination --> all REK2 nodes Description --> NodePort port range
+|30000-32767(TCP) |Source: all RKE2 nodes. Destination: all REK2 nodes. Description: NodePort port range
 
 |123(TCP) |Ntpd uses this port to perform validation of the ntp server.
 
