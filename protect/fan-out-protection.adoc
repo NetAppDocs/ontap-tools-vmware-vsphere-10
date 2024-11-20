@@ -1,0 +1,20 @@
+---
+permalink: protect/fan-out-protection.html
+sidebar: sidebar
+keywords:
+summary: 'In a fan out protection, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and other with asynchronous relationship on the second destination ONTAP cluster.'
+---
+= Fan out protection
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+In a fan out protection, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and other with asynchronous relationship on the second destination ONTAP cluster. 
+The create, edit, and delete SnapMirror active sync protection workflows maintain synchronous protection. SRM failover and reprotect workflows maintain asynchronous protection. In order to establish this set up you need to peer three site clusters and SVMs. 
+
+For example, if source consistency group is on cluster c1 and SVM svm1, first destination consistency group is on cluster c2 and SVM svm2 and second destination consistency group is on cluster c3 and SVM svm3, the cluster peering on source ONTAP cluster will be (C1, C2) and (C1, C3). The cluster peering on first destination ONTAP cluster will be (C2, C1) and (C2, C3) and the cluster peering on second destination ONTAP cluster will be (C3, C1) and (C3, C2). SVM peering on source SVM will be (svm1, svm2) and (svm1, svm3). SVM Peering on first destination SVM will be (svm2, svm1) and (svm2, svm3) and SVM peering on second destination svm will be (svm3, svm1) and (svm3, svm2).
+
+*Steps*
+
+. Create a new place holder datastore. Refer https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html[Select a Placeholder Datastore]
+. Add datastore to host cluster protection link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. You need to add both asynchronous and synchronous policy types.
