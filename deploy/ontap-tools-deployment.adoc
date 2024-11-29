@@ -124,6 +124,7 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 . In the *Customize template* window, fill in the required fields and click *Next*. 
 [NOTE] 
 * In HA mode of deployment, do not rename the VM names after the deployment.
+// updated for OTVDOC-174 - jani
 * When SVM scope is enabled you should have already enabled SVM support with management IP address.  
 * The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.
 * Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
