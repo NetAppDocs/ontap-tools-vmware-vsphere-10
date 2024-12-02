@@ -16,7 +16,7 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 == System requirements
 
 * *Installation package space requirements per node*
-** 10 GB for thin provisioned installations
+** 15 GB for thin provisioned installations
 ** 348 GB for thick provisioned installations
 
 * *Host system sizing requirements per node*

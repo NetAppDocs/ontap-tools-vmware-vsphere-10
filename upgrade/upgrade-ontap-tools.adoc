@@ -23,9 +23,11 @@ Upgrade is supported for both HA and non-HA deployments. The supported upgrade p
 // otv10.3 updates
 
 [NOTE]
-To upgrade from ONTAP tools for VMware vSphere 10.0 to 10.3 release, you need to first upgrade to ONTAP tools for VMware vSphere 10.1 and then to 10.3 release.'
+Upgrade is supported from ONTAP tools for VM ware vSphere 10.1 and 10.2 versions to 10.3 version. Upgrade from ONTAP tools 10.0 version to 10.3 version is not supported.
 
 *Before you begin*
+
+If the appliance was deployed as local-path (easy- deployment) with ONTAP tools 10.1 or 10.2 version, you need to take quiesce snapshot before upgrading.
 
 If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
 
@@ -49,7 +51,7 @@ Run the following commands to take a backup of mongoDB:
 * kn exec ntv-mongodb-0 --mongodump -u root -p MONGODB_ROOT_PASSWORD --archive=/tmp/mongodb-backup.gz --gzip - run this command to replace MONGO_ROOT_PASSWORD set from above command.
 * kn cp ntv-mongodb-0:/tmp/mongodb-backup.gz ./mongodb-backup.gz - run this command to copy the mongodb backup created using above command from pod to host.
 
-*Take the snapshot of all the volumes*
+*Take the quaise snapshot of all the volumes*
 
 * Run 'kn get pvc' command and save the output of the command.
 * Take snapshots of all the volumes one by one using one of the following methods:

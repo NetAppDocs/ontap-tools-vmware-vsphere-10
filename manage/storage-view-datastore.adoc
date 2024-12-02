@@ -36,6 +36,9 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 
 // updated for 10.3 ASA r2
 == ONTAP storage views for vVols datastores
+[NOTE]
+This view is not supported for ASA r2 based vVols datastore.
+
 .Steps
 
 . From the vSphere Client navigate to the vVols datastore.

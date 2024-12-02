@@ -11,6 +11,9 @@ summary: 'Delete datastore action deletes the datastore when there are no vVols 
 [.lead]
 Delete datastore action deletes the datastore when there are no vVols on the selected datastore.
 
+[NOTE]
+Shrink vVols datastore operation is not supported for ASA r2 based vVols datastore.
+
 .Steps
 
 . From the vSphere Client home page, click *Hosts and Clusters*.
