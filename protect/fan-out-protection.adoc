@@ -30,7 +30,6 @@ a|
 * SVM peering on first destination SVM will be (svm2, svm1) and (svm2, svm3) and 
 * SVM peering on second destination svm will be (svm3, svm1) and (svm3, svm2).
 
-
 |===
 
 
