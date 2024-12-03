@@ -1,0 +1,24 @@
+---
+permalink: manage/enable-backup.html
+sidebar: sidebar
+keywords:
+summary: 'You need to take backup of the system before upgrading from ONTAP tools for VMware vSphere 10.1 and 10.2 to 10.3 release. You need to perform a backup and restore the data to the new machine to recover the setup.'
+---
+= Enable backup
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You need to take backup of the system before upgrading from ONTAP tools for VMware vSphere 10.1 and 10.2 to 10.3 release. You need to perform a backup and restore the data to the new machine to recover the setup.
+
+.Steps
+
+. From vCenter Server, open the maintenance console.
+. Log in as the maintenance user.
+. Enter `4` to select *Support and Diagnostics*.
+. Enter `3` to select *Enable System Backup* option.
+. In case of non-HA, enter the vCenter credentials where the ONTAP tools virtual machine is deployed.  
+. Enter the backup frequency value between 5-60 mins.
+. Press *Enter*
+
+This procedure creates the backup and pushes the backup to the datastore of the virtual machine at a regular interval.
