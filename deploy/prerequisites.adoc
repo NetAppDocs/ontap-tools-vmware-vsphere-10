@@ -56,7 +56,7 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |ONTAP
 |9.14.1, 9.15.1, and 9.16.0.
 
-FAS, ASA A-Series, ASA C-Series, AFF A-Series, and AFF C-Series 
+FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series, and ASA r2.
 
 |ESXi hosts
 |ESXi 7.0.3
