@@ -75,7 +75,7 @@ You can try to migrate the VM to another host and restart.
 |094 |Dynamic storage provisioner rollback has failed |Retry the upgrade.
 |095 |OS upgrade failed |No recovery for OS upgrade. ONTAP tools services are upgraded and new pods will be running.
 |096 |Install dynamic storage provisioner |Check the upgrade logs and retry upgrade.
-|097 |Uninstalling services for upgrade has failed |Use Zero-RPO or snapshot based recovery and retry upgrade. 
+|097 |Uninstalling services for upgrade has failed |Use zero RPO or snapshot based recovery and retry upgrade. 
 |098 |copying dockercred secret from ntv-system to rook-ceph namespace has failed |Check the upgrade logs and retry upgrade.
 |099 |Failed to validate the new HDD addition |Add the new HDD to all the nodes in case of HA and to one node in case of non-HA deployment.
 |108 | Seeding script failed |-
@@ -86,4 +86,8 @@ You can try to migrate the VM to another host and restart.
 |113 |Refresh resources on secondary nodes has failed |Check the upgrade logs and retry upgrade.
 
 |===
+
+[NOTE]
+ONTAP tools for VMware vSphere 10.3 does on support zero RPO.
+
 Learn more about https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1[How to restore ONTAP tools for VMware vSphere if upgrade fails from version 10.0 to 10.1]

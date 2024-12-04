@@ -183,7 +183,6 @@ The following table outlines the network ports that NetApp uses and their purpos
 Ensure the following items are in place before you proceed with the deployment:
 
 * vCenter Server environment is set up and configured. 
-* (Optional) For automation user - NetApp provided Postman collections JSON file is gathered. 
 * Parent vCenter Server Credentials to deploy the OVA are in place. 
 * You have the login credentials for your vCenter Server instance to which the ONTAP tools for VMware vSphere will connect to post deployment, for registration. 
 * Browser cache is deleted.
