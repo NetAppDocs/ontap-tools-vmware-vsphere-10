@@ -9,7 +9,7 @@ summary: 'You need to take backup of the system before upgrading from ONTAP tool
 :imagesdir: ../media/
 
 [.lead]
-You need to take backup of the system before upgrading from ONTAP tools for VMware vSphere 10.1 and 10.2 to 10.3 release. In case of rook ceph, which is a dynamic storage provisioner, you need to perform a backup of the data and then restore the data to the new machine to recover the setup. As ONTAP tools for VMware vSphere 10.3 uses Rook Ceph, you cannot achieve zero RPO. However, you can achieve near zero RPO.
+You need to take backup of the system before upgrading from ONTAP tools for VMware vSphere 10.1 and 10.2 to 10.3 release. In case of dynamic storage provisioner, which is a dynamic storage provisioner, you need to perform a backup of the data and then restore the data to the new machine to recover the setup. As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero RPO.
 
 .Steps
 

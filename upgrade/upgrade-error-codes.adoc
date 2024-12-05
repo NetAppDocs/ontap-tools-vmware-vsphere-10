@@ -76,7 +76,7 @@ You can try to migrate the VM to another host and restart.
 |095 |OS upgrade failed |No recovery for OS upgrade. ONTAP tools services are upgraded and new pods will be running.
 |096 |Install dynamic storage provisioner |Check the upgrade logs and retry upgrade.
 |097 |Uninstalling services for upgrade has failed |Use zero RPO or snapshot based recovery and retry upgrade. 
-|098 |copying dockercred secret from ntv-system to rook-ceph namespace has failed |Check the upgrade logs and retry upgrade.
+|098 |copying dockercred secret from ntv-system to dynamic storage provisioner namespace has failed |Check the upgrade logs and retry upgrade.
 |099 |Failed to validate the new HDD addition |Add the new HDD to all the nodes in case of HA and to one node in case of non-HA deployment.
 |108 | Seeding script failed |-
 |109 |backing up persistent volume data has failed |Check the upgrade logs and retry upgrade.
