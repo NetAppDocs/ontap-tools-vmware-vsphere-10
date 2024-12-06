@@ -30,11 +30,20 @@ a|
 CA signed certificates 
 a|
 ONTAP tools for VMware vSphere 10.3 release adopts CA signed certificates for ONTAP tools REST APIs and user interface to provide higher security measures.
+a|
+Angular upgrades 
+a|
+ONTAP tools for VMware vSphere 10.3 release provides for latest version of angular which increases the security and provides enhanced performance.
+// We have not covered this in our docs, do we need to mention this?
+a|
+ASA r2
+a|
+ONTAP tools for VMware vSphere 10.3 release provides for provisioning of VMFS datastores on ASA r2 platform. It enables VMFS datastore protection as active-active with SnapMirror active sync and active-passive with SRA/VMware Live Site Recovery. vVols datastore provisioning and virtual machine provisioning on ASA r2 platform is also supported.
+a|
+Observability
+a|
+ONTAP tools for VMware vSphere 10.3 release extends observability metrics support for VMFS and vVol datastore and their respective VMs.
 
-a|
-//xref:../protect/enable-storage-replication-adapter.html[Storage Replication Adapter (SRA) enhancements] 
-a|
-//SRA implements the VMware Site Recovery Manager (SRM) specification-based disaster recovery (DR) solution. SnapMirror active sync through SRM integration supports the disaster recovery planning and orchestrating solution to provide transparent application failover.
 |===
 
 
