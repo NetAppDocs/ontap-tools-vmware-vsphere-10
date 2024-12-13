@@ -21,7 +21,10 @@ You need to create a content library to store the OVA before changing the applia
 [NOTE]
 To enabling HA deployment later, virtual machine that is hosting the ONTAP tools should not be directly deployed on an ESXi host. Instead, it should be deployed either on a cluster or a resource pool.
 
-Create the content library using the following steps:
+If you do not already have a suitable content library, create one using the following steps:
+
+[NOTE]
+If you only intend to use a small single node deployment, you do not need to create a content library.
 
 . Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
 . Log in to the vSphere client using `\https://vcenterip/ui`
@@ -42,7 +45,7 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 
 *Steps*
 
-. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
+. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step as you can deploy directly from the content library.
 . Log in to the vSphere server.
 . Navigate to the resource pool that you have created or to the cluster or to the host where you want to deploy the OVA.
 . Right-click the required location and select *Deploy OVF template...*.
@@ -52,7 +55,8 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 . To deploy ONTAP tools for VMware vSphere from content library:
 .. Go to your content library and click on the library item that you want to deploy. 
 .. Click on *Actions* > *New VM from this template*
-. Select a computer resource and click *Next*.
+. In the *Select a name and folder* for the virtual machine window, enter the virtual machine name and select the location for the virtual machine. If you check the checkbox that says *Customize this virtual machine's hardware*, a step called *Customize hardware* is enabled before you reach the *Ready to complete* window. In *Customize hardware* window you should enable CPU hot add and memory hot plug.
+. Select a computer resource and click *Next*. You can choose to check the checkbox to *Automatically power on deployed VM*.
 . Review the details of the template and click *Next*.
 . Read and accept the license agreement and click *Next*.
 . Select the storage for the configuration and the disk files and click *Next*.
