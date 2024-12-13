@@ -18,7 +18,7 @@ Ensure the following prerequisites are met:
 
 * The host cluster has datastores only from one SVM. 
 * Datastore mounted on the host cluster should not be mounted on any host outside of the cluster.
-* All Datastores mounted on the host cluster must be VMFS datastores with iSCSI/FC protocol. VMFS datastores with NVMe/FC and NVMe/TCP protocols are not supported.
+* All Datastores mounted on the host cluster must be VMFS datastores with iSCSI/FC protocol. vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols are not supported.
 * FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing consistency group (CG).
 * FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing SnapMirror relationship.
 * The host cluster should have at least one datastore.
