@@ -5,7 +5,7 @@ indexpage:
     - title: Get started
       links:
         - title: Release notes
-          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3327064
+          url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3334864
         - title: Learn about ONTAP tools for VMware vSphere
           url: /concepts/ontap-tools-overview.html
         - title: Deploy ONTAP tools for VMware vSphere
