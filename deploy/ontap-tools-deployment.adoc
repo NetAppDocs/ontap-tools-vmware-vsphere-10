@@ -50,12 +50,12 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 . Navigate to the resource pool that you have created or to the cluster or to the host where you want to deploy the OVA.
 . Right-click the required location and select *Deploy OVF template...*.
 [NOTE]
-Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastore that it manages.
+Never store ONTAP tools for VMware vSphere virtual machines on vVols datastores that they manage.
 . Select the OVA file either through the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then click *Next*.
 . To deploy ONTAP tools for VMware vSphere from content library:
 .. Go to your content library and click on the library item that you want to deploy. 
 .. Click on *Actions* > *New VM from this template*
-. In the *Select a name and folder* for the virtual machine window, enter the virtual machine name and select the location for the virtual machine. If you check the checkbox that says *Customize this virtual machine's hardware*, a step called *Customize hardware* is enabled before you reach the *Ready to complete* window. In *Customize hardware* window you should enable CPU hot add and memory hot plug.
+. In the *Select a name and folder* for the virtual machine window, enter the virtual machine name and select the location for the virtual machine. If you check the checkbox that says *Customize this virtual machine's hardware*, a step called *Customize hardware* is enabled before you reach the *Ready to complete* window.
 . Select a computer resource and click *Next*. You can choose to check the checkbox to *Automatically power on deployed VM*.
 . Review the details of the template and click *Next*.
 . Read and accept the license agreement and click *Next*.
@@ -68,6 +68,7 @@ Do not deploy ONTAP tools for VMware vSphere virtual machine on a vVols datastor
 * Host names must consist of uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), or the hyphen (-) special character. If you want to configure dual stack, specify the host name mapped to IPv6 address.
 [NOTE]
 Pure IPv6 is not supported. Mixed mode is supported with VLAN having both IPv6 and IPv4 addresses.
+. In *Customize hardware* window you should enable CPU hot add and memory hot plug.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
