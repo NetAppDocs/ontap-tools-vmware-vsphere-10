@@ -145,3 +145,4 @@ Host names should be mapped to the free IP addresses on the DNS before assigning
 
 // Jani - updated for github issues. Discussed with Balaji for updated.
 * Ensure that domain Name on which the certificate is issued is mapped to  the Virtual IP address in a multi-vCenter deployment where Custom CA certificates are mandatory. _nslookup_ check on the domain name is performed to check whether the domain is getting resolved to the intended IP address. The certificates should be created with domain name and IP address of the load balancer IP address.
+* Before installing the ONTAP tools for VMware vSphere 10.2 in non-HA advanced and HA configuration, check the KB article: https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/pre-requisites_for_installing_OTV_10.1_and_10.2_in_NonHA_Advanced_and_HA[Pre-requisites for non-HA advanced and HA configuration]
