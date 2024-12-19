@@ -78,8 +78,7 @@ The summary page provides the following details:
 * Privileges allowed and restricted for the storage backend. For the child SVM, the information will be same as the parent storage backend. Privileges are shown only on the cluster-based storage backends. If you add SVM as the storage backend, privileges information will not be shown.
 * The ASA r2 cluster drill-down view does not include local tiers tab when the disaggregated property is set as "true" for the SVM or the cluster.
 * For ASA r2 SVM systems, the capacity portlet is not shown. The capacity portal is required only when the disaggregated property is set as "true" for the SVM or the cluster.
-* For ASA r2 SVM systems, basic information section shows the platform type (AFF/ASA/ASA r2/FAS).
-
+* For ASA r2 SVM systems, basic information section shows the platform type.
 
 // 10.3 update for ASA r2
 The interface tab provides detailed information about the interface.
