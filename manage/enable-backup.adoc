@@ -9,7 +9,9 @@ summary: 'As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisione
 :imagesdir: ../media/
 
 [.lead]
-As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO.
+As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, you need to create backup of the setup and restore it on a new virtual machine.
+
+== Create backup and download the backup file
 
 .Steps
 
@@ -20,5 +22,41 @@ As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you can
 . In case of non-HA, enter the vCenter credentials where the ONTAP tools virtual machine is deployed.  
 . Enter the backup frequency value between 5-60 mins.
 . Press *Enter*
++
+This creates the backup and pushes the backup to the datastore of the virtual machine at a regular interval.
+. To access the backup, navigate to the storage section and select the datastore of the virtual machine
+. Select the *Files* section.
++ 
+In the file section, you can see the directory. The name of the directory will be the ONTAP tools IP address where the dots (.) are replaced by underscores, suffixed with _backup_.
+. For more backup information, download the backup_info.txt file from *Files* > *Download*.
 
-This procedure creates the backup and pushes the backup to the datastore of the virtual machine at a regular interval.
+== Recover
+
+To recover the set up, power off the existing virtual machine and deploy a new virtual machine using the OVA that was used in the initial deployment.
+
+You need to use the same ONTAP tools IP address (load balancer IP) for the new virtual machine and the system configuration such as services enabled, node size, and HA mode must be same as the initial deployment.
+
+Perform the following steps to recover the setup from the backup file.
+
+. From vCenter Server, open the maintenance console.
+. Log in as the maintenance user.
+. Enter `4` to select *Support and Diagnostics*.
+. Enter `2` to select *Enable remote diagnostic access* option and create a new password for the diagnostic access.
+. Select any one backup from the downloaded directory. The lastest backup file name is recorded in _backup_info.txt_ file.
+. Run the below command to copy the backup to the new virtual machine and enter the diagnostic password when prompted.
++
+----
+scp <Backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
+----
++
+[NOTE]
+Do not alter the destination path and file name (/home/diag/system_recovery.tar.enc) mentioned in the command.
+. After the backup file is copied, login to diagnostic shell and run the following command:
++
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
+----
++
+The logs are recorded in _/var/log/post-deploy-upgrade.log_ file.
+. After successful recovery, services and vCenter objects are restored.
+
