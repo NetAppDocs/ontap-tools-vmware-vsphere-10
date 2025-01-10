@@ -83,7 +83,7 @@ For non-HA upgrade, power off the ONTAP tools VM and for HA upgrade, power off t
 
 * Power ON the VM, after the changes are done and wait for the services to come to a running state.
 
-* In case of HA deployment, If the resource (CPU and memory) change option for the other two nodes is greyed out, then power off the nodes one by one and make the changes. Then power it on and wait for the services to come to a running state. If the resources are not greyed out, you can proceed to make the changes.
+* In case of HA deployment, make the resource changes, enable hot plugin for CPU and RAM, and add 100 GB hard disk for the  second and the third node as well. There is no need to reboot these nodes.
 
 * If the appliance was deployed as local-path (easy- deployment) with ONTAP tools 10.1 or 10.2 version, you need to take quiesce snapshot before upgrading.
 
@@ -160,5 +160,20 @@ After upgrading to ONTAP tools for VMware vSphere 10.3, you can:
 *After you finish*
 
 After you upgrade from previous releases of ONTAP tools for VMware vSphere to 10.3 release, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
+
+After you upgrade successfully, delete the Trident volumes from ONTAP manually using the following procedure:
+
+. From vCenter Server, open a console to ONTAP tools.
+. Log in as the maintenance user.
+. Enter *4* to select the Support and Diagnostics menu.
+. Enter *1* to select Access diagnostics shell option.
+. Run the following command
++
+----
+sudo python3 /home/maint/scripts/ontap_cleanup.py
+----
+. Enter the ONTAP Username and Password
+
+This deletes all the Trident volumes present in ONTAP that was used in ONTAP tools for VMware vSphere 10.1/10.2.
 
 
