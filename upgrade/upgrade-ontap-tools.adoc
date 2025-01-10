@@ -27,7 +27,59 @@ Upgrade is supported from ONTAP tools for VM ware vSphere 10.1 and 10.2 versions
 
 *Before you begin*
 
-If the appliance was deployed as local-path (easy- deployment) with ONTAP tools 10.1 or 10.2 version, you need to take quiesce snapshot before upgrading.
+* Add an additional hard disk of 100 GB on each node as the services data is stored locally on the VM.
+
+* Change the CPU and memory as mentioned in below table for all nodes. Hot plugin for CPU and RAM should be enabled.
++
+|===
+|10.3 Deployment Type |CPU(Core) per node |Memory(GB) per node |Disk Space(GB) per node| Total CPU(Core) |Memory(GB) |Total Disk Space(GB)
+
+|Non-HA Small
+|9
+|18
+|350
+|9
+|18
+|350
+
+|Non-HA Medium
+|13
+|26
+|350
+|13
+|26
+|350
+
+
+|HA Small
+|9
+|18
+|350
+|27
+|54
+|1050
+
+
+|HA Medium
+|13
+|26
+|350
+|39
+|78
+|1050
+
+
+|HA Large
+|17
+|34
+|350
+|51
+|102
+|1050
+
+|===
+
+* If the appliance was deployed as local-path (easy- deployment) with ONTAP tools 10.1 or 10.2 version, you need to take quiesce snapshot before upgrading.
 
 If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
 
@@ -97,6 +149,7 @@ After upgrading to ONTAP tools for VMware vSphere 10.3, you can:
 * Disable the services from manager UI
 * Move from a non-HA set up to HA set up
 * Scale up a non-HA small configuration to a non-HA medium or to a HA medium or large configuration.
+* In case of non-HA upgrade, reboot the ONTAP tools VM to reflect the changes. In case of HA upgrade, reboot the first node to reflect the changes on the node.
 
 *After you finish*
 

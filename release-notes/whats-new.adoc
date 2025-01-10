@@ -14,7 +14,7 @@ Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.
 |===
 | Update | Description
 a|Platform qualification
-a|The ONTAP tools for VMware vSphere 10.3 supports the ONTAP version 9.16.0, VMware vSphere 8.0.u3, and VMware Live Site Recovery 9.0, which provides the latest security capabilities that ONTAP and VMware vSphere have to offer.
+a|The ONTAP tools for VMware vSphere 10.3 supports the ONTAP version 9.16.0, VMware vSphere 8.0 U3, and VMware Live Site Recovery 9.0, which provides the latest security capabilities that ONTAP and VMware vSphere have to offer.
 
 a|
 Ease of deployment
