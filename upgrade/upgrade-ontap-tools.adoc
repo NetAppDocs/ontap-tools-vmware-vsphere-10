@@ -23,7 +23,7 @@ Upgrade is supported for both HA and non-HA deployments. The supported upgrade p
 // otv10.3 updates
 
 [NOTE]
-Upgrade is supported from ONTAP tools for VM ware vSphere 10.1 and 10.2 versions to 10.3 version. Upgrade from ONTAP tools 10.0 version to 10.3 version is not supported.
+Upgrade is supported from ONTAP tools for VM ware vSphere 10.1 and 10.2 to 10.3. Direct upgrade from ONTAP tools 10.0 to 10.3 is not supported.
 
 *Before you begin*
 
@@ -93,8 +93,8 @@ If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need t
 
 . From vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
-. Enter *4* to select Support and Diagnostics.
-. Enter *2* to select Enable remote diagnostic access.
+. Enter *4* to select *Support and Diagnostics*.
+. Enter *2* to select *Enable remote diagnostic access*.
 
 . Enter *y* to set the password of your choice.
 . Log in to the VM IP address from the terminal/putty with user as 'diag' and password that was set in the previous step.
@@ -163,17 +163,18 @@ After you upgrade from previous releases of ONTAP tools for VMware vSphere to 10
 
 After you upgrade successfully, delete the Trident volumes from ONTAP manually using the following procedure:
 
+[NOTE]
+These steps are not required if the ONTAP tools for VMware vSphere 10.1 or 10.2 was in non-HA small or non-HA medium (local path) configurations.
+
 . From vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
-. Enter *4* to select the Support and Diagnostics menu.
-. Enter *1* to select Access diagnostics shell option.
+. Enter *4* to select the *Support and Diagnostics* menu.
+. Enter *1* to select *Access diagnostics shell* option.
 . Run the following command
 +
 ----
 sudo python3 /home/maint/scripts/ontap_cleanup.py
 ----
-. Enter the ONTAP Username and Password
+. Enter the ONTAP username and password
 
 This deletes all the Trident volumes present in ONTAP that was used in ONTAP tools for VMware vSphere 10.1/10.2.
-
-
