@@ -27,9 +27,11 @@ Upgrade is supported from ONTAP tools for VM ware vSphere 10.1 and 10.2 versions
 
 *Before you begin*
 
+For non-HA upgrade, power off the ONTAP tools VM and for HA upgrade, power off the first node before making the following changes to the virtual machine (VM) settings.
+
 * Add an additional hard disk of 100 GB on each node as the services data is stored locally on the VM.
 
-* Change the CPU and memory as mentioned in below table for all nodes. Hot plugin for CPU and RAM should be enabled.
+* Change the CPU and memory for powered off VM as per the flavour of your deployment. Enable hot plugin for CPU and RAM.
 +
 |===
 |10.3 Deployment Type |CPU(Core) per node |Memory(GB) per node |Disk Space(GB) per node| Total CPU(Core) |Memory(GB) |Total Disk Space(GB)
@@ -78,6 +80,10 @@ Upgrade is supported from ONTAP tools for VM ware vSphere 10.1 and 10.2 versions
 |1050
 
 |===
+
+* Power ON the VM, after the changes are done and wait for the services to come to a running state.
+
+* In case of HA deployment, If the resource (CPU and memory) change option for the other two nodes is greyed out, then power off the nodes one by one and make the changes. Then power it on and wait for the services to come to a running state. If the resources are not greyed out, you can proceed to make the changes.
 
 * If the appliance was deployed as local-path (easy- deployment) with ONTAP tools 10.1 or 10.2 version, you need to take quiesce snapshot before upgrading.
 
