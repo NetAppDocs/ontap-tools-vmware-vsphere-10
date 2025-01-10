@@ -15,8 +15,10 @@ The ONTAP tools appliance is initially deployed in a single node non-HA configur
 
 // new content for 10.3
 *Before you begin*
+
 Ensure that the OVA template you provide has the same OVA version as the first node.
 // https://jira.ngage.netapp.com/browse/OTVDOC-190 -  jani
+
 *Steps*
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
