@@ -103,6 +103,9 @@ For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/
 . Complete SCSI zoning. 
 . Ensure that ESXi hosts and the ONTAP system are connected at a physical and a logical layer.
 
+* For SVM user in ASA r2 storage system, do the SVM to aggregate mapping.
+
+// https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 To configure an ONTAP SVM for FC protocol, refer to https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-fc-task.html[Configure an SVM for FC].
 
 For more information on using NVMe/FC protocol with VMware vSphere 8.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[NVMe-oF Host Configuration for ESXi 8.x with ONTAP].
