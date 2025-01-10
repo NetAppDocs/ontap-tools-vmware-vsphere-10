@@ -130,12 +130,12 @@ For ASA r2 storage systems, *Aggregate* option is not required as the ASA r2 sto
 +
 [NOTE]
 In ASA r2 storage type, the volume creation or selection is not applicable for storage unit creation(LUN/Namespace), therefore these options are not shown.
-
++
 [NOTE]
 For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
 
 . Review the datastore details in the *Summary* pane and click *Finish*.
-+
+
 [NOTE]
 If you're creating the datastore on a protected cluster, you can see a readonly message "The datastore is being mounted on a protected Cluster."
 The VMFS datastore is created and mounted on all the hosts.
