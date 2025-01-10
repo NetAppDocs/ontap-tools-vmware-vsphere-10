@@ -86,7 +86,7 @@ Virtual Machine File System (VMFS) is a clustered file system specifically desig
 Check the following items before proceeding:
 
 * For each protocol on ONTAP storage side, respective services and LIF’s need to be enabled. 
-* For SVM user in ASA r2 storage system, do the SVM to aggregate mapping.
+* For SVM user in ASA r2 storage system, SVM should be mapped to aggregate 
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 * If you are using the NVMe/TCP protocol, perform the following steps to configure the ESXi host:
 
