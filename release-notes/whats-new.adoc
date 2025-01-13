@@ -13,32 +13,38 @@ Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.
 [cols="30%,70%",options="header"]
 |===
 | Update | Description
-a|Platform qualification
-a|The ONTAP tools for VMware vSphere 10.3 supports the ONTAP version 9.16.0, VMware vSphere 8.0 U3, and VMware Live Site Recovery 9.0, which provides the latest security capabilities that ONTAP and VMware vSphere have to offer.
+a|Support for new platform and application versions
+a|The ONTAP tools for VMware vSphere 10.3 now supports these platform and application versions:
+
+- ONTAP 9.16.0 and later
+
+- VMware vSphere 8.0 U3
+
+- VMware Live Site Recovery 9.0.
 
 a|
 Ease of deployment
 a|
-The ONTAP tools for VMware vSphere 10.3 introduces easy deployment for first time installations. You can now deploy with a single node topology with minimum requirement and then  choose to update to a HA or a large deployment as required. 
+You can now deploy the ONTAP tools for VMware vSphere 10.3 with minimum requirements on a single node cluster, and then update it to a high-availability (HA) or a multi-node deployment.
 
 a|
-Dynamic storage provisioner
+Seamless provisioning and configuration
 a|
-The ONTAP tools for VMware vSphere 10.3 removes dependencies associated with Trident and uses dynamic storage provisioner to enable seamless provisioning and configuration.
+The ONTAP tools for VMware vSphere 10.3 has removed dependencies associated with Trident and now uses dynamic storage provisioner to enable seamless provisioning and configuration.
  
 a|
-CA signed certificates 
+Enhanced security for REST API authentication 
 a|
-The ONTAP tools for VMware vSphere 10.3 adopts CA signed certificates for ONTAP tools REST APIs and user interface to provide higher security measures.
-a|
-Angular upgrades 
-a|
-The ONTAP tools for VMware vSphere 10.3 provides for latest version of angular which increases the security and provides enhanced performance.
+The ONTAP tools for VMware vSphere 10.3 now relies on CA signed certificates for ONTAP tools REST APIs and user interface to provide higher security.
+// a|
+// Angular upgrades 
+// a|
+//The ONTAP tools for VMware vSphere 10.3 provides for latest version of angular which increases the security and provides enhanced performance.
 // We have not covered this in our docs, do we need to mention this?
 a|
-ASA r2
+Support for ASA r2
 a|
-The ONTAP tools for VMware vSphere 10.3 supports VMFS datastores provisioning on ASA r2 platform. This release helps you to protect VMFS datastores with SnapMirror active sync in an active/active configuration and with active/passive configuration using SRA/VMware Live Site Recovery. In tech preview, ONTAP tools supports vVols datastore provisioning on ASA r2 platform.
+The ONTAP tools for VMware vSphere 10.3 supports VMFS datastores provisioning on ASA r2 platform to help protect VMFS datastores with SnapMirror active sync and SRA/VMware Live Site Recovery.
 a|
 Observability
 a|
