@@ -42,11 +42,11 @@ The ONTAP tools for VMware vSphere 10.3 now relies on CA signed certificates for
 //The ONTAP tools for VMware vSphere 10.3 provides for latest version of angular which increases the security and provides enhanced performance.
 // We have not covered this in our docs, do we need to mention this?
 a|
-Support for ASA r2
+Support for ASA r2 platform
 a|
 The ONTAP tools for VMware vSphere 10.3 supports VMFS datastores provisioning on ASA r2 platform to help protect VMFS datastores with SnapMirror active sync and SRA/VMware Live Site Recovery.
 a|
-Observability
+Improved observability
 a|
 The ONTAP tools for VMware vSphere 10.3 extends observability metrics support for VMFS and vVol datastore and their respective VMs.
 
