@@ -40,7 +40,7 @@ In AutomatedFailOverDuplex policy type, there is uniform and non-uniform host co
 When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For details, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms]
 . If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
 . Select *Add*.
-. In the *Protect cluster* window, during create operation, only delete action is supported. You can delete and add the protection again. During Modify host cluster protection operation, edit option is available. You can edit or delete the relationships using the kebab menu options.
+. In the *Protect cluster* window, during create operation, only delete action is supported. You can delete and add the protection again. During Modify host cluster protection operation, edit option is available. You can edit or delete the relationships using the ellipsis menu options.
 .  Select *Protect* button.
 +
 A vCenter task is created with job ID details and the progress is shown in the recent tasks panel. This is an asynchronous task, user interface shows only the request submission status and does not wait for the task completion. 
