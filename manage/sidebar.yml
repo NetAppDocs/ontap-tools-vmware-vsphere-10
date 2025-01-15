@@ -9,6 +9,8 @@ entries:
     url: /manage/edit-appliance-settings.html
   - title: Manage datastores
     entries:
+      - title: Create a datastore
+        url: /configure/create-vvols-datastore.html    
       - title: Mount NFS and VMFS datastore
         url: /manage/mount-datastores-on-host.html
       - title: Unmount NFS and VMFS datastore
@@ -57,6 +59,8 @@ entries:
         url: /manage/migrate-standard-virtual-machines-to-vvols-datastores.html
       - title: VASA cleanup
         url: /manage/delete-virtual-machines.html
+  - title: Discover storage systems and hosts
+    url: /configure/discover-storage-systems-and-hosts.html
   - title: Modify ESXi host settings
     url: /manage/edit-esxi-host-settings.html
   - title: Manage passwords

@@ -18,11 +18,11 @@ VASA Provider Settings section shows the VASA Provider registration state for th
 . In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
 . Select *Settings* > *VASA Provider settings*. VASA Provider registration state shows as not registered.
 . Click on *REGISTER* button to register the VASA Provider.
-. Enter a name for the VASA Provider and provide ONTAP tools for VMware vSphere application user credentials and click *REGISTER*.
-. On successful registration and page refresh, UI shows the state, name, and version of the registered VASA Provider. The unregister action is activated.
-. If you want to unregister the VASA Provider, perform the following steps:
-.. To unregister the VASA Provider select *Unregister* option at the bottom of the screen.
-.. In the *Unregister VASA Provider* page, you can see the name of the VASA Provider. In this page provide the application user credentials and click *Unregister*.
+. Enter a name for the VASA provider and provide ONTAP tools for VMware vSphere application user credentials and click *REGISTER*.
+. On successful registration and page refresh, UI shows the state, name, and version of the registered VASA provider. The unregister action is activated.
+. If you want to unregister the VASA provider, perform the following steps:
+.. To unregister the VASA provider select *Unregister* option at the bottom of the screen.
+.. In the *Unregister VASA provider* page, you can see the name of the VASA provider. In this page provide the application user credentials and click *Unregister*.
 
 *After you finish*
 
