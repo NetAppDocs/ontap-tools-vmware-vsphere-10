@@ -14,7 +14,7 @@ You can install the NetApp NFS Plug-in for vSphere APIs for Array Integration (V
 *What you will need*
 
 * You should have downloaded the installation package for the NFS Plug-in for VAAI (`.vib`) from the NetApp Support Site. https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab[NetApp NFS Plug-in for VMware VAAI]
-* You should have installed ESXi host 7.0U3 latest patch as minimum version and ONTAP 9.12.1Px (latest P release) 9.13.1Px, 9.14.1Px, or later.
+* You should have installed ESXi host 7.0U3 latest patch as minimum version and ONTAP 9.14.1, 9.15.1, and 9.16.0.
 * You should have powered on the ESXi host and mounted an NFS datastore.
 * You should have set the values of the `DataMover.HardwareAcceleratedMove`, `DataMover.HardwareAcceleratedInit`, and `VMFS3.HardwareAcceleratedLocking` host settings to "`1`".
 +
@@ -33,7 +33,7 @@ These values are set automatically on the ESXi host when the Recommended Setting
 . Browse and select the `.vib` file and click *Upload* to upload the file to ONTAP tools.
 . Click *Install on ESXI host*, select the ESXi host on which you want to install the NFS VAAI plug-in, and then click *Install*.
 +
-Only the ESXi hosts that are eligible for the plug-in installation are displayed. You should follow the on-screen instructions to complete the installation. You can monitor the installation progress in the Recent Tasks section of vSphere Web Client. 
+Only the ESXi hosts that are eligible for the plug-in installation are displayed. You should follow the on-screen instructions to complete the installation. You can monitor the installation progress in the recent tasks section of vSphere Web Client. 
 . You should manually reboot the ESXi host after the installation finishes.
 +
 When the VMware admin reboots the ESXi host, ONTAP tools for VMware vSphere automatically detect the NFS VAAI plug-in. You do not have to perform additional steps to enable the plug-in.

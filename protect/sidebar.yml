@@ -17,10 +17,12 @@ entries:
         url: /protect/configure-on-srm-appliance.html
       - title: Update SRA credentials
         url: /protect/update-credentials.html
-      - title: Configure protection groups
-        url: /protect/configure-protection-groups.html
-      - title: Pair protected and recovery sites
-        url: /protect/pair-protected-and-recovery-sites.html
+      - title: Configure protected and recovery sites
+        entries:
+          - title: Configure protection groups
+            url: /protect/configure-protection-groups.html
+          - title: Pair protected and recovery sites
+            url: /protect/pair-protected-and-recovery-sites.html
       - title: Configure protected and recovery site resources
         entries:
           - title: Configure network mappings

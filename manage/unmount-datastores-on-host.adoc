@@ -7,7 +7,7 @@ summary: 'Unmount datastore action unmounts a NFS or VMFS datastore from ESXi ho
 = Unmount NFS and VMFS datastores
 :icons: font
 :imagesdir: ../media/
-//10.2 new topic
+
 [.lead]
 
 Unmount datastore action unmounts a NFS or VMFS datastore from ESXi hosts. Unmount datastore action is enabled for NFS and VMFS datastores that are discovered or managed by the ONTAP tools for VMware vSphere.
@@ -29,4 +29,4 @@ If the datastore is part of a protected host cluster, a warning message is displ
 [NOTE]
 If the protected datastore is unmounted the exiting protection setting may result in partial protection. Refer to link:../manage/edit-hostcluster-protection.html[Modify protected host cluster] to enable complete protection.
 
-You can track the progress in the Recent Task panel.
+You can track the progress in the recent tasks panel.
