@@ -1,0 +1,176 @@
+---
+permalink: automation/rest-implementation.html
+sidebar: sidebar
+keywords: ontap tools vmware vsphere rest api reference
+summary: "While REST establishes a common set of technologies and best practices, the exact implementation of each API can vary based on the design choices. You should be familiar with how the ONTAP tools for VMware vSphere 10 REST API is designed before using it."
+---
+
+= Implementation details for the ONTAP tools for VMware vSphere 10 REST API
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+While REST establishes a common set of technologies and best practices, the exact implementation of each API can vary based on the design choices. You should be familiar with how the ONTAP tools for VMware vSphere 10 REST API is designed before using it.
+
+The REST API includes several resource categories such as vCenters and Aggregates. Review the link:../automation/api-reference.html[API reference] for more information.
+
+== How to access the REST API
+
+You can access the ONTAP tools for VMware vSphere 10 REST API through the ONTAP tools load balancer IP address along with the port. There are several parts to the complete URL, including:
+
+* ONTAP tools IP address and port
+* API version
+* Resource category
+* Specific resource
+
+You need to configure the IP address during initial configuration and the port is always 8443. Also, for a specific ONTAP tools for VMware vSphere 10 instance the first part of the URL is constant. Only the resource category and specific resource vary across the endpoints.
+
+[CAUTION]
+The IP address and port values in the examples below are for illustration purposes only. You need to change these values for your environment.
+
+.Example to access authentication services
+
+`\https://10.61.25.34:8443/virtualization/api/v1/auth/login`
+
+This URL can be used to request an access token using the POST method.
+
+.Example to list the vCenter servers
+
+`\https://10.61.25.34:8443/virtualization/api/v1/vcenters`
+
+This URL can be used to request a list of the defined vCenter server instances using the GET method.
+
+== HTTP details
+
+The ONTAP tools for VMware vSphere 10 REST API uses HTTP and related parameters to act on the resource instances and collections. Details of the HTTP implementation are presented below.
+
+=== HTTP methods
+
+The HTTP methods or verbs supported by the REST API are presented in the table below.
+
+[cols="15,15,70"*,options="header"]
+|===
+|Method
+|CRUD
+|Description
+
+|GET
+|Read
+|Retrieves object properties for a resource instance or collection. This is considered a list operation when used with a collection.
+
+|POST
+|Create
+|Creates a new resource instance based on the input parameters.
+
+|PUT
+|Update
+|Updates an entire resource instance with the supplied JSON request body. Key values that are not user-modifiable are preserved.
+
+|PATCH
+|Update
+|Requests a set of selected changes in the request be applied to the resource instance.
+
+|DELETE
+|Delete
+|Deletes an existing resource instance.
+
+|===
+
+=== Request and response headers
+
+The following table summarizes the most important HTTP headers used with the REST API.
+
+[cols="30,15,55"*,options="header"]
+|===
+|Header
+|Type
+|Usage notes
+
+|Accept
+|Request
+|This is the type of content the client application can accept. Valid values include '\*/*` or `application/json`.
+
+|x-auth
+|Request
+|Contains an access token identifying the user issuing the request through the client application.
+
+|Content-Type
+|Response
+|Returned by the server based on the `Accept` request header.
+
+|===
+
+=== HTTP status codes
+
+The HTTP status codes used by the REST API are described below.
+
+[cols="15,20,65"*,options="header"]
+|===
+|Code
+|Meaning
+|Description
+
+|200
+|OK
+|Indicates success for calls that do not create a new resource instance.
+
+|201
+|Created
+|An object has been successfully created with a unique identifier for the resource instance.
+
+|202
+|Accepted
+|The request has been accepted and a background job created to perform the request.
+
+|204
+|No content
+|The request was successful although no content was returned.
+
+|400
+|Bad request
+|The request input is not recognized or is inappropriate.
+
+|401
+|Unauthorized
+|The user is not authorized and must authenticate.
+
+|403
+|Forbidden
+|Access is denied due to an authorization error.
+
+|404
+|Not found
+|The resource referred to in the request does not exist.
+
+|409
+|Conflict
+|An attempt to create an object failed because the object already exists.
+
+|500
+|Internal error
+|A general internal error occurred at the server.
+|===
+
+== Authentication
+
+Authentication of a client to the REST API is performed using an access token. The relevant characteristics of the token and authentication process include:
+
+* The client must request a token using ONTAP tools Manager admin credentials (username and password).
+* Tokens are formatted as a JSON Web Token (JWT).
+* Each token expires after 60 minutes.
+* API requests from a client must include the token in the `x-auth` request header.
+
+See link:../automation/first-call.html[Your first REST API call] for an example of requesting and using an access token.
+
+== Synchronous and asynchronous requests
+
+Most REST API calls complete quickly and therefore run synchronously. That is, they return a status code (such as 200) after a request has been completed. Requests that take longer to complete run asynchronously using a background job.
+
+After issuing an API call that runs asynchronously, the server returns a 202 HTTP status code. This indicates the request has been accepted but not yet completed. You can query the background job to determine its status including success or failure.
+
+Asynchronous processing is used for several types of long running operations, including datastore and vVol operations. Refer to the job manager category of the REST API at the Swagger page for more information.
+
+// January 16 2025 - OTVDOC-179
