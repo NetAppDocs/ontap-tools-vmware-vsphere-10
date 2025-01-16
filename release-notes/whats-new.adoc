@@ -48,7 +48,7 @@ ONTAP tools for VMware vSphere 10.3 supports VMFS datastore provisioning on ASA 
 a|
 Improved observability
 a|
- ONTAP tools for VMware vSphere 10.3 extends observability metrics support for VMFS and vVol datastores and their respective VMs.
+ONTAP tools for VMware vSphere 10.3 extends observability metrics support for VMFS and vVol datastores and their respective VMs.
 
 |===
 
