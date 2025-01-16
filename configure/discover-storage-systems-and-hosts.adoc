@@ -38,5 +38,5 @@ ONTAP tools for VMware vSphere displays a *Confirm* dialog box with the followin
 
 After the discovery process is complete, perform the following actions:
 
-* Use ONTAP tools for VMware vSphere to configure ESXi host settings for hosts that display the Alert icon in the Adapter Settings column, the MPIO Settings column, or the NFS Settings column.
+* Use ONTAP tools for VMware vSphere to configure ESXi host settings for hosts that display the alert icon in the adapter settings column, the MPIO settings column, or the NFS settings column.
 * Provide the storage system credentials.

@@ -2,21 +2,21 @@
 permalink: configure/registration-process.html
 sidebar: sidebar
 keywords:
-summary: 'You can register and unregister the VASA provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plugin interface.'
+summary: 'You can register and unregister the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plugin interface.'
 ---
 = Register the VASA Provider with a vCenter Server instance
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can register and unregister the VASA provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plugin interface.
+You can register and unregister the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plugin interface.
 VASA Provider Settings section shows the VASA Provider registration state for the selected vCenter Server.
 
 *Steps*
 
 . Log in to the vSphere client using `\https://vcenterip/ui`
 . In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
-. Select *Settings* > *VASA provider settings*. VASA provider registration state shows as not registered.
+. Select *Settings* > *VASA Provider settings*. VASA Provider registration state shows as not registered.
 . Click on *REGISTER* button to register the VASA Provider.
 . Enter a name for the VASA provider and provide ONTAP tools for VMware vSphere application user credentials and click *REGISTER*.
 . On successful registration and page refresh, UI shows the state, name, and version of the registered VASA provider. The unregister action is activated.
@@ -26,17 +26,16 @@ VASA Provider Settings section shows the VASA Provider registration state for th
 
 *After you finish*
 
-Verify that the onboarded VASA provider is listed under VASA Provider from vCenter client UI and from remote plug-in UI.
+Verify that the onboarded VASA Provider is listed under VASA Provider from vCenter client UI and from remote plug-in UI.
 
 *Steps*
 
 .	To verify VASA Provider from vCenter client UI follow these steps:
 .. Navigate to vCenter Server.
 ..	Log in with the administrator credentials. 
-..	Select *Storage Providers*. 
-..	Select *Configure*.
-..	Under Storage Provider/storage backends verify that the onboarded VASA provider is listed correctly.
+..	Select *Storage Providers* > *Configure*.
+..	Under Storage Provider/storage backends verify that the onboarded VASA Provider is listed correctly.
 .	To verify VASA Provider from the remote plug-in UI follow these steps:
 .. Log in to the vSphere client using `\https://vcenterip/ui`
 .. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
-.. You can see the registered VASA Provider in the overview page and in the *Settings* > *VASA provider settings* page.
+.. You can see the registered VASA Provider in the overview page and in the *Settings* > *VASA Provider settings* page.

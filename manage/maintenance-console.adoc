@@ -27,6 +27,7 @@ a|
 . Display server status summary
 . Change LOG level for VASA Provider Services and SRA Services
 . Disable AutoSupport
+. Update AutoSupport proxy URL
 
 a|
 System Configuration
@@ -60,5 +61,7 @@ a|
 
 . Access diagnostic shell
 . Enable remote diagnostic access
+. Provide vCenter credentials for backup
+. Take backup
 
 |===

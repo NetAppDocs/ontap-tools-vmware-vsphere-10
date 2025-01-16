@@ -11,6 +11,9 @@ summary: 'The following section describes the key concepts and terms used in the
 [.lead]
 The following section describes the key concepts and terms used in the document. 
 
+=== ASA r2
+The new NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html[Learn about ASA r2 storage systems].
+
 === Certificate authority (CA)
 CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 
@@ -36,6 +39,9 @@ ONTAP tools Manager provides more control to ONTAP tools for VMware vSphere admi
 
 === Open Virtual Appliance (OVA)
 OVA is an open standard for packaging and distributing virtual appliances or software that must be run on virtual machines. 
+
+=== Recovery Point Objective (RPO)
+RPO is a measure of how frequently data is backed up or replicated. It represents the point in time to which data must be recovered after an outage in order to resume business operations. For example, if an organization has an RPO of 4 hours, it can tolerate losing up to 4 hours of data in the event of a disaster.
 
 === SnapMirror active sync (SMAS)
 SnapMirror active sync enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. Manual intervention nor custom scripting are required to trigger a failover with SnapMirror active sync. Lear more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync].

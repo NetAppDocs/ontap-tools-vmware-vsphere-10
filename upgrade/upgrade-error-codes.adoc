@@ -25,12 +25,13 @@ The following table lists the error codes and the corresponding file names.
 |00 |firstboot-network-config.pl, mode deploy
 |01 |firstboot-network-config.pl, mode upgrade
 |02 |firstboot-inputs-validation.pl
-|03 |firstboot-deploy-otv-ng.pl, deploy, ha
-|04 |firstboot-deploy-otv-ng.pl, deploy, non-ha
+|03 |firstboot-deploy-otv-ng.pl, deploy, HA
+|04 |firstboot-deploy-otv-ng.pl, deploy, non-HA
 |05 |firstboot-deploy-otv-ng.pl, reboot
-|06 |firstboot-deploy-otv-ng.pl, upgrade, ha
-|07 |firstboot-deploy-otv-ng.pl, upgrade, non-ha
+|06 |firstboot-deploy-otv-ng.pl, upgrade, HA
+|07 |firstboot-deploy-otv-ng.pl, upgrade, non-HA
 |08 |firstboot-otv-recovery.pl
+|09 |post-deploy-upgrade.pl
 
 |===
 
@@ -38,33 +39,55 @@ The last three digits of the error code indicate the specific workflow error wit
 
 |===
 |*Upgrade error code* |*Workflow* |*Resolution*
-|063 |Copying contents to recovery volume has failed |Perform snapshot-based recovery.
-|068 |Debian packages rollback has failed |Perform snapshot-based recovery.
-|069 |Failed restoring files |Perform snapshot-based recovery.
-|070 |Failed deleting backup |Perform snapshot-based recovery.
-|071 |Kubernetes cluster was not healthy |Perform snapshot-based recovery.
-|072 |CR file does not exist in jail disk |Perform snapshot-based recovery.
-|073 |Applying the CR failed while setting force reconcile flag to false |Perform snapshot-based recovery.
-|074 |Mount ISO has failed |Retry the upgrade.
+|068 |Debian packages rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|069 |Failed restoring files |Use zero-RPO or snapshot based recovery and retry upgrade.
+|070 |Failed deleting backup |-
+|071 |Kubernetes cluster was not healthy |-
+|074 |Mount ISO has failed |Check the /var/log/upgrade-run.log and retry upgrade.
 |075 |Upgrade pre-checks has failed |Retry the upgrade.
-|076 |Registry upgrade has failed |Perform snapshot-based recovery.
-|077 |Registry rollback has failed |Perform snapshot-based recovery.
-|078 |Operator upgrade has failed |Perform snapshot-based recovery.
-|079 |Operator rollback has failed |Perform snapshot-based recovery.
-|080 |Services upgrade has failed |Perform snapshot-based recovery.
-|081 |Services rollback has failed |Perform snapshot-based recovery.
-|082 |Deleting old images from container failed |Perform snapshot-based recovery.
-|083 |Deleting backup has failed |Perform snapshot-based recovery.
-|084 |Changing JobManager back to Production failed |Perform snapshot-based recovery.
-|085 |failed creating CA certificate secrets |Perform snapshot-based recovery.
-|086 |failed creating server/private-key certificate secrets |Perform snapshot-based recovery.
-|087 |Failed! to complete post 10.0 to 10.1 upgrade steps |Post upgrade steps failed. 
-|088 |Configuring log rotate for journald has failed |Retry the upgrade.
+|076 |Registry upgrade has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|077 |Registry rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|078 |Operator upgrade has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|079 |Operator rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|080 |Services upgrade has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|081 |Services rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|082 |Deleting old images from container failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|083 |Deleting backup has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|084 |Changing JobManager back to Production failed |Follow the below steps to recover/complete the upgrade.
+
+1. Enable Diagnostic Shell
+
+2. Run the command: _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_
+
+3. Check the logs at /var/log/post-deploy-upgrade.log
+
+|087 |Post upgrade steps failed. |Perform the following steps to recover/complete the upgrade.
+
+1. Enable Diagnostic Shell
+
+2. Run _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ command
+
+3. Check the logs at /var/log/post-deploy-upgrade.log
+|088 |Configuring log rotate for journald has failed |Check the VM network settings compatible with the host on which VM is hosted.
+You can try to migrate the VM to another host and restart.
 |089 |Changing ownership of summary log rotate config file has failed |Retry the upgrade.
-|091 |iSCSI upgrade has failed |Retry the upgrade.
-|092 |iSCSI rollback has failed |Retry the upgrade.
-|093 |trident upgrade has failed |Retry the upgrade.
-|094 |trident rollback has failed |Retry the upgrade.
-|095 |Debian Upgrade failed |No recovery for debian upgrade. Services are upgraded and new pods will be running
+|093 |Dynamic storage provisioner upgrade has failed |Retry the upgrade.
+|094 |Dynamic storage provisioner rollback has failed |Retry the upgrade.
+|095 |OS upgrade failed |No recovery for OS upgrade. ONTAP tools services are upgraded and new pods will be running.
+|096 |Install dynamic storage provisioner |Check the upgrade logs and retry upgrade.
+|097 |Uninstalling services for upgrade has failed |Use zero RPO or snapshot based recovery and retry upgrade. 
+|098 |copying dockercred secret from ntv-system to dynamic storage provisioner namespace has failed |Check the upgrade logs and retry upgrade.
+|099 |Failed to validate the new HDD addition |Add the new HDD to all the nodes in case of HA and to one node in case of non-HA deployment.
+|108 | Seeding script failed |-
+|109 |backing up persistent volume data has failed |Check the upgrade logs and retry upgrade.
+|110 |restoring persistent volume data has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|111 |Updating etcd timeout parameters for RKE2 has failed |Check the upgrade logs and retry upgrade.
+|112 |Uninstall dynamic storage provisioner has failed |-
+|113 |Refresh resources on secondary nodes has failed |Check the upgrade logs and retry upgrade.
+
 |===
+
+[NOTE]
+ONTAP tools for VMware vSphere 10.3 does on support zero RPO.
+
 Learn more about https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1[How to restore ONTAP tools for VMware vSphere if upgrade fails from version 10.0 to 10.1]
