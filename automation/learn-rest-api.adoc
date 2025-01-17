@@ -1,0 +1,63 @@
+---
+sidebar: sidebar
+permalink: automation/learn-rest-api.html
+keywords: ontap tools vmware vsphere rest api
+summary: "ONTAP tools for VMware vSphere 10 is a set of tools for virtual machine lifecycle management. It includes a robust REST API you can use as part of your automation processes."
+---
+
+= Learn about the ONTAP tools for VMware vSphere 10 REST API
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+ONTAP tools for VMware vSphere 10 is a set of tools for virtual machine lifecycle management. It includes a robust REST API you can use as part of your automation processes.
+
+== REST web services foundation
+
+Representational State Transfer (REST) is a style for creating distributed web applications including the design of web services APIs. It establishes a set of technologies for exposing server-based resources and managing their states.
+
+.Resources and state representation
+
+Resources are the foundational components of a REST web services application. There are two important initial tasks when designing a REST API:
+
+* Identify the system or server-based resources
+* Define the resource states and associated state transition operations
+
+Client applications can display and change the resource states through well-defined message flows.
+
+.HTTP messages
+
+Hypertext Transfer Protocol (HTTP) is the protocol used by the web services client and server to exchange messages about the resources. It follows the CRUD model based on the generic operations create, read, update, and delete. The HTTP protocol includes request and response headers as well as response status codes.
+
+.JSON data formatting
+
+While there are several message formats available, the most popular option is JavaScript Object Notation (JSON). JSON is an industry standard for representing simple data structures in plain text and is used to transfer state information describing the resources and desired actions.
+
+.Security
+
+Security is an important aspect of a REST API. In addition to the Transport Layer Security (TLS) protocol used to protect the HTTP traffic over the network, the ONTAP tools for VMware vSphere 10 REST API also uses access tokens for authentication. You need to acquire an access token and use it on subsequent API calls.
+
+.Support for asynchronous requests
+
+The ONTAP tools for VMware vSphere 10 REST API performs most requests synchronously, returning a status code when the operation is complete. It also supports asynchronous processing for tasks that require a longer time to complete.
+
+== ONTAP tools Manager environment
+
+There are several aspects of the ONTAP tools Manager environment you should consider.
+
+.Virtual machine
+
+ONTAP tools for VMware vSphere 10 is deployed using the vSphere remote plugin architecture. The software, including support for the REST API, runs in a separate virtual machine.
+
+.ONTAP tools IP address
+
+ONTAP tools for VMware vSphere 10 exposes a single IP address which provides a gateway to the capabilities of the virtual machine. You need to provide the address during initial configuration and it's assigned to an internal load balancer component. The address is used by the ONTAP tools Manager user interface as well as to access the Swagger documentation page and REST API directly.
+
+.Two REST APIs
+
+In addition to the ONTAP tools for VMware vSphere 10 REST API, the ONTAP cluster has its own REST API. ONTAP tools Manager uses the ONTAP REST API as a client to perform storage related tasks. It's important to keep in mind these two APIs are separate and distinct. See the https://docs.netapp.com/us-en/ontap-automation/[ONTAP automation^] documentation for more information about the ONTAP REST API.
+
+// January 16 2025 - OTVDOC-179
