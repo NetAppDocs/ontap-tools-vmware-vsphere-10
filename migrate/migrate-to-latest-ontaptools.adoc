@@ -229,6 +229,6 @@ Under *VM storage policy compliance* you can see the status of the compliance. I
 . Select the Storage VM policy and the corresponding VM
 . Select *Apply*
 +
-When you check the compliance status under *VM storage policy compliance* now shows as compliant.  
+The compliance status under *VM storage policy compliance* now shows as compliant.  
 
 // updated for OTVDOC-192
