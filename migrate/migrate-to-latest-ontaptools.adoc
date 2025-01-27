@@ -220,3 +220,15 @@ After successful migration and after you register ONTAP tools 10.3 to the vCente
 *After you finish*
 
 After you migrate from old releases of ONTAP tools for VMware vSphere to 10.3 release, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
+
+After the upgrade if the virtual machine compliance state is out of date, reapply the virtual machine storage policy using the following steps:
+
+. Navigate to the datastore and select *Summary* > *VM Storage policies*.
++
+Under *VM storage policy compliance* you can see the status of the compliance. It shows as *Out of date*
+. Select the Storage VM policy and the corresponding VM
+. Select *Apply*
++
+The compliance status under *VM storage policy compliance* now shows as compliant.  
+
+// updated for OTVDOC-192
