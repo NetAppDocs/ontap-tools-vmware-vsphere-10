@@ -9,30 +9,30 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 :imagesdir: ../media/
 
 [.lead]
-When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.
+When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from the existing Derby database and imported into the MongoDB database.
 
 [NOTE]
-It is recommended to migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA Provider feature alone.
+You should migrate ONTAP tools for VMware vSphere 9.xx setup only if the setup is servicing the VASA Provider feature alone.
 
 [NOTE]
-After migrating from ONTAP tools for VMware vSpher 9.x to 10.3, vVols datastores with the NVMe/FC protocol do not work because ONTAP tools 10.3 only supports NVMe-oF with VMFS datastores.
+After migrating from ONTAP tools for VMware vSphere 9.x to 10.3, vVols datastores with the NVMe/FC protocol do not work because ONTAP tools 10.3 only supports NVMe-oF with VMFS datastores.
 
 //updated for 10.3 jira OTVDOC-147
 
 *About this task*
 
-Migration is supported from ONTAP tools for VMware vSphere 9.12D1 and 9.13D2 releases to 10.3 release. 
+You can migrate from ONTAP tools for VMware vSphere 9.12D1 and 9.13D2 releases to 10.3. 
 
 //updated for OTVDOC-175 - jani
 [NOTE]
-As an existing user, you need to take the OVA backup from your current release before upgrading to the patch releases. 
+You must take the OVA backup from your current release before upgrading to the patch releases. 
 
 == Common migration steps
 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.3 release. 
-. Add the vCenter Server instance that you want to migrate to ONTAP tools for VMware vSphere 10.3 release. See link:../configure/add-vcenter.html[Add vCenter Server instances]
+. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.3 release. See link:../configure/add-vcenter.html[Add vCenter Server instances]
 . Onboard storage backend locally from the ONTAP tools for VMware vSphere plug-in vCenter server APIs. Add storage as a locally scoped storage for migration.
-. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xx is visible in ONTAP tools for VMware vSphere 10.3 only after the datastore discovery job is triggered, which might take up to 30 minutes to trigger. Verify if the datastores are visible in the Overview page of the ONTAP tools for VMware vSphere Plugin UI page.  
+. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xx is visible in ONTAP tools for VMware vSphere 10.3 only after the datastore discovery job is triggered, which might take up to 30 minutes to trigger. Verify if the datastores are visible on the Overview page of the ONTAP tools for the VMware vSphere Plugin UI page.  
 
 // updated as per doc_feedback - jani
 
@@ -40,32 +40,32 @@ As an existing user, you need to take the OVA backup from your current release b
 
 *Before you begin*
 
-Before migrating, ensure that one of the sites is in a protected state and the other is in recovery state. 
+
+Before migrating, ensure that one of the sites is in a protected state and the other is in a recovery state.
 
 [NOTE]
-Do not migrate if the failover just completed and re-protect is pending. Complete the re-protect and then perform the migration.
-Same applies to testing the recovery plan. Once the testing of recovery plan is complete, cleanup the test recovery and then start the migration.
+Do not migrate if the failover has just been completed and re-protection is pending. Complete the re-protection and then Perform the migration. After completing the recovery plan testing, clean up the test recovery and start the migration.
 
 . Perform the following steps to delete ONTAP tools for VMware vSphere 9.xx release SRA adapter in VMware Live Site Recovery UI:
 .. Go to VMware Live Site Recovery Configuration management page
-.. Go to Storage Replication Adapter section 
-.. Click on ellipsis  menu, and click on *Reset configuration*
-.. Click on ellipsis  menu and select *Delete*
+.. Go to the *Storage Replication Adapter* section 
+.. Click on the ellipsis menu and select *Reset configuration*
+.. Click on the ellipsis menu and select *Delete*
 +
 Perform these steps on both protection and recovery sites.
 . Install ONTAP tools for VMware vSphere 10.3 SRA adapter on both protection and recovery sites using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on VMware Live Site Recovery appliance]
-. In the VMware Live Site Recovery UI page, perform *Discover Arrays* and *Discover Devices* operations and verify that the devices are showing up as it was before the migration. 
+. On the VMware Live Site Recovery UI page, perform *Discover Arrays* and *Discover Devices* operations and verify that the devices are showing as they were before the migration.
 
 == VASA Provider migration steps
 
-. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere. To enable the port, log in to CLI with root user and run the following command:
+. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere. To enable the port, log in to CLI with the root user and run the following command:
 +
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 
-. Deploy OVA for ONTAP tools for VMware vSphere 10.3 release.
-. Add the vCenter Server instance that you want to migrate to ONTAP tools for VMware vSphere 10.3 release. See link:../configure/add-vcenter.html[Add a vCenter Server instance]. 
+. Deploy OVA for ONTAP tools for VMware vSphere 10.3.
+. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.3 release. See link:../configure/add-vcenter.html[Add a vCenter Server instance]. 
 . Onboard storage backend locally from the remote plug-in vCenter server APIs. Add storage as local scoped for migration.
 . Issue the following API call to migrate:
 +
@@ -129,15 +129,15 @@ A job object is returned. You should save the job identifier to use it in the ne
 ----
 https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
-Once the job is completed, validate the migration report. You can see the report from the job-response as part of the jobData.
+Once the job is completed, validate the migration report. The report is part of the job data and can be seen from the job response.
 . Add ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider with a vCenter Server instance].
-. Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from maintenance console.
+. Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from the maintenance console.
 +
 [Note] 
 Do not delete the VASA Provider.
 +
-Once the old VASA Provider is stopped, vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
-. Perform the patch migrate using the following API:
+Once the old VASA Provider is stopped, the vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
+. Perform the patch migration using the following API:
 +
 ====
 
@@ -180,12 +180,12 @@ A job object is returned. You should save the job identifier to use it in the ne
 }
 // URI <https://10.60.24.125:8443/virtualization/api/v1/migration/migrate>
 
-Request body is empty for patch operation.
+The request body is empty for patch operation.
 
 [NOTE]
 uuid is the migration uuid returned in the response of post migrate API.
 
-Once the patch migrate API is successful, all the VMs will be compliant with the storage policy.
+Once the patch migration API is run successfully, all the VMs comply with the storage policy.
 
 ====
 
@@ -208,27 +208,27 @@ Asynchronous
 
 /api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
 
-This API deletes migration by Migration Id and deletes migration on the given vCenter Server.
+This API deletes migration by migration ID and deletes migration on the given vCenter Server.
 
 ====
 
 After successful migration and after you register ONTAP tools 10.3 to the vCenter Server, do the following:
 
 * Refresh the certificate on all the hosts.
-* Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs that are present in the setup. When you don't wait, the operations may fail intermittently.
+* Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs in the setup. When you don't wait, the operations may fail intermittently.
 
 *After you finish*
 
-After you migrate from old releases of ONTAP tools for VMware vSphere to 10.3 release, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
+After you migrate from old releases of ONTAP tools for VMware vSphere to 10.3, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
 
-After the upgrade if the virtual machine compliance state is out of date, reapply the virtual machine storage policy using the following steps:
+After the upgrade, if the virtual machine compliance state is out of date, reapply the virtual machine storage policy using the following steps:
 
 . Navigate to the datastore and select *Summary* > *VM Storage policies*.
 +
-Under *VM storage policy compliance* you can see the status of the compliance. It shows as *Out of date*
+Under *VM storage policy compliance*, you can see the compliance status. It shows as *Out-of-date*
 . Select the Storage VM policy and the corresponding VM
 . Select *Apply*
 +
-The compliance status under *VM storage policy compliance* now shows as compliant.  
+The compliance status under *VM storage policy compliance* is now shown as compliant.
 
 // updated for OTVDOC-192
