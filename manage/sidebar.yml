@@ -73,8 +73,6 @@ entries:
         url: /manage/reset-app-password.html
       - title: Reset maintenance console user password
         url: /manage/reset-maint-password.html
-  - title: Clean up volumes
-    url: /manage/delete-deployment.html
   - title: Manage host cluster protection
     entries:
       - title: Modify host cluster protection
@@ -83,4 +81,6 @@ entries:
         url: /manage/delete-hostcluster-protection.html
   - title: Near zero-RPO
     url: /manage/enable-backup.html
+  - title: Clean up volumes
+    url: /manage/delete-deployment.html
 
