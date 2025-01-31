@@ -156,6 +156,7 @@ After upgrading to ONTAP tools for VMware vSphere 10.3, you can:
 *After you finish*
 
 After you upgrade from previous releases of ONTAP tools for VMware vSphere to 10.3, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
+// OTVDOC-167 - updated by jani
 
 After you upgrade successfully, delete the Trident volumes from ONTAP manually using the following procedure:
 
