@@ -31,7 +31,7 @@ For example, in a multi-tenant setup, you can add a storage backend (cluster) gl
 
 *Steps*
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalanceIP:8443/virtualization/ui/` 
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Select *Add*. 

@@ -22,8 +22,6 @@ Ensure the following prerequisites are met:
 * FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing consistency group (CG).
 * FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing SnapMirror relationship.
 * The host cluster should have at least one datastore.
-* SnapMirror schedules and policies should exist on the source and destination ONTAP clusters.
-// OTVDOC-186 - updated by Jani
 
 .Steps
 

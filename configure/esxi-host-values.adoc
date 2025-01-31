@@ -16,21 +16,39 @@ You can set the following values on an ESXi host:
 == HBA/CNA Adapter Settings
 Sets the recommended HBA timeout settings for NetApp storage systems.
 
-* *Disk.QFullSampleSize*
-+
-Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
+|===
+|Parameters |Set this value to...
 
-* *Disk.QFullThreshold*
-+
-Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.
+|Disk.QFullSampleSize
+|32 for all configurations. Setting this value helps to prevent I/O errors.
 
-* *Emulex FC HBA timeouts*
-+
-Use the default value.
+|Disk.QFullThreshold
+|8 for all configurations. Setting this value helps prevent I/O errors.
 
-* *QLogic FC HBA timeouts*
-+
-Use the default value.
+|Emulex FC HBA timeouts
+|Default value.
+
+|QLogic FC HBA timeouts
+|Default value.
+
+|===
+
+
+//* *Disk.QFullSampleSize*
+//+
+//Set this value to 32 for all configurations. Setting this value helps to prevent I/O errors.
+
+//* *Disk.QFullThreshold*
+//+
+//Set this value to 8 for all configurations. Setting this value helps prevent I/O errors.
+
+//* *Emulex FC HBA timeouts*
+//+
+//Use the default value.
+
+//* *QLogic FC HBA timeouts*
+//+
+//Use the default value.
 
 == MPIO Settings
 
@@ -39,28 +57,28 @@ MPIO settings define preferred paths for NetApp storage systems. The MPIO settin
 In high-performance environments, or when you are testing performance with a single LUN datastore, consider changing the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) from the default IOPS setting of 1000 to a value of 1.
 
 == NFS settings
+|===
+|Parameter |Set this value to...
+|Net.TcpipHeapSize
+|32
+|Net.TcpipHeapMax
+|1024MB
+|NFS.MaxVolumes
+|256
 
-* *Net.TcpipHeapSize*
-+
-Set this value to 32.
-* *Net.TcpipHeapMax*
-+
-Set this value to 1024MB.
-* *NFS.MaxVolumes*
-+
-Set this value to 256.
-* *NFS41.MaxVolumes*
-+
-Set this value to 256.
-* *NFS.MaxQueueDepth*
-+
-Set this value to 128 or higher to avoid queuing bottlenecks.
-* *NFS.HeartbeatMaxFailures*
-+
-Set this value to 10 for all NFS configurations.
-* *NFS.HeartbeatFrequency*
-+
-Set this value to 12 for all NFS configurations.
-* *NFS.HeartbeatTimeout*
-+
-Set this value to 5 for all NFS configurations.
+|NFS41.MaxVolumes
+|256
+
+|NFS.MaxQueueDepth
+|128 or higher
+
+|NFS.HeartbeatMaxFailures
+|10
+
+|NFS.HeartbeatFrequency
+|12
+
+|NFS.HeartbeatTimeout
+|5
+
+|===
