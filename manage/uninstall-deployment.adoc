@@ -1,0 +1,32 @@
+---
+permalink: manage/uninstall-deployment.html
+sidebar: sidebar
+keywords: ONTAP tools,Storage Replication Adapter
+summary: 'Follow the instructions in this section to gracefully terminate your ONTAP tools for VMware vSphere deployment.'
+---
+= Terminate ONTAP tools deployment
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Follow the instructions in this section to gracefully terminate your ONTAP tools for VMware vSphere deployment.
+
+[NOTE]
+Terminating ONTAP tools for VMware vSphere will delete all the data in the tool.
+
+.Steps
+
+. Delete all the virtual machines created on ONTAP tools for VMware vSphere. Refer to https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-27E53D26-F13F-4F94-8866-9C6CFA40471C.html[Remove VMs or VM Templates from vCenter Server or from the Datastore]
+. link:../manage/delete-ds.html[Delete datastores] created on ONTAP tools for VMware vSphere.
+. Unregister the VASA providers from all the vCenter servers using the following steps: 
+.. In the ONTAP tools, select *Settings* > *VASA Provider settings* > *Unregister* option at the bottom of the screen.
+.. In the *Unregister VASA provider* page, provide the application user credentials and select *Unregister*.
+. Disassociate all Storage backends from vCenter Server instance from the ONTAP tools Manager interface. Refer to link:../manage/manage-vcenter.html[Associate or dissociate storage backends with vCenter Server instance].
+. Delete all storage backends. Refer to link:../manage/storage-backend.html[Manage storage backends].
+. Remove SRA adapter from VMware Live Site Recovery:
+.. Log in to the VMware Live Site Recovery appliance management interface using `https://:5480` as admin.
+.. In the VMware Live Site Recovery appliance management interface, select *Storage Replication Adapters*.
+.. Select the appropriate SRA card, and from the drop-down menu, select *Delete*.
+.. Confirm that you are aware of the results of deleting the adapter and select *Delete*.
+. Delete all the vCenter server instances onboarded to ONTAP tools for VMware vSphere. Refer to link:../manage/manage-vcenter.html[Manage vCenter Server instances].
+. Power off the ONTAP tools for VMware vSphere VMs from the vCenter server and delete the VMs. 

@@ -19,7 +19,6 @@ You should verify that the protected site and recovery site are successfully pai
 * You should have the same SnapMirror policies and schedules on source and destination sites.
 // updated for OTVDOC-186 - Jani
 
-
 *Steps*
 
 . Log in to your vCenter Server.
