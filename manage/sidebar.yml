@@ -81,6 +81,8 @@ entries:
         url: /manage/delete-hostcluster-protection.html
   - title: Near zero-RPO
     url: /manage/enable-backup.html
+  - title: Terminate ONTAP tools deployment
+    url: /manage/uninstall-deployment.html
   - title: Clean up volumes
     url: /manage/delete-deployment.html
 
