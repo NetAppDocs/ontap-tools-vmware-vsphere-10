@@ -31,7 +31,7 @@ The dashboard has several cards showing different elements of the system. The fo
 
 Storage backends status shows *Healthy* when all the storage backends status is normal and it shows *Unhealthy* if any one of the storage backends has an issue (Unknown/Unreachable/Degraded status). 
 
-Select the tool tip to open the status details of the storage backends. You can click on any storage backend for more details. *Other VASA Provider states* link shows the current state of the VASA Provider that is registered in the vCenter Server.
+Select the tool tip to open the status details of the storage backends. You can select any storage backend for more details. *Other VASA Provider states* link shows the current state of the VASA Provider that is registered in the vCenter Server.
 
 |Storage Backends - Capacity
 |This card shows the aggregated used and available capacity of all storage backends for the selected vCenter Server instance.
@@ -40,12 +40,12 @@ In case of ASA r2 storage systems, the capacity data is not shown as it is a dis
 
 // 10.3 updates for ASA r2
 |Virtual machines
-|This card shows the top 10 VMs sorted by performance metric. You can click on the header to get the top 10 VMs for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache.
+|This card shows the top 10 VMs sorted by performance metric. You can select the header to get the top 10 VMs for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache.
 
 |Datastores
 |This card shows the top 10 datastores sorted by a performance metric.
-You can click on the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a Datastore type drop-down to select the type of the datastores - NFS, VMFS, or vVols.
+You can select the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a Datastore type drop-down to select the type of the datastores - NFS, VMFS, or vVols.
 |ESXi Host compliance card
 |This card shows overall compliance status of all ESXi hosts (for the selected vCenter) settings with respect to the recommended NetApp host settings by settings group/category.
-You can click on *Apply Recommended Settings* link to apply the recommended settings. You can click on the compliant status of the hosts to see the list of hosts.
+You can select *Apply Recommended Settings* link to apply the recommended settings. You can select the compliant status of the hosts to see the list of hosts.
 |===

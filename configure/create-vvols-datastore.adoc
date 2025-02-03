@@ -39,7 +39,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 
 .Steps
-. Log in to the vSphere client using `\https://vcenterip/ui`
+. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select vVols in *Datastore Type*.
 . In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
@@ -50,7 +50,7 @@ ASA r2 storage type supports only iSCSI and FC protocol for vVols.
 In ASA r2 storage type SVM, storage units(LUN/namespace) are not created as datastore is only a logical container.
 //10.3 update for ASA r2
 . In the *Storage attributes* pane, you can either create new volumes or use the existing volumes. When creating new volume, you can enable QoS on the datastore. This step is not applicable for vVols datastores using ASA r2 type of ONTAP storage as vVol datastore does not have backing volumes. There would be one volume created on every LUN create request by default.
-. Review your selection in the *Summary* pane and click *Finish*.
+. Review your selection in the *Summary* pane and select *Finish*.
 The vVols Datastore is created and mounted on all the hosts.
 
 --
@@ -62,7 +62,7 @@ The vVols Datastore is created and mounted on all the hosts.
 A VMware Network File System (NFS) datastore uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
 
 .Steps
-. Log in to the vSphere client using `\https://vcenterip/ui`
+. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . Right-click a Host System or a Host Cluster or a Datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select NFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
@@ -73,7 +73,7 @@ Kerberos Authentication is available only when the NFS 4.1 protocol is selected.
 * *Asymmetric* toggle button is visible only if performance or capacity is selected in the platform drop-down.
 * *Any* option in the platform dropdown enables you to see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag. 
 . In the *Storage Attributes* pane, select the aggregate for creation of volume. In the advanced options choose *Space Reserve* and *Enable QoS* as required.
-. Review the selections in the *Summary* pane and click *Finish*.
+. Review the selections in the *Summary* pane and select *Finish*.
 
 The NFS datastore is created and mounted on all the hosts.
 
@@ -115,7 +115,7 @@ For more information on using NVMe/FC protocol with VMware vSphere 8.0, refer to
 For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[ONTAP NVMe/FC Host Configuration guide] and http://www.netapp.com/us/media/tr-4684.pdf[TR-4684].
 
 .Steps
-. Log in to the vSphere client using `\https://vcenterip/ui`
+. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . Right-click a Host System or a Host Cluster or a Datastore and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select VMFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. 
@@ -137,7 +137,7 @@ In ASA r2 storage type, the volume creation or selection is not applicable for s
 [NOTE]
 For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
 
-. Review the datastore details in the *Summary* pane and click *Finish*.
+. Review the datastore details in the *Summary* pane and select *Finish*.
 
 [NOTE]
 If you're creating the datastore on a protected cluster, you can see a readonly message "The datastore is being mounted on a protected Cluster."

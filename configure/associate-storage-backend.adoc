@@ -20,6 +20,6 @@ This task helps you to create mapping between storage backend and the onboarded 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select vCenter from the sidebar.
-. Click on the vertical ellipses against the vCenter that you want to associate with the storage backends.
+. Select the vertical ellipses against the vCenter that you want to associate with the storage backends.
 . Select storage backend from the dropdown in the pop up.
 . Select *Associate Storage Backend* option to associate the vCenter Server instance with the required storage backend.

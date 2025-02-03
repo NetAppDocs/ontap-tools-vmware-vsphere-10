@@ -21,13 +21,13 @@ You should pair the protected and recovery sites created using your vSphere Clie
 
 *Steps*
 
-. Double-click *Site Recovery* on the vSphere Client home page and click *Sites*.
+. Double-click *Site Recovery* on the vSphere Client home page and select *Sites*.
 . Click *Objects* > *Actions* > *Pair Sites*.
-. In the *Pair Site Recovery Manager Servers* dialog box, enter the address of the protected site's Platform Services Controller, and then click *Next*.
+. In the *Pair Site Recovery Manager Servers* dialog box, enter the address of the protected site's Platform Services Controller, and then select *Next*.
 . In the Select vCenter Server section, do the following:
  .. Verify that the protected site's vCenter Server appears as a matching candidate to pair.
- .. Enter the SSO administrative credentials, and then click *Finish*.
-. If prompted, click *Yes* to accept the security certificates.
+ .. Enter the SSO administrative credentials, and then select *Finish*.
+. If prompted, select *Yes* to accept the security certificates.
 
 *Result*
 

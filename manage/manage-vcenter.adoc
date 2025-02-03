@@ -21,7 +21,7 @@ This task helps you to create mapping between storage backend and onboarded vCen
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the required vCenter Server instance from the sidebar.
-. Click on the vertical ellipses against the vCenter Server that you want to associate or dissociate with storage backends.
+. Select the vertical ellipses against the vCenter Server that you want to associate or dissociate with storage backends.
 . Select *Associate or Dissociate storage backend* depending on what action you want to perform.
 
 == Modify a vCenter Server instance
@@ -30,7 +30,7 @@ Follow the steps below to modify a vCenter Server instances.
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the applicable vCenter Server instance from the sidebar
-. Click on the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
+. Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
 . Modify the vCenter Server instance details and select *Modify*.
 
 == Remove a vCenter Server instance
@@ -39,7 +39,7 @@ You need to remove all the storage backends attached to the vCenter Server befor
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the applicable vCenter Server instances from the sidebar
-. Click on the vertical ellipses against the vCenter Server that you want remove and select *Remove*.
+. Select the vertical ellipses against the vCenter Server that you want remove and select *Remove*.
 +
 [NOTE]
 Once you remove vCenter Server instances, they will no longer be maintained by the application.

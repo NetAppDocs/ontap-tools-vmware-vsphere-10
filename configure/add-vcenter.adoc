@@ -2,32 +2,28 @@
 permalink: configure/add-vcenter.html
 sidebar: sidebar
 keywords:
-summary: 'vCenter Server instances are the central management platforms that allow you to control hosts, virtual machines (VM), and storage backends.'
+summary: 'Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment.'
 ---
 = Add vCenter Server instances
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-vCenter Server provides the central management platform that allows you to control hosts, virtual machines (VMs), and storage backends.
+Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment.
 
 *About this task*
 
-You can add and manage multiple vCenter Server instances with one instance of ONTAP tools for VMware vSphere.
+By integrating with vCenter, ONTAP tools enables you to perform storage tasks like provisioning, snapshots, and data protection directly from the vSphere client, eliminating the need to switch to separate storage management consoles. 
 
 *Steps*
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
+. Open a web browser and navigate to the URL: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select *vCenters* from the sidebar.
-. Select *Add* to onboard vCenter Server instances and provide your vCenter IP address/hostname, username, password, and port details. 
+. Select *vCenters* > *Add* to onboard the vCenter Server instances. Provide your vCenter IP address or hostname, username, password, and port details.
 
-When you add a vCenter Server instance to ONTAP tools, the following actions are performed automatically:
+Adding a vCenter Server instance to ONTAP tools automatically triggers the following actions:
 
-* The vCenter Client Plug-in is registered
-* Custom privileges for the plug-ins and APIs are pushed to the vCenter Server instance
+* The vCenter client plug-in is registered as a remote plug-in.
+* Custom privileges for the plug-ins and APIs are applied to the vCenter Server instance.
 * Custom roles are created to manage the users.
-
-When you add a vCenter Server instance, ONTAP tools for VMware vSphere plug-in is registered automatically to vCenter Server as a remote plug-in. The plug-in is visible on the vSphere user interface shortcuts.
- 
-The plug-in is registered with a key _com.netapp.otv_ to the vCenter Server instance and can be seen in the ExtensionManager of the vCenter Server instance.
+* The plug-in appears as a shortcut on the vSphere user interface.

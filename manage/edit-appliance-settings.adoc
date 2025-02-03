@@ -23,7 +23,7 @@ Ensure that the OVA template you provide has the same OVA version as the first n
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
-. Click on the *Edit Appliance Settings* in the overview section.
+. Select the *Edit Appliance Settings* in the overview section.
 . In the *Services* section, you can enable optional services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
 +
 When enabling the services for the first time, you need to create VASA Provider/SRA credentials. This is used to register or enable the VASA Provider/SRA services on the vCenter Server.
@@ -48,7 +48,7 @@ You are only allowed to scale up the ONTAP tools node size. You cannot scale dow
 Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the final page of the wizard. Only when the IPv6 address is enabled on the first node can you enter IPv6 details for the other two nodes. 
 +
 Ensure that an ESXi host contains only one ONTAP tools VM. The inputs are validated each time you move to the next window. 
-. In the *summary* section, review the details and click *Save* to apply the changes.
+. In the *summary* section, review the details and select *Save* to apply the changes.
 
 The *Overview* page shows the deployment's status. Using the job ID, you can also track the edit appliance settings job status from the jobs view.
 
