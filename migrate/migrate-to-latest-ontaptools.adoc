@@ -230,3 +230,7 @@ Under *VM storage policy compliance*, you can see the compliance status. It show
 The compliance status under *VM storage policy compliance* is now shown as compliant.
 
 // updated for OTVDOC-192
+*Related information*
+
+link:../upgrade/upgrade-ontap-tools.html[Upgrade from ONTAP tools for VMware vSphere 10.x to 10.3]
+// OTVDOC-164 - jani
