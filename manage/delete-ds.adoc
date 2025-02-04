@@ -24,7 +24,7 @@ Follow the steps below to delete NFS, VMFS, or vVOL datastore from ONTAP tools f
 
 .Steps
 
-. Log in to the vSphere client using `\https://vcenterip/ui`
+. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . Right-click a Host System or a Host Cluster or a Datastore and select *NetApp ONTAP tools* > *Delete datastore*.
 +
 [NOTE]

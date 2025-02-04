@@ -22,7 +22,7 @@ or refresh all certificates of VASA Provider and ONTAP tools.
 //10.3 update
 * Password management - Reset the user's OVA application password.
 
-To access ONTAP tools Manager, launch `\https://loadBalanceIP:8443/virtualization/ui/` from the browser and login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
+To access ONTAP tools Manager, launch `\https://loadBalancerIP:8443/virtualization/ui/` from the browser and login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 
 The ONTAP tools Manager overview section helps manage the appliance configuration, such as services management, node size upscaling, and High availability(HA) enablement. You can also monitor the overall information of ONTAP tools related to the node(s), such as health, network details, and alerts. 
 
@@ -32,11 +32,11 @@ image:../media/ontap-tools-manager-overview.png[ONTAP tools Manager dashboard ov
 |===
 |*Card* |*Description*
 
-|Appliance card |The appliance card provides the overall status of the ONTAP tools appliance. It shows the appliance configuration details and the status of the enabled services. For additional information about the ONTAP tools appliance, click the *View details* link. When an edit appliance setting action job is in progress, the appliance portlet shows the status and details of the job.
+|Appliance card |The appliance card provides the overall status of the ONTAP tools appliance. It shows the appliance configuration details and the status of the enabled services. For additional information about the ONTAP tools appliance, select the *View details* link. When an edit appliance setting action job is in progress, the appliance portlet shows the status and details of the job.
 
-|Alerts card |The Alerts card lists the ONTAP tools alerts by type, including the HA node-level alerts. You can view the list of alerts by clicking on the count text (hyperlink). The link routes you to the alerts view page filtered by the selected type.
+|Alerts card |The Alerts card lists the ONTAP tools alerts by type, including the HA node-level alerts. You can view the list of alerts by selecting on the count text (hyperlink). The link routes you to the alerts view page filtered by the selected type.
 
-|ONTAP tools nodes card |ONTAP tools nodes card shows the list of nodes with node name, node VM name, status, and all the network related data. You can click on *View details* to view the additional details related to the selected node. 
+|ONTAP tools nodes card |ONTAP tools nodes card shows the list of nodes with node name, node VM name, status, and all the network related data. You can select on *View details* to view the additional details related to the selected node. 
 
 [NOTE] In a non-HA setup, only one node is shown. In the HA setup, three nodes are shown.
 |===

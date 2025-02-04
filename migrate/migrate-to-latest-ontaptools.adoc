@@ -49,8 +49,8 @@ Do not migrate if the failover has just been completed and re-protection is pend
 . Perform the following steps to delete ONTAP tools for VMware vSphere 9.xx release SRA adapter in VMware Live Site Recovery UI:
 .. Go to VMware Live Site Recovery Configuration management page
 .. Go to the *Storage Replication Adapter* section 
-.. Click on the ellipsis menu and select *Reset configuration*
-.. Click on the ellipsis menu and select *Delete*
+.. Select the ellipsis menu and select *Reset configuration*
+.. Select the ellipsis menu and select *Delete*
 +
 Perform these steps on both protection and recovery sites.
 . Install ONTAP tools for VMware vSphere 10.3 SRA adapter on both protection and recovery sites using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on VMware Live Site Recovery appliance]
@@ -218,8 +218,6 @@ After successful migration and after you register ONTAP tools 10.3 to the vCente
 * Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs in the setup. When you don't wait, the operations may fail intermittently.
 
 *After you finish*
-
-After you migrate from old releases of ONTAP tools for VMware vSphere to 10.3, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
 
 After the upgrade, if the virtual machine compliance state is out of date, reapply the virtual machine storage policy using the following steps:
 
