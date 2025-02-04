@@ -163,7 +163,7 @@ Authentication of a client to the REST API is performed using an access token. T
 * Each token expires after 60 minutes.
 * API requests from a client must include the token in the `x-auth` request header.
 
-See link:../automation/first-call.html[Your first REST API call] for an example of requesting and using an access token.
+Refer to link:../automation/first-call.html[Your first REST API call] for an example of requesting and using an access token.
 
 == Synchronous and asynchronous requests
 

@@ -15,8 +15,8 @@ When you have multiple ESXi host IP addresses, all the discovered IP addresses f
 You can choose to allow a few specific ESXi host addresses for datastore mount operation. If the setting is not provided, the export policy adds all IP addresses discovered in the pre-mount step. If the setting is provided, ONTAP tools for VMware vSphere add only the ones which fall within the listed IP addresses or range. If none of the IP addresses of a host belong to the listed IP addresses, the mount on that host fails.
 
 .Steps
-. Log in to the vSphere client using `\https://vcenterip/ui`
-. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
+. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Settings* > *Manage Network Access* > *Edit*. 
 +
 Use a comma (,) to separate the IP addresses. You can specify a specific IP address, or a range of IP addresses or IPv6 addresses.

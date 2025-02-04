@@ -16,11 +16,11 @@ Shrink vVols datastore operation is not supported for ASA r2 based vVols datasto
 
 .Steps
 
-. From the vSphere Client home page, click *Hosts and Clusters*.
+. From the vSphere Client home page, select *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the datastore.
-. Right click on the vVol datastore and select *NetApp ONTAP tools* > *Remove storage from datastore*. 
-. Select volumes which do not have vVols and click *Remove*.
+. Right-click on the vVol datastore and select *NetApp ONTAP tools* > *Remove storage from datastore*. 
+. Select volumes which do not have vVols and select *Remove*.
 +
 [NOTE]
 The option to select the volume on which the vVols is residing is disabled.
-. In the *Remove storage* pop-up, select *Delete volumes from ONTAP cluster* checkbox to delete the volumes from datastore and from ONTAP storage and click *Delete*.
+. In the *Remove storage* pop-up, select *Delete volumes from ONTAP cluster* checkbox to delete the volumes from datastore and from ONTAP storage and select *Delete*.

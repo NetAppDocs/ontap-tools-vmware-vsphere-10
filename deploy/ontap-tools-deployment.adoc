@@ -27,7 +27,7 @@ If you do not already have a suitable content library, create one using the foll
 If you only intend to use a small single node deployment, you do not need to create a content library.
 
 . Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
-. Log in to the vSphere client using `\https://vcenterip/ui`
+. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . Select the horizontal ellipses next to vSphere client and select *Content library*.
 . Select *Create* on the right of the page.
 . Provide a name for the library and create the content library.
@@ -51,17 +51,17 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 . Right-click the required location and select *Deploy OVF template...*.
 [NOTE]
 Never store ONTAP tools for VMware vSphere virtual machines on vVols datastores that they manage.
-. Select the OVA file either through the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then click *Next*.
+. Select the OVA file either through the URL for the _.ova_ file or browse to the folder where the _.ova_ file is saved, and then select *Next*.
 . To deploy ONTAP tools for VMware vSphere from content library:
-.. Go to your content library and click on the library item that you want to deploy. 
-.. Click on *Actions* > *New VM from this template*
+.. Go to your content library and select the library item that you want to deploy. 
+.. Select *Actions* > *New VM from this template*
 . In the *Select a name and folder* for the virtual machine window, enter the virtual machine name and select the location for the virtual machine. If you check the checkbox that says *Customize this virtual machine's hardware*, a step called *Customize hardware* is enabled before you reach the *Ready to complete* window.
-. Select a computer resource and click *Next*. You can choose to check the checkbox to *Automatically power on deployed VM*.
-. Review the details of the template and click *Next*.
-. Read and accept the license agreement and click *Next*.
-. Select the storage for the configuration and the disk files and click *Next*.
-. Select the destination network for each source network and click *Next*.
-. In the *Customize template* window, fill in the required fields and click *Next*. 
+. Select a computer resource and select *Next*. You can choose to check the checkbox to *Automatically power on deployed VM*.
+. Review the details of the template and select *Next*.
+. Read and accept the license agreement and select *Next*.
+. Select the storage for the configuration and the disk files and select *Next*.
+. Select the destination network for each source network and select *Next*.
+. In the *Customize template* window, fill in the required fields and select *Next*. 
 [NOTE] 
 
 * The information provided here is validated for proper patterns during installation process. In case of discrepancy, an error message is displayed on the web console, and you are prompted to correct any incorrect information provided.

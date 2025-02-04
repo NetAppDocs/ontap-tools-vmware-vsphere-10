@@ -9,22 +9,25 @@ summary: 'ONTAP tools for VMware vSphere checks and sets the ESXi host multipath
 :imagesdir: ../media/
 
 [.lead]
+Configuring ESXi server multipath and timeout settings ensures high availability and data integrity by allowing to seamlessly switch to a backup storage path if a primary path fails. 
+
 ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings and HBA timeout settings that work best with NetApp storage systems.
+
 
 *About this task*
 
-This process might take a long time, depending on your configuration and system load. The task progress is displayed in the *Recent tasks* panel. As the tasks are completed, the host status alert icon is replaced by the normal icon or the pending reboot icon.
+Depending on your configuration and system load, this process might take a long time. The task progress is displayed in the Recent Tasks panel. 
 
 *Steps*
 
-. From the VMware vSphere Web client home page, click *Hosts and Clusters*.
+. From the VMware vSphere Web client home page, select *Hosts and Clusters*.
 . Right-click a host and select *NetApp ONTAP tools* > *Update host data*.
-. In the shortcuts page, click on *NetApp ONTAP tools* under the plug-ins section.
-. Go to *ESXi Host compliance* card in the overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
+. On the shortcuts page of the VMware vSphere Web client, select *NetApp ONTAP tools* under the plug-ins section.
+. Go to the *ESXi Host compliance* card in the overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
 . Select *Apply Recommended Settings* link.
-. In the *Apply recommended host settings* window, select the hosts that you want to comply with NetApp recommended host settings and click *Next*.
+. In the *Apply recommended host settings* window, select the hosts you want to update to comply with NetApp recommended settings and select *Next*.
++
 [NOTE]
 You can expand the ESXi host to see the current values.
 . In the settings page, select the recommended values as required.
-. In the summary pane, check the values and click *Finish*.
-You can track the progress in the recent task panel.
+. In the summary pane, check the values and select *Finish*. You can track the progress in the recent task panel.

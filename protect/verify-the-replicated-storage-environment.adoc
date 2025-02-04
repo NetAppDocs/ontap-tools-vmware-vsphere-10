@@ -11,11 +11,13 @@ summary: 'You should verify that the protected site and recovery site are succes
 [.lead]
 You should verify that the protected site and recovery site are successfully paired after configuring Storage Replication Adapter (SRA). The replicated storage system should be discoverable by both the protected site and the recovery site.
 
-*What you will need*
+*Before you begin*
 
 * You should have configured your storage system.
 * You should have paired the protected site and recovery site by using the VMware Live Site Recovery array manager.
 * You should have enabled FlexClone license and SnapMirror license before performing the test failover operation and failover operation for SRA.
+* You should have the same SnapMirror policies and schedules on source and destination sites.
+// updated for OTVDOC-186 - Jani
 
 *Steps*
 

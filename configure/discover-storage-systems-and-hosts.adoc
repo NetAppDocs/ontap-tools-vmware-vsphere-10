@@ -31,7 +31,7 @@ ONTAP tools for VMware vSphere displays a *Confirm* dialog box with the followin
 +
 "This action will restart the discovery of all connected storage systems and might take a few minutes. Do you want to continue?"
 . Click *Yes*.
-. Select the discovered storage controllers that have the status `Authentication Failure` and click *Actions* > *Modify*.
+. Select the discovered storage controllers that have the status `Authentication Failure` and select *Actions* > *Modify*.
 . Fill in the required information in the *Modify Storage System* dialog box.
 +
 . Repeat steps 4 and 5 for all storage controllers with `Authentication Failure` status.

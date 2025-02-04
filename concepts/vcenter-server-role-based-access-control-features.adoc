@@ -37,7 +37,7 @@ If you change the privileges within a role, the user associated with that role s
 
 To simplify working with vCenter Server privileges and RBAC, ONTAP tools for VMware vSphere provides standard ONTAP tools for VMware vSphere roles that enable you to perform key ONTAP tools for VMware vSphere tasks. There is also a read-only role that enables you to view the information, but not perform any tasks.
 
-You can view ONTAP tools for VMware vSphere standard roles by clicking *Roles* on the vSphere Client home page. The roles that ONTAP tools for VMware vSphere provides enable you to perform the following tasks:
+You can view ONTAP tools for VMware vSphere standard roles by selecting *Roles* on the vSphere Client home page. The roles that ONTAP tools for VMware vSphere provides enable you to perform the following tasks:
 
 |===
 | *Role* | *Description*
