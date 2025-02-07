@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can use the dashboard of ONTAP tools for VMware vSphere to edit your ESXi host settings.'
 ---
-= Modify ESXi host settings
+= Modify ESXi host settings using ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
@@ -27,3 +27,8 @@ You can expand the ESXi host to see the current values.
 . In the settings page, select the recommended values as required.
 . In the summary pane, check the values and select *Finish*.
 You can track the progress in the recent task panel.
+
+*Related information*
+
+link:../configure/esxi-host-values.html[Set ESXi host values]
+// updated for https://github.com/NetAppDocs/ontap-tools-vmware-vsphere-10/issues/45 - jani
