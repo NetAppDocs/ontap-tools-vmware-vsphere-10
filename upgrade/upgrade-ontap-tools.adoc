@@ -116,7 +116,7 @@ Run the following commands to take a backup of MongoDB:
 *Take the snapshot of ONTAP tools for VMware vSphere VMs in vCenter (3VMs in case of HA Deployment, 1 VM in case of non-HA deployment)*
 
 * In the vSphere client user interface, select the VM.
-* Go to the snapshots tab and select the *Take Snapshot* button. Take a quiesced snapshot of the VM. Refer to https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.vm_admin.doc/GUID-9720B104-9875-4C2C-A878-F1C351A4F3D8.html[Take a Snapshot of a Virtual Machine^] for more details.
+* Go to the snapshots tab and select the *Take Snapshot* button. Take a quiesced snapshot of the VM. Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html[Take a Snapshot of a Virtual Machine^] for details.
 
 Before performing the upgrade, delete the completed pods from the log bundle with the prefix “generate-support-bundle-job.” If support bundle generation is in progress, wait for it to complete and then delete the pod.
 

@@ -58,6 +58,6 @@ ONTAP tools for VMware vSphere 10 exposes a single IP address which provides a g
 
 .Two REST APIs
 
-In addition to the ONTAP tools for VMware vSphere 10 REST API, the ONTAP cluster has its own REST API. ONTAP tools Manager uses the ONTAP REST API as a client to perform storage related tasks. It's important to keep in mind these two APIs are separate and distinct. See the https://docs.netapp.com/us-en/ontap-automation/[ONTAP automation^] documentation for more information about the ONTAP REST API.
+In addition to the ONTAP tools for VMware vSphere 10 REST API, the ONTAP cluster has its own REST API. ONTAP tools Manager uses the ONTAP REST API as a client to perform storage related tasks. It's important to keep in mind these two APIs are separate and distinct. For more information, refer to https://docs.netapp.com/us-en/ontap-automation/[ONTAP automation^].
 
 // January 16 2025 - OTVDOC-179
