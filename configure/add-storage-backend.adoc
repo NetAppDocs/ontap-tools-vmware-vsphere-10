@@ -11,18 +11,12 @@ summary: 'Storage backends are systems that the ESXi hosts use for data storage.
 [.lead]
 
 Adding a storage backend enables you to onboard an ONTAP cluster.
-//Storage backends are systems that the ESXi hosts use for data storage. You can add a storage backend using either the ONTAP tools Manager or the vSphere client UI.
 
 *About this task*
 
 To add a storage backend to a globally scoped cluster in a multi-tenant architecture, add the storage backend using the ONTAP tools Manager. After adding the storage backend to the global cluster, you must associate the cluster with the desired vCenter tenants. The vCenter tenant must onboard the desired Storage Virtual Machines (SVMs). This enables an SVM user to provision vVols datastore. You can add storage in vCenter using the SVM.
 
-To add storage backend to a locally scoped cluster, add your ONTAP systems directly using the vCenter server interface.
-
-//This task helps you to onboard an ONTAP cluster. When you add storage backend using ONTAP tools Manager, the storage backend is added to the global cluster. Associate the global cluster with a vCenter Server instance to enable an SVM user for vVols datastore provisioning. You can only add storage in vCenter using the SVM.
-
-//[NOTE]
-//For multi-tenant workflows, you should add ONTAP clusters globally using the ONTAP tools Manager, and associate the clusters with the desired vCenter tenants. The vCenter tenant must then onboard the desired Storage Virtual Machines (SVMs). If you do not require multi-tenancy, then you should add your ONTAP systems directly using only the vCenter UI.
+To add storage backend to a locally scoped cluster, add your ONTAP systems directly using the ONTAP tools Plug-in on the vCenter server.
 
 [role="tabbed-block"]
 ====
@@ -33,10 +27,6 @@ To add storage backend to a locally scoped cluster, add your ONTAP systems direc
 [NOTE]
 In a multi-tenant setup, you can add a storage backend cluster globally and SVM locally to use SVM user credentials.
 
-//[NOTE]
-//A storage backend is global when added from ONTAP tools Manager or the ONTAP tools APIs. A storage backend is local when added from the vCenter Server APIs.
-//For example, in a multi-tenant setup, you can add a storage backend (cluster) globally and SVM locally to use SVM user credentials.
-
 *Steps*
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
@@ -44,7 +34,7 @@ In a multi-tenant setup, you can add a storage backend cluster globally and SVM 
 . Select *Storage Backends* from the sidebar.
 . Add the storage backend and provide the server IP address or FQDN, username, and password details.
 [NOTE]
-IPv4 and IPv6 address management LIFs are supported. SVM user-based credentials with management LIFs are also supported.
+IPv4 and IPv6 address management LIFs are supported.
 
 --
 
@@ -62,6 +52,7 @@ When you add a storage backend using the vSphere client UI, the vVols datastore 
 To add an SVM user directly, you can add cluster-based credentials and IPv4 and IPv6 address management LIFs or provide SVM-based credentials with an SVM management LIF.
 
 *What’s next*
+
 The list gets refreshed, and you can see the newly added storage backend in the list.
 
 --
