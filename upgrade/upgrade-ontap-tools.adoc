@@ -125,13 +125,13 @@ For any type of upgrade, you need to add an additional 100 GB hard Disk Drive (H
 . Select the VM in single node configuration or all three VMs in HA configuration.
 . Right-click on the VM(s) and select *Add New Device* > *Hard Disk*
 . Add a 100 GB HDD in the *New Hard disk* field.
-. Click *Apply*
+. Select *Apply*
 
 After adding the hard disk, update the VM's resources for the respective configurations and restart the primary VM.
 
 A new HDD will be created. Dynamic storage provisioner uses this HDD to generate or replicate the volumes.
 
-*Steps*
+.Steps
 
 . Upload ONTAP tools for VMware vSphere upgrade ISO to content library.
 . In the primary VM page, select *Actions* > *Edit Settings* 

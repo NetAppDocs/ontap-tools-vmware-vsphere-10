@@ -19,7 +19,7 @@ The ONTAP tools appliance is initially deployed in a single node non-HA configur
 Ensure that the OVA template you provide has the same OVA version as the first node.
 // https://jira.ngage.netapp.com/browse/OTVDOC-190 -  jani
 
-*Steps*
+.Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.

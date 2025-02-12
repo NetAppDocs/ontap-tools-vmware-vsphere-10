@@ -20,4 +20,4 @@ You can choose to allow a few specific ESXi host addresses for datastore mount o
 . In the left pane of ONTAP tools, navigate to *Settings* > *Manage Network Access* > *Edit*. 
 +
 Use a comma (,) to separate the IP addresses. You can specify a specific IP address, or a range of IP addresses or IPv6 addresses.
-. Click *Save*. 
+. Select *Save*. 

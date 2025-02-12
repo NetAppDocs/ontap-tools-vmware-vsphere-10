@@ -14,21 +14,21 @@ You should pair the protected and recovery sites created using your vSphere Clie
 // removed for 10.3 will be applicable for 10.4 [NOTE]
 // Storage Replication Adapter (SRA) supports fan-out with with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two async SnapMirror on consistency group or fan-out SnapMirrors on Volume is not supported. 
 
-*What you will need*
+.Before you begin
 
 * You should have VMware Live Site Recovery installed on the protected and recovery sites.
 * You should have SRA installed on the protected and recovery sites.
 
-*Steps*
+.Steps
 
 . Double-click *Site Recovery* on the vSphere Client home page and select *Sites*.
-. Click *Objects* > *Actions* > *Pair Sites*.
+. Select *Objects* > *Actions* > *Pair Sites*.
 . In the *Pair Site Recovery Manager Servers* dialog box, enter the address of the protected site's Platform Services Controller, and then select *Next*.
 . In the Select vCenter Server section, do the following:
  .. Verify that the protected site's vCenter Server appears as a matching candidate to pair.
  .. Enter the SSO administrative credentials, and then select *Finish*.
 . If prompted, select *Yes* to accept the security certificates.
 
-*Result*
+.Result
 
 Both the protected and recovery sites will appear in the Objects dialog box.

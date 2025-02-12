@@ -15,7 +15,7 @@ When you right-click on datastore object in the vCenter object view, ONTAP tools
 [NOTE]
 Expand vVols datastore operation is not applicable for ASA r2 based vVols datastore.
 
-*Steps*
+.Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the datastore.

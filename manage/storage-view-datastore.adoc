@@ -16,7 +16,7 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 .Steps
 
 . From the vSphere Client navigate to the NFS datastore.
-. Click the *Configure* tab in the right pane. 
+. Select the *Configure* tab in the right pane. 
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. The *Storage details* and *NFS details* appear on the right pane.
 +
 * The storage details page contains information about storage backends, aggregate, and volume.
@@ -26,7 +26,7 @@ ONTAP storage view under configure tab of ONTAP tools for VMware vSphere provide
 .Steps
 
 . From the vSphere Client navigate to the VMFS datastore.
-. Click the *Configure* tab in the right pane. 
+. Select the *Configure* tab in the right pane. 
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. The *Storage details* and *LUN details* or *Namespace details* depending on the protocol appear on the right pane.
 +
 * The storage details page contains information about storage backends, aggregate, and volume.
@@ -42,7 +42,7 @@ This view is not supported for ASA r2 based vVols datastore.
 .Steps
 
 . From the vSphere Client navigate to the vVols datastore.
-. Click the *Configure* tab in the right pane. 
+. Select the *Configure* tab in the right pane. 
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. 
 . The ONTAP storage view lists all the volumes. You can expand or remove storage from the ONTAP storage pane.
 +

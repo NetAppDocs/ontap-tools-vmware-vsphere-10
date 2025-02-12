@@ -11,7 +11,7 @@ summary: 'When you first run ONTAP tools for VMware vSphere in a vSphere Client,
 [.lead]
 When you first run ONTAP tools for VMware vSphere in a vSphere Client, ONTAP tools discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.
 
-*What you will need*
+.Before you begin
 
 * All the ESXi hosts should be powered on and connected.
 * All the storage virtual machines (SVMs) to be discovered should be running, and each cluster node should have at least one data LIF configured for the storage protocol in use (NFS or iSCSI).
@@ -22,15 +22,12 @@ You can discover new storage systems or update information about existing storag
 
 While discovering the storage systems, ONTAP tools for VMware vSphere collects information from the ESXi hosts that are managed by the vCenter Server instance.
 
-*Steps*
+.Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
 . Right-click the required datacenter and select *NetApp ONTAP tools* > *Update Host Data* .
 +
-ONTAP tools for VMware vSphere displays a *Confirm* dialog box with the following message: 
-+
-"This action will restart the discovery of all connected storage systems and might take a few minutes. Do you want to continue?"
-. Click *Yes*.
+In the *Confirm* dialog box, confirm your choice.
 . Select the discovered storage controllers that have the status `Authentication Failure` and select *Actions* > *Modify*.
 . Fill in the required information in the *Modify Storage System* dialog box.
 +

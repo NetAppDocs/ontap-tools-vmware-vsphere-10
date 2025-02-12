@@ -11,7 +11,7 @@ summary: 'You should create protection groups to protect a group of virtual mach
 [.lead]
 You should create protection groups to protect a group of virtual machines on the protected site.
 
-*What you will need*
+.Before you begin
 
 You should ensure that both the source and target sites are configured for the following:
 
@@ -20,7 +20,7 @@ You should ensure that both the source and target sites are configured for the f
 * Paired protected and recovery sites
 * Source and destination datastores should be mounted on respective sites
 
-*Steps*
+.Steps
 
 . Log in to vCenter Server and then select *Site Recovery* > *Protection Groups*.
 . In the *Protection Groups* pane, select *New*.

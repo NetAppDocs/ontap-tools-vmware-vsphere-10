@@ -21,7 +21,7 @@ You can create users at cluster or directly at storage virtual machines (SVMs) l
 
 * You should have logged in with administrator privileges for the storage backend.
 
-*Steps*
+.Steps
 
 . Extract the downloaded _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_ file.
 . Access ONTAP System Manager using the cluster management IP address of the cluster.

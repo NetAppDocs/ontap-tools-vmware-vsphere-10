@@ -15,7 +15,7 @@ Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, man
 
 By integrating with vCenter, ONTAP tools enables you to perform storage tasks like provisioning, snapshots, and data protection directly from the vSphere client, eliminating the need to switch to separate storage management consoles. 
 
-*Steps*
+.Steps
 
 . Open a web browser and navigate to the URL: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 

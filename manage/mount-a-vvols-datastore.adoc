@@ -11,7 +11,7 @@ summary: 'You can mount a VMware Virtual Volumes \(vVols\) datastore to one or m
 [.lead]
 You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts to provide storage access to additional hosts. You can unmount vVols datastore only through the APIs.
 
-*Steps*
+.Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the datastore.

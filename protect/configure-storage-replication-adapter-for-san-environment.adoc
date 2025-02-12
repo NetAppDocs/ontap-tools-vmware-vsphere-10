@@ -14,7 +14,7 @@ You should set up the storage systems before running Storage Replication Adapter
 
 == Configure SRA for SAN environments
 
-*What you will need*
+.Before you begin
 
 You should have the following programs installed on the protected site and the recovery site:
 
@@ -28,7 +28,7 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 +
 The adapter is installed on VMware Live Site Recovery.
 
-*Steps*
+.Steps
 
 . Verify that the primary ESXi hosts are connected to the LUNs in the primary storage system on the protected site.
 . Verify that the LUNS are in igroups that have the `ostype` option set to _VMware_ on the primary storage system.
@@ -39,7 +39,7 @@ Check the LUN access for the mapped LUNs in the ESXi host to verify iSCSI connec
 
 == Configure SRA for NAS environments
 
-*What you will need*
+.Before you begin
 
 You should have the following programs installed on the protected site and the recovery site:
 
@@ -53,7 +53,7 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 +
 The adapter is installed on VMware Live Site Recovery and the SRA server.
 
-*Steps*
+.Steps
 
 . Verify that the datastores at the protected site contain virtual machines that are registered with vCenter Server.
 . Verify that the ESXi hosts at the protected site have mounted the NFS exports volumes from the storage virtual machine (SVM).

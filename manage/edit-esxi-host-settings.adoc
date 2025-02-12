@@ -11,11 +11,11 @@ summary: 'You can use the dashboard of ONTAP tools for VMware vSphere to edit yo
 [.lead]
 You can use the dashboard of ONTAP tools for VMware vSphere to edit your ESXi host settings.
 
-*What you will need*
+.Before you begin
 
 If there is an issue with your ESXi host settings, the issue is displayed in the ESXi host systems portlet of the dashboard. You can select the issue to view the host name or the IP address of the ESXi host that has the issue.
 
-*Steps*
+.Steps
 
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.

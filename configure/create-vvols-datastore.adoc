@@ -63,7 +63,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 
 .Steps
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
-. Right-click a Host System or a Host Cluster or a Datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
+. Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select NFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
 [NOTE]
@@ -116,31 +116,31 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 
 .Steps
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
-. Right-click a Host System or a Host Cluster or a Datastore and select *NetApp ONTAP tools* > *Create Datastore*.
-. In the *Type* pane, select VMFS in *Datastore Type*.
-. In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. 
+. Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
+. Select VMFS datastore type.
+. Enter the datastore name, size, and protocol information in the *Name and Protocol* pane.
 If you choose to add the new datastore to an existing VMFS datastore cluster, select the datastore cluster selector under the *Advanced Options*. 
-. Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.
+. Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
-When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of *Storage* pane. 
+When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto-generated name, including the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of the *Storage* pane. 
 . From the *storage attributes* pane:
 .. Select *Aggregate* from the drop-down menu. 
 [NOTE]
-For ASA r2 storage systems, *Aggregate* option is not required as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 type SVM, the storage attributes page shows the options to enable QoS.
+For ASA r2 storage systems, the *Aggregate* option is not required as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 type SVM, the storage attributes page shows the options to enable QoS.
 // updated for 10.3 ASA r2
-.. As per the selected protocol a storage unit(LUN/Namespace) is created with space reserve of type Thin.
-.. Select *Use existing volume*, and *Enable QoS* options as required and provide the details as required.
+.. As per the selected protocol a storage unit(LUN/Namespace) is created with a space reserve of type Thin.
+.. Select *Use existing volume*, *Enable QoS* options as required, and provide the details as required.
 +
 [NOTE]
-In ASA r2 storage type, the volume creation or selection is not applicable for storage unit creation(LUN/Namespace), therefore these options are not shown.
+In the ASA r2 storage type, the volume creation or selection is not applicable for storage unit creation(LUN/Namespace). Therefore, these options are not shown.
 +
 [NOTE]
-For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
+For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol, you cannot use the existing volume, you should create a new volume.
 
 . Review the datastore details in the *Summary* pane and select *Finish*.
 
 [NOTE]
-If you're creating the datastore on a protected cluster, you can see a readonly message "The datastore is being mounted on a protected Cluster."
+If you're creating the datastore on a protected cluster, you can see a read-only message "The datastore is being mounted on a protected Cluster."
 The VMFS datastore is created and mounted on all the hosts.
 
 --
