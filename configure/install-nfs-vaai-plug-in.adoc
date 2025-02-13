@@ -36,7 +36,7 @@ Only the ESXi hosts eligible for the plug-in installation are displayed. You can
 +
 When the VMware admin restarts the ESXi host, ONTAP tools for VMware vSphere automatically detects and enables the NFS VAAI plug-in.
 
-.What's Next?
+.What's next?
 
 After you’ve installed the NFS VAAI plug-in and rebooted your ESXi host,  you need to configure the correct NFS export policies for VAAI copy offload. When configuring VAAI in a NFS environment, configure the export policy rules with the following requirements in mind:
 

@@ -23,7 +23,7 @@ Using SSH to access the diag user account has the following limitations:
 * SSH access to the diag user account is disabled when one of the following happens:
  ** The time expires.
 +
-The login session remains valid only till midnight the next day.
+The login session remains valid only until midnight the next day.
 
  ** You log in as a diag user again using SSH.
 

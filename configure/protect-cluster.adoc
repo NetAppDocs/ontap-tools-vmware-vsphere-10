@@ -13,7 +13,7 @@ summary: 'ONTAP tools for VMware vSphere manages protection of host clusters.'
 ONTAP tools for VMware vSphere manages the protection of host clusters. 
 All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
 
-.Prerequisites
+.Before you begin
 Ensure the following prerequisites are met:
 
 * The host cluster has datastores only from one SVM. 
