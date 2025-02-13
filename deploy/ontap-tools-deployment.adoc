@@ -43,7 +43,7 @@ Make sure you have imported the OVA into your content library.
 Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to 'Conservative' during the installation of ONTAP tools. This ensures that VM's do not migrate during the installation.
 
 
-*Steps*
+.Steps
 
 . Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step as you can deploy directly from the content library.
 . Log in to the vSphere server.

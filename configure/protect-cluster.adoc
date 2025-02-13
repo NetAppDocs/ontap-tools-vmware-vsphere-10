@@ -13,7 +13,7 @@ summary: 'ONTAP tools for VMware vSphere manages protection of host clusters.'
 ONTAP tools for VMware vSphere manages the protection of host clusters. 
 All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
 
-.Prerequisites
+.Before you begin
 Ensure the following prerequisites are met:
 
 * The host cluster has datastores only from one SVM. 
@@ -37,7 +37,7 @@ The policy type can be Asynchronous or AutomatedFailOverDuplex.
 When you add the SnapMirror relationship as an AutomatedFailOverDuplex type policy, you must add the target storage VM as storage backend to the same vCenter where ONTAP tools for VMware vSphere is deployed.
 +
 In the AutomatedFailOverDuplex policy type, there are uniform and non-uniform host configurations. 
-When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For details, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms]
+When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For details, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
 . If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
 . Select *Add*.
 . In the *Protect cluster* window, you cannot edit the protected cluster during the create operation. You can delete and add protection again. During the Modify host cluster protection operation, the edit option is available. You can edit or delete the relationships using the ellipsis menu options.

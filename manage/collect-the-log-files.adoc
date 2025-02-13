@@ -14,7 +14,7 @@ You can collect log files for ONTAP tools for VMware vSphere from the options av
 [NOTE]
 Generating logs from the ONTAP tools Manager includes all logs for all vCenter Server instances. Generating logs from vCenter client UI are scoped for the selected vCenter Server.
 
-*Steps*
+.Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 

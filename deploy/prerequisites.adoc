@@ -19,9 +19,9 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 ** 15 GB for thin provisioned installations
 ** 348 GB for thick provisioned installations
 
-* *Host system sizing requirements per node*
-Recommended memory as per the size of deployment and per node is as shown in the table below:
-
+* *Host system sizing requirements*
+Recommended memory as per the size of deployment is as shown in the table below:
+// updated for GITHUB issue #50
 |===
 
 |*Type of deployment*| *CPUs* |*Memory (GB)* |*Disk space (GB) thick provisioned*
@@ -33,15 +33,15 @@ Recommended memory as per the size of deployment and per node is as shown in the
 |13
 |26
 |350
-|HA small
+|HA small (cumulative of three nodes)
 |27
 |54
 |1050
-|HA medium
+|HA medium (cumulative of three nodes)
 |39
 |78
 |1050
-|HA large
+|HA large (cumulative of three nodes)
 |51
 |102
 |1050
@@ -138,7 +138,7 @@ The following table shows the number of VMware Live Site Recovery and the corres
 
 //For configuration limit details of ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA), refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/ONTAP_Tools_for_VMware_vSphere:_Sizing_Guide_for_ONTAP_tools_for_VMware_vSphere[Sizing Guide for ONTAP tools for VMware vSphere].
 
-For more information, refer to https://docs.vmware.com/en/VMware-Live-Recovery/services/vmware-live-site-recovery/GUID-3AD7D565-8A27-450C-8493-7B53F995BB14.html[Operational Limits of VMware Live Site Recovery].
+For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/overview/site-recovery-manager-system-requirements/operational-limits-of-site-recovery-manager.html[Operational Limits of VMware Live Site Recovery].
 
 == Port requirements
 

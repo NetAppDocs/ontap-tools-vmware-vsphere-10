@@ -16,7 +16,7 @@ vCenter Server instances are central management platforms that allow you to cont
 The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to associate or disassociate with a storage backend.
 This task helps you to create mapping between storage backend and onboarded vCenter Server instance globally.
 
-*Steps*
+.Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 

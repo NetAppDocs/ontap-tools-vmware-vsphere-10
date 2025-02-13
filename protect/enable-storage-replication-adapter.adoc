@@ -11,7 +11,7 @@ summary: 'ONTAP tools for VMware vSphere provides the option to enable the SRA c
 [.lead]
 ONTAP tools for VMware vSphere provides the option to enable the SRA capability to configure disaster recovery.
 
-*What you will need*
+.Before you begin
 
 * You should have set up your vCenter Server instance and configured ESXi host.
 * You should have deployed ONTAP tools.
@@ -19,7 +19,7 @@ ONTAP tools for VMware vSphere provides the option to enable the SRA capability 
 * Source and destination ONTAP clusters must have the same custom SnapMirror schedules created before running the SRA workflows.
 // updated for [OTVDOC-181] - jani
 
-*Steps*
+.Steps
 
 . Log in to the VMware Live Site Recovery appliance management interface using the URL: `\https://:<srm_ip>:5480`, and then go to Storage Replication Adapters in VMware VMware Live Site Recovery appliance management interface.
 . Select *New Adapter*.
