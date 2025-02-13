@@ -17,7 +17,7 @@ NOTE: This view is applicable for the VM which has at least one ONTAP tools for 
 .Steps
 
 . From the vSphere Client navigate to the virtual machine.
-. Click the *Monitor* tab in the right pane. 
+. Select the *Monitor* tab in the right pane. 
 . Select *NetApp ONTAP tools* > *Storage*. The *Storage* details appear on the right pane. You can see the list of vVols that are present on the VM.
 +
 You can use the 'Manage Columns' option to hide or show different columns.

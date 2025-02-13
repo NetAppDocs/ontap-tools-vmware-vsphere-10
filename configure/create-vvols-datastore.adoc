@@ -63,7 +63,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 
 .Steps
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
-. Right-click a Host System or a Host Cluster or a Datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
+. Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
 . In the *Type* pane, select NFS in *Datastore Type*.
 . In the *Name and Protocol* pane, enter datastore name, size, and protocol information. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
 [NOTE]
@@ -98,10 +98,10 @@ Check the following items before proceeding:
 VMware vSphere 7.0 U3 and later versions support NVMe/TCP protocol. However, VMware vSphere 8.0 and later version is recommended. 
 . Validate if the Network Interface Card (NIC) vendor supports ESXi NIC with NVMe/TCP protocol. 
 . Configure the ESXi NIC for NVMe/TCP according to the NIC vendor specifications. 
-. When using VMware vSphere 7 release, follow the instructions on the VMware site https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-D047AFDD-BC68-498B-8488-321753C408C2.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2[Configure VMkernel Binding for the NVMe over TCP Adapter] to configure NVMe/TCP port binding. When using VMware vSphere 8 release, follow https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-5F776E6E-62B1-445D-854C-BEA689DD4C92.html#GUID-D047AFDD-BC68-498B-8488-321753C408C2[Configuring NVMe over TCP on ESXi], to configure the NVMe/TCP port binding. 
-. For VMware vSphere 7 release, follow the instructions on the VMware site https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E.html[Enable NVMe over RDMA or NVMe over TCP Software Adapters] to configure NVMe/TCP software adapters. For VMware vSphere 8 release, follow https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-storage/GUID-F4B42510-9E6D-4446-816A-5012866E0038.html#GUID-8BBD672E-0829-4CF2-84B2-26A3A89ABD2E[Add Software NVMe over RDMA or NVMe over TCP Adapters] to configure the NVMe/TCP software adapters.
+. When using VMware vSphere 7 release, follow the instructions on the VMware site https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html[Configure VMkernel Binding for the NVMe over TCP Adapter] to configure NVMe/TCP port binding. When using VMware vSphere 8 release, follow https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html[Configuring NVMe over TCP on ESXi], to configure the NVMe/TCP port binding. 
+. For VMware vSphere 7 release, follow the instructions on page https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Enable NVMe over RDMA or NVMe over TCP Software Adapters] to configure NVMe/TCP software adapters. For VMware vSphere 8 release, follow https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Add Software NVMe over RDMA or NVMe over TCP Adapters] to configure the NVMe/TCP software adapters.
 . Run link:../configure/discover-storage-systems-and-hosts.html[Discover storage systems and hosts] action on the ESXi host.
-For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429[How to Configure NVMe/TCP with vSphere 8.0 Update 1 and ONTAP 9.13.1 for VMFS Datastores] 
+For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429[How to Configure NVMe/TCP with vSphere 8.0 Update 1 and ONTAP 9.13.1 for VMFS Datastores].
 
 * If you are using the NVME/FC protocol, perform the following steps to configure the ESXi host:
 . Enable NVMe over Fabrics(NVMe-oF) on your ESXi host(s). 
@@ -116,31 +116,31 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 
 .Steps
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
-. Right-click a Host System or a Host Cluster or a Datastore and select *NetApp ONTAP tools* > *Create Datastore*.
-. In the *Type* pane, select VMFS in *Datastore Type*.
-. In the *Name and Protocol* pane, enter the datastore name, size, and protocol information. 
+. Right-click a host system or a host cluster or a datacenter and select *NetApp ONTAP tools* > *Create Datastore*.
+. Select VMFS datastore type.
+. Enter the datastore name, size, and protocol information in the *Name and Protocol* pane.
 If you choose to add the new datastore to an existing VMFS datastore cluster, select the datastore cluster selector under the *Advanced Options*. 
-. Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can either choose an existing igroup for the datastore or create a new igroup with a custom name.
+. Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section of the pane (optional). You can choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
-When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of *Storage* pane. 
+When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem is created and is used for namespace mapping. By default, the namespace subsystem is created using the auto-generated name, including the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of the *Storage* pane. 
 . From the *storage attributes* pane:
 .. Select *Aggregate* from the drop-down menu. 
 [NOTE]
-For ASA r2 storage systems, *Aggregate* option is not required as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 type SVM, the storage attributes page shows the options to enable QoS.
+For ASA r2 storage systems, the *Aggregate* option is not required as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 type SVM, the storage attributes page shows the options to enable QoS.
 // updated for 10.3 ASA r2
-.. As per the selected protocol a storage unit(LUN/Namespace) is created with space reserve of type Thin.
-.. Select *Use existing volume*, and *Enable QoS* options as required and provide the details as required.
+.. As per the selected protocol a storage unit(LUN/Namespace) is created with a space reserve of type Thin.
+.. Select *Use existing volume*, *Enable QoS* options as required, and provide the details as required.
 +
 [NOTE]
-In ASA r2 storage type, the volume creation or selection is not applicable for storage unit creation(LUN/Namespace), therefore these options are not shown.
+In the ASA r2 storage type, the volume creation or selection is not applicable for storage unit creation(LUN/Namespace). Therefore, these options are not shown.
 +
 [NOTE]
-For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol you cannot use the existing volume, you should create new volume.
+For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol, you cannot use the existing volume, you should create a new volume.
 
 . Review the datastore details in the *Summary* pane and select *Finish*.
 
 [NOTE]
-If you're creating the datastore on a protected cluster, you can see a readonly message "The datastore is being mounted on a protected Cluster."
+If you're creating the datastore on a protected cluster, you can see a read-only message "The datastore is being mounted on a protected Cluster."
 The VMFS datastore is created and mounted on all the hosts.
 
 --

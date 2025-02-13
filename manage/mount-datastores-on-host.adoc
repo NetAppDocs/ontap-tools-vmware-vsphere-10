@@ -16,7 +16,7 @@ Mounting a datastore provides storage access to additional (NFS/VMFS) hosts. You
 * From vSphere 7.0U3 to vSphere 8.0 versions even though the options appear, the action will be disabled. 
 * Mount datastore is disabled when the host cluster is protected with uniform configurations.
 
-*Steps*
+.Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
 . In the navigation pane, select the datacenter that contains the host.

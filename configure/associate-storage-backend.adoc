@@ -15,7 +15,7 @@ The vCenter Server listing page shows the associated number of storage backends.
 
 This task helps you to create mapping between storage backend and the onboarded vCenter Server instance globally.
 
-*Steps*
+.Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 

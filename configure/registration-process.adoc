@@ -11,7 +11,7 @@ summary: 'You can register the VASA Provider with a vCenter Server instance usin
 [.lead]
 You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere. The VASA Provider Settings section displays the VASA Provider registration status for the selected vCenter Server.
 
-*Steps*
+.Steps
 
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . Select *Shortcuts* > *NetApp ONTAP tools* under the plug-ins section.
@@ -24,7 +24,7 @@ You can register the VASA Provider with a vCenter Server instance using ONTAP to
 
 Verify that the onboarded VASA Provider is listed under VASA Provider from the vCenter client:
 
-*Steps*
+.Steps
 
 . Navigate to the vCenter Server instance.
 . Log in with the administrator credentials.

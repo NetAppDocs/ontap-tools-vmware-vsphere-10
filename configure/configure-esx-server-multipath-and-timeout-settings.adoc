@@ -18,7 +18,7 @@ ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings 
 
 Depending on your configuration and system load, this process might take a long time. The task progress is displayed in the Recent Tasks panel. 
 
-*Steps*
+.Steps
 
 . From the VMware vSphere Web client home page, select *Hosts and Clusters*.
 . Right-click a host and select *NetApp ONTAP tools* > *Update host data*.

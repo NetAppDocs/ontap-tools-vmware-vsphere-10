@@ -11,7 +11,7 @@ summary: 'You can configure new user roles for managing storage backends using t
 [.lead]
 You can configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.
 
-*What you'll need*
+.Before you begin
 
 * You should have downloaded the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_.
 * You should have downloaded the ONTAP Privileges file from ONTAP tools using `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
@@ -21,7 +21,7 @@ You can create users at cluster or directly at storage virtual machines (SVMs) l
 
 * You should have logged in with administrator privileges for the storage backend.
 
-*Steps*
+.Steps
 
 . Extract the downloaded _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_ file.
 . Access ONTAP System Manager using the cluster management IP address of the cluster.
