@@ -9,19 +9,20 @@ summary: 'Mounting a datastore provides storage access to additional hosts. You 
 :imagesdir: ../media/
 
 [.lead]
-Mounting a datastore provides storage access to additional (NFS/VMFS) hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment.
+Mounting a datastore provides storage access to additional hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment. 
 
-[NOTE]
-* Some of the rightclick actions are disabled or unavailable depending on vSphere client versions and the type of datastore selected. If you're using vSphere client 8.0 or later versions, some of the right-click options are hidden. 
-* From vSphere 7.0U3 to vSphere 8.0 versions even though the options appear, the action will be disabled. 
-* Mount datastore is disabled when the host cluster is protected with uniform configurations.
+.About this task 
+
+* Some right-click actions are disabled or unavailable depending on the vSphere client version and the type of datastore selected. 
+** If you're using vSphere client 8.0 or later versions, some of the right-click options are hidden. 
+** From vSphere 7.0U3 to vSphere 8.0 versions, even though the options appear, the action will be disabled.
+* The Mount datastore option is disabled when the host cluster is protected with uniform configurations. 
 
 .Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
-. In the navigation pane, select the datacenter that contains the host.
-. Repeat Step 2 for any additional hosts.
-. To mount NFS/VMFS datastores on host or host cluster, right-click on it and select *NetApp ONTAP tools* > *Mount Datastores*.
+. In the left navigation pane, select the data centers containing the hosts.
+. To mount NFS/VMFS datastores on host or host cluster, right-click and select *NetApp ONTAP tools* > *Mount Datastores*.
 . Select the datastores that you want to mount and select *Mount*.
 
 You can track the progress in the recent task panel.

@@ -10,16 +10,18 @@ summary: 'A single instance of ONTAP tools for VMware vSphere can manage multipl
 
 [.lead]
 A self-signed certificate is generated for ONTAP tools and VASA Provider by default during deployment. Using the ONTAP tools Manager interface, you can renew the certificate or upgrade it to a custom CA.
+Custom CA certificates are mandatory in a multi-vCenter deployment.
+
 
 .Before you begin
 
-* The domain name on which the certificate is issued should be mapped to the virtual IP address in a multi-vCenter deployment where custom CA certificates are mandatory .
+* The domain name on which the certificate is issued should be mapped to the virtual IP address. 
 * Run the nslookup check on the domain name to check if the domain is getting resolved to the intended IP address.  
 * The certificates should be created with the domain name and the load balancer IP address.
 
 [NOTE]
-A loadbalancer IP address should map to fully qualified domain name (FQDN). Certificates should be generated using the same FQDN mapped to loadbalancer IP address.
- 
+A loadbalancer IP address should map to a fully qualified domain name (FQDN). Certificates should contain the same FQDN mapped to the loadbalancer IP address in subject or subject alternative names.
+
 [NOTE]
 You cannot switch from a CA-signed to a self-signed certificate.
 

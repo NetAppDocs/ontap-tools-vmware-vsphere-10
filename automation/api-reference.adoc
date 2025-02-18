@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: automation/api-reference.html
-keywords: ontap tools vmware vsphere rest api reference, api reference
+keywords: ontap tools for vmware vsphere rest api reference, api reference
 summary: "The ONTAP tools for VMware vSphere 10 REST API reference contains details about all the API calls. This reference is helpful when developing automation applications."
 ---
 
@@ -15,7 +15,7 @@ summary: "The ONTAP tools for VMware vSphere 10 REST API reference contains deta
 [.lead]
 The ONTAP tools for VMware vSphere 10 REST API reference contains details about all the API calls. This reference is helpful when developing automation applications.
 
-You can access the ONTAP tools for VMware vSphere 10 REST API documentation online through the Swagger UI. You need the IP address or FQDN of the ONTAP tools for VMware vSphere 10 gateway service as well as the port.
+You can access the ONTAP tools for VMware vSphere 10 REST API documentation online through the Swagger user interface. You need the IP address or FQDN of the ONTAP tools for VMware vSphere 10 gateway service as well as the port.
 
 .Steps
 

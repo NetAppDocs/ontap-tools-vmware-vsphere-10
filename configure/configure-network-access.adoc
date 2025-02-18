@@ -9,7 +9,7 @@ summary: 'You can choose to allow few specific ESXi host addresses for datastore
 :imagesdir: ../media/
 
 [.lead]
-// Need to add procedure with vCenter UI and ontap tools shortcut. move the API to API section. Setting> Manage network Access.
+// Need to add procedure with vCenter user interface and ontap tools shortcut. move the API to API section. Setting> Manage network Access.
 When you have multiple ESXi host IP addresses, all the discovered IP addresses from the host are added to an export policy by default. If you do not want to add all IP addresses to an export policy, provide a setting for allowing specific IP addresses in a comma separated list or range or CIDR, or a combination of all three for each vCenter. 
 
 You can choose to allow a few specific ESXi host addresses for datastore mount operation. If the setting is not provided, the export policy adds all IP addresses discovered in the pre-mount step. If the setting is provided, ONTAP tools for VMware vSphere add only the ones which fall within the listed IP addresses or range. If none of the IP addresses of a host belong to the listed IP addresses, the mount on that host fails.
