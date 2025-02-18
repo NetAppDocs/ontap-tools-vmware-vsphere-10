@@ -148,7 +148,7 @@ image:../media/primaryvm-edit-settings.png[Edit settings]
 
 After upgrading to ONTAP tools for VMware vSphere 10.3, you can: 
 
-* Disable the services from the manager UI
+* Disable the services from the manager user interface
 * Move from a non-HA setup to an HA setup
 * Scale up a non-HA small configuration a non-HA medium or to a HA medium or large configuration.
 * In case of a non-HA upgrade, reboot the ONTAP tools VM to reflect the changes. In case of an HA upgrade, reboot the first node to reflect the changes on the node.

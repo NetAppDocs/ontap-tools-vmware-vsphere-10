@@ -38,11 +38,11 @@ IPv4 and IPv6 address management LIFs are supported.
 
 --
 
-.Using vSphere client UI
+.Using vSphere client user interface
 --
 
 [NOTE]
-When you add a storage backend using the vSphere client UI, the vVols datastore does not support directly adding an SVM user.
+When you add a storage backend using the vSphere client user interface, the vVols datastore does not support directly adding an SVM user.
 
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
