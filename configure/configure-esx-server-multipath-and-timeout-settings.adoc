@@ -4,15 +4,15 @@ sidebar: sidebar
 keywords:
 summary: 'ONTAP tools for VMware vSphere checks and sets the ESXi host multipathing settings and HBA timeout settings that work best with NetApp storage systems.'
 ---
-= Configure ESXi server multipath and timeout settings
+= Configure ESXi host settings 
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Configuring ESXi server multipath and timeout settings ensures high availability and data integrity by allowing to seamlessly switch to a backup storage path if a primary path fails. 
 
+== Configure ESXi server multipath and timeout settings
 ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings and HBA timeout settings that work best with NetApp storage systems.
-
 
 *About this task*
 
@@ -31,3 +31,61 @@ Depending on your configuration and system load, this process might take a long 
 You can expand the ESXi host to see the current values.
 . In the settings page, select the recommended values as required.
 . In the summary pane, check the values and select *Finish*. You can track the progress in the recent task panel.
+
+== Set ESXi host values
+Using ONTAP tools for VMware vSphere, you can set timeouts and other values on the ESXi hosts to ensure the best performance and successful failover. The values that ONTAP tools for VMware vSphere sets are based on internal NetApp testing.
+
+You can set the following values on an ESXi host:
+
+=== HBA/CNA Adapter Settings
+Sets the recommended HBA timeout settings for NetApp storage systems.
+
+|===
+|Parameters |Set this value to...
+
+|Disk.QFullSampleSize
+|32 for all configurations. Setting this value helps to prevent I/O errors.
+
+|Disk.QFullThreshold
+|8 for all configurations. Setting this value helps prevent I/O errors.
+
+|Emulex FC HBA timeouts
+|Default value.
+
+|QLogic FC HBA timeouts
+|Default value.
+
+|===
+
+=== MPIO Settings
+
+MPIO settings define the preferred paths for NetApp storage systems. They determine which of the available paths are optimized (as opposed to non-optimized paths that traverse the interconnect cable) and set the preferred path to one of those paths.
+
+In high-performance environments, or when you are testing performance with a single LUN datastore, consider changing the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) from the default IOPS setting of 1000 to a value of 1.
+
+=== NFS settings
+|===
+|Parameter |Set this value to...
+|Net.TcpipHeapSize
+|32
+|Net.TcpipHeapMax
+|1024MB
+|NFS.MaxVolumes
+|256
+
+|NFS41.MaxVolumes
+|256
+
+|NFS.MaxQueueDepth
+|128 or higher
+
+|NFS.HeartbeatMaxFailures
+|10
+
+|NFS.HeartbeatFrequency
+|12
+
+|NFS.HeartbeatTimeout
+|5
+
+|===
