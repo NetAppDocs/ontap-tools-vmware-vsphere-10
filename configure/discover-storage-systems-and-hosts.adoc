@@ -25,7 +25,7 @@ While discovering the storage systems, ONTAP tools for VMware vSphere collects i
 .Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
-. Right-click the required datacenter and select *NetApp ONTAP tools* > *Update Host Data* .
+. Right-click the required data center and select *NetApp ONTAP tools* > *Update Host Data* .
 +
 In the *Confirm* dialog box, confirm your choice.
 . Select the discovered storage controllers that have the status `Authentication Failure` and select *Actions* > *Modify*.

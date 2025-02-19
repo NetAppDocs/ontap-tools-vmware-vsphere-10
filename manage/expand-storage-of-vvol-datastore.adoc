@@ -2,7 +2,7 @@
 permalink: manage/expand-storage-of-vvol-datastore.html
 sidebar: sidebar
 keywords: virtual volume datastores
-summary: 'When you right-click on datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section.'
+summary: 'When you right-click on the datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section.'
 ---
 = Expand vVols datastore
 :icons: font
@@ -10,7 +10,7 @@ summary: 'When you right-click on datastore object in the vCenter object view, O
 
 [.lead]
 
-When you right-click on datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section. Specific actions are enabled depending on the type of datastore and the current user privileges.
+When you right-click on the datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section. Specific actions are enabled depending on the type of datastore and the current user privileges.
 
 [NOTE]
 Expand vVols datastore operation is not applicable for ASA r2 based vVols datastore.
@@ -18,8 +18,8 @@ Expand vVols datastore operation is not applicable for ASA r2 based vVols datast
 .Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
-. In the navigation pane, select the datacenter that contains the datastore.
+. In the navigation pane, select the data center that contains the datastore.
 . Right-click the datastore and select *NetApp ONTAP tools* > *Add storage to datastore*.
-. In the *create or Select Volumes* window, you can either create new volumes or choose from the existing volumes. The UI is self-explanatory. Follow the instructions as per your choice.
+. In the *create or Select Volumes* window, you can either create new volumes or choose from the existing volumes. The user interface is self-explanatory. Follow the instructions as per your choice.
 . In the *Summary* window, review the selections and select *Expand*.
 You can track the progress in the recent tasks panel.

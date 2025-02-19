@@ -32,9 +32,9 @@ indexpage:
         url: https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere-101/index.html
       - title: Documentation for earlier versions of ONTAP tools for VMware vSphere 9
         url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63792
-      - title: NetApp Knowledge Base - ONTAP tools
+      - title: NetApp Knowledge Base - ONTAP tools for VMware vSphere
         url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
-      - title: NetApp Community - ONTAP tools
+      - title: NetApp Community - ONTAP tools for VMware vSphere
         url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions
       - title: Learn about VMware vSphere with ONTAP
         url: https://docs.netapp.com/us-en/ontap-apps-dbs/vmware/vmware-vsphere-overview.html#why-ontap-for-vsphere

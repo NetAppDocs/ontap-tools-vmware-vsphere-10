@@ -2,14 +2,14 @@
 permalink: manage/migrate-virtual-machines.html
 sidebar: sidebar
 keywords:
-summary: 'You should be aware of some of the considerations while migrating exisitng virtual machines in your datacenter.'
+summary: 'You should be aware of some of the considerations while migrating exisitng virtual machines in your data center.'
 ---
 = Considerations to migrate or clone virtual machines
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You should be aware of some of the considerations while migrating existing virtual machines in your datacenter.
+You should be aware of some of the considerations while migrating existing virtual machines in your data center.
 
 == Migrate protected virtual machines
 

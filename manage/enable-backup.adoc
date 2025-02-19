@@ -15,7 +15,7 @@ As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you can
 
 .Steps
 
-. From vCenter Server, open the maintenance console.
+. From the vCenter Server, open the maintenance console.
 . Log in as the maintenance user.
 . Enter `4` to select *Support and Diagnostics*.
 . Enter `3` to select *Enable System Backup* option.
@@ -38,7 +38,7 @@ You need to use the same ONTAP tools IP address (load balancer IP) for the new v
 
 Perform the following steps to recover the setup from the backup file.
 
-. From vCenter Server, open the maintenance console.
+. From the vCenter Server, open the maintenance console.
 . Log in as the maintenance user.
 . Enter `4` to select *Support and Diagnostics*.
 . Enter `2` to select *Enable remote diagnostic access* option and create a new password for the diagnostic access.

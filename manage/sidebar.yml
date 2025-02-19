@@ -1,5 +1,5 @@
 section: manage
-title: Manage ONTAP tools
+title: Manage ONTAP tools for VMware vSphere
 entries:
   - title: ONTAP tools for VMware vSphere dashboard overview
     url: /configure/dashboard-overview.html
@@ -9,8 +9,6 @@ entries:
     url: /manage/edit-appliance-settings.html
   - title: Manage datastores
     entries:
-      - title: Create a datastore
-        url: /configure/create-vvols-datastore.html    
       - title: Mount NFS and VMFS datastore
         url: /manage/mount-datastores-on-host.html
       - title: Unmount NFS and VMFS datastore

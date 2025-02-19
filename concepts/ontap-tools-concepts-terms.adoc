@@ -11,8 +11,11 @@ summary: 'The following section describes the key concepts and terms used in the
 [.lead]
 The following section describes the key concepts and terms used in the document. 
 
-=== ASA r2
+=== ASA r2 systems
 The new NetApp ASA r2 systems (ASA A1K, ASA A70, and ASA A90) deliver a unified hardware and software solution that creates a simplified experience specific to the needs of SAN-only customers. https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html[Learn about ASA r2 storage systems].
+
+=== AutoSupport
+AutoSupport is a mechanism that proactively monitors the health of your system and automatically sends messages to NetApp technical support, your internal support organization, and a support partner.
 
 === Certificate authority (CA)
 CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
@@ -45,6 +48,9 @@ RPO is a measure of how frequently data is backed up or replicated. It represent
 
 === SnapMirror active sync (SMAS)
 SnapMirror active sync enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. Manual intervention nor custom scripting are required to trigger a failover with SnapMirror active sync. Lear more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync].
+
+=== Storage backends
+Storage backends are the underlying storage infrastructure that the ESXi host uses to store virtual machine files, data, and other resources. The storage backend allows the ESXi host to access and manage persistent data, providing the required storage capability and performance for virtualized environment. 
 
 === Storage Replication Adapter (SRA)
 SRA is the storage vendor specific software that is installed inside the VMware Live Site Recovery appliance. The adapter enables communication between Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level and the cluster level configuration.
