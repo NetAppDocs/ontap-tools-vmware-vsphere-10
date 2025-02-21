@@ -1,0 +1,24 @@
+---
+permalink: manage/add-ntpserver.html
+sidebar: sidebar
+keywords:
+summary: 'Enter the NTP server details to synchronize the time clocks of ONTAP tools appliance.'
+---
+= Add NTP servers
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Enter the NTP server details to synchronize the time clocks of the ONTAP tools appliance.
+
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select the *Settings* > *NTP server* > *Edit* option.
+. Enter the comma-separated fully qualified domain name (FQDN), IPv4, or IPv6 addresses.
++
+Refresh to screen to see the updated values.
+
+// new topic for 10.4
+

@@ -26,9 +26,7 @@ a|
 
 . Display server status summary
 . Change LOG level for VASA Provider Services and SRA Services
-. Disable AutoSupport
-. Update AutoSupport proxy URL
-
+// 10.4 updates
 a|
 System Configuration
 a|

@@ -19,8 +19,6 @@ entries:
         url: /concepts/ontap-roles.html
   - title: High availability for ONTAP tools for VMware vSphere
     url: /concepts/high-availability.html
-  - title: AutoSupport
-    url: /concepts/autosupport.html
   - title: ONTAP tools Manager user interface
     url: /configure/manager-user-interface.html
 
