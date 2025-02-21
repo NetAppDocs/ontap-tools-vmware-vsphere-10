@@ -30,5 +30,5 @@ You can track the progress in the recent task panel.
 
 *Related information*
 
-link:../configure/esxi-host-values.html[Set ESXi host values]
+link:../configure/configure-esx-server-multipath-and-timeout-settings.html[Configure ESXi host settings]
 // updated for https://github.com/NetAppDocs/ontap-tools-vmware-vsphere-10/issues/45 - jani

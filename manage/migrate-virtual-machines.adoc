@@ -52,6 +52,6 @@ Presently only virtual machine Snapshots without memory are supported. If virtua
 You also cannot protect unprotected virtual machines that have memory Snapshot. For this release, you are expected to delete memory snapshot before enabling protection for the virtual machine.
 
 For windows VM with ASA r2 storage type, when you take a snapshot of the virtual machine, it will be a read-only snapshot.
-When there is power on call for the VM, the VASA Provider creates a LUN using the read-only snapshot and then it enables it for IOPS. During the power-off request, VASA provider deletes the LUN that was created and then disables the IOPS.
+When there is power on call for the VM, the VASA Provider creates a LUN using the read-only snapshot and then it enables it for IOPS. During the power-off request, VASA Provider deletes the LUN that was created and then disables the IOPS.
 
 // Added for 10.3, inputs received from Rajiv
