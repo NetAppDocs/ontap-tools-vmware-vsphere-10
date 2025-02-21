@@ -2,9 +2,7 @@ section: protect
 title: Protect datastores and virtual machines
 entries:
   - title: Protect using host cluster protection
-    entries:
-      - title: Create host cluster protection
-        url: /configure/protect-cluster.html
+    url: /configure/protect-cluster.html
   - title: Protect using SRA protection
     entries:
       - title: Enable SRA to protect datastores
@@ -18,11 +16,7 @@ entries:
       - title: Update SRA credentials
         url: /protect/update-credentials.html
       - title: Configure protected and recovery sites
-        entries:
-          - title: Configure protection groups
-            url: /protect/configure-protection-groups.html
-          - title: Pair protected and recovery sites
-            url: /protect/pair-protected-and-recovery-sites.html
+        url: /protect/configure-protection-groups.html
       - title: Configure protected and recovery site resources
         entries:
           - title: Configure network mappings
