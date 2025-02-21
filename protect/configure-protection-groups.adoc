@@ -4,12 +4,14 @@ sidebar: sidebar
 keywords:
 summary: 'You should create protection groups to protect a group of virtual machines on the protected site.'
 ---
-= Configure protection groups
+= Configure protected and recovery sites
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 You should create protection groups to protect a group of virtual machines on the protected site.
+
+== Configure protection groups
 
 .Before you begin
 
@@ -34,3 +36,29 @@ All the virtual machines on the replication group are added to the protection gr
 
 . Select either the existing recovery plan or create a new plan by selecting *Add to new recovery plan*.
 . In the Ready to complete tab, review the details of the protection group that you created, and then select *Finish*.
+
+== Pair protected and recovery sites
+
+You should pair the protected and recovery sites created using your vSphere Client to enable Storage Replication Adapter (SRA) to discover the storage systems.
+
+// removed for 10.3 will be applicable for 10.4 [NOTE]
+// Storage Replication Adapter (SRA) supports fan-out with with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two async SnapMirror on consistency group or fan-out SnapMirrors on Volume is not supported. 
+
+.Before you begin
+
+* You should have VMware Live Site Recovery installed on the protected and recovery sites.
+* You should have SRA installed on the protected and recovery sites.
+
+.Steps
+
+. Double-click *Site Recovery* on the vSphere Client home page and select *Sites*.
+. Select *Objects* > *Actions* > *Pair Sites*.
+. In the *Pair Site Recovery Manager Servers* dialog box, enter the address of the protected site's Platform Services Controller, and then select *Next*.
+. In the Select vCenter Server section, do the following:
+ .. Verify that the protected site's vCenter Server appears as a matching candidate to pair.
+ .. Enter the SSO administrative credentials, and then select *Finish*.
+. If prompted, select *Yes* to accept the security certificates.
+
+.Result
+
+Both the protected and recovery sites will appear in the Objects dialog box.
