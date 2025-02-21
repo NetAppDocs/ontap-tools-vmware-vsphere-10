@@ -19,9 +19,9 @@ Terminating ONTAP tools for VMware vSphere will delete all the data in the tools
 . Remove all virtual machines from datastores managed by ONTAP tools for VMware vSphere. You may delete them (refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en[Remove and Reregister VMs and VM Templates]) or use https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html[storage vMotion] to move them to an unmanaged datastore.
 // updated as per pull request from Chance.
 . link:../manage/delete-ds.html[Delete datastores] created on ONTAP tools for VMware vSphere.
-. Unregister the VASA providers from all the vCenter servers using the following steps: 
+. Unregister the VASA Providers from all the vCenter servers using the following steps: 
 .. In the ONTAP tools, select *Settings* > *VASA Provider settings* > *Unregister* option at the bottom of the screen.
-.. In the *Unregister VASA provider* page, provide the application user credentials and select *Unregister*.
+.. In the *Unregister VASA Provider* page, provide the application user credentials and select *Unregister*.
 . Disassociate all storage backends from the vCenter Server instance. Refer to link:../manage/manage-vcenter.html[Associate or dissociate storage backends with the vCenter Server instance].
 . Delete all storage backends. Refer to link:../manage/storage-backend.html[Manage storage backends].
 . Remove SRA adapter from VMware Live Site Recovery:
