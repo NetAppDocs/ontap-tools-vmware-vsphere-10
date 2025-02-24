@@ -13,12 +13,8 @@ Update the AutoSupport proxy URL to ensure the proper functioning of the AutoSup
 
 .Steps
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
-. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select *Settings* from the sidebar.
-. Select the *Settings* > *Telemetry* > *Edit* option.
-. Enter a valid *Proxy URL* and save the changes.
-+
-If you disable AutoSupport, the proxy URL is also disabled.
-// new topic for 10.4
-
+. From the vCenter Server, open the maintenance console. 
+. Log in as the maintenance user. 
+. Enter 1 to select *Application Configuration*.
+. Enter 4 to select *Update AutoSupport proxy URL*.
+. Enter the proxy URL.
