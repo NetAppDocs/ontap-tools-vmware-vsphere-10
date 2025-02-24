@@ -5,7 +5,9 @@ entries:
     url: /configure/dashboard-overview.html
   - title: ONTAP tools Manager user interface
     url: /configure/manager-user-interface.html
-  - title: Edit appliance settings
+  - title: Enable ONTAP tools for VMware vSphere services
+    url: /manage/enable-services.html
+  - title: Change ONTAP tools for VMware vSphere configuration
     url: /manage/edit-appliance-settings.html
   - title: Manage datastores
     entries:

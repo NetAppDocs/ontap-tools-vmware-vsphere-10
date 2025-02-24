@@ -4,19 +4,17 @@ sidebar: sidebar
 keywords:
 summary: 'You can change the administrator password using ONTAP tools Manager.'
 ---
-= Edit appliance settings
+= Change ONTAP tools for VMware vSphere configuration
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use the ONTAP tools Manager to scale up the node size, manage services, and upgrade ONTAP tools for VMware vSphere to High Availability (HA) setup.
-
-The ONTAP tools appliance is initially deployed in a single node non-HA configuration. You can edit the configuration in the *Edit appliance settings* window. 
+Using the ONTAP tools Manager scale up the ONTAP tools for VMware vSphere configuration to increase the number of nodes in the deployment or change the configuration to High Availability (HA) setup. The ONTAP tools for VMware vSphere appliance is initially deployed in a single node non-HA configuration.
 
 // new content for 10.3
 *Before you begin*
 
-Ensure that the OVA template you provide has the same OVA version as the first node.
+Ensure that the OVA template you provide has the same OVA version as Node 1. Node 1 is the default node where the ONTAP tools for VMware vSphere OVA is initially deployed.
 // https://jira.ngage.netapp.com/browse/OTVDOC-190 -  jani
 
 .Steps
@@ -24,31 +22,27 @@ Ensure that the OVA template you provide has the same OVA version as the first n
 . Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Select the *Edit Appliance Settings* in the overview section.
-. In the *Services* section, you can enable optional services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
+. In the *Configuration* section, you can scale up to increase the node size and enable HA configuration as per your requirement. You need the vCenter Server credentials to make any changes.
 +
-When enabling the services for the first time, you need to create VASA Provider/SRA credentials. This is used to register or enable the VASA Provider/SRA services on the vCenter Server.
-[NOTE]
-To disable any of the optional services, ensure that no vCenter Servers managed by ONTAP tools are using them.
-+
-*Allow import of vVols configuration* option is shown only when the VASA Provider service is enabled. This option enables the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.3.
-. In the *Configuration* section, you can scale up each ONTAP tools node size and enable HA configuration as per your requirement. You need the vCenter Server credentials to make any changes.
-+
-when ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for the new edit submission.
+When ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for the new edit submission.
 +
 [NOTE]
-You are only allowed to scale up the ONTAP tools node size. You cannot scale down the node from its current size to a smaller size. The maximum supported configuration for non-HA is medium. For HA, medium and large configurations are supported.
-. Use the HA toggle button to enable the HA configuration. When you choose HA configuration, an additional *HA settings* page appears for HA related inputs.
-+
+In ONTAP tools for VMware vSphere, you are only allowed to increase the node size; you cannot reduce the node size. In a non-HA setup, only a medium-size configuration is supported. In an HA setup, medium and large configurations are supported.
+. Use the HA toggle button to enable the HA configuration. On the *HA settings* page, ensure that:
+
+**  The content library belongs to the same vCenter Server where the ONTAP tools node VMs run. vCenter Server credentials are used to validate and download the OVA template for appliance changes.
+** The virtual machine hosting the ONTAP tools is not directly deployed on an ESXi host. The VM should be deployed on a cluster or a resource pool.
 [NOTE]
-* The content library should belong to the same vCenter Server where the ONTAP tools node VMs are running. vCenter Server credentials are used to validate and download the OVA template for appliance changes.
-* To enable HA deployment, the virtual machine hosting the ONTAP tools should not be directly deployed on an ESXi host. Instead, it should be deployed on a cluster or a resource pool.
-* Once enabled, you cannot revert from HA configuration to non-HA single node configuration.
-. In the *HA settings* section of the *Edit Appliance Settings* window, you can enter the details of Node 2 and Node 3. Node 1 is the ONTAP tools default node deployed as part of the OVA. ONTAP tools for VMware vSphere supports three nodes in HA setup.
+Once HA configuration is enabled, you cannot revert to a non-HA single node configuration.
+. In the *HA settings* section of the *Edit Appliance Settings* window, you can enter the details of Nodes 2 and 3. ONTAP tools for VMware vSphere supports three nodes in HA setup.
 [NOTE]
-Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the final page of the wizard. Only when the IPv6 address is enabled on the first node can you enter IPv6 details for the other two nodes. 
+Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the wizard's final page. 
+You can enter IPv6 address details for the other two nodes only when the IPv6 address is enabled on the first node.
 +
 Ensure that an ESXi host contains only one ONTAP tools VM. The inputs are validated each time you move to the next window. 
-. In the *summary* section, review the details and select *Save* to apply the changes.
+. Review the details in the *Summary* section and *Save* the changes.
+
+.What's next?
 
 The *Overview* page shows the deployment's status. Using the job ID, you can also track the edit appliance settings job status from the jobs view.
 
