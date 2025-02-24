@@ -2,14 +2,14 @@
 permalink: manage/enable-backup.html
 sidebar: sidebar
 keywords:
-summary: 'As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
+summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
 ---
 = Near zero-RPO
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, you need to create backup of the setup and restore it on a new virtual machine.
+Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, you need to create backup of the setup and restore it on a new virtual machine.
 
 == Create backup and download the backup file
 
