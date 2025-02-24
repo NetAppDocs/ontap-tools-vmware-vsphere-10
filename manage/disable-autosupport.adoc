@@ -12,13 +12,12 @@ summary: 'When configuring your storage system for the first time, AutoSupport i
 When configuring your storage system for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled. When you disable AutoSupport, you will no longer receive proactive support and monitoring.
 
 [NOTE]
-It is recommended that you keep the AutoSupport enabled. It helps speed up problem detection and resolution. The system collects AutoSupport information and stores it locally, even when disabled. However, it does not send the report to any network.
+It is recommended that you keep AutoSupport enabled. It helps speed up problem detection and resolution. The system collects AutoSupport information and stores it locally, even when disabled.
 
 .Steps
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
-. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select the *Settings* > *Telemetry* > *Edit* option.
-. Deselect the *AutoSupport* option and save the changes.
-// new topic for 10.4
-
+. From the vCenter Server, open the maintenance console. 
+. Log in as the maintenance user. 
+. Enter 1 to select *Application Configuration*.
+. Enter 3 to select *Disable AutoSupport*.
+. Enter y in the confirmation dialog box. 

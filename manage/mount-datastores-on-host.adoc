@@ -16,7 +16,7 @@ Mounting a datastore provides storage access to additional hosts. You can mount 
 * Some right-click actions are disabled or unavailable depending on the vSphere client version and the type of datastore selected. 
 ** If you're using vSphere client 8.0 or later versions, some of the right-click options are hidden. 
 ** From vSphere 7.0U3 to vSphere 8.0 versions, even though the options appear, the action will be disabled.
-* The Mount datastore option is disabled when the host cluster is protected with uniform configurations. 
+* The mount datastore option is disabled when the host cluster is protected with uniform configurations. 
 
 .Steps
 
