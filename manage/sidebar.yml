@@ -5,7 +5,9 @@ entries:
     url: /configure/dashboard-overview.html
   - title: ONTAP tools Manager user interface
     url: /configure/manager-user-interface.html
-  - title: Edit appliance settings
+  - title: Enable ONTAP tools for VMware vSphere services
+    url: /manage/enable-services.html
+  - title: Change ONTAP tools for VMware vSphere configuration
     url: /manage/edit-appliance-settings.html
   - title: Manage datastores
     entries:
@@ -77,6 +79,10 @@ entries:
         url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
+  - title: Disable AutoSupport
+    url: /manage/disable-autosupport.html
+  - title: Update AutoSupport proxy URL
+    url: /manage/update-proxyurl.html
   - title: Near zero-RPO
     url: /manage/enable-backup.html
   - title: Uninstall ONTAP tools deployment
