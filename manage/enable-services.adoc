@@ -2,14 +2,14 @@
 permalink: manage/enable-services.html
 sidebar: sidebar
 keywords:
-summary: 'You can change the administrator password using ONTAP tools Manager.'
+summary: 'You can change the administrator password using ONTAP tools Manager to enable services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) using ONTAP tools Manager.'
 ---
 = Enable ONTAP tools for VMware vSphere services
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Manager to Enable services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) using ONTAP tools Manager.
+You can change the administrator password using ONTAP tools Manager to enable services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) using ONTAP tools Manager.
 
 .Steps
 
@@ -22,4 +22,4 @@ When enabling the services for the first time, you must create the VASA Provider
 [NOTE]
 Before disabling any optional services, ensure that the vCenter Servers managed by ONTAP tools do not use them.
 +
-The *Allow import of vVols configuration* option is shown only when the VASA Provider service is enabled. This option enables the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.3.
+The *Allow import of vVols configuration* option is shown only when the VASA Provider service is enabled. This option enables the vVols data migration from ONTAP tools 9.x to ONTAP tools 10.4.
