@@ -13,7 +13,7 @@ summary: 'When you right-click on the datastore object in the vCenter object vie
 When you right-click on the datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section. Specific actions are enabled depending on the type of datastore and the current user privileges.
 
 [NOTE]
-Expand vVols datastore operation is not applicable for ASA r2 based vVols datastore.
+Expand vVols datastore operation is not applicable for ASA r2 system-based vVols datastore.
 
 .Steps
 
