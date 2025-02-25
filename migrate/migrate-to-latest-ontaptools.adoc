@@ -189,29 +189,6 @@ Once the patch migration API is run successfully, all the VMs comply with the st
 
 ====
 
-. The delete API for migration is:
-+
-====
-|===
-
-|*HTTP method* |*Path*
-|DELETE
-|/api/v1
-
-|===
-
-*Processing type*
-
-Asynchronous
-
-*Curl example*
-
-/api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
-
-This API deletes migration by migration ID and deletes migration on the given vCenter Server.
-
-====
-
 After successful migration and after you register ONTAP tools 10.3 to the vCenter Server, do the following:
 
 * Refresh the certificate on all the hosts.
