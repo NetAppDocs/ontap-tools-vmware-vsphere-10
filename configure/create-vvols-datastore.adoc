@@ -10,15 +10,8 @@ summary: 'When you create a datastore at host cluster level, the datastore is cr
 
 [.lead]
 
-When you create a datastore at host cluster level, the datastore is created and mounted on all the hosts of the destination and the action is enabled only if the current user has privilege to execute.
+When you create a datastore at the host cluster level, the datastore is created and mounted on all the destination hosts. You can see this option only if you have the required privileges.
 
-The create datastore action wizard supports creation of NFS, VMFS, and vVols datastores.
-
-[NOTE]
-* You can only create a VMFS datastores on a protected cluster. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
-* You cannot create a datastore on a data center that has one or more protected host clusters.
-* You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type (uniform/non-uniform config).
-* You can create a VMFS datastore on a host, only when it has an asynchronous relationship. 
 
 [role="tabbed-block"]
 ====
@@ -30,29 +23,28 @@ You can create a vVols datastore with either new volumes or existing volumes. Yo
 [NOTE]
 Check to ensure root aggregates are not mapped to SVM.
 
-Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore using ASA r2 type of ONTAP storage. The vVols datastore created on ASA r2 systems is created with space-efficiency as thin.vVol. VASA Provider creates a container and the desired protocol endpoints during create vVol datastore workflow. This container will not have any backing volumes.
+Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore using ASA r2 storage systems. The vVols datastore created on ASA r2 systems is created with space-efficiency as thin.vVol. VASA Provider creates a container and the desired protocol endpoints during the vVols datastore creation workflow. This container will not have any backing volumes.
 
 .Before you begin
 
-* Ensure that VASA Provider is registered with the selected vCenter.
-* For SVM user in ASA r2 storage system, SVM should be mapped to aggregate 
+* Ensure that the VASA Provider is registered with the selected vCenter.
+* SVM should be mapped to aggregate for SVM user in the ASA r2 storage system.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 
 .Steps
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
-. Right-click a host system or a host cluster or a data center and select *NetApp ONTAP tools* > *Create Datastore*.
-. In the *Type* pane, select vVols in *Datastore Type*.
-. In the *Name and Protocol* pane, provide *Datastore name* and *Protocol* information.
+. Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
+. Select vVols datastore Type.
+. Enter the *Datastore name* and *Protocol* information.
 [NOTE]
-ASA r2 storage type supports only iSCSI and FC protocol for vVols.
-. In the *Storage* pane, select the storage VM where you want to create the datastore. In the *Advanced options* section, select custom export policy (for NFS protocol) or custom initiator group name (for iSCSI amd FC protocol) as applicable.
+The ASA r2 storage system supports only iSCSI and FC protocol for vVols datastore.
+. Select the storage VM where you want to create the datastore. 
+. Select a custom export policy for the NFS protocol or a custom initiator group name for the iSCSI and FC protocols in the *Advanced options*.
 [NOTE]
-In ASA r2 storage type SVM, storage units(LUN/namespace) are not created as datastore is only a logical container.
+In ASA r2 storage system type SVM, storage units(LUN/namespace) are not created as the datastore is only a logical container.
 //10.3 update for ASA r2
-. In the *Storage attributes* pane, you can either create new volumes or use the existing volumes. When creating new volume, you can enable QoS on the datastore. This step is not applicable for vVols datastores using ASA r2 type of ONTAP storage as vVol datastore does not have backing volumes. There would be one volume created on every LUN create request by default.
+. In the *Storage attributes* pane, you can create new volumes or use the existing volumes. When creating a new volume, you can enable QoS on the datastore. One volume is created for every LUN-created request by default. This step is not applicable for vVols datastores using ASA r2 storage systems as vVols datastore does not have backing volumes. 
 . Review your selection in the *Summary* pane and select *Finish*.
-The vVols Datastore is created and mounted on all the hosts.
-
 --
 
 .Create an NFS datastore
@@ -83,6 +75,12 @@ The NFS datastore is created and mounted on all the hosts.
 
 --
 Virtual Machine File System (VMFS) is a clustered file system specifically designed for storing virtual machine files in VMware vSphere environments. It allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
+
+[NOTE]
+* You can only create a VMFS datastores on a protected cluster. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
+* You cannot create a datastore on a data center that has one or more protected host clusters.
+* You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type (uniform/non-uniform config).
+* You can create a VMFS datastore on a host, only when it has an asynchronous relationship. 
 
 .Before you begin
 
@@ -126,9 +124,16 @@ When the protocol is selected as NVMe/FC or NVMe/TCP, a new namespace subsystem 
 . From the *storage attributes* pane:
 .. Select *Aggregate* from the drop-down menu. 
 [NOTE]
-For ASA r2 storage systems, the *Aggregate* option is not required as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 type SVM, the storage attributes page shows the options to enable QoS.
+For ASA r2 storage systems, the *Aggregate* option is not shown as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 type SVM, the storage attributes page shows the options to enable QoS.
 // updated for 10.3 ASA r2
 .. As per the selected protocol a storage unit(LUN/Namespace) is created with a space reserve of type Thin.
++
+[NOTE]
+Beginning in ONTAP 9.16.1, ASA r2 storage systems support up to 12 nodes per cluster.
+.. The *Performance service level* option is available when the selected storage VM is an ASA r2 storage system with a 12-node SVM of type heterogeneous cluster. 'Any' is the default performance service level value. This setting creates the storage unit using the ONTAP balanced placement algorithm. However, you can select the performance or extreme option as required.
++
+The performance service level input field is not available if you have selected an SVM that is a homogeneous cluster or uses an SVM user.
+// updated for 10.4
 .. Select *Use existing volume*, *Enable QoS* options as required, and provide the details as required.
 +
 [NOTE]
