@@ -36,6 +36,10 @@ image:../media/ontap-tools-manager-overview.png[ONTAP tools Manager dashboard ov
 
 |Alerts card |The Alerts card lists the ONTAP tools alerts by type, including the HA node-level alerts. You can view the list of alerts by selecting on the count text (hyperlink). The link routes you to the alerts view page filtered by the selected type.
 
+|vCenters |The vCenter card shows the health status of the vCenters in the system.
+
+|Storage backends |The Storage backends card shows the health status of the Storage backends in the system.
+
 |ONTAP tools nodes card |ONTAP tools nodes card shows the list of nodes with node name, node VM name, status, and all the network related data. You can select on *View details* to view the additional details related to the selected node. 
 
 [NOTE] In a non-HA setup, only one node is shown. In the HA setup, three nodes are shown.

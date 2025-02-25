@@ -41,8 +41,9 @@ All the virtual machines on the replication group are added to the protection gr
 
 You should pair the protected and recovery sites created using your vSphere Client to enable Storage Replication Adapter (SRA) to discover the storage systems.
 
-// removed for 10.3 will be applicable for 10.4 [NOTE]
-// Storage Replication Adapter (SRA) supports fan-out with with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two async SnapMirror on consistency group or fan-out SnapMirrors on Volume is not supported. 
+// note added for 10.4
+[NOTE]
+Storage Replication Adapter (SRA) supports fan-out with with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two async SnapMirror on consistency group or fan-out SnapMirrors on Volume is not supported. 
 
 .Before you begin
 
