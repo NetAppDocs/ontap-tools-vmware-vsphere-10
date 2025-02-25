@@ -1,0 +1,23 @@
+---
+permalink: manage/disable-autosupport.html
+sidebar: sidebar
+keywords:
+summary: 'When configuring your storage system for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled.'
+---
+= Disable AutoSupport
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When configuring your storage system for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled. When you disable AutoSupport, you will no longer receive proactive support and monitoring.
+
+[NOTE]
+It is recommended that you keep AutoSupport enabled. It helps speed up problem detection and resolution. The system collects AutoSupport information and stores it locally, even when disabled.
+
+.Steps
+
+. From the vCenter Server, open the maintenance console. 
+. Log in as the maintenance user. 
+. Enter 1 to select *Application Configuration*.
+. Enter 3 to select *Disable AutoSupport*.
+. Enter y in the confirmation dialog box. 
