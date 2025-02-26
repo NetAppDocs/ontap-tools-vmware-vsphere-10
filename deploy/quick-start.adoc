@@ -126,9 +126,9 @@ link:../manage/edit-appliance-settings.html[Change ONTAP tools for VMware vSpher
 
 [role="quick-margin-para"]
 To use vVols enable the VASA service. 
-
++
 To use vVols in production, enable high availability with the two optional IP addresses.
-
++
 To use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager or Live Site Recovery, enable the SRA services.
 
 [role="quick-margin-list"]
