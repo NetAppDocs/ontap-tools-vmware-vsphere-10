@@ -23,7 +23,7 @@ To enabling HA deployment later, virtual machine that is hosting the ONTAP tools
 
 If you do not already have a suitable content library, create one using the following steps:
 
-[NOTE]
+*Create content library*
 If you only intend to use a small single node deployment, you do not need to create a content library.
 
 . Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].

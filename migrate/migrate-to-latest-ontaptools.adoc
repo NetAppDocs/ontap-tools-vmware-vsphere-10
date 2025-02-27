@@ -188,30 +188,7 @@ uuid is the migration uuid returned in the response of post migrate API.
 Once the patch migration API is run successfully, all the VMs comply with the storage policy.
 
 ====
-
-. The delete API for migration is:
-+
-====
-|===
-
-|*HTTP method* |*Path*
-|DELETE
-|/api/v1
-
-|===
-
-*Processing type*
-
-Asynchronous
-
-*Curl example*
-
-/api/v1/vcenters/{vcguid}/migration-jobs/{migration_id}
-
-This API deletes migration by migration ID and deletes migration on the given vCenter Server.
-
-====
-
+// removed 10th step for OTVDOC-241 - jani
 After successful migration and after you register ONTAP tools 10.3 to the vCenter Server, do the following:
 
 * Refresh the certificate on all the hosts.
