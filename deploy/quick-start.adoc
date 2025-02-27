@@ -1,0 +1,122 @@
+---
+permalink: deploy/quick-start.html
+sidebar: sidebar
+keywords: ONTAP tools,Storage Replication Adapter
+summary: 'Getting started with ONTAP tools for VMware vSphere includes a few steps.'
+---
+= Quick start for ONTAP tools for VMware vSphere
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Getting started with ONTAP tools for VMware vSphere includes a few steps.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Plan your deployment
+
+[role="quick-margin-para"]
+
+Check the https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool] to ensure your deployment has been certified. 
+
+[role="quick-margin-para"]
+Determine the size and type of ONTAP tools configuration for your environment.
+
+[role="quick-margin-list"]
+* link:../deploy/prerequisites.html[Configuration limits to deploy ONTAP tools for VMware vSphere]
+
+[role="quick-margin-para"]
+Open the required ports in your network firewall. 
+
+[role="quick-margin-list"]
+* link:../deploy/prerequisites.html[Port requirements for the latest update].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy ONTAP tools for VMware vSphere 
+
+[role="quick-margin-para"]
+Deploy ONTAP tools for VMware vSphere as a small sized single node with core services to support NFS/VMFS datastores.
+
+[role="quick-margin-list"]
+* link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Configure your ONTAP tools for VMware vSphere
+
+[role="quick-margin-para"]
+Add and register the ONTAP tools for VMware vSphere in vCenter.
+
+[role="quick-margin-list"]
+* link:../configure/add-vcenter.html[Add vCenter Server instances]
+* link:../configure/registration-process.html[Register VASA Provider to vCenter Server]
+
+[role="quick-margin-para"]
+Install the NFS VAAI plug-in using ONTAP tools for VMware vSphere to leverage the advanced capabilities of your NFS storage array to offload certain storage-related operations from the ESXi hosts to the storage array itself.
+
+[role="quick-margin-list"]
+* link:../configure/install-nfs-vaai-plug-in.html[Install the NFS VAAI plug-in]
+
+[role="quick-margin-para"]
+Configure ONTAP user roles and privileges using the included JSON file.
+
+[role="quick-margin-list"]
+* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
+
+[role="quick-margin-para"]
+If you enabled SRA for SRM/VLSR to protect traditional datastores, configure SRA on VMware Live Site Recovery appliance.
+Optionally, you can set up data protection.
+
+[role="quick-margin-list"]
+* link:../configure/protect-cluster.html[Protect using host cluster protection]
+* link:../protect/enable-storage-replication-adapter.html[Enable SRA to protect datastores]
+
+[role="quick-margin-para"]
+Onboard ONTAP clusters directly in ONTAP tools vCenter UI. 
+Alternatively, you can add SVMs directly when not utilizing vVols.
+
+[role="quick-margin-list"]
+* link:../configure/add-storage-backend.html[Add a storage backend]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Monitor you ONTAP tools for VMware setup
+
+[role="quick-margin-para"]
+
+ONTAP tools for VMware vSphere is a multi-tenant system that can manage multiple vCenter Server instances. ONTAP tools Manager provides more control to the ONTAP tools for VMware vSphere administrator over the managed vCenter Server instances and onboarded storage backends.
+
+[role="quick-margin-list"]
+* link:../configure/manager-user-interface.html[ONTAP tools Manager user interface]
+
+[role="quick-margin-para"]
+The storage view shows the list of vVols that are created by the virtual machine.
+
+[role="quick-margin-list"]
+* link:../manage/virtual-machine-storage-view-datastore.html[Virtual machine storage view]
+
+[role="quick-margin-para"]
+Monitor the status of the host cluster protection. You can monitor every protected host cluster along with its protection state, SnapMirror relationships, datastores, and the corresponding SnapMirror status.
+
+[role="quick-margin-list"]
+* link:../manage/edit-hostcluster-protection.html[Monitor host cluster protection]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] If you opt to deploy HA configuration
+
+[role="quick-margin-para"]
+Create content library (only required for HA)
+
+[role="quick-margin-list"]
+* link:../deploy/ontap-tools-deployment.html[Create content library]
+
+[role="quick-margin-para"]
+If you're using multi-tenant SVMs then onboard clusters in ONTAP tools manager and associate them with vCenters.
+If you're using multi-tenant SVMs then onboard SVMs in ONTAP tools vCenter user interface.
+
+[role="quick-margin-list"]
+* link:../manage/edit-appliance-settings.html[Change ONTAP tools for VMware vSphere configuration]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Activate optional services
+
+[role="quick-margin-para"]
+To use vVols enable the VASA service. 
+
+To use vVols in production, enable high availability with the two optional IP addresses.
+
+To use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager or Live Site Recovery, enable the SRA services.
+
+[role="quick-margin-list"]
+* link:../manage/enable-services.html[Enable ONTAP tools for VMware vSphere services]
