@@ -15,18 +15,11 @@ Getting started with ONTAP tools for VMware vSphere includes a few steps.
 
 [role="quick-margin-para"]
 
-Check the https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool] to ensure your deployment has been certified. 
-
-[role="quick-margin-para"]
-Determine the size and type of ONTAP tools configuration for your environment.
+Check the Interoperability Matrix Tool to ensure your deployment has been certified. Determine the size and type of ONTAP tools configuration for your environment and open the required ports in your network firewall. 
 
 [role="quick-margin-list"]
+* https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool] 
 * link:../deploy/prerequisites.html[Configuration limits to deploy ONTAP tools for VMware vSphere]
-
-[role="quick-margin-para"]
-Open the required ports in your network firewall. 
-
-[role="quick-margin-list"]
 * link:../deploy/prerequisites.html[Port requirements for the latest update].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy ONTAP tools for VMware vSphere 
