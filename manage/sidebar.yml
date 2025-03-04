@@ -82,11 +82,11 @@ entries:
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
   - title: Disable AutoSupport
-    URL: /manage/disable-autosupport.html    
+    url: /manage/disable-autosupport.html    
   - title: Update AutoSupport proxy URL
-    URL: /manage/update-proxyurl.html    
+    url: /manage/update-proxyurl.html    
   - title: Add NTP servers
-    URL: /manage/add-ntpserver.html    
+    url: /manage/add-ntpserver.html    
   - title: Near zero-RPO
     url: /manage/enable-backup.html
   - title: Uninstall ONTAP tools deployment
