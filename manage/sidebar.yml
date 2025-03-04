@@ -59,6 +59,8 @@ entries:
         url: /manage/migrate-standard-virtual-machines-to-vvols-datastores.html
       - title: VASA cleanup
         url: /manage/delete-virtual-machines.html
+      - title: Attach or detach a data disk from a virtual machine
+        url: /manage/attach-detach-disk.html    
   - title: Discover storage systems and hosts
     url: /configure/discover-storage-systems-and-hosts.html
   - title: Modify ESXi host settings
