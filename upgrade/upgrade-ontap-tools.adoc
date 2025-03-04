@@ -9,23 +9,9 @@ summary: 'Upgrade is supported for both HA and non-HA deployments.'
 :imagesdir: ../media/
 
 [.lead]
-The upgrade is supported for both HA and non-HA deployments. The supported upgrade paths are:
-|===
-|From ONTAP tools for VMware vSphere 10.1 and 10.2 configuration | To ONTAP tools for VMware vSphere 10.3 configuration
-|Non-HA small |  Non-HA and advanced small
-|Non-HA medium | Non-HA and advanced medium
-|Advanced small |Non-HA and advanced small
-|Advanced medium |Non-HA and advanced medium
-|HA small |HA small
-|HA medium |HA medium
-|HA large |HA large
-|===
-// otv10.3 updates
+You can upgrade from ONTAP tools for VMware vSphere 10.2 or 10.3 to 10.4. However, direct upgrade from ONTAP tools 10.0 or 10.1 to 10.4 is not supported.
 
-[NOTE]
-Upgrades from ONTAP tools for VMware vSphere 10.1 and 10.2 to 10.3 are supported. Direct upgrades from ONTAP tools 10.0 to 10.3 are not supported.
-
-*Before you begin*
+.Before you begin
 
 For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power off the first node before making the following changes to the virtual machine (VM) settings.
 
@@ -33,7 +19,7 @@ For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power
 * Change the CPU and memory for the powered-off VM according to the flavor of your deployment. Enable the hot plugin for CPU and RAM.
 +
 |===
-|10.3 Deployment Type |CPU(Core) per node |Memory(GB) per node |Disk Space(GB) per node| Total CPU(Core) |Memory(GB) |Total Disk Space(GB)
+|Deployment Type |CPU(Core) per node |Memory(GB) per node |Disk Space(GB) per node| Total CPU(Core) |Memory(GB) |Total Disk Space(GB)
 
 |Non-HA Small
 |9
@@ -85,7 +71,7 @@ For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power
 * If the appliance was deployed as a local path (easy deployment) with ONTAP tools 10.1 or 10.2, you need to take a quiesce snapshot before upgrading.
 
 If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
-
+// for 10.4 add a comment asking if this section of upgrading from 10.0 to 10.1 is required.
 *Enable Diagnostics*
 
 . From the vCenter Server, open a console to ONTAP tools.
@@ -146,16 +132,16 @@ image:../media/primaryvm-edit-settings.png[Edit settings]
 .. Certificate upgrade
 .. Remote plug-in upgrade
 
-After upgrading to ONTAP tools for VMware vSphere 10.3, you can: 
+After upgrading to ONTAP tools for VMware vSphere 10.4, you can: 
 
 * Disable the services from the manager user interface
 * Move from a non-HA setup to an HA setup
 * Scale up a non-HA small configuration a non-HA medium or to a HA medium or large configuration.
 * In case of a non-HA upgrade, reboot the ONTAP tools VM to reflect the changes. In case of an HA upgrade, reboot the first node to reflect the changes on the node.
 
-*After you finish*
+.What's next
 
-After you upgrade from previous releases of ONTAP tools for VMware vSphere to 10.3, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
+After you upgrade from previous releases of ONTAP tools for VMware vSphere to 10.4, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
 // OTVDOC-167 - updated by jani
 
 After you upgrade successfully, delete the Trident volumes from ONTAP manually using the following procedure:
@@ -176,7 +162,7 @@ sudo python3 /home/maint/scripts/ontap_cleanup.py
 
 This deletes all the Trident volumes in ONTAP used in ONTAP tools for VMware vSphere 10.1/10.2.
 
-*Related information*
+.Related information
 
-link:../migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.x to 10.3]
+link:../migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.x to 10.4]
 // OTVDOC-164 - jani

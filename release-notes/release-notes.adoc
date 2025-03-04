@@ -10,10 +10,10 @@ summary: 'Provides important information about this release of ONTAP tools for V
 
 [.lead]
 
-Learn about the new and enhanced features available in ONTAP tools for VMware vSphere 10.3.
+Learn about the new and enhanced features available in ONTAP tools for VMware vSphere 10.4.
 
-For a complete list of new features and enhancements, refer xref:whats-new.adoc[What's new in ONTAP tools for VMware vSphere 10.3].
+For a complete list of new features and enhancements, refer xref:whats-new.adoc[What's new in ONTAP tools for VMware vSphere 10.4].
 
-To learn more about whether migrating from ONTAP tools for VMware vSphere 9 to ONTAP tools 10.3 is right for your deployment, refer to xref:ontap-tools-9-ontap-tools-10-feature-comparison.adoc[ONTAP tools for VMware vSphere 9 and ONTAP tools for VMware vSphere 10 feature comparison]. Migration is supported from ONTAP tools for VMware vSphere 9.12-D, and 9.13-D releases to ONTAP tools for VMware vSphere 10.3.
+To learn more about whether migrating from ONTAP tools for VMware vSphere 9 to ONTAP tools 10.4 is right for your deployment, refer to xref:ontap-tools-9-ontap-tools-10-feature-comparison.adoc[ONTAP tools for VMware vSphere 9 and ONTAP tools for VMware vSphere 10 feature comparison]. Migration is supported from ONTAP tools for VMware vSphere 9.12-D, and 9.13-D releases to ONTAP tools for VMware vSphere 10.4.
 
 For more information, refer the https://library.netapp.com/ecm/ecm_download_file/ECMLP3334864[ONTAP tools for VMware vSphere 10.3 Release Notes^]. You must sign in with your NetApp account or create an account to access the Release Notes.

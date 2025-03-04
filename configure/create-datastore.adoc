@@ -129,7 +129,7 @@ For ASA r2 storage systems, the *Aggregate* option is not shown as the ASA r2 st
 Beginning in ONTAP 9.16.1, ASA r2 storage systems support up to 12 nodes per cluster.
 .. Select the *Performance service level* for ASA r2 storage systems with 12 nodes SVM that is a heterogeneous cluster. This option is unavailable if the selected SVM is a homogeneous cluster or uses an SVM user.
 +
-'Any' is the default performance service level value. This setting creates the storage unit using the ONTAP balanced placement algorithm. However, you can select the performance or extreme option as required.
+'Any' is the default performance service level (PSL) value. This setting creates the storage unit using the ONTAP balanced placement algorithm. However, you can select the performance or extreme option as required.
 // updated for 10.4
 .. Select *Use existing volume*, *Enable QoS* options as required, and provide the details as required.
 +

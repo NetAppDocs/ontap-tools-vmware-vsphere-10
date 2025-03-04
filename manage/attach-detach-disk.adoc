@@ -1,0 +1,23 @@
+---
+permalink: manage/attach-detach-disk.html
+sidebar: sidebar
+keywords:
+summary: '-'
+---
+= Attach or detach a data disk from virtual machine
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Attach a 
+
+
+== Attach a data disk to a virtual machine
+
+.Steps
+
+
+
+== Detach a data disk from virtual machine
+
+Detach a data disk that's attached to a virtual machine when you no longer need it. This task removes the disk from the virtual machine, but doesn't remove it from storage. When you detach a disk from the VM it is not automatically deleted.

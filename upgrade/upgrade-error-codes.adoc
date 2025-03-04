@@ -88,6 +88,6 @@ You can try to migrate the VM to another host and restart.
 |===
 
 [NOTE]
-ONTAP tools for VMware vSphere 10.3 does on support zero RPO.
+Beginning with ONTAP tools for VMware vSphere 10.3 zero RPO is not supported.
 
 Learn more about https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/How_to_restore_ONTAP_tools_for_VMware_vSphere_if_upgrade_fails_from_version_10.0_to_10.1[How to restore ONTAP tools for VMware vSphere if upgrade fails from version 10.0 to 10.1]
