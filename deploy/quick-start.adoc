@@ -33,7 +33,7 @@ Deploy ONTAP tools for VMware vSphere as a small sized single node with core ser
 
 [role="quick-margin-para"]
 To use vVols, enable the VASA service and enable high availability with the two optional IP addresses. Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager (SRM) or VMware Live Site Recovery (VLSR).
-
+[role="quick-margin-para"]
 If you're using vVols with multiple vCenter Severs, upgrade the self-signed certificate to certificate authority (CA) signed certificate.
 
 
@@ -49,33 +49,8 @@ If you're using vVols with multiple vCenter Severs, upgrade the self-signed cert
 * link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges] using the JSON file.
 * link:../configure/install-nfs-vaai-plug-in.html[Install the NFS VAAI plug-in]
 * link:../configure/add-vcenter.html[Add vCenter Server instances] in ONTAP tools manager.
-* If you're using the multi-tenant SVMs then link:../configure/add-storage-backend.html[Add a storage backend] in ONTAP tools Manager and associate them with vCenters.
-*  If using multi-tenant SVMs then onboard SVMs in ONTAP tools vCenter UI.
-* link:../configure/registration-process.html[Register VASA Provider to vCenter Server]
-* link:../configure/protect-cluster.html[Protect using host cluster protection]
-
-[role="quick-margin-para"]
-Onboard ONTAP clusters directly in ONTAP tools vCenter UI. 
-Alternatively, you can add SVMs directly when not utilizing vVols.
-
-[role="quick-margin-list"]
-* link:../configure/add-storage-backend.html[Add a storage backend]
-
-[role="quick-margin-para"]
-
-ONTAP tools for VMware vSphere is a multi-tenant system that can manage multiple vCenter Server instances. ONTAP tools Manager provides more control to the ONTAP tools for VMware vSphere administrator over the managed vCenter Server instances and onboarded storage backends.
-
-[role="quick-margin-list"]
-* link:../configure/manager-user-interface.html[ONTAP tools Manager user interface]
-
-[role="quick-margin-para"]
-The storage view shows the list of vVols that are created by the virtual machine.
-
-[role="quick-margin-list"]
-* link:../manage/virtual-machine-storage-view-datastore.html[Virtual machine storage view]
-
-[role="quick-margin-para"]
-Monitor the status of the host cluster protection. You can monitor every protected host cluster along with its protection state, SnapMirror relationships, datastores, and the corresponding SnapMirror status.
-
-[role="quick-margin-list"]
-* link:../manage/edit-hostcluster-protection.html[Monitor host cluster protection]
+* If you're using multi-tenant SVMs, link:../configure/add-storage-backend.html[Add a storage backend] and link:../configure/associate-storage-backend.html[Associate a storage backend with a vCenter Server instance]. Onborad the clusters in ONTAP tools manager or onboard the SVM using vSphere client user interface.
+*  If not using multi-tenant SVMs then onboard clusters directly in ONTAP tools vCenter UI. Alternatively, in this scenario, it is possible to add SVMs directly when not utilizing vVols.
+*  If you enabled SRA for SRM/VLSR to protect traditional datastores, link:../protect/configure-on-srm-appliance.html[Configure SRA on VMware Live Site Recovery appliance].
+* Configure native backups for link:../manage/enable-backup.html[Near zero-RPO].
+* Configure regular backups to other storage media.
