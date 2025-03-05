@@ -2,14 +2,14 @@
 permalink: protect/configure-on-srm-appliance.html
 sidebar: sidebar
 keywords:
-summary: 'After you have deployed the VMware Live Site Recovery appliance, you should configure SRA on VMware Live Site Recovery appliance. The successful configuration of SRA enables VMware Live Site Recovery appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools for VMware vSphere credentials \(IP address and administrator password\) in the VMware Live Site Recovery appliance to enable communication between VMware Live Site Recovery appliance and SRA.'
+summary: 'After you have deployed the VMware Live Site Recovery appliance, you should configure SRA on the VMware Live Site Recovery appliance. The successful configuration of SRA enables VMware Live Site Recovery appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools for VMware vSphere credentials \(IP address and administrator password\) in the VMware Live Site Recovery appliance to enable communication between VMware Live Site Recovery appliance and SRA.'
 ---
-= Configure SRA on VMware Live Site Recovery appliance
+= Configure SRA on the VMware Live Site Recovery appliance
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-After you have deployed the VMware Live Site Recovery appliance, you should configure SRA on VMware Live Site Recovery appliance. The successful configuration of SRA enables the VMware Live Site Recovery appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools for VMware vSphere credentials (IP address) in the VMware Live Site Recovery appliance to enable communication between VMware Live Site Recovery appliance and SRA.
+After you have deployed the VMware Live Site Recovery appliance, you should configure SRA on the VMware Live Site Recovery appliance. The successful configuration of SRA enables the VMware Live Site Recovery appliance to communicate with SRA for disaster recovery management. You should store ONTAP tools for VMware vSphere credentials (IP address) in the VMware Live Site Recovery appliance to enable communication between VMware Live Site Recovery appliance and SRA.
 
 .Before you begin
 
