@@ -11,10 +11,9 @@ summary: 'vCenters are central management platforms that allow you to control ho
 [.lead]
 vCenter Server instances are central management platforms that allow you to control hosts, virtual machines, and storage backends.
 
-== Associate or dissociate storage backends with the vCenter Server instance
+== Dissociate storage backends with the vCenter Server instance
 
 The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to associate or disassociate with a storage backend.
-This task helps you to create mapping between storage backend and onboarded vCenter Server instance globally.
 
 .Steps
 
@@ -22,7 +21,7 @@ This task helps you to create mapping between storage backend and onboarded vCen
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the required vCenter Server instance from the sidebar.
 . Select the vertical ellipses against the vCenter Server that you want to associate or dissociate with storage backends.
-. Select *Associate or Dissociate storage backend* depending on what action you want to perform.
+. Select *Dissociate storage backend*.
 
 == Modify a vCenter Server instance
 Follow the steps below to modify a vCenter Server instances.

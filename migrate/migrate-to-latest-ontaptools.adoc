@@ -53,7 +53,7 @@ Do not migrate if the failover has just been completed and re-protection is pend
 .. Select the ellipsis menu and select *Delete*
 +
 Perform these steps on both protection and recovery sites.
-. Install ONTAP tools for VMware vSphere 10.4 SRA adapter on both protection and recovery sites using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on VMware Live Site Recovery appliance]
+. Install ONTAP tools for VMware vSphere 10.3 SRA adapter on both protection and recovery sites using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
 . On the VMware Live Site Recovery user interface page, perform *Discover Arrays* and *Discover Devices* operations and verify that the devices are showing as they were before the migration.
 
 == VASA Provider migration steps

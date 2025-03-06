@@ -23,10 +23,10 @@ To enabling HA deployment later, virtual machine that is hosting the ONTAP tools
 
 If you do not already have a suitable content library, create one using the following steps:
 
-[NOTE]
+*Create content library*
 If you only intend to use a small single node deployment, you do not need to create a content library.
 
-. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^].
+. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^].
 . Log in to the vSphere client using `\https://<vcenterip>/<ui>`
 . Select the horizontal ellipses next to vSphere client and select *Content library*.
 . Select *Create* on the right of the page.
@@ -45,7 +45,7 @@ Before proceeding with the deployment, set the cluster's Distributed Resource Sc
 
 .Steps
 
-. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step as you can deploy directly from the content library.
+. Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step as you can deploy directly from the content library.
 . Log in to the vSphere server.
 . Navigate to the resource pool that you have created or to the cluster or to the host where you want to deploy the OVA.
 . Right-click the required location and select *Deploy OVF template...*.
