@@ -13,7 +13,7 @@ After you have deployed the VMware Live Site Recovery appliance, you should conf
 
 .Before you begin
 
-You should have downloaded the _tar.gz_ file from https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab[NetApp Support Site].
+You should have downloaded the _tar.gz_ file from https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site].
 
 *About this task*
 
