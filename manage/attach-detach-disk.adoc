@@ -15,7 +15,7 @@ Attach a data disk to a virtual machine to expand the storage capacity.
 
 .Steps
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . Right-click a virtual machine in the inventory and select *Edit Settings*.
 . On the *Virtual Hardware* tab, select *Existing hard disk*.
 . Select the virtual machine where the disk exists.
@@ -30,7 +30,7 @@ You can detach a data disk attached to a virtual machine when it is no longer ne
 
 .Steps
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . Right-click a virtual machine in the inventory and select *Edit Settings*.
 . Move your pointer over the disk and select *Remove*.
 [NOTE]

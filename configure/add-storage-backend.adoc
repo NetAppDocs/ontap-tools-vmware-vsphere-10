@@ -44,7 +44,7 @@ IPv4 and IPv6 address management LIFs are supported.
 [NOTE]
 When you add a storage backend using the vSphere client user interface, the vVols datastore does not support directly adding an SVM user.
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
 . Select *Storage Backends* from the sidebar.
 . Add the storage backend and provide the server IP address, username, password, and port details.

@@ -17,7 +17,7 @@ If there is an issue with your ESXi host settings, the issue is displayed in the
 
 .Steps
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
 . Go to *ESXi Host compliance* portlet in the Overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
 . Select *Apply Recommended Settings* link.

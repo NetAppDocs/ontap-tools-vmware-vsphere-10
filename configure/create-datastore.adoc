@@ -32,7 +32,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 
 .Steps
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
 . Select vVols datastore Type.
 . Enter the *Datastore name* and *Protocol* information.
@@ -53,7 +53,7 @@ In ASA r2 storage system type SVM, storage units(LUN/namespace) are not created 
 A VMware Network File System (NFS) datastore uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
 
 .Steps
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
 . Select NFS in the *Datastore Type* field.
 . Enter the datastore name, size, and protocol information in the *Name and Protocol* pane. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
@@ -110,7 +110,7 @@ For more information on using NVMe/FC protocol with VMware vSphere 8.0, refer to
 For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[ONTAP NVMe/FC Host Configuration guide] and http://www.netapp.com/us/media/tr-4684.pdf[TR-4684].
 
 .Steps
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
 . Select VMFS datastore type.
 . Enter the datastore name, size, and protocol information in the *Name and Protocol* pane.

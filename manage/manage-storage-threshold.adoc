@@ -13,7 +13,7 @@ summary: 'You can set the threshold to receive notifications in vCenter Server w
 You can set the threshold to receive notifications in vCenter Server when the volume and the aggregate capacity reaches certain levels.
 
 .Steps:
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Settings* > *Threshold Settings* > *Edit*.
 . In the *Edit Threshold* window, provide the desired values in the *Nearly Full* and *Full* fields and select *Save*.

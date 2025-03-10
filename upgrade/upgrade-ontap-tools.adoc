@@ -97,7 +97,7 @@ Run the following commands to take a backup of MongoDB:
 * Run 'kn get pvc' command and save the command output.
 * Take snapshots of all the volumes one by one using one of the following methods:
 ** From CLI, run the command _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
-** From the ONTAP system manager user interface, search the volume by its name in the search bar, then open that volume by selecting on the name. Go to snapshot and add the snapshot of that volume.
+** From the ONTAP System Manager user interface, search the volume by its name in the search bar, then open that volume by selecting on the name. Go to snapshot and add the snapshot of that volume.
 
 *Take the snapshot of ONTAP tools for VMware vSphere VMs in vCenter (3VMs in case of HA Deployment, 1 VM in case of non-HA deployment)*
 

@@ -27,7 +27,7 @@ If you do not already have a suitable content library, create one using the foll
 If you only intend to use a small single node deployment, you do not need to create a content library.
 
 . Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^].
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . Select the horizontal ellipses next to vSphere client and select *Content library*.
 . Select *Create* on the right of the page.
 . Provide a name for the library and create the content library.

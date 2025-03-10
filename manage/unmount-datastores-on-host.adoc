@@ -14,7 +14,7 @@ Unmount datastore action unmounts a NFS or VMFS datastore from ESXi hosts. Unmou
 
 .Steps
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . Right-click a NFS or VMFS datastore object and select *Unmount datastore*.
 +
 A dialog box opens and lists the ESXi hosts that the datastore is mounted on. 
