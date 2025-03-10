@@ -85,7 +85,7 @@ entries:
     url: /manage/update-proxyurl.html
   - title: Near zero-RPO
     url: /manage/enable-backup.html
-  - title: Uninstall ONTAP tools deployment
+  - title: Uninstall ONTAP tools for VMware vSphere
     url: /manage/uninstall-deployment.html
   - title: Clean up volumes
     url: /manage/delete-deployment.html
