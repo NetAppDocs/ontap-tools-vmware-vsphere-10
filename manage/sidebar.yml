@@ -87,6 +87,6 @@ entries:
     url: /manage/enable-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
     url: /manage/uninstall-deployment.html
-  - title: Clean up volumes
+  - title: Remove FlexVol volumes
     url: /manage/delete-deployment.html
 
