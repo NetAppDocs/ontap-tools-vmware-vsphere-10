@@ -2,7 +2,7 @@
 permalink: manage/uninstall-deployment.html
 sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
-summary: 'Follow the instructions in this section to gracefully terminate your ONTAP tools for VMware vSphere deployment.'
+summary: 'Follow the instructions in this section to terminate your ONTAP tools for VMware vSphere deployment gracefully.'
 ---
 = Uninstall ONTAP tools for VMware vSphere
 :icons: font
