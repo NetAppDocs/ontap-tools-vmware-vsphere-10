@@ -1,6 +1,8 @@
 section: deploy
 title: Deploy ONTAP tools for VMware vSphere
 entries:
+  - title: Quick start for ONTAP tools for VMware vSphere
+    url: deploy/quick-start.html
   - title: Prerequisites
     url: /deploy/prerequisites.html
   - title: Deploy ONTAP tools for VMware vSphere
