@@ -33,8 +33,11 @@ Deploy ONTAP tools for VMware vSphere as a small-sized single node with core ser
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Configure your ONTAP tools for VMware vSphere
 
 [role="quick-margin-para"]
-you can scale up the ONTAP tools for VMware vSphere configuration to increase the number of nodes in the deployment or change the configuration to High Availability (HA) setup.
+You can configure the ONTAP tools for VMware vSphere to increase the number of nodes in the deployment or change the configuration to High Availability (HA) setup.
+
+[role="quick-margin-para"]
 To use vVols, enable the VASA service and high availability with the two optional IP addresses. Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager (SRM) or VMware Live Site Recovery (VLSR).
+
 [role="quick-margin-para"]
 If you're using vVols with multiple vCenter Severs, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
 
