@@ -15,11 +15,12 @@ Getting started with ONTAP tools for VMware vSphere includes a few steps.
 
 [role="quick-margin-para"]
 
-Check the Interoperability Matrix Tool (IMT) to ensure your deployment has been certified. Determine the size and type of ONTAP tools configuration for your environment and open the required ports in your network firewall. 
+Check the Interoperability Matrix Tool (IMT) to ensure your deployment has been certified. Determine the size and type of ONTAP tools configuration for your environment and open the required ports in your network firewall. Run through the pre-deployment checks.
 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool] 
 * link:../deploy/prerequisites.html[Prerequisites for ONTAP tools for VMware vSphere deployment]
+* link:../deploy/pre-deploy-checks.html[Pre-deployment checks]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy ONTAP tools for VMware vSphere 
 
@@ -32,6 +33,7 @@ Deploy ONTAP tools for VMware vSphere as a small-sized single node with core ser
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Configure your ONTAP tools for VMware vSphere
 
 [role="quick-margin-para"]
+you can scale up the ONTAP tools for VMware vSphere configuration to increase the number of nodes in the deployment or change the configuration to High Availability (HA) setup.
 To use vVols, enable the VASA service and high availability with the two optional IP addresses. Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager (SRM) or VMware Live Site Recovery (VLSR).
 [role="quick-margin-para"]
 If you're using vVols with multiple vCenter Severs, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
