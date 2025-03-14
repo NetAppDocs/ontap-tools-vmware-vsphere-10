@@ -1,11 +1,20 @@
 settings:
   name: ONTAP tools for VMware vSphere 10.3
+
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
-
+  versions:
+    - version-number: "10.3"
+      url: /ontap-tools-vmware-vsphere-10
+    - version-number: "10.2"
+      url: /ontap-tools-vmware-vsphere-102
+    - version-number: "10.1"
+      url: /ontap-tools-vmware-vsphere-101         
+    - version-number: "10.0"
+      url: /ontap-tools-vmware-vsphere-100     
 sidebar: 
   entries:
     - title: ONTAP tools for VMware vSphere 10.3
