@@ -5,7 +5,7 @@ keywords: vcenter, vcenter server, vcenter server rbac, rbac environment
 summary: "VMware vCenter Server provides an RBAC capability that enables you to control access to vSphere objects. It is an important part of the vCenter centralized authentication and authorization security services."
 ---
 
-= vCenter Server RBAC environment
+= vCenter Server RBAC environment with ONTAP tools for VMware vSphere 10
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -5,7 +5,7 @@ keywords: ontap rbac, ontap rbac environment
 summary: "ONTAP provides a robust and extensible RBAC environment. You can use the RBAC capability to control access to the storage and system operations as exposed through the REST API and CLI. It's helpful to be familiar with the environment before using it with an ONTAP tools for VMware vSphere 10 deployment."
 ---
 
-= ONTAP RBAC environment
+= ONTAP RBAC environment with ONTAP tools for VMware vSphere 10
 :hardbreaks:
 :nofooter:
 :icons: font
