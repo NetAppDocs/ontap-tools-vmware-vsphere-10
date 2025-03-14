@@ -1,7 +1,7 @@
 ---
 permalink: concepts/rbac-learn-about.html
 sidebar: sidebar
-keywords: role based access control, rbac, rbac components, learn rbac
+keywords: role based access control, rbac, rbac components, learn about rbac
 summary: "Role-based access control (RBAC) is a security framework for controlling access to resources within an organization. RBAC simplifies administration by defining roles with specific levels of authority to perform actions, instead of assigning authorization to individual users. The defined roles are assigned to users, which helps reduce risk of error and simplifies management of access control across your organization."
 ---
 

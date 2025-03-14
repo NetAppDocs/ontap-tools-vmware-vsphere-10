@@ -1,7 +1,7 @@
 ---
 permalink: concepts/rbac-ontap-use.html
 sidebar: sidebar
-keywords:
+keywords: ontap rbac, use ontap rbac
 summary: "There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implementation with ONTAP you should consider before using it in a production environment."
 ---
 = Use ONTAP RBAC with ONTAP tools for VMware vSphere 10
