@@ -1,0 +1,63 @@
+---
+permalink: concepts/rbac-ontap-environment.html
+sidebar: sidebar
+keywords: ontap rbac, ontap rbac environment
+summary: "ONTAP provides a robust and extensible RBAC environment. You can use the RBAC capability to control access to the storage and system operations as exposed through the REST API and CLI. It's helpful to be familiar with the environment before using it with an ONTAP tools for VMware vSphere 10 deployment."
+---
+
+= ONTAP RBAC environment
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+ONTAP provides a robust and extensible RBAC environment. You can use the RBAC capability to control access to the storage and system operations as exposed through the REST API and CLI. It's helpful to be familiar with the environment before using it with an ONTAP tools for VMware vSphere 10 deployment.
+
+== Overview of the administrative options
+
+There are several options available when using ONTAP RBAC depending on your environment and goals. An overview of the major administrative decisions is presented below. Also see https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html[ONTAP Automation: Overview of RBAC security^] for more information.
+
+[NOTE]
+ONTAP RBAC is tailored to a storage environment and is simpler than the RBAC implementation provided with vCenter Server. With ONTAP, you assign a role directly to the user. Configuring explicit permissions, such as those used with vCenter Server, are not needed with ONTAP RBAC.
+
+.Types of roles and privileges
+
+An ONTAP role is required when defining an ONTAP user. There are two types of ONTAP roles:
+
+* REST
++
+The REST roles were introduced with ONTAP 9.6 and are generally applied to users accessing ONTAP through the REST API. The privileges included in these roles are defined in terms of access to the ONTAP REST API endpoints and the associated actions.
+
+* Traditional
++
+These are the legacy roles included prior to ONTAP 9.6. They continue to be a foundational aspect of RBAC. The privileges are defined in terms of access to the ONTAP CLI commands.
+
+While the REST roles were introduced more recently, the traditional roles have some advantages. For example, additional query parameters can optionally be included so the privileges more precisely define the objects they are applied to.
+
+.Scope
+
+ONTAP roles can be defined with one of two different scopes. They can be applied to a specific data SVM (SVM level) or to the entire ONTAP cluster (cluster level).
+
+.Role definitions
+
+ONTAP provides a set of pre-defined roles at both the cluster and SVM level. You can also define custom roles.
+
+== Working with ONTAP REST roles
+
+There are several considerations when using the ONTAP REST roles included with ONTAP tools for VMware vSphere 10.
+
+.Role mapping
+
+Whether using a traditional or REST role, all ONTAP access decisions are made based on the underlying CLI command. But because the privileges in a REST role are defined in terms of the REST API endpoints, ONTAP needs to create a _mapped_ traditional role for each of the REST roles. Therefore each REST role maps to an underlying traditional role. This allows ONTAP to make access control decisions in a consistent way regardless of the role type. You cannot modify the parallel mapped roles.
+
+.Defining a REST role using CLI privileges
+
+Because ONTAP always uses the CLI commands to determine access at a base level, it's possible to express a REST role using CLI command privileges instead of REST endpoints. One benefit of this approach is the additional granularity available with the traditional roles.
+
+.Administrative interface when defining ONTAP roles
+
+You can create users and roles with the ONTAP CLI and REST API. However, it's more convenient to use the System Manager interface along with the JSON file available through the ONTAP tools Manager. See link:../concepts/rbac-ontap-use.html[Use ONTAP RBAC with ONTAP tools for VMware vSphere 10] for more information.
+
+// Jan 28 2025 - OTVDOC-179

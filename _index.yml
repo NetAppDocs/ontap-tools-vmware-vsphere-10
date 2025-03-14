@@ -17,7 +17,7 @@ indexpage:
     - title: Use ONTAP tools for VMware vSphere
       links:
       - title: Configure role-based access control
-        url: /concepts/vcenter-server-role-based-access-control-features.html
+        url: /concepts/rbac-learn-about.html
       - title: Configure remote diagnostics
         url: /manage/configure-remote-diagnostic-access.html
       - title: High availability for ONTAP tools for VMware vSphere
