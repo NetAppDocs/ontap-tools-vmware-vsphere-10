@@ -1,0 +1,4 @@
+---
+permalink: concepts/key-points-about-assign-and-modify-permissions.html
+redirect: ontap-tools-vmware-vsphere-10/concepts/rbac-learn-about.html
+---

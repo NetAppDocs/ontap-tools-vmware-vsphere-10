@@ -1,0 +1,4 @@
+---
+permalink: concepts/vcenter-server-role-based-access-control-features.html
+redirect: ontap-tools-vmware-vsphere-10/concepts/rbac-learn-about.html
+---

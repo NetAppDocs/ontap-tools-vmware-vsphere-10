@@ -1,0 +1,4 @@
+---
+permalink: concepts/privileges-required.html
+redirect: ontap-tools-vmware-vsphere-10/concepts/rbac-learn-about.html
+---

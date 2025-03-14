@@ -1,0 +1,48 @@
+---
+permalink: concepts/rbac-vcenter-environment.html
+sidebar: sidebar
+keywords: vcenter, vcenter server, vcenter server rbac, rbac environment
+summary: "VMware vCenter Server provides an RBAC capability that enables you to control access to vSphere objects. It is an important part of the vCenter centralized authentication and authorization security services."
+---
+
+= vCenter Server RBAC environment with ONTAP tools for VMware vSphere 10
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+VMware vCenter Server provides an RBAC capability that enables you to control access to vSphere objects. It is an important part of the vCenter centralized authentication and authorization security services.
+
+== Illustration of a vCenter Server permission
+
+A permission is the foundation for enforcing access control in the vCenter Server environment. It's applied to a vSphere object with a user or group included with the permission definition. A high-level illustration of a vCenter permission is provided in the figure below.
+
+image:vc-permission.png[vCenter permission]
+
+== Components of a vCenter Server permission
+
+A vCenter Server permission is a package of several components that are bound together when the permission is created.
+
+=== vSphere objects
+
+Permissions are associated with vSphere objects, such as the vCenter Server, ESXi hosts, virtual machines, datastores, data centers, and folders. Based on the object's assigned permissions, vCenter Server determines which actions or tasks can be performed on the object by each user or group. For the tasks specific to ONTAP tools for VMware vSphere, all permissions are assigned and validated at the root or root folder level of vCenter Server. See link:../concepts/rbac-vcenter-use.html[Use RBAC with vCenter server] for more information.
+
+=== Privileges and roles
+
+There are two types of vSphere privileges used with ONTAP tools for VMware vSphere 10. To simplify working with RBAC in this environment, ONTAP tools provides roles containing the required native and custom privileges. The privileges include:
+
+* Native vCenter Server privileges
++
+These are the privileges provided by vCenter Server.
+
+* ONTAP tools-specific privileges
++
+These are custom privileges unique to ONTAP tools for VMware vSphere.
+
+=== Users and groups
+
+You can define users and groups using Active Directory or the local vCenter Server instance. Combined with a role, you can create a permission on an object in the vSphere object hierarchy. The permission grants access based on the privileges in the associated role. Note that roles are not assigned directly to users in isolation. Instead, users and groups gain access to an object through role privileges as part of the larger vCenter Server permission.
+
+// Jan 28 2025 - OTVDOC-179
