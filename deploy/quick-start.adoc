@@ -17,7 +17,6 @@ Getting started with ONTAP tools for VMware vSphere includes a few steps.
 Ensure your vSphere version, ONTAP version, and ESXi host version is compatible with the ONTP tools version. Allocate sufficent CPU, memory, and disk space. Depending on your security policies, you may need to configure firewalls or other security appliances to permit the traffic within your network.
 
 [role="quick-margin-para"]
-
 Ensure you have access to vCenter Server. Ensure VMware vSphere web client is installed and accessible.
 
 [role="quick-margin-list"]
@@ -32,16 +31,14 @@ You initially deploy ONTAP tools for VMware vSphere in a small-sized single node
 If you need to expand your configuration so that you can use vVols and high availability (HA). You’ll expand your configuration after you finish this workflow.
 
 [role="quick-margin-list"]
-
-link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
+* link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Configure ONTAP user roles and privileges
 [role="quick-margin-para"]
 Configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.
 
 [role="quick-margin-list"]
-
-link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
+* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure storage backends and vCenter Server
 [role="quick-margin-para"]
@@ -49,7 +46,6 @@ Add storage backend to onboard an ONTAP cluster. Add a storage backend to a glob
 
 [role="quick-margin-list"]
 * link:../configure/add-vcenter.html[Add vCenter Server instances]
-
 * link:../configure/add-storage-backend.html[Add a storage backend]
 * link:../configure/associate-storage-backend.html[Associate the storage backend with a vCenter Server instance]
 
@@ -67,8 +63,7 @@ As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you can
 Set up backup intervals. Schedule backups during periods of low activity to minimize the impact on the production systems.
 
 [role="quick-margin-list"]
-
-link:../manage/enable-backup.html[Near zero-RPO]
+* link:../manage/enable-backup.html[Near zero-RPO]
 
 == High availability(HA) deployment workflow
 
@@ -80,17 +75,15 @@ To use the HA features, enable the VASA Provider services.
 [role="quick-margin-para"]
 You can scale up the ONTAP tools for VMware vSphere configuration to increase the number of nodes in the deployment and change the configuration to High Availability (HA) setup.
 
-
 [role="quick-margin-list"]
-
-link:../manage/edit-appliance-settings.html[Change ONTAP tools for VMware vSphere configuration]
+* link:../manage/edit-appliance-settings.html[Change ONTAP tools for VMware vSphere configuration]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Enable services
 
 [role="quick-margin-para"]
 To configure vVols datastore and to enable high availability (HA), you need to enable VASA Provider service and HA with the two optional IP addresses. 
 Register the VASA provider with vCenter, and ensure storage policies meet HA requirements, including proper network and storage configurations. 
-
+[role="quick-margin-para"]
 Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager (SRM) or VMware Live Site Recovery (VLSR).
 
 [role="quick-margin-list"]
@@ -102,5 +95,4 @@ Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for
 If you're using vVols with multiple vCenter Severs, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
 
 [role="quick-margin-list"]
-
-link:../manage/certificate-manage.html[Manage certificates]
+* link:../manage/certificate-manage.html[Manage certificates]
