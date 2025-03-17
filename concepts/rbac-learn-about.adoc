@@ -1,0 +1,56 @@
+---
+permalink: concepts/rbac-learn-about.html
+sidebar: sidebar
+keywords: role based access control, rbac, rbac components, learn about rbac
+summary: "Role-based access control (RBAC) is a security framework for controlling access to resources within an organization. RBAC simplifies administration by defining roles with specific levels of authority to perform actions, instead of assigning authorization to individual users. The defined roles are assigned to users, which helps reduce risk of error and simplifies management of access control across your organization."
+---
+
+= Learn about ONTAP tools for VMware vSphere 10 RBAC
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Role-based access control (RBAC) is a security framework for controlling access to resources within an organization. RBAC simplifies administration by defining roles with specific levels of authority to perform actions, instead of assigning authorization to individual users. The defined roles are assigned to users, which helps reduce risk of error and simplifies management of access control across your organization.
+
+The RBAC standard model consists of several implementation technologies or phases of increasing complexity. The result is that actual RBAC deployments, based on the needs of the software vendors and their customers, can differ and range from relatively simple to very complex.
+
+== RBAC components
+
+At a high level, there are several components which are generally included with every RBAC implementation. These components are bound together in different ways as part of defining the authorization processes.
+
+.Privileges
+
+A _privilege_ is an action or capability that can be allowed or denied. It might be something simple such as the ability to read a file or it could be a more abstract operation specific to a given software system. Privileges can also be defined to restrict access to REST API endpoints and CLI commands. Every RBAC implementation includes pre-defined privileges and may also allow administrators to create custom privileges.
+
+.Roles
+
+A _role_ is a container that includes one or more privileges. Roles are generally defined based on particular tasks or job functions. When a role is assigned to a user, the user is granted all the privileges contained in the role. And as with privileges, implementations include pre-defined roles and generally allow custom roles to be created.
+
+.Objects
+
+An _object_ represents a real or abstract resource identified within the RBAC environment. The actions defined through the privileges are performed on or with the associated objects. Depending on the implementation, privileges can be granted to an object type or a specific object instance.
+
+.Users and groups
+
+_Users_ are assigned or associated with a role applied after authentication. Some RBAC implementations allow only one role to be assigned to a user while others allow multiple roles per user, perhaps with only one role active at a time. Assigning roles to _groups_ can further simplify security administration.
+
+.Permissions
+
+A _permission_ is a definition that binds a user or group along with a role to an object. Permissions can be useful with a hierarchical object model where they can optionally be inherited by the children in the hierarchy.
+
+== Two RBAC environments
+
+There are two distinct RBAC environments you need to consider when working with ONTAP tools for VMware vSphere 10.
+
+.VMware vCenter Server
+
+The RBAC implementation in VMware vCenter Server is used to restrict access to objects exposed through the vSphere Client user interface. As part of installing ONTAP tools for VMware vSphere 10, the RBAC environment is extended to include additional objects representing the capabilities of ONTAP tools. Access to these objects is provided through the remote plug-in. See link:../concepts/rbac-vcenter-environment.html[vCenter Server RBAC environment] for more information.
+
+.ONTAP cluster
+
+ONTAP tools for VMware vSphere 10 connects to an ONTAP cluster through the ONTAP REST API to perform storage related operations. Access to the storage resources is controlled through an ONTAP role associated with the ONTAP user provided during authentication. See link:../concepts/rbac-ontap-environment.html[ONTAP RBAC environment] for more information.
+
+// Jan 28 2025 - OTVDOC-179

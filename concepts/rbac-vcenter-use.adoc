@@ -1,0 +1,80 @@
+---
+permalink: concepts/rbac-vcenter-use.html
+sidebar: sidebar
+keywords: vcenter, vcenter server, vcenter server rbac, use rbac
+summary: "There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implementation with vCenter Server you should consider before using it in a production environment."
+---
+
+= Use vCenter Server RBAC with ONTAP tools for VMware vSphere 10
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implementation with vCenter Server you should consider before using it in a production environment.
+
+== vCenter roles and the administrator account
+
+You only need to define and use the custom vCenter Server roles if you want to limit access to the vSphere objects and associated administrative tasks. If limiting access is not required, you can use an administrator account instead. Each administrator account is defined with the Administrator role at the top level of the object hierarchy. This provides full access to the vSphere objects, including those added by ONTAP tools for VMware vSphere 10.
+
+== vSphere object hierarchy
+
+The vSphere object inventory is organized in a hierarchy. For example, you can move down the hierarchy as follows:
+
+`vCenter Server` --> `Datacenter` --> `Cluster` --> `ESXi host` --> `Virtual Machine`
+
+All permissions are validated in the vSphere object hierarchy except the VAAI plug-in operations, which are validated against the target ESXi host.
+
+== Roles included with ONTAP tools for VMware vSphere 10
+
+To simplify working with vCenter Server RBAC, ONTAP tools for VMware vSphere provides predefined roles tailored to various administration tasks.
+
+[NOTE]
+You can create new custom roles if needed. In this case, you should clone one of the existing ONTAP tools roles and edit it as needed. After making the configuration changes, the affected vSphere client users need to log out and log back in to activate the changes.
+
+To view the ONTAP tools for VMware vSphere roles, select *Menu* at the top of the vSphere Client and click *Administration* and then *Roles* on the left. There are three predefined roles as described below.
+
+.NetApp ONTAP tools for VMware vSphere Administrator
+Provides all the native vCenter Server privileges and ONTAP tools-specific privileges required to perform core ONTAP tools for VMware vSphere administrator tasks.
+
+.NetApp ONTAP tools for VMware vSphere Read Only
+Provides read-only access to ONTAP tools. These users cannot perform any ONTAP tools for VMware vSphere actions that are access-controlled.
+
+.NetApp ONTAP tools for VMware vSphere Provision
+Provides some of the native vCenter Server privileges and ONTAP tools-specific privileges that are required to provision storage. You can perform the following tasks:
+
+* Create new datastores
+* Manage datastores
+
+== vSphere objects and ONTAP storage backends
+
+The two RBAC environments work together. When performing a task in the vSphere client interface, the ONTAP tools roles defined to vCenter Server are checked first. If the operation is permitted by vSphere, then the ONTAP role privileges are examined. This second step is performed based on the ONTAP role assigned to the user when the storage backend was created and configured.
+
+== Working with vCenter Server RBAC
+
+There are a few things to consider when working with the vCenter Server privileges and permissions.
+
+=== Required privileges
+
+To access the ONTAP tools for VMware vSphere 10 user interface, you need to have the ONTAP tools-specific _View_ privilege. If you sign in to vSphere without this privilege and click the NetApp icon, ONTAP tools for VMware vSphere displays an error message and prevents you from accessing the user interface.
+
+The assignment level in the vSphere object hierarchy determines which portions of the user interface you can access. Assigning the View privilege to the root object enables you to access ONTAP tools for VMware vSphere by clicking the NetApp icon.
+
+You can instead assign the View privilege to another lower vSphere object level. However, this will limit the ONTAP tools for VMware vSphere menus that you can access and use.
+
+=== Assigning permissions
+
+You need to use vCenter Server permissions if you want to limit access to the vSphere objects and tasks. Where you assign permission in the vSphere object hierarchy determines the ONTAP tools for VMware vSphere 10 tasks users can perform.
+
+[TIP]
+Unless you need to define more restrictive access, it's generally a good practice to assign permissions at the root object or root folder level.
+
+The permissions available with ONTAP tools for VMware vSphere 10 apply to custom non-vSphere objects, such as storage systems. If possible, you should assign these permissions to ONTAP tools for VMware vSphere root object because there is no vSphere object you can assign it to. For example, any permission that includes an ONTAP tools for VMware vSphere "Add/Modify/Remove storage systems" privilege should be assigned at the root object level.
+
+When defining a permission at a higher level in the object hierarchy, you can configure the permission so it is passed down and inherited by the child objects. If needed you can assign additional permissions to the child objects that override the permissions inherited from the parent.
+
+You can modify a permission at any time. If you change any of the privileges within a permission, users associated with the permission need to log out of vSphere and log back in to enable the change.
+
+// Jan 28 2025 - OTVDOC-179
