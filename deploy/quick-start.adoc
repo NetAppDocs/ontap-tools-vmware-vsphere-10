@@ -14,7 +14,6 @@ Getting started with ONTAP tools for VMware vSphere includes a few steps.
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Plan your deployment
 
 [role="quick-margin-para"]
-
 Ensure your vSphere version, ONTAP version, and ESXi host version is compatible with the ONTP tools version. Allocate sufficent CPU, memory, and disk space. Depending on your security policies, you may need to configure firewalls or other security appliances to permit the traffic within your network.
 
 [role="quick-margin-para"]
@@ -33,6 +32,7 @@ You initially deploy ONTAP tools for VMware vSphere in a small-sized single node
 If you need to expand your configuration so that you can use vVols and high availability (HA). You’ll expand your configuration after you finish this workflow.
 
 [role="quick-margin-list"]
+
 link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Configure ONTAP user roles and privileges
@@ -40,6 +40,7 @@ link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere
 Configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.
 
 [role="quick-margin-list"]
+
 link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure storage backends and vCenter Server
@@ -66,9 +67,10 @@ As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you can
 Set up backup intervals. Schedule backups during periods of low activity to minimize the impact on the production systems.
 
 [role="quick-margin-list"]
+
 link:../manage/enable-backup.html[Near zero-RPO]
 
-== High availability(HA) deployment
+== High availability(HA) deployment workflow
 
 If you're planning to use vVols datastore, configure the ONTAP tools for Vmware vSphere to High availability(HA) deployment.
 To use the HA features, enable the VASA Provider services.
@@ -80,6 +82,7 @@ You can scale up the ONTAP tools for VMware vSphere configuration to increase th
 
 
 [role="quick-margin-list"]
+
 link:../manage/edit-appliance-settings.html[Change ONTAP tools for VMware vSphere configuration]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Enable services
@@ -99,4 +102,5 @@ Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for
 If you're using vVols with multiple vCenter Severs, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
 
 [role="quick-margin-list"]
+
 link:../manage/certificate-manage.html[Manage certificates]
