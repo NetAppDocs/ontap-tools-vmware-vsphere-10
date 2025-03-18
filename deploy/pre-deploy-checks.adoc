@@ -9,7 +9,7 @@ summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familia
 :imagesdir: ../media/
 
 [.lead]
-Ensure the following requirements are in place before you proceed with the deployment:
+Ensure the following requirements are met before you proceed with the deployment:
 |===
 |Requirements|Availability
 
@@ -19,8 +19,10 @@ Ensure the following requirements are in place before you proceed with the deplo
 |You have the parent vCenter Server credentials|❏ Yes ❏ No
 |You have the login credentials for the vCenter Server instance, to which the ONTAP tools for VMware vSphere will connect post-deployment for registration|❏ Yes ❏ No
 |The domain name on which the certificate is issued is mapped to the virtual IP address in a multi-vCenter deployment where custom CA certificates are mandatory. |❏ Yes ❏ No
-|You have run the nslookup check on the domain name to check if the domain is getting resolved to the intended IP address. The certificates should be created with the domain name and the load balancer IP address.|❏ Yes ❏ No
+|You have run the nslookup check on the domain name to check if the domain is getting resolved to the intended IP address.|❏ Yes ❏ No
+|The certificate is created with the domain name and the ONTAP tools IP address.|❏ Yes ❏ No
 |ONTAP tools application and internal services are reachable from the vCenter Server.|❏ Yes ❏ No
+
 |===
 
 * Determine if you will use multi-tenant SVMs or allow full cluster access. If using multi-tenant SVMs, you will need an SVM management LIF on each SVM. ONTAP tools must be able to reach this LIF over port 443.
@@ -40,10 +42,9 @@ For ONTAP tools for VMware vSphere initial deployment:
 |DNS server 1|The primary DNS server|
 |DNS server 2|The secondary DNS server|
 |DNS search domain|The DNS search domain|
-|Create DNS records|Create DNS records for all IP addresses above|
 |===
 
-Host names should be mapped to the free IP addresses on the DNS before assigning. All IP addresses should be on the same VLAN that is selected for deployment.
+Create DNS records for all IP addresses above. Before assigning hostnames, they should be mapped to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
 
 == Worksheet for High availability(HA) deployment
 In addition to the single node deployment requirements, you'll need the following information for HA deployment:
@@ -52,12 +53,11 @@ In addition to the single node deployment requirements, you'll need the followin
 |DNS server 1|The primary DNS server|
 |DNS server 2|The secondary DNS server|
 |DNS search domain|The DNS search domain|
-|Node two's DNS hostname|The DNS hostname for the second node (optional)|
-|Node two's IP address|The IP address for the second node (optional)|
-|Node three's DNS hostname|The DNS hostname for the third node (optional)|
-|Node three's IP address|The IP address for the third node (optional)|
-|Create DNS records|Create DNS records for all IP addresses above|
+|Node two's DNS hostname|The DNS hostname for the second node|
+|Node two's IP address|The IP address for the second node|
+|Node three's DNS hostname|The DNS hostname for the third node|
+|Node three's IP address|The IP address for the third node|
 |===
 
 == Network firewall configuration
-Open the required ports for the IP addresses in your network firewall. Refer to link:../deploy/prerequisites.html[Port requirements] for the latest update.
+Open the required ports for the IP addresses in your network firewall. Refer to link:../deploy/prerequisites.html[Port requirements] for latest updates.
