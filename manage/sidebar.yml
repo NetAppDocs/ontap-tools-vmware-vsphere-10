@@ -83,7 +83,7 @@ entries:
     url: /manage/disable-autosupport.html
   - title: Update AutoSupport proxy URL
     url: /manage/update-proxyurl.html
-  - title: Near zero-RPO
+  - title: Create backup and recover the setup
     url: /manage/enable-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
     url: /manage/uninstall-deployment.html

@@ -63,7 +63,7 @@ As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you can
 Set up backup intervals. Schedule backups during periods of low activity to minimize the impact on the production systems.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html[Near zero-RPO]
+* link:../manage/enable-backup.html[Create backup and recover the setup]
 
 == High availability(HA) deployment workflow
 
