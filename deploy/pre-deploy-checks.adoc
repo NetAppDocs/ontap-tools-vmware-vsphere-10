@@ -11,7 +11,7 @@ summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familia
 [.lead]
 Ensure the following requirements are met before you proceed with the deployment:
 |===
-|Requirements|Availability
+|Requirements|Your status
 
 |vSphere version, ONTAP version, and ESXi host version are compatible with the ONTP tools version.|❏ Yes ❏ No
 |vCenter Server environment is set up and configured|❏ Yes ❏ No
@@ -25,23 +25,23 @@ Ensure the following requirements are met before you proceed with the deployment
 
 |===
 
-* Determine if you will use multi-tenant SVMs or allow full cluster access. If using multi-tenant SVMs, you will need an SVM management LIF on each SVM. ONTAP tools must be able to reach this LIF over port 443.
+Determine if you will use multi-tenant SVMs or allow full cluster access. If using multi-tenant SVMs, you will need an SVM management LIF on each SVM.
 
 == Worksheet for single node deployment
 Use the following worksheet to gather the required information for ONTAP tools for VMware vSphere initial deployment:
 For ONTAP tools for VMware vSphere initial deployment:
 
 |===
-|Requirement|Description|Your value
-|ONTAP tools application address|The IP address for the ONTAP tools application|
-|Internal Services address|The IP address for the internal services|
-|Node one's DNS hostname|The DNS hostname for the first node|
-|Node one's IP address|The IP address for the first node|
-|Subnet mask|The subnet mask for the IP addresses|
-|Default gateway|The default gateway for the IP addresses|
-|DNS server 1|The primary DNS server|
-|DNS server 2|The secondary DNS server|
-|DNS search domain|The DNS search domain|
+|Requirement|Your value
+|IP address for the ONTAP tools application|
+|IP address for the internal services|
+|DNS hostname for the first node|
+|IP address for the first node|
+|Subnet mask for the IP addresses|
+|Default gateway for the IP addresses|
+|Primary DNS server|
+|Secondary DNS server|
+|DNS search domain|
 |===
 
 Create DNS records for all IP addresses above. Before assigning hostnames, they should be mapped to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
@@ -49,15 +49,15 @@ Create DNS records for all IP addresses above. Before assigning hostnames, they 
 == Worksheet for High availability(HA) deployment
 In addition to the single node deployment requirements, you'll need the following information for HA deployment:
 |===
-|Requirement|Description|Your value
-|DNS server 1|The primary DNS server|
-|DNS server 2|The secondary DNS server|
-|DNS search domain|The DNS search domain|
-|Node two's DNS hostname|The DNS hostname for the second node|
-|Node two's IP address|The IP address for the second node|
-|Node three's DNS hostname|The DNS hostname for the third node|
-|Node three's IP address|The IP address for the third node|
+|Requirement|Your value
+|Primary DNS server|
+|Secondary DNS server|
+|DNS search domain|
+|DNS hostname for the second node|
+|IP address for the second node|
+|DNS hostname for the third node|
+|IP address for the third node|
 |===
 
 == Network firewall configuration
-Open the required ports for the IP addresses in your network firewall. Refer to link:../deploy/prerequisites.html[Port requirements] for latest updates.
+Open the required ports for the IP addresses in your network firewall. ONTAP tools must be able to reach this LIF over port 443. Refer to link:../deploy/prerequisites.html[Port requirements] for latest updates.
