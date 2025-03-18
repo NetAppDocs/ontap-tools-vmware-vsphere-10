@@ -33,22 +33,7 @@ If you need to expand your configuration so that you can use vVols and high avai
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Enable protection
-[role="quick-margin-para"]
-Onboard the clusters directly in the vSphere client user interface. Enable the SRA capability to configure disaster recovery and to protect NFS or VMFS datastores.
-
-[role="quick-margin-list"]
-* link:../protect/protect-cluster.html[Protect using host cluster protection]
-* link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure ONTAP user roles and privileges
-[role="quick-margin-para"]
-Configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.
-
-[role="quick-margin-list"]
-* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure storage backends and vCenter Server
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Configure storage backends and vCenter Server
 [role="quick-margin-para"]
 Add storage backend to onboard an ONTAP cluster. Add a storage backend to a globally scoped cluster using the ONTAP tools Manager. Add a storage backend to a locally scoped cluster using the ONTAP tools plug-in. Associate a storage backend with the vCenter Server to create a mapping between the storage backend and the onboarded vCenter Server instance globally.
 
@@ -57,7 +42,29 @@ Add storage backend to onboard an ONTAP cluster. Add a storage backend to a glob
 * link:../configure/add-storage-backend.html[Add a storage backend]
 * link:../configure/associate-storage-backend.html[Associate the storage backend with a vCenter Server instance]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Backup and recover
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Upgrade the certificates
+[role="quick-margin-para"]
+If you're using multiple vCenter Severs, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
+[role="quick-margin-list"]
+* link:../manage/certificate-manage.html[Manage certificates]
+
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] (Optional) Enable protection
+[role="quick-margin-para"]
+Onboard the clusters directly in the vSphere client user interface. Enable the SRA capability to configure disaster recovery and to protect NFS or VMFS datastores.
+
+[role="quick-margin-list"]
+* link:../protect/protect-cluster.html[Protect using host cluster protection]
+* link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] (Optional) Configure ONTAP user roles and privileges
+[role="quick-margin-para"]
+Configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and the ONTAP System Manager.
+
+[role="quick-margin-list"]
+* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] Backup and recover
 [role="quick-margin-para"]
 As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, create a backup of the setup. You can restore it on a new virtual machine.
 Set up backup intervals. Schedule backups during periods of low activity to minimize the impact on the production systems.
