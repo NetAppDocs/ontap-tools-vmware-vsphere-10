@@ -16,7 +16,7 @@ It is recommended that you keep the AutoSupport enabled. It helps speed up probl
 
 .Steps
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the *Settings* > *Telemetry* > *Edit* option.
 . Deselect the *AutoSupport* option and save the changes.

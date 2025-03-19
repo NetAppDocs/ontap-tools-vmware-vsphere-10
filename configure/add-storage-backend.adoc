@@ -29,7 +29,7 @@ In a multi-tenant setup, you can add a storage backend cluster globally and SVM 
 
 .Steps
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select *Storage Backends* from the sidebar.
 . Add the storage backend and provide the server IP address or FQDN, username, and password details.

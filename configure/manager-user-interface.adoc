@@ -22,7 +22,7 @@ or refresh all certificates of VASA Provider and ONTAP tools.
 //10.3 update
 * Password management - Reset the user's OVA application password.
 
-To access ONTAP tools Manager, launch `\https://loadBalancerIP:8443/virtualization/ui/` from the browser and login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
+To access ONTAP tools Manager, launch `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` from the browser and login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 
 The ONTAP tools Manager overview section helps manage the appliance configuration, such as services management, node size upscaling, and High availability(HA) enablement. You can also monitor the overall information of ONTAP tools related to the node(s), such as health, network details, and alerts. 
 
