@@ -17,7 +17,7 @@ By integrating with vCenter, ONTAP tools enables you to perform storage tasks li
 
 .Steps
 
-. Open a web browser and navigate to the URL: `\https://loadBalancerIP:8443/virtualization/ui/` 
+. Open a web browser and navigate to the URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select *vCenters* > *Add* to onboard the vCenter Server instances. Provide your vCenter IP address or hostname, username, password, and port details.
 

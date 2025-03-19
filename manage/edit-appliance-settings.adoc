@@ -19,7 +19,7 @@ Ensure that the OVA template you provide has the same OVA version as Node 1. Nod
 
 .Steps
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Select the *Edit Appliance Settings* in the overview section.
 . In the *Configuration* section, you can scale up to increase the node size and enable HA configuration as per your requirement. You need the vCenter Server credentials to make any changes.
