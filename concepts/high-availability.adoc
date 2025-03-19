@@ -16,12 +16,13 @@ High-availability (HA) solution provides for rapid recovery from outages caused 
 * Host failure
 +
 [NOTE]
-Only single node failure is supported.
+Only single-node failure is supported.
 * Network failure
 * Virtual machine failure (Guest OS failure)
 * Application (ONTAP tools) crash
 
 No additional configuration is required for ONTAP tools for VMware vSphere to provide high availability (HA).
 
-NOTE: ONTAP tools for VMware vSphere does not support vCenter HA.
+[NOTE]
+ONTAP tools for VMware vSphere does not support vCenter HA.
 
