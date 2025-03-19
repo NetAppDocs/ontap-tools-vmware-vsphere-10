@@ -9,58 +9,55 @@ summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familia
 :imagesdir: ../media/
 
 [.lead]
-Ensure the following items are in place before you proceed with the deployment:
+Ensure the following requirements are met before you proceed with the deployment:
+|===
+|Requirements|Your status
 
-* vCenter Server environment is set up and configured.
+|vSphere version, ONTAP version, and ESXi host version are compatible with the ONTP tools version.|❏ Yes ❏ No
+|vCenter Server environment is set up and configured|❏ Yes ❏ No
+|Browser cache is deleted|❏ Yes ❏ No
+|You have the parent vCenter Server credentials|❏ Yes ❏ No
+|You have the login credentials for the vCenter Server instance, to which the ONTAP tools for VMware vSphere will connect post-deployment for registration|❏ Yes ❏ No
+|The domain name on which the certificate is issued is mapped to the virtual IP address in a multi-vCenter deployment where custom CA certificates are mandatory. |❏ Yes ❏ No
+|You have run the nslookup check on the domain name to check if the domain is getting resolved to the intended IP address.|❏ Yes ❏ No
+|The certificate is created with the domain name and the ONTAP tools IP address.|❏ Yes ❏ No
+|ONTAP tools application and internal services are reachable from the vCenter Server.|❏ Yes ❏ No
 
-* Parent vCenter Server credentials to deploy the OVA are in place.
+|===
 
-* You have the login credentials for your vCenter Server instance, to which the ONTAP tools for VMware vSphere will connect post-deployment for registration.
+Determine if you will use multi-tenant SVMs or allow full cluster access. If using multi-tenant SVMs, you will need an SVM management LIF on each SVM.
 
-* Browser cache is deleted.
+== Worksheet for single node deployment
+Use the following worksheet to gather the required information for ONTAP tools for VMware vSphere initial deployment:
+For ONTAP tools for VMware vSphere initial deployment:
 
-* Ensure that the domain name on which the certificate is issued is mapped to the virtual IP address in a multi-vCenter deployment where custom CA certificates are mandatory. Run the nslookup check on the domain name to check if the domain is getting resolved to the intended IP address. The certificates should be created with the domain name and the load balancer IP address.
+|===
+|Requirement|Your value
+|IP address for the ONTAP tools application|
+|IP address for the internal services|
+|DNS hostname for the first node|
+|IP address for the first node|
+|Subnet mask for the IP addresses|
+|Default gateway for the IP addresses|
+|Primary DNS server|
+|Secondary DNS server|
+|DNS search domain|
+|===
 
-* Determine if you will use multi-tenant SVMs or allow full cluster access. If using multi-tenant SVMs, you will need an SVM management LIF on each SVM. ONTAP tools must be able to reach this LIF over port 443.
+Create DNS records for all IP addresses above. Before assigning hostnames, they should be mapped to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
 
-* Determine if you will be using the ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager (SRM) or Live Site Recovery (VLSR). If so, you must access the SRM/VLSR server management interface to install the SRA.
-
-* If you are using SnapMirror replication managed by ONTAP tools (including, but not limited to, SnapMirror active sync), then your ONTAP administrator must https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html[create a cluster peer relationship in ONTAP] and https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html[create an intercluster SVM peer relationship in ONTAP] before you can use ONTAP tools with SnapMirror.
-
-== Provision IP addresses and DNS records
-Ensure that you have three free IP addresses available for non-HA deployment—one free IP address for the load balancer, one free IP address for the Kubernetes control plane, and one IP address for each node. For HA deployment, you'll need two more IP addresses for the second and third nodes. 
-
-Host names should be mapped to the free IP addresses on the DNS before assigning. All five IP addresses should be on the same VLAN that is selected for deployment.
-
-Request the following IP address information from your network team:
-
-❏ ONTAP tools application address
-
-❏ Internal Services address
-
-❏ Node one's DNS hostname
-
-❏ Node one's IP address
-
-❏ Subnet mask
-
-❏ Default gateway
-
-❏ DNS server 1
-
-❏ DNS server 2
-
-❏ DNS search domain
-
-❏ Node two's DNS hostname(optional)
-
-❏ Node two's IP address(optional)  
-
-❏ Node three's DNS hostname(optional) 
-
-❏ Node three's IP address(optional)  
-
-❏ Create DNS records for all IP addresses above.
+== Worksheet for High availability(HA) deployment
+In addition to the single node deployment requirements, you'll need the following information for HA deployment:
+|===
+|Requirement|Your value
+|Primary DNS server|
+|Secondary DNS server|
+|DNS search domain|
+|DNS hostname for the second node|
+|IP address for the second node|
+|DNS hostname for the third node|
+|IP address for the third node|
+|===
 
 == Network firewall configuration
-Open the required ports for the IP addresses in your network firewall. Refer to link:../deploy/prerequisites.html[Port requirements] for the latest update.
+Open the required ports for the IP addresses in your network firewall. ONTAP tools must be able to reach this LIF over port 443. Refer to link:../deploy/prerequisites.html[Port requirements] for latest updates.

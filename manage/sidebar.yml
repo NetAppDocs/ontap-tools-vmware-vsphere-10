@@ -87,7 +87,7 @@ entries:
     url: /manage/update-proxyurl.html    
   - title: Add NTP servers
     url: /manage/add-ntpserver.html    
-  - title: Near zero-RPO
+  - title: Create a backup and recover the setup
     url: /manage/enable-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
     url: /manage/uninstall-deployment.html

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
 ---
-= Near zero-RPO
+= Create backup and recover the setup
 :icons: font
 :imagesdir: ../media/
 
@@ -32,7 +32,7 @@ In the file section, you can see the directory. The name of the directory will b
 
 == Recover
 
-To recover the set up, power off the existing virtual machine and deploy a new virtual machine using the OVA that was used in the initial deployment.
+To recover the setup, power off the existing virtual machine and deploy a new virtual machine using the OVA that was used in the initial deployment.
 
 You need to use the same ONTAP tools IP address (load balancer IP) for the new virtual machine and the system configuration such as services enabled, node size, and HA mode must be same as the initial deployment.
 
