@@ -24,38 +24,7 @@ Make sure you have access to the vCenter Server and that the VMware vSphere web 
 * link:../deploy/prerequisites.html[Prerequisites for ONTAP tools for VMware vSphere deployment]
 * link:../deploy/pre-deploy-checks.html[Pre-deployment checks]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Provision IP Addresses and DNS records 
-Request the following IP information from your network team. The first three IP addresses are required; node two and node three are used for scale-out high availability (HA) deployments. DNS host records are required and all IP addresses should be on the same VLAN.
-
-❏ ONTAP tools application address
-
-❏ Internal Services address 
-
-❏ Node one's DNS hostname
-
-❏ Node one's IP address
-
-❏ Subnet mask
-
-❏ Default gateway
-
-❏ DNS server 1
-
-❏ DNS server 2 
-
-❏ DNS search domain 
-
-❏ Node two's DNS hostname(optional) 
-
-❏ Node two's IP address(optional) 
-
-❏ Node three's DNS hostname(optional) 
-
-❏ Node three's IP address(optional)
-
-❏ Create DNS records for all IP addresses above.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Deploy ONTAP tools for VMware vSphere 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy ONTAP tools for VMware vSphere 
 
 [role="quick-margin-para"]
 Initially, you'll deploy ONTAP tools for VMware vSphere as a small-sized single node that provides core services to support NFS and VMFS datastores.
