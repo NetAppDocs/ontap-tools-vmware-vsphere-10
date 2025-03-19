@@ -10,25 +10,20 @@ summary: 'When you create a datastore at host cluster level, the datastore is cr
 
 [.lead]
 
-When you create a datastore at the host cluster level, the datastore is created and mounted on all the destination hosts. You can see this option only if you have the required privileges.
-
+When you create a datastore at host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has privilege to execute. 
 
 [role="tabbed-block"]
 ====
 
 .Create a vVols datastore
 --
-
-You can create a vVols datastore with either new volumes or existing volumes. You cannot create vVols datastore with the mix of existing and new volumes. 
-[NOTE]
-Check to ensure root aggregates are not mapped to SVM.
-
-Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore using ASA r2 storage systems. The vVols datastore created on ASA r2 systems is created with space-efficiency as thin.vVol. VASA Provider creates a container and the desired protocol endpoints during the vVols datastore creation workflow. This container will not have any backing volumes.
+Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datastore on ASA r2 systems with space-efficiency as thin.vVol. The VASA Provider creates a container and the desired protocol endpoints while creating the vVol datastore. This container will not have any backing volumes. 
 
 .Before you begin
 
+* Ensure that root aggregates are not mapped to SVM. 
 * Ensure that the VASA Provider is registered with the selected vCenter.
-* SVM should be mapped to aggregate for SVM user in the ASA r2 storage system.
+* In the ASA r2 storage system, SVM should be mapped to aggregate for SVM user.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 
 .Steps
@@ -37,13 +32,15 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 . Select vVols datastore Type.
 . Enter the *Datastore name* and *Protocol* information.
 [NOTE]
-The ASA r2 storage system supports only iSCSI and FC protocol for vVols datastore.
+The ASA r2 system supports the iSCSI and FC protocols for vVols.
 . Select the storage VM where you want to create the datastore. 
 . Select a custom export policy for the NFS protocol or a custom initiator group name for the iSCSI and FC protocols in the *Advanced options*.
 [NOTE]
-In ASA r2 storage system type SVM, storage units(LUN/namespace) are not created as the datastore is only a logical container.
+In ASA r2 storage system type SVM, storage units (LUN/namespace) are not created as the datastore is only a logical container.
 //10.3 update for ASA r2
-. In the *Storage attributes* pane, you can create new volumes or use the existing volumes. When creating a new volume, you can enable QoS on the datastore. One volume is created for every LUN-created request by default. This step is not applicable for vVols datastores using ASA r2 storage systems as vVols datastore does not have backing volumes. 
+. In the *Storage attributes* pane, you can create new volumes or use the existing volumes. However, you cannot combine these two types of volumes to create a vVols datastore. 
++
+When creating a new volume, you can enable QoS on the datastore. One volume is created for every LUN-created request by default. This step is not applicable for vVols datastores using the ASA r2 storage systems.
 . Review your selection in the *Summary* pane and select *Finish*.
 --
 
