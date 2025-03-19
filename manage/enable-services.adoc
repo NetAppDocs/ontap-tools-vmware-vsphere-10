@@ -13,7 +13,7 @@ Manager to Enable services like VASA Provider, import of vVols configuration, an
 
 .Steps
 
-. Launch ONTAP tools Manager from a web browser: `\https://loadBalancerIP:8443/virtualization/ui/` 
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Select the *Edit Appliance Settings* in the overview section.
 . In the *Services* section, you can enable optional services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
