@@ -2,9 +2,9 @@
 permalink: manage/uninstall-deployment.html
 sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
-summary: 'Follow the instructions in this section to gracefully terminate your ONTAP tools for VMware vSphere deployment.'
+summary: 'Follow the instructions in this section to terminate your ONTAP tools for VMware vSphere deployment gracefully.'
 ---
-= Uninstall ONTAP tools deployment
+= Uninstall ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
@@ -13,18 +13,23 @@ Uninstalling the ONTAP tools for VMware vSphere deletes all the data in the tool
 
 .Steps
 
-. Remove all virtual machines from datastores managed by ONTAP tools for VMware vSphere. You may delete them (refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en[Remove and Reregister VMs and VM Templates]) or use https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html[storage vMotion] to move them to an unmanaged datastore.
+. Remove or move all the virtual machines from the ONTAP tools for VMware vSphere managed datastores.
++
+* To remove the virtual machines, refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en[Remove and reregister VMs and VM templates]
+* To move them to an unmanaged datastore, refer to https://techdocs.broadcom.com/it/it/vmware-cis/vsphere/vsphere/8-0/vcenter-and-host-management-8-0/migrating-virtual-machines-host-management/migration-with-vmotion-host-management/migration-with-storage-vmotion-host-management.html[storage vMotion]
 // updated as per pull request from Chance.
 . link:../manage/delete-ds.html[Delete datastores] created on ONTAP tools for VMware vSphere.
-. Unregister the VASA Providers from all the vCenter servers using the following steps: 
-.. In the ONTAP tools, select *Settings* > *VASA Provider settings* > *Unregister* option at the bottom of the screen.
-.. In the *Unregister VASA Provider* page, provide the application user credentials and select *Unregister*.
+. If you have enabled the VASA provider, select *Settings* > *VASA Provider settings* > *Unregister* in ONTAP tools to unregister the VASA providers from all the vCenter servers. 
 . Disassociate all storage backends from the vCenter Server instance. Refer to link:../manage/manage-vcenter.html[Dissociate storage backends with the vCenter Server instance].
 . Delete all storage backends. Refer to link:../manage/storage-backend.html[Manage storage backends].
-. Remove SRA adapter from VMware Live Site Recovery:
-.. Log in to the VMware Live Site Recovery appliance management interface using 5480 port as admin.
+. Remove the SRA adapter from VMware Live Site Recovery:
+.. Log in as admin to the VMware Live Site Recovery appliance management interface using port 5480.
 .. Select *Storage Replication Adapters*.
-.. Select the appropriate SRA card, and from the drop-down menu, select *Delete*.
+.. Select the appropriate SRA card, and from the drop-down menu, select  *Delete*.
 .. Confirm that you know the results of deleting the adapter and select *Delete*.
-. Delete all the vCenter server instances onboarded to ONTAP tools for VMware vSphere. Refer to link:../manage/manage-vcenter.html[Manage vCenter Server instances].
-. Power off the ONTAP tools for VMware vSphere VMs from the vCenter server and delete the VMs. 
+. Delete the vCenter server instances onboarded to ONTAP tools for VMware vSphere. Refer to link:../manage/manage-vcenter.html[Manage vCenter Server instances].
+. Power off the ONTAP tools for VMware vSphere VMs from the vCenter Server and delete the VMs. 
+
+.What’s next?
+
+link:../manage/delete-deployment.html[Remove FlexVol volumes]
