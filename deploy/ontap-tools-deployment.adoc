@@ -2,7 +2,7 @@
 permalink: deploy/ontap-tools-deployment.html
 sidebar: sidebar
 keywords:
-summary: 'ONTAP tools for VMware vSphere appliance is always deployed as small sized single node with core services to support NFS/VMFS datastores.'
+summary: 'The ONTAP tools for VMware vSphere appliance is deployed as small-sized single node with core services to support NFS and VMFS datastores.'
 ---
 = Deploy ONTAP tools for VMware vSphere
 :icons: font
@@ -65,10 +65,10 @@ Never store ONTAP tools for VMware vSphere virtual machine on vVols datastores t
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
 Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IPv6 and IPv4 addresses.
-. In the *Customize hardware* window, enable CPU hot add and memory hot plugin.
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
+. In the *Customize hardware* window, enable CPU hot add and memory hot plugin.
 . Power on the VM after the completion of the task.
 
 You can track the progress of the installation within the VM's web console.
