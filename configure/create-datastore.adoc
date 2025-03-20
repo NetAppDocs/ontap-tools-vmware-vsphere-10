@@ -51,12 +51,15 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 
 .Steps
 . Log in to the vSphere client.
-. Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
-. Select NFS in the *Datastore Type* field.
-. Enter the datastore name, size, and protocol information in the *Name and Protocol* pane. In the advanced options, select *Datastore cluster* and *Kerberos Authentication*.
+. Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create datastore*.
+. Select NFS in the *Datastore type* field.
+. Enter the datastore name, size, and protocol information in the *Name and protocol* pane. In the advanced options, select *Datastore cluster* and *Kerberos authentication*.
 [NOTE]
 Kerberos authentication is available only when the NFS 4.1 protocol is selected. 
-. Select *Platform* and *Storage VM* in the *Storage* pane. In the advanced option, Select *custom Export Policy*.
+. Select *Platform* and *Storage VM* in the *Storage* pane. 
+. Choose *Custom export policy* under advanced options if necessary, but it's not recommended. If used, ensure you run discovery in vCenter for all objects.
+[NOTE]
+You cannot create an NFS datastore using the SVM’s default/root volume policy.
 [NOTE]
 * *Asymmetric* toggle button is visible only if performance or capacity is selected in the platform drop-down.
 * *Any* option in the platform dropdown lets you see all the SVMs that are part of the vCenter irrespective of the platform or asymmetric flag. 
