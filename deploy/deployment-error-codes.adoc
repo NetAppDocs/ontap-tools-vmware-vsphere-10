@@ -38,6 +38,7 @@ The last three digits of the error code indicate the specific workflow error wit
 
 |===
 |*Deployment error code*|*Workflow* |*Resolution*
+|049 |For network and validation perl script will assign them as well shortly |-
 |050 |Ssh Key generation failed |Restart the primary virtual machine (VM).
 |053 |Failed installing RKE2 |Either run the following and restart the primary VM or redeploy:
 sudo rke2-killall.sh (all VMs)

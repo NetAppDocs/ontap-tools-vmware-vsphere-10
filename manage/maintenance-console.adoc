@@ -35,7 +35,6 @@ a|
 . Shutdown virtual machine
 . Change 'maint' user password
 . Change time zone
-. Add new NTP server
 . Increase jail disk size (/jail)
 . Upgrade
 . Install VMware Tools

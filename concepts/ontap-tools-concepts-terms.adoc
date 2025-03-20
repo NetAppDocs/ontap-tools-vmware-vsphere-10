@@ -17,8 +17,8 @@ The new NetApp ASA r2 systems deliver a unified hardware and software solution t
 === Certificate authority (CA)
 CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 
-=== Consistency group
-A consistency group is a collection of volumes managed as a single unit. In ONTAP, consistency groups provide easy management and a protection guarantee for an application workload spanning multiple volumes. Learn more about https://docs.netapp.com/us-en/ontap/consistency-groups/index.html[consistency groups].
+=== Consistency group (CG)
+A consistency group is a collection of volumes managed as a single unit. CGs are synchronized for data consistency across storage units and volumes. In ONTAP, they provide easy management and a protection guarantee for an application workload spanning multiple volumes. Learn more about https://docs.netapp.com/us-en/ontap/consistency-groups/index.html[consistency groups].
 
 === Dual stack
 A dual-stack network is a networking environment that supports the simultaneous use of IPv4 and IPv6 addresses.
@@ -42,7 +42,7 @@ OVA is an open standard for packaging and distributing virtual appliances or sof
 === Recovery Point Objective (RPO)
 RPO is a measure of how frequently data is backed up or replicated. It represents the point in time to which data must be recovered after an outage in order to resume business operations. For example, if an organization has an RPO of 4 hours, it can tolerate losing up to 4 hours of data in the event of a disaster.
 
-=== SnapMirror active sync (SMAS)
+=== SnapMirror active sync
 SnapMirror active sync enables business services to continue operating even with a complete site failure, supporting applications to fail over transparently using a secondary copy. Manual intervention or custom scripting is not required to trigger a failover with SnapMirror active sync. Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync].
 
 === Storage backends
@@ -52,14 +52,15 @@ Storage backends are the underlying storage infrastructure that the ESXi host us
 SRA is the storage vendor-specific software installed inside the VMware Live Site Recovery appliance. The adapter enables communication between the Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level and the cluster level configuration.
 
 === Storage virtual machine (SVM)
-Like a virtual machine running on a hypervisor, SVM is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
+SVM is the unit of multitenancy in ONTAP. Like a virtual machine running on a hypervisor, SVM is a logical entity that abstracts physical resources. SVM contains data volumes and one or more LIFs through which they serve data to the clients. 
 
 === Uniform and non-uniform configuration
 
-* *Uniform host access* means that hosts from both sites are connected to all paths to storage clusters on both sites. Cross-site paths are stretched across distances.
+* *Uniform host access* means that hosts from two sites are connected to all paths to storage clusters on both sites. Cross-site paths are stretched across distances.
 * *Non-uniform host access* means hosts in each site are connected only to the cluster in the same site. Cross-site paths and stretched paths aren't connected.
 [NOTE]
-Uniform host access is supported for any SnapMirror active sync deployment; non-uniform host access is only supported for symmetric active/active deployments.
+Uniform host access is supported for any SnapMirror active sync deployment; non-uniform host access is only supported for symmetric active/active deployments. 
+Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync overview in ONTAP].
 
 === Virtual Machine File System (VMFS)
 VMFS is a clustered file system designed to store virtual machine files in VMware vSphere environments.
@@ -71,7 +72,7 @@ vVols provide a volume-level abstraction for storage used by a virtual machine. 
 VM Storage Policies are created in the vCenter Server under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.
 
 === VMware Live Site Recovery
-VMware Live Site Recovery provides business continuity, disaster recovery, site migration, and non-disruptive testing capabilities for VMware virtual environments.
+VMware Live Site Recovery formerly known as Site Recovery Manager (SRM) provides business continuity, disaster recovery, site migration, and non-disruptive testing capabilities for VMware virtual environments.
 
 === VMware vSphere APIs for Storage Awareness (VASA)
 VASA is a set of APIs that integrate storage arrays with vCenter Server for management and administration. The architecture is based on several components, including the VASA Provider, which handles communication between VMware vSphere and the storage systems.
@@ -80,7 +81,7 @@ VASA is a set of APIs that integrate storage arrays with vCenter Server for mana
 VAAI is a set of APIs that enables communication between VMware vSphere ESXi hosts and the storage devices. The APIs include a set of primitive operations used by the hosts to offload storage operations to the array. VAAI can provide significant performance improvements for storage-intensive tasks.
 
 === vSphere Metro Storage Cluster
-vSphere Metro Storage Cluster (vMSC) is a technology that enables and supports vSphere in a stretched
+vSphere Metro Storage Cluster (vMSC) is an architecture that enables and supports vSphere in a stretched
 cluster deployment. vMSC solutions are supported with NetApp MetroCluster and SnapMirror active sync
 (formerly SMBC). These solutions provide enhanced business continuity in the case of domain failure. The
 resiliency model is based on your specific configuration choices. Learn more about https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc[VMware vSphere Metro Storage Cluster].

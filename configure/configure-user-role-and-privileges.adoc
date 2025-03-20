@@ -103,7 +103,7 @@ Using APIs:
 |/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM Policy management
 |/api/svm/svms	|Read-Only	|To get SVM configuration in the case the Cluster is added locally.
 |/api/network/ip/interfaces |Read-Only |Add Storage Backend - To identify the management LIF scope is Cluster/SVM
-
+|/api/storage/availability-zones |Read-Only |SAZ Discovery. Applicable for ASA r2 systems.
 |===
  
 
@@ -215,6 +215,12 @@ Additionally, for ONTAP Versions 9.16.0 and above run the following command:
 
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
+----
+
+For ASA r2 systems on ONTAP Versions 9.16.1 and above run the following command:
+
+----
+security login rest-role create -role <role-name> -api /api/storage/availability-zones -access readonly
 ----
 
 === Create ONTAP tools for VMware vSphere ONTAP API based SVM scoped user
@@ -331,7 +337,7 @@ security login unlock -username testvpsraall -vserver C1_sti160-cluster
 
 // updated this topic for https://jira.ngage.netapp.com/browse/OTVDOC-127
 
-If the ONTAP tools for VMware vSphere 10.1 user is a cluster scoped user created using the json file, then run the following commands on the ONTAP CLI using the admin user to upgrade to 10.3 release.
+For ONTAP tools for VMware vSphere 10.1 users with a cluster-scoped user created using the JSON file, use the following ONTAP CLI commands with user admin privileges to upgrade to the 10.3 release.
 
 For product capabilities: 
 
@@ -364,7 +370,7 @@ _security login role create -role <existing-role-name> -cmddirname "vserver nvme
 
 _security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all_
 
-If the ONTAP tools for VMware vSphere 10.1 user is a SVM scoped user created using the json file, then run the following commands on the ONTAP CLI using the admin user to upgrade to 10.3 release.
+For ONTAP tools for VMware vSphere 10.1 user with a SVM scoped user created using the json file, use the ONTAP CLI commands with admin user privileges to upgrade to the 10.3 release.
 
 SVM privileges:
 
@@ -401,4 +407,22 @@ vserver nvme subsystem create
 
 vserver nvme subsystem modify
 
+----
+
+== Upgrade ONTAP tools for VMware vSphere 10.3 user to 10.4 user
+// updated for 10.4
+Beginning with ONTAP 9.16.1 upgrade the ONTAP tools for VMware vSphere 10.3 user to 10.4 user.
+
+For ONTAP tools for VMware vSphere 10.3 user with a cluster-scoped user created using the JSON file and ONTAP version 9.16.1 or above, use the ONTAP CLI command with admin user privileges to upgrade to the 10.4 release.
+
+For product capabilities:
+
+* VSC
+* VSC and VASA Provider
+* VSC and SRA
+* VSC, VASA Provider, and SRA.
+
+Cluster privileges:
+----
+security login role create -role <existing-role-name> -cmddirname "storage availability-zone show" -access all
 ----

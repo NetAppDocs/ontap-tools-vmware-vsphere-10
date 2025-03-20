@@ -18,4 +18,3 @@ ONTAP tools for VMware vSphere consists of the following:
 * VASA Provider for VM granular management
 * Storage policy-based management
 * Storage Replication Adapter (SRA)
-* SnapMirror active sync (SMAS)

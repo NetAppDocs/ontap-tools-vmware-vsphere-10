@@ -39,6 +39,8 @@ The last three digits of the error code indicate the specific workflow error wit
 
 |===
 |*Upgrade error code* |*Workflow* |*Resolution*
+
+|052 |The ISO may be the same as the current version or two releases above the current version. |Use an ISO version compatible to upgrade from your current version.
 |068 |Debian packages rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
 |069 |Failed restoring files |Use zero-RPO or snapshot based recovery and retry upgrade.
 |070 |Failed deleting backup |-
@@ -71,8 +73,6 @@ The last three digits of the error code indicate the specific workflow error wit
 |088 |Configuring log rotate for journald has failed |Check the VM network settings compatible with the host on which VM is hosted.
 You can try to migrate the VM to another host and restart.
 |089 |Changing ownership of summary log rotate config file has failed |Retry the upgrade.
-|093 |Dynamic storage provisioner upgrade has failed |Retry the upgrade.
-|094 |Dynamic storage provisioner rollback has failed |Retry the upgrade.
 |095 |OS upgrade failed |No recovery for OS upgrade. ONTAP tools services are upgraded and new pods will be running.
 |096 |Install dynamic storage provisioner |Check the upgrade logs and retry upgrade.
 |097 |Uninstalling services for upgrade has failed |Use zero RPO or snapshot based recovery and retry upgrade. 
@@ -84,6 +84,10 @@ You can try to migrate the VM to another host and restart.
 |111 |Updating etcd timeout parameters for RKE2 has failed |Check the upgrade logs and retry upgrade.
 |112 |Uninstall dynamic storage provisioner has failed |-
 |113 |Refresh resources on secondary nodes has failed |Check the upgrade logs and retry upgrade.
+|104 |Restarting of secondary node has failed |Restart the nodes manually one by one
+|100 |kernel rollback has failed |-
+|051 |dynamic storage provisioner upgrade has failed |Check upgrade logs and retry upgrade.	
+|056 |deleting migration backup has failed |NA
 
 |===
 

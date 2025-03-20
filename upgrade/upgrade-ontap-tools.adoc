@@ -15,6 +15,7 @@ You can upgrade from ONTAP tools for VMware vSphere 10.2 or 10.3 to 10.4. Howeve
 
 For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power off the first node before making the following changes to the virtual machine (VM) settings.
 
+If you're upgrading from ONTAP tools for VMware vSphere 10.2 or 10.3, you need to complete the following steps before proceeding with the upgrade task:
 * Add an additional 100 GB hard disk to each node, as the service data is stored locally on the VM.
 * Change the CPU and memory for the powered-off VM according to the flavor of your deployment. Enable the hot plugin for CPU and RAM.
 +
@@ -68,7 +69,7 @@ For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power
 
 * Power ON the VM after the changes are done and wait for the services to come to a running state.
 * In case of HA deployment, make the resource changes, enable the hot plugin for CPU and RAM, and add 100 GB hard disks for the second and the third node as well. There is no need to reboot these nodes.
-* If the appliance was deployed as a local path (easy deployment) with ONTAP tools 10.1 or 10.2, you need to take a quiesce snapshot before upgrading.
+* If the appliance was deployed as a local path (easy deployment) with ONTAP tools 10.2, you need to take a quiesce snapshot before upgrading.
 
 If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
 // for 10.4 add a comment asking if this section of upgrading from 10.0 to 10.1 is required.
