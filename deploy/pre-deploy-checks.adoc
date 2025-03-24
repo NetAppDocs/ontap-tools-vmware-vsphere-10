@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
 summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
 ---
-= Pre-deployment checks
+= Before you get started...
 :icons: font
 :imagesdir: ../media/
 
@@ -22,12 +22,11 @@ Ensure the following requirements are met before you proceed with the deployment
 |You have run the nslookup check on the domain name to check if the domain is getting resolved to the intended IP address.|❏ Yes ❏ No
 |The certificate is created with the domain name and the ONTAP tools IP address.|❏ Yes ❏ No
 |ONTAP tools application and internal services are reachable from the vCenter Server.|❏ Yes ❏ No
-
+|When using multi-tenant SVMs, you have an SVM management LIF on each SVM.|❏ Yes ❏ No
 |===
 
-Determine if you will use multi-tenant SVMs or allow full cluster access. If using multi-tenant SVMs, you will need an SVM management LIF on each SVM.
-
-== Worksheet for single node deployment
+== Deployment worksheet
+=== For single node deployment
 Use the following worksheet to gather the required information for ONTAP tools for VMware vSphere initial deployment:
 For ONTAP tools for VMware vSphere initial deployment:
 
@@ -44,9 +43,9 @@ For ONTAP tools for VMware vSphere initial deployment:
 |DNS search domain|
 |===
 
-Create DNS records for all IP addresses above. Before assigning hostnames, they should be mapped to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
+Create DNS records for all the above IP addresses. Before assigning hostnames, map them to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
 
-== Worksheet for High availability(HA) deployment
+=== For High availability (HA) deployment
 In addition to the single node deployment requirements, you'll need the following information for HA deployment:
 |===
 |Requirement|Your value

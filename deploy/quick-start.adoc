@@ -9,7 +9,10 @@ summary: 'Getting started with ONTAP tools for VMware vSphere includes a few ste
 :imagesdir: ../media/
 
 [.lead]
-Getting started with ONTAP tools for VMware vSphere includes a few steps.
+Getting started with ONTAP tools for VMware vSphere includes a few steps. This quick start takes you through the initial setup of ONTAP tools for VMware vSphere. When you’re done, you can optimize storage efficiency, simplify management, and enhance data protection and disaster recovery. 
+
+If you’re planning to use vVols, expand your initial setup to HA configuration. For more information, refer to the link:../deploy/ha-workflow.html[HA deployment workflow].
+
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Plan your deployment
 
@@ -22,12 +25,12 @@ Make sure you have access to the vCenter Server and that the VMware vSphere web 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool] 
 * link:../deploy/prerequisites.html[Prerequisites for ONTAP tools for VMware vSphere deployment]
-* link:../deploy/pre-deploy-checks.html[Pre-deployment checks]
+* link:../deploy/pre-deploy-checks.html[Before you get started]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy ONTAP tools for VMware vSphere 
 
 [role="quick-margin-para"]
-Initially, you'll deploy ONTAP tools for VMware vSphere as a small-sized single node that provides core services to support NFS and VMFS datastores.
+Initially, you'll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores.
 If you need to expand your configuration to use vVols datastore and high availability (HA), you’ll do so after you finish this workflow.
 
 [role="quick-margin-list"]
@@ -54,7 +57,7 @@ Associate the storage backend with the vCenter Server to map it globally to the 
 * link:../configure/add-storage-backend.html[Add a storage backend]
 * link:../configure/associate-storage-backend.html[Associate the storage backend with a vCenter Server instance]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Upgrade the certificates
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Upgrade the certificates if you're working with multiple vCenter Servers
 [role="quick-margin-para"]
 When working with multiple vCenter Servers, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
 [role="quick-margin-list"]
@@ -67,15 +70,21 @@ Configure new user roles and privileges for managing storage backends using the 
 [role="quick-margin-list"]
 * link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] (Optional) Enable protection
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] (Optional) Enable SRA protection
 [role="quick-margin-para"]
-Configure ONTAP tools for VMware vSphere to manage host cluster protection. Enable the SRA capability to configure disaster recovery and protect NFS or VMFS datastores.
+Enable the SRA capability to configure disaster recovery and protect NFS or VMFS datastores.
+
+[role="quick-margin-list"]
+* link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[eight] (Optional) Enable SMas protection
+[role="quick-margin-para"]
+Configure ONTAP tools for VMware vSphere to manage host cluster protection for SMas. This is applicable only to VMFS datastores.
 
 [role="quick-margin-list"]
 * link:../protect/protect-cluster.html[Protect using host cluster protection]
-* link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[Eight] Backup and recover
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png[Nine] Backup and recover
 [role="quick-margin-para"]
 Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
 
