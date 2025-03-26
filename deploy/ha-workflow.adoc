@@ -28,8 +28,7 @@ Register the VASA provider with vCenter and ensure storage policies meet the HA 
 Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager (SRM) or VMware Live Site Recovery (VLSR).
 
 [role="quick-margin-list"]
-* link:../manage/enable-vasa-provider.html[Enable VASA Provider]
-* link:../manage/enable-sra.html[Enable SRA]
+* link:../manage/enable-services.html[Enable VASA Provider and SRA services]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Upgrade the certificates
 [role="quick-margin-para"]
