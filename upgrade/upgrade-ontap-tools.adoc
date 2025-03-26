@@ -9,7 +9,7 @@ summary: 'Upgrade is supported for both HA and non-HA deployments.'
 :imagesdir: ../media/
 
 [.lead]
-You can upgrade from ONTAP tools for VMware vSphere 10.2 or 10.3 to 10.4. However, direct upgrade from ONTAP tools 10.0 or 10.1 to 10.4 is not supported.
+You can upgrade from ONTAP tools for VMware vSphere 10.2 or 10.3 to 10.4. However, direct upgrade from ONTAP tools 10.0 or 10.1 to 10.4 is not supported. You should upgrade to ONTAP tools for VMware vSphere 10.4 with ONTAP 9.16.2 before adding more storage availability zones (SAZs).
 
 .Before you begin
 
