@@ -1,3 +1,9 @@
+---
+permalink: configure/configure-network-access.html
+sidebar: sidebar
+keywords: network access configuration, export policy, mount operation, ESXi hosts
+summary: 'If you've not configured the network access, all the discovered IP addresses from the ESXi host are added to the export policy by default. You can configure it to add a few specific IP addresses to the export policy and exclude the rest. However, when you perform a mount operation on the excluded ESXi hosts, the operation fails.'
+---
 = Configure network access
 :icons: font
 :imagesdir: ../media/
