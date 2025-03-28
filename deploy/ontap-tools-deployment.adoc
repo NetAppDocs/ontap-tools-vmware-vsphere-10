@@ -66,21 +66,8 @@ b. Select *Actions* > *New VM from this template*
 |===
 . In the *Select a name and folder* field, enter the virtual machine name and choose its location. 
 +
-Depending on the vCenter Server version, follow these steps to enable vertical scaling of ONTAP tools nodes:
-+
-|===
-|vCenter Server 7.0.3|vCenter Server 8.0.3
-|After the deployment, log in to the vCenter client:
-
-1. Navigate to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
-
-2. Under the *CPU* options, check the *Enable CPU hot add* checkbox
-
-3. Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
-|1. Select the option *Customize this virtual machine's hardware*, which will activate an additional step called *Customize hardware* before proceeding to the *Ready to complete* window.
-
-2. In the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
-|===
+* If you're using the vCenter Server 8.0.3 version, Select the option *Customize this virtual machine's hardware*, which will activate an additional step called *Customize hardware* before proceeding to the *Ready to complete* window.
+* If you're using the vCenter Server 7.0.3 version, follow the steps in the *what's next?* section at the end of deployment.
 . Select a computer resource and select *Next*. Optionally, check the box to *Automatically power on deployed VM*.
 . Review the details of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
@@ -104,3 +91,12 @@ As the deployment task gets created, the progress is shown in the vSphere task b
 You can track the progress of the installation within the VM's web console.
 
 If there are discrepancies in the OVF form, a dialog box will prompt corrective action. Use the tab button to navigate, make the necessary changes, and select "OK.You have three attempts to resolve any issues. If problems continue after three attempts, the installation process will stop, and it is advised to retry the installation on a new virtual machine.
+
+.What’s next?
+
+If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3, then follow these steps after the deployment.
+
+. Log in to the vCenter client
+. Navigate to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
+. Under the *CPU* options, check the *Enable CPU hot add* checkbox
+. Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
