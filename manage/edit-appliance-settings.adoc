@@ -14,8 +14,9 @@ Using the ONTAP tools Manager scale up the ONTAP tools for VMware vSphere config
 // new content for 10.3
 .Before you begin
 
-Ensure that the OVA template you provide has the same OVA version as Node 1. Node 1 is the default node where the ONTAP tools for VMware vSphere OVA is initially deployed.
+* Ensure that your OVA template has the same OVA version as Node 1. Node 1 is the default node where the ONTAP tools for VMware vSphere OVA is initially deployed.
 // https://jira.ngage.netapp.com/browse/OTVDOC-190 -  jani
+* Ensure the CPU hot add and memory hot plug are enabled.
 
 .Steps
 
