@@ -64,7 +64,23 @@ a. Go to your content library and select the library item that you want to deplo
 
 b. Select *Actions* > *New VM from this template*
 |===
-. In the *Select a name and folder* field, enter the virtual machine name and choose its location. To enable the ability to use the HA feature, select the option *Customize this virtual machine's hardware*, which will activate an additional step called *Customize hardware* before proceeding to the *Ready to complete* window.
+. In the *Select a name and folder* field, enter the virtual machine name and choose its location. 
++
+Depending on the vCenter Server version, follow these steps to enable vertical scaling of ONTAP tools nodes:
++
+|===
+|vCenter Server 7.0.3|vCenter Server 8.0.3
+|After the deployment, log in to the vCenter client:
+
+1. Navigate to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
+
+2. Under the *CPU* options, check the *Enable CPU hot add* checkbox
+
+3. Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
+|1. Select the option *Customize this virtual machine's hardware*, which will activate an additional step called *Customize hardware* before proceeding to the *Ready to complete* window.
+
+2. In the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
+|===
 . Select a computer resource and select *Next*. Optionally, check the box to *Automatically power on deployed VM*.
 . Review the details of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
@@ -77,7 +93,8 @@ b. Select *Actions* > *New VM from this template*
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
 Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IPv6 and IPv4 addresses.
-. In the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
+. When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
+// Applicable only to vCenter 8.0.3
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
