@@ -32,15 +32,20 @@ For ONTAP tools for VMware vSphere initial deployment:
 
 |===
 |Requirement|Your value
+
 |IP address for the ONTAP tools application|
-|IP address for the internal services|
+|Node interconnect IP address for inter-node communication|
 |DNS hostname for the first node|
-|IP address for the first node|
-|Subnet mask for the IP addresses|
-|Default gateway for the IP addresses|
 |Primary DNS server|
 |Secondary DNS server|
 |DNS search domain|
+|IPv4 address for the primary node|
+|Subnet mask for the IPv4 address|
+|Default gateway for the IPv4 address|
+|IPv6 address (optional) |
+|IPv6 prefix length (optional) |
+|Gateway for the IPv6 address (optional) |
+
 |===
 
 Create DNS records for all the above IP addresses. Before assigning hostnames, map them to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
