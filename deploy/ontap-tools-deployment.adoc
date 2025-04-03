@@ -86,7 +86,7 @@ Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IP
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
 // we might need to add another step to To customizet he hardware. go to vSphere clinet menu >  in the inventory navigate to your VM > edit settings. 
-. Power on the VM after the completion of the task.
+. Power on the VM after completing the task if the option to automatically power on the VM was not selected.
 
 You can track the progress of the installation within the VM's web console.
 

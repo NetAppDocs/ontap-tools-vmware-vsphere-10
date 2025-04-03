@@ -37,7 +37,7 @@ In the file section, you can see the directory. The name of the directory will b
 
 To recover the setup, power off the existing virtual machine and deploy a new virtual machine using the OVA that was used in the initial deployment.
 
-You need to use the same ONTAP tools IP address (load balancer IP) for the new virtual machine and the system configuration such as services enabled, node size, and HA mode must be same as the initial deployment.
+You need to use the same ONTAP tools IP address for the new virtual machine and the system configuration such as services enabled, node size, and HA mode must be same as the initial deployment.
 
 Perform the following steps to recover the setup from the backup file.
 

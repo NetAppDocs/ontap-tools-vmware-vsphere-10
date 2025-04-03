@@ -76,7 +76,7 @@ The NFS datastore is created and mounted on all the hosts.
 Virtual Machine File System (VMFS) is a clustered file system specifically designed to store virtual machine files in VMware vSphere environments. VMFS allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
 [NOTE]
-* You can only create a VMFS datastores on a protected cluster. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
+* On a protected cluster, you can create only a VMFS datastores. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
 * You cannot create a datastore on a data center with one or more protected host clusters.
 * You cannot create a datastore at the ESXi host if the parent host cluster is protected with a relationship of "Automated Failover Duplex policy" type (uniform/non-uniform config).
 * You can create a VMFS datastore on a ESXi host, only when it has an asynchronous relationship. 
@@ -99,7 +99,7 @@ VMware vSphere 7.0 U3 and later versions support the NVMe/TCP protocol. However,
 For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429[How to Configure NVMe/TCP with vSphere 8.0 Update 1 and ONTAP 9.13.1 for VMFS Datastores].
 
 * If you are using the NVME/FC protocol, perform the following steps to configure the ESXi host:
-. Enable NVMe over Fabrics(NVMe-oF) on your ESXi host(s). 
+. If not already enabled, enable NVMe over Fabrics(NVMe-oF) on your ESXi host(s). 
 . Complete SCSI zoning. 
 . Ensure that ESXi hosts and the ONTAP system are connected at a physical and logical layer.
 

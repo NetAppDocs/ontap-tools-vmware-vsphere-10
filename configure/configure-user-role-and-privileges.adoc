@@ -13,8 +13,8 @@ You can configure new user roles and privileges for managing storage backends us
 
 .Before you begin
 
-* You should have downloaded the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_.
-* You should have downloaded the ONTAP Privileges file from ONTAP tools using `\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip`.
+* You should have downloaded the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.
+* You should have downloaded the ONTAP Privileges file from ONTAP tools using `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 [NOTE]
 You can create users at cluster or directly at storage virtual machines (SVMs) level. You can also create users without using the user_roles.json file and if done so, you need to have a minimum set of privileges at SVM level.
@@ -23,7 +23,7 @@ You can create users at cluster or directly at storage virtual machines (SVMs) l
 
 .Steps
 
-. Extract the downloaded _\https://<loadbalancerIP>:8443/virtualization/user-privileges/users_roles.zip_ file.
+. Extract the downloaded _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ file.
 . Access ONTAP System Manager using the cluster management IP address of the cluster.
 . Log in to the cluster with admin privileges. To configure a user, perform the following steps: 
 .. To configure cluster ONTAP tools user, select *Cluster* > *Settings* > *Users and Roles* pane.

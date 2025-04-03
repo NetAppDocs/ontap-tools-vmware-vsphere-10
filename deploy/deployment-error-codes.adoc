@@ -45,7 +45,7 @@ sudo rke2-killall.sh (all VMs)
 sudo rke2-uninstall.sh (all VMs).
 |054 |Failed setting kubeconfig |Redeploy
 |055 |Failed deploying registry |If the registry pod is present, wait for the pod to be ready then restart the primary VM or else redeploy.
-|059 |KubeVip deployment has failed | Ensure virtual IP address for Kubernetes control plane and load balancer IP address provided during deployment belong to same VLAN and are free IP addresses. Restart if all the previous points are correct. Else, redeploy.
+|059 |KubeVip deployment has failed | Ensure virtual IP address for Kubernetes control plane and ONTAP tools IP address provided during deployment belong to same VLAN and are free IP addresses. Restart if all the previous points are correct. Else, redeploy.
 |060 |Operator deployment has failed |Restart
 |061 |Services deployment has failed |Perform basic Kubernetes debugging like get pods, get rs, get svc, and so on in ntv-system namespace for more details and error logs at /var/log/ansible-perl-errors.log and /var/log/ansible-run.log and redeploy.
 |062 |ONTAP tools Services deployment has failed |Refer to the error logs at /var/log/ansible-perl-errors.log for more details and redeploy.

@@ -47,7 +47,7 @@ Recommended memory as per the size of deployment is as shown in the table below:
 |1050
 |===
 [NOTE]
-Each ONTAP tools cluster needs an extra 50 GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total.
+Each ONTAP tools cluster needs an extra 50 GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total. When backup is enabled, you need another 50GB of space.
 
 // updated note for OTVDOC-258
 == Minimum storage and application requirements
