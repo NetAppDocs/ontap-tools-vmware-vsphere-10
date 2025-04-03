@@ -97,6 +97,7 @@ If there are discrepancies in the OVF form, a dialog box will prompt corrective 
 If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3, then follow these steps after the deployment.
 
 . Log in to the vCenter client
+. Power down the ONTAP tools node.
 . Navigate to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
 . Under the *CPU* options, check the *Enable CPU hot add* checkbox
 . Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
