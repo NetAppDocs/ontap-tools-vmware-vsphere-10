@@ -89,4 +89,4 @@ Configure ONTAP tools for VMware vSphere to manage host cluster protection for S
 Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html[Create backup and recover the setup]
+* link:../manage/enable-backup.html[Create backup and recover the ONTAP tools setup]

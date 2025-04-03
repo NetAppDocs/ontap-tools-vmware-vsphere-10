@@ -33,7 +33,7 @@ You can create users at cluster or directly at storage virtual machines (SVMs) l
 .. *Browse* to select and upload the ONTAP Privileges JSON file.
 +
 The Product field is auto populated.
-.. Select the product capability as VSC, VASA provider, SRA from the drop-down.
+.. Select the product capability as VSC, VASA provider, or SRA from the drop-down.
 // updated for OTVDOC-257 10.4 release.
 +
 The *Role* field is auto populated based on the product capability selected.

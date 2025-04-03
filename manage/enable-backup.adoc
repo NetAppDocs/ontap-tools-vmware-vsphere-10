@@ -4,12 +4,15 @@ sidebar: sidebar
 keywords:
 summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
 ---
-= Create backup and recover the setup
+= Create backup and recover the ONTAP tools setup
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, you need to create backup of the setup and restore it on a new virtual machine.
+[NOTE]
+To migrate to HA when non-HA backup is enabled, disable the backup first and re-enable it after the migration.
+// OTVDOC-256 jira update
 
 == Create backup and download the backup file
 
