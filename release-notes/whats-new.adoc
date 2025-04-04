@@ -4,8 +4,9 @@ sidebar: sidebar
 keywords: what's new, release notes, 10.3, ONTAP tools for VMware vSphere
 summary: "Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.3."
 ---
-
 = What's new in ONTAP tools for VMware vSphere 10.4
+:icons: font
+:imagesdir: ../media/
 
 [.lead]
 Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.4.
