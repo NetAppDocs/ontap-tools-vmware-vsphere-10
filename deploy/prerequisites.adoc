@@ -197,8 +197,10 @@ The following table outlines the network ports that NetApp uses and their purpos
 
 |9080 |TCP| VP HTTP/HTTPS connections (only from 127.0.0.0/8 for IPv4 or ::1/128 for IPv6).
 
-
 |===
 
-// == Pre-deployment checks
-// moved to a new topic
+== ONTAP storage settings
+To ensure seamless integration of ONTAP storage with ONTAP tools for VMware vSphere, consider the following settings:
+
+* If you are using the Fibre Channel (FC) for storage connectivity, configure the zoning on your FC switches to connect the ESXi hosts with the SVM's FC LIFs. https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html[Learn about FC and FCoE zoning with ONTAP systems]
+* To use ONTAP tools-managed SnapMirror replication, the ONTAP storage administrator should create https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html[ONTAP cluster peer relationships] and https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html[ONTAP intercluster SVM peer relationships] in ONTAP before using SnapMirror.

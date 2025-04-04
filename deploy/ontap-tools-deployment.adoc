@@ -9,7 +9,7 @@ summary: 'The ONTAP tools for VMware vSphere appliance is deployed as small-size
 :imagesdir: ../media/
 
 [.lead]
-The ONTAP tools for VMware vSphere appliance is deployed as small-sized single node with core services to support NFS and VMFS datastores.
+The ONTAP tools for VMware vSphere appliance is deployed as small-sized single node with core services to support NFS and VMFS datastores. The ONTAP tools deployment process may take up to 45 minutes.
 
 .Before you begin
 
