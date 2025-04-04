@@ -76,11 +76,14 @@ The NFS datastore is created and mounted on all the hosts.
 Virtual Machine File System (VMFS) is a clustered file system specifically designed to store virtual machine files in VMware vSphere environments. VMFS allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
 [NOTE]
-* On a protected cluster, you can create only a VMFS datastores. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
+On a protected cluster:
+
+* You can create only a VMFS datastores. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
 * You cannot create a datastore on a data center with one or more protected host clusters.
 * You cannot create a datastore at the ESXi host if the parent host cluster is protected with a relationship of "Automated Failover Duplex policy" type (uniform/non-uniform config).
-* You can create a VMFS datastore on a ESXi host, only when it has an asynchronous relationship. 
-
+* You can create a VMFS datastore only on an ESXi host protected by an asynchronous relationship. You cannot create and mount a datastore on an ESXi host that is part of a host cluster protected by the "Automated Failover Duplex" policy.
+ 
+// replicate the note in 10.3
 .Before you begin
 
 * Enable services and LIFs for each protocol on the ONTAP storage side. 
