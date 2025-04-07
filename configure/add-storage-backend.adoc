@@ -14,9 +14,9 @@ Adding a storage backend enables you to onboard an ONTAP cluster.
 
 *About this task*
 
-To add a storage backend to a globally scoped cluster in a multi-tenant architecture, add the storage backend using the ONTAP tools Manager. After adding the storage backend to the global cluster, you must associate the cluster with the desired vCenter tenants. The vCenter tenant must onboard the desired Storage Virtual Machines (SVMs). This enables an SVM user to provision vVols datastore. You can add storage in vCenter using the SVM.
+To add a storage backend to a global cluster in a multi-tenant setup, use the ONTAP tools Manager. After adding the storage backend, associate the cluster with the vCenter tenants. The vCenter tenant must onboard the required Storage Virtual Machines (SVMs). This allows an SVM user to provision a vVols datastore. You can add storage in the vCenter using the SVM.
 
-To add a storage backend to a locally scoped cluster, add your ONTAP systems directly using the ONTAP tools plug-in on the vCenter server.
+To add a storage backend to a local cluster, use the ONTAP tools plug-in on the vCenter server to directly add your storage backends.
 
 [role="tabbed-block"]
 ====
@@ -42,7 +42,7 @@ IPv4 and IPv6 address management LIFs are supported.
 --
 
 [NOTE]
-When you add a storage backend using the vSphere client user interface, the vVols datastore does not support directly adding an SVM user.
+When configuring a storage backend through the vSphere client user interface, it is important to note that the vVols datastore does not support the direct addition of an SVM user.
 
 . Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
