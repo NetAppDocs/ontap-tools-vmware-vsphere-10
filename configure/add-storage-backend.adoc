@@ -16,7 +16,7 @@ Adding a storage backend enables you to onboard an ONTAP cluster.
 
 To add a storage backend to a global cluster in a multi-tenant setup, use the ONTAP tools Manager. After adding the storage backend, associate the cluster with the vCenter tenants. The vCenter tenant must onboard the required Storage Virtual Machines (SVMs). This allows an SVM user to provision a vVols datastore. You can add storage in the vCenter using the SVM.
 
-To add a storage backend to a local cluster, use the ONTAP tools plug-in on the vCenter server to directly add your storage backends.
+To add a storage backend to a local cluster, use the ONTAP tools plug-in on the vCenter server.
 
 [role="tabbed-block"]
 ====
