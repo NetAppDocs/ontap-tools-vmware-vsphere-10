@@ -20,7 +20,7 @@ If you’re planning to use vVols, expand your initial setup to HA configuration
 Verify that your vSphere, ONTAP, and ESXi host versions are compatible with the ONTP tools version. Allocate sufficient CPU, memory, and disk space. Depending on your security policies, you may need to configure firewalls or other security appliances to allow network traffic.
 
 [role="quick-margin-para"]
-Make sure you have access to the vCenter Server and that the VMware vSphere web client is installed and accessible.
+Ensure the vCenter Server is installed and accessible.
 
 [role="quick-margin-list"]
 * https://imt.netapp.com/matrix/#welcome[Interoperability Matrix Tool] 
@@ -43,7 +43,14 @@ Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, man
 [role="quick-margin-list"]
 * link:../configure/add-vcenter.html[Add vCenter Server instances]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure the storage backends
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure ONTAP user roles and privileges
+[role="quick-margin-para"]
+Configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and the ONTAP System Manager.
+
+[role="quick-margin-list"]
+* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure the storage backends
 [role="quick-margin-para"]
 Add storage backend to an ONTAP cluster:
 [role="quick-margin-list"]
@@ -57,18 +64,11 @@ Associate the storage backend with the vCenter Server to map it globally to the 
 * link:../configure/add-storage-backend.html[Add a storage backend]
 * link:../configure/associate-storage-backend.html[Associate the storage backend with a vCenter Server instance]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Upgrade the certificates if you're working with multiple vCenter Servers
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Upgrade the certificates if you're working with multiple vCenter Servers
 [role="quick-margin-para"]
 When working with multiple vCenter Servers, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html[Manage certificates]
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Configure ONTAP user roles and privileges
-[role="quick-margin-para"]
-Configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and the ONTAP System Manager.
-
-[role="quick-margin-list"]
-* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] (Optional) Enable SRA protection
 [role="quick-margin-para"]
@@ -79,7 +79,7 @@ Enable the SRA capability to configure disaster recovery and protect NFS or VMFS
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[eight] (Optional) Enable SMas protection
 [role="quick-margin-para"]
-Configure ONTAP tools for VMware vSphere to manage host cluster protection for SMas. This is applicable only to VMFS datastores.
+Configure ONTAP tools for VMware vSphere to manage host cluster protection for SnapMirror active sync (SMas). Pair the source and destination clusters and SVM for SMas. This applies only to VMFS datastores.
 
 [role="quick-margin-list"]
 * link:../configure/protect-cluster.html[Protect using host cluster protection]
