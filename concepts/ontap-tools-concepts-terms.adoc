@@ -52,7 +52,7 @@ Storage backends are the underlying storage infrastructure that the ESXi host us
 Global storage backends, available only with ONTAP cluster credentials, are onboarded through the ONTAP tools Manager interface. They can be added with minimal privileges to enable the discovery of essential cluster resources needed for vVols management. Global clusters are ideal for multitenancy scenarios where an SVM user is added locally for vVols management.
 
 .Local storage backend
-Local storage backends with cluster or SVM credentials are added through the remote plugin user interface and are limited to a vCenter. When using cluster credentials locally, the associated SVMs automatically map with the vCenter to manage vVols or VMFS. For VMFS management, including SRA, ONTAP tools supports SVM credentials without needing a global cluster.
+Local storage backends with cluster or SVM credentials are added through the ONTAP tools user interface and are limited to a vCenter. When using cluster credentials locally, the associated SVMs automatically map with the vCenter to manage vVols or VMFS. For VMFS management, including SRA, ONTAP tools supports SVM credentials without needing a global cluster.
 
 === Storage Replication Adapter (SRA)
 SRA is the storage vendor-specific software installed inside the VMware Live Site Recovery appliance. The adapter enables communication between the Site Recovery Manager and a storage controller at the Storage Virtual Machine (SVM) level and the cluster level configuration.
