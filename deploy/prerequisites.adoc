@@ -47,7 +47,7 @@ Recommended memory as per the size of deployment is as shown in the table below:
 |1050
 |===
 [NOTE]
-Each ONTAP tools cluster needs an extra 50 GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total. When backup is enabled, you need another 50GB of space.
+When backup is enabled, each ONTAP tools cluster needs another 50GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total.
 
 // updated note for OTVDOC-258
 == Minimum storage and application requirements
@@ -79,6 +79,8 @@ FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series, and ASA r2.
 |7.0 and 8.0
 // updated the requirements as per OTVDOC-258
 |===
+[NOTE]
+Beginning with ONTAP tools for VMware vSphere 10.4, the virtual machine hardware is changed from version 10 to 17.
 
 The Interoperability Matrix Tool (IMT) contains the latest information about the supported versions of ONTAP, vCenter Server, ESXi hosts, and plug-in applications.
 
