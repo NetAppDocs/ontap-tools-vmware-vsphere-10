@@ -1,5 +1,5 @@
 settings:
-  name: ONTAP tools for VMware vSphere 10.3
+  name: ONTAP tools for VMware vSphere 10
 
   internal:
     pdf_enabled: true
