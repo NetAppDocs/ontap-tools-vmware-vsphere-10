@@ -16,11 +16,7 @@ Using the ONTAP tools Manager scale up the ONTAP tools for VMware vSphere config
 
 * Ensure that your OVA template has the same OVA version as Node 1. Node 1 is the default node where the ONTAP tools for VMware vSphere OVA is initially deployed.
 // https://jira.ngage.netapp.com/browse/OTVDOC-190 -  jani
-* Ensure the CPU hot add and memory hot plug are enabled during deployment. You can enable them under the vCenter client menu if they were not enabled during deployment. 
-Follow these instructions to enable them from the vCenter client:
-** Navigate to ONTAP tools for VMware vSphere virtual machine under *Inventories* and select *Edit settings*. 
-** Under the *CPU* options, check the *Enable CPU hot add* checkbox
-** Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
+* Ensure the CPU hot add and memory hot plug are enabled.
 
 .Steps
 

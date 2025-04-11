@@ -64,7 +64,10 @@ a. Go to your content library and select the library item that you want to deplo
 
 b. Select *Actions* > *New VM from this template*
 |===
-. In the *Select a name and folder* field, enter the virtual machine name and choose its location. To enable the ability to use the HA feature, select the option *Customize this virtual machine's hardware*, which will activate an additional step called *Customize hardware* before proceeding to the *Ready to complete* window.
+. In the *Select a name and folder* field, enter the virtual machine name and choose its location. 
++
+* If you're using the vCenter Server 8.0.3 version, Select the option *Customize this virtual machine's hardware*, which will activate an additional step called *Customize hardware* before proceeding to the *Ready to complete* window.
+* If you're using the vCenter Server 7.0.3 version, follow the steps in the *what's next?* section at the end of deployment.
 . Select a computer resource and select *Next*. Optionally, check the box to *Automatically power on deployed VM*.
 . Review the details of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
@@ -77,7 +80,8 @@ b. Select *Actions* > *New VM from this template*
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
 Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IPv6 and IPv4 addresses.
-. In the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
+. When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
+// Applicable only to vCenter 8.0.3
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
@@ -87,3 +91,12 @@ As the deployment task gets created, the progress is shown in the vSphere task b
 You can track the progress of the installation within the VM's web console.
 
 If there are discrepancies in the OVF form, a dialog box will prompt corrective action. Use the tab button to navigate, make the necessary changes, and select "OK.You have three attempts to resolve any issues. If problems continue after three attempts, the installation process will stop, and it is advised to retry the installation on a new virtual machine.
+
+.What’s next?
+
+If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3, then follow these steps after the deployment.
+
+. Log in to the vCenter client
+. Navigate to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
+. Under the *CPU* options, check the *Enable CPU hot add* checkbox
+. Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
