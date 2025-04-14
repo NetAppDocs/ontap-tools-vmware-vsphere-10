@@ -13,7 +13,8 @@ You can upgrade from ONTAP tools for VMware vSphere 10.2 or 10.3 to 10.4. Howeve
 
 NOTE:
 
-* You should upgrade to ONTAP tools for VMware vSphere 10.4 with ONTAP 9.16.2 before adding more storage availability zones (SAZs).
+* In ASA r2 systems, you should upgrade to ONTAP tools for VMware vSphere 10.4 with ONTAP 9.16.1 before adding more storage availability zones (SAZs).
+// https://jira.ngage.netapp.com/browse/OTVDOC-254 updates
 * If the upgrade from ONTAP tools for VMware vSphere 10.2 or 10.3 to 10.4 release fails, rollback is not supported. To recover the setup, use RPO for ONTAP tools for VMware vSphere 10.2 and near-zero RPO or snapshot recovery for ONTAP tools for VMware vSphere 10.3.
 
 .Before you begin
