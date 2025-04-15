@@ -24,7 +24,7 @@ Install the NFS VAAI plug-in using ONTAP tools for VMware vSphere to leverage th
 
 .Steps
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client
 . Select *Shortcuts* > *NetApp ONTAP tools* under the plug-ins section.
 . Select *Settings* > *NFS VAAI Tools*.
 . When the VAAI plug-in is uploaded to vCenter Server, select *Change* in the *Existing version* section. If a VAAI plug-in is not uploaded to the vCenter Server, select *Upload* button.

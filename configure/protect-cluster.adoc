@@ -25,7 +25,7 @@ Ensure the following prerequisites are met:
 
 .Steps
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client
 . Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . In the protect cluster window, the datastore type and source storage virtual machine (VM) details are auto populated. Select the datastores link to view the protected datastores.
 . Enter the *consistency group name*.
