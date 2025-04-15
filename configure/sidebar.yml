@@ -18,4 +18,4 @@ entries:
   - title: Configure network access
     url: /configure/configure-network-access.html
   - title: Create a datastore
-    url: /configure/create-vvols-datastore.html    
+    url: /configure/create-datastore.html    
