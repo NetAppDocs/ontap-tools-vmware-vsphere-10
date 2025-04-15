@@ -12,12 +12,6 @@ summary: 'When you create a datastore at the host cluster level, the datastore i
 
 When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute. 
 
-[NOTE]
-* You can only create a VMFS datastores on a protected cluster. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
-* You cannot create a datastore on a data center that has one or more protected host clusters.
-* You cannot create a datastore at host if the parent host cluster is protected with a relationship of Automated Failover Duplex policy type (uniform/non-uniform config).
-* You can create a VMFS datastore on a host, only when it has an asynchronous relationship. 
-
 [role="tabbed-block"]
 ====
 
