@@ -10,7 +10,7 @@ summary: 'When you create a datastore at host cluster level, the datastore is cr
 
 [.lead]
 
-When you create a datastore at host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has privilege to execute. 
+When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute. 
 
 [role="tabbed-block"]
 ====
@@ -29,7 +29,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 .Steps
 . Log in to the vSphere client.
 . Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
-. Select vVols datastore Type.
+. Select vVols *Datastore type*.
 . Enter the *Datastore name* and *Protocol* information.
 [NOTE]
 The ASA r2 system supports the iSCSI and FC protocols for vVols.
@@ -40,7 +40,7 @@ In ASA r2 storage system type SVM, storage units (LUN/namespace) are not created
 //10.3 update for ASA r2
 . In the *Storage attributes* pane, you can create new volumes or use the existing volumes. However, you cannot combine these two types of volumes to create a vVols datastore. 
 +
-When creating a new volume, you can enable QoS on the datastore. One volume is created for every LUN-created request by default. This step is not applicable for vVols datastores using the ASA r2 storage systems.
+When creating a new volume, you can enable QoS on the datastore. By default, one volume is created for every LUN-created request. This step is not applicable for vVols datastores using the ASA r2 storage systems.
 . Review your selection in the *Summary* pane and select *Finish*.
 --
 
@@ -53,7 +53,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 . Log in to the vSphere client.
 . Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create datastore*.
 . Select NFS in the *Datastore type* field.
-. Enter the datastore name, size, and protocol information in the *Name and protocol* pane. In the advanced options, select *Datastore cluster* and *Kerberos authentication*.
+. Enter the datastore name, size, and protocol information in the *Name and protocol* pane. Select *Datastore cluster* and *Kerberos authentication* in the advanced options.
 [NOTE]
 Kerberos authentication is available only when the NFS 4.1 protocol is selected. 
 . Select *Platform* and *Storage VM* in the *Storage* pane. 
@@ -73,7 +73,7 @@ The NFS datastore is created and mounted on all the hosts.
 .Create a VMFS datastore
 
 --
-Virtual Machine File System (VMFS) is a clustered file system specifically designed to store virtual machine files in VMware vSphere environments. VMFS allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
+Virtual Machine File System (VMFS) is a clustered file system that stores virtual machine files in VMware vSphere environments. VMFS allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
 
 On a protected cluster:
 
@@ -123,7 +123,7 @@ When NVMe/FC or NVMe/TCP protocol is selected, a new namespace subsystem is crea
 . From the *storage attributes* pane:
 .. Select *Aggregate* from the drop-down options.
 [NOTE]
-For ASA r2 storage systems, the *Aggregate* option is not shown as the ASA r2 storage is a disaggregated storage. When you choose ASA r2 storage system type SVM, the storage attributes page shows the options to enable QoS.
+For ASA r2 storage systems, the *Aggregate* option is not shown as the ASA r2 storage is a disaggregated storage. When you choose an ASA r2 storage system type SVM, the storage attributes page shows the options for enabling QoS.
 // updated for 10.3 ASA r2
 .. As per the selected protocol, a storage unit(LUN/Namespace) is created with a space reserve of type thin.
 +
@@ -133,7 +133,7 @@ Beginning in ONTAP 9.16.1, ASA r2 storage systems support up to 12 nodes per clu
 +
 'Any' is the default performance service level (PSL) value. This setting creates the storage unit using the ONTAP balanced placement algorithm. However, you can select the performance or extreme option as required.
 // updated for 10.4
-.. Select *Use existing volume*, *Enable QoS* options as required, and provide the details as required.
+.. Select *Use existing volume*, *Enable QoS* options as required, and provide the details.
 +
 [NOTE]
 In the ASA r2 storage type, volume creation or selection does not apply to storage unit creation(LUN/Namespace). Therefore, these options are not shown.
@@ -144,7 +144,7 @@ You cannot use the existing volume to create a VMFS datastore with NVMe/FC or NV
 . Review the datastore details in the *Summary* pane and select *Finish*.
 
 [NOTE]
-If you create the datastore on a protected cluster, you can see a read-only message "The datastore is being mounted on a protected Cluster."
+If you create the datastore on a protected cluster, you can see a read-only message: "The datastore is being mounted on a protected Cluster."
 
 .Result
 The VMFS datastore is created and mounted on all the hosts.
