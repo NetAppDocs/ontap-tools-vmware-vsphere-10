@@ -25,7 +25,7 @@ Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.
 |Security features now offer enhanced protection and compliance with industry standards, providing a robust and user-friendly experience to help administrators manage VMware environments more effectively.
 
 |Enhanced SRA disaster recovery capabilities
-|ONTAP tools for VMware vSphere 10.4 now supports disaster recovery operations using Site Recovery Appliance (SRA) with custom snapshots in addition to ONTAP snapshots.
+|ONTAP tools for VMware vSphere 10.4 now supports disaster recovery operations using Site Recovery Appliance (SRA) with custom-named snapshots in addition to SnapMirror scheduled snapshot copies.
 
 |===
 
