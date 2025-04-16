@@ -2,14 +2,17 @@
 permalink: manage/enable-backup.html
 sidebar: sidebar
 keywords:
-summary: 'As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
+summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
 ---
-= Create backup and recover the setup
+= Create backup and recover the ONTAP tools setup
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-As ONTAP tools for VMware vSphere 10.3 uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, you need to create backup of the setup and restore it on a new virtual machine.
+Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, you need to create backup of the setup and restore it on a new virtual machine.
+[NOTE]
+To migrate to HA when non-HA backup is enabled, disable the backup first and re-enable it after the migration.
+// OTVDOC-256 jira update
 
 == Create backup and download the backup file
 
@@ -34,7 +37,7 @@ In the file section, you can see the directory. The name of the directory will b
 
 To recover the setup, power off the existing virtual machine and deploy a new virtual machine using the OVA that was used in the initial deployment.
 
-You need to use the same ONTAP tools IP address (load balancer IP) for the new virtual machine and the system configuration such as services enabled, node size, and HA mode must be same as the initial deployment.
+You need to use the same ONTAP tools IP address for the new virtual machine and the system configuration such as services enabled, node size, and HA mode must be same as the initial deployment.
 
 Perform the following steps to recover the setup from the backup file.
 

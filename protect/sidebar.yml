@@ -31,3 +31,5 @@ entries:
             url: /protect/configure-array-manager.html
       - title: Verify the replicated storage systems
         url: /protect/verify-the-replicated-storage-environment.html
+      - title: Fan out protection
+        url: /protect/fan-out-protection.html

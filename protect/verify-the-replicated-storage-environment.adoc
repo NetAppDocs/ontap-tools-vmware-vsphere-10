@@ -11,7 +11,7 @@ summary: 'You should verify that the protected site and recovery site are succes
 [.lead]
 You should verify that the protected site and recovery site are successfully paired after configuring Storage Replication Adapter (SRA). The replicated storage system should be discoverable by both the protected site and the recovery site.
 
-*Before you begin*
+.Before you begin
 
 * You should have configured your storage system.
 * You should have paired the protected site and recovery site by using the VMware Live Site Recovery array manager.

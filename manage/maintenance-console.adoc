@@ -26,9 +26,7 @@ a|
 
 . Display server status summary
 . Change LOG level for VASA Provider Services and SRA Services
-. Disable AutoSupport
-. Update AutoSupport proxy URL
-
+// 10.4 updates
 a|
 System Configuration
 a|
@@ -37,7 +35,6 @@ a|
 . Shutdown virtual machine
 . Change 'maint' user password
 . Change time zone
-. Add new NTP server
 . Increase jail disk size (/jail)
 . Upgrade
 . Install VMware Tools

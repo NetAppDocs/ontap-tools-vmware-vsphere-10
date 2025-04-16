@@ -48,7 +48,6 @@ When creating a new volume, you can enable QoS on the datastore. By default, one
 .Create an NFS datastore
 
 --
-//10.1 addition
 A VMware Network File System (NFS) datastore uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
 
 .Steps
@@ -69,7 +68,6 @@ You cannot create an NFS datastore using the SVM’s default/root volume policy.
 . Review the selections in the *Summary* pane and select *Finish*.
 
 The NFS datastore is created and mounted on all the hosts.
-
 
 --
 
@@ -94,18 +92,20 @@ On a protected cluster:
 
 . Review the https://www.vmware.com/resources/compatibility/detail.php?deviceCategory=san&productid=49677&releases_filter=589,578,518,508,448&deviceCategory=san&details=1&partner=399&Protocols=1&transportTypes=3&isSVA=0&page=1&display_interval=10&sortColumn=Partner&sortOrder=Asc[VMware Compatibility Guide]
 [NOTE] 
-VMware vSphere 7.0 U3 and later versions support NVMe/TCP protocol. However, VMware vSphere 8.0 and later version is recommended. 
-. Validate if the Network Interface Card (NIC) vendor supports ESXi NIC with NVMe/TCP protocol. 
+
+VMware vSphere 7.0 U3 and later versions support the NVMe/TCP protocol. However, VMware vSphere 8.0 and later versions are recommended. 
+. Validate whether the Network Interface Card (NIC) vendor supports ESXi NIC with the NVMe/TCP protocol. 
 . Configure the ESXi NIC for NVMe/TCP according to the NIC vendor specifications. 
 . When using VMware vSphere 7 release, follow the instructions on the VMware site https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/configure-adapters-for-nvme-over-tcp-storage/configure-vmkernel-binding-for-the-tcp-adapter.html[Configure VMkernel Binding for the NVMe over TCP Adapter] to configure NVMe/TCP port binding. When using VMware vSphere 8 release, follow https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-tcp-on-esxi.html[Configuring NVMe over TCP on ESXi], to configure the NVMe/TCP port binding. 
-. For VMware vSphere 7 release, follow the instructions on page https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Enable NVMe over RDMA or NVMe over TCP Software Adapters] to configure NVMe/TCP software adapters. For VMware vSphere 8 release, follow https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Add Software NVMe over RDMA or NVMe over TCP Adapters] to configure the NVMe/TCP software adapters.
+. For VMware vSphere 7 release, follow the instructions on page https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Enable NVMe over RDMA or NVMe over TCP Software Adapters] to configure NVMe/TCP software adapters. For the VMware vSphere 8 release, follow https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Add Software NVMe over RDMA or NVMe over TCP Adapters] to configure the NVMe/TCP software adapters.
 . Run link:../configure/discover-storage-systems-and-hosts.html[Discover storage systems and hosts] action on the ESXi host.
 For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429[How to Configure NVMe/TCP with vSphere 8.0 Update 1 and ONTAP 9.13.1 for VMFS Datastores].
 
 * If you are using the NVME/FC protocol, perform the following steps to configure the ESXi host:
-. Enable NVMe over Fabrics(NVMe-oF) on your ESXi host(s). 
+
+. If not already enabled, enable NVMe over Fabrics(NVMe-oF) on your ESXi host(s). 
 . Complete SCSI zoning. 
-. Ensure that ESXi hosts and the ONTAP system are connected at a physical and a logical layer.
+. Ensure that ESXi hosts and the ONTAP system are connected at a physical and logical layer.
 
 To configure an ONTAP SVM for FC protocol, refer to https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-fc-task.html[Configure an SVM for FC].
 
@@ -128,14 +128,20 @@ When NVMe/FC or NVMe/TCP protocol is selected, a new namespace subsystem is crea
 For ASA r2 storage systems, the *Aggregate* option is not shown as the ASA r2 storage is a disaggregated storage. When you choose an ASA r2 storage system type SVM, the storage attributes page shows the options for enabling QoS.
 // updated for 10.3 ASA r2
 .. As per the selected protocol, a storage unit(LUN/Namespace) is created with a space reserve of type thin.
++
+[NOTE]
+Beginning in ONTAP 9.16.1, ASA r2 storage systems support up to 12 nodes per cluster.
+.. Select the *Performance service level* for ASA r2 storage systems with 12 nodes SVM that is a heterogeneous cluster. This option is unavailable if the selected SVM is a homogeneous cluster or uses an SVM user.
++
+'Any' is the default performance service level (PSL) value. This setting creates the storage unit using the ONTAP balanced placement algorithm. However, you can select the performance or extreme option as required.
+// updated for 10.4
 .. Select *Use existing volume*, *Enable QoS* options as required, and provide the details.
 +
 [NOTE]
-In the ASA r2 storage type, the volume creation or selection is not applicable for storage unit creation(LUN/Namespace). Therefore, these options are not shown.
+In the ASA r2 storage type, volume creation or selection does not apply to storage unit creation(LUN/Namespace). Therefore, these options are not shown.
 +
 [NOTE]
-For VMFS datastore creation with NVMe/FC or NVMe/TCP protocol, you cannot use the existing volume, you should create a new volume.
-
+You cannot use the existing volume to create a VMFS datastore with NVMe/FC or NVMe/TCP protocol; you should create a new volume.
 . Review the datastore details in the *Summary* pane and select *Finish*.
 
 [NOTE]
