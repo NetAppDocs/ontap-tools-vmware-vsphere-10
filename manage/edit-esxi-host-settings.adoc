@@ -17,7 +17,7 @@ If there is an issue with your ESXi host settings, the issue is displayed in the
 
 .Steps
 
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
 . Go to *ESXi Host compliance* portlet in the Overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
 . Select *Apply Recommended Settings* link.
@@ -28,7 +28,7 @@ You can expand the ESXi host to see the current values.
 . In the summary pane, check the values and select *Finish*.
 You can track the progress in the recent task panel.
 
-*Related information*
+.Related information
 
 link:../configure/configure-esx-server-multipath-and-timeout-settings.html[Configure ESXi host settings]
 // updated for https://github.com/NetAppDocs/ontap-tools-vmware-vsphere-10/issues/45 - jani

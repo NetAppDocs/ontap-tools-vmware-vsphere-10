@@ -59,6 +59,8 @@ entries:
         url: /manage/migrate-standard-virtual-machines-to-vvols-datastores.html
       - title: VASA cleanup
         url: /manage/delete-virtual-machines.html
+      - title: Attach or detach a data disk from a virtual machine
+        url: /manage/attach-detach-disk.html    
   - title: Discover storage systems and hosts
     url: /configure/discover-storage-systems-and-hosts.html
   - title: Modify ESXi host settings
@@ -80,10 +82,12 @@ entries:
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
   - title: Disable AutoSupport
-    url: /manage/disable-autosupport.html
+    url: /manage/disable-autosupport.html    
   - title: Update AutoSupport proxy URL
-    url: /manage/update-proxyurl.html
-  - title: Create backup and recover the setup
+    url: /manage/update-proxyurl.html    
+  - title: Add NTP servers
+    url: /manage/add-ntpserver.html    
+  - title: Create a backup and recover the ONTAP tools setup
     url: /manage/enable-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
     url: /manage/uninstall-deployment.html

@@ -12,7 +12,7 @@ summary: 'Delete datastore action deletes the datastore when there are no vVols 
 Delete datastore action deletes the datastore when there are no vVols on the selected datastore.
 
 [NOTE]
-Shrink vVols datastore operation is not supported for ASA r2 based vVols datastore.
+Shrink vVols datastore operation is not supported for ASA r2 system-based vVols datastore.
 
 .Steps
 

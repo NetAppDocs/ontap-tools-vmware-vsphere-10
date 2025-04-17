@@ -41,7 +41,7 @@ VMware presently does not support virtual machines cloned to a VM template.
 
 Clone-of-Clone of a protected virtual machine is supported.
 
-Refer to https://docs.vmware.com/en/VMware-Horizon/2103/virtual-desktops/GUID-B5020738-8649-4308-A8B0-70AF80527DF6.html[Creating a Virtual Machine for Cloning] for more details.
+Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html[Creating a Virtual Machine for Cloning] for more details.
 
 // 10.3 updates
 

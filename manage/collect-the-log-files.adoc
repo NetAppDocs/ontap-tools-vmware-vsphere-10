@@ -29,7 +29,8 @@ Download the tar.gz file and send it to technical support.
 Follow the steps below to generate log bundle using the vCenter client user interface:
 
 .Steps
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+
+. Log in to the vSphere client.
 . From the vSphere Client home page, go to *Support* > *Log bundle* > *Generate*.
 . Provide the log bundle label and generate the log bundle.
 You can see the download option when the files are generated. Downloading may take some time.

@@ -9,9 +9,9 @@ summary: 'The ONTAP tools for VMware vSphere appliance is deployed as small-size
 :imagesdir: ../media/
 
 [.lead]
-The ONTAP tools for VMware vSphere appliance is deployed as small-sized single node with core services to support NFS and VMFS datastores.
+The ONTAP tools for VMware vSphere appliance is deployed as small-sized single node with core services to support NFS and VMFS datastores. The ONTAP tools deployment process may take up to 45 minutes.
 
-*Before you begin*
+.Before you begin
 
 A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
 [NOTE]
@@ -27,7 +27,7 @@ If you don't have a content library, follow these steps to create one:
 In you plan to use only a small single node deployment, creating a content library is not necessary.
 
 . Download the `.zip` file that contains binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^].
-. Log in to the vSphere client using `\https://<vcenterip>/<ui>`
+. Log in to the vSphere client
 . Select the vSphere client menu and select *Content libraries*.
 . Select *Create* on the right of the page.
 . Provide a name for the library and create the content library.
@@ -86,7 +86,7 @@ Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IP
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
 // we might need to add another step to To customizet he hardware. go to vSphere clinet menu >  in the inventory navigate to your VM > edit settings. 
-. Power on the VM after the completion of the task.
+. Power on the VM after completing the task if the option to automatically power on the VM was not selected.
 
 You can track the progress of the installation within the VM's web console.
 
@@ -97,6 +97,7 @@ If there are discrepancies in the OVF form, a dialog box will prompt corrective 
 If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3, then follow these steps after the deployment.
 
 . Log in to the vCenter client
+. Power down the ONTAP tools node.
 . Navigate to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
 . Under the *CPU* options, check the *Enable CPU hot add* checkbox
 . Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
