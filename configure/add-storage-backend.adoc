@@ -18,7 +18,7 @@ In case of multitenancy setups where vCenter acts as the tenant with an associat
 The vCenter tenant must onboard the desired Storage Virtual Machines (SVMs). This enables an SVM user to provision vVols datastore. You can add storage in vCenter using the SVM.
 
 Add the local storage backends with cluster or SVM credentials using the ONTAP tools user interface. These storage backends are limited to a single vCenter. When using cluster credentials locally, the associated SVMs automatically map to the vCenter to manage vVols or VMFS. For VMFS management, including SRA, ONTAP tools supports SVM credentials without needing a global cluster.
-//replicate to 10.3
+//replicate to 10.3 doc
 
 [role="tabbed-block"]
 ====
