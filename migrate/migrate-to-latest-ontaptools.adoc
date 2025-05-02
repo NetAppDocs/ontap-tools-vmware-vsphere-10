@@ -183,24 +183,24 @@ A job object is returned. You should save the job identifier to use it in the ne
 The request body is empty for patch operation.
 
 [NOTE]
-uuid is the migration uuid returned in the response of post migrate API.
+UUID is the migration UUID returned in response to the post-migrate API.
 
-Once the patch migration API is run successfully, all the VMs comply with the storage policy.
+After running the patch migration API, all VMs comply with the storage policy.
 
 ====
 
 .What's next
 
-After successful migration and after you register ONTAP tools 10.4 to the vCenter Server, do the following:
+After completing the migration and registering ONTAP tools 10.4 to the vCenter Server, follow these steps:
 
 * Refresh the certificate on all the hosts.
-* Wait for some time before performing Datastore (DS) and Virtual Machine (VM) operations. The waiting time depends on the number of hosts, DS, and VMs in the setup. When you don't wait, the operations may fail intermittently.
+* Allow sufficient time before initiating datastore and virtual machine operations. The required waiting period varies based on the number of hosts, datastores, and virtual machines within the configuration. Failure to wait may result in intermittent operational failures.
 
-After the upgrade, if the virtual machine compliance state is out of date, reapply the virtual machine storage policy using the following steps:
+After upgrading, if the virtual machine's compliance state is outdated, reapply the storage policy using the following steps:
 
 . Navigate to the datastore and select *Summary* > *VM Storage policies*.
 +
-Under *VM storage policy compliance*, you can see the compliance status. It shows as *Out-of-date*
+The compliance status under *VM storage policy compliance* shows as *Out-of-date*.
 . Select the Storage VM policy and the corresponding VM
 . Select *Apply*
 +
