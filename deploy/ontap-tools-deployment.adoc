@@ -80,6 +80,9 @@ b. Select *Actions* > *New VM from this template*
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
 Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IPv6 and IPv4 addresses.
+* ONTAP tools IP address is the primary interface for communicating with ONTAP tools
+* IPv4 is the IP address component of the node configuration, which can be utilized to enable diagnostic shell and SSH access on the node for the purposes of debugging and maintenance.
+// update for OTVDOC-262 
 . When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
 // Applicable only to vCenter 8.0.3
 . Review the details in the *Ready to complete* window, select *Finish*.

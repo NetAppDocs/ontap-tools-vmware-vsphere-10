@@ -9,19 +9,19 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 :imagesdir: ../media/
 
 [.lead]
-When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from the existing Derby database and imported into the MongoDB database.
+During storage data migration, storage backends are onboarded manually using REST APIs. The VASA Provider data migration involves exporting data from the existing Derby database and importing it into the MongoDB database.
 
 [NOTE]
 Migrating from ONTAP tools for VMware vSphere 9.XX is only required when using VASA Provider and vVols.
 
 [NOTE]
-After migrating from ONTAP tools for VMware vSphere 9.x to 10.4, vVols datastores with the NVMe/FC protocol do not work because ONTAP tools 10.4 only supports NVMe-oF with VMFS datastores.
+After migrating from ONTAP tools for VMware vSphere 9.x to 10.4, vVols datastores using the NVMe/FC protocol become non-operational because ONTAP tools 10.4 supports the NVMe-oF protocol only with VMFS datastores.
 
 //updated for 10.3 jira OTVDOC-147
 
 *About this task*
 
-You can migrate from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P1 releases to 10.4. 
+You can migrate from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.4. 
 
 //updated for OTVDOC-175 - jani
 [NOTE]
@@ -30,42 +30,41 @@ You must back up the deployment of your current ONTAP tools before upgrading to 
 == Common migration steps
 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.4. 
-. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.4 release. Refer link:../configure/add-vcenter.html[Add vCenter Server instances].
-. Onboard storage backend locally from the ONTAP tools for VMware vSphere plug-in vCenter server APIs. Add storage as a locally scoped storage for migration.
+. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.4 release. Refer to link:../configure/add-vcenter.html[Add vCenter Server instances] for more information.
+. Onboard the storage backend locally using the ONTAP tools plug-in on the vCenter server.  Add the storage as a locally scoped storage for migration.
 // updated as per doc_feedback - jani
 
 == SRA migration steps
 
 .Before you begin
 
-
-Before migrating, ensure that one of the sites is in a protected state and the other is in a recovery state.
+Before migration, verify that one site is in the protected state and the other is in the recovery state.
 
 [NOTE]
-Do not migrate if the failover has just been completed and re-protection is pending. Complete the re-protection and then Perform the migration. After completing the recovery plan testing, clean up the test recovery and start the migration.
+Do not begin migration if the failover has been completed but the re-protection is pending. Ensure that the re-protection process is completed before proceeding with the migration. If a test failover is in progress, clean up the test failover and start the migration.
 
-. Perform the following steps to delete ONTAP tools for VMware vSphere 9.xx release SRA adapter in VMware Live Site Recovery user interface:
+. Follow these steps to delete the ONTAP tools SRA adapter for VMware vSphere 9.xx in VMware Site Recovery:
 .. Go to VMware Live Site Recovery Configuration management page
-.. Go to the *Storage Replication Adapter* section 
-.. Select the ellipsis menu and select *Reset configuration*
-.. Select the ellipsis menu and select *Delete*
+.. Go to the *Storage Replication Adapter* section.
+.. From the ellipsis menu, select *Reset configuration*.
+.. From the ellipsis menu select *Delete*.
 +
 Perform these steps on both protection and recovery sites.
-. Install ONTAP tools for VMware vSphere 10.3 SRA adapter on both protection and recovery sites using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
-. On the VMware Live Site Recovery user interface page, perform *Discover Arrays* and *Discover Devices* operations and verify that the devices are showing as they were before the migration.
+. Install ONTAP tools for VMware vSphere 10.4 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
+. On the VMware Live Site Recovery user interface page, perform the *Discover Arrays* and *Discover Devices* operations and confirm that the devices are displayed as before the migration.
 
 == VASA Provider migration steps
 
-. Enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere. To enable the port, enable the root user and log in to CLI through SSH and run the following command:
+. To enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere, enable the root user and log in to the CLI through SSH. Then, run the following command:
 +
 ----
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.4.
-. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.4 release. See link:../configure/add-vcenter.html[Add a vCenter Server instance]. 
-. Onboard storage backend locally from the remote plug-in vCenter server APIs. Add storage as local scoped for migration.
-. Issue the following API from swagger or in postman to migrate:
+. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.4 release. Refer to link:../configure/add-vcenter.html[Add a vCenter Server instance] for more information. 
+. Onboard storage backend locally from the vCenter server APIs for the ONTAP tools plug-in.
+. Issue the following API from Swagger or in Postman to migrate:
 +
 ====
 
@@ -90,6 +89,7 @@ Asynchronous
 /api/v1/vcenters/{vcguid}/migration-jobs
 
 *JSON input example*
+
 Request body for migrating from 9.12 and 9.13:
 
 {
@@ -127,7 +127,7 @@ A job object is returned. You should save the job identifier to use it in the ne
 ----
 https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
-Once the job is completed, validate the migration report. The report is part of the job data and can be seen from the job response.
+After completing the job, review the migration report. This report is included in the job data and can be accessed from the job response.
 . Add ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider] with ONTAP tools for VMware vSphere.
 . link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.4.
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from the maintenance console.
