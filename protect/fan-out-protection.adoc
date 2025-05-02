@@ -32,6 +32,9 @@ a|
 
 |===
 
+The following diagram shows the fan out protection configuration:
+image:../media/fan-out-protection.png[Fan out protection configuration]
+image:../media/fan-out-protection-relationship.png[Fan out protection relationship]
 
 *Steps*
 
