@@ -34,7 +34,7 @@ For ONTAP tools for VMware vSphere initial deployment:
 |Requirement|Your value
 
 |IP address for the ONTAP tools application|
-|Node interconnect IP address for inter-node communication|
+|ONTAP tools virtual IP address for internal communication|
 |DNS hostname for the first node|
 |Primary DNS server|
 |Secondary DNS server|
