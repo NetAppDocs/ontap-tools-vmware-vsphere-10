@@ -67,7 +67,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 +
 curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration
 +
-You can access Swagger through this URL: `https://$FQDN_IP_PORT/`, for example: https://10.61.25.33:8443/.
+You can access Swagger through this URL: `https://$FQDN_IP_PORT/, for example: https://10.61.25.33:8443/.
 +
 ====
 *HTTP method and endpoint*
