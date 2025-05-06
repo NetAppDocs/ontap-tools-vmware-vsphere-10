@@ -20,7 +20,7 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 ** 348 GB for thick provisioned installations
 
 * *Host system sizing requirements*
-Recommended memory as per the size of deployment is as shown in the table below:
+Recommended memory as per the size of deployment is as shown in the table below. To deploy high availability (HA), you will require three times the appliance size specified in the table.
 // updated for GITHUB issue #50
 |===
 
