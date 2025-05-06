@@ -15,16 +15,16 @@ Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.
 |===
 | Update | Description
 
-|Support for ASA r2 system with 12 nodes per cluster
+|link:../configure/create-datastore.html[Support for ASA r2 system with 12 nodes per cluster]
 |ONTAP tools for VMware vSphere 10.4 supports workflows for ASA r2 storage systems with up to 12 nodes per cluster, improving data management efficiency and scalability. It supports vVols datastores with iSCSI and FC protocol, and VMFS datastores with iSCSI, FC, and NVMe protocol, providing flexible and enhanced storage options.
 
-|ONTAP tools Manager user interface enhancements
+|link:../manage/add-ntpserver.html[ONTAP tools Manager user interface enhancements]
 |You can now enable the NTP server for precise time synchronization across the environment and configure the telemetry settings to monitor and analyze system performance from the ONTAP tools Manager interface. These settings are no longer available in the maintenance console.
 
 |Enhanced security capabilities
 |Security features now offer enhanced protection and compliance with industry standards, providing a robust and user-friendly experience to help administrators manage VMware environments more effectively.
 
-|Enhanced SRA disaster recovery capabilities
+|link:../protect/enable-storage-replication-adapter.html[Enhanced SRA disaster recovery capabilities]
 |ONTAP tools for VMware vSphere 10.4 now supports disaster recovery operations using Site Recovery Appliance (SRA) with custom-named snapshots in addition to SnapMirror scheduled snapshot copies.
 
 |===
