@@ -24,30 +24,24 @@ Recommended memory as per the size of deployment is as shown in the table below:
 // updated for GITHUB issue #50
 |===
 
-|*Type of deployment*| *CPUs* |*Memory (GB)* |*Disk space (GB) thick provisioned*
-|Non-HA small
+|*Type of deployment*| *CPUs per node* |*Memory (GB) per node* |*Disk space (GB) thick provisioned per node*
+|Small
 |9
 |18
 |350
-|Non-HA medium
+|Medium
 |13
 |26
 |350
-|HA small (cumulative of three nodes)
-|27
-|54
-|1050
-|HA medium (cumulative of three nodes)
-|39
-|78
-|1050
-|HA large (cumulative of three nodes)
-|51
-|102
-|1050
+|Large
+
+NOTE: The large deployment is only for HA configuration.
+|17
+|34
+|350
 |===
 [NOTE]
-When backup is enabled, each ONTAP tools cluster needs another 50GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total.
+When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total.
 
 // updated note for OTVDOC-258
 == Minimum storage and application requirements
