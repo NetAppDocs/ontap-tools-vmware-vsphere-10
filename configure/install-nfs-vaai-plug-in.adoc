@@ -32,7 +32,7 @@ Install the NFS VAAI plug-in using ONTAP tools for VMware vSphere to leverage th
 . Select *Install on ESXI host*, select the ESXi host on which you want to install the NFS VAAI plug-in, and then select *Install*.
 +
 Only the ESXi hosts eligible for the plug-in installation are displayed. You can monitor the installation progress in the recent tasks section of the vSphere Web Client.
-. You should manually restart the ESXi host after the installation finishes.
+. Restart the ESXi host manually after installation.
 +
 When the VMware admin restarts the ESXi host, ONTAP tools for VMware vSphere automatically detects and enables the NFS VAAI plug-in.
 
