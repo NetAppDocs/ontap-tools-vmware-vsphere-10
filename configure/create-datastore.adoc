@@ -34,7 +34,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 [NOTE]
 The ASA r2 system supports the iSCSI and FC protocols for vVols.
 . Select the storage VM where you want to create the datastore. 
-. Select a custom export policy for the NFS protocol or a custom initiator group name for the iSCSI and FC protocols in the *Advanced options*.
+. Under advanced options, you can select *Custom export policy* for the NFS protocol or a custom initiator group name for the iSCSI and FC protocols, but it's not recommended. If you use this option, ensure you run discovery in vCenter for all objects.
 [NOTE]
 In ASA r2 storage system type SVM, storage units (LUN/namespace) are not created as the datastore is only a logical container.
 //10.3 update for ASA r2
@@ -58,7 +58,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 [NOTE]
 Kerberos authentication is available only when the NFS 4.1 protocol is selected. 
 . Select *Platform* and *Storage VM* in the *Storage* pane. 
-. Choose *Custom export policy* under advanced options if necessary, but it's not recommended. If used, ensure you run discovery in vCenter for all objects.
+. You can select a custom export policy under advanced options, but it's not recommended. If used, ensure you run discovery in vCenter for all objects.
 [NOTE]
 You cannot create an NFS datastore using the SVM’s default/root volume policy.
 [NOTE]

@@ -12,10 +12,7 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 During storage data migration, storage backends are onboarded manually using REST APIs. The VASA Provider data migration involves exporting data from the existing Derby database and importing it into the MongoDB database.
 
 [NOTE]
-Migrating from ONTAP tools for VMware vSphere 9.XX is only required when using VASA Provider and vVols. The NFS and VMFS datastores are discovered during the storage discovery process.
-
-[NOTE]
-After migrating from ONTAP tools for VMware vSphere 9.x to 10.4, vVols datastores using the NVMe/FC protocol become non-operational because ONTAP tools 10.4 supports the NVMe-oF protocol only with VMFS datastores.
+After migrating from ONTAP tools for VMware vSphere 9 to 10.4, vVols datastores using the NVMe/FC protocol become non-operational because ONTAP tools 10.4 supports the NVMe-oF protocol only with VMFS datastores.
 
 //updated for 10.3 jira OTVDOC-147
 
@@ -44,15 +41,18 @@ Before migration, verify that one site is in the protected state and the other i
 Do not begin migration if the failover has been completed but the re-protection is pending. Ensure that the re-protection process is completed before proceeding with the migration. If a test failover is in progress, clean up the test failover and start the migration.
 
 . Follow these steps to delete the ONTAP tools SRA adapter for VMware vSphere 9.xx in VMware Site Recovery:
-.. Go to VMware Live Site Recovery Configuration management page
+.. Go to VMware Live Site Recovery configuration management page
 .. Go to the *Storage Replication Adapter* section.
-.. From the ellipsis menu, select *Reset configuration*.
+.. From the ellipsis menu select *Reset configuration*.
 .. From the ellipsis menu select *Delete*.
 . Perform these steps on both protection and recovery sites.
 .. Install ONTAP tools for VMware vSphere 10.4 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
 .. On the VMware Live Site Recovery user interface page, perform the *Discover Arrays* and *Discover Devices* operations and confirm that the devices are displayed as before the migration.
 
 == VASA Provider migration steps
+
+[NOTE]
+Migrating from ONTAP tools for VMware vSphere 9 is only required when using VASA Provider and vVols. The NFS and VMFS datastores are discovered during the storage discovery process.
 
 . To enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere, enable the root user and log in to the CLI through SSH. Then, run the following command:
 +
