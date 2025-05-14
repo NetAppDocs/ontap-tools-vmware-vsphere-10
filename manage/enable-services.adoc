@@ -18,7 +18,7 @@ You can change the administrator password using ONTAP tools Manager to enable se
 . Select the *Edit Appliance Settings* in the overview section.
 . In the *Services* section, you can enable optional services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) as per your requirement.
 +
-When enabling the services for the first time, you must create the VASA Provider and SRA credentials. These are used to register or enable the VASA Provider and SRA services on the vCenter Server.
+When enabling the services for the first time, you must create the VASA Provider and SRA credentials. These are used to register or enable the VASA Provider and SRA services on the vCenter Server. The username can only contain letters, numbers, and underscores. Password length should be between 8 and 256 characters.
 [NOTE]
 Before disabling any optional services, ensure that the vCenter Servers managed by ONTAP tools do not use them.
 +
