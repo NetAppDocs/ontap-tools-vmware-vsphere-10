@@ -45,6 +45,7 @@ Sets the following parameters to default values:
 * Emulex FC HBA timeouts
 * QLogic FC HBA timeouts
 // OTVDOC-267 - jani
+
 === MPIO Settings
 
 MPIO settings define the preferred paths for NetApp storage systems. They determine which of the available paths are optimized (as opposed to non-optimized paths that traverse the interconnect cable) and set the preferred path to one of those paths.
