@@ -17,7 +17,7 @@ Install the NFS VAAI plug-in using ONTAP tools for VMware vSphere to leverage th
 * Download the https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab[NetApp NFS Plug-in for VMware VAAI] installation package.
 * Make sure you have the ESXi host and vSphere 7.0U3 latest patch or later versions and ONTAP 9.14.1 or later versions.  
 * Mount an NFS datastore.
-* vSphere 8.x is supported with the NetApp NFS VAAI plug-in 2.0.1(build 16).
+// OTVDOC-238 - jani
 
 .Steps
 

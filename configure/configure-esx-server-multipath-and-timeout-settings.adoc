@@ -38,24 +38,13 @@ Using ONTAP tools for VMware vSphere, you can set timeouts and other values on t
 You can set the following values on an ESXi host:
 
 === HBA/CNA Adapter Settings
-Sets the recommended HBA timeout settings for NetApp storage systems.
+Sets the following parameters to default values: 
 
-|===
-|Parameters |Set this value to...
-
-|Disk.QFullSampleSize
-|32 for all configurations. Setting this value helps to prevent I/O errors.
-
-|Disk.QFullThreshold
-|8 for all configurations. Setting this value helps prevent I/O errors.
-
-|Emulex FC HBA timeouts
-|Default value.
-
-|QLogic FC HBA timeouts
-|Default value.
-
-|===
+* Disk.QFullSampleSize
+* Disk.QFullThreshold
+* Emulex FC HBA timeouts
+* QLogic FC HBA timeouts
+// OTVDOC-267 - jani
 
 === MPIO Settings
 
