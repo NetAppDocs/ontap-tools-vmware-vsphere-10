@@ -10,7 +10,13 @@ summary: 'When you create a datastore at the host cluster level, the datastore i
 
 [.lead]
 
-When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute. 
+When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute.
+
+.Interoperability between datastores created directly within vCenter Server and those managed by ONTAP tools.
+
+ONTAP tools for VMware vSphere 10 creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to the hosts. You can create flat igroups in the vCenter server and use them to create VMFS datastores without using ONTAP tools. When the storage is onboarded to ONTAP tools and datastore discovery is run, flat igroups and VMFS datastores become ONTAP tools-managed and are converted to nested igroups. You cannot use the earlier flat igroups to create new datastores; you must use the ONTAP tools user interface or REST API to reuse the nested igroups.
+
+
 
 [role="tabbed-block"]
 ====
@@ -103,8 +109,6 @@ VMware vSphere 7.0 U3 and later versions support the NVMe/TCP protocol. However,
 . For VMware vSphere 7 release, follow the instructions on page https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0/about-vmware-nvme-storage/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Enable NVMe over RDMA or NVMe over TCP Software Adapters] to configure NVMe/TCP software adapters. For the VMware vSphere 8 release, follow https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/about-vmware-nvme-storage/configuring-nvme-over-rdma-roce-v2-on-esxi/add-software-nvme-over-rdma-or-nvme-over-tcp-adapters.html[Add Software NVMe over RDMA or NVMe over TCP Adapters] to configure the NVMe/TCP software adapters.
 . Run link:../configure/discover-storage-systems-and-hosts.html[Discover storage systems and hosts] action on the ESXi host.
 For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429[How to Configure NVMe/TCP with vSphere 8.0 Update 1 and ONTAP 9.13.1 for VMFS Datastores].
-+
-ONTAP tools for VMware vSphere 10 creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to hosts. You can create flat igroups natively and use them to create VMFS datastores without using ONTAP tools. When the storage is onboarded to ONTAP tools and datastore discovery is run, flat igroups and VMFS datastores become ONTAP tools-managed and are converted to nested igroups. You cannot use the earlier flat igroups to create new datastores; you must use the ONTAP tools user interface or REST API to reuse the nested igroups.
 
 * If you are using the NVME/FC protocol, perform the following steps to configure the ESXi host:
 
