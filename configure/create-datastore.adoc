@@ -12,7 +12,7 @@ summary: 'When you create a datastore at the host cluster level, the datastore i
 
 When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute.
 
-.Interoperability between datastores created directly within vCenter Server and those managed by ONTAP tools.
+.Interoperability between native datastores with vCenter Server and ONTAP tools managed datastores
 
 ONTAP tools for VMware vSphere 10 creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to the hosts. You can create flat igroups in the vCenter server and use them to create VMFS datastores without using ONTAP tools. When the storage is onboarded to ONTAP tools and datastore discovery is run, flat igroups and VMFS datastores become ONTAP tools-managed and are converted to nested igroups. You cannot use the earlier flat igroups to create new datastores; you must use the ONTAP tools user interface or REST API to reuse the nested igroups.
 
