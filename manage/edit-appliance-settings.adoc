@@ -20,6 +20,9 @@ To migrate to HA when non-HA backup is enabled, disable the backup first and re-
 * Ensure that your OVA template has the same OVA version as Node 1. Node 1 is the default node where the ONTAP tools for VMware vSphere OVA is initially deployed.
 // https://jira.ngage.netapp.com/browse/OTVDOC-190 -  jani
 * Ensure the CPU hot add and memory hot plug are enabled.
+* In the vCenter Server, set the Disaster Recovery Service (DRS) automation level to partially automated. After deploying HA, revert it to fully automated.
+* Node hostnames in the HA setup should be in lowercase.
+// OTVDOC-268 - jani
 
 .Steps
 
