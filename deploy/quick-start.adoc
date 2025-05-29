@@ -61,9 +61,9 @@ Add the local storage backends with cluster or SVM credentials using the ONTAP t
 * link:../configure/add-storage-backend.html[Add a storage backend]
 * link:../configure/associate-storage-backend.html[Associate the storage backend with a vCenter Server instance]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Upgrade the certificates if you're working with multiple vCenter Servers
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Upgrade the certificates if you're working with multiple vCenter Server instances
 [role="quick-margin-para"]
-When working with multiple vCenter Servers, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
+When working with multiple vCenter Server instances, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html[Manage certificates]
 
