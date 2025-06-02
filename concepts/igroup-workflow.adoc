@@ -13,145 +13,127 @@ Initiator groups (igroups) are tables of FC protocol host WWPNs or iSCSI host no
 
 Each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. Different workflows generate varying igroup configurations, as shown in the following examples:
 
-*Create Datastore on a Single Host with One Initiator*
+.Create Datastore on a Single Host with One Initiator
 
-.Workflow
+*Workflow*
 [Create] DS1 (lun1): host1 (iqn1)
-.Result
+
+*Result*
 
 * DS1Igroup:
 ** host1Igroup → (iqn1: lun1)
 
-.Explanation
+*Explanation*
+
 A parent iGroup DS1Igroup is created on ONTAP for DS1, with a child iGroup host1Igroup mapped to lun1. LUNs are always mapped to child iGroups, not to the parent.
 
-*Mount Existing Datastore to an Additional Host*
+.Mount Existing Datastore to an Additional Host
 
-.Workflow
+*Workflow*
 
 [Mount] DS1 (lun1): host2 (iqn2)
 
-.Result
+*Result*
+
 * DS1Igroup:
 ** host1Igroup → (iqn1: lun1)
 ** host2Igroup → (iqn2: lun1)
 
-.Explanation
+*Explanation*
+
 A new child iGroup host2Igroup is created and added to the existing parent iGroup DS1Igroup.
 
-*ttt*
+.Unmount a datastore from a host
 
-.Workflow
-
-.Result
-
-.Explanation
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-*ttt*
-
-.Workflow
-
-.Result
-
-.Explanation
-
-|===
-|Operation |Workflow| Result |Explanation 
-
-|Create datastore on a Single host with One initiator ||
-• DS1Igroup:
-
-•• host1Igroup → (iqn1: lun1)
-|A parent iGroup DS1Igroup is created on ONTAP for DS1, with a child iGroup host1Igroup mapped to lun1. LUNs are always mapped to child iGroups, not to the parent.
-
-|Mount existing datastore to an additional host|[Mount] DS1 (lun1): host2 (iqn2)
-|
-•	DS1Igroup:
-
-o	host1Igroup → (iqn1: lun1)
-
-o	host2Igroup → (iqn2: lun1)
-|A new child iGroup host2Igroup is created and added to the existing parent iGroup DS1Igroup.
-
-
-|Unmount a datastore from a host|Workflow:
+*Workflow*
 [Unmount] DS1 (lun1): host1 (iqn1)
 
-|Result:
+*Result*
 •	DS1Igroup:
 o	host2Igroup → (iqn2: lun1)
-|Explanation:
+
+*Explanation*
 The host1Igroup is removed from the hierarchy. However, child iGroups are not explicitly deleted in code. Deletion happens under these two conditions:
 •	Scenario 1: If no LUNs are mapped, ONTAP automatically deletes the child iGroup.
 •	Scenario 2: A scheduled cleanup job removes dangling child iGroups (i.e., with no LUN mappings).
 Both scenarios apply only to OTV-managed iGroups, not custom-created ones.
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+.ttt
+
+*Workflow*
+
+*Result*
+
+*Explanation*
+
+|===
+|Operation |Workflow| Result |Explanation 
 
 
 |Delete datastore|[Delete] DS1 (lun1): host2 (iqn2)
