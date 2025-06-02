@@ -17,16 +17,12 @@ Each datastore in vCenter is associated with a parent igroup, while each host is
 
 Create datastore on a single host with one initiator
 
-*Workflow*
+*Workflow*: [Create] DS1 (lun1): host1 (iqn1)
 
-[Create] DS1 (lun1): host1 (iqn1)
-
-*Result*
+*Result*:
 
 * DS1Igroup:
 ** host1Igroup → (iqn1: lun1)
-
-*Explanation*
 
 A parent igroup DS1Igroup is created on the ONTAP systems for DS1, with a child igroup host1Igroup mapped to lun1. LUNs are always mapped to child igroups.
 
@@ -34,17 +30,13 @@ A parent igroup DS1Igroup is created on the ONTAP systems for DS1, with a child 
 
 Mount existing datastore to an additional host
 
-*Workflow*
+*Workflow*: [Mount] DS1 (lun1): host2 (iqn2)
 
-[Mount] DS1 (lun1): host2 (iqn2)
-
-*Result*
+*Result*:
 
 * DS1Igroup:
 ** host1Igroup → (iqn1: lun1)
 ** host2Igroup → (iqn2: lun1)
-
-*Explanation*
 
 A child igroup host2Igroup is created and added to the existing parent igroup DS1Igroup.
 
@@ -52,16 +44,12 @@ A child igroup host2Igroup is created and added to the existing parent igroup DS
 
 Unmount a datastore from a host
 
-*Workflow*
+*Workflow*: [Unmount] DS1 (lun1): host1 (iqn1)
 
-[Unmount] DS1 (lun1): host1 (iqn1)
-
-*Result*
+*Result*:
 
 * DS1Igroup:
 ** host2Igroup → (iqn2: lun1)
-
-*Explanation*
 
 The host1Igroup is removed from the hierarchy. Child igroups are not explicitly deleted. Deletion occurs under these two conditions:
 •  If no LUNs are mapped, the ONTAP system deletes the child igroup.
@@ -72,16 +60,12 @@ These scenarios only apply to ONTAP tools-managed igroups, not custom-created on
 
 Delete datastore
 
-*Workflow*
+*Workflow*: [Delete] DS1 (lun1): host2 (iqn2)
 
-[Delete] DS1 (lun1): host2 (iqn2)
-
-*Result*
+*Result*: 
 
 * DS1Igroup:
 ** host2Igroup → (iqn2: lun1)
-
-*Explanation*
 
 Parent and child igroups are removed if another datastore does not reuse the parent igroup. Child igroups are never explicitly deleted
 
@@ -89,18 +73,17 @@ Parent and child igroups are removed if another datastore does not reuse the par
 
 Create multiple datastores under a custom parent igroup
 
-*Workflow*
+*Workflow*:
+
 •	[Create] DS2 (lun2): host1 (iqn1), host2 (iqn2)
 •	[Create] DS3 (lun3): host1 (iqn1), host3 (iqn3)
 
-*Result*
+*Result*:
 
 * CustomIgroup1:
 ** host1Igroup → (iqn1: lun2, lun3)
 ** host2Igroup → (iqn2: lun2)
 ** host3Igroup → (iqn3: lun3)
-
-*Explanation*
 
 CustomIgroup1 is created for DS2 and reused for DS3. Child igroups are created or updated under the shared parent, with each child igroup mapping to its relevant LUNs.
 
@@ -108,17 +91,13 @@ CustomIgroup1 is created for DS2 and reused for DS3. Child igroups are created o
 
 Delete one datastore under a custom parent igroup.
 
-*Workflow*
+*Workflow*: [Delete] DS2 (lun2): host1 (iqn1), host2 (iqn2)
 
-[Delete] DS2 (lun2): host1 (iqn1), host2 (iqn2)
-
-*Result*
+*Result*:
 
 * CustomIgroup1:
 ** host1Igroup → (iqn1: lun3)
 ** host3Igroup → (iqn3: lun3)
-
-*Explanation*
 
 * Even though CustomIgroup1 is not reused, it is not deleted.
 * If no LUNs are mapped, the ONTAP system deletes host2Igroup.
@@ -129,7 +108,7 @@ Custom igroups are never deleted, regardless of the reuse status.
 
 Expand datastore (Add Volume)
 
-*Workflow*
+*Workflow*:
 
 Before expansion:
 
@@ -141,15 +120,13 @@ After expansion:
 [Expand] DS4 (lun4, lun5): host4 (iqn4)
 * DS4Igroup: host4Igroup → (iqn4: lun4, lun5)
 
-*Explanation*
-
 A new LUN is created and mapped to the existing child igroup host4Igroup.
 
 .Example 8:
 
 Shrink datastore (Remove Volume)
 
-*Workflow*
+*Workflow*:
 
 Before Shrink:
 
@@ -160,8 +137,6 @@ After Shrink:
 
 [Shrink] DS4 (lun4): host4 (iqn4)
 * DS4Igroup: host4Igroup → (iqn4: lun4)
-
-*Explanation*
 
 The specified LUN (lun5) is unmapped from the child igroup. The igroup remains active as long as it has at least one mapped LUN.
 
@@ -187,6 +162,7 @@ After migration:
 otv_ClassicIgroup1 (iqn6 & iqn7 : lun6, lun7)
 
 During migration:
+
 * A new parent igroup (ClassicIgroup1) is created.
 * The original igroup is renamed with otv_ prefix and becomes a child igroup.
 
