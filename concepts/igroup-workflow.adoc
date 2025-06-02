@@ -13,9 +13,12 @@ Initiator groups (igroups) are tables of FC protocol host WWPNs or iSCSI host no
 
 Each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. Different workflows generate varying igroup configurations, as shown in the following examples:
 
-.Create Datastore on a Single Host with One Initiator
+.Example 1
+
+Create Datastore on a Single Host with One Initiator
 
 *Workflow*
+
 [Create] DS1 (lun1): host1 (iqn1)
 
 *Result*
@@ -25,7 +28,7 @@ Each datastore in vCenter is associated with a parent igroup, while each host is
 
 *Explanation*
 
-A parent iGroup DS1Igroup is created on ONTAP for DS1, with a child iGroup host1Igroup mapped to lun1. LUNs are always mapped to child iGroups, not to the parent.
+A parent igroup DS1Igroup is created on the ONTAP systems for DS1, with a child igroup host1Igroup mapped to lun1. LUNs are always mapped to child igroups.
 
 .Mount Existing Datastore to an Additional Host
 
@@ -41,7 +44,7 @@ A parent iGroup DS1Igroup is created on ONTAP for DS1, with a child iGroup host1
 
 *Explanation*
 
-A new child iGroup host2Igroup is created and added to the existing parent iGroup DS1Igroup.
+A new child igroup host2Igroup is created and added to the existing parent igroup DS1Igroup.
 
 .Unmount a datastore from a host
 
@@ -53,10 +56,10 @@ A new child iGroup host2Igroup is created and added to the existing parent iGrou
 o	host2Igroup → (iqn2: lun1)
 
 *Explanation*
-The host1Igroup is removed from the hierarchy. However, child iGroups are not explicitly deleted in code. Deletion happens under these two conditions:
-•	Scenario 1: If no LUNs are mapped, ONTAP automatically deletes the child iGroup.
-•	Scenario 2: A scheduled cleanup job removes dangling child iGroups (i.e., with no LUN mappings).
-Both scenarios apply only to OTV-managed iGroups, not custom-created ones.
+The host1Igroup is removed from the hierarchy. However, child igroups are not explicitly deleted in code. Deletion happens under these two conditions:
+•	Scenario 1: If no LUNs are mapped, ONTAP automatically deletes the child igroup.
+•	Scenario 2: A scheduled cleanup job removes dangling child igroups (i.e., with no LUN mappings).
+Both scenarios apply only to OTV-managed igroups, not custom-created ones.
 .ttt
 
 *Workflow*
@@ -142,7 +145,7 @@ Both scenarios apply only to OTV-managed iGroups, not custom-created ones.
 •	DS1Igroup:
 o	host2Igroup → (iqn2: lun1)
 |Explanation:
-Both parent and child iGroups will be removed if the parent iGroup is not reused by another datastore. Child iGroups are never explicitly deleted—refer to scenario #3.
+Both parent and child igroups will be removed if the parent igroup is not reused by another datastore. Child igroups are never explicitly deleted—refer to scenario #3.
 
 
 |Create multiple datastores under a custom parent igroup|•	[Create] DS2 (lun2): host1 (iqn1), host2 (iqn2)
@@ -154,7 +157,7 @@ o	host1Igroup → (iqn1: lun2, lun3)
 o	host2Igroup → (iqn2: lun2)
 o	host3Igroup → (iqn3: lun3)
 |Explanation:
-CustomIgroup1 is created for DS2, then reused for DS3. Child iGroups are created or updated under the shared parent. Each child iGroup maps only to its relevant LUNs.
+CustomIgroup1 is created for DS2, then reused for DS3. Child igroups are created or updated under the shared parent. Each child igroup maps only to its relevant LUNs.
 
 
 |Delete a datastore under a custom parent igroup|[Delete] DS2 (lun2): host1 (iqn1), host2 (iqn2)
@@ -167,7 +170,7 @@ o	host3Igroup → (iqn3: lun3)
 •	CustomIgroup1 is not deleted, even if not reused.
 •	host2Igroup is deleted automatically by ONTAP (no LUNs mapped).
 •	host1Igroup remains because it still maps to lun3 of DS3.
-Custom iGroups are never deleted, regardless of reuse status.
+Custom igroups are never deleted, regardless of reuse status.
 
 
 |Expand datastore (Add Volume)|Before Expansion:
@@ -177,7 +180,7 @@ After Expansion:
 [Expand] DS4 (lun4, lun5): host4 (iqn4)
 •	DS4Igroup: host4Igroup → (iqn4: lun4, lun5)
 ||Explanation:
-A new LUN is created and mapped to the existing child iGroup host4Igroup.
+A new LUN is created and mapped to the existing child igroup host4Igroup.
 
 
 |Shrink datastore (Remove Volume)|Before Shrink:
@@ -188,24 +191,24 @@ After Shrink:
 •	DS4Igroup: host4Igroup → (iqn4: lun4)
 
 ||Explanation:
-The specified LUN (lun5) is unmapped from the child iGroup. The iGroup remains active as long as it has at least one mapped LUN.
+The specified LUN (lun5) is unmapped from the child igroup. The igroup remains active as long as it has at least one mapped LUN.
 
 
-|Migration from ONTAP tools 9 to 10 (iGroup normalization)|Scenario:
-Classic OTV versions do not support hierarchical iGroups. During migration to 10.3, iGroups must be normalized into the hierarchical structure.
+|Migration from ONTAP tools 9 to 10 (igroup normalization)|Scenario:
+Classic OTV versions do not support hierarchical igroups. During migration to 10.3, igroups must be normalized into the hierarchical structure.
 Before Migration:
 [Migration] DS6 (lun6, lun7): host6 (iqn6), host7 (iqn7)
 → ClassicIgroup1 (iqn6 & iqn7 : lun6, lun7)
-•	Classic logic allows multiple initiators per iGroup without enforcing one-to-one host mapping.
+•	Classic logic allows multiple initiators per igroup without enforcing one-to-one host mapping.
 After Migration:
 [Migration] DS6 (lun6, lun7): host6 (iqn6), host7 (iqn7)
 → ClassicIgroup1:
 otv_ClassicIgroup1 (iqn6 & iqn7 : lun6, lun7)
 •	During migration:
-o	A new parent iGroup (ClassicIgroup1) is created.
-o	The original iGroup is renamed with otv_ prefix and becomes a child iGroup.
+o	A new parent igroup (ClassicIgroup1) is created.
+o	The original igroup is renamed with otv_ prefix and becomes a child igroup.
 o	This ensures compliance with the hierarchical model.
-Note: Please refer to the Classic SAN documentation for the older iGroup behaviors.
+Note: Please refer to the Classic SAN documentation for the older igroup behaviors.
 ||
 
 
