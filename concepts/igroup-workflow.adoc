@@ -12,6 +12,19 @@ summary: ''
 Initiator groups (igroups) are tables of FC protocol host WWPNs or iSCSI host node names. You can define igroups and map them to LUNs to control which initiators have access to LUNs.
 
 Each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. Different workflows generate varying igroup configurations, as shown in the following examples:
+[NOTE]
+The names mentioned are for illustration purposes only and do not refer to real igroup names. ONTAP tools managed igroups use the prefix “otv_”. Custom igroups can be given any name.
+|===
+|Term |Description
+|DS<number>	|Datastore
+|iqn<number> |Initiator IQN
+|host<number>|Host MoRef
+|lun<number> |LUN ID
+|<DSName>Igroup<number>	|Default (ONTAP tools-managed) parent igroup
+|<Host-Moref>Igroup<number>	|Child igroup
+|CustomIgroup<number> |User-defined custom parent igroup
+|ClassicIgroup<number> |Igroup used in ONTAP tools 9.x versions.
+|===
 
 .Example 1:
 
@@ -113,11 +126,13 @@ Expand datastore (Add Volume)
 Before expansion:
 
 [Expand] DS4 (lun4): host4 (iqn4)
+
 * DS4Igroup: host4Igroup → (iqn4: lun4)
 
 After expansion:
 
 [Expand] DS4 (lun4, lun5): host4 (iqn4)
+
 * DS4Igroup: host4Igroup → (iqn4: lun4, lun5)
 
 A new LUN is created and mapped to the existing child igroup host4Igroup.
@@ -131,11 +146,13 @@ Shrink datastore (Remove Volume)
 Before Shrink:
 
 [Shrink] DS4 (lun4, lun5): host4 (iqn4)
+
 * DS4Igroup: host4Igroup → (iqn4: lun4, lun5)
 
 After Shrink:
 
 [Shrink] DS4 (lun4): host4 (iqn4)
+
 * DS4Igroup: host4Igroup → (iqn4: lun4)
 
 The specified LUN (lun5) is unmapped from the child igroup. The igroup remains active as long as it has at least one mapped LUN.
