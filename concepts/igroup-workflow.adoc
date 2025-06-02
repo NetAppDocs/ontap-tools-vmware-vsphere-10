@@ -9,12 +9,123 @@ summary: ''
 :imagesdir: ../media/
 
 [.lead]
-Each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. Different workflows generate varying igroup configurations, as illustrated in the following table.
+Initiator groups (igroups) are tables of FC protocol host WWPNs or iSCSI host node names. You can define igroups and map them to LUNs to control which initiators have access to LUNs.
+
+Each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. Different workflows generate varying igroup configurations, as shown in the following examples:
+
+*Create Datastore on a Single Host with One Initiator*
+
+.Workflow
+[Create] DS1 (lun1): host1 (iqn1)
+.Result
+
+* DS1Igroup:
+** host1Igroup → (iqn1: lun1)
+
+.Explanation
+A parent iGroup DS1Igroup is created on ONTAP for DS1, with a child iGroup host1Igroup mapped to lun1. LUNs are always mapped to child iGroups, not to the parent.
+
+*Mount Existing Datastore to an Additional Host*
+
+.Workflow
+
+[Mount] DS1 (lun1): host2 (iqn2)
+
+.Result
+* DS1Igroup:
+** host1Igroup → (iqn1: lun1)
+** host2Igroup → (iqn2: lun1)
+
+.Explanation
+A new child iGroup host2Igroup is created and added to the existing parent iGroup DS1Igroup.
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
+
+*ttt*
+
+.Workflow
+
+.Result
+
+.Explanation
 
 |===
 |Operation |Workflow| Result |Explanation 
 
-|Create datastore on a Single host with One initiator |[Create] DS1 (lun1): host1 (iqn1)|
+|Create datastore on a Single host with One initiator ||
 • DS1Igroup:
 
 •• host1Igroup → (iqn1: lun1)
@@ -117,3 +228,8 @@ Note: Please refer to the Classic SAN documentation for the older iGroup behavio
 
 
 |===
+
+.Related topics
+
+https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html[About igroups]
+https://docs.netapp.com/us-en/ontap/nfs-config/create-export-policy-task.html[Create an export policy]
