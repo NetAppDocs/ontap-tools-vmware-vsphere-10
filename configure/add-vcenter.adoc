@@ -9,7 +9,8 @@ summary: 'Add vCenter Server instances to ONTAP tools for VMware vSphere to conf
 :imagesdir: ../media/
 
 [.lead]
-Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment.
+Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment. When you add multiple vCenter Server instances, Custom CA certificates are required for secure communication between ONTAP tools and each vCenter Server.
+//OTVDOC-271 updates -Jani
 
 *About this task*
 
