@@ -9,7 +9,9 @@ summary: 'You can register the VASA Provider with a vCenter Server instance usin
 :imagesdir: ../media/
 
 [.lead]
-You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere. The VASA Provider settings section displays the VASA Provider registration status for the selected vCenter Server.
+You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere. The VASA Provider settings section displays the VASA Provider registration status for the selected vCenter Server. In a  multi-vCenter deployment ensure that you have custom CA certificates for each vCenter Server instance. 
+
+//OTVDOC-271 updates -Jani
 
 .Steps
 
