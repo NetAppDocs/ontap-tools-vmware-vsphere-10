@@ -52,6 +52,10 @@ MPIO settings define the preferred paths for NetApp storage systems. They determ
 
 In high-performance environments, or when you are testing performance with a single LUN datastore, consider changing the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) from the default IOPS setting of 1000 to a value of 1.
 
+[NOTE]
+The MPIO settings do not apply to NVMe-type storage.
+// OTVDOC-281 updates -Jani
+
 === NFS settings
 |===
 |Parameter |Set this value to...
