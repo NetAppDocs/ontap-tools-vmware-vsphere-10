@@ -4,16 +4,13 @@ sidebar: sidebar
 keywords: migrate
 summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.'
 ---
-= Migrate VASA Provider and SRA
+= Migrate the VASA Provider and the storage replication adaptor (SRA)
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-== VASA Provider migration steps
-
-[NOTE]
-Migrating from ONTAP tools for VMware vSphere 9 is only required when using VASA Provider and vVols. The NFS and VMFS datastores are discovered during the storage discovery process.
+== Steps to migrate the VASA Provider
 
 . To enable Derby PORT 1527 on the existing ONTAP tools for VMware vSphere, enable the root user and log in to the CLI through SSH. Then, run the following command:
 +
@@ -176,7 +173,7 @@ The compliance status under *VM storage policy compliance* is now shown as compl
 * link:../upgrade/upgrade-ontap-tools.html[Upgrade from ONTAP tools for VMware vSphere 10.x to 10.4]
 // OTVDOC-164 - jani
 
-== SRA migration steps
+== Steps to migrate the SRA
 
 .Before you begin
 
