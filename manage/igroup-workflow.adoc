@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: ''
 ---
-= Manage igroups and export policies
+= Understand igroups and export policies
 :icons: font
 :imagesdir: ../media/
 
