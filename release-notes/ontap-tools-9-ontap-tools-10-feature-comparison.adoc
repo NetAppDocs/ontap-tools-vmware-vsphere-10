@@ -20,7 +20,7 @@ Key value proposition
 |
 Streamline and simplify day-0 to day-2 operations with enhanced security, compliance and automation capabilities
 |
-Evolving ONTAP tools 10.x towards 9.x parity while extending high availability, performance, and scale limits
+Evolving ONTAP tools 10.x towards 9.xx parity while extending high availability, performance, and scale limits
 |
 Expanded support to include FC for VMFS and vVols, and NVMe-oF/FC, NVMe-oF/TCP for VMFS only. Ease of use for NetApp SnapMirror, simple setup for vSphere metro storage clusters, and three-site VMware Live Site Recovery support
 |
