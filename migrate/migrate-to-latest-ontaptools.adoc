@@ -33,14 +33,11 @@ Steps:
 |
 Steps:
 
-1. Back up your ONTAP tools for VMware vSphere 9.xx configuration. 
-// You can use the ONTAP tools for VMware vSphere CLI or REST API to export the configuration settings.
+1. Remove ONTAP tools 9.xx from your environment. Refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment[How to remove OTV 9.12+ from your environment] NetApp Knowledge Base article.
 
-2. Remove ONTAP tools 9.xx from your environment. Refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment[How to remove OTV 9.12+ from your environment] NetApp Knowledge Base article.
+2. link:../deploy/quick-start.html[Deploy and configure ONTAP tools for VMware vSphere 10.4] 
 
-3. link:../deploy/quick-start.html[Deploy and configure ONTAP tools for VMware vSphere 10.4] 
-
-4. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html[Create VM storage policies]
+3. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html[Create VM storage policies]
 
 |===
 [NOTE]

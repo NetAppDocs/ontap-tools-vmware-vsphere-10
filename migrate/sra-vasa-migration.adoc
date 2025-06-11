@@ -46,20 +46,17 @@ Asynchronous
 
 *Curl example*
 
-curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs 
-
-*JSON input example*
-
-Request body for migrating from 9.12 and 9.13:
-
-{
-  "otv_ip": "10.12.13.45",
+curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
+--header 'x-auth: <auth_token>' \
+--header 'Content-Type: application/json' \
+--data '{
+  "otv_ip": "xx.xx.xx.xx",
   "vasa_provider_credentials": {
-    "username": "vasauser",
-    "password": "*******"
-  }
-  "database_password": "*******"
-}
+    "username": "administrator",
+    "password": "******"
+  },
+  "database_password": "******"
+}'
 
 Request body for other release migration: 
 
