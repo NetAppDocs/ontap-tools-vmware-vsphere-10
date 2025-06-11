@@ -4,29 +4,11 @@ sidebar: sidebar
 keywords: migrate
 summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.'
 ---
-= Migrate SRA and VASA Provider
+= Migrate VASA Provider and SRA
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-
-== SRA migration steps
-
-.Before you begin
-
-Before migration, verify that one site is in the protected state and the other is in the recovery state.
-
-[NOTE]
-Do not begin migration if the failover has been completed but the re-protection is pending. Ensure that the re-protection process is completed before proceeding with the migration. If a test failover is in progress, clean up the test failover and start the migration.
-
-. Follow these steps to delete the ONTAP tools SRA adapter for VMware vSphere 9.xx in VMware Site Recovery:
-.. Go to VMware Live Site Recovery configuration management page
-.. Go to the *Storage Replication Adapter* section.
-.. From the ellipsis menu select *Reset configuration*.
-.. From the ellipsis menu select *Delete*.
-. Perform these steps on both protection and recovery sites.
-.. Install ONTAP tools for VMware vSphere 10.4 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
-.. On the VMware Live Site Recovery user interface page, perform the *Discover Arrays* and *Discover Devices* operations and confirm that the devices are displayed as before the migration.
 
 == VASA Provider migration steps
 
@@ -193,3 +175,21 @@ The compliance status under *VM storage policy compliance* is now shown as compl
 * link:../concepts/rbac-learn-about.html[Learn about ONTAP tools for VMware vSphere 10 RBAC]
 * link:../upgrade/upgrade-ontap-tools.html[Upgrade from ONTAP tools for VMware vSphere 10.x to 10.4]
 // OTVDOC-164 - jani
+
+== SRA migration steps
+
+.Before you begin
+
+Before migration, verify that one site is in the protected state and the other is in the recovery state.
+
+[NOTE]
+Do not begin migration if the failover has been completed but the re-protection is pending. Ensure that the re-protection process is completed before proceeding with the migration. If a test failover is in progress, clean up the test failover and start the migration.
+
+. Follow these steps to delete the ONTAP tools SRA adapter for VMware vSphere 9.xx in VMware Site Recovery:
+.. Go to VMware Live Site Recovery configuration management page
+.. Go to the *Storage Replication Adapter* section.
+.. From the ellipsis menu select *Reset configuration*.
+.. From the ellipsis menu select *Delete*.
+. Perform these steps on both protection and recovery sites.
+.. Install ONTAP tools for VMware vSphere 10.4 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
+.. On the VMware Live Site Recovery user interface page, perform the *Discover Arrays* and *Discover Devices* operations and confirm that the devices are displayed as before the migration.
