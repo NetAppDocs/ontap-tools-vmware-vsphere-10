@@ -20,7 +20,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.4.
 . Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.4 release. Refer to link:../configure/add-vcenter.html[Add a vCenter Server instance] for more information. 
-. Onboard storage backend locally from the vCenter server APIs for the ONTAP tools plug-in.
+. Onboard the storage backend locally from the vCenter server APIs for the ONTAP tools plug-in.
 . Issue the following API from Swagger or in Postman to migrate. 
 +
 curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration
@@ -88,7 +88,7 @@ A job object is returned. You should save the job identifier to use it in the ne
 curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
 ----
 After completing the job, review the migration report. This report is included in the job data and can be accessed from the job response.
-. Add ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider] with ONTAP tools for VMware vSphere.
+. Add the ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider] with ONTAP tools for VMware vSphere.
 . link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.4.
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from the maintenance console.
 +
