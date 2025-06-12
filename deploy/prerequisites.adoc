@@ -2,14 +2,14 @@
 permalink: deploy/prerequisites.html
 sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
-summary: 'Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
+summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
 ---
 = Prerequisites for ONTAP tools for VMware vSphere deployment
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Before deploying ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
+Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
 
 You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools for VMware vSphere on a supported vSphere client that includes ESXi system.
 
@@ -67,7 +67,8 @@ FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series, and ASA r2.
 |10.4
 
 |ESXi host to deploy ONTAP tools virtual machine
-|7.0, 7.0U1, 7.0U2, 7.0U3, 8.0, 8.0U1, and 8.0U3
+|7.0U3 and 8.0U3
+//OTVDOC-282 updates -Jani
 
 |vCenter Server to deploy ONTAP tools virtual machine
 |7.0 and 8.0
