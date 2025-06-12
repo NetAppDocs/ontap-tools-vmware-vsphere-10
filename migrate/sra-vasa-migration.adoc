@@ -23,7 +23,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . Onboard the storage backend locally from the vCenter server APIs for the ONTAP tools plug-in.
 . Issue the following API from Swagger or in Postman to migrate. 
 +
-curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration
+curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs
 +
 You can access Swagger through this URL: `https://$FQDN_IP_PORT/, for example: https://10.67.25.33:8443/.
 +
@@ -117,14 +117,6 @@ Asynchronous
 *Curl example*
 
 curl  -X PATCH  https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43
-
-*JSON input example*
-
-{
-  "id": 123,
-  "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
-  "status": "running"
-}
 
 *JSON output example*
 
