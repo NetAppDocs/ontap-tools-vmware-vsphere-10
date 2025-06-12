@@ -25,7 +25,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 +
 curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration
 +
-You can access Swagger through this URL: `https://$FQDN_IP_PORT/, for example: https://10.61.25.33:8443/.
+You can access Swagger through this URL: `https://$FQDN_IP_PORT/, for example: https://10.67.25.33:8443/.
 +
 ====
 *HTTP method and endpoint*
@@ -52,7 +52,7 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 --data '{
   "otv_ip": "xx.xx.xx.xx",
   "vasa_provider_credentials": {
-    "username": "administrator",
+    "username": "xxxxx",
     "password": "******"
   },
   "database_password": "******"
@@ -61,9 +61,9 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
 Request body for other release migration: 
 
 {
-  "otv_ip": "10.12.13.45",
+  "otv_ip": "xx.xx.xx.xx",
   "vasa_provider_credentials": {
-    "username": "vasauser",
+    "username": "xxxxx",
     "password": "*******"
   }
 }
@@ -77,7 +77,7 @@ A job object is returned. You should save the job identifier to use it in the ne
   "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
   "status": "running"
 }
-// URI <https://10.60.24.125:8443/virtualization/api/v1/migration/migrate>
+
 ====
 . Use the following URI in Swagger to check the status:
 +
@@ -174,7 +174,7 @@ The compliance status under *VM storage policy compliance* is now shown as compl
 
 .Before you begin
 
-Before migration, verify that one site is in the protected state and the other is in the recovery state.
+In the recovery plan, the protected site refers to the location where the VMs are currently running, while the recovery site is where the VMs will be recovered. The SRM interface displays the state of the recovery plan with details about the protected and the recovery sites. In the recovery plan, the CLEANUP and REPROTECT buttons are disabled, whereas the TEST and RUN buttons remain enabled. This indicates that the site is prepared for data recovery. Before migrating the SRA, verify that one site is in the protected state and the other is in the recovery state.
 
 [NOTE]
 Do not begin migration if the failover has been completed but the re-protection is pending. Ensure that the re-protection process is completed before proceeding with the migration. If a test failover is in progress, clean up the test failover and start the migration.
