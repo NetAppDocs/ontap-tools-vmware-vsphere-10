@@ -171,5 +171,5 @@ This deletes all the Trident volumes in ONTAP used in ONTAP tools for VMware vSp
 
 .Related information
 
-link:../migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.x to 10.4]
+link:../migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.xx to 10.4]
 // OTVDOC-164 - jani
