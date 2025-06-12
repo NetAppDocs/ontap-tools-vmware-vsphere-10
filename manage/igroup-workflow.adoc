@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: ''
 ---
-= Understand igroups and export policies
+= Understand igroups and export policies in ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
