@@ -188,7 +188,6 @@ This ensures compliance with the hierarchical model.
 .Related topics
 
 https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html[About igroups]
-https://docs.netapp.com/us-en/ontap/nfs-config/create-export-policy-task.html[Create an export policy]
 
 == Export policies
 Export policies control access to NFS datastores in ONTAP tools for VMware vSphere. They define which clients can access the datastores and what permissions they have.
@@ -204,3 +203,6 @@ When you delete the datastores, the export policy unassigns the host IP address 
 
 Assigning the export policy differs when it is reused across different datastores. When you reuse the export policy, you can append the policy with the new host IP address. When you delete or unmount a datastore that uses a shared export policy, the policy will not be deleted. It remains unchanged, and the host IP address is not removed, as it is shared with the other datastores. Reusing export policies is not recommended, as it can lead to access and latency issues.
 
+.Related topics
+
+https://docs.netapp.com/us-en/ontap/nfs-config/create-export-policy-task.html[Create an export policy]
