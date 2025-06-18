@@ -119,7 +119,7 @@ Custom igroups are never deleted, regardless of the reuse status.
 
 .Example 7:
 
-Expand datastore (Add Volume)
+Expand vVols datastore (Add Volume)
 
 *Workflow*:
 
@@ -139,7 +139,7 @@ A new LUN is created and mapped to the existing child igroup host4Igroup.
 
 .Example 8:
 
-Shrink datastore (Remove Volume)
+Shrink vVols datastore (Remove Volume)
 
 *Workflow*:
 
