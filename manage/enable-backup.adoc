@@ -23,7 +23,7 @@ To migrate to HA when non-HA backup is enabled, disable the backup first and re-
 . Enter `4` to select *Support and Diagnostics*.
 . Enter `3` to select *Enable System Backup* option.
 . In case of non-HA, enter the vCenter credentials where the ONTAP tools virtual machine is deployed.  
-. Enter the backup frequency value between 10-60 mins.
+. Enter the backup frequency value between 5 and 60 minutes.
 // jira fix
 . Press *Enter*
 +
