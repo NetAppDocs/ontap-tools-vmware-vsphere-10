@@ -26,9 +26,7 @@ Steps:
 
 1. link:../migrate/sra-vasa-migration.html[Migrate the VASA Provider] 
 
-2. link:../migrate/sra-vasa-migration.html[Update the SRA] 
-
-3. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html[Create VM storage policies]
+2. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html[Create VM storage policies]
 
 |
 Steps:
@@ -37,7 +35,7 @@ Steps:
 
 2. link:../deploy/quick-start.html[Deploy and configure ONTAP tools for VMware vSphere 10.4] 
 
-3. link:../migrate/sra-vasa-migration.html[Update the SRA] 
+3. link:../migrate/sra-vasa-migration.html[Update the SRA] (applicable only for VMFS datastores)
 
 4. https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-storage-8-0/storage-policy-based-management-in-vsphere/creating-and-managing-vsphere-storage-policies.html[Create VM storage policies]
 
