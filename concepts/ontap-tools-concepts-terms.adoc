@@ -40,7 +40,7 @@ ONTAP tools Manager provides more control to ONTAP tools for VMware vSphere admi
 OVA is an open standard for packaging and distributing virtual appliances or software that must be run on virtual machines. 
 
 === Recovery Point Objective (RPO)
-RPO is a measure of how frequently data is backed up or replicated. It represents the point in time to which data must be recovered after an outage in order to resume business operations. For example, if an organization has an RPO of 4 hours, it can tolerate losing up to 4 hours of data in the event of a disaster.
+RPO measures how frequently you back up or replicate data. It specifies the exact point in time you need to restore data after an outage to resume business operations. For example, if an organization has an RPO of 4 hours, it can tolerate losing up to 4 hours of data in the event of a disaster.
 
 === SnapMirror active sync
 SnapMirror active sync enables business services to continue operating even with a complete site failure, supporting applications to fail over transparently using a secondary copy. Manual intervention or custom scripting is not required to trigger a failover with SnapMirror active sync. Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync].
