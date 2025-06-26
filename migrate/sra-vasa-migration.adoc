@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate
 summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.'
 ---
-= Migrate the VASA Provider and the storage replication adaptor (SRA)
+= Migrate the VASA Provider and update the SRA
 :icons: font
 :imagesdir: ../media/
 
@@ -162,7 +162,7 @@ The compliance status under *VM storage policy compliance* is now shown as compl
 * link:../upgrade/upgrade-ontap-tools.html[Upgrade from ONTAP tools for VMware vSphere 10.x to 10.4]
 // OTVDOC-164 - jani
 
-== Steps to migrate the SRA
+== Steps to update the storage replication adaptor(SRA)
 
 .Before you begin
 
