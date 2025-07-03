@@ -68,6 +68,7 @@ Unmount a datastore from a host
 ** host2Igroup → (iqn2: lun1)
 
 The host1Igroup is removed from the hierarchy. Child igroups are not explicitly deleted. Deletion occurs under these two conditions:
+
 •  If no LUNs are mapped, the ONTAP system deletes the child igroup.
 •  A scheduled cleanup job removes the dangling child igroups with no LUN mappings.
 These scenarios only apply to ONTAP tools-managed igroups, not custom-created ones.
