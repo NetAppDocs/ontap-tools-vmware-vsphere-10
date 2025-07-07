@@ -14,11 +14,13 @@ Adding a storage backend enables you to onboard an ONTAP cluster.
 
 *About this task*
 
-In case of multitenancy setups where vCenter acts as the tenant with an associated SVM, use ONTAP tools Manager to add the cluster. Associate the storage backend with the vCenter Server to map it globally to the onboarded vCenter Server instance.
-The vCenter tenant must onboard the desired Storage Virtual Machines (SVMs). This enables an SVM user to provision vVols datastores. You can add storage in vCenter using the SVM.
+In a multitenancy setup where vCenter acts as the tenant with an associated SVM, use ONTAP tools Manager to add the cluster. Associate the storage backend with the vCenter Server to map the storage backend globally. First, onboard the desired Storage Virtual Machines (SVMs) in vCenter tenant. This allows the SVM user to provision vVols datastores. You can then add storage in vCenter using the SVM.
 
-Add the local storage backends with cluster or SVM credentials using the ONTAP tools user interface. These storage backends are limited to a single vCenter. When using cluster credentials locally, the associated SVMs automatically map to the vCenter to manage vVols or VMFS. For VMFS management, including SRA, ONTAP tools supports SVM credentials without needing a global cluster.
-//replicate to 10.3 doc
+To add local storage backends, use cluster or SVM credentials through the ONTAP tools user interface. These storage backends are limited to a single vCenter.  When using cluster credentials, the associated SVMs automatically map to the vCenter to manage vVols or VMFS datastores.  For VMFS workflows, including SRA, ONTAP tools supports SVM credentials without requiring a globally mapped cluster.
+
+When MetroCluster support is enabled in the ONTAP system, onboard both source and destination clusters configured with MetroCluster as local or global storage backends.
+
+// 10.5 updates -Jani rewrote the intro and added the last para.
 
 [role="tabbed-block"]
 ====
@@ -37,7 +39,12 @@ In a multi-tenant setup, you can add a storage backend cluster globally and SVM 
 . Add the storage backend and provide the server IP address or FQDN, username, and password details.
 [NOTE]
 IPv4 and IPv6 address management LIFs are supported.
+. In the advanced options, you can fetch the ONTAP cluster certificates automatically, which requires you to authorize the certificate or manually upload the certificate by browsing to its location. 
+. If the added storage backend is part of the MetroCluster configuration, *Add MetroCluster peer* screen appears. Select *Add peer* to add the peer storage backend.
+[NOTE]
+When ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
 
+// 10.5 updates -Jani.
 --
 
 .Using vSphere client user interface
@@ -52,10 +59,19 @@ When configuring a storage backend through the vSphere client user interface, it
 . Add the storage backend and provide the server IP address, username, password, and port details.
 [NOTE]
 To add an SVM user directly, you can add cluster-based credentials and IPv4 and IPv6 address management LIFs or provide SVM-based credentials with an SVM management LIF.
+. In the advanced options, you can fetch the ONTAP cluster certificates automatically, which requires you to authorize the certificate or manually upload the certificate by browsing to its location. 
+. If the added storage backend is part of the MetroCluster configuration, *Add MetroCluster peer* screen appears. Select *Add peer* to add the peer storage backend.
+[NOTE]
+When ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
 
+// 10.5 updates -Jani.
 .What’s next?
 
 The list gets refreshed, and you can see the newly added storage backend in the list.
 
 --
 ====
+
+.Related information
+
+https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html[Configuring the clusters into a MetroCluster configuration]
