@@ -19,9 +19,13 @@ NOTE:
 
 .Before you begin
 
+Before you upgrade, ensure that the certificate on the ONTAP system is valid for more than 5 days. If the certificate is about to expire within the next 5 days, the upgrade is not allowed.
+
+// 10.5 updates - Jani
 For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power off the first node before making the following changes to the virtual machine (VM) settings.
 
-If you're upgrading from ONTAP tools for VMware vSphere 10.2 or 10.3, you need to complete the following steps before proceeding with the upgrade task:
+If you're upgrading from ONTAP tools for VMware vSphere 10.2, 10.3 0r 10.4, you need to complete the following steps before proceeding with the upgrade task:
+
 * Add an additional 100 GB hard disk to each node, as the service data is stored locally on the VM.
 * Change the CPU and memory for the powered-off VM according to the flavor of your deployment. Enable the hot plugin for CPU and RAM.
 +
