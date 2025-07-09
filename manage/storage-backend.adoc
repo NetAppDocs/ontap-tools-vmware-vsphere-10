@@ -34,7 +34,7 @@ When the certificate is about to expire in 30 days or less, ONTAP tools shows a 
 
 When you modify the storage backend, ONTAP tools for VMware vSphere performs a discovery of the storage backend to update the storage details.
 
-// 10.5 updates - Jani
+// 10.5 updates - Jani For Certificate feature.
 Follow the steps in this section to modify a storage backend.
 
 . Log in to the vSphere client.

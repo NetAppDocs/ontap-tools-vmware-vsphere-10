@@ -28,7 +28,7 @@ Ensure the following prerequisites are met:
 . Log in to the vSphere client.
 . Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . In the protect cluster window, the datastore type and source storage virtual machine (VM) details are auto populated. Select the datastores link to view the protected datastores.
-. Enter the *consistency group name*.
+// . Enter the *consistency group name*. - removed this step in 10.5 for Hierarchical CG feature
 . Select *Add Relationship*.
 . In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
 +
@@ -44,4 +44,5 @@ When you select the *uniform host configuration* toggle button, the host initiat
 .  Select the *Protect* button.
 +
 A vCenter task is created with job ID details, and its progress is shown in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and does not wait for the task to be completed. 
-. To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*.
+. To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*. You can select the consistency groups to view information such as capacity, associated datastores, and child consistency groups.
+// 10.5 updates for Hierarchical CG feature

@@ -66,7 +66,7 @@ To add an SVM user directly, you can add cluster-based credentials and IPv4 and 
 [NOTE]
 When ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
 
-// 10.5 updates -Jani.
+// 10.5 updates -Jani. For MCC and certificate feature updates.
 .What’s next?
 
 The list gets refreshed, and you can see the newly added storage backend in the list.

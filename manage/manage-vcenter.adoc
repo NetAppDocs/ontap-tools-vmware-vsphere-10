@@ -32,7 +32,7 @@ Follow the steps below to modify a vCenter Server instances.
 . Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
 . In the *Modify vCenter* window, enter the username, password, and port details. 
 . Upload the certificate  and select *Modify*.
-// 10.5 updates -Jani - need to add details like when you need to add the certificate and update it. How to get this certificate.
+// 10.5 updates -Jani - need to add details like when you need to add the certificate and update it. How to get this certificate. 
 
 == Remove a vCenter Server instance
 You need to remove all the storage backends attached to the vCenter Server before removing it. 
