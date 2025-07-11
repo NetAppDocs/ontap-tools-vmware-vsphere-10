@@ -20,5 +20,4 @@ Update the AutoSupport proxy URL to ensure the proper functioning of the AutoSup
 . Enter a valid *Proxy URL* and save the changes.
 +
 If you disable AutoSupport, the proxy URL is also disabled.
-// new topic for 10.4
 

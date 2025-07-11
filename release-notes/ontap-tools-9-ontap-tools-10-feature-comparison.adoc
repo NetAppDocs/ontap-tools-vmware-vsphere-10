@@ -33,6 +33,7 @@ ONTAP 9.12.1 to ONTAP 9.14.1
 ONTAP 9.12.1 to ONTAP 9.15.1 for ONTAP tools 10.2
 ONTAP 9.14.1, 9.15.1, and 9.16.0 for ONTAP tools 10.3.
 ONTAP 9.14.1, 9.15.1, 9.16.0, and 9.16.1 for ONTAP tools 10.4
+ONTAP 9.15.1, 9.16.0, 9.16.1, 9.17.0, and 9.17.1 for ONTAP tools 10.5
 // updated info for 10.4 - ref FS
 |
 VMware release support

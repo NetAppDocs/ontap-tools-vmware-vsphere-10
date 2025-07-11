@@ -18,8 +18,8 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 ----
 
-. Deploy OVA for ONTAP tools for VMware vSphere 10.4.
-. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.4 release. Refer to link:../configure/add-vcenter.html[Add a vCenter Server instance] for more information. 
+. Deploy OVA for ONTAP tools for VMware vSphere 10.5.
+. Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.5 release. Refer to link:../configure/add-vcenter.html[Add a vCenter Server instance] for more information. 
 . Onboard the storage backend locally from the vCenter server APIs for the ONTAP tools plug-in.
 . Issue the following API from Swagger or in Postman to migrate. 
 +
@@ -86,14 +86,14 @@ curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?inc
 ----
 After completing the job, review the migration report. This report is included in the job data and can be accessed from the job response.
 . Add the ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider] with ONTAP tools for VMware vSphere.
-. link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.4.
+. link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from the maintenance console.
 +
 [Note] 
 Do not delete the VASA Provider.
 +
 Once the old VASA Provider is stopped, the vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
-. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xxx are visible in ONTAP tools for VMware vSphere 10.4 only after the datastore discovery job is triggered, which might take up to 30 minutes to complete. Verify that the datastores are visible on the overview page of the ONTAP tools for the VMware vSphere Plugin user interface page.
+. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xxx are visible in ONTAP tools for VMware vSphere 10.5 only after the datastore discovery job is triggered, which might take up to 30 minutes to complete. Verify that the datastores are visible on the overview page of the ONTAP tools for the VMware vSphere Plugin user interface page.
 . Perform the patch migration using the following API in Swagger or in Postman:
 +
 ====
@@ -140,7 +140,7 @@ After running the patch migration API, all VMs comply with the storage policy.
 
 .What's next
 
-After completing the migration and registering ONTAP tools 10.4 to the vCenter Server, follow these steps:
+After completing the migration and registering ONTAP tools 10.5 to the vCenter Server, follow these steps:
 
 * Wait for *Discovery* to complete, the certificates will be refreshed automatically on all the hosts.
 * Allow sufficient time before initiating datastore and virtual machine operations. The required waiting period varies based on the number of hosts, datastores, and virtual machines within the configuration. Failure to wait may result in intermittent operational failures.
@@ -159,7 +159,7 @@ The compliance status under *VM storage policy compliance* is now shown as compl
 .Related information
 
 * link:../concepts/rbac-learn-about.html[Learn about ONTAP tools for VMware vSphere 10 RBAC]
-* link:../upgrade/upgrade-ontap-tools.html[Upgrade from ONTAP tools for VMware vSphere 10.x to 10.4]
+* link:../upgrade/upgrade-ontap-tools.html[Upgrade from ONTAP tools for VMware vSphere 10.x to 10.5]
 // OTVDOC-164 - jani
 
 == Steps to update the storage replication adaptor(SRA)
@@ -177,5 +177,5 @@ Do not begin migration if the failover has been completed but the re-protection 
 .. From the ellipsis menu select *Reset configuration*.
 .. From the ellipsis menu select *Delete*.
 . Perform these steps on both protection and recovery sites.
-.. Install ONTAP tools for VMware vSphere 10.4 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
+.. Install ONTAP tools for VMware vSphere 10.5 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
 .. On the VMware Live Site Recovery user interface page, perform the *Discover Arrays* and *Discover Devices* operations and confirm that the devices are displayed as before the migration.

@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: migrate
 summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.'
 ---
-= Migrate from ONTAP tools for VMware vSphere 9.xx to 10.4
+= Migrate from ONTAP tools for VMware vSphere 9.xx to 10.5
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 Moving the NetApp ONTAP tools for VMware vSphere setup from version 9.xx to 10.x necessitates a migration process because of the significant product updates and enhancements across the versions. 
 
-You can migrate from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.4. 
+You can migrate from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.5.
 
 //updated for OTVDOC-175 - jani
 If you have NFS and VMFS datastores and no vVols datastores in your setup, simply uninstall ONTAP tools 9.xx and deploy ONTAP tools 10.x. However, if your setup contains vVols datastores, you’ll have to go through a process of migrating the VASA Provider and the SRA.  
@@ -32,7 +32,7 @@ Steps:
 
 1. Remove ONTAP tools 9.xx from your environment. Refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment[How to remove OTV 9.xx from your environment] NetApp Knowledge Base article.
 
-2. link:../deploy/quick-start.html[Deploy and configure ONTAP tools for VMware vSphere 10.4] 
+2. link:../deploy/quick-start.html[Deploy and configure ONTAP tools for VMware vSphere 10.5] 
 
 3. link:../migrate/sra-vasa-migration.html[Update the SRA]
 
@@ -40,6 +40,6 @@ Steps:
 
 |===
 [NOTE]
-After migrating from ONTAP tools for VMware vSphere 9.xx to 10.4, vVols datastores using the NVMe/FC protocol become non-operational because ONTAP tools 10.4 supports the NVMe-oF protocol only with VMFS datastores.
+After migrating from ONTAP tools for VMware vSphere 9.xx to 10.5, vVols datastores using the NVMe/FC protocol become non-operational because ONTAP tools 10.5 supports the NVMe-oF protocol only with VMFS datastores.
 
 //updated for 10.3 jira OTVDOC-147

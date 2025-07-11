@@ -20,5 +20,5 @@ It is recommended that you keep the AutoSupport enabled. It helps speed up probl
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the *Settings* > *Telemetry* > *Edit* option.
 . Deselect the *AutoSupport* option and save the changes.
-// new topic for 10.4
+
 

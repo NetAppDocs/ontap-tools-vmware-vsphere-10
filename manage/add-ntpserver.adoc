@@ -20,5 +20,4 @@ Enter the NTP server details to synchronize the time clocks of the ONTAP tools a
 +
 Refresh to screen to see the updated values.
 
-// new topic for 10.4
 
