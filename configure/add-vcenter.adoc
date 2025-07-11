@@ -22,7 +22,7 @@ By integrating with vCenter, ONTAP tools enables you to perform storage tasks li
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select *vCenters* > *Add* to onboard the vCenter Server instances. Provide your vCenter IP address or hostname, username, password, and port details.
 // 10.5 updates -Jani
-. In the advanced options, you can fetch the ONTAP cluster certificates automatically, which requires you to authorize the certificate or manually upload the certificate by browsing to its location. 
+. In the advanced options, you can fetch the vCenter Server certificates automatically, which requires you to authorize the certificate or manually upload the certificate by browsing to its location. 
 +
 [NOTE]
 You don’t need an admin account to add vCenter instances to ONTAP tools. You can create a custom role without the admin account with limited permissions. Refer to link:../concepts/rbac-vcenter-use.html[Use vCenter Server RBAC with ONTAP tools for VMware vSphere 10] for details.

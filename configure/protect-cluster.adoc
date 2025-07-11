@@ -14,14 +14,16 @@ ONTAP tools for VMware vSphere manages the protection of host clusters.
 All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
 
 .Before you begin
-Ensure the following prerequisites are met:
+Verify that the following prerequisites are met before protecting a host cluster:
 
-* The host cluster has datastores only from one SVM. 
-* Datastore mounted on the host cluster should not be mounted on any host outside of the cluster.
-* All Datastores mounted on the host cluster must be VMFS datastores with iSCSI/FC protocol. vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols are not supported.
-* FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing consistency group (CG).
-* FlexVol/LUN forming datastores mounted on the host cluster should not be part of any existing SnapMirror relationship.
-* The host cluster should have at least one datastore.
+* The host cluster contains datastores from a single SVM only.
+* Datastores on the host cluster are not mounted on hosts outside the cluster.
+* Datastores mounted on the host cluster are VMFS datastores with iSCSI or FC protocol. The vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols are not supported.
+* Datastores based on FlexVol/LUN volumes mounted on a host are not part of any consistency group (CG).
+* Datastores based on FlexVol/LUN volumes mounted on a host are not part of any SnapMirror relationships.
+* The host cluster contains at least one datastore.
+
+// edited for consistency and parallelism.
 
 .Steps
 
