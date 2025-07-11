@@ -10,7 +10,7 @@ summary: 'You can edit the SnapMirror relationships of the protected host cluste
 
 [.lead]
 
-You can perform the following tasks as part of modify protection. You can perform all the changes in the same workflow.
+You can modify protection settings for a host cluster in a single workflow. The following changes are supported:
 
 * Add new datastores or hosts to the protected cluster.
 * Add new SnapMirror relationships to the protection settings.
@@ -31,13 +31,13 @@ The icon under the protection column shows the status of the protection
 
 == Add new datastores or hosts
 
-Use this procedure to protect the newly added datastores or hosts. You can add new hosts to the protected cluster or create new datastores on host cluster using the vCenter native user interface.
+Follow this procedure to protect newly added datastores or hosts. You can add hosts to the protected cluster or create datastores on the host cluster using the vCenter native user interface.
 
 .Steps
 
 . Log in to the vSphere client.
 . To edit the properties of a protected cluster, you can either
-.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, select the ellipsis  menu against the cluster and select *Edit* or
+.. Navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, select the ellipsis  menu next to the cluster and select *Edit* or
 .. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . If you have created a datastore in vCenter native user interface, then that datastore is shown as unprotected. The user interface shows all datastores in the cluster and their protection status in a dialog box. Select *Protect* button to enable complete protection.
 . If you have added a new ESXi host, the protection status shows as partially protected. Select the ellipsis  menu under the SnapMirror settings and select *Edit* to set the proximity of the newly added ESXi host.
@@ -66,9 +66,9 @@ You can see the changes in the *Protect Cluster* window.
 A vCenter task is created and you can track the progress in the *Recent task* panel.
 
 == Delete an existing SnapMirror relationship
-To delete an asynchronous SnapMirror relationship, secondary site SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere. 
-You cannot delete all the SnapMirror relationships. When you delete a relationship, respective relationship on ONTAP cluster is also removed.
-When you delete an AutomatedFailOverDuplex SnapMirror relationship, the datastores on the destination are unmapped and consistency group, LUNs, volumes, and igroups are removed from the destination ONTAP cluster.
+To delete an asynchronous SnapMirror relationship, ensure that the secondary site SVM or cluster is added as a storage backend in ONTAP tools for VMware vSphere.
+You cannot delete all SnapMirror relationships at once. Deleting a relationship also removes the corresponding relationship from the ONTAP cluster.
+When you delete an Automated Failover Duplex SnapMirror relationship, the datastores on the destination are unmapped, and the consistency group, LUNs, volumes, and igroups are deleted from the destination ONTAP cluster.
 
 Deleting the relationship triggers a rescan on secondary site to remove the unmapped LUN as active path from the hosts.
 
@@ -80,20 +80,18 @@ Deleting the relationship triggers a rescan on secondary site to remove the unma
 .. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*. 
 . Select the ellipsis  menu under the SnapMirror settings and select *Delete*.
 +
-* When you delete an asynchronous policy type-based relationship of a protected host cluster, you’ll need to remove the storage elements on the tertiary storage cluster manually. Storage elements refer to consistency groups, volumes (in case of unified ONTAP), storage units (LUN/Namespaces) and snapshots.
+* If you delete an asynchronous policy type-based relationship of a protected host cluster, you must manually remove the storage elements from the tertiary storage cluster. Storage elements include consistency groups, volumes (for ONTAP systems), storage units (LUNs/Namespaces), and snapshots.
+* If you delete an Automated Failover Duplex (AFD) policy-based relationship of a protected host cluster, you can choose to remove the associated storage elements on the secondary storage directly from the interface.
+* If you delete an Automated Failover Duplex (AFD) policy-based relationship and the underlying consistency group has been changed to a hierarchical consistency group for application-level backups, a warning message will appear about the possible backup impact. Confirm to proceed. After confirmation, you can delete the associated storage elements on the secondary storage. If you choose not to remove the storage elements, they remain on the secondary site.
 
-* When you delete an Automated Failover Duplex (AFD) policy-based relationship of a protected host cluster, you can choose to delete the storage elements on the secondary storage from the same screen.
-
-* When you delete an Automated Failover Duplex (AFD) policy-based relationship of a protected host cluster where the underlying consistency group is modified to a hierarchical consistency group for application-level backups, you’ll get a message to warn about the potential impact on the backups. Confirm your understanding to proceed. Once you confirm, you can delete the associated storage elements on the secondary storage. If you opt not to clean up the storage elements, the secondary site retains the elements.
-
-// 10.5 update for hierarchical consistency group
+// 10.5 update for hierarchical CG
 A vCenter task is created and you can track the progress in the *Recent task* panel.
 
 == Modify an existing SnapMirror relationship
-To modify an asynchronous SnapMirror relationship, secondary site SVM or cluster should be added as storage backend on ONTAP tools for VMware vSphere.
-If it is an AutomatedFailOverDuplex SnapMirror relationship, you can modify the host proximity in case of uniform configuration and the host access in case of non-uniform configuration.
-You cannot interchange Asynchronous and AutomatedFailOverDuplex policy types.
-You can set the proximity or access for the newly discovered hosts on the cluster.
+To modify an asynchronous SnapMirror relationship, ensure the secondary site SVM or cluster is added as a storage backend in ONTAP tools for VMware vSphere.
+For Automated Failover Duplex SnapMirror relationships, you can update host proximity for uniform configurations or host access for non-uniform configurations.
+Changing between Asynchronous and Automated Failover Duplex policy types is not supported.
+You can configure proximity or access settings for newly discovered hosts in the cluster.
 
 [NOTE]
 You cannot edit an existing asynchronous SnapMirror relationship.

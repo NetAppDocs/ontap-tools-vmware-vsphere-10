@@ -39,10 +39,10 @@ The policy type can be Asynchronous or AutomatedFailOverDuplex.
 When you add the SnapMirror relationship as an AutomatedFailOverDuplex type policy, you must add the target storage VM as storage backend to the same vCenter where ONTAP tools for VMware vSphere is deployed.
 +
 In the AutomatedFailOverDuplex policy type, there are uniform and non-uniform host configurations. 
-When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For details, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
+When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
 . If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
 . Select *Add*.
-. In the *Protect cluster* window, you cannot edit the protected cluster during the create operation. You can delete and add protection again. During the Modify host cluster protection operation, the edit option is available. You can edit or delete the relationships using the ellipsis menu options.
+. You can edit the host cluster protection using the *Modify host cluster protection* operation. You can edit or delete the relationships using the ellipsis menu options.
 .  Select the *Protect* button.
 +
 A vCenter task is created with job ID details, and its progress is shown in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and does not wait for the task to be completed. 
