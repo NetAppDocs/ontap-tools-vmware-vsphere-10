@@ -9,17 +9,17 @@ summary: 'Upgrade is supported for both HA and non-HA deployments.'
 :imagesdir: ../media/
 
 [.lead]
-You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. However, direct upgrade from ONTAP tools 10.0, 10.1, or 10.2 to 10.5 is not supported. 
+You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. However, to upgrade from ONTAP tools 10.0, 10.1, or 10.2 to 10.5, you must first upgrade to 10.3 or 10.4 before proceeding to 10.5.
 
 NOTE:
 
-* In ASA r2 systems, you should upgrade to ONTAP tools for VMware vSphere 10.5 with ONTAP 9.16.1 before adding more storage availability zones (SAZs).
+* For ASA r2 systems, ensure you upgrade to ONTAP tools for VMware vSphere 10.5 with ONTAP 9.16.1 before configuring additional storage availability zones (SAZs).
 // https://jira.ngage.netapp.com/browse/OTVDOC-254 updates
-* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 release fails, rollback is not supported. To recover the setup, use RPO for ONTAP tools for VMware vSphere 10.2 and low RPO or snapshot recovery from ONTAP tools for VMware vSphere 10.3 onwards.
+* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, rollback is not supported. To restore your environment, use RPO for ONTAP tools for VMware vSphere 10.2, or low RPO/snapshot recovery for ONTAP tools for VMware vSphere 10.3 and later.
 
 .Before you begin
 
-Before you upgrade, ensure that the certificate on the ONTAP system is valid for more than 5 days. If the certificate is about to expire within the next 5 days, the upgrade fails.
+Before upgrading, ensure the ONTAP system certificate remains valid for at least 5 days. If the certificate expires within 5 days, the upgrade will fail.
 
 // 10.5 updates - Jani certificate feature.
 For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power off the first node before making the following changes to the virtual machine (VM) settings.
