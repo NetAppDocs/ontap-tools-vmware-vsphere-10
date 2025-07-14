@@ -3,10 +3,22 @@ title: Manage ONTAP tools for VMware vSphere
 entries:
   - title: ONTAP tools for VMware vSphere dashboard overview
     url: /configure/dashboard-overview.html
-  - title: ONTAP tools Manager user interface
-    url: /manage/manager-user-interface.html
   - title: Understand igroups and export policies
     url: /manage/igroup-workflow.html
+  - title: ONTAP tools Manager user interface
+    url: /manage/manager-user-interface.html
+  - title: ONTAP tools Manager settings
+    entries:
+      - title: Disable AutoSupport 
+        url: /manage/disable-autosupport.html
+      - title: Update AutoSupport proxy URL
+        url: /manage/update-proxyurl.html
+      - title: Add NTP servers
+        url: /manage/add-ntpserver.html
+      - title: Reset VASA Provider and SRA credentials
+        url: /manage/reset-vasa-sra-credentials.html
+      - title: Backup settings
+        url: /manage/backup-settings.html
   - title: Enable ONTAP tools for VMware vSphere services
     url: /manage/enable-services.html
   - title: Change ONTAP tools for VMware vSphere configuration
@@ -83,12 +95,6 @@ entries:
         url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
-  - title: Disable AutoSupport
-    url: /manage/disable-autosupport.html    
-  - title: Update AutoSupport proxy URL
-    url: /manage/update-proxyurl.html    
-  - title: Add NTP servers
-    url: /manage/add-ntpserver.html    
   - title: Create a backup and recover the ONTAP tools setup
     url: /manage/enable-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
