@@ -13,19 +13,17 @@ Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic s
 [NOTE]
 To migrate to HA when non-HA backup is enabled, disable the backup first and re-enable it after the migration.
 // OTVDOC-256 jira update
-Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default. You can edit the frequency of the backup. The backup is created every 10 minutes by default. You can change the frequency to a value between 10 and 60 minutes.
+
+Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default. You can edit the frequency of the backup. The backup is created every 10 minutes by default. You can change the frequency to a value between 10 and 60 minutes. link:../manage/backup-settings.adoc[Edit backup settings].
 // otv10.5 updates backup
-== Create backup and download the backup file
+
+== Download the backup file
 
 .Steps
 
-. From the vCenter Server, open the maintenance console.
-. Log in as the maintenance user.
-
-This creates the backup and pushes the backup to the datastore of the virtual machine at a regular interval.
-. To access the backup, navigate to the storage section and select the datastore of the virtual machine
+. To access the backup, navigate to the storage section and select the datastore of the virtual machine where the backup files are stored.
 . Select the *Files* section.
-+ 
++
 In the file section, you can see the directory. The name of the directory will be the ONTAP tools IP address where the dots (.) are replaced by underscores, suffixed with _backup_.
 . For more backup information, download the backup_info.txt file from *Files* > *Download*.
 
@@ -41,7 +39,7 @@ Perform the following steps to recover the setup from the backup file.
 . Log in as the maintenance user.
 . Enter `4` to select *Support and Diagnostics*.
 . Enter `2` to select *Enable remote diagnostic access* option and create a new password for the diagnostic access.
-. Select any one backup from the downloaded directory. The lastest backup file name is recorded in _backup_info.txt_ file.
+. Select any one backup from the downloaded directory. The latest backup file name is recorded in _backup_info.txt_ file.
 . Run the below command to copy the backup to the new virtual machine and enter the diagnostic password when prompted.
 +
 ----

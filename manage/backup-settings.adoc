@@ -9,6 +9,9 @@ summary: 'Enter the NTP server details to synchronize the time clocks of ONTAP t
 :imagesdir: ../media/
 
 [.lead]
+Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default. 
+You can disable the backup feature and edit the frequency of the backup.
+It is not recommended to disable the backup feature because it prevents ONTAP tools from maintaining low RPO. Disabling the backup feature will not delete the existing backup files.
 // need to validate this - Rest the VASA provider password when you change the password for the vCenter Server administrator account. Reset the SRA credentials when you change the password for the ONTAP tools for VMware vSphere administrator account.
 
 .Steps
@@ -16,5 +19,5 @@ summary: 'Enter the NTP server details to synchronize the time clocks of ONTAP t
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the *Settings* > *Backup* > *Edit* option.
-. 
+. In the edit window, you can disable the backup or edit the backup frequency.
 
