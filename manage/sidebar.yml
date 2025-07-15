@@ -7,17 +7,15 @@ entries:
     url: /manage/igroup-workflow.html
   - title: ONTAP tools Manager user interface
     url: /manage/manager-user-interface.html
-  - title: ONTAP tools Manager settings
+  - title: Manage ONTAP tools Manager settings
     entries:
-      - title: Disable AutoSupport 
-        url: /manage/disable-autosupport.html
-      - title: Update AutoSupport proxy URL
-        url: /manage/update-proxyurl.html
+      - title: Edit AutoSupport settings 
+        url: /manage/edit-autosupport.html
       - title: Add NTP servers
         url: /manage/add-ntpserver.html
       - title: Reset VASA Provider and SRA credentials
         url: /manage/reset-vasa-sra-credentials.html
-      - title: Backup settings
+      - title: Edit backup settings
         url: /manage/backup-settings.html
   - title: Enable ONTAP tools for VMware vSphere services
     url: /manage/enable-services.html

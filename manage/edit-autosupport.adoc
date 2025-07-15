@@ -1,0 +1,41 @@
+---
+permalink: manage/edit-autosupport.html
+sidebar: sidebar
+keywords:
+summary: 'When configuring your storage system for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled.'
+---
+= Edit AutoSupport settings
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+When configuring your storage system for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled. 
+
+== Disable AutoSupport
+
+When you disable AutoSupport, you will no longer receive proactive support and monitoring.
+
+[NOTE]
+It is recommended that you keep the AutoSupport enabled. It helps speed up problem detection and resolution. The system collects AutoSupport information and stores it locally, even when disabled. However, it does not send the report to any network.
+
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select the *Settings* > *Telemetry* > *Edit* option.
+. Deselect the *AutoSupport* option and save the changes.
+
+== Update AutoSupport proxy URL
+
+Update the AutoSupport proxy URL to ensure the proper functioning of the AutoSupport feature in scenarios where a proxy server is used for network access control or security measures. It allows the AutoSupport data to be routed through the appropriate proxy, enabling secure transmission and compliance.
+
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select *Settings* from the sidebar.
+. Select the *Settings* > *Telemetry* > *Edit* option.
+. Enter a valid *Proxy URL* and save the changes.
++
+If you disable AutoSupport, the proxy URL is also disabled.
+

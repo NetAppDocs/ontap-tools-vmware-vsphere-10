@@ -9,24 +9,19 @@ summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve near zero-RPO. To achieve near zero-RPO, you need to create backup of the setup and restore it on a new virtual machine.
+Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero-RPO. However, you can achieve low RPO. To achieve low RPO, you need to create backup of the setup and restore it on a new virtual machine.
 [NOTE]
 To migrate to HA when non-HA backup is enabled, disable the backup first and re-enable it after the migration.
 // OTVDOC-256 jira update
-
+Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default. You can edit the frequency of the backup. The backup is created every 10 minutes by default. You can change the frequency to a value between 10 and 60 minutes.
+// otv10.5 updates backup
 == Create backup and download the backup file
 
 .Steps
 
 . From the vCenter Server, open the maintenance console.
 . Log in as the maintenance user.
-. Enter `4` to select *Support and Diagnostics*.
-. Enter `3` to select *Enable System Backup* option.
-. In case of non-HA, enter the vCenter credentials where the ONTAP tools virtual machine is deployed.  
-. Enter the backup frequency value between 5 and 60 minutes.
-// jira fix
-. Press *Enter*
-+
+
 This creates the backup and pushes the backup to the datastore of the virtual machine at a regular interval.
 . To access the backup, navigate to the storage section and select the datastore of the virtual machine
 . Select the *Files* section.
