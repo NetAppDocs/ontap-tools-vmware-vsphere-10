@@ -83,7 +83,9 @@ Configure ONTAP tools for VMware vSphere to manage host cluster protection for S
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png[Nine] Set up backup and recovery for your ONTAP tools for VMware vSphere deployment
 [role="quick-margin-para"]
-Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
+Backup is enabled by default in ONTAP tools for VMware vSphere 10.5 and occurs every 10 minutes. Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html[Create backup and recover the ONTAP tools setup]
+
+* link:..manage/backup-settings.html[Edit the backup settings]
+* link:../manage/recover-backup.html[Recover the ONTAP tools setup]

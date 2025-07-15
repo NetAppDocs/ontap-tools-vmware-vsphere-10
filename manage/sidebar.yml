@@ -93,8 +93,8 @@ entries:
         url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
-  - title: Create a backup and recover the ONTAP tools setup
-    url: /manage/enable-backup.html
+  - title: Recover the ONTAP tools setup
+    url: /manage/recover-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
     url: /manage/uninstall-deployment.html
   - title: Remove FlexVol volumes
