@@ -89,3 +89,4 @@ Backup is enabled by default in ONTAP tools for VMware vSphere 10.5 and occurs e
 
 * link:..manage/backup-settings.html[Edit the backup settings]
 * link:../manage/recover-backup.html[Recover the ONTAP tools setup]
+//10.5 backup updates

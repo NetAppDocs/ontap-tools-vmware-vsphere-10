@@ -13,7 +13,11 @@ Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enable
 
 It is not recommended to disable the backup because it prevents ONTAP tools from maintaining low RPO. Disabling the backup feature will not delete the existing backup files.
 You can change the frequency of the backup to a value between 10 and 60 minutes.
+[NOTE]
+To migrate to HA when non-HA backup is enabled, disable the backup first and re-enable it after the migration.
+// OTVDOC-256 jira update
 
+//10.5 backup updates
 .Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
