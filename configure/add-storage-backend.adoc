@@ -73,7 +73,7 @@ The list gets refreshed, and you can see the newly added storage backend in the 
 
 --
 ====
-In the *Storage backends* page, you can see the newly added storage backend in the list. The certificate expiry date column shows a warning if the certificate is about to expire in 30 days or less. Once the certificate expiry date is reached, the storage backend is marked as unknown as ONTAP tools looses communication with storage backends. 
+In the *Storage backends* page, you can see the newly added storage backend in the list. The certificate expiry date column shows a warning if the certificate is about to expire in 30 days or less. After the certificate expiry date is reached, the storage backend is marked as unknown as ONTAP tools looses communication with storage backends. 
 
 .Related information
 
