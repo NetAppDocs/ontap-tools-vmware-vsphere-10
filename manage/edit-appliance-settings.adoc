@@ -40,7 +40,7 @@ In ONTAP tools for VMware vSphere, you are only allowed to increase the node siz
 **  The content library belongs to the same vCenter Server where the ONTAP tools node VMs run. vCenter Server credentials are used to validate and download the OVA template for appliance changes.
 ** The virtual machine hosting the ONTAP tools is not directly deployed on an ESXi host. The VM should be deployed on a cluster or a resource pool.
 [NOTE]
-Once HA configuration is enabled, you cannot revert to a non-HA single node configuration.
+After the HA configuration is enabled, you cannot revert to a non-HA single node configuration.
 . In the *HA settings* section of the *Edit Appliance Settings* window, you can enter the details of Nodes 2 and 3. ONTAP tools for VMware vSphere supports three nodes in HA setup.
 [NOTE]
 Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the wizard's final page. 

@@ -40,7 +40,7 @@ The last three digits of the error code indicate the specific workflow error wit
 |===
 |*Upgrade error code* |*Workflow* |*Resolution*
 
-|052 |The ISO may be the same as the current version or two releases above the current version. |Use an ISO version compatible to upgrade from your current version.
+|052 |The ISO might be the same as the current version or two releases above the current version. |Use an ISO version compatible to upgrade from your current version.
 |068 |Debian packages rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
 |069 |Failed restoring files |Use zero-RPO or snapshot based recovery and retry upgrade.
 |070 |Failed deleting backup |-

@@ -46,7 +46,7 @@ The ASA r2 system supports the iSCSI and FC protocols for vVols.
 * You can select *Custom initiator group* name for the iSCSI and FC protocols.
 +
 [NOTE]
-In ASA r2 storage system type SVM, storage units (LUN/namespace) are not created as the datastore is only a logical container.
+In ASA r2 storage system type SVM, storage units (LUN/namespace) are not created because the datastore is only a logical container.
 
 . In the *Storage attributes* pane, you can create new volumes or use the existing volumes. However, you cannot combine these two types of volumes to create a vVols datastore. 
 +
@@ -134,7 +134,7 @@ When NVMe/FC or NVMe/TCP protocol is selected, a new namespace subsystem is crea
 . From the *storage attributes* pane:
 .. Select *Aggregate* from the drop-down options.
 [NOTE]
-For ASA r2 storage systems, the *Aggregate* option is not shown as the ASA r2 storage is a disaggregated storage. When you choose an ASA r2 storage system type SVM, the storage attributes page shows the options for enabling QoS.
+For ASA r2 storage systems, the *Aggregate* option is not shown because the ASA r2 storage is a disaggregated storage. When you choose an ASA r2 storage system type SVM, the storage attributes page shows the options for enabling QoS.
 // updated for 10.3 ASA r2
 .. As per the selected protocol, a storage unit(LUN/Namespace) is created with a space reserve of type thin.
 +

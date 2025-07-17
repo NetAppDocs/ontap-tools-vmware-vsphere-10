@@ -83,7 +83,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Port requirements
 
-The following table outlines the network ports that NetApp uses and their purposes. Ensure these ports are open and accessible to facilitate proper operation and communication within the system. Ensure that the necessary network configurations are in place to allow traffic on these ports for the associated services to function correctly. Depending on your security policies, you may need to configure firewalls or other security appliances to permit this traffic within your network.
+The following table outlines the network ports that NetApp uses and their purposes. Ensure these ports are open and accessible to facilitate proper operation and communication within the system. Ensure that the necessary network configurations are in place to allow traffic on these ports for the associated services to function correctly. Depending on your security policies, you might need to configure firewalls or other security appliances to permit this traffic within your network.
 
 |===
 |*Port* |*Protocol* |*Description*

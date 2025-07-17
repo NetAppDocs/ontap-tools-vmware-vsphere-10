@@ -118,7 +118,7 @@ Delete one datastore under a custom parent igroup.
 
 * Even though CustomIgroup1 is not reused, it is not deleted.
 * If no LUNs are mapped, the ONTAP system deletes host2Igroup.
-* host1Igroup is not deleted as it is mapped to lun3 of DS3.
+* host1Igroup is not deleted because it is mapped to lun3 of DS3.
 Custom igroups are never deleted, regardless of the reuse status.
 
 .Example 7:
@@ -205,7 +205,7 @@ When you delete or unmount an NFS datastore from an ESXi host, ONTAP tools for V
 When you delete an NFS datastore, ONTAP tools for VMware vSphere removes the export policy associated with that datastore if it is not reused by any other datastores. If the export policy is reused, it retains the host IP address and remains unchanged.
 When you delete the datastores, the export policy unassigns the host IP address and assigns a default export policy, so that the ONTAP systems can access them if required.  
 
-Assigning the export policy differs when it is reused across different datastores. When you reuse the export policy, you can append the policy with the new host IP address. When you delete or unmount a datastore that uses a shared export policy, the policy will not be deleted. It remains unchanged, and the host IP address is not removed, as it is shared with the other datastores. Reusing export policies is not recommended, as it can lead to access and latency issues.
+Assigning the export policy differs when it is reused across different datastores. When you reuse the export policy, you can append the policy with the new host IP address. When you delete or unmount a datastore that uses a shared export policy, the policy will not be deleted. It remains unchanged, and the host IP address is not removed, because it is shared with the other datastores. Reusing export policies is not recommended, because it can lead to access and latency issues.
 
 .Related topics
 
