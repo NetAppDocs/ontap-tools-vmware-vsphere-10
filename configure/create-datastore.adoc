@@ -27,7 +27,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 
 .Before you begin
 
-* Ensure that root aggregates are not mapped to SVM. 
+* Ensure that root aggregates aren't mapped to SVM. 
 * Ensure that the VASA Provider is registered with the selected vCenter.
 * In the ASA r2 storage system, SVM should be mapped to aggregate for SVM user.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
@@ -46,7 +46,7 @@ The ASA r2 system supports the iSCSI and FC protocols for vVols.
 * You can select *Custom initiator group* name for the iSCSI and FC protocols.
 +
 [NOTE]
-In ASA r2 storage system type SVM, storage units (LUN/namespace) are not created because the datastore is only a logical container.
+In ASA r2 storage system type SVM, storage units (LUN/namespace) aren't created because the datastore is only a logical container.
 
 . In the *Storage attributes* pane, you can create new volumes or use the existing volumes. However, you cannot combine these two types of volumes to create a vVols datastore. 
 +
