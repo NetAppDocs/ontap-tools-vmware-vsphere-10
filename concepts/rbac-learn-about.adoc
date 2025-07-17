@@ -23,7 +23,7 @@ At a high level, there are several components which are generally included with 
 
 .Privileges
 
-A _privilege_ is an action or capability that can be allowed or denied. It might be something simple such as the ability to read a file or it could be a more abstract operation specific to a given software system. Privileges can also be defined to restrict access to REST API endpoints and CLI commands. Every RBAC implementation includes pre-defined privileges and may also allow administrators to create custom privileges.
+A _privilege_ is an action or capability that can be allowed or denied. It might be something simple such as the ability to read a file or it could be a more abstract operation specific to a given software system. Privileges can also be defined to restrict access to REST API endpoints and CLI commands. Every RBAC implementation includes pre-defined privileges and might also allow administrators to create custom privileges.
 
 .Roles
 

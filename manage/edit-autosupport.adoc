@@ -16,7 +16,7 @@ When configuring your storage system for the first time, AutoSupport is enabled 
 When you disable AutoSupport, you will no longer receive proactive support and monitoring.
 
 [NOTE]
-It is recommended that you keep the AutoSupport enabled. It helps speed up problem detection and resolution. The system collects AutoSupport information and stores it locally, even when disabled. However, it does not send the report to any network.
+It is recommended to keep AutoSupport enabled, as it helps accelerate problem detection and resolution. Even when AutoSupport is disabled, the system continues to collect and store information locally, but it does not send reports over the network.
 
 .Steps
 
