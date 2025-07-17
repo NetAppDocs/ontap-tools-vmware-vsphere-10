@@ -72,6 +72,8 @@ When working with multiple vCenter Server instances, upgrade the self-signed cer
 Enable the SRA capability to configure disaster recovery and protect NFS or VMFS datastores.
 
 [role="quick-margin-list"]
+
+* link:../manage/enable-services.adoc[Enable ONTAP tools for VMware vSphere services]
 * link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[eight] (Optional) Enable SnapMirror active sync protection
