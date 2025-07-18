@@ -24,26 +24,22 @@ SRA supports cluster-level management and SVM-level management. If you add stora
 
 . In VMware Live Site Recovery, select *Array Managers* > *Add Array Manager*.
 . Enter the following information to describe the array in VMware Live Site Recovery:
- .. Enter a name to identify the array manager in the *Display Name* field.
- .. In the *SRA Type* field, select *NetApp Storage Replication Adapter for ONTAP*.
- .. Enter the information to connect to the cluster or the SVM:
-  *** If you are connecting to a cluster, you should enter the cluster management LIF.
-  *** If you are connecting directly to an SVM, you should enter the IP address of the SVM management LIF.
+.. Enter a name to identify the array manager in the *Display Name* field.
+.. In the *SRA Type* field, select *NetApp Storage Replication Adapter for ONTAP*.
+.. Enter the information to connect to the cluster or the SVM:
+*** If you are connecting to a cluster, you should enter the cluster management LIF.
+*** If you are connecting directly to an SVM, you should enter the IP address of the SVM management LIF.
 +
-NOTE: When configuring the array manager, you should use the same connection (IP address) for the storage system that was used to onboard the storage system in ONTAP tools for VMware vSphere.
+[NOTE]
+When configuring the array manager, you should use the same connection (IP address) for the storage system that was used to onboard the storage system in ONTAP tools for VMware vSphere.
 For example, if the array manager configuration is SVM scoped, then the storage under ONTAP tools for VMware vSphere should be added at SVM level.
-
- .. If you are connecting to a cluster, enter the name of the SVM in the *SVM name* field.
-+
-You can also leave this field blank.
-
- .. Enter the volumes to be discovered in the *Volume include list* field.
+.. If connecting to a cluster, specify the SVM name in the *SVM name* field, or leave it blank to manage all SVMs in the cluster.
+.. Enter the volumes to be discovered in the *Volume include list* field.
 +
 You can enter the source volume at the protected site and the replicated destination volume at the recovery site.
 +
 For example, if you want to discover volume src_vol1 that is in a SnapMirror relationship with volume dst_vol1, you should specify src_vol1 in the protected site field and dst_vol1 in the recovery site field.
-
- .. *(Optional)* Enter the volumes to be excluded from discovery in the *Volume exclude list* field.
+.. *(Optional)* Enter the volumes to be excluded from discovery in the *Volume exclude list* field.
 +
 You can enter the source volume at the protected site and the replicated destination volume at the recovery site.
 +

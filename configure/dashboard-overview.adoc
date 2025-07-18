@@ -36,7 +36,7 @@ Select the tool tip to open the status details of the storage backends. You can 
 |Storage Backends - Capacity
 |This card shows the aggregated used and available capacity of all storage backends for the selected vCenter Server instance.
 
-In case of ASA r2 storage systems, the capacity data is not shown as it is a disaggregated system. 
+In case of ASA r2 storage systems, the capacity data is not shown because it is a disaggregated system. 
 
 // 10.3 updates for ASA r2
 |Virtual machines

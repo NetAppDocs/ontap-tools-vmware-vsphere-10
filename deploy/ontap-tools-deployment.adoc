@@ -2,18 +2,18 @@
 permalink: deploy/ontap-tools-deployment.html
 sidebar: sidebar
 keywords:
-summary: 'The ONTAP tools for VMware vSphere appliance is deployed as small-sized single node with core services to support NFS and VMFS datastores.'
+summary: 'The ONTAP tools for VMware vSphere appliance is deployed as a small-sized single node with core services to support NFS and VMFS datastores.'
 ---
 = Deploy ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-The ONTAP tools for VMware vSphere appliance is deployed as small-sized single node with core services to support NFS and VMFS datastores. The ONTAP tools deployment process might take up to 45 minutes.
+The ONTAP tools for VMware vSphere appliance is deployed as a small-sized single node with core services to support NFS and VMFS datastores. The ONTAP tools deployment process might take up to 45 minutes.
 
 .Before you begin
 
-A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience as it is not dependent on the network connectivity.
+A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience because it is not dependent on the network connectivity.
 [NOTE]
 You should store the content library on a shared datastore so that all hosts within a cluster can access it.
 Create a content library to store the OVA before configuring the appliance to HA configuration. Do not delete the content library template after deployment.
