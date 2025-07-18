@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'ONTAP tools for VMware vSphere provides the option to enable the SRA capability to configure disaster recovery.'
 ---
-= Enable SRA to protect datastores
+= Configure SRA to protect datastores
 :icons: font
 :imagesdir: ../media/
 
