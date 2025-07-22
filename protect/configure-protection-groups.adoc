@@ -30,8 +30,8 @@ Storage Replication Adapter (SRA) supports fan-out with one sync relationship of
 . Select *Objects* > *Actions* > *Pair Sites*.
 . In the *Pair Site Recovery Manager Servers* dialog box, enter the address of the protected site's Platform Services Controller, and then select *Next*.
 . In the Select vCenter Server section, do the following:
- .. Verify that the protected site's vCenter Server appears as a matching candidate to pair.
- .. Enter the SSO administrative credentials, and then select *Finish*.
+.. Verify that the protected site's vCenter Server appears as a matching candidate to pair.
+.. Enter the SSO administrative credentials, and then select *Finish*.
 . If prompted, select *Yes* to accept the security certificates.
 
 .Result
@@ -55,8 +55,10 @@ You should ensure that both the source and target sites are configured for the f
 . In the *Protection Groups* pane, select *New*.
 . Specify a name and description for the protection group, direction and select *Next*.
 . In the *Type* field, select the *Type field option...* as Datastore groups (array-based replication) for NFS and VMFS datastore.
-. When you add a new datastore, ensure that you add it to the existing datastore group to protect the datastore.
-// Is it for all types of datastores? JIRA update: OTVDOC-285
+[NOTE]
+When you add a new datastore, ensure that you add it to the existing datastore group to protect the datastore.
+After adding a new datastore to a protected consistency group or volume, perform storage discovery on both the protected and recovery sites. This can be done either on demand or as scheduled, to ensure the new datastore is recognized and protected.
+// Is it for all types of datastores? JIRA update: OTVDOC-285 and OTVDOC-286
 The fault domain is nothing but SVMs with replication enabled. The SVMs that have only peering implemented and have no issues are displayed.
 . In the Replication groups tab, select either the enabled array pair or the replication groups that have the virtual machine you configured, and then select *Next*.
 +
