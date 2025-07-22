@@ -2,14 +2,14 @@
 permalink: manage/edit-autosupport.html
 sidebar: sidebar
 keywords:
-summary: 'When configuring your storage system for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled.'
+summary: 'When configuring ONTAP tools for VMware vSphere for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled.'
 ---
 = Edit AutoSupport settings
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-When configuring your storage system for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled. 
+When configuring ONTAP tools for VMware vSphere for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled. 
 
 == Disable AutoSupport
 
