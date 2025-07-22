@@ -55,8 +55,9 @@ You should ensure that both the source and target sites are configured for the f
 . In the *Protection Groups* pane, select *New*.
 . Specify a name and description for the protection group, direction and select *Next*.
 . In the *Type* field, select the *Type field option...* as Datastore groups (array-based replication) for NFS and VMFS datastore.
+. When you add a new datastore, ensure that you add it to the existing datastore group to protect the datastore.
+// Is it for all types of datastores? JIRA update: OTVDOC-285
 The fault domain is nothing but SVMs with replication enabled. The SVMs that have only peering implemented and have no issues are displayed.
-
 . In the Replication groups tab, select either the enabled array pair or the replication groups that have the virtual machine you configured, and then select *Next*.
 +
 All the virtual machines on the replication group are added to the protection group.

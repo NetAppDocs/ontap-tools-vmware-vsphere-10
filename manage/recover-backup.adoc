@@ -12,7 +12,7 @@ summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses
 Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default.
 
 // otv10.5 updates backup
-Backup files are stored in the datastore of the virtual machine where ONTAP tools for VMware vSphere is deployed. A folder named after the ONTAP tools IP address (with dots replaced by underscores and suffixed with _OTV_backup_) contains the backup files, named  _OTV_backup_1.tar.enc_ and _OTV_backup_2.tar.enc_. The folder retains the two most recent backup files. The folder also contains a file named _OTV_backup_info.txt_ that contains the name of the latest backup file.
+Backup files are stored in the datastore where ONTAP tools for VMware vSphere virtual machines are deployed. A folder named after the ONTAP tools IP address (with dots replaced by underscores and suffixed with _OTV_backup_) contains the backup files, named  _OTV_backup_1.tar.enc_ and _OTV_backup_2.tar.enc_. The folder retains the two most recent backup files. The folder also contains a file named _OTV_backup_info.txt_ that contains the name of the latest backup file.
 
 Ensure that the new virtual machine uses the same ONTAP tools IP address and matches the initial system configuration, including enabled services, node size, and HA mode.
 
