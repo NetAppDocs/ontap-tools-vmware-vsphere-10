@@ -11,7 +11,7 @@ summary: 'When you create a datastore at the host cluster level, the datastore i
 [.lead]
 
 When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute.
-
+ 
 *Interoperability between native datastores with vCenter Server and ONTAP tools managed datastores*
 
 ONTAP tools for VMware vSphere 10 creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to the hosts. You can create flat igroups from ONTAP system manager and use them to create VMFS datastores without using ONTAP tools. Refer to https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[Manage SAN initiators and igroups] for more information.
@@ -89,6 +89,7 @@ Virtual Machine File System (VMFS) is a clustered file system that stores virtua
 On a protected cluster:
 
 * You can create only a VMFS datastores. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
+* You can create a new volume or consistency group for a protection group and add the datastore to the protection group. The datastore is protected when you add it to the protection group.
 * You cannot create a datastore on a data center with one or more protected host clusters.
 * You cannot create a datastore at the ESXi host if the parent host cluster is protected with a relationship of "Automated Failover Duplex policy" type (uniform/non-uniform config).
 * You can create a VMFS datastore only on an ESXi host protected by an asynchronous relationship. You cannot create and mount a datastore on an ESXi host that is part of a host cluster protected by the "Automated Failover Duplex" policy.

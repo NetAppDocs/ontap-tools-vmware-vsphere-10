@@ -18,3 +18,24 @@ ONTAP tools for VMware vSphere include:
 * VASA Provider for granular VM management
 * Storage policy-based management
 * Storage Replication Adapter (SRA)
+
+.High availability for ONTAP tools for VMware 
+
+ONTAP tools for VMware vSphere supports a high-availability (HA) configuration to help provide uninterrupted functionality of ONTAP tools for VMware vSphere during failure.
+
+High-availability (HA) solution provides for rapid recovery from outages caused by:
+
+* Host failure
++
+[NOTE]
+Only single-node failure is supported.
+* Network failure
+* Virtual machine failure (Guest OS failure)
+* Application (ONTAP tools) crash
+
+No additional configuration is required for ONTAP tools for VMware vSphere to provide high availability (HA).
+
+[NOTE]
+ONTAP tools for VMware vSphere does not support vCenter HA.
+
+To enable the HA feature, the CPU hot add and memory hot plug should be enabled during deployment or later in the ONTAP tools for VMware vSphere VM settings.
