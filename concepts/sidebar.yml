@@ -21,6 +21,4 @@ entries:
             url: /concepts/rbac-ontap-environment.html
           - title: Use RBAC with ONTAP
             url: /concepts/rbac-ontap-use.html
-  - title: High availability for ONTAP tools for VMware vSphere
-    url: /concepts/high-availability.html
 

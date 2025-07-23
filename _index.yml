@@ -20,8 +20,6 @@ indexpage:
         url: /concepts/rbac-learn-about.html
       - title: Configure remote diagnostics
         url: /manage/configure-remote-diagnostic-access.html
-      - title: High availability for ONTAP tools for VMware vSphere
-        url: /concepts/high-availability.html
       - title: Protect your datastores
         url: /protect/enable-storage-replication-adapter.html
     - title: More resources
