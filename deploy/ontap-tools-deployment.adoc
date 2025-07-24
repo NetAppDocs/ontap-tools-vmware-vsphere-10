@@ -13,7 +13,8 @@ The ONTAP tools for VMware vSphere appliance is deployed as a small-sized single
 
 .Before you begin
 
-A content library in VMware is a container object which stores VM templates, vApp templates, and other types of files. Deployment with content library provides you with a seamless experience because it is not dependent on the network connectivity.
+If you are deploying a small single node, a content library is optional. For multi-node or HA deployments, a content library is required. In VMware, a content library stores VM templates, vApp templates, and other files. Deploying with a content library provides a seamless experience because it is not dependent on network connectivity.
+
 Consider the following before creating a content library:
 * Create the content library on a shared datastore so all hosts in the cluster can access it.
 * Set up the content library before deploying the ONTAP tools for VMware vSphere OVA.
@@ -24,11 +25,7 @@ Do not delete the OVA template in the content library after deployment.
 [NOTE]
 To enable HA deployment later, do not deploy the virtual machine hosting the ONTAP tools directly on an ESXi host. Deploy it on a cluster or resource pool instead.
 
-If you don't have a content library, follow these steps to create one:
-
-.Create content library
-
-In you plan to use only a small single node deployment, creating a content library is not necessary.
+Follow these steps to create a content library:
 
 . Download the `.zip` file that contains the binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^].
 . Log in to the vSphere client
