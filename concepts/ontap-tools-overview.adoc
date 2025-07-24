@@ -25,12 +25,7 @@ ONTAP tools for VMware vSphere offers high-availability (HA) support to ensure u
 
 The HA solution enables rapid recovery from the following types of outages:
 
-* Host failure
-+
-[NOTE]
-====
-Only a single-node failure is supported.
-====
+* Host failure - Only a single-node failure is supported.
 * Network failure
 * Virtual machine (guest OS) failure
 * Application (ONTAP tools) failure
