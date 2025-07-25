@@ -45,7 +45,8 @@ The ONTAP tools for VMware vSphere is initially deployed as a non-HA setup. To s
 
 .Steps
 
-. Download the `.zip` file that contains the binaries (_.ova_) and signed certificates for the ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step.
+. Download the file that contains the binaries (_.ova_) and signed certificates for the ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step.
+// updated for GITHUB issue 96
 . Log in to the vSphere server.
 . Navigate to the resource pool, cluster, or host where you intend to deploy the OVA.
 +
