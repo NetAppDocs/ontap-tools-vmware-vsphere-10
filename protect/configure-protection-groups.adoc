@@ -11,6 +11,9 @@ summary: 'You should create protection groups to protect a group of virtual mach
 [.lead]
 You should create protection groups to protect a group of virtual machines on the protected site.
 
+When you add a new datastore, you can include it in the existing datastore group or add a new datastore and create a new volume or consistency group for protection. After adding a new datastore to a protected consistency group or volume, update SnapMirror and perform storage discovery on both the protected and recovery sites. You can run discovery manually or on a schedule to ensure the new datastore is detected and protected.
+// JIRA update: OTVDOC-285 and OTVDOC-286
+
 == Pair protected and recovery sites
 
 You should pair the protected and recovery sites created using your vSphere Client to enable Storage Replication Adapter (SRA) to discover the storage systems.
@@ -54,15 +57,9 @@ You should ensure that both the source and target sites are configured for the f
 . Log in to vCenter Server and then select *Site Recovery* > *Protection Groups*.
 . In the *Protection Groups* pane, select *New*.
 . Specify a name and description for the protection group, direction and select *Next*.
-. In the *Type* field, select the *Type field option...* as Datastore groups (array-based replication) for NFS and VMFS datastore.
-[NOTE]
-When you add a new datastore, make sure to include it in the existing datastore group to ensure it is protected. Alternatively, you can add a new datastore and create a new volume or consistency group for protection. 
-After adding a new datastore to a protected consistency group or volume, perform storage discovery and update SnapMirror on both the protected and recovery sites. You can run discovery manually or on a schedule to ensure the new datastore is detected and protected.
-// Is it for all types of datastores? JIRA update: OTVDOC-285 and OTVDOC-286
-The fault domain is nothing but SVMs with replication enabled. The SVMs that have only peering implemented and have no issues are displayed.
+. In the *Type* field, select the *Type field option...* as datastore groups (array-based replication) for NFS and VMFS datastore. The fault domain is nothing but SVMs with replication enabled. The SVMs that have only peering implemented and have no issues are displayed.
 . In the Replication groups tab, select either the enabled array pair or the replication groups that have the virtual machine you configured, and then select *Next*.
 +
 All the virtual machines on the replication group are added to the protection group.
-
 . Select either the existing recovery plan or create a new plan by selecting *Add to new recovery plan*.
 . In the Ready to complete tab, review the details of the protection group that you created, and then select *Finish*.
