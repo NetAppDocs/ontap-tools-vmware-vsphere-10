@@ -2,14 +2,14 @@
 permalink: deploy/quick-start.html
 sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
-summary: 'Getting started with ONTAP tools for VMware vSphere includes a few steps.'
+summary: 'Set up ONTAP tools for VMware vSphere with this quick start section.'
 ---
 = Quick start for ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Getting started with ONTAP tools for VMware vSphere includes a few steps. This quick start takes you through the initial setup of ONTAP tools for VMware vSphere. 
+Set up ONTAP tools for VMware vSphere with this quick start section.
 
 Initially, you’ll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores. If you need to expand your configuration to use vVols datastores and high availability (HA), you’ll do so after you finish this workflow. For more information, refer to the link:../deploy/ha-workflow.html[HA deployment workflow].
 
@@ -17,7 +17,7 @@ Initially, you’ll deploy ONTAP tools for VMware vSphere as a small-sized singl
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Plan your deployment
 
 [role="quick-margin-para"]
-Verify that your vSphere, ONTAP, and ESXi host versions are compatible with the ONTAP tools version. Allocate sufficient CPU, memory, and disk space. Depending on your security policies, you may need to configure firewalls or other security appliances to allow network traffic.
+Verify that your vSphere, ONTAP, and ESXi host versions are compatible with the ONTAP tools version. Allocate sufficient CPU, memory, and disk space. Based on your security rules, you might need to set up firewalls or other security tools to allow network traffic.
 
 [role="quick-margin-para"]
 Ensure the vCenter Server is installed and accessible.
@@ -31,14 +31,14 @@ Ensure the vCenter Server is installed and accessible.
 
 [role="quick-margin-para"]
 Initially, you'll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores.
-If you plan to expand your configuration to use vVols datastores and high availability (HA), you’ll do so after you finish this workflow. To successfully expand to an HA configuration, you must ensure that the CPU hot hot-add and memory hot-plug options are enabled.
+If you plan to expand your configuration to use vVols datastores and high availability (HA), you’ll do so after you finish this workflow. To expand to an HA setup, make sure CPU hot-add and memory hot-plug are enabled.
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add vCenter Server instances
 [role="quick-margin-para"]
-Add one or more vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment.
+Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect virtual datastores in the vCenter Server environment.
 
 [role="quick-margin-list"]
 * link:../configure/add-vcenter.html[Add vCenter Server instances]
@@ -67,11 +67,13 @@ When working with multiple vCenter Server instances, upgrade the self-signed cer
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html[Manage certificates]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] (Optional) Enable SRA protection
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] (Optional) Configure SRA protection
 [role="quick-margin-para"]
 Enable the SRA capability to configure disaster recovery and protect NFS or VMFS datastores.
 
 [role="quick-margin-list"]
+
+* link:../manage/enable-services.html[Enable ONTAP tools for VMware vSphere services]
 * link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[eight] (Optional) Enable SnapMirror active sync protection
@@ -86,4 +88,6 @@ Configure ONTAP tools for VMware vSphere to manage host cluster protection for S
 Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
 
 [role="quick-margin-list"]
-* link:../manage/enable-backup.html[Create backup and recover the ONTAP tools setup]
+
+* link:../manage/manage/enable-backup.html[Create backup and recover the ONTAP tools setup]
+

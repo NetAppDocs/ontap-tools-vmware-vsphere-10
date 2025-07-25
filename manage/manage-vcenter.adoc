@@ -41,7 +41,7 @@ You need to remove all the storage backends attached to the vCenter Server befor
 . Select the vertical ellipses against the vCenter Server that you want remove and select *Remove*.
 +
 [NOTE]
-Once you remove vCenter Server instances, they will no longer be maintained by the application.
+After you remove vCenter Server instances, they will no longer be maintained by the application.
 
 When you remove vCenter Server instances in ONTAP tools, the following actions are performed automatically: 
 

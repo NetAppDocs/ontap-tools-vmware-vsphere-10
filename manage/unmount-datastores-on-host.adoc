@@ -27,7 +27,7 @@ You cannot unmount the datastore from all hosts. The user interface suggests tha
 If the datastore is part of a protected host cluster, a warning message is displayed. 
 
 [NOTE]
-If the protected datastore is unmounted the exiting protection setting may result in partial protection. Refer to link:../manage/edit-hostcluster-protection.html[Modify protected host cluster] to enable complete protection.
+If the protected datastore is unmounted the exiting protection setting might result in partial protection. Refer to link:../manage/edit-hostcluster-protection.html[Modify protected host cluster] to enable complete protection.
 
 .What's next?
 You can track the progress in the recent tasks panel.

@@ -33,7 +33,7 @@ You can create users at cluster or directly at storage virtual machines (SVMs) l
 .. *Browse* to select and upload the ONTAP Privileges JSON file.
 +
 The Product field is auto populated.
-.. Select the product capability as VSC, VASA provider, or SRA from the drop-down.
+.. Select the product capability as *VSC, VASA Provider and SRA* from the drop-down.
 // updated for OTVDOC-257 10.4 release.
 +
 The *Role* field is auto populated based on the product capability selected.
@@ -85,7 +85,7 @@ Add the *REST API Path* and the respective access from the drop down.
 === List of minimum privileges required for non-admin global scoped cluster user
 
 The minimum privileges required for non-admin global scoped cluster user created without using the users JSON file are listed in this section. 
-If a cluster is added in local scope, it is recommended to use the JSON file to create the users, as ONTAP tools for VMware vSphere requires more than just the Read privileges for provisioning on ONTAP.
+If a cluster is added in local scope, it is recommended to use the JSON file to create the users, because ONTAP tools for VMware vSphere requires more than just the Read privileges for provisioning on ONTAP.
 
 Using APIs:
 
