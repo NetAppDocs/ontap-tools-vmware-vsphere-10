@@ -20,7 +20,7 @@ From the overview page, you can run the *Discovery* action. Discovery action run
 [NOTE]
 Action button will be enabled only if you have the privilege to perform the discovery action.
 
-Once the discovery request is submitted, you can track the progress of the action in the recent tasks panel.
+After the discovery request is submitted, you can track the progress of the action in the recent tasks panel.
 
 The dashboard has several cards showing different elements of the system. The following table shows the different cards and what they represent.
 
@@ -36,7 +36,7 @@ Select the tool tip to open the status details of the storage backends. You can 
 |Storage Backends - Capacity
 |This card shows the aggregated used and available capacity of all storage backends for the selected vCenter Server instance.
 
-In case of ASA r2 storage systems, the capacity data is not shown as it is a disaggregated system. 
+In case of ASA r2 storage systems, the capacity data is not shown because it is a disaggregated system. 
 
 // 10.3 updates for ASA r2
 |Virtual machines

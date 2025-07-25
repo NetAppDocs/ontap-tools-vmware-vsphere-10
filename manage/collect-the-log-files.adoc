@@ -33,7 +33,7 @@ Follow the steps below to generate log bundle using the vCenter client user inte
 . Log in to the vSphere client.
 . From the vSphere Client home page, go to *Support* > *Log bundle* > *Generate*.
 . Provide the log bundle label and generate the log bundle.
-You can see the download option when the files are generated. Downloading may take some time.
+You can see the download option when the files are generated. Downloading might take some time.
 
 [NOTE]
 The log bundle generated replaces the log bundle that was generated within the last 3 days or 72 hrs.

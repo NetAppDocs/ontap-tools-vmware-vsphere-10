@@ -22,7 +22,7 @@ NOTE:
 For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power off the first node before making the following changes to the virtual machine (VM) settings.
 
 If you're upgrading from ONTAP tools for VMware vSphere 10.2 or 10.3, you need to complete the following steps before proceeding with the upgrade task:
-* Add an additional 100 GB hard disk to each node, as the service data is stored locally on the VM.
+* Add an additional 100 GB hard disk to each node, because the service data is stored locally on the VM.
 * Change the CPU and memory for the powered-off VM according to the flavor of your deployment. Enable the hot plugin for CPU and RAM.
 +
 |===
