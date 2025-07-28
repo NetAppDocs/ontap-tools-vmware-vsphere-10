@@ -89,5 +89,5 @@ Schedule backups of your ONTAP tools for VMware vSphere setup that you can use t
 
 [role="quick-margin-list"]
 
-* link:../manage/manage/enable-backup.html[Create backup and recover the ONTAP tools setup]
+* link:../manage/enable-backup.html[Create backup and recover the ONTAP tools setup]
 
