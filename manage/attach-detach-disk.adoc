@@ -2,7 +2,7 @@
 permalink: manage/attach-detach-disk.html
 sidebar: sidebar
 keywords:
-summary: '-'
+summary: 'Attach a data disk to a virtual machine to expand the storage capacity.'
 ---
 = Attach or detach a data disk from a virtual machine
 :icons: font
