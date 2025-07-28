@@ -23,9 +23,9 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . Onboard the storage backend locally from the vCenter server APIs for the ONTAP tools plug-in.
 . Issue the following API from Swagger or in Postman to migrate. 
 +
-curl -X POST https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs
+curl -X POST `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs``
 +
-You can access Swagger through this URL: `https://$FQDN_IP_PORT/, for example: https://10.67.25.33:8443/.
+You can access Swagger through this URL: `\https://$FQDN_IP_PORT/', for example: `\https://10.67.25.33:8443`.
 +
 ====
 *HTTP method and endpoint*
@@ -82,7 +82,7 @@ A job object is returned. You should save the job identifier to use it in the ne
 . Use the following URI in Swagger to check the status:
 +
 ----
-curl https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
 After completing the job, review the migration report. This report is included in the job data and can be accessed from the job response.
 . Add the ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider] with ONTAP tools for VMware vSphere.
@@ -116,7 +116,7 @@ Asynchronous
 
 *Curl example*
 
-curl  -X PATCH  https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
 
 *JSON output example*
 
