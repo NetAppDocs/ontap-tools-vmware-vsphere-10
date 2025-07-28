@@ -177,7 +177,7 @@ Do not begin migration if the failover has been completed but the re-protection 
 .. From the ellipsis menu select *Reset configuration*.
 .. From the ellipsis menu select *Delete*.
 . Perform these steps on both protection and recovery sites.
-.. link:../manage/enable-services.adoc[Enable ONTAP tools for VMware vSphere services]
+.. link:../manage/enable-services.html[Enable ONTAP tools for VMware vSphere services]
 // updated for github issue 97 and also to address feedback from Venky
 .. Install ONTAP tools for VMware vSphere 10.4 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
 .. On the VMware Live Site Recovery user interface page, perform the *Discover Arrays* and *Discover Devices* operations and confirm that the devices are displayed as before the migration.
