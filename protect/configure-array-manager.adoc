@@ -27,8 +27,8 @@ SRA supports cluster-level management and SVM-level management. If you add stora
 .. Enter a name to identify the array manager in the *Display Name* field.
 .. In the *SRA Type* field, select *NetApp Storage Replication Adapter for ONTAP*.
 .. Enter the information to connect to the cluster or the SVM:
-*** If you are connecting to a cluster, you should enter the cluster management LIF.
-*** If you are connecting directly to an SVM, you should enter the IP address of the SVM management LIF.
+*** If you're connecting to a cluster, you should enter the cluster management LIF.
+*** If you're connecting directly to an SVM, you should enter the IP address of the SVM management LIF.
 +
 [NOTE]
 When configuring the array manager, you should use the same connection (IP address) for the storage system that was used to onboard the storage system in ONTAP tools for VMware vSphere.

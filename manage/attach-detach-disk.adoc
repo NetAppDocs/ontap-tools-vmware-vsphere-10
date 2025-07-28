@@ -34,7 +34,7 @@ You can detach a data disk attached to a virtual machine when it is no longer ne
 . Right-click a virtual machine in the inventory and select *Edit Settings*.
 . Move your pointer over the disk and select *Remove*.
 [NOTE]
-The disk is removed from the virtual machine. If other virtual machines share the disk, the disk files are not deleted.
+The disk is removed from the virtual machine. If other virtual machines share the disk, the disk files aren't deleted.
 
 .Related information
 

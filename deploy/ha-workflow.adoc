@@ -9,7 +9,7 @@ summary: 'Getting started with ONTAP tools for VMware vSphere includes a few ste
 :imagesdir: ../media/
 
 [.lead]
-If you are using vVols datastores, you need to expand the initial deployment of ONTAP tools to a high-availability (HA) configuration and  enable the VASA Provider services.
+If you're using vVols datastores, you need to expand the initial deployment of ONTAP tools to a high-availability (HA) configuration and  enable the VASA Provider services.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Scale up the deployment
 

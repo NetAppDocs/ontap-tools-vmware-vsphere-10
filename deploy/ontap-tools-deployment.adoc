@@ -13,17 +13,17 @@ The ONTAP tools for VMware vSphere appliance is deployed as a small-sized single
 
 .Before you begin
 
-If you are deploying a small single node, a content library is optional. For multi-node or HA deployments, a content library is required. In VMware, a content library stores VM templates, vApp templates, and other files. Deploying with a content library provides a seamless experience because it is not dependent on network connectivity.
+If you're deploying a small single node, a content library is optional. For multi-node or HA deployments, a content library is required. In VMware, a content library stores VM templates, vApp templates, and other files. Deploying with a content library provides a seamless experience because it is not dependent on network connectivity.
 
 Consider the following before creating a content library:
 * Create the content library on a shared datastore so all hosts in the cluster can access it.
 * Set up the content library before deploying the ONTAP tools for VMware vSphere OVA.
 * Ensure the content library is created before configuring the appliance for HA.
 [NOTE]
-Do not delete the OVA template in the content library after deployment.
+don't delete the OVA template in the content library after deployment.
 
 [NOTE]
-To enable HA deployment later, do not deploy the virtual machine hosting the ONTAP tools directly on an ESXi host. Deploy it on a cluster or resource pool instead.
+To enable HA deployment later, don't deploy the virtual machine hosting the ONTAP tools directly on an ESXi host. Deploy it on a cluster or resource pool instead.
 
 Follow these steps to create a content library:
 
@@ -39,7 +39,7 @@ Follow these steps to create a content library:
 For more information, refer to https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library] blog.
 
 [NOTE]
-Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to 'Conservative'. This ensures that VMs are not migrated during the installation.
+Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to 'Conservative'. This ensures that VMs aren't migrated during the installation.
 
 The ONTAP tools for VMware vSphere is initially deployed as a non-HA setup. To scale to HA deployment, you will need to enable the CPU hot plug and memory hot plugin. You can perform this step as part of the deployment process or edit the VM settings after deployment.
 // updated for OTVDOC-255 - Jani
@@ -77,7 +77,7 @@ b. Select *Actions* > *New VM from this template*
 . In the *Customize template* window, fill in the required fields and select *Next*. 
 [NOTE] 
 +
-* The information is validated during installation. If there is a discrepancy, an error message appears on the web console, and you are prompted to correct it.
+* The information is validated during installation. If there is a discrepancy, an error message appears on the web console, and you're prompted to correct it.
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
 Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IPv6 and IPv4 addresses.

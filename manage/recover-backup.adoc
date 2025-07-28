@@ -35,7 +35,7 @@ scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
 ----
 +
 [NOTE]
-Do not alter the destination path and file name (/home/diag/system_recovery.tar.enc) mentioned in the command.
+don't alter the destination path and file name (/home/diag/system_recovery.tar.enc) mentioned in the command.
 . After the backup file is transferred, log in to the diagnostic shell and run the following command:
 +
 ----

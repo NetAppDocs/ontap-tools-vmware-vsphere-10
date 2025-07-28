@@ -90,7 +90,7 @@ After completing the job, review the migration report. This report is included i
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from the maintenance console.
 +
 [Note] 
-Do not delete the VASA Provider.
+don't delete the VASA Provider.
 +
 After the old VASA Provider is stopped, the vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
 . The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xxx are visible in ONTAP tools for VMware vSphere 10.5 only after the datastore discovery job is triggered, which might take up to 30 minutes to complete. Verify that the datastores are visible on the overview page of the ONTAP tools for the VMware vSphere Plugin user interface page.
@@ -169,7 +169,7 @@ The compliance status under *VM storage policy compliance* is now shown as compl
 In the recovery plan, the protected site refers to the location where the VMs are currently running, while the recovery site is where the VMs will be recovered. The SRM interface displays the state of the recovery plan with details about the protected and the recovery sites. In the recovery plan, the CLEANUP and REPROTECT buttons are disabled, whereas the TEST and RUN buttons remain enabled. This indicates that the site is prepared for data recovery. Before migrating the SRA, verify that one site is in the protected state and the other is in the recovery state.
 
 [NOTE]
-Do not begin migration if the failover has been completed but the re-protection is pending. Ensure that the re-protection process is completed before proceeding with the migration. If a test failover is in progress, clean up the test failover and start the migration.
+don't begin migration if the failover has been completed but the re-protection is pending. Ensure that the re-protection process is completed before proceeding with the migration. If a test failover is in progress, clean up the test failover and start the migration.
 
 . Follow these steps to delete the ONTAP tools SRA adapter for VMware vSphere 9.xx in VMware Site Recovery:
 .. Go to VMware Live Site Recovery configuration management page

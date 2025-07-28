@@ -17,8 +17,8 @@ All the datastores belonging to the selected SVM and mounted on one or more host
 Verify that the following prerequisites are met before protecting a host cluster:
 
 * The host cluster contains datastores from a single SVM only.
-* Datastores on the host cluster are not mounted on hosts outside the cluster.
-* Datastores mounted on the host cluster are VMFS datastores with iSCSI or FC protocol. The vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols are not supported.
+* Datastores on the host cluster aren't mounted on hosts outside the cluster.
+* Datastores mounted on the host cluster are VMFS datastores with iSCSI or FC protocol. The vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols aren't supported.
 * Datastores based on FlexVol/LUN volumes mounted on a host are not part of any consistency group (CG).
 * Datastores based on FlexVol/LUN volumes mounted on a host are not part of any SnapMirror relationships.
 * The host cluster contains at least one datastore.
@@ -45,6 +45,6 @@ When you select the *uniform host configuration* toggle button, the host initiat
 . You can edit the host cluster protection using the *Modify host cluster protection* operation. You can edit or delete the relationships using the ellipsis menu options.
 .  Select the *Protect* button.
 +
-A vCenter task is created with job ID details, and its progress is shown in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and does not wait for the task to be completed. 
+A vCenter task is created with job ID details, and its progress is shown in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and doesn't wait for the task to be completed. 
 . To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*. You can select the consistency groups to view information such as capacity, associated datastores, and child consistency groups.
 // 10.5 updates for Hierarchical CG feature

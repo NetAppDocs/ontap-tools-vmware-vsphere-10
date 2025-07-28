@@ -33,7 +33,7 @@ Configuring SRA on the VMware Live Site Recovery appliance saves the ONTAP tools
 . To log in to the container ID, enter the command: `docker exec -it -u srm <container id> sh`
 . Configure VMware Live Site Recovery with ONTAP tools for VMware vSphere IP address and password using the command: `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>`
 [NOTE]
-You need to provide the password value within single quotes to ensure that the Perl script does not read the special characters in the password as a delimiter of the input.
+You need to provide the password value within single quotes to ensure that the Perl script doesn't read the special characters in the password as a delimiter of the input.
 [NOTE]
 You can set the application (VASA Provider/SRA) username and password in ONTAP tools Manager when enabling these services for the first time. These credentials are needed to register SRA with the VMware Live Site Recovery appliance.
 // Github issue 100

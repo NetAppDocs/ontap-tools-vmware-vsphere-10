@@ -31,7 +31,7 @@ Using the ONTAP tools Manager scale up the ONTAP tools for VMware vSphere config
 When ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for the new edit submission.
 +
 [NOTE]
-In ONTAP tools for VMware vSphere, you are only allowed to increase the node size; you cannot reduce the node size. In a non-HA setup, only a medium-size configuration is supported. In an HA setup, medium and large configurations are supported.
+In ONTAP tools for VMware vSphere, you're only allowed to increase the node size; you cannot reduce the node size. In a non-HA setup, only a medium-size configuration is supported. In an HA setup, medium and large configurations are supported.
 . Use the HA toggle button to enable the HA configuration. On the *HA settings* page, ensure that:
 
 **  The content library belongs to the same vCenter Server where the ONTAP tools node VMs run. vCenter Server credentials are used to validate and download the OVA template for appliance changes.

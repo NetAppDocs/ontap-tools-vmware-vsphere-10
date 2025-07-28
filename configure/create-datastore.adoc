@@ -27,7 +27,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 
 .Before you begin
 
-* Ensure that root aggregates are not mapped to SVM. 
+* Ensure that root aggregates aren't mapped to SVM. 
 * Ensure that the VASA Provider is registered with the selected vCenter.
 * In the ASA r2 storage system, SVM should be mapped to aggregate for SVM user.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
@@ -42,11 +42,11 @@ The ASA r2 system supports the iSCSI and FC protocols for vVols.
 . Select the storage VM where you want to create the datastore. 
 . Under advanced options:
 +
-* If you select the *Custom export policy*, ensure you run discovery in vCenter for all objects. It’s recommended that you do not use this option.
+* If you select the *Custom export policy*, ensure you run discovery in vCenter for all objects. It’s recommended that you don't use this option.
 * You can select *Custom initiator group* name for the iSCSI and FC protocols.
 +
 [NOTE]
-In ASA r2 storage system type SVM, storage units (LUN/namespace) are not created because the datastore is only a logical container.
+In ASA r2 storage system type SVM, storage units (LUN/namespace) aren't created because the datastore is only a logical container.
 
 . In the *Storage attributes* pane, you can create new volumes or use the existing volumes. However, you cannot combine these two types of volumes to create a vVols datastore. 
 +
@@ -68,7 +68,7 @@ A VMware Network File System (NFS) datastore uses the NFS protocol to connect ES
 [NOTE]
 Kerberos authentication is available only when the NFS 4.1 protocol is selected. 
 . Select *Platform* and *Storage VM* in the *Storage* pane. 
-. If you select *Custom export policy* under the advanced options, run the discovery in vCenter for all objects. It’s recommended that you do not use this option.
+. If you select *Custom export policy* under the advanced options, run the discovery in vCenter for all objects. It’s recommended that you don't use this option.
 [NOTE]
 You cannot create an NFS datastore using the SVM’s default/root volume policy.
 [NOTE]
@@ -110,7 +110,7 @@ VMware vSphere 7.0 U3 and later versions support the NVMe/TCP protocol. However,
 . Run link:../configure/discover-storage-systems-and-hosts.html[Discover storage systems and hosts] action on the ESXi host.
 For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/How-to-Configure-NVMe-TCP-with-vSphere-8-0-Update-1-and-ONTAP-9-13-1-for-VMFS/ba-p/445429[How to Configure NVMe/TCP with vSphere 8.0 Update 1 and ONTAP 9.13.1 for VMFS Datastores].
 
-* If you are using the NVME/FC protocol, perform the following steps to configure the ESXi host:
+* If you're using the NVME/FC protocol, perform the following steps to configure the ESXi host:
 
 . If not already enabled, enable NVMe over Fabrics(NVMe-oF) on your ESXi host(s). 
 . Complete SCSI zoning. 
@@ -147,7 +147,7 @@ Beginning in ONTAP 9.16.1, ASA r2 storage systems support up to 12 nodes per clu
 .. Select *Use existing volume*, *Enable QoS* options as required, and provide the details.
 +
 [NOTE]
-In the ASA r2 storage type, volume creation or selection does not apply to storage unit creation(LUN/Namespace). Therefore, these options are not shown.
+In the ASA r2 storage type, volume creation or selection doesn't apply to storage unit creation(LUN/Namespace). Therefore, these options aren't shown.
 +
 [NOTE]
 You cannot use the existing volume to create a VMFS datastore with NVMe/FC or NVMe/TCP protocol; you should create a new volume.

@@ -19,7 +19,7 @@ The VASA Provider extension should be enabled for your vCenter Server instance.
 
 Using SSH to access the diag user account has the following limitations:
 
-* You are allowed only one login account per activation of SSH.
+* you're allowed only one login account per activation of SSH.
 * SSH access to the diag user account is disabled when one of the following happens:
  ** The time expires.
 +

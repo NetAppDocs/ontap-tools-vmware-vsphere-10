@@ -60,7 +60,7 @@ Follow the steps below to remove a storage backend.
 . Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
 . In the left pane of ONTAP tools, navigate to *Storage Backends* and select a storage backend.
-. Select the vertical ellipses menu and select *Remove*. Ensure that the storage backend does not contain any datastores.
+. Select the vertical ellipses menu and select *Remove*. Ensure that the storage backend doesn't contain any datastores.
 You can track the progress in the recent tasks panel.
 
 You can perform the remove operation for global ONTAP clusters using ONTAP tools Manager.
@@ -86,7 +86,7 @@ The summary page provides the following details:
 // 10.5 updates - Jani
 * Network information like the IP address and port of the network. For the child SVM, the information will be same as the parent storage backend.
 * Privileges allowed and restricted for the storage backend. For the child SVM, the information will be same as the parent storage backend. Privileges are shown only on the cluster-based storage backends. If you add SVM as the storage backend, privileges information will not be shown.
-* The ASA r2 system cluster drill-down view does not include local tiers tab when the disaggregated property is set as "true" for the SVM or the cluster.
+* The ASA r2 system cluster drill-down view doesn't include local tiers tab when the disaggregated property is set as "true" for the SVM or the cluster.
 * For ASA r2 SVM systems, the capacity portlet is not shown. The capacity portal is required only when the disaggregated property is set as "true" for the SVM or the cluster.
 * For ASA r2 SVM systems, basic information section shows the platform type.
 

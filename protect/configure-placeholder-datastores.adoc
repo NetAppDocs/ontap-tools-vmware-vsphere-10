@@ -24,5 +24,5 @@ Configure a placeholder datastore to reserve space in the vCenter inventory at t
 . Select the appropriate datastore and select *OK*.
 +
 [NOTE]
-Placeholder datastores may reside on local or remote storage, but they do not require replication.
+Placeholder datastores may reside on local or remote storage, but they don't require replication.
 . Repeat steps 3 to 5 to configure a placeholder datastore for the recovery site.

@@ -53,7 +53,7 @@ When ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
 --
 
 [NOTE]
-When configuring a storage backend through the vSphere client user interface, it is important to note that the vVols datastores do not support the direct addition of an SVM user.
+When configuring a storage backend through the vSphere client user interface, it is important to note that the vVols datastores don't support the direct addition of an SVM user.
 
 . Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.

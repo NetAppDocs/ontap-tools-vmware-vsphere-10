@@ -20,7 +20,7 @@ ONTAP provides a robust and extensible RBAC environment. You can use the RBAC ca
 There are several options available when using ONTAP RBAC depending on your environment and goals. An overview of the major administrative decisions is presented below. Also see https://docs.netapp.com/us-en/ontap-automation/rest/rbac_overview.html[ONTAP Automation: Overview of RBAC security^] for more information.
 
 [NOTE]
-ONTAP RBAC is tailored to a storage environment and is simpler than the RBAC implementation provided with vCenter Server. With ONTAP, you assign a role directly to the user. Configuring explicit permissions, such as those used with vCenter Server, are not needed with ONTAP RBAC.
+ONTAP RBAC is tailored to a storage environment and is simpler than the RBAC implementation provided with vCenter Server. With ONTAP, you assign a role directly to the user. Configuring explicit permissions, such as those used with vCenter Server, aren't needed with ONTAP RBAC.
 
 .Types of roles and privileges
 

@@ -34,7 +34,7 @@ No additional configuration is required to enable HA for ONTAP tools for VMware 
 
 [NOTE]
 ====
-ONTAP tools for VMware vSphere does not support vCenter HA.
+ONTAP tools for VMware vSphere doesn't support vCenter HA.
 ====
 
 To use the HA feature, ensure that CPU hot add and memory hot plug are enabled during deployment or later in the VM settings.
