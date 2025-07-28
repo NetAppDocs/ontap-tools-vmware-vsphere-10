@@ -13,7 +13,7 @@ Storage backends are systems that the ESXi hosts use for data storage.
 
 == Discover storage
 
-You can run the discovery of a storage backend on demand without waiting for a scheduled discovery to update the storage details. In the MetroCluster configuration, when the ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
+You can run the discovery of a storage backend on demand without waiting for a scheduled discovery to update the storage details immediately. For MetroCluster configurations, run ONTAP tools discovery manually after a switchover.
 
 // 10.5 updates  - Jani
 
@@ -30,7 +30,7 @@ You can track the progress in the recent tasks panel.
 
 == Modify storage backends
 You can modify the storage backend credentials or the port name. You can also modify the storage backend for global ONTAP clusters using ONTAP tools Manager. 
-When the certificate is about to expire in 30 days or less, ONTAP tools shows a warning in the storage backend page. You can modify the storage backend and upload the new certificate obtained from the ONTAP administrator.
+If the certificate will expire in 30 days or less, ONTAP tools shows a warning. Modify the storage backend and upload the new certificate from the ONTAP administrator.
 
 When you modify the storage backend, ONTAP tools for VMware vSphere performs a discovery of the storage backend to update the storage details.
 
@@ -43,7 +43,7 @@ Follow the steps in this section to modify a storage backend.
 . Select the vertical ellipses menu and select *Modify* to modify the credentials or the port name.
 You can track the progress in the recent tasks panel.
 
-You can perform the modify operation for global ONTAP clusters using ONTAP tools Manager using the following steps.
+Modify global ONTAP clusters with ONTAP tools Manager as follows.
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
@@ -54,7 +54,7 @@ You can perform the modify operation for global ONTAP clusters using ONTAP tools
 
 == Remove storage backends
 
-You need to delete all the datastores attached to the storage backend before removing the storage backend. 
+You must remove all datastores attached to the storage backend before you remove it. 
 Follow the steps below to remove a storage backend.
 
 . Log in to the vSphere client.
@@ -73,9 +73,9 @@ You can perform the remove operation for global ONTAP clusters using ONTAP tools
 
 == Drill down view of storage backend
 
-The storage backend page lists all the storage backends. You can perform discover storage, modify, and remove operations on the storage backends you added and not on the individual child SVM under the cluster. 
+The storage backend page lists all the storage backends. You can perform discover storage, modify, and remove operations on the storage backends that you added, but not on the individual child SVM under the cluster. 
 
-When you select either the parent cluster or the child under the storage backend, you can see the overall summary of the component. When you select the parent cluster you have the actions dropdown from which you can perform the discover storage, modify, and remove operations. 
+Select the parent cluster or child to view the component summary. For the parent cluster, use the actions dropdown to discover storage, modify, or remove the storage backend.
 
 The summary page provides the following details:
 
@@ -84,8 +84,8 @@ The summary page provides the following details:
 * Basic information about the VM
 * Certificate details such as the certificate status and the expiry date. 
 // 10.5 updates - Jani
-* Network information like the IP address and port of the network. For the child SVM, the information will be same as the parent storage backend.
-* Privileges allowed and restricted for the storage backend. For the child SVM, the information will be same as the parent storage backend. Privileges are shown only on the cluster-based storage backends. If you add SVM as the storage backend, privileges information will not be shown.
+* Network information like the IP address and port of the network. For the child SVM, the information is the same as the parent storage backend.
+* Privileges allowed and restricted for the storage backend. For the child SVM, the information is the same as the parent storage backend. ONTAP tools show privileges only on the cluster-based storage backends. If you add SVM as the storage backend, privileges information is not shown.
 * The ASA r2 system cluster drill-down view doesn't include local tiers tab when the disaggregated property is set as "true" for the SVM or the cluster.
 * For ASA r2 SVM systems, the capacity portlet is not shown. The capacity portal is required only when the disaggregated property is set as "true" for the SVM or the cluster.
 * For ASA r2 SVM systems, basic information section shows the platform type.

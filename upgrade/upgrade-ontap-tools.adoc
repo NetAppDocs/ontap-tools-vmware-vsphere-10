@@ -13,18 +13,18 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 
 NOTE:
 
-* For ASA r2 systems, ensure you upgrade to ONTAP tools for VMware vSphere 10.5 with ONTAP 9.16.1 before configuring additional storage availability zones (SAZs).
+* For ASA r2 systems, make sure you upgrade to ONTAP tools for VMware vSphere 10.5 with ONTAP 9.16.1 before setting up more storage availability zones (SAZs).
 // https://jira.ngage.netapp.com/browse/OTVDOC-254 updates
-* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, rollback is not supported. To restore your environment, use RPO for ONTAP tools for VMware vSphere 10.2, or low RPO/snapshot recovery for ONTAP tools for VMware vSphere 10.3 and later.
+* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, you can't roll back. To restore, use RPO for version 10.2 or low RPO/snapshot recovery for 10.3 and later.
 
 .Before you begin
 
-Before upgrading, ensure the ONTAP system certificate remains valid for at least 5 days. If the certificate expires within 5 days, the upgrade will fail.
+Before upgrading, ensure the ONTAP system certificate is valid for at least 5 days. If it expires sooner, the upgrade fails.
 
 // 10.5 updates - Jani certificate feature.
 For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power off the first node before making the following changes to the virtual machine (VM) settings.
 
-If you're upgrading from ONTAP tools for VMware vSphere 10.2, 10.3, or 10.4, you need to complete the following steps before proceeding with the upgrade task:
+If upgrading from ONTAP tools for VMware vSphere 10.2, 10.3, or 10.4, do these steps before starting the upgrade:
 
 * Add an additional 100 GB hard disk to each node, because the service data is stored locally on the VM.
 * Change the CPU and memory for the powered-off VM according to the flavor of your deployment. Enable the hot plugin for CPU and RAM.
@@ -77,11 +77,11 @@ If you're upgrading from ONTAP tools for VMware vSphere 10.2, 10.3, or 10.4, you
 
 |===
 
-* Power ON the VM after the changes are done and wait for the services to come to a running state.
-* In case of HA deployment, make the resource changes, enable the hot plugin for CPU and RAM, and add 100 GB hard disks for the second and the third node as well. There is no need to reboot these nodes.
-* If the appliance was deployed as a local path (easy deployment) with ONTAP tools 10.2, you need to take a quiesce snapshot before upgrading.
+* Power on the VM after making changes and wait for services to start.
+* In case of HA deployment, update the resources, enable the hot plugin for CPU and RAM, and add 100 GB hard disks for the second and third nodes as well. You don't need to reboot these nodes.
+* If the appliance is deployed using the local path (easy deployment) option with ONTAP tools 10.2, take a quiesced snapshot before upgrading.
 
-If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, you need to complete the following steps before proceeding with the upgrade task:
+If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, complete the following steps before starting the upgrade:
 // for 10.4 add a comment asking if this section of upgrading from 10.0 to 10.1 is required.
 *Enable Diagnostics*
 
@@ -99,34 +99,34 @@ Run the following commands to take a backup of MongoDB:
 
 * kn exec -it ntv-mongodb-0 sh - kn is an alias of kubectl -n ntv-system.
 * Run _env | grep MONGODB_ROOT_PASSWORD_ command inside the pod.
-* Run _exit_ command to come out of the pod.
+* Run _exit_ command to exit the pod.
 * Run _kn exec ntv-mongodb-0 --mongodump -u root -p MONGODB_ROOT_PASSWORD --archive=/tmp/mongodb-backup.gz --gzip_ command to replace the MONGO_ROOT_PASSWORD set from the above command.
-* Run _kn cp ntv-mongodb-0:/tmp/mongodb-backup.gz ./mongodb-backup.gz_ command to copy the mongodb backup created using the above command from the pod to the host.
+* Run _kn cp ntv-mongodb-0:/tmp/mongodb-backup.gz ./mongodb-backup.gz_ command to copy the mongodb backup you created using the above command from the pod to the host.
 
-*Take the quaise snapshot of all the volumes*
+*Take a quiesced snapshot of all the volumes*
 
 * Run 'kn get pvc' command and save the command output.
-* Take snapshots of all the volumes one by one using one of the following methods:
+* Take snapshots of each volume using one of the following methods:
 ** From CLI, run the command _volume snapshot create -vserver <vserver_name> -volume <volume_name> -snapshot <snapshot_name>_
 ** From the ONTAP System Manager user interface, search the volume by its name in the search bar, then open that volume by selecting on the name. Go to snapshot and add the snapshot of that volume.
 
-*Take the snapshot of ONTAP tools for VMware vSphere VMs in vCenter (3VMs in case of HA Deployment, 1 VM in case of non-HA deployment)*
+*Take a snapshot of each ONTAP tools for VMware vSphere VM in vCenter (3 VMs for HA deployment, 1 VM for non-HA deployment).*
 
 * In the vSphere client user interface, select the VM.
 * Go to the snapshots tab and select the *Take Snapshot* button. Take a quiesced snapshot of the VM. Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html[Take a Snapshot of a Virtual Machine^] for details.
 
-Before performing the upgrade, delete the completed pods from the log bundle with the prefix “generate-support-bundle-job.” If support bundle generation is in progress, wait for it to complete and then delete the pod.
+Before upgrading, delete completed pods with the prefix “generate-support-bundle-job.” If a support bundle is generating, wait until it finishes, then delete the pod.
 
-For any type of upgrade, you need to add an additional 100 GB hard Disk Drive (HDD). To add an HDD, perform the following task.
+For any type of upgrade, add an additional 100 GB hard Disk Drive (HDD). To add an HDD, do the following:
 
 . Select the VM in single node configuration or all three VMs in HA configuration.
 . Right-click on the VM(s) and select *Add New Device* > *Hard Disk*
 . Add a 100 GB HDD in the *New Hard disk* field.
 . Select *Apply*
 
-After adding the hard disk, update the VM's resources for the respective configurations and restart the primary VM.
+After adding the hard disk, update the VM's resources for your configuration and restart the primary VM.
 
-A new HDD will be created. Dynamic storage provisioner uses this HDD to generate or replicate the volumes.
+After adding a hard disk, the system creates a new HDD, which the dynamic storage provisioner uses to create or replicate volumes.
 
 .Steps
 
@@ -147,18 +147,18 @@ After upgrading to ONTAP tools for VMware vSphere 10.5, you can:
 
 * Disable the services from the manager user interface
 * Move from a non-HA setup to an HA setup
-* Scale up a non-HA small configuration a non-HA medium or to a HA medium or large configuration.
-* In case of a non-HA upgrade, reboot the ONTAP tools VM to reflect the changes. In case of an HA upgrade, reboot the first node to reflect the changes on the node.
+* Scale up a non-HA small configuration to a non-HA medium, or to an HA medium or large configuration.
+* For a non-HA upgrade, reboot the ONTAP tools VM to show the changes. For an HA upgrade, reboot the first node to show the changes on the node.
 
 .What's next
 
-After you upgrade from previous releases of ONTAP tools for VMware vSphere to 10.5, rescan the SRA adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters page.
+After upgrading to ONTAP tools for VMware vSphere 10.5, rescan the SRA adapters to update the VMware Live Site Recovery Storage Replication Adapters page.
 // OTVDOC-167 - updated by jani
 
-After you upgrade successfully, delete the Trident volumes from ONTAP manually using the following procedure:
+After you upgrade successfully, manually delete the Trident volumes from ONTAP using the following procedure:
 
 [NOTE]
-These steps aren't required if the ONTAP tools for VMware vSphere 10.1 or 10.2 was in non-HA small or medium (local path) configurations.
+These steps aren't required if the ONTAP tools for VMware vSphere 10.1 or 10.2 is in non-HA small or medium (local path) configurations.
 
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
