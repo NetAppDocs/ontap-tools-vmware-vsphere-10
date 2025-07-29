@@ -129,30 +129,30 @@ If you're upgrading from ONTAP tools for VMware vSphere 10.0 to 10.1, enable the
 
 . Upload ONTAP tools for VMware vSphere upgrade ISO to content library.
 . In the primary VM page, select *Actions* > *Edit Settings* 
-. Select the content library ISO file in the edit settings window under the *CD/DVD drive* field. 
-. Select the ISO file and select *OK*. Choose the connected checkbox across the *CD/DVD drive* field.
+. Select the *content library ISO file* in the edit settings window under the *CD/DVD drive* field. 
+. Select the ISO file, check the *Connected* box for the *CD/DVD drive* field, and click *OK*.
 image:../media/primaryvm-edit-settings.png[Edit settings]
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
-. Enter *3* to select the System Configuration menu.
-. Enter *7* to select the upgrade option.
+. Enter *3* to select the *System Configuration* menu.
+. Enter *7* to select the *Upgrade* option.
 . When you upgrade, the following actions are performed automatically:
 .. Certificate upgrade
 .. Remote plug-in upgrade
-
-After upgrading to ONTAP tools for VMware vSphere 10.5, you can: 
-
-* Disable the services from the manager user interface
-* Move from a non-HA setup to an HA setup
-* Scale up a non-HA small configuration to a non-HA medium, or to an HA medium or large configuration.
-* For a non-HA upgrade, reboot the ONTAP tools VM to show the changes. For an HA upgrade, reboot the first node to show the changes on the node.
 
 .What's next
 
 After upgrading to ONTAP tools for VMware vSphere 10.5, rescan the SRA adapters to update the VMware Live Site Recovery Storage Replication Adapters page.
 // OTVDOC-167 - updated by jani
 
-After you upgrade, manually delete the Trident volumes from ONTAP using the following procedure:
+After upgrading you can: 
+
+* Disable the services from the manager user interface
+* Move from a non-HA setup to an HA setup
+* Scale up a non-HA small configuration to a non-HA medium, or to an HA medium or large configuration.
+* For a non-HA upgrade, reboot the ONTAP tools VM to show the changes. For an HA upgrade, reboot the first node to show the changes on the node.
+
+After upgrading, manually delete the Trident volumes from ONTAP using the following procedure:
 
 [NOTE]
 These steps aren't required if the ONTAP tools for VMware vSphere 10.1 or 10.2 is in non-HA small or medium (local path) configurations.
