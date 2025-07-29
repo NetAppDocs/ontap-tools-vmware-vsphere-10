@@ -115,7 +115,7 @@ Run the following commands to take a backup of MongoDB:
 * In the vSphere client user interface, select the VM.
 * Go to the snapshots tab and select the *Take Snapshot* button. Take a quiesced snapshot of the VM. Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/take-snapshots-of-a-virtual-machine.html[Take a Snapshot of a Virtual Machine^] for details.
 
-Before upgrading, delete completed pods with the prefix “generate-support-bundle-job.” If a support bundle is generating, wait until it finishes, then delete the pod.
+Before upgrading, delete completed pods with the prefix “generate-support-bundle-job.” If a support bundle is generating, wait until it finishes, and then delete the pod.
 
 For any type of upgrade, add an additional 100 GB hard Disk Drive (HDD). To add an HDD, do the following:
 
@@ -155,7 +155,7 @@ After upgrading to ONTAP tools for VMware vSphere 10.5, you can:
 After upgrading to ONTAP tools for VMware vSphere 10.5, rescan the SRA adapters to update the VMware Live Site Recovery Storage Replication Adapters page.
 // OTVDOC-167 - updated by jani
 
-After you upgrade successfully, manually delete the Trident volumes from ONTAP using the following procedure:
+After you upgrade, manually delete the Trident volumes from ONTAP using the following procedure:
 
 [NOTE]
 These steps aren't required if the ONTAP tools for VMware vSphere 10.1 or 10.2 is in non-HA small or medium (local path) configurations.
