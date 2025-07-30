@@ -10,15 +10,11 @@ summary: 'Storage backends are systems that the ESXi hosts use for data storage.
 
 [.lead]
 
-Adding a storage backend enables you to onboard an ONTAP cluster.
+To add local storage backends, use cluster or SVM credentials through the ONTAP tools user interface. ONTAP tools limit these storage backends to a single vCenter. When using cluster credentials, the associated SVMs automatically map to the vCenter to manage vVols or VMFS datastores.  For VMFS workflows, including SRA, ONTAP tools supports SVM credentials without requiring a globally mapped cluster.
 
-.About this task
+In a multitenant setup, use ONTAP tools Manager to add the cluster where vCenter acts as the tenant with an associated SVM. Associate the storage backend with vCenter Server to map it globally. Add the Storage Virtual Machines (SVMs) for the vCenter tenant. The SVM user can then provision vVols datastores and add storage in vCenter.
 
-In a multitenant setup, use ONTAP tools Manager to add the cluster where vCenter acts as the tenant with an associated SVM. Associate the storage backend with vCenter Server to map it globally. Add the Storage Virtual Machines (SVMs) you want to use in the vCenter tenant. The SVM user can then provision vVols datastores and add storage in vCenter using the SVM.
-
-To add local storage backends, use cluster or SVM credentials through the ONTAP tools user interface. These storage backends are limited to a single vCenter.  When using cluster credentials, the associated SVMs automatically map to the vCenter to manage vVols or VMFS datastores.  For VMFS workflows, including SRA, ONTAP tools supports SVM credentials without requiring a globally mapped cluster.
-
-When MetroCluster support is enabled in the ONTAP system, onboard both source and destination clusters configured with MetroCluster as local or global storage backends.
+When you enable MetroCluster support in the ONTAP system, onboard both source and destination clusters configured with MetroCluster as local or global storage backends.
 
 // 10.5 updates -Jani rewrote the intro and added the last para. Added before you begin section.
 .Before you begin
@@ -73,7 +69,7 @@ ONTAP tools updates the list, and you see the new storage backend.
 
 --
 ====
-In the *Storage backends* page, you can see the newly added storage backend in the list. ONTAP tools shows a warning in the certificate expiry date column if the certificate is about to expire in 30 days or less. After the certificate expires, ONTAP tools mark the storage backend as unknown because they lose communication with it. 
+The *Storage backends* page displays the newly added storage backend in the list. ONTAP tools shows a warning in the certificate expiry date column if a certificate is set to expire in 30 days or less. After expiry, it marks the storage backend as unknown. After the certificate expires, ONTAP tools mark the storage backend as unknown because it loses communication with the storage system.
 
 .Related information
 
