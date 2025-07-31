@@ -147,7 +147,7 @@ After completing the migration and registering ONTAP tools 10.5 to the vCenter S
 
 After upgrading, if the virtual machine's compliance state is outdated, reapply the storage policy using the following steps:
 
-. Navigate to the datastore and select *Summary* > *VM Storage policies*.
+. Go to the datastore and select *Summary* > *VM Storage policies*.
 +
 The compliance status under *VM storage policy compliance* shows as *Out-of-date*.
 . Select the Storage VM policy and the corresponding VM

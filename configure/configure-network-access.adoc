@@ -14,7 +14,7 @@ Unless network access has been configured, all IP addresses discovered from the 
 .Steps
 . Log in to the vSphere client.
 . Select *NetApp ONTAP tools* in the shortcuts page under the plug-ins section.
-. In the left pane of ONTAP tools, navigate to *Settings* > *Manage Network Access* > *Edit*. 
+. In the left pane of ONTAP tools, go to *Settings* > *Manage Network Access* > *Edit*. 
 +
 To add multiple IP addresses, separate the list with commas, range, Classless Inter-Domain Routing (CIDR), or a combination of all three.
 . Select *Save*.

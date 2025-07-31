@@ -4,21 +4,23 @@ sidebar: sidebar
 keywords:
 summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
 ---
-= Add a storage backend
+= Add storage backend to an ONTAP cluster
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-To add local storage backends, use cluster or SVM credentials through the ONTAP tools user interface. ONTAP tools limit these storage backends to a single vCenter. When using cluster credentials, the associated SVMs automatically map to the vCenter to manage vVols or VMFS datastores.  For VMFS workflows, including SRA, ONTAP tools supports SVM credentials without requiring a globally mapped cluster.
+Adding storage backends to an ONTAP cluster improves scalability and performance. ONTAP tools let you provision and manage datastores directly from the vCenter Server.
 
-In a multitenant setup, use ONTAP tools Manager to add the cluster where vCenter acts as the tenant with an associated SVM. Associate the storage backend with vCenter Server to map it globally. Add the Storage Virtual Machines (SVMs) for the vCenter tenant. The SVM user can then provision vVols datastores and add storage in vCenter.
+To add storage backends locally, use cluster or SVM credentials in the ONTAP tools interface. These storage backends are accessible only to the selected vCenter Server. ONTAP tools maps associated SVMs to the vCenter Server for managing vVols or VMFS datastores. For VMFS datastore workflows, including SRA workflows, you can use SVM credentials without needing a globally mapped cluster.
+
+You can add global storage backends, available only for ONTAP cluster credentials, using ONTAP tools Manager. These backends support discovery workflows that identify the essential cluster resources for vVol management. In multitenancy setup, global clusters allow a cluster to add an SVM user locally and manage vVols datastore.
 
 When you enable MetroCluster support in the ONTAP system, onboard both source and destination clusters configured with MetroCluster as local or global storage backends.
 
 // 10.5 updates -Jani rewrote the intro and added the last para. Added before you begin section.
 .Before you begin
-Before adding the storage backend, get the certificate from the ONTAP administrator. Ensure it is a valid certificate with the updated Subject Alternative Name (SAN) field. ONTAP systems require SAN fields in the certificate to identify the cluster and SVM management LIFs.
+Before adding the storage backend to an ONTAP cluster, get the certificate from the ONTAP administrator. Ensure it is a valid certificate with the updated Subject Alternative Name (SAN) field. ONTAP systems require SAN fields in the certificate to identify the cluster and SVM management LIFs.
 
 [role="tabbed-block"]
 ====
@@ -37,10 +39,10 @@ In a multi-tenant setup, you can add a storage backend cluster globally and SVM 
 . Add the storage backend and provide the server IP address or FQDN, username, and password details.
 [NOTE]
 IPv4 and IPv6 address management LIFs are supported.
-. In the advanced options, you can fetch the ONTAP cluster certificates automatically, which requires you to authorize the certificate or manually upload the certificate by browsing to its location.
+. In the advanced options, you can fetch the ONTAP cluster certificates automatically, which requires you to authorize the certificate or manually upload the certificate.
 . If the added storage backend is part of the MetroCluster configuration, *Add MetroCluster peer* screen appears. Select *Add peer* to add the peer storage backend.
 [NOTE]
-When ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
+After ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
 
 // 10.5 updates -Jani.
 --
@@ -60,7 +62,7 @@ To add an SVM user directly, you can add cluster-based credentials and IPv4 and 
 . In the advanced options, you can fetch the ONTAP cluster certificates automatically, which requires you to authorize the certificate or manually upload the certificate by browsing to its location. 
 . If the added storage backend is part of the MetroCluster configuration, *Add MetroCluster peer* screen appears. Select *Add peer* to add the peer storage backend.
 [NOTE]
-When ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
+After ONTAP systems perform a switchover, run the ONTAP tools discovery manually.
 
 // 10.5 updates -Jani. For MCC and certificate feature updates.
 .What’s next?
@@ -69,7 +71,8 @@ ONTAP tools updates the list, and you see the new storage backend.
 
 --
 ====
-The *Storage backends* page displays the newly added storage backend in the list. ONTAP tools shows a warning in the certificate expiry date column if a certificate is set to expire in 30 days or less. After expiry, it marks the storage backend as unknown. After the certificate expires, ONTAP tools mark the storage backend as unknown because it loses communication with the storage system.
+
+The *Storage backends* page lists the newly added storage backend. ONTAP tools shows a warning in the certificate expiry date column if a certificate will expire in 30 days or less. After the certificate expires, ONTAP tools show the storage backend as unknown because it lose communication with the storage system.
 
 .Related information
 

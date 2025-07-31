@@ -28,6 +28,6 @@ Verify that the onboarded VASA Provider is listed under VASA Provider from the v
 
 .Steps
 
-. Navigate to the vCenter Server instance.
+. Go to the vCenter Server instance.
 . Log in with the administrator credentials.
 . Select *Storage Providers* > *Configure*. Verify that the onboarded VASA Provider is listed correctly.

@@ -11,7 +11,7 @@ summary: 'Enter the NTP server details to synchronize the time clocks of ONTAP t
 [.lead]
 Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default and a backup is created every 10 minutes. You can disable the backup or edit the frequency of the backup. 
 
-It is not recommended to disable the backup because it prevents ONTAP tools from maintaining low RPO. Disabling the backup doesn't delete the existing backup files.
+Do not disable the backup because it prevents ONTAP tools from maintaining low RPO. Disabling the backup doesn't delete the existing backup files.
 You can change the frequency of the backup to a value between 10 and 60 minutes.
 // OTVDOC-256 jira updated note removed for JIRA OTVDOC-290
 

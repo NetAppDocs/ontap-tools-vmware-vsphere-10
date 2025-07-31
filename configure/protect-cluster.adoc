@@ -14,22 +14,21 @@ ONTAP tools for VMware vSphere manages the protection of host clusters.
 All the datastores belonging to the selected SVM and mounted on one or more hosts of the cluster are protected under a host cluster.
 
 .Before you begin
-Verify that the following prerequisites are met before protecting a host cluster:
+Make sure you meet these requirements before you protect a host cluster:
 
 * The host cluster contains datastores from a single SVM only.
 * Datastores on the host cluster aren't mounted on hosts outside the cluster.
-* Datastores mounted on the host cluster are VMFS datastores with iSCSI or FC protocol. The vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols aren't supported.
+* Datastores mounted on the host cluster are VMFS datastores with iSCSI or FC protocol. You can't use vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols.
 * Datastores based on FlexVol/LUN volumes mounted on a host are not part of any consistency group (CG).
 * Datastores based on FlexVol/LUN volumes mounted on a host are not part of any SnapMirror relationships.
 * The host cluster contains at least one datastore.
 
 // edited for consistency and parallelism.
-
 .Steps
 
 . Log in to the vSphere client.
 . Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
-. In the protect cluster window, the datastore type and source storage virtual machine (VM) details are auto populated. Select the datastores link to view the protected datastores.
+. In the protect cluster window, the system automatically fills in the datastore type and source storage virtual machine (VM) details. Select the datastores link to view the protected datastores.
 // . Enter the *consistency group name*. - removed this step in 10.5 for Hierarchical CG feature
 . Select *Add Relationship*.
 . In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
@@ -45,6 +44,6 @@ When you select the *uniform host configuration* toggle button, the host initiat
 . You can edit the host cluster protection using the *Modify host cluster protection* operation. You can edit or delete the relationships using the ellipsis menu options.
 .  Select the *Protect* button.
 +
-A vCenter task is created with job ID details, and its progress is shown in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and doesn't wait for the task to be completed. 
-. To view the protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*. You can select the consistency groups to view information such as capacity, associated datastores, and child consistency groups.
+The system creates a vCenter task with job ID details and shows its progress in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and does not wait for the task to complete.
+. To view the protected host clusters, go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*. Select a consistency group to view its capacity, associated datastores, and child consistency groups.
 // 10.5 updates for Hierarchical CG feature

@@ -32,7 +32,7 @@ Follow these steps to create a content library:
 . Select the vSphere client menu and select *Content libraries*.
 . Select *Create* on the right of the page.
 . Provide a name for the library and create the content library.
-. Navigate to the content library you created.
+. Go to the content library you created.
 . Select *Actions* in the right of the page and select *Import item* and import the OVA file.
 
 [NOTE]
@@ -48,7 +48,7 @@ The ONTAP tools for VMware vSphere is initially deployed as a non-HA setup. To s
 
 . Download the file that contains the binaries (_.ova_) and signed certificates for the ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step.
 . Log in to the vSphere server.
-. Navigate to the resource pool, cluster, or host where you intend to deploy the OVA.
+. Go to the resource pool, cluster, or host where you intend to deploy the OVA.
 +
 [NOTE]
 Never store ONTAP tools for VMware vSphere virtual machine on vVols datastores that it manages.
@@ -89,7 +89,7 @@ Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IP
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
-// we might need to add another step to To customizet he hardware. go to vSphere clinet menu >  in the inventory navigate to your VM > edit settings. 
+// we might need to add another step to To customizet he hardware. go to vSphere clinet menu >  in the inventory go to your VM > edit settings. 
 . Power on the VM after completing the task if the option to automatically power on the VM was not selected.
 
 You can track the progress of the installation within the VM's web console.
@@ -102,6 +102,6 @@ If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3,
 
 . Log in to the vCenter client
 . Power down the ONTAP tools node.
-. Navigate to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
+. Go to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
 . Under the *CPU* options, check the *Enable CPU hot add* checkbox
 . Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.

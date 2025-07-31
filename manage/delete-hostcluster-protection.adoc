@@ -14,14 +14,16 @@ When you remove the host cluster protection, the datastores become unprotected.
 
 .Steps
 
-. To view the list protected host clusters, navigate to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*.
+. To view the list protected host clusters, go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*.
 +
-In this page, you can monitor the protected host clusters along with its protection state, SnapMirror relationship, and its corresponding SnapMirror status. You can select the consistency groups to view information such as capacity, associated datastores, and child consistency groups.
+On this page, monitor protected host clusters, protection state, SnapMirror relationship, and status. Select consistency groups to view capacity, associated datastores, and child groups.
+
 // 10.5 updates for Hierarchical CG feature
-. In the *Host cluster protection* window, select the ellipsis menu against the cluster, and then select *Remove protection*.
+. In the *Host cluster protection* window, select the ellipsis menu next to the cluster, and select *Remove protection*.
 +
 * If you remove protection from a host cluster with only an asynchronous SnapMirror relationship, you must manually delete the storage elements. Storage elements include consistency groups, volumes (for ONTAP system), storage units (LUNs/Namespaces), and snapshots.
 * If you remove protection from a host cluster with only an automated failover duplex-based SnapMirror policy relationship and a flat consistency group, you can delete the associated storage elements on the secondary storage directly from the same screen.
-* If you remove protection from a host cluster with both an automated failover duplex-based SnapMirror policy and an asynchronous SnapMirror relationship, and the consistency group has been changed to a hierarchical consistency group for application-level backups, a warning message will appear about possible impacts to backups. Confirm to proceed. After confirmation, you can delete the associated storage elements on the secondary storage. If you choose not to clean up, the storage elements will remain on the secondary site.
+* If you remove protection from a host cluster with both SnapMirror policies and a hierarchical consistency group for backups, a warning appears about backup impacts. Confirm to proceed. After confirmation, delete the associated storage elements on the secondary storage. If you do not clean up, the storage elements remain on the secondary site.
+
 
 // 10.5 update for hierarchical CG
