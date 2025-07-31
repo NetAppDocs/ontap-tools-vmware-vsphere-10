@@ -21,16 +21,16 @@ ONTAP tools for VMware vSphere include:
 
 .High availability for ONTAP tools for VMware 
 
-ONTAP tools for VMware vSphere offers high-availability (HA) support to ensure uninterrupted operation during failures.
+ONTAP tools for VMware vSphere offers high-availability (HA) support to help maintain uninterrupted operation during failures.
 
-The HA solution enables rapid recovery from the following types of outages:
+The HA solution helps you recover quickly from the following types of outages:
 
 * Host failure - Only a single-node failure is supported.
 * Network failure
 * Virtual machine (guest OS) failure
 * Application (ONTAP tools) failure
 
-No additional configuration is required to enable HA for ONTAP tools for VMware vSphere.
+You do not need to perform any additional configuration to enable HA for ONTAP tools for VMware vSphere.
 
 [NOTE]
 ====

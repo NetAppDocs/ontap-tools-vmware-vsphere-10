@@ -13,13 +13,12 @@ You can configure new user roles and privileges for managing storage backends us
 
 .Before you begin
 
-* You should have downloaded the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.
-* You should have downloaded the ONTAP Privileges file from ONTAP tools using `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`.
+* Download the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.
+* Download the ONTAP Privileges file from ONTAP tools using `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 [NOTE]
-You can create users at cluster or directly at storage virtual machines (SVMs) level. You can also create users without using the user_roles.json file and if done so, you need to have a minimum set of privileges at SVM level.
-
-* You should have logged in with administrator privileges for the storage backend.
+You can create users at cluster or directly at storage virtual machines (SVMs) level. You can create users without the user_roles.json file. In this case, ensure the user has the minimum required privileges at the SVM level.
+* Log in with administrator privileges for the storage backend.
 
 .Steps
 
@@ -32,20 +31,21 @@ You can create users at cluster or directly at storage virtual machines (SVMs) l
 .. In the *Add User* dialog box, select *Virtualization products*.
 .. *Browse* to select and upload the ONTAP Privileges JSON file.
 +
-The Product field is auto populated.
+ONTAP tools automatically populates the Product field.
 .. Select the product capability as *VSC, VASA Provider and SRA* from the drop-down.
 // updated for OTVDOC-257 10.4 release.
 +
-The *Role* field is auto populated based on the product capability selected.
+ONTAP tools automatically populates the *Role* field based on the product capability you select.
 .. Enter the required username and password.
-.. Select the privileges (Discovery, Create Storage, Modify Storage, Destroy Storage) required for the user, and then select *Add*.
+.. Select the privileges (Discovery, Create Storage, Modify Storage, Destroy Storage) the user needs, and then select *Add*.
 
-The new role and user are added, and you can see the detailed privileges under the role that you have configured.
+ONTAP tools adds the new role and user, and you can view the detailed privileges under the role you configured.
 // edited for 10.0 release
 
 == SVM aggregate mapping requirements
 
-To use SVM user credentials for provisioning datastores, internally ONTAP tools for VMware vSphere creates volumes on the aggregate specified in the datastores POST API. The ONTAP doesn't allow the creation of volumes on unmapped aggregates on an SVM using SVM user credentials. To resolve this, you need to map the SVMs with the aggregates using the ONTAP REST API or CLI as described here.
+To use SVM user credentials for provisioning datastores, ONTAP tools for VMware vSphere creates volumes internally on the aggregate specified in the datastores POST API. The ONTAP doesn't allow the creation of volumes on unmapped aggregates on an SVM using SVM user credentials. ONTAP blocks SVM user credentials from creating volumes on unmapped aggregates. Map SVMs to aggregates using the ONTAP REST API or CLI.
+
 
 REST API:
 
@@ -61,7 +61,7 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 == Create ONTAP user and role manually
 
-Follow the instructions in this section to create the user and roles manually without using the JSON file.
+Create users and roles manually without the JSON file by following these instructions.
 
 . Access ONTAP System Manager using the cluster management IP address of the cluster.
 . Log in to the cluster with admin privileges.
@@ -84,10 +84,10 @@ Add the *REST API Path* and the respective access from the drop down.
 
 === List of minimum privileges required for non-admin global scoped cluster user
 
-The minimum privileges required for non-admin global scoped cluster user created without using the users JSON file are listed in this section. 
+Minimum privileges for a non-admin global scoped cluster user created without the users JSON file are listed below.
 If a cluster is added in local scope, it is recommended to use the JSON file to create the users, because ONTAP tools for VMware vSphere requires more than just the Read privileges for provisioning on ONTAP.
 
-Using APIs:
+You can access functionality by using APIs:
 
 |===
 
@@ -102,10 +102,10 @@ Using APIs:
 |/api/storage/cluster	|Read-Only	|To get the Cluster level Space and Efficiency Data
 |/api/storage/disks	|Read-Only	|To get the Disks associated in an Aggregate
 |/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM Policy management
-|/api/svm/svms	|Read-Only	|To get SVM configuration in the case the Cluster is added locally.
+|/api/svm/svms	|Read-Only	|To get SVM configuration when the Cluster is added locally.
 |/api/network/ip/interfaces |Read-Only |Add Storage Backend - To identify the management LIF scope is Cluster/SVM
 |/api/storage/availability-zones |Read-Only |SAZ Discovery. Applicable to ONTAP 9.16.1 release onwards and ASA r2 systems.
-|/api/cluster/metrocluster|Read-Only|Retrieves MetroCluster status and configuration details.
+|/api/cluster/metrocluster|Read-Only|Gets MetroCluster status and configuration details.
 |===
  
 
@@ -113,9 +113,9 @@ Using APIs:
 
 // 10.3 updates OTVDOC-163 - jani
 [NOTE]
-You need discovery, create, modify, and destroy Privileges to perform PATCH operations and automatic rollback in case of failure on datastores. Lack of these all these privileges together leads to workflow disruptions and cleanup issues.
+Discovery, create, modify, and destroy privileges are required for PATCH operations and automatic rollback on datastores. Missing permissions might cause workflow and cleanup issues.
 
-Creating ONTAP tools for VMware vSphere ONTAP API based user with discovery, create storage, modify storage, destroy storage privileges enables initiating discoveries and manage ONTAP tools workflows.
+An ONTAP API-based user with discovery, create, modify, and destroy storage privileges can start discoveries and manage ONTAP tools workflows.
 
 To create a cluster scoped user with all privileges mentioned above, run the following commands:
 
@@ -326,7 +326,7 @@ Example:
 security login create -user-or-group-name testvpsraall -application http -authentication-method password -role OTV_10_VP_SRA_Discovery_Create_Modify_Destroy -vserver C1_sti160-cluster_
 ----
 
-To unlock the account, to enable access to the management interface run the following command:
+Run the following command to unlock the account and enable management interface access:
 
 ----
 security login unlock -user <user-name> -vserver <cluster-or-vserver-name>

@@ -2,21 +2,20 @@
 permalink: configure/create-datastore.html
 sidebar: sidebar
 keywords:
-summary: 'When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute. '
+summary: 'When you create a datastore at the host cluster level, ONTAP tools mounts it on all destination hosts and enables the action only if you have the required privileges.'
 ---
 = Create a datastore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-
-When you create a datastore at the host cluster level, the datastore is created and mounted on all the hosts of the destination, and the action is enabled only if the current user has the privilege to execute.
+When you create a datastore at the host cluster level, ONTAP tools mounts it on all destination hosts and enables the action only if you have the required privileges.
  
 *Interoperability between native datastores with vCenter Server and ONTAP tools managed datastores*
 
 ONTAP tools for VMware vSphere 10 creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to the hosts. You can create flat igroups from ONTAP system manager and use them to create VMFS datastores without using ONTAP tools. Refer to https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[Manage SAN initiators and igroups] for more information.
 
-When the storage is onboarded to ONTAP tools and datastore discovery is run, flat igroups and VMFS datastores become ONTAP tools-managed and are converted to nested igroups. You cannot use the earlier flat igroups to create new datastores; you must use the ONTAP tools user interface or REST API to reuse the nested igroups.
+After onboarding storage and running datastore discovery, ONTAP tools converts flat igroups in VMFS datastores to nested igroups. You cannot use the earlier flat igroups to create new datastores. Use the ONTAP tools interface or REST API to reuse nested igroups.
 
 [role="tabbed-block"]
 ====
@@ -29,7 +28,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 
 * Ensure that root aggregates aren't mapped to SVM. 
 * Ensure that the VASA Provider is registered with the selected vCenter.
-* In the ASA r2 storage system, SVM should be mapped to aggregate for SVM user.
+*  In the ASA r2 storage system, the SVM should be mapped to the aggregate for the SVM user.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 
 .Steps
@@ -58,7 +57,7 @@ When creating a new volume, you can enable QoS on the datastore. By default, one
 .Create an NFS datastore
 
 --
-A VMware Network File System (NFS) datastore uses the NFS protocol to connect ESXi hosts to a shared storage device over a network. NFS datastores are commonly used in VMware vSphere environments and offer several advantages, such as simplicity and flexibility.
+An NFS datastore connects ESXi hosts to shared storage using the NFS protocol. They are simple and flexible and are used in VMware vSphere environments.
 
 .Steps
 . Log in to the vSphere client.
@@ -77,20 +76,20 @@ You cannot create an NFS datastore using the SVM’s default/root volume policy.
 . Select the aggregate for volume creation in the *Storage Attributes* pane. In the advanced options, choose *Space Reserve* and *Enable QoS* as required.
 . Review the selections in the *Summary* pane and select *Finish*.
 
-The NFS datastore is created and mounted on all the hosts.
+ONTAP tools creates and mounts the NFS datastore on all hosts.
 
 --
 
 .Create a VMFS datastore
 
 --
-Virtual Machine File System (VMFS) is a clustered file system that stores virtual machine files in VMware vSphere environments. VMFS allows multiple ESXi hosts to access the same virtual machine files concurrently, enabling features like vMotion and High Availability.
+VMFS is a clustered file system for storing virtual machine files. Multiple ESXi hosts can access the same VM files simultaneously for vMotion and High Availability features.
 
 On a protected cluster:
 
 * You can create only a VMFS datastores. When you add a VMFS datastore to a protected cluster, the datastore becomes protected automatically. 
 * You cannot create a datastore on a data center with one or more protected host clusters.
-* You cannot create a datastore at the ESXi host if the parent host cluster is protected with a relationship of "Automated Failover Duplex policy" type (uniform/non-uniform config).
+* You cannot create a datastore on an ESXi host if the parent host cluster is protected by an "Automated Failover Duplex policy" (uniform or non-uniform configuration).
 * You can create a VMFS datastore only on an ESXi host protected by an asynchronous relationship. You cannot create and mount a datastore on an ESXi host that is part of a host cluster protected by the "Automated Failover Duplex" policy.
  
 .Before you begin
@@ -127,7 +126,7 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 . Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
 . Select VMFS datastore type.
 . Enter the datastore name, size, and protocol information in the *Name and Protocol* pane.
-If you choose to add the new datastore to an existing VMFS datastore cluster, select the datastore cluster selector under Advanced Options. 
+To add the new datastore to an existing VMFS cluster, select the datastore cluster in Advanced Options. 
 . Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section as required. You can choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
 When NVMe/FC or NVMe/TCP protocol is selected, a new namespace subsystem is created and is used for namespace mapping. The namespace subsystem is created using the auto-generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of the *Storage* pane. 
@@ -136,7 +135,7 @@ When NVMe/FC or NVMe/TCP protocol is selected, a new namespace subsystem is crea
 [NOTE]
 For ASA r2 storage systems, the *Aggregate* option is not shown because the ASA r2 storage is a disaggregated storage. When you choose an ASA r2 storage system type SVM, the storage attributes page shows the options for enabling QoS.
 // updated for 10.3 ASA r2
-.. As per the selected protocol, a storage unit(LUN/Namespace) is created with a space reserve of type thin.
+.. As per the selected protocol, ONTAP tools creates a storage unit (LUN/Namespace) with a space reserve of type thin.
 +
 [NOTE]
 Beginning in ONTAP 9.16.1, ASA r2 storage systems support up to 12 nodes per cluster.
