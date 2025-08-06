@@ -33,7 +33,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 
 .Steps
 . Log in to the vSphere client.
-. Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
+. Right-click on a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
 . Select vVols *Datastore type*.
 . Enter the *Datastore name* and *Protocol* information.
 [NOTE]
@@ -61,7 +61,7 @@ An NFS datastore connects ESXi hosts to shared storage using the NFS protocol. T
 
 .Steps
 . Log in to the vSphere client.
-. Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create datastore*.
+. Right-click on a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create datastore*.
 . Select NFS in the *Datastore type* field.
 . Enter the datastore name, size, and protocol information in the *Name and protocol* pane. Select *Datastore cluster* and *Kerberos authentication* in the advanced options.
 [NOTE]
@@ -123,7 +123,7 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 
 .Steps
 . Log in to the vSphere client.
-. Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
+. Right-click on a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
 . Select VMFS datastore type.
 . Enter the datastore name, size, and protocol information in the *Name and Protocol* pane.
 To add the new datastore to an existing VMFS cluster, select the datastore cluster in Advanced Options. 

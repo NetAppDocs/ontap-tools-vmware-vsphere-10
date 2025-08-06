@@ -27,7 +27,7 @@ Make sure you meet these requirements before you protect a host cluster:
 .Steps
 
 . Log in to the vSphere client.
-. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
+. Right-click on a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . In the protect cluster window, the system automatically fills in the datastore type and source storage virtual machine (VM) details. Select the datastores link to view the protected datastores.
 // . Enter the *consistency group name*. - removed this step in 10.5 for Hierarchical CG feature
 . Select *Add Relationship*.

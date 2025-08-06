@@ -38,7 +38,7 @@ Add hosts or create datastores on the protected cluster using the vCenter user i
 . Log in to the vSphere client.
 . To edit the properties of a protected cluster, you can either
 .. Go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, select the ellipsis  menu next to the cluster and select *Edit* or
-.. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
+.. Right-click on a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . If you create a datastore in the vCenter user interface, it appears as unprotected. You can view all datastores in the cluster and their protection status in a dialog box. Select the *Protect* button to enable protection.
 . If you add a new ESXi host, the protection status is shown as partially protected. Select the ellipsis menu under the SnapMirror settings and select *Edit* to set the proximity of the newly added ESXi host.
 +
@@ -56,7 +56,7 @@ ONTAP tools creates a vCenter task, and you can track its progress in the *Recen
 . Log in to the vSphere client.
 . To edit the properties of a protected cluster, you can either
 .. Go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, select the ellipsis  menu against the cluster and select *Edit* or
-.. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
+.. Right-click on a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . Select *Add relationship*. 
 . Add new relationship as either *Asynchronous* or *AutomatedFailOverDuplex* policy type.
 . Select *Protect*.
@@ -77,7 +77,7 @@ When you delete the relationship, the system rescans the secondary site to remov
 . Log in to the vSphere client.
 . To edit the properties of a protected cluster, you can either
 .. Go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, select the ellipsis  menu against the cluster and select *Edit* or
-.. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*. 
+.. Right-click on a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*. 
 . Select the ellipsis  menu under the SnapMirror settings and select *Delete*.
 +
 * If you delete an asynchronous policy type-based relationship of a protected host cluster, you must manually remove the storage elements from the tertiary storage cluster. Storage elements include consistency groups, volumes (for ONTAP systems), storage units (LUNs/Namespaces), and snapshots.
@@ -101,7 +101,7 @@ You cannot edit an existing asynchronous SnapMirror relationship.
 . Log in to the vSphere client.
 . To edit the properties of a protected cluster, you can either
 .. Go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*, select the ellipsis  menu against the cluster and select *Edit* or
-.. Right-click a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
+.. Right-click on a host cluster and select *NetApp ONTAP tools* > *Protect Cluster*.
 . If the AutomatedFailOverDuplex policy type is selected, add host proximity or host access details.
 . Select *Protect* button.
 

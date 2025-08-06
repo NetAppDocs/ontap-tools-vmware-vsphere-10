@@ -21,7 +21,6 @@ Depending on your configuration and system load, this process might take a long 
 .Steps
 
 . From the VMware vSphere Web client home page, select *Hosts and Clusters*.
-. Right-click a host and select *NetApp ONTAP tools* > *Update host data*.
 . On the shortcuts page of the VMware vSphere Web client, select *NetApp ONTAP tools* under the plug-ins section.
 . Go to the *ESXi Host compliance* card in the overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
 . Select *Apply Recommended Settings* link.

@@ -23,7 +23,7 @@ You can delete the datastore only if no vVols are present on the selected datast
 .Steps
 
 . Log in to the vSphere client.
-. Right-click a host system, a host cluster, or a data center and select *NetApp ONTAP tools* > *Delete datastore*.
+. Right-click on a host system, a host cluster, or a data center and select *NetApp ONTAP tools* > *Delete datastore*.
 +
 [NOTE]
 You cannot delete a datastore used by virtual machines. Move virtual machines to another datastore before deleting. You cannot delete the volume if it is part of a protected host cluster.
