@@ -29,7 +29,7 @@ Storage Replication Adapter (SRA) supports fan-out with one sync relationship of
 
 .Steps
 
-. Double-click *Site Recovery* on the vSphere Client home page and select *Sites*.
+. On the vSphere Client home page, double-click the *Site Recovery* icon and then select *Sites*.
 . Select *Objects* > *Actions* > *Pair Sites*.
 . In the *Pair Site Recovery Manager Servers* dialog box, enter the address of the protected site's Platform Services Controller, and then select *Next*.
 . In the Select vCenter Server section, do the following:

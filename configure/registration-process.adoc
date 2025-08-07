@@ -4,23 +4,25 @@ sidebar: sidebar
 keywords:
 summary: 'You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plugin interface.'
 ---
-= Register the VASA Provider with a vCenter Server instance
+= Register the VASA Provider with a vCenter Server instance using ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere. The VASA Provider settings section displays the VASA Provider registration status for the selected vCenter Server. In a multi-vCenter deployment ensure that you have custom CA certificates for each vCenter Server instance. 
+Use ONTAP tools for VMware vSphere to register the VASA Provider with a vCenter Server instance. This enables storage policy-based management, vVols support, and integration with VMware Live Site Recovery appliances on ONTAP systems.
+
+VASA Provider settings show the registration status for the selected vCenter Server.
 //OTVDOC-271 updates -Jani
 
 .Steps
 
 . Log in to the vSphere client.
 . Select *Shortcuts* > *NetApp ONTAP tools* under the plug-ins section.
-. Select *Settings* > *VASA Provider settings*. The VASA Provider registration status will be displayed as not registered.
+. Select *Settings* > *VASA Provider settings*. The ONTAP tools displays the VASA Provider registration status as not registered.
 . Select the *Register* button to register the VASA Provider.
-. Enter a name and credentials for the VASA Provider. The username can only contain letters, numbers, and underscores. Password length should be between 8 and 256 characters.
+. Enter a name and credentials for the VASA Provider. The username can only contain letters, numbers, and underscores. Set the password length between 8 and 256 characters.
 . Select *Register*.  
-. After a successful registration and page refresh, the registered VASA Provider's status, name, and version is displayed.  After registration, the unregister action is activated.
+. After a successful registration and page refresh, ONTAP tools display the registered VASA Provider's status, name, and version.
 
 .What's next
 
