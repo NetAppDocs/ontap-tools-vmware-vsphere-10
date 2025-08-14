@@ -13,7 +13,6 @@ Configure user roles and privileges for storage backends with the JSON file from
 
 .Before you begin
 
-* Download the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.
 * Download the ONTAP Privileges file from ONTAP tools using `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`.
 +
 [NOTE]
@@ -65,15 +64,15 @@ Create the users and roles manually without the JSON file.
 
 . Access ONTAP System Manager using the cluster management IP address of the cluster.
 . Log in to the cluster with admin privileges.
-.. To configure cluster ONTAP tools roles, select *Cluster* > *Settings* > *Users and Roles* pane. 
-.. To configure cluster SVM ONTAP tools roles, select *Storage SVM* > *Settings* > *Users and Roles* pane
-. Create Roles:
+.. To configure cluster ONTAP tools roles, select *Cluster* > *Settings* > *Users and Roles*. 
+.. To configure cluster SVM ONTAP tools roles, select *Storage SVM* > *Settings* > *Users and Roles*.
+. Create roles:
 .. Select *Add* under *Roles* table.
 .. Enter the *Role name* and *Role Attributes* details. 
 +
 Add the *REST API Path* and choose the access from the drop-down list.
 .. Add all the needed APIs and save the changes.
-. Create Users:
+. Create users:
 .. Select *Add* under *Users* table.
 .. In the *Add User* dialog box, select *System Manager*.
 .. Enter the *Username*.
@@ -93,18 +92,18 @@ You can access functionality by using APIs:
 
 |API|Access level| Used for
 
-|/api/cluster |Read-Only |Cluster Configuration Discovery
-|/api/cluster/licensing/licenses |Read-Only |License Check for Protocol specific licenses
+|/api/cluster |Read-Only |Cluster configuration discovery
+|/api/cluster/licensing/licenses |Read-Only |License Check for protocol specific licenses
 |/api/cluster/nodes	|Read-Only	|Platform type discovery
-|/api/security/accounts |Read-Only |Privilege Discovery
-|/api/security/roles |Read-Only |Privilege Discovery
-|/api/storage/aggregates	|Read-Only	|Aggregate space check during Datastore/Volume provisioning
-|/api/storage/cluster	|Read-Only	|To get the Cluster level Space and Efficiency Data
-|/api/storage/disks	|Read-Only	|To get the Disks associated in an Aggregate
-|/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM Policy management
-|/api/svm/svms	|Read-Only	|To get SVM configuration when the Cluster is added locally.
-|/api/network/ip/interfaces |Read-Only |Add Storage Backend - To identify the management LIF scope is Cluster/SVM
-|/api/storage/availability-zones |Read-Only |SAZ Discovery. Applicable to ONTAP 9.16.1 release onwards and ASA r2 systems.
+|/api/security/accounts |Read-Only |Privilege discovery
+|/api/security/roles |Read-Only |Privilege discovery
+|/api/storage/aggregates	|Read-Only	|Aggregate space check during datastore/volume provisioning
+|/api/storage/cluster	|Read-Only	|To get the cluster level space and efficiency data
+|/api/storage/disks	|Read-Only	|To get the disks associated in an aggregate
+|/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM policy management
+|/api/svm/svms	|Read-Only	|To get SVM configuration when the cluster is added locally.
+|/api/network/ip/interfaces |Read-Only |Add storage backend - To identify the management LIF scope is cluster/SVM
+|/api/storage/availability-zones |Read-Only |SAZ discovery. Applicable to ONTAP 9.16.1 release onwards and ASA r2 systems.
 |/api/cluster/metrocluster|Read-Only|Gets MetroCluster status and configuration details.
 |===
  

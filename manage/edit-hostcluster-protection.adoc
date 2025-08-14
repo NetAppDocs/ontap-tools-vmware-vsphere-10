@@ -43,8 +43,8 @@ Add hosts or create datastores on the protected cluster using the vCenter user i
 . If you add a new ESXi host, the protection status is shown as partially protected. Select the ellipsis menu under the SnapMirror settings and select *Edit* to set the proximity of the newly added ESXi host.
 +
 [NOTE]
-In case of Asynchronous type relationship, edit action is not supported because you cannot add the target SVM for tertiary site to the same ONTAP tools instance. However, you can use the system manager or CLI of the target SVM to change the relationship configuration.
-. Select *Save* after making the necessary changes.
+For Asynchronous relationships, editing is not supported in ONTAP tools because the target SVM for a tertiary site cannot be added to the same instance. To modify the relationship configuration, use System Manager or the CLI on the target SVM.
+. After making changes, select *Save*.
 . You can see the changes in the *Protect Cluster* window.
 
 ONTAP tools creates a vCenter task, and you can track its progress in the *Recent task* panel.
@@ -66,7 +66,7 @@ You can see the changes in the *Protect Cluster* window.
 ONTAP tools creates a vCenter task, and you can track its progress in the *Recent task* panel.
 
 == Delete an existing SnapMirror relationship
-To delete an asynchronous SnapMirror relationship, ensure that the secondary site SVM or cluster is added as a storage backend in ONTAP tools for VMware vSphere.
+To delete an SnapMirror asynchronous relationship, ensure that the secondary site SVM or cluster is added as a storage backend in ONTAP tools for VMware vSphere.
 You cannot delete all SnapMirror relationships at once. Deleting a relationship also removes the corresponding relationship from the ONTAP cluster.
 When you delete an Automated Failover Duplex SnapMirror relationship, the system unmaps the destination datastores and deletes the consistency group, LUNs, volumes, and igroups from the destination ONTAP cluster.
 
@@ -88,13 +88,13 @@ When you delete the relationship, the system rescans the secondary site to remov
 ONTAP tools creates a vCenter task, and you can track its progress in the *Recent task* panel.
 
 == Modify an existing SnapMirror relationship
-To modify an asynchronous SnapMirror relationship, ensure the secondary site SVM or cluster is added as a storage backend in ONTAP tools for VMware vSphere.
+To modify an SnapMirror asynchronous relationship, ensure the secondary site SVM or cluster is added as a storage backend in ONTAP tools for VMware vSphere.
 For Automated Failover Duplex SnapMirror relationships, you can update host proximity for uniform configurations or host access for non-uniform configurations.
 Changing between Asynchronous and Automated Failover Duplex policy types is not supported.
 You can configure proximity or access settings for newly discovered hosts in the cluster.
 
 [NOTE]
-You cannot edit an existing asynchronous SnapMirror relationship.
+You cannot edit an existing SnapMirror asynchronous relationship.
 
 .Steps
 

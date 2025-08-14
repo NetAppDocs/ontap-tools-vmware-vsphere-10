@@ -63,7 +63,7 @@ In addition to the single node deployment requirements, you'll need the followin
 |===
 
 == Network firewall configuration
-Open the required ports for the IP addresses in your network firewall. ONTAP tools must be able to reach this LIF through port 443. Refer to link:../deploy/prerequisites.html[Port requirements] for latest updates.
+Ensure that the necessary firewall ports are open for all relevant IP addresses. ONTAP tools require access to the LIF via port 443. For a complete list of required ports, see the port requirements section at link:../deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits].
 
 == ONTAP storage settings
 To ensure seamless integration of ONTAP storage with ONTAP tools for VMware vSphere, consider the following settings:

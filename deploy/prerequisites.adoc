@@ -20,7 +20,7 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 ** 348 GB for thick provisioned installations
 
 * *Host system sizing requirements*
-Recommended memory as per the size of deployment is as shown in the table below. To deploy high availability (HA), you will require three times the appliance size specified in the table.
+The recommended memory for each deployment size is shown in the table below. For high availability (HA) deployments, you need three times the appliance size listed.
 // updated for GITHUB issue #50
 |===
 
@@ -51,8 +51,6 @@ When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on
 
 |ONTAP
 |9.15.1, 9.16.0, 9.16.1, 9.17.0, and 9.17.1
-
-FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series, and ASA r2.
 
 |ONTAP tools supported ESXi hosts
 |7.0.3 onwards
@@ -102,7 +100,7 @@ The following table outlines the network ports that NetApp uses and their purpos
 
 |7472|TCP/UDP |This is the prometheus metrics service port.
 
-|7946|TCP/UDP |This port is used for docker's container network discovery.
+|7946|TCP/UDP |This port is used for Docker's container network discovery.
 
 |9083|TCP |This port is an internally used service port for VASA Provider service.
 

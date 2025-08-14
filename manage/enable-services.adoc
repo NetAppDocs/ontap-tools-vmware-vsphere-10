@@ -22,4 +22,4 @@ When enabling the services for the first time, you must create the VASA Provider
 [NOTE]
 Before disabling any optional services, ensure that the vCenter Servers managed by ONTAP tools don't use them.
 +
-The *Allow import of vVols configuration* option is shown only when the VASA Provider service is enabled. This option enables the vVols data migration from ONTAP tools 9.xx to ONTAP tools 10.5.
+The *Allow import of vVols configuration* option is shown only when the VASA Provider service is enabled. This option enables vVols data migration from ONTAP tools 9.xx to ONTAP tools 10.5.

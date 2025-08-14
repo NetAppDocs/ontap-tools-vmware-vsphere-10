@@ -2,7 +2,7 @@
 permalink: configure/registration-process.html
 sidebar: sidebar
 keywords:
-summary: 'You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plugin interface.'
+summary: 'You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plug-in interface.'
 ---
 = Register the VASA Provider with a vCenter Server instance using ONTAP tools
 :icons: font

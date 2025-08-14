@@ -19,7 +19,7 @@ Make sure you meet these requirements before you protect a host cluster:
 * The host cluster contains datastores from a single SVM only.
 * Datastores on the host cluster aren't mounted on hosts outside the cluster.
 * Datastores mounted on the host cluster are VMFS datastores with iSCSI or FC protocol. You can't use vVols, NFS, or VMFS datastores with NVMe/FC and NVMe/TCP protocols.
-* Datastores based on FlexVol/LUN volumes mounted on a host are not part of any consistency group (CG).
+* Datastores based on FlexVol/LUN volumes mounted on a host are not part of any consistency group.
 * Datastores based on FlexVol/LUN volumes mounted on a host are not part of any SnapMirror relationships.
 * The host cluster contains at least one datastore.
 

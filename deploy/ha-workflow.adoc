@@ -22,7 +22,7 @@ You can scale up the ONTAP tools for VMware vSphere configuration to increase th
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Enable services
 
 [role="quick-margin-para"]
-To configure the vVols datastores you must enable the VASA Provider service.
+To configure vVols datastores you must enable the VASA Provider service.
 Register the VASA provider with vCenter and ensure your storage policies meet the HA requirements, including proper network and storage configurations. 
 [role="quick-margin-para"]
 Enable the SRA services to use ONTAP tools Storage Replication Adapter (SRA) for VMware Site Recovery Manager (SRM) or VMware Live Site Recovery (VLSR).

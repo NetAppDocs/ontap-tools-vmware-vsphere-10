@@ -2,14 +2,14 @@
 permalink: protect/fan-out-protection.html
 sidebar: sidebar
 keywords:
-summary: 'In a fan out protection, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster.'
+summary: 'In a fan out protection scenario, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster.'
 ---
 = Fan out protection
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-In a fan out protection, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster. 
+In a fan out protection scenario, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster. 
 The create, edit, and delete SnapMirror active sync protection workflows maintain the synchronous protection. SRM failover and reprotect workflows maintain the asynchronous protection. 
 
 In order to establish fan out protection you need to peer three site clusters and SVMs. 

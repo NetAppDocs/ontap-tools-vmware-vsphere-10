@@ -13,7 +13,7 @@ When you create a datastore at the host cluster level, ONTAP tools mounts it on 
  
 *Interoperability between native datastores with vCenter Server and ONTAP tools managed datastores*
 
-ONTAP tools for VMware vSphere 10 creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to the hosts. You can create flat igroups from ONTAP system manager and use them to create VMFS datastores without using ONTAP tools. Refer to https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[Manage SAN initiators and igroups] for more information.
+ONTAP tools for VMware vSphere 10 creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to the hosts. You can create flat igroups from ONTAP System Manager and use them to create VMFS datastores without using ONTAP tools. Refer to https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[Manage SAN initiators and igroups] for more information.
 
 After you onboard the storage and run datastore discovery, ONTAP tools changes flat igroups in VMFS datastores to nested igroups. You cannot use earlier flat igroups to create new datastores. Use the ONTAP tools interface or REST API to reuse nested igroups.
 

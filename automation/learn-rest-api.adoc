@@ -50,7 +50,7 @@ There are several aspects of the ONTAP tools Manager environment you should cons
 
 .Virtual machine
 
-ONTAP tools for VMware vSphere 10 is deployed using the vSphere remote plugin architecture. The software, including support for the REST API, runs in a separate virtual machine.
+ONTAP tools for VMware vSphere 10 is deployed using the vSphere remote plug-in architecture. The software, including support for the REST API, runs in a separate virtual machine.
 
 .ONTAP tools IP address
 

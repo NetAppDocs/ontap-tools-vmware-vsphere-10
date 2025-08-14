@@ -9,7 +9,7 @@ summary: 'You can change the administrator password using ONTAP tools Manager.'
 :imagesdir: ../media/
 
 [.lead]
-Using the ONTAP tools Manager scale up the ONTAP tools for VMware vSphere configuration to increase the number of nodes in the deployment or change the configuration to High Availability (HA) setup. The ONTAP tools for VMware vSphere appliance is initially deployed in a single node non-HA configuration.
+Use ONTAP tools Manager to scale up the ONTAP tools for VMware vSphere configuration, either by increasing the number of nodes or by enabling High Availability (HA). By default, the ONTAP tools for VMware vSphere appliance is deployed as a single-node, non-HA configuration.
 // OTVDOC-256 jira updated note removed for JIRA OTVDOC-290
 
 .Before you begin

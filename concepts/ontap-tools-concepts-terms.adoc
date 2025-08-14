@@ -17,8 +17,8 @@ The new NetApp ASA r2 systems deliver a unified hardware and software solution t
 === Certificate authority (CA)
 CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
 
-=== Consistency group (CG)
-A consistency group is a collection of volumes managed as a single unit. CGs are synchronized for data consistency across storage units and volumes. In ONTAP, they provide easy management and a protection guarantee for an application workload spanning multiple volumes. Learn more about https://docs.netapp.com/us-en/ontap/consistency-groups/index.html[consistency groups].
+=== Consistency group
+A consistency group is a collection of volumes managed as a single unit. Consistency groups are synchronized for data consistency across storage units and volumes. In ONTAP, they provide easy management and a protection guarantee for an application workload spanning multiple volumes. Learn more about https://docs.netapp.com/us-en/ontap/consistency-groups/index.html[consistency groups].
 
 === Dual stack
 A dual-stack network is a networking environment that supports the simultaneous use of IPv4 and IPv6 addresses.
@@ -72,7 +72,7 @@ Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/inde
 VMFS is a clustered file system designed to store virtual machine files in VMware vSphere environments.
 
 === Virtual volumes (vVols)
-vVols provide a volume-level abstraction for storage used by a virtual machine. It includes several benefits and provides an alternative to using a traditional LUN. A vVol datastore is typically associated with a single LUN which acts as a container for the vVols.
+vVols provide a volume-level abstraction for storage used by a virtual machine. It includes several benefits and provides an alternative to using a traditional LUN. A vVol datastore is typically associated with a single LUN which acts as a container for vVols.
 
 === VM Storage Policy
 VM Storage Policies are created in the vCenter Server under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.

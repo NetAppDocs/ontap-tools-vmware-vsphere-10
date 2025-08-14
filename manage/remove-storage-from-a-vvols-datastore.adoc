@@ -26,5 +26,5 @@ The shrink vVols datastore operation is not supported for vVols datastores based
 . Select volumes which don't have vVols and select *Remove*.
 +
 [NOTE]
-The option to select the volume on which the vVols is residing is disabled.
+The option to select the volume on which vVols is residing is disabled.
 . In the *Remove storage* pop-up, select *Delete volumes from ONTAP cluster* checkbox to delete the volumes from datastore and from ONTAP storage and select *Delete*.

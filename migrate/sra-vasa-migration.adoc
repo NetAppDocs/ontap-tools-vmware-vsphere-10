@@ -93,7 +93,7 @@ After completing the job, review the migration report. This report is included i
 don't delete the VASA Provider.
 +
 After the old VASA Provider is stopped, the vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
-. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xxx are visible in ONTAP tools for VMware vSphere 10.5 only after the datastore discovery job is triggered, which might take up to 30 minutes to complete. Verify that the datastores are visible on the overview page of the ONTAP tools for the VMware vSphere Plugin user interface page.
+. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xxx are visible in ONTAP tools for VMware vSphere 10.5 only after the datastore discovery job is triggered, which might take up to 30 minutes to complete. Verify that the datastores are visible on the overview page of the ONTAP tools for the VMware vSphere plug-in user interface page.
 . Perform the patch migration using the following API in Swagger or in Postman:
 +
 ====

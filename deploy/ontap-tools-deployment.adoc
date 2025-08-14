@@ -41,7 +41,7 @@ For more information, refer to https://blogs.vmware.com/vsphere/2020/01/creating
 [NOTE]
 Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) on the inventory to 'Conservative'. This ensures that VMs aren't migrated during the installation.
 
-The ONTAP tools for VMware vSphere is initially deployed as a non-HA setup. To scale to HA deployment, you will need to enable the CPU hot plug and memory hot plugin. You can perform this step as part of the deployment process or edit the VM settings after deployment.
+The ONTAP tools for VMware vSphere is initially deployed as a non-HA setup. To scale to HA deployment, you will need to enable the CPU hot plug and memory hot plug-in. You can perform this step as part of the deployment process or edit the VM settings after deployment.
 // updated for OTVDOC-255 - Jani
 
 .Steps
