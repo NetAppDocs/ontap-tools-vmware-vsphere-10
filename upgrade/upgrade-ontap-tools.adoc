@@ -15,13 +15,14 @@ NOTE:
 
 * For ASA r2 systems, make sure you upgrade to ONTAP tools for VMware vSphere 10.5 with ONTAP 9.16.1 before setting up more storage availability zones (SAZs).
 // https://jira.ngage.netapp.com/browse/OTVDOC-254 updates
-* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, you can not roll back. Use low RPO/snapshot recovery to restore the setup. For ONTAP tools for VMware vSphere 10.2 and lower versions, you can restore the setup using the zero-RPO.
+* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, you can not roll back. Use low RPO or snapshot recovery to restore the setup. For ONTAP tools for VMware vSphere 10.2 and earlier, use zero-RPO to restore the setup.
 
 .Before you begin
 
 * Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If it expires sooner, the upgrade fails.
+* For secure upgrade, ensure you have SAN entries in the certificates.
 // 10.5 updates - Jani certificate feature.
-* For a non-HA upgrade, power off the ONTAP tools VM, and for an HA upgrade, power off the first node before making the any changes to the virtual machine (VM) settings. 
+* For a non-HA upgrade, power off the ONTAP tools VM. For an HA upgrade, power off the first node before changing VM settings. 
 * Ensure you add a fifth disk with a capacity of 100 GB.
 * Verify that the node configuration matches the specifications in the table below.
 
@@ -74,7 +75,7 @@ NOTE:
 |===
 
 * Ensure hot plug-in for CPU and RAM is enabled.
-* In case of HA deployment, ensure there is 100 GB hard disks for the second and third nodes as well. You don't need to reboot these nodes.
+* For HA deployments, ensure the second and third nodes each have a 100 GB disk. You don't need to reboot these nodes.
 * For ONTAP tools for VMware vSphere 10.3 or 10.4 deployment, take a quiesced snapshot on the ONTAP tools virtual machine before upgrading.
 * Enable low RPO backup and ensure one backup visible in vCenter Client interface.
 
@@ -89,6 +90,8 @@ image:../media/primaryvm-edit-settings.png[Edit settings]
 . Log in as the maintenance user.
 . Enter *3* to select the *System Configuration* menu.
 . Enter *7* to select the *Upgrade* option.
++
+During the upgrade, if any onboarded storage backend certificates are missing Subject Alternative Name (SAN) entries, you will receive a prompt indicating the missing SAN. If you choose to proceed without validating the SAN, the upgrade will continue, but this is not recommended because of potential security risks.
 . When you upgrade, the following actions are performed automatically:
 .. Certificate is upgraded and gateway certificate expiry is set to 1 year.
 .. Remote plug-in is upgraded
