@@ -20,7 +20,7 @@ NOTE:
 .Before you begin
 
 * Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If it expires sooner, the upgrade fails.
-* For secure upgrade, ensure you have SAN entries in the certificates.
+* To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If your certificates lack SAN entries and you need to proceed with the upgrade, you can set the certificate validation flag to false to bypass SAN checks. For details, see link:../manage/change-valid-flag.html[Change certificate validation flag].
 // 10.5 updates - Jani certificate feature.
 * For a non-HA upgrade, power off the ONTAP tools VM. For an HA upgrade, power off the first node before changing VM settings. 
 * Ensure you add a fifth disk with a capacity of 100 GB.
