@@ -13,7 +13,8 @@ Configure user roles and privileges for storage backends with the JSON file from
 
 .Before you begin
 
-* Download the ONTAP Privileges file from ONTAP tools using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.
+* Download the ONTAP Privileges file from ONTAP tools using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_. The downloaded zip file contains two JSON files. Use the ASA r2-specific JSON file if you are configuring an ASA r2 system.
+
 +
 [NOTE]
 You can create users at the cluster level or directly at the storage virtual machines (SVMs) level. If you do not use the user_roles.json file, ensure the user has the minimum required SVM permissions.

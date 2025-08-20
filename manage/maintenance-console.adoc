@@ -25,8 +25,9 @@ a|
 // updated for 10.0 release
 
 . Display server status summary
-. Change LOG level for VASA Provider Services and SRA Services
-// 10.4 updates
+. Change LOG level for ONTAP tools services
+. Change cert validation flag
+// 10.5 updates
 a|
 System Configuration
 a|

@@ -1,0 +1,28 @@
+---
+permalink: manage/change-valid-flag.html
+sidebar: sidebar
+keywords:
+summary: 'You can change the certificate validation flag using the maintenance console.'
+---
+= Change certificate validation flag
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The certificate validation flag is set to true by default. You can change it to false to bypass SAN certificate checks during upgrades.
+
+.Before you begin
+
+You need to have maintenance user login credentials.
+
+.Steps
+
+. From the vCenter Server, open a console to VASA Provider.
+. Log in as the maintenance user.
+. Enter `1` to select Application Configuration Menu.
+. Enter `3` to change cert validation flag.
++
+The maintenance console shows the certificate validation flag status and prompts you to change it.
+. Enter 'y' to toggle the flag or 'n' to cancel.
+
+// 10.5 updates

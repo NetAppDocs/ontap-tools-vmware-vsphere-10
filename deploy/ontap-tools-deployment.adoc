@@ -23,7 +23,7 @@ Consider the following before creating a content library:
 don't delete the OVA template in the content library after deployment.
 
 [NOTE]
-To enable HA deployment later, don't deploy the virtual machine hosting the ONTAP tools directly on an ESXi host. Deploy it on a cluster or resource pool instead.
+To enable HA deployment in the future, avoid deploying the ONTAP tools virtual machine directly on an ESXi host. Instead, deploy it within a ESXi host cluster or resource pool.
 
 Follow these steps to create a content library:
 
@@ -105,3 +105,4 @@ If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3,
 . Go to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
 . Under the *CPU* options, check the *Enable CPU hot add* checkbox
 . Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
+

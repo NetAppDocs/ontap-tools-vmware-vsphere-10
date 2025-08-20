@@ -145,8 +145,7 @@ You can use the following table as a guide to configure ONTAP tools for VMware v
 |High-Availability |Small (S) |~24K| 64
 |High-Availability |Medium (M) |~50k| 128
 |High-Availability |Large (L) |~100k| 256 [NOTE]
-The number of hosts in the table shows the total number of host from multiple vCenters.
-
+The host counts in the table represent the combined total across all connected vCenters.
 |===
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)

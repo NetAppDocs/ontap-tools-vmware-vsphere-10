@@ -4,13 +4,13 @@ sidebar: sidebar
 keywords:
 summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
 ---
-= Add storage backend to an ONTAP cluster
+= Add storage backend to ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-Adding storage backends to an ONTAP cluster improves scalability and performance. ONTAP tools let you provision and manage datastores directly from the vCenter Server.
+When you add storage backends to ONTAP tools, you can provision and manage datastores directly from the vCenter Server.
 
 To add storage backends locally, use cluster or SVM credentials in the ONTAP tools interface. These storage backends are accessible only to the selected vCenter Server. ONTAP tools maps associated SVMs to the vCenter Server for managing vVols or VMFS datastores. For VMFS datastore workflows, including SRA workflows, you can use SVM credentials without needing a globally mapped cluster.
 

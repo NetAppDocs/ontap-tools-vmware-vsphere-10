@@ -21,7 +21,7 @@ Ensure that the new virtual machine uses the same ONTAP tools IP address and mat
 . Download the backup files from the datastore of the original virtual machine to your local system.
 .. Go to the storage section and choose the datastore that contains the backup files for the virtual machine.
 .. Select the *Files* section.
-.. Download the required backup file.
+.. Download the required backup directory.
 . Power off the existing virtual machine. Then, deploy a new virtual machine using the same OVA file as the original deployment.
 . From the vCenter Server, open the maintenance console.
 . Log in as the maintenance user.

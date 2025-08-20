@@ -5,7 +5,7 @@ entries:
     url: /concepts/ontap-tools-overview.html
   - title: Key concepts and terms
     url: /concepts/ontap-tools-concepts-terms.html
-  - title: Role based access control
+  - title: Role based access control (RBAC)
     entries:
       - title: Learn about RBAC
         url: /concepts/rbac-learn-about.html
