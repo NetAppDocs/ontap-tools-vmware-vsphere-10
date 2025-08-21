@@ -13,7 +13,7 @@ Configure user roles and privileges for storage backends with the JSON file from
 
 .Before you begin
 
-* Download the ONTAP Privileges file from ONTAP tools using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_. The downloaded zip file contains two JSON files. Use the ASA r2-specific JSON file if you are configuring an ASA r2 system.
+* Download the ONTAP Privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_. The downloaded zip file contains two JSON files. Use the ASA r2-specific JSON file if you are configuring an ASA r2 system.
 
 +
 [NOTE]
