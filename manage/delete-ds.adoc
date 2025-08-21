@@ -30,16 +30,13 @@ You cannot delete a datastore used by virtual machines. Move virtual machines to
 
 .. In the case of an NFS or VMFS datastore, a dialog box appears with the list of VMs using the datastore.
 .. If no virtual machines are associated with a VMFS datastore, you see a confirmation dialog. If host cluster protection is enabled and an AFD relationship exists, you can clean up secondary storage elements.
-+
-[NOTE]
-Deleting a VMFS datastore on an ASA r2 system does not delete the backing volume on ONTAP storage, because the system does not create a volume.
 // 10.5 updates for Hierarchical CG feature
-.. For protected VMFS datastores on ASA r2 systems, ensure protection is removed before deletion. Beginning with ONTAP 9.17.1, you can delete a protected datastore. If it is the only datastore in the protection group, host cluster protection is automatically removed.
+.. For protected VMFS datastores on ASA r2 systems, ensure protection is removed before deletion. Beginning with ONTAP 9.17.1 and ONTAP tools for VMware vSphere 10.5, you can delete a protected datastore. If it is the only datastore in the protection group, host cluster protection is automatically removed.
 // 10.3 updates for ASA r2
 .. For vVols datastores, you can delete the datastore only if there are no vVols present. The *Delete datastore* dialog box includes an option to remove volumes from the ONTAP cluster.
 .. For vVols datastores on ASA r2 systems, you cannot delete the backing volumes from ONTAP using the *Delete datastore* option.
 . To delete the backing volumes on ONTAP storage, select *Delete volumes on ONTAP cluster*.
 +
 [NOTE]
-For a VMFS datastore that is part of a protected host cluster, deleting the volume on the ONTAP cluster is not permitted.
+For VMFS datastores on unified ONTAP storage that are part of a protected host cluster, you cannot delete the volume from the ONTAP cluster.
 
