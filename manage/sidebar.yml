@@ -63,8 +63,6 @@ entries:
       url: /manage/change-valid-flag.html
   - title: ONTAP tools reports
     url: /manage/reports.html
-  - title: Collect the log files
-    url: /manage/collect-the-log-files.html
   - title: Manage virtual machines
     entries:
       - title: Considerations to migrate or clone virtual machines
