@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade
 summary: 'This page outlines the error codes for the deployment, reboot, and recovery operations of ONTAP tools for VMware vSphere system.'
 ---
-= Troubleshooting deployment errors
+= Troubleshoot deployment errors
 :icons: font
 :imagesdir: ../media/
 
