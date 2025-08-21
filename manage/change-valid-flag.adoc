@@ -9,7 +9,7 @@ summary: 'You can change the certificate validation flag using the maintenance c
 :imagesdir: ../media/
 
 [.lead]
-The certificate validation flag is set to true by default. You can change it to false to bypass SAN certificate checks during upgrades.
+The certificate validation flag is set to true by default. You can change the ONTAP storage backend certificate validation flag to false to bypass SAN certificate checks during upgrades. This is not applicable for vCenter Server certificates.
 
 .Before you begin
 
@@ -25,4 +25,4 @@ You need to have maintenance user login credentials.
 The maintenance console shows the certificate validation flag status and prompts you to change it.
 . Enter 'y' to toggle the flag or 'n' to cancel.
 
-// 10.5 updates
+When you enable certificate validation (set the flag to true), the system performs a pre-check. If any added storage backend uses a certificate without a SAN, you cannot enable certificate validation. Make sure all storage backends use SAN-based certificates before enabling this flag. If you set the certificate validation flag to false, the system skips certificate validation for all added storage backends.
