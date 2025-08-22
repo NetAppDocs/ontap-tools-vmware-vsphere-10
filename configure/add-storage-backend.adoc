@@ -12,7 +12,7 @@ summary: 'Storage backends are systems that the ESXi hosts use for data storage.
 
 When you add storage backends to ONTAP tools, you can provision and manage datastores directly from the vCenter Server.
 
-To add storage backends locally, use cluster or SVM credentials in the ONTAP tools interface. TThese storage backends are available only to the selected vCenter Server. ONTAP tools maps SVMs to the vCenter Server for vVols or VMFS datastore management. For VMFS datastore and SRA workflows, you can use SVM credentials without the need for a globally mapped cluster.
+To add storage backends locally, use cluster or SVM credentials in the ONTAP tools interface. These storage backends are available only to the selected vCenter Server. ONTAP tools maps SVMs to the vCenter Server for vVols or VMFS datastore management. For VMFS datastore and SRA workflows, you can use SVM credentials without the need for a globally mapped cluster.
 
 You can add global storage backends using ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources  needed for vVol management. In multitenant setups, you can add an SVM user locally to manage vVols datastores.
 
@@ -40,7 +40,7 @@ In a multi-tenant setup, you can add a storage backend cluster globally and SVM 
 [NOTE]
 IPv4 and IPv6 address management LIFs are supported.
 . Fetch the ONTAP cluster certificates automatically and authorize the certificate, or manually upload it by browsing to its location.
-. If the storage backend you add is part of a MetroCluster configuration, ONTAP tools Manager prompts you to add the peered cluster. Select *Add* and provide the details for the MetroCluster peer storage backend.
+. If the storage backend you add is part of a MetroCluster configuration, ONTAP tools Manager shows a pop-up message to add the peered cluster. Select *Add* and provide the details for the MetroCluster peer storage backend.
 [NOTE]
 After the ONTAP system performs a switchover, run the ONTAP tools discovery manually.
 
