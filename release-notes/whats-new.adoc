@@ -11,16 +11,26 @@ summary: "Learn about the new capabilities available in ONTAP tools for VMware v
 [.lead]
 Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.5.
 
-[cols="30%,70%",options="header"]
-|===
-| Update | Description
+* *Platform qualification*
 
-|
-|
-|
-|
-||
-||
-|===
+ONTAP tools for VMware vSphere 10.5 adds support for ASA.r2 platforms, providing compatibility with the latest hardware and software configurations. This release also includes integration with ONTAP 9.16.1 and 9.17.1, expanding the supported environments.
 
+* *VMware qualification and certifications*
 
+ONTAP tools for VMware vSphere 10.5 complies with current VMware interoperability certification standards, supporting both ESXi and vCenter.
+
+* *MetroCluster support*
+
+This release introduces support for MetroCluster (MCC) configurations, enabling enhanced high availability and disaster recovery capabilities.
+
+* *Security and certificate management*
+
+This release introduces streamlined management of self-signed certificates, enhancing both user experience and adherence to security standards. It provides improved certificate validation workflows to secure ONTAP and ONTAP tools for VMware vSphere communications.
+
+* *Replication enhancements*
+
+Supports VMFS replication with hierarchical consistency group including SRA and SnapMirror active sync. Supports Zero RPO backups to improve data protection and recovery.
+
+* *Upgrade and migration*
+
+ONTAP tools for VMware vSphere 10.5 facilitates a seamless upgrade and migration process from previous versions of ONTAP tools for VMware vSphere to ONTAP tools for VMware vSphere 10.5.
