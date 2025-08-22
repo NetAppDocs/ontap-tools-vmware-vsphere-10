@@ -14,7 +14,7 @@ Learn about the new and enhanced features available in ONTAP tools for VMware vS
 
 For a complete list of new features and enhancements, refer xref:whats-new.adoc[What's new in ONTAP tools for VMware vSphere 10.5].
 
-To determine whether you should migrate from ONTAP tools for VMware vSphere 9 to ONTAP tools 10.5 or perform a fresh installation, see xref:ontap-tools-9-ontap-tools-10-feature-comparison.adoc[Feature comparison: ONTAP tools for VMware vSphere 9 vs. 10].
+For the most up-to-date compatibility information, refer https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^].
 
 Migration is supported from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.5.
 
