@@ -15,10 +15,10 @@ Configuring SRA on the VMware Live Site Recovery appliance saves the ONTAP tools
 
 .Before you begin
 
-* Ensure you have downloaded the _.tar.gz_ file from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site].
-* Ensure you have enabled SRA services in ONTAP tools Manager. For more information, refer the link:../manage/enable-services.html[Enable ONTAP tools for VMware vSphere services] section.
-* Ensure you have added vCenter Servers to the ONTATP tools for VMware vSphere appliance. For more information, refer the link:../configure/add-vcenter.html[Add vCenter Servers] section.
-* Ensure you have added storage backends to ONTAP tools for VMware vSphere. For more information, refer the link:../configure/add-storage-backend.html[Add storage backends] section.
+* Download the _.tar.gz_ file from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site].
+* Enable SRA services in ONTAP tools Manager. For more information, refer the link:../manage/enable-services.html[Enable services] section.
+* Add vCenter Servers to the ONTATP tools for VMware vSphere appliance. For more information, refer the link:../configure/add-vcenter.html[Add vCenter Servers] section.
+* Add storage backends to ONTAP tools for VMware vSphere. For more information, refer the link:../configure/add-storage-backend.html[Add storage backends] section.
 
 .Steps
 //On vSphere client menu, select NetApp ONTAP tools > Settings > Administrative Settings > Manage Capabilities > Enable Storage Replication Adapter (SRA) 
@@ -33,10 +33,10 @@ Configuring SRA on the VMware Live Site Recovery appliance saves the ONTAP tools
 . To log in to the container ID, enter the command: `docker exec -it -u srm <container id> sh`
 . Configure VMware Live Site Recovery with ONTAP tools for VMware vSphere IP address and password using the command: `perl command.pl -I --otv-ip <OTV_IP>:8443 --otv-username <Application username> --otv-password <Application password> --vcenter-guid <VCENTER_GUID>`
 [NOTE]
-You need to provide the password value within single quotes to ensure that the Perl script does not read the special characters in the password as a delimiter of the input.
-[NOTE]
-You can set the application (VASA Provider/SRA) username and password in ONTAP tools Manager when enabling these services for the first time. These credentials are needed to register SRA with the VMware Live Site Recovery appliance.
-// Github issue 100
+* Provide the password in single quotes so the Perl script treats special characters as part of the password, not as delimiters.
+* You can set the application (VASA Provider/SRA) username and password in ONTAP tools Manager when enabling these services for the first time.  Use these credentials to register SRA with VMware Live Site Recovery.
+* To locate the vCenter GUID, go to the vCenter Server page in ONTAP tools Manager after adding your vCenter instance. Refer to link:../configure/add-vcenter.html[Add vCenter Servers] section.
+// Github issue 100 and 109
 . Rescan the adapters to confirm that the updated details appear on the VMware Live Site Recovery Storage Replication Adapters page.
 
 .Results

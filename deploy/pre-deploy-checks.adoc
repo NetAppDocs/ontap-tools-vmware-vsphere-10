@@ -47,6 +47,7 @@ Use the following worksheet to gather the required information for ONTAP tools f
 
 |===
 
+[NOTE]
 Create DNS records for all the above IP addresses. Before assigning hostnames, map them to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
 
 === For High availability (HA) deployment
