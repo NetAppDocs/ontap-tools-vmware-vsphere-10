@@ -28,3 +28,7 @@ ONTAP tools for VMware vSphere provides the option to enable the SRA capability 
 . Rescan the adapters to verify that the details are updated on the VMware Live Site Recovery Storage Replication Adapters
 page.
 
+[NOTE]
+After a failover, actions such as expand, mount, and delete might not be available for datastores. Perform datastore discovery to refresh and display the appropriate context menu actions.
+
+//updated for OTVDOC-304 - jani
