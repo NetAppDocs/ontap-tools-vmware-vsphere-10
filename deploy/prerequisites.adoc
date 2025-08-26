@@ -82,7 +82,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 == Port requirements
 
 The following table outlines the network ports that NetApp uses and their purposes. Ensure these ports are open and accessible to facilitate proper operation and communication within the system. Ensure that the necessary network configurations are in place to allow traffic on these ports for the associated services to function correctly. Depending on your security policies, you might need to configure firewalls or other security appliances to permit this traffic within your network.
-
+[NOTE]
+Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterrupted communication with each other.
+// JIRA OTVDOC-305 fix
 |===
 |*Port* |*Protocol* |*Description*
 |8143 |TCP|HTTP/HTTPS connections for ONTAP tools.
@@ -120,13 +122,15 @@ The following table outlines the network ports that NetApp uses and their purpos
 
 |137-139 |TCP/UDP |SMB/Windows sharing packets.
 
-|6789 |TCP |Ceph Monitor (MON)
+|6789-7300 |TCP |Inter-node data plane 
 
-|3300 |TCP |Ceph Monitor (MON)
+//|6789 |TCP |Ceph Monitor (MON)
 
-|6800-7300 |TCP |Ceph Managers, OSDs, and Filesystem (MDS).
+//|3300 |TCP |Ceph Monitor (MON)
 
-|80 |TCP |Ceph RADOS Gateway (RGW)
+//|6800-7300 |TCP |Ceph Managers, OSDs, and Filesystem (MDS).
+
+//|80 |TCP |Ceph RADOS Gateway (RGW)
 
 |9080 |TCP| VP HTTP/HTTPS connections (only from 127.0.0.0/8 for IPv4 or ::1/128 for IPv6).
 
