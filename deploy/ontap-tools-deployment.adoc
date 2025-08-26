@@ -97,7 +97,7 @@ As the deployment task gets created, the progress is shown in the vSphere task b
 
 You can track the progress of the installation within the VM's web console.
 
-If there are discrepancies in the OVF form, a dialog box will prompt corrective action. Use the tab button to navigate, make the necessary changes, and select "OK.You have three attempts to resolve any issues. If problems continue after three attempts, the installation process will stop, and it is advised to retry the installation on a new virtual machine.
+If there are discrepancies in the OVF form, a dialog box will prompt corrective action. Use the tab button to navigate, make the necessary changes, and select *OK*. You have three attempts to resolve any issues. If problems continue after three attempts, the installation process will stop, and it is advised to retry the installation on a new virtual machine.
 
 .What’s next?
 
