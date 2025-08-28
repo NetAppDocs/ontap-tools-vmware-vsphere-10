@@ -75,6 +75,7 @@ b. Select *Actions* > *New VM from this template*
 . Select the storage for the configuration and the disk format and select *Next*.
 . Select the destination network for each source network and select *Next*.
 . In the *Customize template* window, fill in the required fields and select *Next*. 
+image:../media/sys-conf.png[Customize template]
 [NOTE] 
 +
 * The information is validated during installation. If there is a discrepancy, an error message appears on the web console, and you're prompted to correct it.
@@ -85,11 +86,12 @@ Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IP
 * IPv4 is the IP address component of the node configuration, which can be utilized to enable diagnostic shell and SSH access on the node for the purposes of debugging and maintenance.
 // update for OTVDOC-262 
 . When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
+image:../media/customize-hw.png[Customize hardware]
 // Applicable only to vCenter 8.0.3
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
-// we might need to add another step to To customizet he hardware. go to vSphere clinet menu >  in the inventory go to your VM > edit settings. 
+// we might need to add another step to To customize the hardware. go to vSphere client menu >  in the inventory go to your VM > edit settings. 
 . Power on the VM after completing the task if the option to automatically power on the VM was not selected.
 
 You can track the progress of the installation within the VM's web console.
