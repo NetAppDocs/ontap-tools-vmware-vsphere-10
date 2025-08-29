@@ -74,7 +74,7 @@ b. Select *Actions* > *New VM from this template*
 . Read and accept the license agreement and select *Next*.
 . Select the storage for the configuration and the disk format and select *Next*.
 . Select the destination network for each source network and select *Next*.
-. In the *Customize template* window, fill in the required fields and select *Next*. 
+. In the *Customize template* window, fill in the required fields and select *Next*.
 image:../media/sys-conf.png[Customize template]
 [NOTE] 
 +
