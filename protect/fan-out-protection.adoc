@@ -12,7 +12,7 @@ summary: 'In a fan out protection scenario, the consistency group is double prot
 In a fan out protection scenario, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster. 
 The create, edit, and delete SnapMirror active sync protection workflows maintain the synchronous protection. SRM failover and reprotect workflows maintain the asynchronous protection. 
 
-In order to establish fan out protection you need to peer three site clusters and SVMs. 
+To set up fan out protection, peer the three site clusters and SVMs. 
 
 Example:
 |===
@@ -36,7 +36,11 @@ The following diagram shows the fan out protection configuration:
 image:../media/fan-out-protection.png[Fan out protection configuration]
 image:../media/fan-out-protection-relationship.png[Fan out protection relationship]
 
-*Steps*
+.Steps
 
-. Create a new place holder datastore. Refer https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html[Select a Placeholder Datastore]
-. Add datastore to host cluster protection link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. You need to add both asynchronous and synchronous policy types.
+. Select a new place holder datastore. The placeholder datastore selection criteria for phased protection are:
+* Do not place the placeholder datastore in the host cluster you are protecting.
+* If you need to include the placeholder datastore in the host cluster, add it to SRM before setting up SMAS protection. With this setup, you can leave the placeholder datastore out of protection.
+For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html[Select a Placeholder Datastore]
+
+. Add datastore to the host cluster protection by following link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. Add both asynchronous and synchronous policy types.
