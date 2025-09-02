@@ -41,6 +41,7 @@ image:../media/fan-out-protection-relationship.png[Fan out protection relationsh
 . Select a new place holder datastore. The placeholder datastore selection criteria for phased protection are:
 * Do not place the placeholder datastore in the host cluster you are protecting.
 * If you need to include the placeholder datastore in the host cluster, add it to SRM before setting up SMAS protection. With this setup, you can leave the placeholder datastore out of protection.
++
 For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html[Select a Placeholder Datastore]
 
 . Add datastore to the host cluster protection by following link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. Add both asynchronous and synchronous policy types.
