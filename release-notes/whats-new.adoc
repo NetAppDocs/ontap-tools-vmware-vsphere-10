@@ -29,7 +29,7 @@ This release introduces streamlined management of self-signed certificates, enha
 
 * *Replication enhancements*
 
-This release supports VMFS replication with hierarchical consistency group including SRA and SnapMirror active sync. It supports zero RPO backups to improve data protection and recovery.
+This release supports VMFS replication with hierarchical consistency group including SRA and SnapMirror active sync in ASA r2 systems. It supports zero RPO backups to improve data protection and recovery.
 
 * *Upgrade and migration*
 
