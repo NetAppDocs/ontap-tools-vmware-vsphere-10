@@ -61,9 +61,9 @@ vVols datastores do not support direct addition of an SVM user through the vSphe
 . Select *Storage Backends* from the sidebar.
 . Add the storage backend and provide the server IP address, username, password, and port details.
 [NOTE]
-To add an SVM user directly, you can add cluster-based credentials and IPv4 and IPv6 address management LIFs or provide SVM-based credentials with an SVM management LIF.
+You can add a storage backend using cluster-based credentials with either IPv4 or IPv6 management LIFs. To add an SVM user directly, provide SVM-based credentials along with an SVM management LIF. If a cluster is already onboarded, you cannot onboard an SVM user from that cluster again.
 . Fetch the ONTAP cluster certificates automatically and authorize the certificate, or manually upload it by browsing to its location.
-. If the added storage backend is part of the MetroCluster configuration, ONTAP tools displays the *Add MetroCluster peer* screen. Select *Add peer* to add the peer storage backend.
+. If the added storage backend is part of the MetroCluster configuration, ONTAP tools displays the *Add MetroCluster peer* screen. Select *Add peer* to add the peer storage backend. 
 [NOTE]
 After the ONTAP system performs a switchover, run the ONTAP tools discovery manually.
 
