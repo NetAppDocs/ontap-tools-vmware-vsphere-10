@@ -38,5 +38,5 @@ image:../media/fan-out-protection-relationship.png[Fan out protection relationsh
 
 *Steps*
 
-. Create a new place holder datastore. Refer https://docs.vmware.com/en/Site-Recovery-Manager/8.7/com.vmware.srm.admin.doc/GUID-5D4C9F38-37CA-47D1-B43A-A1FED48A05A3.html[Select a Placeholder Datastore]
+. Create a new place holder datastore. Refer https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html[Select a Placeholder Datastore]
 . Add datastore to host cluster protection link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. You need to add both asynchronous and synchronous policy types.
