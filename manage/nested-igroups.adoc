@@ -30,7 +30,7 @@ For example, when datastore1 is created and mounted on hosts 1, 2, and 3, and a 
 
 image:../media/otv-managed.png[ONTAP tools managed igroup]
 
-image:../media/igroups_otv_managed_2.png[ONTAP tools managed igroup with reused child igroup]
+image:../media/otv-managed2.png[ONTAP tools managed igroup with reused child igroup]
 
 Here are some cases for ONTAP tools for VMware vSphere supported igroups.
 
