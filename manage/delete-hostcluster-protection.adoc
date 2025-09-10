@@ -25,5 +25,4 @@ On this page, monitor protected host clusters, protection state, SnapMirror rela
 * If you remove protection from a host cluster with only an automated failover duplex-based SnapMirror policy relationship and a non-hierarchical consistency group, you can delete the associated storage elements on the secondary storage directly from the same screen.
 * If you remove protection from a host cluster with both SnapMirror policies and a hierarchical consistency group for backups, a warning appears about backup impacts. Confirm to proceed. After confirmation, delete the associated storage elements on the secondary storage. If you do not clean up, the storage elements remain on the secondary site.
 
-
 // 10.5 update for hierarchical CG
