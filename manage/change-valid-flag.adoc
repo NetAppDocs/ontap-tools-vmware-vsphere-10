@@ -9,7 +9,7 @@ summary: 'You can change the certificate validation flag using the maintenance c
 :imagesdir: ../media/
 
 [.lead]
-By default, the certificate validation flag is enabled (set to true). You can set the ONTAP storage backend certificate validation flag to false if you need to bypass SAN certificate checks during upgrades. This setting is not applicable to vCenter Server certificates.
+By default, the certificate validation flag is enabled (set to true). You can set the ONTAP storage backend certificate validation flag to false if you need to bypass SAN certificate checks. This setting is not applicable to vCenter Server certificates.
 
 .Before you begin
 
@@ -17,7 +17,7 @@ You need to have maintenance user login credentials.
 
 .Steps
 
-. From the vCenter Server, open a console to VASA Provider.
+. From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
 . Enter `1` to select Application Configuration Menu.
 . Enter `3` to change cert validation flag.

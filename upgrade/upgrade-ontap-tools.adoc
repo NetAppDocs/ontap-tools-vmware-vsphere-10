@@ -20,10 +20,9 @@ NOTE:
 .Before you begin
 
 * Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If it expires sooner, the upgrade fails.
-* To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If your certificates lack SAN entries and you need to proceed with the upgrade, you can set the certificate validation flag to false to bypass SAN checks. For details, see link:../manage/change-valid-flag.html[Change certificate validation flag].
+* To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If your certificates lack SAN entries and you need to proceed with the upgrade, you can set the certificate validation flag to false to bypass SAN checks in prompt during upgrade. For details, see link:../manage/change-valid-flag.html[Change certificate validation flag].
 // 10.5 updates - Jani certificate feature.
-* For a non-HA upgrade, power off the ONTAP tools VM. For an HA upgrade, power off the first node before changing VM settings. 
-* Ensure you add a fifth disk with a capacity of 100 GB.
+* Ensure you have a fifth disk with a capacity of 100 GB on all nodes.
 * Verify that the node configuration matches the specifications in the table below.
 
 |===
@@ -45,7 +44,6 @@ NOTE:
 |26
 |350
 
-
 |HA Small
 |9
 |18
@@ -54,7 +52,6 @@ NOTE:
 |54
 |1050
 
-
 |HA Medium
 |13
 |26
@@ -62,7 +59,6 @@ NOTE:
 |39
 |78
 |1050
-
 
 |HA Large
 |17
@@ -75,7 +71,6 @@ NOTE:
 |===
 
 * Ensure hot plug-in for CPU and RAM is enabled.
-* For HA deployments, ensure the second and third nodes each have a 100 GB disk. You don't need to reboot these nodes.
 * For ONTAP tools for VMware vSphere 10.3 or 10.4 deployment, take a quiesced snapshot on the ONTAP tools virtual machine before upgrading.
 * Enable low RPO backup and ensure one backup visible in vCenter Client interface.
 
@@ -93,7 +88,7 @@ image:../media/primaryvm-edit-settings.png[Edit settings]
 +
 During the upgrade, if any onboarded storage backend certificates are missing Subject Alternative Name (SAN) entries, you will receive a prompt indicating the missing SAN. If you choose to proceed without validating the SAN, the upgrade will continue, but this is not recommended because of potential security risks.
 . When you upgrade, the following actions are performed automatically:
-.. Certificate is upgraded and gateway certificate expiry is set to 1 year.
+.. Gateway certificate is upgraded with a 1-year expiry, and the SRA certificate expiry is updated from 10 years to 1 year.
 .. Remote plug-in is upgraded
 .. ONTAP and vCenter Server certificates are validated and added to ONTAP tools
 .. Backup is enabled
@@ -110,7 +105,6 @@ After upgrading you can:
 * Disable the services from the manager user interface
 * Move from a non-HA setup to an HA setup
 * Scale up a non-HA small configuration to a non-HA medium, or to an HA medium or large configuration.
-* For a non-HA upgrade, reboot the ONTAP tools VM to show the changes. For an HA upgrade, reboot the first node to show the changes on the node.
 
 .Related information
 
