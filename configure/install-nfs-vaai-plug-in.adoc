@@ -23,14 +23,14 @@ The NFS vStorage API for Array Integration (NFS VAAI) plug-in connects VMware vS
 . Log in to the vSphere client.
 . Select *Shortcuts* > *NetApp ONTAP tools* under the plug-ins section.
 . Select *Settings* > *NFS VAAI Tools*.
-. If you have uploaded the VAAI plug-in to vCenter Server, select *Change* in *Existing version*. If you have not uploaded it, select the *Upload* button.
+. If you have already uploaded the VAAI plug-in to vCenter Server, select *Change* in *Existing version*. If you have not, select *Upload*.
 . Browse and select the `.vib` file and select *Upload* to upload the file to ONTAP tools.
 . Select *Install on ESXI host*, select the ESXi host on which you want to install the NFS VAAI plug-in, and then select *Install*.
 +
 The vSphere Web Client shows only the ESXi hosts that can install the plug-in. You can monitor the installation progress in the recent tasks section.
 . Restart the ESXi host manually after installation.
 +
-When the VMware admin restarts the ESXi host, ONTAP tools for VMware vSphere automatically detects and enables the NFS VAAI plug-in.
+After you restart the ESXi host, ONTAP tools for VMware vSphere automatically detect and enable the NFS VAAI plug-in.
 
 .What's next?
 
@@ -40,7 +40,7 @@ After you install the NFS VAAI plug-in and reboot your ESXi host, configure the 
 * The root user remains as root and NFSv4 is allowed in all junction parent volumes.
 * The option for VAAI support is set on the relevant NFS server.
 
-For more information on the procedure, refer to https://kb.netapp.com/on-prem/ontap/DM/VAAI/VAAI-KBs/Configure_the_correct_NFS_export_policies_for_VAAI_copy_offload[Configure the correct NFS export policies for VAAI copy offload] KB article.
+For more information, refer to https://kb.netapp.com/on-prem/ontap/DM/VAAI/VAAI-KBs/Configure_the_correct_NFS_export_policies_for_VAAI_copy_offload[Configure the correct NFS export policies for VAAI copy offload] KB article.
 
 // added as part of github issue https://github.com/NetAppDocs/ontap-tools-vmware-vsphere-10/issues/13
 .Related information
