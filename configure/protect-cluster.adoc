@@ -48,6 +48,12 @@ The system creates a vCenter task with job ID details and shows its progress in 
 . To view the protected host clusters, go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*. Select a consistency group to view its capacity, associated datastores, and child consistency groups.
 // 10.5 updates for Hierarchical CG feature
 
+[NOTE]
+====
+Perform storage discovery if protection is deleted within one hour of its creation.
+====
+//OTVDOC-312 update - Jani
+
 .Related information
 
 https://www.vmware.com/docs/vmware-vsphere-metro-storage-cluster-vmsc[VMware vSphere Metro Storage Cluster (vMSC)^]

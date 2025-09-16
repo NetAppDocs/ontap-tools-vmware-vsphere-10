@@ -9,13 +9,16 @@ summary: 'You can edit the SnapMirror relationships of the protected host cluste
 :imagesdir: ../media/
 
 [.lead]
-
 You can change protection settings for a host cluster in a single workflow. The following changes are supported:
 
 * Add new datastores or hosts to the protected cluster.
 * Add new SnapMirror relationships to the protection settings.
 * Delete existing SnapMirror relationships from the protection settings.
 * Modify an existing SnapMirror relationship.
+
+[NOTE]
+You need to perform storage discovery after you create, edit, or delete protection for a host cluster to reflect the changes. If you do not perform the storage discovery, the changes are reflected after the periodic protection discovery is triggered.
+//OTVDOC-312 update - Jani
 
 == Monitor host cluster protection
 Monitor the protection status, SnapMirror relationships, datastores, and SnapMirror status for each protected host cluster.
