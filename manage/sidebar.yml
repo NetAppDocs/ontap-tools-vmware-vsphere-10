@@ -5,6 +5,8 @@ entries:
     url: /configure/dashboard-overview.html
   - title: Understand igroups and export policies
     url: /manage/igroup-workflow.html
+  - title: Understand ONTAP tools managed igroups
+    url: /manage/nested-igroups.html
   - title: ONTAP tools Manager user interface
     url: /manage/manager-user-interface.html
   - title: Manage ONTAP tools Manager settings
