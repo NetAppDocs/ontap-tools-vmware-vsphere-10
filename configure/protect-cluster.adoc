@@ -50,7 +50,7 @@ The system creates a vCenter task with job ID details and shows its progress in 
 
 [NOTE]
 ====
-Perform storage discovery if protection is deleted within one hour of its creation.
+If you need to remove protection within one hour of creation, run storage discovery first.
 ====
 //OTVDOC-312 update - Jani
 
