@@ -17,12 +17,10 @@ When you remove the host cluster protection, the datastores become unprotected.
 . To view the list protected host clusters, go to *NetApp ONTAP tools* > *Protection* > *Host cluster relationships*.
 +
 On this page, monitor protected host clusters, protection state, SnapMirror relationship, and status. Select consistency groups to view capacity, associated datastores, and child groups.
-
 // 10.5 updates for Hierarchical CG feature
 . In the *Host cluster protection* window, select the ellipsis menu next to the cluster, and select *Remove protection*.
 +
 * If you remove protection from a host cluster with only a SnapMirror asynchronous relationship, you must manually delete the storage elements. Storage elements include consistency groups, volumes (for ONTAP system), storage units (LUNs), and snapshots.
 * If you remove protection from a host cluster with only an automated failover duplex-based SnapMirror policy relationship and a non-hierarchical consistency group, you can delete the associated storage elements on the secondary storage directly from the same screen.
 * If you remove protection from a host cluster with both SnapMirror policies and a hierarchical consistency group for backups, a warning appears about backup impacts. Confirm to proceed. After confirmation, delete the associated storage elements on the secondary storage. If you do not clean up, the storage elements remain on the secondary site.
-
-// 10.5 update for hierarchical CG
+// 10.5 updates for Hierarchical CG feature
