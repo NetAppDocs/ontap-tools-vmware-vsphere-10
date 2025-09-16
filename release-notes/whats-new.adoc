@@ -34,3 +34,7 @@ This release supports VMFS replication with hierarchical consistency group inclu
 * *Upgrade and migration*
 
 The upgrade and migration process from previous versions of ONTAP tools for VMware vSphere to ONTAP tools for VMware vSphere 10.5 is designed to be seamless and efficient, minimizing downtime and ensuring a smooth transition.
+
+.Related information
+
+For the latest details on version compatibility, refer to https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT[NetApp Interoperability Matrix Tool^].

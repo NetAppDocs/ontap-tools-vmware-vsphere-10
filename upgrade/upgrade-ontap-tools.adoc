@@ -80,7 +80,7 @@ NOTE:
 . In the primary VM page, select *Actions* > *Edit Settings* 
 . Select the *content library ISO file* in the edit settings window under the *CD/DVD drive* field. 
 . Select the ISO file, check the *Connected* box for the *CD/DVD drive* field, and click *OK*.
-image:../media/primaryvm-edit-settings.png[Edit settings]
+// need new image image:../media/primaryvm-edit-settings.png[Edit settings]
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
 . Enter *3* to select the *System Configuration* menu.

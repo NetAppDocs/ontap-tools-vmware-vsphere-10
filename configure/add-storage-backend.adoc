@@ -42,7 +42,7 @@ In a multi-tenant setup, you can add a storage backend cluster globally and SVM 
 IPv4 and IPv6 address management LIFs are supported.
 . Fetch the ONTAP cluster certificates automatically and authorize the certificate, or manually upload it by browsing to its location.
 [NOTE]
-If needed, you can disable SAN validation from the maintenance console. For instructions, see link:../manage/change-valid-flag.html[Change certificate validation flag].
+If needed, you can disable Subject Alternative Name (SAN) validation from the maintenance console. For instructions, see link:../manage/change-valid-flag.html[Change certificate validation flag].
 . If the storage backend you add is part of a MetroCluster configuration, ONTAP tools Manager shows a pop-up message to add the peered cluster. Select *Add* and provide the details for the MetroCluster peer storage backend.
 [NOTE]
 After the ONTAP system performs a switchover and switchback, run the ONTAP tools discovery manually.
