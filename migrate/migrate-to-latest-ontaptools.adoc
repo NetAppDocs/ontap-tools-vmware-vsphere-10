@@ -9,12 +9,12 @@ summary: 'When migrating storage data, storage backends are onboarded manually u
 :imagesdir: ../media/
 
 [.lead]
-Moving the NetApp ONTAP tools for VMware vSphere setup from version 9.xx to 10.x necessitates a migration process because of the significant product updates and enhancements across the versions. 
+Moving the NetApp ONTAP tools for VMware vSphere setup from version 9.xx to 10.5 necessitates a migration process because of the significant product updates and enhancements across the versions. 
 
 You can migrate from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.5.
 
 //updated for OTVDOC-175 - jani
-If you have NFS and VMFS datastores and no vVols datastores in your setup, simply uninstall ONTAP tools 9.xx and deploy ONTAP tools 10.x. However, if your setup contains vVols datastores, you’ll have to go through a process of migrating the VASA Provider and the SRA.  
+If you have NFS and VMFS datastores and no vVols datastores in your setup, simply uninstall ONTAP tools 9.xx and deploy ONTAP tools 10.5. However, if your setup contains vVols datastores, you’ll have to go through a process of migrating the VASA Provider and the SRA.  
 
 The following table outlines the migration process in these two different scenarios. 
 |===

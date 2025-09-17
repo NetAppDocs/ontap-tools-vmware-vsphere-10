@@ -12,7 +12,7 @@ summary: ''
 Initiator groups (igroups) are tables of FC protocol host World Wide Port Name (WWPNs) or iSCSI host qualified node names. You can define igroups and map them to LUNs to control which initiators have access to LUNs.
 
 In ONTAP tools for VMware vSphere 9.x, igroups were created and managed in a flat structure, where each datastore in vCenter was associated with a single igroup. This model limited flexibility and reuse of igroups across multiple datastores.
-ONTAP tools for VMware vSphere 10.x introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. 
+ONTAP tools for VMware vSphere introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. 
 Understanding the igroup workflow is essential for managing LUNs and datastores effectively in ONTAP tools for VMware vSphere.
 Different workflows generate varying igroup configurations, as shown in the following examples:
 [NOTE]
