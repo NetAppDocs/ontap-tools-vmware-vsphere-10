@@ -122,7 +122,7 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 
 |137-139 |TCP/UDP |SMB/Windows sharing packets.
 
-|6789-7300 |TCP |Inter-node data plane 
+|3300 and 6789-7300 |TCP |Inter-node data plane 
 
 //|6789 |TCP |Ceph Monitor (MON)
 
