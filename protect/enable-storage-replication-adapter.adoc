@@ -30,5 +30,8 @@ page.
 
 [NOTE]
 After a failover, actions such as expand, mount, and delete might not be available for datastores. Perform datastore discovery to refresh and display the appropriate context menu actions.
-
 //updated for OTVDOC-304 - jani
+
+[NOTE]
+After each reprotect operation, you must perform storage discovery on both sites.
+// OTVDOC-315 - Jani
