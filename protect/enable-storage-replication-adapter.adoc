@@ -35,3 +35,6 @@ After a failover, actions such as expand, mount, and delete might not be availab
 [NOTE]
 After each reprotect operation, you must perform storage discovery on both sites.
 // OTVDOC-315 - Jani
+// In a new setup with SRA protection, reprotect workflow fails with a timeout error after an unplanned failover. You should run a test failover before doing an unplanned failover. This way, the system has the latest replication information. The same rule applies to fan-out scenarios. If ONTAP cluster A goes down and cluster B becomes the source for Automated Failover Duplex (AFD) and asynchronous, run a test between B and C to make sure the latest replication information is available.
+// OTVDOC-316 - Jani
+In a new setup with SRA protection, if you encounter issues with the reprotect workflow, ensure that all relevant replication information is up to date by performing test failovers as needed.  The same rule applies to fan-out scenarios.
