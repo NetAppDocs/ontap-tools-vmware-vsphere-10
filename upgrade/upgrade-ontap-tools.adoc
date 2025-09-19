@@ -96,6 +96,7 @@ During the upgrade, if any onboarded storage backend certificates are missing Su
 .What's next
 
 After upgrading to ONTAP tools for VMware vSphere 10.5:
+
 * Monitor system alerts and plan to renew the gateway certificate before it expires in one year.
 * Remove the ONTAP tools 10.4 or 10.3 SRA adapter and upload the 10.5 SRA adapter tar file. Then, rescan the SRA adapters to update the VMware Site Recovery Storage Replication Adapters page.
 // OTVDOC-167 - updated by jani
