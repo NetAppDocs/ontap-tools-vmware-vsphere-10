@@ -88,7 +88,7 @@ NOTE:
 +
 During the upgrade, if any onboarded storage backend certificates are missing Subject Alternative Name (SAN) entries, you will receive a prompt indicating the missing SAN. If you choose to proceed without validating the SAN, the upgrade will continue, but this is not recommended because of potential security risks.
 . When you upgrade, the following actions are performed automatically:
-.. Gateway certificate is upgraded with a 1-year expiry, and the SRA certificate expiry is updated from 10 years to 1 year.
+.. The gateway certificate is renewed with a 1-year validity period. When you remove the previous SRA adapter and upload the new 10.5 adapter, the SRA certificate validity changes from 10 years to 1 year.
 .. Remote plug-in is upgraded
 .. ONTAP and vCenter Server certificates are validated and added to ONTAP tools
 .. Backup is enabled
