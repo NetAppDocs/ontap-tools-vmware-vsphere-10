@@ -12,6 +12,10 @@ summary: 'In a fan-out protection scenario, the consistency group is double prot
 In a fan-out protection scenario, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster. 
 The create, edit, and delete SnapMirror active sync protection workflows maintain the synchronous protection. VMware Live Site Recovery appliance failover and reprotect workflows maintain the asynchronous protection. 
 
+[NOTE]
+Fan-out is not supported for SVM user.
+// OTVDOC-317 - jani
+
 To set up fan-out protection, peer the three site clusters and SVMs. 
 
 Example:
