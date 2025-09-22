@@ -37,6 +37,6 @@ After each reprotect operation, you must perform storage discovery on both sites
 // OTVDOC-315 - Jani
 // OTVDOC-316 - Jani
 
-In a new setup with SRA protection, always run a test failover before performing an unplanned failover. Skipping the test failover might cause the reprotect operation to fail.
+In a new setup with SRA protection, always run a test failover. Skipping the test failover might cause the reprotect operation to fail.
 
 In a fan-out configuration, after a SnapMirror Active Sync failover where the SnapMirror source changes to site B for Automated Failover Duplex and Asynchronous policies, run a test failover between sites B and C. Skipping this step may result in a failed reprotect operation.
