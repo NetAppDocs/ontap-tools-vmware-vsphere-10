@@ -100,13 +100,9 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 
 |2380|TCP |This is the default port for server-to-server communication for the etcd cluster used for the raft consensus algorithm that etcd relies on for data replication and consistency.
 
-|7472|TCP/UDP |This is the prometheus metrics service port.
-
 |7946|TCP/UDP |This port is used for Docker's container network discovery.
 
 |9083|TCP |This port is an internally used service port for VASA Provider service.
-
-|1162 |UDP | This is the SNMP trap packets port.
 
 |6443|TCP |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: Kubernetes API
 
@@ -119,8 +115,6 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 |30000-32767|TCP |Source: all RKE2 nodes. Destination: all REK2 nodes. Description: NodePort port range
 
 |123|TCP |Ntpd uses this port to perform validation of the NTP server.
-
-|137-139 |TCP/UDP |SMB/Windows sharing packets.
 
 |3300 and 6789-7300 |TCP |Inter-node data plane 
 
