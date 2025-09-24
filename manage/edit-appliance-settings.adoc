@@ -41,7 +41,7 @@ After HA configuration is enabled, you cannot revert to a non-HA single node con
 . In the *HA settings* section of the *Edit Appliance Settings* window, you can enter the details of Nodes 2 and 3. ONTAP tools for VMware vSphere supports three nodes in HA setup.
 [NOTE]
 Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the wizard's final page. 
-You can enter IPv6 address details for the other two nodes only when the IPv6 address is enabled on the first node.
+You can enter IPv6 address details for the other two nodes only when the IPv6 address is enabled on the ONTAP tools management node.
 +
 Ensure that an ESXi host contains only one ONTAP tools VM. The inputs are validated each time you move to the next window. 
 . Review the details in the *Summary* section and *Save* the changes.

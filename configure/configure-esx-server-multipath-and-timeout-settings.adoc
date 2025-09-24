@@ -16,7 +16,7 @@ ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings 
 
 .About this task
 
-This process might take time, depending on your setup and system load. The Recent Tasks panel shows the progress.
+This process might take time, depending on your setup and system load. You can view the progress in the Recent Tasks panel.
 
 .Steps
 

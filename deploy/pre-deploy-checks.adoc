@@ -32,13 +32,14 @@ Use the following worksheet to gather the required information for ONTAP tools f
 |===
 |Requirement|Your value
 
-|IP address for the ONTAP tools application. This is the IP address for accessing the ONTAP tools web interface|
-|ONTAP tools virtual IP address for internal communication. This IP address is used for internal communication in a setup with multiple ONTAP tools instances. This IP address should not be same as the IP address for the ONTAP tools application.|
-|DNS hostname for the first node|
+|IP address for the ONTAP tools application. This is the IP address for accessing the ONTAP tools web interface (load balancer)|
+|ONTAP tools virtual IP address for internal communication. This IP address is used for internal communication in a setup with multiple ONTAP tools instances. This IP address should not be same as the IP address for the ONTAP tools application.(The Kubernetes Control Plane)|
+|DNS hostname for the ONTAP tools management node|
+// need to change first node to ONTAP tools management node in 10.4 as well - gloabally
 |Primary DNS server|
 |Secondary DNS server|
 |DNS search domain|
-|IPv4 address for the first node. It is a unique IPv4 address for the node management interface on the management network.|
+|IPv4 address for the ONTAP tools management node. It is a unique IPv4 address for the node management interface on the management network.|
 |Subnet mask for the IPv4 address|
 |Default gateway for the IPv4 address|
 |IPv6 address (optional) |

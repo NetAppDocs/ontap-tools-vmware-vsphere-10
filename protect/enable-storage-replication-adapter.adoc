@@ -40,3 +40,9 @@ After each reprotect operation, you must perform storage discovery on both sites
 In a new setup with SRA protection, always run a test failover. Skipping the test failover might cause the reprotect operation to fail.
 
 In a fan-out configuration, after a SnapMirror Active Sync failover where the SnapMirror source changes to site B for Automated Failover Duplex and Asynchronous SnapMirror, run a test failover between sites B and C. Skipping this step may result in a failed reprotect operation.
+
+.Related information
+
+https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview[Configure disaster recovery for NFS datastores using VMware Site Recovery Manager]
+
+// added thie related info as part of github feedback. Need to replicate in 10.4

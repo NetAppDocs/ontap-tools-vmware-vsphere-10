@@ -13,7 +13,7 @@ When you use a dedicated ONTAP cluster for ONTAP tools for VMware deployment, it
 
 .Steps
 
-. Determine the ONTAP tools for VMware vSphere deployment type from the first node VM. 
+. Determine the ONTAP tools for VMware vSphere deployment type from the ONTAP tools management node VM. 
 +
 _cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
 +
