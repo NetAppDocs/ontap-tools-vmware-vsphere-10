@@ -13,7 +13,7 @@ Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.
 
 * *Platform qualification*
 
-ONTAP tools for VMware vSphere 10.5 adds support for ASA.r2 platforms, providing compatibility with the latest hardware and software configurations. This release also includes integration with ONTAP 9.16.1 and 9.17.1, expanding the supported environments.
+ONTAP tools for VMware vSphere 10.5 adds support for ASA r2 systems, providing compatibility with the latest hardware and software configurations. This release also includes integration with ONTAP 9.16.1 and 9.17.1, expanding the supported environments.
 
 * *VMware qualification and certifications*
 
