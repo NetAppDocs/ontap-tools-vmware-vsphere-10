@@ -35,8 +35,6 @@ When configuring the array manager, you should use the same connection (IP addre
 For example, if the array manager configuration is SVM scoped, then the storage under ONTAP tools for VMware vSphere should be added at SVM level.
 .. If connecting to a cluster, specify the SVM name in the *SVM name* field, or leave it blank to manage all SVMs in the cluster.
 .. Enter the volumes to be discovered in the *Volume include list* field.
-.. If connecting to a cluster, specify the SVM name in the *SVM name* field, or leave it blank to manage all SVMs in the cluster.
-.. Enter the volumes to be discovered in the *Volume include list* field.
 +
 You can enter the source volume at the protected site and the replicated destination volume at the recovery site.
 +
