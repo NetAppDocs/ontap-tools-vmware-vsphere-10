@@ -3,12 +3,22 @@ title: Manage ONTAP tools for VMware vSphere
 entries:
   - title: ONTAP tools for VMware vSphere dashboard overview
     url: /configure/dashboard-overview.html
-  - title: ONTAP tools Manager user interface
-    url: /configure/manager-user-interface.html
   - title: Understand igroups and export policies
     url: /manage/igroup-workflow.html
   - title: Understand ONTAP tools managed igroups
     url: /manage/nested-igroups.html
+  - title: ONTAP tools Manager user interface
+    url: /manage/manager-user-interface.html
+  - title: Manage ONTAP tools Manager settings
+    entries:
+      - title: Edit AutoSupport settings 
+        url: /manage/edit-autosupport.html
+      - title: Add NTP servers
+        url: /manage/add-ntpserver.html
+      - title: Reset VASA Provider and SRA credentials
+        url: /manage/reset-vasa-sra-credentials.html
+      - title: Edit backup settings
+        url: /manage/backup-settings.html
   - title: Enable ONTAP tools for VMware vSphere services
     url: /manage/enable-services.html
   - title: Change ONTAP tools for VMware vSphere configuration
@@ -37,7 +47,7 @@ entries:
     url: /manage/manage-storage-threshold.html
   - title: Manage storage backends
     url: /manage/storage-backend.html
-  - title: Manage vCenter Server instances
+  - title: Manage vCenter Server instances in ONTAP tools
     url: /manage/manage-vcenter.html
   - title: Manage certificates
     url: /manage/certificate-manage.html
@@ -51,10 +61,10 @@ entries:
       url: /manage/start-the-ssh-on-other-nodes.html
     - title: Update the vCenter server and ONTAP credentials
       url: /manage/update-vcenter-credentials.html
+    - title: Change certificate validation flag
+      url: /manage/change-valid-flag.html
   - title: ONTAP tools reports
     url: /manage/reports.html
-  - title: Collect the log files
-    url: /manage/collect-the-log-files.html
   - title: Manage virtual machines
     entries:
       - title: Considerations to migrate or clone virtual machines
@@ -85,14 +95,8 @@ entries:
         url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
-  - title: Disable AutoSupport
-    url: /manage/disable-autosupport.html    
-  - title: Update AutoSupport proxy URL
-    url: /manage/update-proxyurl.html    
-  - title: Add NTP servers
-    url: /manage/add-ntpserver.html    
-  - title: Create a backup and recover the ONTAP tools setup
-    url: /manage/enable-backup.html
+  - title: Recover the ONTAP tools setup
+    url: /manage/recover-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
     url: /manage/uninstall-deployment.html
   - title: Remove FlexVol volumes

@@ -13,7 +13,7 @@ There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implemen
 
 == Overview of the configuration process
 
-ONTAP tools for VMware vSphere 10 includes support for creating an ONTAP user with a custom role. The definitions are packaged in a JSON file that you can upload to the ONTAP cluster. You can create the user and tailor the role for your environment and security needs.
+ONTAP tools for VMware vSphere includes support for creating an ONTAP user with a custom role. The definitions are packaged in a JSON file that you can upload to the ONTAP cluster. You can create the user and tailor the role for your environment and security needs.
 
 The major configuration steps are described at a high level below. Refer to link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges] for more details.
 

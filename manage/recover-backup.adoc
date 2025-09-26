@@ -1,0 +1,47 @@
+---
+permalink: manage/recover-backup.html
+sidebar: sidebar
+keywords:
+summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
+---
+= Recover the ONTAP tools setup
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default.
+
+// otv10.5 updates backup
+The datastore where you deploy ONTAP tools for VMware vSphere virtual machines stores the backup files. A folder named after the ONTAP tools IP address (dots replaced by underscores and suffixed with _OTV_backup_) keeps the two most recent backup files (_OTV_backup_1.tar.enc_ and _OTV_backup_2.tar.enc_) and an info file (_OTV_backup_info.txt_) that contains the name of the latest backup.
+
+Ensure that the new virtual machine uses the same ONTAP tools IP address and matches the initial system configuration, including enabled services, node size, and HA mode.
+
+.Steps
+
+. Download the backup files from the datastore of the original virtual machine to your local system.
+.. Go to the storage section and choose the datastore that contains the backup files for the virtual machine.
+.. Select the *Files* section.
+.. Download the required backup directory.
+. Power off the existing virtual machine. Then, deploy a new virtual machine using the same OVA file as the original deployment.
+. From the vCenter Server, open the maintenance console.
+. Log in as the maintenance user.
+. Enter `4` to select *Support and Diagnostics*.
+. Enter `2` to select *Enable remote diagnostic access* option and create a new password for the diagnostic access.
+. Choose a backup file from the downloaded directory. Refer to the _OTV_backup_info.txt_ file to identify the latest backup.
+. Use the following command to transfer the backup file to the new virtual machine. When prompted, enter the diagnostic password.
++
+----
+scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
+----
++
+[NOTE]
+don't alter the destination path and file name (/home/diag/system_recovery.tar.enc) mentioned in the command.
+. After the backup file is transferred, log in to the diagnostic shell and run the following command:
++
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
+----
++
+The logs are recorded in _/var/log/post-deploy-upgrade.log_ file.
+
+After you complete the recovery, ONTAP tools restores services and vCenter objects.

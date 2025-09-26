@@ -1,0 +1,28 @@
+---
+permalink: manage/change-valid-flag.html
+sidebar: sidebar
+keywords:
+summary: 'You can change the certificate validation flag using the maintenance console.'
+---
+= Change certificate validation flag
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+By default, the certificate validation flag is enabled (set to true). You can set the ONTAP storage backend certificate validation flag to false if you need to bypass SAN certificate checks. This setting is not applicable to vCenter Server certificates.
+
+.Before you begin
+
+You need to have maintenance user login credentials.
+
+.Steps
+
+. From the vCenter Server, open a console to ONTAP tools.
+. Log in as the maintenance user.
+. Enter `1` to select Application Configuration Menu.
+. Enter `3` to change cert validation flag.
++
+The maintenance console shows the certificate validation flag status and prompts you to change it.
+. Enter 'y' to toggle the flag or 'n' to cancel.
+
+If you toggle the certificate validation flag back to true, the system performs a pre-check. If any added storage backend uses a certificate without a SAN, you cannot enable certificate validation. Make sure all storage backends use SAN-based certificates before enabling this flag. If you set the certificate validation flag to false, the system skips certificate validation for all added storage backends.

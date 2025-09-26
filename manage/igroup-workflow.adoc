@@ -12,11 +12,11 @@ summary: ''
 Initiator groups (igroups) are tables of FC protocol host World Wide Port Name (WWPNs) or iSCSI host qualified node names. You can define igroups and map them to LUNs to control which initiators have access to LUNs.
 
 In ONTAP tools for VMware vSphere 9.x, igroups were created and managed in a flat structure, where each datastore in vCenter was associated with a single igroup. This model limited flexibility and reuse of igroups across multiple datastores.
-ONTAP tools for VMware vSphere 10.x introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. 
+ONTAP tools for VMware vSphere introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. 
 Understanding the igroup workflow is essential for managing LUNs and datastores effectively in ONTAP tools for VMware vSphere.
 Different workflows generate varying igroup configurations, as shown in the following examples:
 [NOTE]
-The names mentioned are for illustration purposes only and do not refer to real igroup names. ONTAP tools managed igroups use the prefix “otv_”. Custom igroups can be given any name.
+The names mentioned are for illustration purposes only and don't refer to real igroup names. ONTAP tools managed igroups use the prefix “otv_”. Custom igroups can be given any name.
 |===
 |Term |Description
 |DS<number>	|Datastore
@@ -67,7 +67,7 @@ Unmount a datastore from a host
 * DS1Igroup:
 ** host2Igroup → (iqn2: lun1)
 
-The host1Igroup is removed from the hierarchy. Child igroups are not explicitly deleted. Deletion occurs under these two conditions:
+The host1Igroup is removed from the hierarchy. Child igroups aren't explicitly deleted. Deletion occurs under these two conditions:
 
 •  If no LUNs are mapped, the ONTAP system deletes the child igroup.
 •  A scheduled cleanup job removes the dangling child igroups with no LUN mappings.
@@ -84,7 +84,7 @@ Delete datastore
 * DS1Igroup:
 ** host2Igroup → (iqn2: lun1)
 
-Parent and child igroups are removed if another datastore does not reuse the parent igroup. Child igroups are never explicitly deleted
+Parent and child igroups are removed if another datastore doesn't reuse the parent igroup. Child igroups are never explicitly deleted
 
 .Example 5:
 
@@ -167,7 +167,7 @@ Migration from ONTAP tools 9 to 10 (igroup normalization)
 
 *Workflow*
 
-ONTAP tools for VMware vSPhere 9.x versions do not support hierarchical igroups. During migration to 10.3 or above versions, igroups must be normalized into the hierarchical structure.
+ONTAP tools for VMware vSPhere 9.x versions don't support hierarchical igroups. During migration to 10.3 or above versions, igroups must be normalized into the hierarchical structure.
 
 Before migration:
 

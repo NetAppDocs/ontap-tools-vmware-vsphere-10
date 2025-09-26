@@ -37,7 +37,7 @@ The FlexVol volume where the cloned virtual machine is placed, the metadata file
 +
 The FlexVol volume where the cloned virtual machine is placed, the metadata file gets updated virtual machine details.
 
-VMware presently does not support virtual machines cloned to a VM template.
+VMware presently doesn't support virtual machines cloned to a VM template.
 
 Clone-of-Clone of a protected virtual machine is supported.
 
@@ -49,7 +49,7 @@ Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsph
 
 Presently only virtual machine Snapshots without memory are supported. If virtual machine has Snapshot with memory, then the virtual machine is not considered for protection.
 
-You also cannot protect unprotected virtual machines that have memory Snapshot. For this release, you are expected to delete memory snapshot before enabling protection for the virtual machine.
+You also cannot protect unprotected virtual machines that have memory Snapshot. For this release, you're expected to delete memory snapshot before enabling protection for the virtual machine.
 
 For windows VM with ASA r2 storage type, when you take a snapshot of the virtual machine, it will be a read-only snapshot.
 When there is power on call for the VM, the VASA Provider creates a LUN using the read-only snapshot and then it enables it for IOPS. During the power-off request, VASA Provider deletes the LUN that was created and then disables the IOPS.

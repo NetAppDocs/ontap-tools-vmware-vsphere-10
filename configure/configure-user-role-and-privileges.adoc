@@ -2,50 +2,49 @@
 permalink: configure/configure-user-role-and-privileges.html
 sidebar: sidebar
 keywords: user roles
-summary: 'You can configure new user roles for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.'
+summary: 'Configure user roles and privileges for storage backends with the JSON file from ONTAP tools for VMware vSphere and ONTAP System Manager.'
 ---
 = Configure ONTAP user roles and privileges
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere and ONTAP System Manager.
+Configure user roles and privileges for storage backends with the JSON file from ONTAP tools for VMware vSphere and ONTAP System Manager.
 
 .Before you begin
 
-* You should have downloaded the ONTAP privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_.
-* You should have downloaded the ONTAP Privileges file from ONTAP tools using `\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip`.
+* Download the ONTAP Privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_. After downloading the zip file, you find two JSON files. Use the ASA r2-specific JSON file when configuring an ASA r2 system.
 +
 [NOTE]
-You can create users at cluster or directly at storage virtual machines (SVMs) level. You can also create users without using the user_roles.json file and if done so, you need to have a minimum set of privileges at SVM level.
-
-* You should have logged in with administrator privileges for the storage backend.
+You can create users at the cluster level or directly at the storage virtual machines (SVMs) level. If you do not use the user_roles.json file, ensure the user has the minimum required SVM permissions.
+* Log in with administrator privileges for the storage backend.
 
 .Steps
 
-. Extract the downloaded _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ file.
+. Extract the _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_ file that you downloaded.
 . Access ONTAP System Manager using the cluster management IP address of the cluster.
-. Log in to the cluster with admin privileges. To configure a user, perform the following steps: 
-.. To configure cluster ONTAP tools user, select *Cluster* > *Settings* > *Users and Roles* pane.
-.. To configure SVM ONTAP tools user, select *Storage SVM* > *Settings* > *Users and Roles* pane.
+. Log in to the cluster with admin privileges. To configure a user: 
+.. To configure a cluster ONTAP tools user, select *Cluster* > *Settings* > *Users and Roles* pane.
+.. To configure an SVM ONTAP tools user, select *Storage SVM* > *Settings* > *Users and Roles* pane.
 .. Select *Add* under Users.
 .. In the *Add User* dialog box, select *Virtualization products*.
-.. *Browse* to select and upload the ONTAP Privileges JSON file.
+.. *Browse* to select and upload the ONTAP Privileges JSON file. For non-ASA r2 systems, select users_roles.json file and for ASA r2 systems, select users_roles_ASAr2.json file.
 +
-The Product field is auto populated.
+ONTAP tools automatically populates the Product field.
 .. Select the product capability as *VSC, VASA Provider and SRA* from the drop-down.
 // updated for OTVDOC-257 10.4 release.
 +
-The *Role* field is auto populated based on the product capability selected.
+ONTAP tools automatically populates the *Role* field based on the product capability you select.
 .. Enter the required username and password.
-.. Select the privileges (Discovery, Create Storage, Modify Storage, Destroy Storage, NAS/SAN Role) required for the user, and then select *Add*.
+.. Select the privileges (Discovery, Create Storage, Modify Storage, Destroy Storage, NAS/SAN Role) the user needs, and then select *Add*.
 
-The new role and user are added, and you can see the detailed privileges under the role that you have configured.
+ONTAP tools adds the new role and user. You can view privileges under the role you configured.
 // edited for 10.0 release
 
 == SVM aggregate mapping requirements
 
-To use SVM user credentials for provisioning datastores, internally ONTAP tools for VMware vSphere creates volumes on the aggregate specified in the datastores POST API. The ONTAP does not allow the creation of volumes on unmapped aggregates on an SVM using SVM user credentials. To resolve this, you need to map the SVMs with the aggregates using the ONTAP REST API or CLI as described here.
+When provisioning datastores using SVM user credentials, ONTAP tools for VMware vSphere creates volumes on the aggregate specified in the datastores POST API. ONTAP prevents SVM users from creating volumes on aggregates not mapped to the SVM. Map the SVM to the required aggregates using the ONTAP REST API or CLI before creating volumes.
+
 
 REST API:
 
@@ -61,19 +60,19 @@ sti115_vsim_ucs630f_aggr1 vserver show-aggregates                               
 
 == Create ONTAP user and role manually
 
-Follow the instructions in this section to create the user and roles manually without using the JSON file.
+Create users and roles manually without the JSON file.
 
 . Access ONTAP System Manager using the cluster management IP address of the cluster.
 . Log in to the cluster with admin privileges.
-.. To configure cluster ONTAP tools roles, select *Cluster* > *Settings* > *Users and Roles* pane. 
-.. To configure cluster SVM ONTAP tools roles, select *Storage SVM* > *Settings* > *Users and Roles* pane
-. Create Roles:
+.. To configure cluster ONTAP tools roles, select *Cluster* > *Settings* > *Users and Roles*. 
+.. To configure cluster SVM ONTAP tools roles, select *Storage SVM* > *Settings* > *Users and Roles*.
+. Create roles:
 .. Select *Add* under *Roles* table.
 .. Enter the *Role name* and *Role Attributes* details. 
 +
-Add the *REST API Path* and the respective access from the drop down.
+Add the *REST API Path* and choose the access from the drop-down list.
 .. Add all the needed APIs and save the changes.
-. Create Users:
+. Create users:
 .. Select *Add* under *Users* table.
 .. In the *Add User* dialog box, select *System Manager*.
 .. Enter the *Username*.
@@ -84,27 +83,28 @@ Add the *REST API Path* and the respective access from the drop down.
 
 === List of minimum privileges required for non-admin global scoped cluster user
 
-The minimum privileges required for non-admin global scoped cluster user created without using the users JSON file are listed in this section. 
-If a cluster is added in local scope, it is recommended to use the JSON file to create the users, because ONTAP tools for VMware vSphere requires more than just the Read privileges for provisioning on ONTAP.
+This section lists the minimum privileges required for a non-admin global-scoped cluster user without a JSON file.
+If a cluster is in local scope, use the JSON file to create users because ONTAP tools for VMware vSphere needs more than just the Read privileges for provisioning on ONTAP.
 
-Using APIs:
+You can access functionality by using APIs:
 
 |===
 
 |API|Access level| Used for
 
-|/api/cluster |Read-Only |Cluster Configuration Discovery
-|/api/cluster/licensing/licenses |Read-Only |License Check for Protocol specific licenses
+|/api/cluster |Read-Only |Cluster configuration discovery
+|/api/cluster/licensing/licenses |Read-Only |License Check for protocol specific licenses
 |/api/cluster/nodes	|Read-Only	|Platform type discovery
-|/api/security/accounts |Read-Only |Privilege Discovery
-|/api/security/roles |Read-Only |Privilege Discovery
-|/api/storage/aggregates	|Read-Only	|Aggregate space check during Datastore/Volume provisioning
-|/api/storage/cluster	|Read-Only	|To get the Cluster level Space and Efficiency Data
-|/api/storage/disks	|Read-Only	|To get the Disks associated in an Aggregate
-|/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM Policy management
-|/api/svm/svms	|Read-Only	|To get SVM configuration in the case the Cluster is added locally.
-|/api/network/ip/interfaces |Read-Only |Add Storage Backend - To identify the management LIF scope is Cluster/SVM
-|/api/storage/availability-zones |Read-Only |SAZ Discovery. Applicable to ONTAP 9.16.1 release onwards and ASA r2 systems.
+|/api/security/accounts |Read-Only |Privilege discovery
+|/api/security/roles |Read-Only |Privilege discovery
+|/api/storage/aggregates	|Read-Only	|Aggregate space check during datastore/volume provisioning
+|/api/storage/cluster	|Read-Only	|To get the cluster level space and efficiency data
+|/api/storage/disks	|Read-Only	|To get the disks associated in an aggregate
+|/api/storage/qos/policies	|Read/Create/Modify	|QoS and VM policy management
+|/api/svm/svms	|Read-Only	|To get SVM configuration when the cluster is added locally.
+|/api/network/ip/interfaces |Read-Only |Add storage backend - To identify the management LIF scope is cluster/SVM
+|/api/storage/availability-zones |Read-Only |SAZ discovery. Applicable to ONTAP 9.16.1 release onwards and ASA r2 systems.
+|/api/cluster/metrocluster|Read-Only|Gets MetroCluster status and configuration details.
 |===
  
 
@@ -112,9 +112,9 @@ Using APIs:
 
 // 10.3 updates OTVDOC-163 - jani
 [NOTE]
-You need discovery, create, modify, and destroy Privileges to perform PATCH operations and automatic rollback in case of failure on datastores. Lack of these all these privileges together leads to workflow disruptions and cleanup issues.
+Discovery, create, modify, and destroy privileges are required for PATCH operations and automatic rollback on datastores. Missing permissions might cause workflow and cleanup issues.
 
-Creating ONTAP tools for VMware vSphere ONTAP API based user with discovery, create storage, modify storage, destroy storage privileges enables initiating discoveries and manage ONTAP tools workflows.
+An ONTAP API-based user with discovery, create, modify, and destroy privileges can manage ONTAP tools workflows.
 
 To create a cluster scoped user with all privileges mentioned above, run the following commands:
 
@@ -210,6 +210,8 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly
 
+security login rest-role create -role <role-name> -api /api/cluster/metrocluster -access readonly
+
 ----
 
 Additionally, for ONTAP Versions 9.16.0 and above run the following command:
@@ -226,7 +228,7 @@ security login rest-role create -role <role-name> -api /api/storage/availability
 
 === Create ONTAP tools for VMware vSphere ONTAP API based SVM scoped user
 
-To create a SVM scoped user with all the privileges, run the following commands:
+Run the following commands to create an SVM scoped user with all privileges:
 
 ----
 security login rest-role create -role <role-name> -api /api/application/consistency-groups -access all -vserver <vserver-name>
@@ -323,7 +325,7 @@ Example:
 security login create -user-or-group-name testvpsraall -application http -authentication-method password -role OTV_10_VP_SRA_Discovery_Create_Modify_Destroy -vserver C1_sti160-cluster_
 ----
 
-To unlock the account, to enable access to the management interface run the following command:
+Run the following command to unlock the account and enable management interface access:
 
 ----
 security login unlock -user <user-name> -vserver <cluster-or-vserver-name>
@@ -397,7 +399,7 @@ _security login role create -role <existing-role-name> -cmddirname "vserver nvme
 
 _security login role create -role <existing-role-name> -cmddirname "vserver nvme subsystem map remove" -access all -vserver <vserver-name>_
 
-Adding command _vserver nvme namespace show_ and _vserver nvme subsystem show_ to the existing role adds the following commands.
+To enable the following commands, add the commands _vserver nvme namespace show_ and _vserver nvme subsystem show_ to the existing role.
 
 ----
 vserver nvme namespace create
@@ -412,7 +414,7 @@ vserver nvme subsystem modify
 
 == Upgrade ONTAP tools for VMware vSphere 10.3 user to 10.4 user
 // updated for 10.4
-Beginning with ONTAP 9.16.1 upgrade the ONTAP tools for VMware vSphere 10.3 user to 10.4 user.
+Beginning with ONTAP 9.16.1, upgrade the ONTAP tools for VMware vSphere 10.3 user to 10.4 user.
 
 For ONTAP tools for VMware vSphere 10.3 user with a cluster-scoped user created using the JSON file and ONTAP version 9.16.1 or above, use the ONTAP CLI command with admin user privileges to upgrade to the 10.4 release.
 

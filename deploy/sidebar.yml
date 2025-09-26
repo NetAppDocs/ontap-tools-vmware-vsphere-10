@@ -11,5 +11,5 @@ entries:
     url: /deploy/pre-deploy-checks.html
   - title: Deploy ONTAP tools for VMware vSphere
     url: /deploy/ontap-tools-deployment.html
-  - title: Deployment error codes
+  - title: Troubleshoot deployment errors
     url: /deploy/deployment-error-codes.html

@@ -20,7 +20,7 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 ** 348 GB for thick provisioned installations
 
 * *Host system sizing requirements*
-Recommended memory as per the size of deployment is as shown in the table below. To deploy high availability (HA), you will require three times the appliance size specified in the table.
+The recommended memory for each deployment size is shown in the table below. For high availability (HA) deployments, you need three times the appliance size listed.
 // updated for GITHUB issue #50
 |===
 
@@ -50,9 +50,7 @@ When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on
 |Storage, host, and applications|Version requirements
 
 |ONTAP
-|9.14.1, 9.15.1, 9.16.0, 9.16.1, and 9.16.1P3
-
-FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series, and ASA r2.
+|9.15.1, 9.16.0, 9.16.1, 9.17.0, and 9.17.1
 
 |ONTAP tools supported ESXi hosts
 |7.0.3 onwards
@@ -64,7 +62,7 @@ FAS, ASA A-Series, ASA C-Series, AFF A-Series, AFF C-Series, and ASA r2.
 |3.0
 
 |OVA Application 
-|10.4
+|10.5
 
 |ESXi host to deploy ONTAP tools virtual machine
 |7.0U3 and 8.0U3
@@ -84,7 +82,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 == Port requirements
 
 The following table outlines the network ports that NetApp uses and their purposes. Ensure these ports are open and accessible to facilitate proper operation and communication within the system. Ensure that the necessary network configurations are in place to allow traffic on these ports for the associated services to function correctly. Depending on your security policies, you might need to configure firewalls or other security appliances to permit this traffic within your network.
-
+[NOTE]
+Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterrupted communication with each other.
+// JIRA OTVDOC-305 fix
 |===
 |*Port* |*Protocol* |*Description*
 |8143 |TCP|HTTP/HTTPS connections for ONTAP tools.
@@ -100,13 +100,9 @@ The following table outlines the network ports that NetApp uses and their purpos
 
 |2380|TCP |This is the default port for server-to-server communication for the etcd cluster used for the raft consensus algorithm that etcd relies on for data replication and consistency.
 
-|7472|TCP/UDP |This is the prometheus metrics service port.
-
-|7946|TCP/UDP |This port is used for docker's container network discovery.
+|7946|TCP/UDP |This port is used for Docker's container network discovery.
 
 |9083|TCP |This port is an internally used service port for VASA Provider service.
-
-|1162 |UDP | This is the SNMP trap packets port.
 
 |6443|TCP |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: Kubernetes API
 
@@ -120,15 +116,15 @@ The following table outlines the network ports that NetApp uses and their purpos
 
 |123|TCP |Ntpd uses this port to perform validation of the NTP server.
 
-|137-139 |TCP/UDP |SMB/Windows sharing packets.
+|3300 and 6789-7300 |TCP |Inter-node data plane 
 
-|6789 |TCP |Ceph Monitor (MON)
+//|6789 |TCP |Ceph Monitor (MON)
 
-|3300 |TCP |Ceph Monitor (MON)
+//|3300 |TCP |Ceph Monitor (MON)
 
-|6800-7300 |TCP |Ceph Managers, OSDs, and Filesystem (MDS).
+//|6800-7300 |TCP |Ceph Managers, OSDs, and Filesystem (MDS).
 
-|80 |TCP |Ceph RADOS Gateway (RGW)
+//|80 |TCP |Ceph RADOS Gateway (RGW)
 
 |9080 |TCP| VP HTTP/HTTPS connections (only from 127.0.0.0/8 for IPv4 or ::1/128 for IPv6).
 
@@ -147,8 +143,7 @@ You can use the following table as a guide to configure ONTAP tools for VMware v
 |High-Availability |Small (S) |~24K| 64
 |High-Availability |Medium (M) |~50k| 128
 |High-Availability |Large (L) |~100k| 256 [NOTE]
-The number of hosts in the table shows the total number of host from multiple vCenters.
-
+The host counts in the table represent the combined total across all connected vCenters.
 |===
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)

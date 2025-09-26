@@ -13,7 +13,7 @@ ONTAP tools for VMware vSphere shows the ONTAP storage side view of the datastor
 
 .Steps
 
-. From the vSphere client, navigate to the datastore.
+. From the vSphere client, go to the datastore.
 . Select the *Configure* tab in the right pane. 
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. Depending on the datastore type, the view changes. Refer to the table below for information:
 

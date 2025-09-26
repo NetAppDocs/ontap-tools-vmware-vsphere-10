@@ -2,19 +2,19 @@
 permalink: protect/configure-placeholder-datastores.html
 sidebar: sidebar
 keywords:
-summary: 'You should configure a placeholder datastore to hold a place in the vCenter inventory at the recovery site for the protected virtual machine \(VM\). The placeholder datastore does not need to be large because the placeholder VMs are small and use only a few hundred or fewer kilobytes.'
+summary: 'Configure a placeholder datastore to reserve space in the vCenter inventory at the recovery site for protected virtual machines (VMs). Placeholder datastores require minimal capacity, because placeholder VMs are small and typically use only a few hundred kilobytes.'
 ---
 = Configure placeholder datastores
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You should configure a placeholder datastore to hold a place in the vCenter inventory at the recovery site for the protected virtual machine (VM). The placeholder datastore does not need to be large because the placeholder VMs are small and use only a few hundred or fewer kilobytes.
+Configure a placeholder datastore to reserve space in the vCenter inventory at the recovery site for protected virtual machines (VMs). Placeholder datastores require minimal capacity, because placeholder VMs are small and typically use only a few hundred kilobytes.
 
 .Before you begin
 
-* You should have connected the protected and recovery sites.
-* You should have configured your resource mappings.
+* Ensure that the protected and recovery sites are connected.
+* Verify that resource mappings have been configured.
 
 .Steps
 
@@ -23,5 +23,6 @@ You should configure a placeholder datastore to hold a place in the vCenter inve
 . Select *Placeholder Datastores* > *New* in the manage tab to create a new placeholder datastore.
 . Select the appropriate datastore and select *OK*.
 +
-NOTE: Placeholder datastores can be local or remote and should not be replicated.
+[NOTE]
+Placeholder datastores may reside on local or remote storage, but they don't require replication.
 . Repeat steps 3 to 5 to configure a placeholder datastore for the recovery site.

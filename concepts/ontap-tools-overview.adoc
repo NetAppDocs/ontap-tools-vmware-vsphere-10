@@ -9,12 +9,32 @@ summary: 'ONTAP tools for VMware vSphere is a collection of tools for lifecycle 
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools for VMware vSphere is a set of tools for virtual machine lifecycle management. It integrates with the VMware ecosystem to help with datastore provisioning and provide basic protection for virtual machines.
-ONTAP tools for VMware vSphere is a collection of horizontally scalable, event-driven microservices deployed as an Open Virtual Appliance (OVA). This release integrates REST API with ONTAP.
+ONTAP tools for VMware vSphere is a set of tools for virtual machine lifecycle management. It integrates with the VMware ecosystem to simplify datastore provisioning and provide basic protection for virtual machines. It is a collection of horizontally scalable, event-driven microservices deployed as an Open Virtual Appliance (OVA). 
 
-ONTAP tools for VMware vSphere consists of the following:
 
-* Virtual machine functionality like basic protection and disaster recovery
-* VASA Provider for VM granular management
+ONTAP tools for VMware vSphere supports:
+
+* Core virtual machine (VM) features such as protection and disaster recovery
+* VASA Provider for storage policy-based management
 * Storage policy-based management
 * Storage Replication Adapter (SRA)
+
+.High availability for ONTAP tools for VMware 
+
+ONTAP tools for VMware vSphere offers high-availability (HA) support to help maintain uninterrupted operation during failures.
+
+The HA solution helps you recover quickly from the following types of outages:
+
+* Host failure - Only a single-node failure is supported.
+* Network failure
+* Virtual machine (guest OS) failure
+* Application (ONTAP tools) failure
+
+You do not need to perform any additional configuration to enable HA for ONTAP tools for VMware vSphere.
+
+[NOTE]
+====
+ONTAP tools for VMware vSphere doesn't support vCenter HA.
+====
+
+To use the HA feature, ensure that CPU hot add and memory hot plug are enabled during deployment or later in the VM settings.

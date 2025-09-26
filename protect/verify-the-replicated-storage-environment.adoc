@@ -22,7 +22,7 @@ You should verify that the protected site and recovery site are successfully pai
 .Steps
 
 . Log in to your vCenter Server.
-. Navigate to *Site Recovery* > *Array Based Replication*.
+. Go to *Site Recovery* > *Array Based Replication*.
 . Select the required Array Pair and verify the corresponding details.
 +
 The storage systems should be discovered at the protected site and recovery site with the Status as "`Enabled`".

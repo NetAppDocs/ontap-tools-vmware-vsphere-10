@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment.'
 ---
-= Add vCenter Server instances
+= Add vCenter Server instances to ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
@@ -12,15 +12,17 @@ summary: 'Add vCenter Server instances to ONTAP tools for VMware vSphere to conf
 Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment. When you add multiple vCenter Server instances, Custom CA certificates are required for secure communication between ONTAP tools and each vCenter Server.
 //OTVDOC-271 updates -Jani
 
-*About this task*
+.About this task
 
-By integrating with vCenter, ONTAP tools enables you to perform storage tasks like provisioning, snapshots, and data protection directly from the vSphere client, eliminating the need to switch to separate storage management consoles. 
+ONTAP tools integrates with vCenter Server to perform storage tasks like provisioning, snapshots, and data protection directly from the vSphere client.
 
 .Steps
 
-. Open a web browser and navigate to the URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
+. Open a web browser and go to the URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select *vCenters* > *Add* to onboard the vCenter Server instances. Provide your vCenter IP address or hostname, username, password, and port details.
+// 10.5 updates -Jani
+. In advanced options, fetch the vCenter Server certificate automatically (authorize it) or upload it manually. 
 +
 [NOTE]
 You don’t need an admin account to add vCenter instances to ONTAP tools. You can create a custom role without the admin account with limited permissions. Refer to link:../concepts/rbac-vcenter-use.html[Use vCenter Server RBAC with ONTAP tools for VMware vSphere 10] for details.
@@ -28,7 +30,7 @@ You don’t need an admin account to add vCenter instances to ONTAP tools. You c
 
 Adding a vCenter Server instance to ONTAP tools automatically triggers the following actions:
 
-* The vCenter client plug-in is registered as a remote plug-in.
+* ONTAP tools registers the vCenter client plug-in as a remote plug-in.
 * Custom privileges for the plug-ins and APIs are applied to the vCenter Server instance.
 * Custom roles are created to manage the users.
 * The plug-in appears as a shortcut on the vSphere user interface.

@@ -11,9 +11,9 @@ summary: ''
 [.lead]
 When managing both ONTAP tools VMs and ONTAP storage systems, understanding igroup behavior is essential, especially when migrating datastores from non-ONTAP tools environments to ONTAP tools management. This section describes how igroups are updated during this transition.
 
-ONTAP tools for VMware vSphere 10.4 simplifies datastore management by automating the creation and maintenance of ONTAP and vCenter objects within VMware datacenter environments. 
+Beginning with ONTAP tools for VMware vSphere 10.4, datastore management is streamlined by automatically creating and maintaining ONTAP and vCenter objects in VMware datacenter environments.
 
-ONTAP tools for VMware vSphere 10.4 interprets igroups in two different contexts:
+ONTAP tools for VMware vSphere interprets igroups in two different contexts:
 
 // new topic for 10.5
 .Non-ONTAP tools managed igroups
@@ -24,7 +24,7 @@ image:../media/non-otv-managed.png[Non-ONTAP tools managed igroup]
 
 .ONTAP tools managed igroups
 
-When you create datastores, ONTAP tools for VMware vSphere 10.4 automatically creates igroups using a nested structure for easier LUN mapping. 
+When you create datastores, ONTAP tools for VMware vSphere automatically creates igroups using a nested structure for easier LUN mapping. 
 
 For example, when datastore1 is created and mounted on hosts 1, 2, and 3, and a new datastore (datastore2) is created and mounted on hosts 3, 4, and 5, ONTAP tools reuses the host-level igroup for efficient management.
 

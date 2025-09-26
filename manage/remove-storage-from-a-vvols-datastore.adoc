@@ -9,18 +9,22 @@ summary: 'Delete datastore action deletes the datastore when there are no vVols 
 :imagesdir: ../media/
 
 [.lead]
-Delete datastore action deletes the datastore when there are no vVols on the selected datastore.
+This section explains how to remove volumes from a vVols datastore.
+
+You can use the remove storage from datastore action on any vVols datastore that is discovered or managed by ONTAP tools for VMware vSphere in vCenter Server. 
+
+You cannot remove storage from a volume if it contains vVols; the remove option will be disabled for such volumes. When removing volumes from the datastore, you also have the option to delete the selected volumes from ONTAP storage.
 
 [NOTE]
-Shrink vVols datastore operation is not supported for ASA r2 system-based vVols datastore.
+The shrink vVols datastore operation is not supported for vVols datastores based on ASA r2 systems.
 
 .Steps
 
 . From the vSphere Client home page, select *Hosts and Clusters*.
 . In the navigation pane, select the data center that contains the datastore.
 . Right-click on the vVol datastore and select *NetApp ONTAP tools* > *Remove storage from datastore*. 
-. Select volumes which do not have vVols and select *Remove*.
+. Select volumes which don't have vVols and select *Remove*.
 +
 [NOTE]
-The option to select the volume on which the vVols is residing is disabled.
+The option to select the volume on which vVols is residing is disabled.
 . In the *Remove storage* pop-up, select *Delete volumes from ONTAP cluster* checkbox to delete the volumes from datastore and from ONTAP storage and select *Delete*.
