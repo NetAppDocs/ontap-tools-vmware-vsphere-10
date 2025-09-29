@@ -9,12 +9,12 @@ summary: 'If you have not configured the network access, all the discovered IP a
 :imagesdir: ../media/
 
 [.lead]
-If you've not configured the network access, all the discovered IP addresses from the ESXi host are added to the export policy by default. You can configure it to add a few specific IP addresses to the export policy and exclude the rest. However, when you perform a mount operation on the excluded ESXi hosts, the operation fails.
+Unless network access has been configured, all IP addresses discovered from the ESXi host are automatically included in the export policy. You can configure the policy to allow only certain IP addresses and exclude others; however, if you try to mount from an excluded ESXi host, the operation will fail.
 
 .Steps
 . Log in to the vSphere client.
 . Select *NetApp ONTAP tools* in the shortcuts page under the plug-ins section.
-. In the left pane of ONTAP tools, navigate to *Settings* > *Manage Network Access* > *Edit*. 
+. In the left pane of ONTAP tools, go to *Settings* > *Manage Network Access* > *Edit*. 
 +
 To add multiple IP addresses, separate the list with commas, range, Classless Inter-Domain Routing (CIDR), or a combination of all three.
 . Select *Save*.

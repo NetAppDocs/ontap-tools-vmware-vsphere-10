@@ -11,7 +11,7 @@ summary: 'Set up ONTAP tools for VMware vSphere with this quick start section.'
 [.lead]
 Set up ONTAP tools for VMware vSphere with this quick start section.
 
-Initially, you’ll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores. If you need to expand your configuration to use vVols datastores and high availability (HA), you’ll do so after you finish this workflow. For more information, refer to the link:../deploy/ha-workflow.html[HA deployment workflow].
+Initially, you’ll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores. To expand your configuration for additional containers per service, enhanced resiliency, or to use vVols datastores and high availability (HA), complete this workflow first and then proceed with the expansion steps. For more information, refer to the link:../deploy/ha-workflow.html[HA deployment workflow].
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Plan your deployment
@@ -85,9 +85,10 @@ Configure ONTAP tools for VMware vSphere to manage host cluster protection for S
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png[Nine] Set up backup and recovery for your ONTAP tools for VMware vSphere deployment
 [role="quick-margin-para"]
-Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
+Backup is enabled by default in ONTAP tools for VMware vSphere 10.5 and occurs every 10 minutes. Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
 
 [role="quick-margin-list"]
 
-* link:../manage/enable-backup.html[Create backup and recover the ONTAP tools setup]
-
+* link:../manage/backup-settings.html[Edit the backup settings]
+* link:../manage/recover-backup.html[Recover the ONTAP tools setup]
+//10.5 backup updates

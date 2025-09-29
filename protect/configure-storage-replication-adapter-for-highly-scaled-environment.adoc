@@ -42,7 +42,7 @@ Refer to https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-
 
 When you hit a timeout, increase the values of `storage.commandTimeout` and `storage.maxConcurrentCommandCnt` to a higher value.
 
-NOTE: The timeout interval specified is the maximum value. You do not need to wait for the maximum timeout to be reached. Most commands finish within the set maximum timeout interval.
+NOTE: The timeout interval specified is the maximum value. You don't need to wait for the maximum timeout to be reached. Most commands finish within the set maximum timeout interval.
 
 Refer to https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/9-0/how-do-i-protect-my-environment/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html[Change Storage Settings] for modifying SAN Provider settings.
 

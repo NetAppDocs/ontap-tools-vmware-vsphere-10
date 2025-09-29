@@ -78,7 +78,6 @@ You can try to migrate the VM to another host and restart.
 |097 |Uninstalling services for upgrade has failed |Use zero RPO or snapshot based recovery and retry upgrade. 
 |098 |copying dockercred secret from ntv-system to dynamic storage provisioner namespace has failed |Check the upgrade logs and retry upgrade.
 |099 |Failed to validate the new HDD addition |Add the new HDD to all the nodes in case of HA and to one node in case of non-HA deployment.
-|108 | Seeding script failed |-
 |109 |backing up persistent volume data has failed |Check the upgrade logs and retry upgrade.
 |110 |restoring persistent volume data has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
 |111 |Updating etcd timeout parameters for RKE2 has failed |Check the upgrade logs and retry upgrade.
@@ -88,6 +87,8 @@ You can try to migrate the VM to another host and restart.
 |100 |kernel rollback has failed |-
 |051 |dynamic storage provisioner upgrade has failed |Check upgrade logs and retry upgrade.	
 |056 |deleting migration backup has failed |NA
+|090 |certificate validation for storage backends and vCenter failed |
+Check upgrade logs and log file at /var/log/cert_validation_error.log and retry the upgrade.
 
 |===
 

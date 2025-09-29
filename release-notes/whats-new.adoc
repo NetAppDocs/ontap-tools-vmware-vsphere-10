@@ -1,32 +1,40 @@
 ---
 permalink: release-notes/whats-new.html
 sidebar: sidebar
-keywords: what's new, release notes, 10.4, ONTAP tools for VMware vSphere
-summary: "Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.4."
+keywords: what's new, release notes, 10.5, ONTAP tools for VMware vSphere
+summary: "Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.5."
 ---
-= What's new in ONTAP tools for VMware vSphere 10.4
+= What's new in ONTAP tools for VMware vSphere 10.5
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.4.
+Learn about the new capabilities available in ONTAP tools for VMware vSphere 10.5.
 
-[cols="30%,70%",options="header"]
-|===
-| Update | Description
+* *Platform qualification*
 
-|link:../configure/create-datastore.html[Support for ASA r2 system with 12 nodes per cluster]
-|ONTAP tools for VMware vSphere 10.4 supports workflows for ASA r2 storage systems with up to 12 nodes per cluster, improving data management efficiency and scalability. It supports vVols datastores with iSCSI and FC protocol, and VMFS datastores with iSCSI, FC, and NVMe protocol, providing flexible and enhanced storage options.
+ONTAP tools for VMware vSphere 10.5 adds support for ASA r2 systems, providing compatibility with the latest hardware and software configurations. This release also includes integration with ONTAP 9.16.1 and 9.17.1, expanding the supported environments.
 
-|link:../manage/add-ntpserver.html[ONTAP tools Manager user interface enhancements]
-|You can now enable the NTP server for precise time synchronization across the environment and configure the telemetry settings to monitor and analyze system performance from the ONTAP tools Manager interface. These settings are no longer available in the maintenance console.
+* *VMware qualification and certifications*
 
-|Enhanced security capabilities
-|Security features now offer enhanced protection and compliance with industry standards, providing a robust and user-friendly experience to help administrators manage VMware environments more effectively.
+ONTAP tools for VMware vSphere 10.5 complies with current VMware interoperability certification standards, supporting both ESXi host and vCenter Server.
 
-|link:../protect/enable-storage-replication-adapter.html[Enhanced SRA disaster recovery capabilities]
-|ONTAP tools for VMware vSphere 10.4 now supports disaster recovery operations using Site Recovery Appliance (SRA) with custom-named snapshots in addition to SnapMirror scheduled snapshot copies.
+* *MetroCluster support*
 
-|===
+This release introduces support for MetroCluster (MCC) configurations, enhancing high availability and disaster recovery capabilities.
 
+* *Security and certificate management*
 
+This release introduces streamlined management of self-signed certificates, enhancing both user experience and adherence to security standards. It provides improved certificate validation workflows to secure ONTAP and ONTAP tools for VMware vSphere communications.
+
+* *Replication enhancements*
+
+This release supports VMFS replication with hierarchical consistency group including SRA and SnapMirror active sync in ASA r2 systems. It supports zero RPO backups to improve data protection and recovery.
+
+* *Upgrade and migration*
+
+The upgrade and migration process from previous versions of ONTAP tools for VMware vSphere to ONTAP tools for VMware vSphere 10.5 is designed to be seamless and efficient, minimizing downtime and ensuring a smooth transition.
+
+== Supported ONTAP platforms and vCenter Server versions
+
+For the latest details on version compatibility, refer to https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT[NetApp Interoperability Matrix Tool^].

@@ -32,13 +32,14 @@ Use the following worksheet to gather the required information for ONTAP tools f
 |===
 |Requirement|Your value
 
-|IP address for the ONTAP tools application. This is the IP address for accessing the ONTAP tools web interface|
-|ONTAP tools virtual IP address for internal communication. This IP address is used for internal communication in a setup with multiple ONTAP tools instances. This IP address should not be same as the IP address for the ONTAP tools application.|
-|DNS hostname for the first node|
+|IP address for the ONTAP tools application. This is the IP address for accessing the ONTAP tools web interface (load balancer)|
+|ONTAP tools virtual IP address for internal communication. This IP address is used for internal communication in a setup with multiple ONTAP tools instances. This IP address should not be same as the IP address for the ONTAP tools application.(The Kubernetes Control Plane)|
+|DNS hostname for the ONTAP tools management node|
+// need to change first node to ONTAP tools management node in 10.4 as well - gloabally
 |Primary DNS server|
 |Secondary DNS server|
 |DNS search domain|
-|IPv4 address for the first node. It is a unique IPv4 address for the node management interface on the management network.|
+|IPv4 address for the ONTAP tools management node. It is a unique IPv4 address for the node management interface on the management network.|
 |Subnet mask for the IPv4 address|
 |Default gateway for the IPv4 address|
 |IPv6 address (optional) |
@@ -49,6 +50,7 @@ Use the following worksheet to gather the required information for ONTAP tools f
 
 [NOTE]
 Create DNS records for all the above IP addresses. Before assigning hostnames, map them to the free IP addresses on the DNS. All IP addresses should be on the same VLAN selected for deployment.
+// Github feedback, need to replicate in 10.4
 
 === For High availability (HA) deployment
 In addition to the single node deployment requirements, you'll need the following information for HA deployment:
@@ -64,10 +66,11 @@ In addition to the single node deployment requirements, you'll need the followin
 |===
 
 == Network firewall configuration
-Open the required ports for the IP addresses in your network firewall. ONTAP tools must be able to reach this LIF through port 443. Refer to link:../deploy/prerequisites.html[Port requirements] for latest updates.
+Ensure that the necessary firewall ports are open for all relevant IP addresses. ONTAP tools require access to the LIF via port 443. For a complete list of required ports, see the port requirements section at link:../deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits].
 
 == ONTAP storage settings
 To ensure seamless integration of ONTAP storage with ONTAP tools for VMware vSphere, consider the following settings:
 
-* If you are using the Fibre Channel (FC) for storage connectivity, configure the zoning on your FC switches to connect the ESXi hosts with the SVM's FC LIFs. https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html[Learn about FC and FCoE zoning with ONTAP systems]
+* If you're using the Fibre Channel (FC) for storage connectivity, configure the zoning on your FC switches to connect the ESXi hosts with the SVM's FC LIFs. https://docs.netapp.com/us-en/ontap/san-config/fibre-channel-fcoe-zoning-concept.html[Learn about FC and FCoE zoning with ONTAP systems]
+// github issue, need to replicate in 10.4
 * To use ONTAP tools-managed SnapMirror replication, the ONTAP storage administrator should create https://docs.netapp.com/us-en/ontap/peering/create-cluster-relationship-93-later-task.html[ONTAP cluster peer relationships] and https://docs.netapp.com/us-en/ontap/peering/create-intercluster-svm-peer-relationship-93-later-task.html[ONTAP intercluster SVM peer relationships] in ONTAP before using SnapMirror.

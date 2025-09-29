@@ -9,16 +9,16 @@ summary: 'When you select the ONTAP tools for VMware vSphere plug-in icon in the
 :imagesdir: ../media/
 
 [.lead]
-When you select the ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts like the dashboard providing you the summary of the ONTAP tools for VMware vSphere plug-in.
+Selecting the ONTAP tools for VMware vSphere plug-in icon from the shortcuts section in the vCenter client opens the overview page. This dashboard provides a summary of the ONTAP tools for VMware vSphere plug-in.
 
-In the case of Enhanced Linked Mode setup (ELM), the vCenter Server select dropdown appears and you can select a desired vCenter Server to see the data relevant to it. This dropdown is available for all the other listing views of the plugin. 
+In the case of Enhanced Linked Mode setup (ELM), the vCenter Server select dropdown appears and you can select a desired vCenter Server to see the data relevant to it. This dropdown is available for all the other listing views of the plug-in. 
 vCenter Server selection made in one page persists across the tabs of the plug-in. 
 image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
 From the overview page, you can run the *Discovery* action. Discovery action runs the discovery at vCenter level to detect any newly added or updated storage backends, hosts, datastores, and protection status/relationships. You can run an on-demand discovery of entities without having to wait for the scheduled discovery.
 
 [NOTE]
-Action button will be enabled only if you have the privilege to perform the discovery action.
+The *Discovery* action button is enabled only if you have the required privilege to perform the discovery action.
 
 After the discovery request is submitted, you can track the progress of the action in the recent tasks panel.
 

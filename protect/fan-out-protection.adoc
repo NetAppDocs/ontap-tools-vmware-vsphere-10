@@ -2,17 +2,21 @@
 permalink: protect/fan-out-protection.html
 sidebar: sidebar
 keywords:
-summary: 'In a fan out protection, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster.'
+summary: 'In a fan-out protection scenario, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster.'
 ---
-= Fan out protection
+= Fan-out protection
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-In a fan out protection, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster. 
-The create, edit, and delete SnapMirror active sync protection workflows maintain the synchronous protection. SRM failover and reprotect workflows maintain the asynchronous protection. 
+In a fan-out protection scenario, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster. 
+The create, edit, and delete SnapMirror active sync protection workflows maintain the synchronous protection. VMware Live Site Recovery appliance failover and reprotect workflows maintain the asynchronous protection. 
 
-In order to establish fan out protection you need to peer three site clusters and SVMs. 
+[NOTE]
+Fan-out is not supported for SVM user.
+// OTVDOC-317 - jani
+
+To set up fan-out protection, peer the three site clusters and SVMs. 
 
 Example:
 |===
@@ -32,11 +36,16 @@ a|
 
 |===
 
-The following diagram shows the fan out protection configuration:
-image:../media/fan-out-protection.png[Fan out protection configuration]
-image:../media/fan-out-protection-relationship.png[Fan out protection relationship]
+The following diagram shows the fan-out protection configuration:
+image:../media/fan-out-protection.png[Fan-out protection configuration]
+image:../media/fan-out-protection-relationship.png[Fan-out protection relationship]
 
-*Steps*
+.Steps
 
-. Create a new place holder datastore. Refer https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html[Select a Placeholder Datastore]
-. Add datastore to host cluster protection link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. You need to add both asynchronous and synchronous policy types.
+. Select a new place holder datastore. The placeholder datastore selection criteria for phased protection are:
+* Do not place the placeholder datastore in the host cluster you are protecting.
+* If you need to include the placeholder datastore in the host cluster, add it to VMware Live Site Recovery appliance before setting up SnapMirror active sync protection. With this setup, you can leave the placeholder datastore out of protection.
++
+For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html[Select a Placeholder Datastore]
+
+. Add datastore to the host cluster protection by following link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. Add both asynchronous and synchronous policy types.

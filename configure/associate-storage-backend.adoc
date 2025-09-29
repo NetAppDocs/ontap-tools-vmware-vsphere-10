@@ -9,12 +9,12 @@ summary: 'Associate a storage backend with the vCenter Server to create a mappin
 :imagesdir: ../media/
 
 [.lead]
-Associate a storage backend with the vCenter Server to create a mapping between the storage backend and the onboarded vCenter Server instance globally.
+Associate a storage backend with a vCenter Server instance to enable access for all vCenter Server instances. For MetroCluster configuration, when you associate a storage backend cluster, ensure you also associate its peer cluster with the vCenter Server.
 
 .Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select vCenter from the sidebar.
-. Select the vertical ellipses against the vCenter Server instance that you want to associate with the storage backends.
-. Select the storage backend from the dropdown to associate the vCenter Server instance with the required storage backend.
+. Select the vertical ellipses next to the vCenter Server instance that you want to connect to the storage backends.
+. From the dropdown menu, choose the storage backend you want to associate with the selected vCenter Server instance.

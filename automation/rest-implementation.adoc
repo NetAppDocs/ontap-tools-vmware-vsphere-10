@@ -115,7 +115,7 @@ The HTTP status codes used by the REST API are described below.
 
 |200
 |OK
-|Indicates success for calls that do not create a new resource instance.
+|Indicates success for calls that don't create a new resource instance.
 
 |201
 |Created
@@ -143,7 +143,7 @@ The HTTP status codes used by the REST API are described below.
 
 |404
 |Not found
-|The resource referred to in the request does not exist.
+|The resource referred to in the request doesn't exist.
 
 |409
 |Conflict

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'vCenters are central management platforms that allow you to control hosts, virtual machines, and storage backends.'
 ---
-= Manage vCenter Server instances
+= Manage vCenter Server instances in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
@@ -30,15 +30,17 @@ Follow the steps below to modify a vCenter Server instances.
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the applicable vCenter Server instance from the sidebar
 . Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
-. Modify the vCenter Server instance details and select *Modify*.
+. In the *Modify vCenter* window, enter the username, password, and port details. 
+. Upload the certificate  and select *Modify*.
+// 10.5 updates -Jani - need to add details like when you need to add the certificate and update it. How to get this certificate. 
 
 == Remove a vCenter Server instance
-You need to remove all the storage backends attached to the vCenter Server before removing it. 
+Remove all storage backends from the vCenter Server before removing it.
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the applicable vCenter Server instances from the sidebar
-. Select the vertical ellipses against the vCenter Server that you want remove and select *Remove*.
+. Select the vertical ellipses against the vCenter Server that you want to remove and select *Remove*.
 +
 [NOTE]
 After you remove vCenter Server instances, they will no longer be maintained by the application.

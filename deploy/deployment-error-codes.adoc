@@ -4,15 +4,49 @@ sidebar: sidebar
 keywords: upgrade
 summary: 'This page outlines the error codes for the deployment, reboot, and recovery operations of ONTAP tools for VMware vSphere system.'
 ---
-= Deployment error codes
+= Troubleshoot deployment errors
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+If you experience deployment issues, review the logs and error codes to diagnose and resolve problems. Starting with ONTAP tools for VMware vSphere 10.5, log bundles collected from the pods include logs from MongoDB, RabbitMQ, and Vault, along with the status and descriptions of all pods. These are provided in addition to the existing ONTAP tools service logs, enhancing supportability and troubleshooting.
+
+== Collect the log files
+
+You can collect log files for ONTAP tools for VMware vSphere from the options available in ONTAP tools Manager user interface. Technical support might ask you to collect the log files to help troubleshoot a problem.
+
+[NOTE]
+Generating logs from the ONTAP tools Manager includes all logs for all vCenter Server instances. Generating logs from the vCenter client user interface are scoped for the selected vCenter Server.
+
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Select *Log Bundles* from the sidebar.
++
+This operation can take several minutes.
+. Select *Generate* to generate the log files.
+. Enter the label for the Log Bundle and select *Generate*.
++
+Download the tar.gz file and send it to technical support. 
+
+Follow the steps below to generate log bundle using the vCenter client user interface:
+
+.Steps
+
+. Log in to the vSphere client.
+. From the vSphere Client home page, go to *Support* > *Log bundle* > *Generate*.
+. Provide the log bundle label and generate the log bundle.
+You can see the download option when the files are generated. Downloading might take some time.
+
+[NOTE]
+The log bundle generated replaces the log bundle that was generated within the last 3 days or 72 hrs.
+
+== Deployment error codes
 You might encounter error codes during ONTAP tools for VMware vSphere deployment, reboot, and recovery operations. 
 The error codes are five digits long, where the first two digits represent the script that encountered the issue, and the last three digits represent the specific workflow within that script.
 
-All error logs are recorded in the ansible-perl-errors.log file to facilitate easy tracking and resolution of issues. This log file contains the error code and the failed Ansible task. 
+All error logs are recorded in the ansible-perl-errors.log file under the /var/log directory to facilitate easy tracking and resolution of issues. This log file contains the error code and the failed Ansible task.
 [NOTE]
 The error codes provided on this page are for reference only. Contact the support team if error persists or if there's no resolution mentioned.
 
@@ -72,4 +106,5 @@ sudo rke2-uninstall.sh (all VMs).
 |Failed to Update New Maint/Console user password in vault. |-
 |088 |Configuring log rotate for journald has failed. |Check the VM network settings that is compatible with the host on which the VM is hosted. You can try to migrate to another host and restart the VM.
 |089 |Changing ownership of summary log rotate config file has failed. |Restart the VM.
+
 |===
