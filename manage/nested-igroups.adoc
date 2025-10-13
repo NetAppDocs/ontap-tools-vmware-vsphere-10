@@ -9,9 +9,9 @@ summary: ''
 :imagesdir: ../media/
 
 [.lead]
-When managing both ONTAP tools VMs and ONTAP storage systems, understanding igroup behavior is essential, especially when migrating datastores from non-ONTAP tools environments to ONTAP tools management. This section describes how igroups are updated during this transition.
+If you manage both ONTAP tools VMs and ONTAP storage systems, it is important to understand how igroups behave, especially when moving datastores from environments not managed by ONTAP tools to those that are. This section explains how igroups are updated during this process.
 
-Beginning with ONTAP tools for VMware vSphere 10.4, datastore management is streamlined by automatically creating and maintaining ONTAP and vCenter objects in VMware datacenter environments.
+ONTAP tools for VMware vSphere 10.4 and later version automatically creates and maintains ONTAP and vCenter objects to simplify datastore management in VMware datacenter environments.
 
 ONTAP tools for VMware vSphere interprets igroups in two different contexts:
 
@@ -42,7 +42,7 @@ With the nested igroup approach, LUNs are mapped only to the child igroups. vCen
 
 *When you create a datastore with a custom igroup name*
 
-During datastore creation in ONTAP tools, you can enter a custom igroup name instead of selecting from the dropdown. ONTAP tools then creates a parent igroup at the datastore level using your specified name. If the same host is used for multiple datastores, the existing host-level (child) igroup is reused. As a result, the LUN for the new datastore is mapped to this existing child igroup, which might now be associated with multiple parent igroups (one for each datastore). The vCenter Server user interface datastore list confirms the successful creation of the new datastore with the custom igroup name.
+During datastore creation in ONTAP tools, you can enter a custom igroup name instead of selecting from the dropdown. ONTAP tools then creates a parent igroup at the datastore level using your specified name. If the same host is used for multiple datastores, the existing host-level (child) igroup is reused. As a result, the LUN for the new datastore is mapped to this existing child igroup, which might now be associated with multiple parent igroups (one for each datastore). You can see the new datastore with the custom igroup name in the vCenter Server interface.
 
 *When you reuse the igroup name during datastore creation*
 
@@ -60,11 +60,11 @@ To manage an existing datastore and igroup with ONTAP tools, you should perform 
 
 image:../media/otv-ds.png[Datastore and igroup managed by ONTAP tools]
 
-You can create a datastore directly in vCenter Server and later bring it under ONTAP tools management. First, create a flat igroup in ONTAP systems and map a LUN to it. After running datastore discovery in ONTAP tools, the flat igroup is converted to a nested structure. ONTAP tools then manages the igroup, renaming it with the 'otv_' prefix. The LUN remains mapped to the same igroup throughout this process.
+After you run datastore discovery in ONTAP tools, ONTAP tools converts the flat igroup to a nested structure. ONTAP tools then manages the igroup, renaming it with the 'otv_' prefix. The LUN remains mapped to the same igroup throughout this process.
 
 *How ONTAP tools reuse igroups created natively*
 
-You can provision a datastore in ONTAP tools using an igroup originally created in ONTAP systems, after it is managed by ONTAP tools. These igroups appear in the custom initiator group name drop-down list. The new LUN for the datastore is then mapped to the corresponding normalized child igroup, such as "otv_NativeIgroup1".
+You can create a datastore in ONTAP tools using an igroup that was first created in ONTAP systems, after ONTAP tools manages it. These igroups appear in the custom initiator group name drop-down list. The new LUN for the datastore is then mapped to the corresponding normalized child igroup, such as "otv_NativeIgroup1".
 
 ONTAP tools for VMware vSphere does not detect or use igroups created in ONTAP system that are not managed by ONTAP tools or linked to a datastore.
 
