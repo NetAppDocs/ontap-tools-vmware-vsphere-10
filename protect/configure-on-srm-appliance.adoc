@@ -20,6 +20,10 @@ Configuring SRA on the VMware Live Site Recovery appliance saves the ONTAP tools
 * Add vCenter Servers to the ONTATP tools for VMware vSphere appliance. For more information, refer the link:../configure/add-vcenter.html[Add vCenter Servers] section.
 * Add storage backends to ONTAP tools for VMware vSphere. For more information, refer the link:../configure/add-storage-backend.html[Add storage backends] section.
 
+[NOTE]
+If you have applied the vCenter certificate patch from ONTAP tools, update the vCenter configuration in the VMware Live Site Recovery appliance using the (:5480) port. For instructions, refer https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-installation-and-configuration-8-8/reconfiguring-the-site-recovery-manager-virtual-appliance/reconfigure-the-site-recovery-manager-appliance.html[Reconfigure the Site Recovery Manager Appliance].
+
+// added the note for OTVDOC-319 - jani
 .Steps
 //On vSphere client menu, select NetApp ONTAP tools > Settings > Administrative Settings > Manage Capabilities > Enable Storage Replication Adapter (SRA) 
 //Github issue 54
