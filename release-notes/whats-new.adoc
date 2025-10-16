@@ -21,7 +21,7 @@ ONTAP tools for VMware vSphere 10.5 complies with current VMware interoperabilit
 
 * *MetroCluster support*
 
-This release introduces support for MetroCluster (MCC) configurations, enhancing high availability and disaster recovery capabilities.
+This release introduces support for MetroCluster configurations, enhancing high availability and disaster recovery capabilities.
 
 * *Security and certificate management*
 

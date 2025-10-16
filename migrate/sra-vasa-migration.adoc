@@ -23,7 +23,9 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 . Onboard the storage backend locally from the vCenter server APIs for the ONTAP tools plug-in.
 . Issue the following API from Swagger or in Postman to migrate. 
 +
+----
 curl -X POST `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/{vcguid}/migration-jobs`
+----
 +
 You can access Swagger through this URL: `\https://$FQDN_IP_PORT/`, for example: `\https://10.67.25.33:8443/`.
 +
@@ -46,6 +48,7 @@ Asynchronous
 
 *Curl example*
 
+----
 curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
 --header 'x-auth: <auth_token>' \
 --header 'Content-Type: application/json' \
@@ -57,9 +60,9 @@ curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/m
   },
   "database_password": "******"
 }'
-
+----
 Request body for other release migration: 
-
+----
 {
   "otv_ip": "xx.xx.xx.xx",
   "vasa_provider_credentials": {
@@ -67,24 +70,25 @@ Request body for other release migration:
     "password": "*******"
   }
 }
+----
 
 *JSON output example*
 
-A job object is returned. You should save the job identifier to use it in the next step.
-
+The system returns a job object. Save the job identifier to use it in the next step.
+----
 {
   "id": 123,
   "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
   "status": "running"
 }
-
+----
 ====
 . Use the following URI in Swagger to check the status:
 +
 ----
 curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobID>?includeSubJobsAndTasks=true`
 ----
-After completing the job, review the migration report. This report is included in the job data and can be accessed from the job response.
+After the job completes, review the migration report in the job response.
 . Add the ONTAP tools for VMware vSphere storage provider to the vCenter Server and link:../configure/registration-process.html[Register the VASA Provider] with ONTAP tools for VMware vSphere.
 . link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from the maintenance console.
@@ -93,7 +97,7 @@ After completing the job, review the migration report. This report is included i
 don't delete the VASA Provider.
 +
 After the old VASA Provider is stopped, the vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
-. The NFS and VMFS datastores migrated from ONTAP tools for VMware vSphere 9.xxx are visible in ONTAP tools for VMware vSphere 10.5 only after the datastore discovery job is triggered, which might take up to 30 minutes to complete. Verify that the datastores are visible on the overview page of the ONTAP tools for the VMware vSphere plug-in user interface page.
+. Migrated NFS and VMFS datastores appear in ONTAP tools for VMware vSphere 10.5 after the datastore discovery job, which may take up to 30 minutes. Check their visibility on the overview page.
 . Perform the patch migration using the following API in Swagger or in Postman:
 +
 ====
@@ -115,18 +119,19 @@ This REST API call uses the following method and endpoint.
 Asynchronous
 
 *Curl example*
-
+----
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/84dr73bd-9173-65r7-w345-8ufdbb887d43`
-
+----
 *JSON output example*
 
 A job object is returned. You should save the job identifier to use it in the next step.
-
+----
 {
   "id": 123,
   "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
   "status": "running"
 }
+----
 // URI <https://10.60.24.125:8443/virtualization/api/v1/migration/migrate>
 
 The request body is empty for patch operation.
@@ -142,18 +147,18 @@ After running the patch migration API, all VMs comply with the storage policy.
 
 After completing the migration and registering ONTAP tools 10.5 to the vCenter Server, follow these steps:
 
-* Wait for *Discovery* to complete, the certificates will be refreshed automatically on all the hosts.
-* Allow sufficient time before initiating datastore and virtual machine operations. The required waiting period varies based on the number of hosts, datastores, and virtual machines within the configuration. Failure to wait might result in intermittent operational failures.
+* Wait for *Discovery* to complete, and the system refreshes the certificates automatically on all the hosts.
+* Wait before starting datastore and virtual machine operations. The waiting time depends on the number of hosts, datastores, and virtual machines. If you do not wait, you might see occasional failures.
 
 After upgrading, if the virtual machine's compliance state is outdated, reapply the storage policy using the following steps:
 
 . Go to the datastore and select *Summary* > *VM Storage policies*.
 +
-The compliance status under *VM storage policy compliance* shows as *Out-of-date*.
-. Select the Storage VM policy and the corresponding VM
-. Select *Apply*
+The system shows the compliance status under *VM storage policy compliance* as *Out-of-date*.
+. Select the Storage VM policy and the corresponding VM.
+. Select *Apply*.
 +
-The compliance status under *VM storage policy compliance* is now shown as compliant.
+The compliance status under *VM storage policy compliance* shows as compliant.
 
 // updated for OTVDOC-192
 .Related information
@@ -179,4 +184,6 @@ Don't begin migration if the failover has been completed but the re-protection i
 . Perform these steps on both protection and recovery sites.
 .. link:../manage/enable-services.html[Enable ONTAP tools for VMware vSphere services]
 .. Configure ONTAP tools for VMware vSphere 10.5 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
-.. On the VMware Live Site Recovery user interface page, perform the *Discover Arrays* and *Discover Devices* operations and confirm that the devices are displayed as before the migration.
+.. On the VMware Live Site Recovery interface, run *Discover Arrays* and *Discover Devices*. Confirm devices display as before migration.
+
+//NADIAA checked

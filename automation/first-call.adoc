@@ -74,11 +74,12 @@ After you have an access token, you can use curl to issue a REST API call. Inclu
 .Curl example
 
 [source,curl]
+----
 curl --request GET \
 --location "https://$FQDN_IP_PORT/virtualization/api/v1/vcenters" \
 --header "Accept: */*" \
 --header "x-auth: $ACCESS_TOKEN"
-
+----
 The JSON response includes a list of the VMware vCenter instances configured to the ONTAP tools Manager.
 
 // January 16 2025 - OTVDOC-179
