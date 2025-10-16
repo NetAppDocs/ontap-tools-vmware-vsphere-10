@@ -11,16 +11,17 @@ summary: 'Upgrade is supported for both HA and non-HA deployments.'
 [.lead]
 You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. However, to upgrade from ONTAP tools 10.0, 10.1, or 10.2 to 10.5, you must first upgrade to 10.3 or 10.4 before proceeding to 10.5.
 
-NOTE:
-
+[NOTE]
+--
 * For ASA r2 systems, make sure you upgrade to ONTAP tools for VMware vSphere to 10.5 and ONTAP to 9.16.1, before setting up more storage availability zones (SAZs).
 // https://jira.ngage.netapp.com/browse/OTVDOC-254 updates
-* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, you can not roll back. Use low RPO or snapshot recovery to restore the setup. For ONTAP tools for VMware vSphere 10.2 and earlier, use zero-RPO to restore the setup.
+* If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, you cannot roll back. Use low RPO or snapshot recovery to restore the setup. For ONTAP tools for VMware vSphere 10.2 and earlier, use zero-RPO to restore the setup.
+--
 
 .Before you begin
 
-* Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If it expires sooner, the upgrade fails.
-* To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If your certificates lack SAN entries and you need to proceed with the upgrade, you can set the certificate validation flag to false to bypass SAN checks in prompt during upgrade.
+* Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If the certificates expire sooner, the upgrade fails.
+* To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If certificates lack SAN entries, set the certificate validation flag to false to bypass SAN checks during the upgrade.
 // 10.5 updates - Jani certificate feature.
 * Ensure you have a fifth disk with a capacity of 100 GB on all nodes.
 * Verify that the node configuration matches the specifications in the table below.
@@ -111,3 +112,5 @@ After upgrading you can:
 
 link:../migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.xx to 10.5]
 // OTVDOC-164 - jani
+
+// NADIAA checked

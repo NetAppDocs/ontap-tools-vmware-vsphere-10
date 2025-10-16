@@ -20,8 +20,9 @@ You should pair the protected and recovery sites created using your vSphere Clie
 
 // note added for 10.4
 [NOTE]
-Storage Replication Adapter (SRA) supports fan-out with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two async SnapMirror on consistency group or fan-out SnapMirrors on Volume is not supported. 
+Storage Replication Adapter (SRA) supports fan-out with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two async SnapMirror on consistency group or fan-out SnapMirrors on Volume is not supported. Vault type SnapMirror relationships are not considered within these fan-out restrictions.
 
+// updated the note for OTVDOC-323 - jani
 .Before you begin
 
 * You should have VMware Live Site Recovery installed on the protected and recovery sites.

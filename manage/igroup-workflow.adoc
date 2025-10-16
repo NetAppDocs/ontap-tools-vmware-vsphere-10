@@ -12,8 +12,8 @@ summary: ''
 Initiator groups (igroups) are tables of FC protocol host World Wide Port Name (WWPNs) or iSCSI host qualified node names. You can define igroups and map them to LUNs to control which initiators have access to LUNs.
 
 In ONTAP tools for VMware vSphere 9.x, igroups were created and managed in a flat structure, where each datastore in vCenter was associated with a single igroup. This model limited flexibility and reuse of igroups across multiple datastores.
-ONTAP tools for VMware vSphere introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across multiple datastores, enabling more flexible and interconnected management of igroups. 
-Understanding the igroup workflow is essential for managing LUNs and datastores effectively in ONTAP tools for VMware vSphere.
+ONTAP tools for VMware vSphere introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across datastores to make igroup management easier.
+Understand the igroup workflow to manage LUNs and datastores in ONTAP tools for VMware vSphere.
 Different workflows generate varying igroup configurations, as shown in the following examples:
 [NOTE]
 The names mentioned are for illustration purposes only and don't refer to real igroup names. ONTAP tools managed igroups use the prefix “otv_”. Custom igroups can be given any name.
@@ -40,7 +40,7 @@ Create datastore on a single host with one initiator
 * DS1Igroup:
 ** host1Igroup → (iqn1: lun1)
 
-A parent igroup DS1Igroup is created on the ONTAP systems for DS1, with a child igroup host1Igroup mapped to lun1. LUNs are always mapped to child igroups.
+ONTAP creates the parent igroup DS1Igroup for DS1 and maps the child igroup host1Igroup to lun1. The system always maps LUNs to child igroups.
 
 .Example 2:
 
@@ -54,7 +54,7 @@ Mount existing datastore to an additional host
 ** host1Igroup → (iqn1: lun1)
 ** host2Igroup → (iqn2: lun1)
 
-A child igroup host2Igroup is created and added to the existing parent igroup DS1Igroup.
+ONTAP tools for VMware vSphere create a child igroup host2Igroup and add it to the existing parent igroup DS1Igroup.
 
 .Example 3:
 
@@ -67,7 +67,7 @@ Unmount a datastore from a host
 * DS1Igroup:
 ** host2Igroup → (iqn2: lun1)
 
-The host1Igroup is removed from the hierarchy. Child igroups aren't explicitly deleted. Deletion occurs under these two conditions:
+ONTAP tools for VMware vSphere remove host1Igroup from the hierarchy. The system does not explicitly delete child igroups. It deletes them under these two conditions:
 
 •  If no LUNs are mapped, the ONTAP system deletes the child igroup.
 •  A scheduled cleanup job removes the dangling child igroups with no LUN mappings.
@@ -84,7 +84,7 @@ Delete datastore
 * DS1Igroup:
 ** host2Igroup → (iqn2: lun1)
 
-Parent and child igroups are removed if another datastore doesn't reuse the parent igroup. Child igroups are never explicitly deleted
+Parent and child igroups are removed unless another datastore reuses the parent igroup. Child igroups are not explicitly deleted
 
 .Example 5:
 
@@ -194,15 +194,15 @@ This ensures compliance with the hierarchical model.
 https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html[About igroups]
 
 == Export policies
-Export policies control access to NFS datastores in ONTAP tools for VMware vSphere. They define which clients can access the datastores and what permissions they have.
-Export policies are created and managed in ONTAP systems and can be associated with NFS datastores to enforce access control. Each export policy consists of rules that specify the clients (IP addresses or subnets) that are allowed access and the permissions granted (read-only or read-write).
+Export policies control NFS datastore access and client permissions in ONTAP tools for VMware vSphere.
+Export policies are created and managed in ONTAP systems and can be used with NFS datastores to enforce access control. Each export policy consists of rules that specify the clients (IP addresses or subnets) that are allowed access and the permissions granted (read-only or read-write).
 
 When you create an NFS datastore in ONTAP tools for VMware vSphere, you can select an existing export policy or create a new one. The export policy is then applied to the datastore, ensuring only authorized clients can access it.
 
 When you mount an NFS datastore on a new ESXi host, ONTAP tools for VMware vSphere adds the host's IP address to the existing export policy associated with the datastore. This allows the new host to access the datastore without creating a new export policy.
 
 When you delete or unmount an NFS datastore from an ESXi host, ONTAP tools for VMware vSphere removes the host's IP address from the export policy. If no other hosts are using that export policy, it will be deleted.
-When you delete an NFS datastore, ONTAP tools for VMware vSphere removes the export policy associated with that datastore if it is not reused by any other datastores. If the export policy is reused, it retains the host IP address and remains unchanged.
+When you delete an NFS datastore, ONTAP tools for VMware vSphere removes the export policy associated with that datastore if it is not reused by any other datastores. If the export policy is reused, it keeps the host IP address and does not change.
 When you delete the datastores, the export policy unassigns the host IP address and assigns a default export policy, so that the ONTAP systems can access them if required.  
 
 Assigning the export policy differs when it is reused across different datastores. When you reuse the export policy, you can append the policy with the new host IP address. When you delete or unmount a datastore that uses a shared export policy, the policy will not be deleted. It remains unchanged, and the host IP address is not removed, because it is shared with the other datastores. Reusing export policies is not recommended, because it can lead to access and latency issues.

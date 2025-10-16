@@ -11,11 +11,11 @@ summary: 'When you select the ONTAP tools for VMware vSphere plug-in icon in the
 [.lead]
 Selecting the ONTAP tools for VMware vSphere plug-in icon from the shortcuts section in the vCenter client opens the overview page. This dashboard provides a summary of the ONTAP tools for VMware vSphere plug-in.
 
-In the case of Enhanced Linked Mode setup (ELM), the vCenter Server select dropdown appears and you can select a desired vCenter Server to see the data relevant to it. This dropdown is available for all the other listing views of the plug-in. 
-vCenter Server selection made in one page persists across the tabs of the plug-in. 
+In Enhanced Linked Mode (ELM), the vCenter Server dropdown appears. Choose a vCenter Server to view its data. The dropdown is available in all listing views of the plug-in.
+When you select a vCenter Server on one page, it stays the same when you switch tabs in the plug-in.
 image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
-From the overview page, you can run the *Discovery* action. Discovery action runs the discovery at vCenter level to detect any newly added or updated storage backends, hosts, datastores, and protection status/relationships. You can run an on-demand discovery of entities without having to wait for the scheduled discovery.
+From the overview page, you can run the *Discovery* action. The discovery action detects newly added or updated storage backends, hosts, datastores, and protection status or relationships at the vCenter level. Run on-demand discovery without waiting for the scheduled discovery.
 
 [NOTE]
 The *Discovery* action button is enabled only if you have the required privilege to perform the discovery action.
@@ -46,6 +46,6 @@ In case of ASA r2 storage systems, the capacity data is not shown because it is 
 |This card shows the top 10 datastores sorted by a performance metric.
 You can select the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a Datastore type drop-down to select the type of the datastores - NFS, VMFS, or vVols.
 |ESXi Host compliance card
-|This card shows overall compliance status of all ESXi hosts (for the selected vCenter) settings with respect to the recommended NetApp host settings by settings group/category.
+|This card shows if all ESXi hosts (for the selected vCenter) follow the recommended NetApp host settings by group or category.
 You can select *Apply Recommended Settings* link to apply the recommended settings. You can select the compliant status of the hosts to see the list of hosts.
 |===
