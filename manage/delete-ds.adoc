@@ -40,6 +40,5 @@ You cannot delete a datastore used by virtual machines. Move virtual machines to
 [NOTE]
 For VMFS datastores on unified ONTAP storage that are part of a protected host cluster, you cannot delete the volume from the ONTAP cluster.
 
-When a datastore is deleted, parent igroups remain on the ONTAP system. Child igroups that are not mapped to any LUNs are automatically deleted. ONTAP tools regularly remove unmapped default parent igroups using a daily cleanup process. If you have custom parent igroups, you must delete them manually in ONTAP. Any remaining parent igroups become stale and cannot be reused by ONTAP tools.
+When you delete an NFS, VMFS, or vVols datastore, parent igroups remain on the ONTAP system. Child igroups that are not mapped to any LUNs are deleted automatically. ONTAP tools perform a daily cleanup to remove unmapped default parent igroups. Custom parent igroups must be deleted manually in ONTAP. Any remaining parent igroups become stale and cannot be reused by ONTAP tools.
 // update this para for OTVDOC-321 - jani
-
