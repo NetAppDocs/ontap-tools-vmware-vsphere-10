@@ -9,10 +9,9 @@ summary: 'The storage view shows the list of vVols that are created by the virtu
 :imagesdir: ../media/
 
 [.lead]
+The storage view shows the list of vVols that the virtual machine creates. 
 
-The storage view shows the list of vVols that are created by the virtual machine. 
-
-NOTE: This view is applicable for the VM which has at least one ONTAP tools for VMware vSphere managed vVols datastore related disk mounted on it.
+NOTE: This view applies to VMs with at least one disk from an ONTAP tools for VMware vSphere managed vVols datastore.
 
 .Steps
 
@@ -21,3 +20,5 @@ NOTE: This view is applicable for the VM which has at least one ONTAP tools for 
 . Select *NetApp ONTAP tools* > *Storage*. The *Storage* details appear on the right pane. You can see the list of vVols that are present on the VM.
 +
 You can use the 'Manage Columns' option to hide or show different columns.
+
+//NADIAA checked

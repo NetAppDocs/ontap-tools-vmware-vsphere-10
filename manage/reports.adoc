@@ -14,8 +14,10 @@ When you select the NetApp ONTAP tools for VMware vSphere plug-in icon in the sh
 Select the Reports tab to view the virtual machine and the datastores report.
 
 The virtual Machines report shows the list of discovered virtual machines (should have at least one disk from ONTAP storage based datastores) with performance metrics.
-When you expand the VM record, all the disk related datastore info is displayed.
+When you expand the VM record, the interface displays all the disk-related datastore information.
 
-Datastores report shows the list of discovered or recognized ONTAP tools for VMware vSphere managed Datastores that are provisioned from ONTAP storage backend of all types with performance metrics.
+The datastores report lists ONTAP tools for VMware vSphere discovered or recognized datastores that use any ONTAP storage, with performance metrics.
 
 You can use the Manage Columns option to hide or show different columns.
+
+// NADIAA checked

@@ -13,11 +13,11 @@ You need to start SSH on other nodes before you upgrade.
 
 .Before you begin
 
-The VASA Provider extension should be enabled for your vCenter Server instance.
+Enable the VASA Provider extension for your vCenter Server instance.
 
-*About this task*
+.About this task
 
-Perform this procedure on each of the nodes before you upgrade.
+Repeat this procedure on each node before upgrading.
 
 .Steps
 
@@ -27,3 +27,5 @@ Perform this procedure on each of the nodes before you upgrade.
 . Enter `1` to select Access diagnostic shell.
 . Enter `y` to proceed.
 . Run the command _sudo systemctl restart ssh_.
+
+// NADIAA checked
