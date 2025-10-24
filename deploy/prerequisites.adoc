@@ -84,13 +84,18 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 The following table outlines the network ports that NetApp uses and their purposes. 
 There are three different types of ports:
 
-* Internal Ports: These ports are intended for communication strictly within the Kubernetes cluster, usually bound to ClusterIP addresses. They support interactions between internal services and are not exposed to external networks by default. To ensure security, configure firewall rules to prevent external access, even in case of misconfiguration. These ports are needed for internal communication. No need to add these ports in firewall rules.
-* External Ports: These ports are accessible from outside the Kubernetes cluster or node. They allow services to communicate with external networks or users, enabling integration with systems outside the cluster environment.
-* Inter-node Ports: These ports enable communication between nodes within the Kubernetes cluster. They are essential for internal cluster operations, such as data exchange and coordination. For single-node deployments, inter-node ports are used only within the node and do not require external access.
+* Internal ports: These ports are intended for communication strictly within the Kubernetes cluster, usually bound to ClusterIP addresses. They support interactions between internal services and are not exposed to external networks by default. To ensure security, configure firewall rules to prevent external access, even in case of misconfiguration. These ports are needed for internal communication. No need to add these ports in firewall rules.
+* External ports: These ports are accessible from outside the Kubernetes cluster or node. They allow services to communicate with external networks or users, enabling integration with systems outside the cluster environment.
+* Inter-node ports: These ports enable communication between nodes within the Kubernetes cluster. They are essential for internal cluster operations, such as data exchange and coordination. For single-node deployments, inter-node ports are used only within the node and do not require external access.
 
 [NOTE]
 Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterrupted communication with each other.
 // JIRA OTVDOC-305 fix
+
+++++
+<details>
+<summary>Click to expand port requirements table</summary>
+++++
 
 |===
 |*Service/Component name* |*Port* |*Protocol* |*Port Type* |*Description*
@@ -111,11 +116,14 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 |kube-apiserver |6443 |TCP |External |Kubernetes API server port (Restrict to trusted networks).
 |rke2 server |9345 |TCP |External |RKE2 supervisor API (Restrict to trusted networks).
 |containerd |10010 |TCP |Internal |Container daemon service.
-|VXLAN (Flannel) |8472 |UDP |Internal|Overlay network for pod communication
+|VXLAN (Flannel) |8472 |UDP |Internal|Overlay network for pod communication.
+|Storage |6789-7300 |TCP |Internal |Inter-node distributed cluster data plane.
 |===
 
 [NOTE]
-For HA deployments using overlay networking, ensure UDP port 8472 is open between all nodes. This port enables Pod-to-Pod communication across nodes; blocking it will interrupt inter-node networking.
+For HA deployments using overlay networking, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
+
+</details>
 
 // |8143 |TCP|HTTP/HTTPS connections for ONTAP tools.
 // |8043|TCP|HTTP/HTTPS connections for ONTAP tools.

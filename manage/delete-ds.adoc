@@ -42,4 +42,5 @@ For VMFS datastores on unified ONTAP storage that are part of a protected host c
 
 When you delete an NFS, VMFS, or vVols datastore, parent igroups remain on the ONTAP system. Child igroups that are not mapped to any LUNs are deleted automatically. ONTAP tools perform a daily cleanup to remove unmapped default parent igroups. Delete the custom parent igroups manually in ONTAP. ONTAP tools cannot reuse stale parent igroups.
 
+// OTVDOC-321 - jani
 //NADIAA checked
