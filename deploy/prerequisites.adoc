@@ -104,9 +104,9 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 
 |ntv-gateway-svc (LB) |443, 8443 |TCP |External |Pass through port for incoming communication for the VASA Provider service. VASA Provider self-signed certificate and custom CA certificate are hosted on this port.
 |SSH |22 |TCP |External |Secure Shell for remote server login and command execution.
+|ntv-gateway-svc |30000-32767 |TCP |NodePort |NodePort port range for cluster internal connections.
 |rke2 server |9345 |TCP |Internal |RKE2 supervisor API (Restrict to trusted networks).
 |kube-apiserver |6443 |TCP |Internal |Kubernetes API server port (Restrict to trusted networks).
-|ntv-gateway-svc |30000-32767 |TCP |NodePort |NodePort port range for cluster internal connections.
 |rpcbind/portmapper |111 |TCP/UDP |Internal |Used for RPC communication between services.
 |coredns (DNS) |53 |TCP/UDP |Internal |Domain Name System (DNS) service for name resolution within the cluster.
 |NTP |123 |UDP |Internal |Network Time Protocol (NTP) for time synchronization.
