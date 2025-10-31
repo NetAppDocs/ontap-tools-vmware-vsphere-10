@@ -9,7 +9,7 @@ summary: 'Delete datastore action deletes the datastore. In the case of NFS or V
 :imagesdir: ../media/
 
 [.lead]
-This section describes how to delete NFS, VMFS, or vVols datastores using ONTAP tools in the vCenter Server.
+This page describes how to delete NFS, VMFS, or vVols datastores using ONTAP tools in the vCenter Server.
 
 When you delete a datastore, the following actions are performed depending on the datastore type:
 

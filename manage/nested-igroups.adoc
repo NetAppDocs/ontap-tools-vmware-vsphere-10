@@ -9,7 +9,7 @@ summary: ''
 :imagesdir: ../media/
 
 [.lead]
-If you manage both ONTAP tools VMs and ONTAP storage systems, it is important to understand how igroups behave, especially when moving datastores from environments not managed by ONTAP tools to those that are. This section explains how igroups are updated during this process.
+If you manage both ONTAP tools VMs and ONTAP storage systems, it is important to understand how igroups behave, especially when moving datastores from environments not managed by ONTAP tools to those that are. This page explains how igroups are updated during this process.
 
 ONTAP tools for VMware vSphere 10.4 and later version automatically creates and maintains ONTAP and vCenter objects to simplify datastore management in VMware datacenter environments.
 

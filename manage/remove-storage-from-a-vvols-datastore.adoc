@@ -9,7 +9,7 @@ summary: 'Delete datastore action deletes the datastore when there are no vVols 
 :imagesdir: ../media/
 
 [.lead]
-This section explains how to remove volumes from a vVols datastore.
+This page explains how to remove volumes from a vVols datastore.
 
 Use the remove storage from datastore action on any vVols datastore managed by ONTAP tools in vCenter Server.
 
