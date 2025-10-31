@@ -24,4 +24,8 @@ When you add a new ESXi host using the https://techdocs.broadcom.com/us/en/vmwar
 
 The recent task panel displays the progress.
 
+.Related topic
+
+link:../manage/add-vsphere-host.html[Add new VMware vSphere hosts]
+
 //NADIAA checked

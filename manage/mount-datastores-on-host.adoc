@@ -33,4 +33,8 @@ When you add a new ESXi host using the https://techdocs.broadcom.com/us/en/vmwar
 .What's next?
 You can track the progress in the recent task panel.
 
-//NADIAA checked
+.Related topic
+
+link:../manage/add-vsphere-host.html[Add new VMware vSphere hosts]
+
+// NADIAA checked
