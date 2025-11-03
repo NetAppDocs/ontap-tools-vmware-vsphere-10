@@ -125,8 +125,6 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 [NOTE]
 For HA deployments, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
 
-</details>
-
 // |8143 |TCP|HTTP/HTTPS connections for ONTAP tools.
 // |8043|TCP|HTTP/HTTPS connections for ONTAP tools.
 // |9060|TCP|HTTP/HTTPS connections for ONTAP tools.
