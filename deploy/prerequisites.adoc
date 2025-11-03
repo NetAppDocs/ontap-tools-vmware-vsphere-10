@@ -84,11 +84,9 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 The following table outlines the network ports that NetApp uses and their purposes. 
 There are three different types of ports:
 
-* Internal ports: These ports communicate within the Kubernetes cluster using ClusterIP addresses. They are not exposed externally and do not need to be added to firewall rules.
-[NOTE]
-Internal ports require node-to-node communication within the cluster.
 * External ports: These ports are accessible from outside the Kubernetes cluster or node. They allow services to communicate with external networks or users, enabling integration with systems outside the cluster environment.
 * Inter-node ports: These ports enable communication between nodes within the Kubernetes cluster. They are needed for cluster tasks like sharing data and working together. For single-node deployments, inter-node ports are used only within the node and do not need external access. Inter-node ports can accept traffic from outside the cluster. Block inter-node ports from internet access with firewall rules.
+* Internal ports: These ports communicate within the Kubernetes cluster using ClusterIP addresses. They are not exposed externally and do not need to be added to firewall rules.
 
 [NOTE]
 Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterrupted communication with each other.
@@ -102,6 +100,8 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 |===
 |*Service/Component name* |*Port* |*Protocol* |*Port Type* |*Description*
 
+|ntv-gateway-svc (LB) |443, 8443 |TCP |External |Pass through port for incoming communication for the VASA Provider service. VASA Provider self-signed certificate and custom CA certificate are hosted on this port.
+|SSH |22 |TCP |External |Secure Shell for remote server login and command execution.
 |rke2 server |9345 |TCP |Inter-node |RKE2 supervisor API (Restrict to trusted networks).
 |kube-apiserver |6443 |TCP |Inter-node |Kubernetes API server port (Restrict to trusted networks).
 |rpcbind/portmapper |111 |TCP/UDP |Inter-node |Used for RPC communication between services.
@@ -117,11 +117,10 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 |calico-node |9091, 9099 |TCP |Inter-node |Calico networking component.
 |containerd |10010 |TCP |Inter-node |Container daemon service.
 |VXLAN (Flannel) |8472 |UDP |Inter-node |Overlay network for pod communication.
-|ntv-gateway-svc (LB) |443, 8443 |TCP |External |Pass through port for incoming communication for the VASA Provider service. VASA Provider self-signed certificate and custom CA certificate are hosted on this port.
-|SSH |22 |TCP |External |Secure Shell for remote server login and command execution.
 //|ntv-gateway-svc |30000-32767 |TCP |NodePort |NodePort port range for cluster internal connections.
 //|Storage |6789-7300 |TCP |Internal |Inter-node distributed cluster data plane.
 |===
+// Updated the port details for - OTVDOC-320, OTVDOC-322, and OTVDOC-305
 
 [NOTE]
 For HA deployments using overlay networking, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
