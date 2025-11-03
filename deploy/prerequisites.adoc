@@ -102,25 +102,25 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 |===
 |*Service/Component name* |*Port* |*Protocol* |*Port Type* |*Description*
 
+|rke2 server |9345 |TCP |Inter-node |RKE2 supervisor API (Restrict to trusted networks).
+|kube-apiserver |6443 |TCP |Inter-node |Kubernetes API server port (Restrict to trusted networks).
+|rpcbind/portmapper |111 |TCP/UDP |Inter-node |Used for RPC communication between services.
+|coredns (DNS) |53 |TCP/UDP |Inter-node |Domain Name System (DNS) service for name resolution within the cluster.
+|NTP |123 |UDP |Inter-node |Network Time Protocol (NTP) for time synchronization.
+|etcd |2379, 2380, 2381 |TCP |Inter-node |Key-value store for cluster data.
+|kube-vip |2112 |TCP |Inter-node |Kubernetes API server port.
+|kubelet |10248, 10250 |TCP |Inter-node |Kubernetes component
+|kube-controller |10257 |TCP |Inter-node |Kubernetes component
+|cloud-controller |10258 |TCP |Inter-node |Kubernetes component
+|kube-scheduler |10259 |TCP |Inter-node |Kubernetes component
+|kube-proxy |10249, 10256 |TCP |Inter-node |Kubernetes component
+|calico-node |9091, 9099 |TCP |Inter-node |Calico networking component.
+|containerd |10010 |TCP |Inter-node |Container daemon service.
+|VXLAN (Flannel) |8472 |UDP |Inter-node |Overlay network for pod communication.
 |ntv-gateway-svc (LB) |443, 8443 |TCP |External |Pass through port for incoming communication for the VASA Provider service. VASA Provider self-signed certificate and custom CA certificate are hosted on this port.
 |SSH |22 |TCP |External |Secure Shell for remote server login and command execution.
-|ntv-gateway-svc |30000-32767 |TCP |NodePort |NodePort port range for cluster internal connections.
-|rke2 server |9345 |TCP |Internal |RKE2 supervisor API (Restrict to trusted networks).
-|kube-apiserver |6443 |TCP |Internal |Kubernetes API server port (Restrict to trusted networks).
-|rpcbind/portmapper |111 |TCP/UDP |Internal |Used for RPC communication between services.
-|coredns (DNS) |53 |TCP/UDP |Internal |Domain Name System (DNS) service for name resolution within the cluster.
-|NTP |123 |UDP |Internal |Network Time Protocol (NTP) for time synchronization.
-|etcd |2379, 2380, 2381 |TCP |Internal |Key-value store for cluster data.
-|kube-vip |2112 |TCP |Internal |Kubernetes API server port.
-|kubelet |10248, 10250 |TCP |Internal |	Kubernetes component
-|kube-controller |10257 |TCP |Internal |Kubernetes component
-|cloud-controller |10258 |TCP |Internal |Kubernetes component
-|kube-scheduler |10259 |TCP |Internal |Kubernetes component
-|kube-proxy |10249, 10256 |TCP |Internal |Kubernetes component
-|calico-node |9091, 9099 |TCP |Internal |Calico networking component.
-|containerd |10010 |TCP |Internal |Container daemon service.
-|VXLAN (Flannel) |8472 |UDP |Internal|Overlay network for pod communication.
-|Storage |6789-7300 |TCP |Internal |Inter-node distributed cluster data plane.
+//|ntv-gateway-svc |30000-32767 |TCP |NodePort |NodePort port range for cluster internal connections.
+//|Storage |6789-7300 |TCP |Internal |Inter-node distributed cluster data plane.
 |===
 
 [NOTE]
@@ -135,17 +135,7 @@ For HA deployments using overlay networking, ensure UDP port 8472 is open betwee
 // |443 |TCP |This is the pass through port for incoming communication for the VASA Provider service. VASA Provider self-signed certificate and custom CA certificate are hosted on this port.
 //  |8443|TCP |This port hosts the API documentation through swagger and the Manager user interface application.
 // |2379|TCP |This is the default port for client requests such as get, put, delete, or watch for keys in the etcd key value store.|2380|TCP |This is the default port for server-to-server communication for the etcd cluster used for the raft consensus algorithm that etcd relies on for data replication and consistency.|7946|TCP/UDP |This port is used for Docker's container network discovery.|9083|TCP |This port is an internally used service port for VASA Provider service.|6443|TCP |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: Kubernetes API|9345|TCP |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: REK2 supervisor API|8472|TCP+UDP |All nodes need to be able to reach other nodes over UDP port 8472 when flannel VXLAN is used. Source: all RKE2 nodes. Destination: all REK2 nodes. Description: Canal CNI with VXLAN |10250|TCP |Source: all RKE2 nodes. Destination: all REK2 nodes. Description: Kubelet metrics |30000-32767|TCP |Source: all RKE2 nodes. Destination: all REK2 nodes. Description: NodePort port range
-// |123|TCP |Ntpd uses this port to perform validation of the NTP server. |3300 and 6789-7300 |TCP |Inter-node data plane 
-
-//|6789 |TCP |Ceph Monitor (MON)
-
-//|3300 |TCP |Ceph Monitor (MON)
-
-//|6800-7300 |TCP |Ceph Managers, OSDs, and Filesystem (MDS).
-
-//|80 |TCP |Ceph RADOS Gateway (RGW)
-
-// |9080 |TCP| VP HTTP/HTTPS connections (only from 127.0.0.0/8 for IPv4 or ::1/128 for IPv6).
+// |123|TCP |Ntpd uses this port to perform validation of the NTP server. |3300 and 6789-7300 |TCP |Inter-node data plane |6789 |TCP |Ceph Monitor (MON) |3300 |TCP |Ceph Monitor (MON) |6800-7300 |TCP |Ceph Managers, OSDs, and Filesystem (MDS).|80 |TCP |Ceph RADOS Gateway (RGW) |9080 |TCP| VP HTTP/HTTPS connections (only from 127.0.0.0/8 for IPv4 or ::1/128 for IPv6).
 
 == Configuration limits to deploy ONTAP tools for VMware vSphere
 

@@ -21,5 +21,5 @@ The new host is now discovered and managed by ONTAP tools for VMware vSphere. Yo
 
 .Related topics
 
-* link:../manage/mount-a-vvols-datastore.html[Mount a vVols datastore]
-* link:../manage/mount-datastores-on-host.html[Mount NFS and VMFS datastore]
+* link:../manage/mount-a-vvols-datastore.html[Mount a vVols datastore] on new hosts.
+* link:../manage/mount-datastores-on-host.html[Mount NFS and VMFS datastore] on new hosts.
