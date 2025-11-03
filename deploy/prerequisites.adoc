@@ -123,7 +123,7 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 // Updated the port details for - OTVDOC-320, OTVDOC-322, and OTVDOC-305
 
 [NOTE]
-For HA deployments using overlay networking, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
+For HA deployments, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
 
 </details>
 
