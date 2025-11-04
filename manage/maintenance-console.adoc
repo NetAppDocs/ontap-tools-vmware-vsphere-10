@@ -9,11 +9,12 @@ summary: 'You can manage your application, system, and network configurations by
 :imagesdir: ../media/
 
 [.lead]
-You can manage your application, system, and network configurations by using the maintenance console of the ONTAP tools. You can change your administrator password and maintenance password. You can also generate support bundles, set different log levels, view and manage TLS configurations, and start remote diagnostics.
+The maintenance console for ONTAP tools for VMware vSphere enables you to manage application, system, and network settings. You can update administrator and maintenance passwords, generate support bundles, configure log levels, manage TLS settings, and enable remote diagnostics.
 
-You should have VMware tools installed after deploying the ONTAP tools for VMware vSphere to access the maintenance console. You should use `maint` as the username and the password you configured during deployment to log in to the maintenance console of the ONTAP tools. You should use *nano* for editing the files in maintenance or root login console.
+After deploying ONTAP tools for VMware vSphere, if the maintenance console is not accessible, install the VMware tools from the vCenter Server. Log in using the `maint` username and the password set during deployment. Use *nano* to edit files in the maintenance or root login console.
 
-NOTE: You should set a password for the `diag` user while enabling remote diagnostics.
+[NOTE]
+You should set a password for the `diag` user while enabling remote diagnostics.
 
 You should use the *Summary* tab of your deployed ONTAP tools for VMware vSphere to access the maintenance console. When you select image:../media/launch-maintenance-console.gif[Play button], the maintenance console starts.
 
@@ -63,3 +64,5 @@ a|
 . Take backup
 
 |===
+
+//NADIAA checked

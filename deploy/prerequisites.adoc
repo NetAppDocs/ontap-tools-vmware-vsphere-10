@@ -20,7 +20,7 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 ** 348 GB for thick provisioned installations
 
 * *Host system sizing requirements*
-The recommended memory for each deployment size is shown in the table below. For high availability (HA) deployments, you need three times the appliance size listed.
+The table below shows the recommended memory for each deployment size. For high availability (HA) deployments, you need three times the appliance size listed.
 // updated for GITHUB issue #50
 |===
 
@@ -81,55 +81,48 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 
 == Port requirements
 
-The following table outlines the network ports that NetApp uses and their purposes. Ensure these ports are open and accessible to facilitate proper operation and communication within the system. Ensure that the necessary network configurations are in place to allow traffic on these ports for the associated services to function correctly. Depending on your security policies, you might need to configure firewalls or other security appliances to permit this traffic within your network.
+The following table outlines the network ports that NetApp uses and their purposes. 
+There are three different types of ports:
+
+* External ports: These ports are accessible from outside the Kubernetes cluster or node. They allow services to communicate with external networks or users, enabling integration with systems outside the cluster environment.
+* Inter-node ports: These ports enable communication between nodes within the Kubernetes cluster. They are needed for cluster tasks like sharing data and working together. For single-node deployments, inter-node ports are used only within the node and do not need external access. Inter-node ports can accept traffic from outside the cluster. Block inter-node ports from internet access with firewall rules.
+* Internal ports: These ports communicate within the Kubernetes cluster using ClusterIP addresses. They are not exposed externally and do not need to be added to firewall rules.
+
 [NOTE]
 Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterrupted communication with each other.
 // JIRA OTVDOC-305 fix
-|===
-|*Port* |*Protocol* |*Description*
-|8143 |TCP|HTTP/HTTPS connections for ONTAP tools.
-|8043|TCP|HTTP/HTTPS connections for ONTAP tools.
-|9060|TCP|HTTP/HTTPS connections for ONTAP tools.
-|22 |TCP |Ansible uses this SSH port for communication during cluster provisioning. This port is required for functionalities like changing maintenance user password, status messages, and to update values on all the three nodes in case of HA configuration.
 
-|443 |TCP |This is the pass through port for incoming communication for the VASA Provider service. VASA Provider self-signed certificate and custom CA certificate are hosted on this port.
-
-|8443|TCP |This port hosts the API documentation through swagger and the Manager user interface application.
-
-|2379|TCP |This is the default port for client requests such as get, put, delete, or watch for keys in the etcd key value store.
-
-|2380|TCP |This is the default port for server-to-server communication for the etcd cluster used for the raft consensus algorithm that etcd relies on for data replication and consistency.
-
-|7946|TCP/UDP |This port is used for Docker's container network discovery.
-
-|9083|TCP |This port is an internally used service port for VASA Provider service.
-
-|6443|TCP |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: Kubernetes API
-
-|9345|TCP |Source: RKE2 agents nodes. Destination: REK2 server nodes. Description: REK2 supervisor API
-
-|8472|TCP+UDP |All nodes need to be able to reach other nodes over UDP port 8472 when flannel VXLAN is used. Source: all RKE2 nodes. Destination: all REK2 nodes. Description: Canal CNI with VXLAN
-
-|10250|TCP |Source: all RKE2 nodes. Destination: all REK2 nodes. Description: Kubelet metrics
-
-|30000-32767|TCP |Source: all RKE2 nodes. Destination: all REK2 nodes. Description: NodePort port range
-
-|123|TCP |Ntpd uses this port to perform validation of the NTP server.
-
-|3300 and 6789-7300 |TCP |Inter-node data plane 
-
-//|6789 |TCP |Ceph Monitor (MON)
-
-//|3300 |TCP |Ceph Monitor (MON)
-
-//|6800-7300 |TCP |Ceph Managers, OSDs, and Filesystem (MDS).
-
-//|80 |TCP |Ceph RADOS Gateway (RGW)
-
-|9080 |TCP| VP HTTP/HTTPS connections (only from 127.0.0.0/8 for IPv4 or ::1/128 for IPv6).
+++++
+<details>
+<summary>Click to expand port requirements table</summary>
+++++
 
 |===
+|*Service/Component name* |*Port* |*Protocol* |*Port Type* |*Description*
 
+|ntv-gateway-svc (LB) |443, 8443 |TCP |External |Pass through port for incoming communication for the VASA Provider service. VASA Provider self-signed certificate and custom CA certificate are hosted on this port.
+|SSH |22 |TCP |External |Secure Shell for remote server login and command execution.
+|rke2 server |9345 |TCP |Inter-node |RKE2 supervisor API (Restrict to trusted networks).
+|kube-apiserver |6443 |TCP |Inter-node |Kubernetes API server port (Restrict to trusted networks).
+|rpcbind/portmapper |111 |TCP/UDP |Inter-node |Used for RPC communication between services.
+|coredns (DNS) |53 |TCP/UDP |Inter-node |Domain Name System (DNS) service for name resolution within the cluster.
+|NTP |123 |UDP |Inter-node |Network Time Protocol (NTP) for time synchronization.
+|etcd |2379, 2380, 2381 |TCP |Inter-node |Key-value store for cluster data.
+|kube-vip |2112 |TCP |Inter-node |Kubernetes API server port.
+|kubelet |10248, 10250 |TCP |Inter-node |Kubernetes component
+|kube-controller |10257 |TCP |Inter-node |Kubernetes component
+|cloud-controller |10258 |TCP |Inter-node |Kubernetes component
+|kube-scheduler |10259 |TCP |Inter-node |Kubernetes component
+|kube-proxy |10249, 10256 |TCP |Inter-node |Kubernetes component
+|calico-node |9091, 9099 |TCP |Inter-node |Calico networking component.
+|containerd |10010 |TCP |Inter-node |Container daemon service.
+|VXLAN (Flannel) |8472 |UDP |Inter-node |Overlay network for pod communication.
+
+|===
+// Updated the port details for - OTVDOC-320, OTVDOC-322, and OTVDOC-305
+
+[NOTE]
+For HA deployments, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
 
 == Configuration limits to deploy ONTAP tools for VMware vSphere
 

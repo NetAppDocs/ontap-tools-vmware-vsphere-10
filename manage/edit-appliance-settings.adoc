@@ -26,9 +26,9 @@ Use ONTAP tools Manager to scale up the ONTAP tools for VMware vSphere configura
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Select the *Edit Appliance Settings* in the overview section.
-. In the *Configuration* section, you can scale up to increase the node size and enable HA configuration as per your requirement. You need the vCenter Server credentials to make any changes.
+. In the *Configuration* section, scale up the node size and enable HA configuration. Use vCenter Server credentials to make changes.
 +
-When ONTAP tools is in HA configuration, you can change the content library details. You should provide the password again for the new edit submission.
+In HA configuration, you can change content library details. Provide the password for each edit.
 +
 [NOTE]
 In ONTAP tools for VMware vSphere, you're only allowed to increase the node size; you cannot reduce the node size. In a non-HA setup, only a medium-size configuration is supported. In an HA setup, medium and large configurations are supported.
@@ -40,7 +40,7 @@ In ONTAP tools for VMware vSphere, you're only allowed to increase the node size
 After HA configuration is enabled, you cannot revert to a non-HA single node configuration.
 . In the *HA settings* section of the *Edit Appliance Settings* window, you can enter the details of Nodes 2 and 3. ONTAP tools for VMware vSphere supports three nodes in HA setup.
 [NOTE]
-Most of the input options are pre-filled with Node 1 network details for ease of workflow. However, you can edit the input data before navigating to the wizard's final page. 
+ONTAP tools pre-fill most input options with Node 1 network details to simplify the workflow. You can edit the input data before going to the wizard's last page. 
 You can enter IPv6 address details for the other two nodes only when the IPv6 address is enabled on the ONTAP tools management node.
 +
 Ensure that an ESXi host contains only one ONTAP tools VM. The inputs are validated each time you move to the next window. 
@@ -48,8 +48,10 @@ Ensure that an ESXi host contains only one ONTAP tools VM. The inputs are valida
 
 .What's next?
 
-The *Overview* page shows the deployment's status. Using the job ID, you can also track the edit appliance settings job status from the jobs view.
+The *Overview* page shows the deployment's status. You can also track the edit appliance settings job status from the jobs view by using the job ID.
 
-If HA deployment fails and the status of the new node shows as ‘New,’ then delete the new VM in the vCenter before retrying the enable HA operation.
+If HA deployment fails and the new node status is ‘New,’ delete the new VM in vCenter before trying to enable HA again.
 
 The *Alerts* tab on the left panel lists alerts for ONTAP tools for VMware vSphere.
+
+// NADIAA checked

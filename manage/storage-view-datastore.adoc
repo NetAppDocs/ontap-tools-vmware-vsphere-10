@@ -15,7 +15,7 @@ ONTAP tools for VMware vSphere shows the ONTAP storage side view of the datastor
 
 . From the vSphere client, go to the datastore.
 . Select the *Configure* tab in the right pane. 
-. Select *NetApp ONTAP tools* > *ONTAP Storage*. Depending on the datastore type, the view changes. Refer to the table below for information:
+. Select *NetApp ONTAP tools* > *ONTAP Storage*. The view changes by datastore type. See the table below:
 
 |===
 |*Datastore type* |*Information available*
@@ -29,6 +29,8 @@ The *Storage unit details* page contains details of the storage unit.
 // updated for 10.4
 |vVols datastores |Lists all the volumes. You can expand or remove storage from the ONTAP storage pane.
 
-This view is not supported for ASA r2 system-based vVols datastore.
+ONTAP tools do not support this view for ASA r2 system-based vVols datastores.
 
 |===
+
+// NADIAA checked

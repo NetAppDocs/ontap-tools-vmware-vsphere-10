@@ -84,7 +84,7 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 // need new image image:../media/primaryvm-edit-settings.png[Edit settings]
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
-. Enter *3* to select the *System Configuration* menu.
+. Enter *2* to select the *System Configuration* menu.
 . Enter *7* to select the *Upgrade* option.
 +
 During the upgrade, if any onboarded storage backend certificates are missing Subject Alternative Name (SAN) entries, you will receive a prompt indicating the missing SAN. If you choose to proceed without validating the SAN, the upgrade will continue, but this is not recommended because of potential security risks.
