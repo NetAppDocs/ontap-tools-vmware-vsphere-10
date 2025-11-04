@@ -83,7 +83,7 @@ Add the *REST API Path* and choose the access from the drop-down list.
 
 === List of minimum privileges required for non-admin global scoped cluster user
 
-This section lists the minimum privileges required for a non-admin global-scoped cluster user without a JSON file.
+This page lists the minimum privileges required for a non-admin global-scoped cluster user without a JSON file.
 If a cluster is in local scope, use the JSON file to create users because ONTAP tools for VMware vSphere needs more than just the Read privileges for provisioning on ONTAP.
 
 You can access functionality by using APIs:
@@ -107,7 +107,6 @@ You can access functionality by using APIs:
 |/api/cluster/metrocluster|Read-Only|Gets MetroCluster status and configuration details.
 |===
  
-
 === Create ONTAP tools for VMware vSphere ONTAP API based cluster scoped user
 
 // 10.3 updates OTVDOC-163 - jani

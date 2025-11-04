@@ -10,7 +10,7 @@ summary: 'When you right-click on the datastore object in the vCenter object vie
 
 [.lead]
 
-When you right-click on the datastore object in the vCenter object view, ONTAP tools for VMware vSphere supported actions are shown under the plug-in section. Specific actions are enabled depending on the type of datastore and the current user privileges.
+When you right-click on the datastore object in the vCenter object view, the plug-in section shows the supported actions for ONTAP tools for VMware vSphere. Specific actions are enabled depending on the type of datastore and the current user privileges.
 
 [NOTE]
 Expand vVols datastore operation is not applicable for ASA r2 system-based vVols datastores.
@@ -20,6 +20,8 @@ Expand vVols datastore operation is not applicable for ASA r2 system-based vVols
 . From the vSphere Client home page, select *Hosts and Clusters*.
 . In the navigation pane, select the data center that contains the datastore.
 . Right-click the datastore and select *NetApp ONTAP tools* > *Add storage to datastore*.
-. In the *create or Select Volumes* window, you can either create new volumes or choose from the existing volumes. The user interface is self-explanatory. Follow the instructions as per your choice.
+. In the *create or Select Volumes* window, you can either create new volumes or choose from the existing volumes. Follow the on-screen instructions to make your selection.
 . In the *Summary* window, review the selections and select *Expand*.
 You can track the progress in the recent tasks panel.
+
+//NADIAA checked

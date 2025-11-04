@@ -19,7 +19,7 @@ You can migrate the protected virtual machines to:
 * Different compatible vVols datastore in same ESXi host
 * Different compatible vVols datastore in a different ESXi host
 
-If the virtual machine is migrated to a different FlexVol volume, then the respective metadata file also gets updated with the virtual machine information. If a virtual machine is migrated to a different ESXi host but same storage, then underlying FlexVol volume metadata file will not be modified.
+If you migrate the virtual machine to a different FlexVol volume, the system updates the metadata file for that volume with the virtual machine information. If a virtual machine is migrated to a different ESXi host but same storage, then underlying FlexVol volume metadata file will not be modified.
 
 == Clone protected virtual machines
 
@@ -51,7 +51,7 @@ Presently only virtual machine Snapshots without memory are supported. If virtua
 
 You also cannot protect unprotected virtual machines that have memory Snapshot. For this release, you're expected to delete memory snapshot before enabling protection for the virtual machine.
 
-For windows VM with ASA r2 storage type, when you take a snapshot of the virtual machine, it will be a read-only snapshot.
-When there is power on call for the VM, the VASA Provider creates a LUN using the read-only snapshot and then it enables it for IOPS. During the power-off request, VASA Provider deletes the LUN that was created and then disables the IOPS.
+For a Windows VM with the ASA r2 storage type, a snapshot of the virtual machine is read-only.
+When you power on the VM, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the VM, VASA Provider deletes the LUN and disables IOPS.
 
 // Added for 10.3, inputs received from Rajiv

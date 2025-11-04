@@ -15,7 +15,7 @@ You can migrate virtual machines from NFS and VMFS datastores to Virtual Volumes
 
 Ensure that VASA Provider is not running on any of the virtual machines that you plan to migrate. If you migrate a virtual machine that is running VASA Provider to a vVols datastore, you cannot perform any management operations, including powering on the virtual machines that are on vVols datastores.
 
-*About this task*
+.About this task
 
 When you migrate from a NFS and VMFS datastore to a vVols datastore, the vCenter Server uses vStorage APIs for Array Integration (VAAI) offloads when moving data from VMFS datastores, but not from an NFS VMDK file. VAAI offloads normally reduce the load on the host.
 
@@ -25,3 +25,5 @@ When you migrate from a NFS and VMFS datastore to a vVols datastore, the vCenter
 . Select *Change storage only* and then select *Next*.
 . Select a virtual disk format, a VM Storage Policy, and a vVol datastore that matches the features of the datastore that you're migrating. 
 . Review the settings and select *Finish*.
+
+//NADIAA checked

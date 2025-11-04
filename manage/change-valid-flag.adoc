@@ -25,4 +25,6 @@ You need to have maintenance user login credentials.
 The maintenance console shows the certificate validation flag status and prompts you to change it.
 . Enter 'y' to toggle the flag or 'n' to cancel.
 
-If you toggle the certificate validation flag back to true, the system performs a pre-check. If any added storage backend uses a certificate without a SAN, you cannot enable certificate validation. Make sure all storage backends use SAN-based certificates before enabling this flag. If you set the certificate validation flag to false, the system skips certificate validation for all added storage backends.
+When you enable the certificate validation flag (set to true), ONTAP tools checks that all storage backends use certificates with a Subject Alternative Name (SAN). If any backend uses a certificate without a SAN, you cannot enable certificate validation. Before enabling this flag, verify that all storage backends use SAN-based certificates. If you disable the certificate validation flag (set to false), ONTAP tools bypasses certificate validation for all configured storage backends.
+
+// NADIAA checked
