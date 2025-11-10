@@ -90,13 +90,11 @@ There are three different types of ports:
 
 [NOTE]
 Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterrupted communication with each other.
+
 // JIRA OTVDOC-305 fix
-
-++++
-<details>
-<summary>Click to expand port requirements table</summary>
-++++
-
+Click to expand or collapse the port requirements table.
+[%collapsible]
+====
 |===
 |*Service/Component name* |*Port* |*Protocol* |*Port Type* |*Description*
 
@@ -123,6 +121,7 @@ Ensure that all ONTAP tools nodes reside on the same subnet to maintain uninterr
 
 [NOTE]
 For HA deployments, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
+====
 
 == Configuration limits to deploy ONTAP tools for VMware vSphere
 

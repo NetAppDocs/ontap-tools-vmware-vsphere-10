@@ -74,11 +74,17 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 * Ensure hot plug-in for CPU and RAM is enabled.
 * For ONTAP tools for VMware vSphere 10.3 or 10.4 deployment, take a quiesced snapshot on the ONTAP tools virtual machine before upgrading.
 * Enable low RPO backup and ensure one backup visible in vCenter Client interface.
++
+Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../manage/recover-backup.html[Recover the ONTAP tools setup] for more information about backup and recovery.
+// Github issues/125
 
 .Steps
 
 . Upload ONTAP tools for VMware vSphere upgrade ISO to content library.
-. In the primary VM page, select *Actions* > *Edit Settings* 
+. In the primary VM page, select *Actions* > *Edit Settings*. To identify the primary VM name:
+.. Enable diag shell on any node
+.. Run the following command:
+`grep sourceHost /opt/netapp/meta/ansible_vars.yaml`
 . Select the *content library ISO file* in the edit settings window under the *CD/DVD drive* field. 
 . Select the ISO file, check the *Connected* box for the *CD/DVD drive* field, and click *OK*.
 // need new image image:../media/primaryvm-edit-settings.png[Edit settings]
