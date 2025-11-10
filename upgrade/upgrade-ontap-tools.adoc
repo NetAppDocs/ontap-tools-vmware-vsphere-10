@@ -81,9 +81,9 @@ Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../m
 .Steps
 
 . Upload ONTAP tools for VMware vSphere upgrade ISO to content library.
-. In the primary VM page, select *Actions* > *Edit Settings* 
-+
-To identify the primary VM name, run the following command:
+. In the primary VM page, select *Actions* > *Edit Settings*. To identify the primary VM name:
+.. Enable diag shell on any node
+.. Run the following command:
 `grep sourceHost /opt/netapp/meta/ansible_vars.yaml`
 . Select the *content library ISO file* in the edit settings window under the *CD/DVD drive* field. 
 . Select the ISO file, check the *Connected* box for the *CD/DVD drive* field, and click *OK*.
