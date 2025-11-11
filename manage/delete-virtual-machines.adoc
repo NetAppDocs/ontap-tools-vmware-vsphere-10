@@ -9,9 +9,9 @@ summary: 'Use the steps in this section to perform VASA cleanup.'
 :imagesdir: ../media/
 
 [.lead]
-Follow these instructions to complete the VASA cleanup process.
+To complete the VASA cleanup process, follow these steps.
 [NOTE]
-It is recommended that you remove any vVols datastores before performing the VASA Cleanup. 
+It is recommended to remove any vVols datastores before starting the VASA cleanup.
 
 .Steps
 
