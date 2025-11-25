@@ -137,7 +137,7 @@ Asynchronous
 
 Use the following URI in Swagger:
 ----
-curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/,<migration_id>`
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
 ----
 *Curl example*
 ----
@@ -153,8 +153,9 @@ A job object is returned. You should save the job identifier to use it in the ne
   "status": "running"
 }
 ----
+====
 // URI <https://10.60.24.125:8443/virtualization/api/v1/migration/migrate>
-
++
 The request body is empty for patch operation.
 
 [NOTE]
@@ -162,7 +163,7 @@ UUID is the migration UUID returned in response to the post-migrate API.
 
 After running the patch migration API, all VMs comply with the storage policy.
 
-====
+
 
 .What's next
 
