@@ -104,7 +104,11 @@ After the job completes, review the migration report in the job response.
 . Register the VASA Provider with ONTAP tools for VMware vSphere. For instructions, see link:../configure/registration-process.html[Register the VASA Provider].
 . After registration, verify the name of the VASA Provider and its status in the vSphere Client under *Storage Providers*. The VASA Provider should appear online, confirming successful registration.
 . link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
-. Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service from the maintenance console.
+. Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service using these steps:
++
+.. In the vSphere Client, go to the *Inventory* > *Storage Providers* section.
+.. Right-click the ONTAP tools for VMware vSphere storage provider for versions 9.10, 9.11, 9.12, or 9.13, and choose the option to unregister it.
+.. Confirm that the old VASA Provider is unregistered from the vCenter Server.
 +
 [NOTE] 
 Don't delete the VASA Provider.
