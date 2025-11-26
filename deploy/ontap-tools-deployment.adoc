@@ -78,6 +78,9 @@ image:../media/select-name.png[Select a name and folder]
 . Select the destination network for each source network and select *Next*.
 . In the *Customize template* window, fill in the required fields and select *Next*.
 image:../media/sys-conf.png[Customize template]
+image:../media/custom-temp.png[Customize template]
+[NOTE]
+The vCenter hostname is the name of the vCenter Server instance where the ONTAP tools appliance is deployed.
 [NOTE] 
 +
 * The information is validated during installation. If there is a discrepancy, an error message appears on the web console, and you're prompted to correct it.
@@ -90,7 +93,6 @@ Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IP
 . When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
 image:../media/customize-hw105.png[Customize hardware]
 // Applicable only to vCenter 8.0.3
-image:../media/customize-hw.png[Customize hardware]
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
