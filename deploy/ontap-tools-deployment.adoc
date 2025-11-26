@@ -113,3 +113,16 @@ If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3,
 . Under the *CPU* options, check the *Enable CPU hot add* checkbox
 . Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
 
+
+Set up a vCenter user account for the vCenter environment where the ONTAP tools appliance will be deployed. Assign the following datastore permissions to this account:
+
+* Allocate space
+* Browse datastore
+* Low-level file operations
+* Remove file
+* Update virtual machine files
+* Update virtual machine metadata
+
+For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-security/vsphere-permissions-and-user-management-tasks/using-roles-to-assign-privileges.html[Using vCenter Roles to Assign Privileges].
+
+//OTVDOC-334 updated by Jani
