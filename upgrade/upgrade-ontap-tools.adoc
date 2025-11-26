@@ -20,6 +20,7 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 
 .Before you begin
 
+* Ensure that all nodes are active.
 * Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If the certificates expire sooner, the upgrade fails.
 * To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If certificates lack SAN entries, set the certificate validation flag to false to bypass SAN checks during the upgrade.
 // 10.5 updates - Jani certificate feature.
@@ -105,8 +106,10 @@ During the upgrade, if any onboarded storage backend certificates are missing Su
 After upgrading to ONTAP tools for VMware vSphere 10.5:
 
 * Monitor system alerts and plan to renew the gateway certificate before it expires in one year.
-* Remove the ONTAP tools 10.4 or 10.3 SRA adapter and upload the 10.5 SRA adapter tar file. Then, rescan the SRA adapters to update the VMware Site Recovery Storage Replication Adapters page.
-// OTVDOC-167 - updated by jani
+* Remove the ONTAP tools 10.4 or 10.3 SRA adapter and upload the 10.5 SRA adapter tar file. 
+* Run the install command after uploading SRA adapter tar. the Then, rescan the SRA adapters to update the VMware Site Recovery Storage Replication Adapters page.
+// OTVDOC-167 - updated by Jani
+//OTVDOC-328 Updated by Jani
 
 After upgrading you can: 
 
