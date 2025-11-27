@@ -22,7 +22,7 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 
 * Ensure that all nodes are active.
 * Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If the certificates expire sooner, the upgrade fails.
-* To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If certificates lack SAN entries, set the certificate validation flag to false to bypass SAN checks during the upgrade.
+// OTVDOC-328 updates
 // 10.5 updates - Jani certificate feature.
 * Ensure you have a fifth disk with a capacity of 100 GB on all nodes.
 * Verify that the node configuration matches the specifications in the table below.
