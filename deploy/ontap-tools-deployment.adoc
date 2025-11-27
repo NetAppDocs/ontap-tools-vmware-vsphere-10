@@ -82,8 +82,8 @@ image:../media/custom-temp.png[Customize template]
 [NOTE]
 The vCenter hostname is the name of the vCenter Server instance where the ONTAP tools appliance is deployed.
 +
-If you are deploying ONTAP tools in a two-vCenter topology—where the appliance is hosted in one vCenter instance and manages another—you can assign a restricted role for the vCenter instance hosting ONTAP tools.
-Create a dedicated vCenter user and role with only the datastore permissions required for OVF template deployment, as listed below:
+If you are deploying ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another—you can assign a restricted role for the vCenter instance hosting the ONTAP tools.
+You can create a dedicated vCenter user and role with only below listed datastore permissions required for the OVF template deployment:
 
 * Allocate space
 * Browse datastore
@@ -124,17 +124,5 @@ If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3,
 . Go to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
 . Under the *CPU* options, check the *Enable CPU hot add* checkbox
 . Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
-
-
-Set up a vCenter user account for the vCenter environment where the ONTAP tools appliance will be deployed. Assign the following datastore permissions to this account:
-
-* Allocate space
-* Browse datastore
-* Low-level file operations
-* Remove file
-* Update virtual machine files
-* Update virtual machine metadata
-
-For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-security/vsphere-permissions-and-user-management-tasks/using-roles-to-assign-privileges.html[Using vCenter Roles to Assign Privileges].
 
 //OTVDOC-334 updated by Jani
