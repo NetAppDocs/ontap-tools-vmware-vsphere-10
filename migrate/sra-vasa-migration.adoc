@@ -112,10 +112,7 @@ After the job completes, review the migration report in the job response.
 .. Enter `5` to stop the VASA Provider and SRA services.
 .. In the vSphere Client, navigate to *Inventory* > *Storage Providers*.
 .. Select the ONTAP tools 9.x VASA Provider from the storage backend and click *Remove*.
-// JIRA update
-+
-[NOTE] 
-Don't delete the VASA Provider.
+// JIRA OTVDOC-335 updates. Removed note.
 +
 After the old VASA Provider is stopped, the vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
 . Migrated NFS and VMFS datastores appear in ONTAP tools for VMware vSphere 10.5 after the datastore discovery job, which may take up to 30 minutes. Check their visibility on the overview page.
