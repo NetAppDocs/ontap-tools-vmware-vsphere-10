@@ -76,13 +76,25 @@ image:../media/select-name.png[Select a name and folder]
 . Read and accept the license agreement and select *Next*.
 . Select the storage for the configuration and the disk format and select *Next*.
 . Select the destination network for each source network and select *Next*.
-. In the *Customize template* window, fill in the required fields and select *Next*.
-image:../media/sys-conf.png[Customize template]
+. In the *Customize template* window, fill in the required fields.
+// image:../media/sys-conf.png[Customize template]
 image:../media/custom-temp.png[Customize template]
 [NOTE]
 The vCenter hostname is the name of the vCenter Server instance where the ONTAP tools appliance is deployed.
-[NOTE] 
 +
+If you are deploying ONTAP tools in a two-vCenter topology—where the appliance is hosted in one vCenter instance and manages another—you can assign a restricted role for the vCenter instance hosting ONTAP tools.
+Create a dedicated vCenter user and role with only the datastore permissions required for OVF template deployment, as listed below:
+
+* Allocate space
+* Browse datastore
+* Low-level file operations
+* Remove file
+* Update virtual machine files
+* Update virtual machine metadata
++
+For the vCenter instance that will be managed by ONTAP tools, make sure the vCenter user account has administrator privileges.
++
+[NOTE] 
 * The information is validated during installation. If there is a discrepancy, an error message appears on the web console, and you're prompted to correct it.
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
