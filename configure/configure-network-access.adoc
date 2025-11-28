@@ -9,7 +9,7 @@ summary: 'If you have not configured the network access, all the discovered IP a
 :imagesdir: ../media/
 
 [.lead]
-Unless network access has been configured, all IP addresses discovered from the ESXi host are automatically included in the export policy. You can configure the policy to allow only certain IP addresses and exclude others; however, if you try to mount from an excluded ESXi host, the operation will fail.
+By default, all IP addresses discovered from the ESXi host are automatically added to the export policy unless you configure network access. You can modify the export policy to allow access only from specific IP addresses. If an excluded ESXi host attempts a mount operation, the operation fails.
 
 .Steps
 . Log in to the vSphere client.

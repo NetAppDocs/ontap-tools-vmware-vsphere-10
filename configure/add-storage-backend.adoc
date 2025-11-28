@@ -9,14 +9,13 @@ summary: 'Storage backends are systems that the ESXi hosts use for data storage.
 :imagesdir: ../media/
 
 [.lead]
+Use ONTAP tools for VMware vSphere to add and manage storage backends for your ESXi hosts. You can onboard clusters or SVMs, enable MetroCluster support, and validate certificates for secure connectivity. You can configure storage backends using ONTAP tools Manager or the vSphere client, monitor certificate status, and manually rediscover resources after cluster changes.
 
-When you add storage backends to ONTAP tools, you can provision and manage datastores directly from the vCenter Server.
+To add a storage backend locally, use cluster or SVM credentials in the ONTAP tools interface. Local storage backends are available only to the selected vCenter Server. ONTAP tools maps SVMs to the vCenter Server for vVols or VMFS datastore management. For VMFS datastores and SRA workflows, you can use SVM credentials without mapping a cluster globally.
 
-To add storage backends locally, use cluster or SVM credentials in the ONTAP tools interface. These storage backends are available only to the selected vCenter Server. ONTAP tools maps SVMs to the vCenter Server for vVols or VMFS datastore management. For VMFS datastore and SRA workflows, you can use SVM credentials without the need for a globally mapped cluster.
+To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources required for vVol management. In multitenant environments, you can add an SVM user locally to manage vVols datastores.
 
-You can add global storage backends using ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources  needed for vVol management. In multitenant setups, you can add an SVM user locally to manage vVols datastores.
-
-When you enable MetroCluster support in the ONTAP system, onboard both source and destination clusters as local or global storage backends.
+If MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
 
 // 10.5 updates -Jani rewrote the intro and added the last para. Added before you begin section.
 .Before you begin
