@@ -49,8 +49,9 @@ VMware Site Recovery Manager (SRM) 8.5 to VMware Live Site Recovery 9.0
 vSphere 7.x-8.x
 
 VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0 
+
 *NOTE:*
-Beginning with ONTAP tools 10.1, SRM supports shared sites, enabling enhanced scalability and improved performance.
+In ONTAP tools 10.x, SRM supports shared sites, enabling enhanced scalability and improved performance.
 |
 Protocol support
 |
