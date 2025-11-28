@@ -71,13 +71,13 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 |1050
 
 |===
-
+// Github issues/128
 * Ensure hot plug-in for CPU and RAM is enabled.
-* For ONTAP tools for VMware vSphere 10.3 or 10.4 deployment, take a quiesced snapshot on the ONTAP tools virtual machine before upgrading.
-* Enable low RPO backup and ensure one backup visible in vCenter Client interface.
+* Enable low RPO backup and ensure one backup is visible in vCenter Client interface. Download the backup folder before upgrade.
+* Low RPO backup is recommended. However, in non-HA deployment, you can take a quiesced snapshot of the ONTAP tools virtual machine before upgrading. 
 +
 Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../manage/recover-backup.html[Recover the ONTAP tools setup] for more information about backup and recovery.
-// Github issues/125
+// Github issues/125 
 
 .Steps
 
