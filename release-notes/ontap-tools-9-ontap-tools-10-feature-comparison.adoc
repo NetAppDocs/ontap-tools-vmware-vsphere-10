@@ -15,23 +15,19 @@ Learn whether migrating from ONTAP tools for VMware vSphere 9 to ONTAP tools for
 [NOTE]
 For the most up-to-date compatibility information, refer https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^].
 
-[cols="20%,25%,25%,30%",options="header"]
+[cols="20%,25%,30%",options="header"]
 |===
-| Feature | ONTAP tools 9.13 | ONTAP tools 10.1 | ONTAP tools 10.2 onwards
+| Feature | ONTAP tools 9.13 | ONTAP tools 10.2 onwards
 |
 Key value proposition
 |
 Streamline and simplify day-0 to day-2 operations with enhanced security, compliance and automation capabilities
-|
-Evolving ONTAP tools 10.x towards 9.xx parity while extending high availability, performance, and scale limits
 |
 Expanded support to include FC for VMFS and NVMe-oF/FC, NVMe-oF/TCP for VMFS only. Ease of use for NetApp SnapMirror, simple setup for vSphere metro storage clusters, and three-site VMware Live Site Recovery support
 |
 ONTAP release qualification
 |
 ONTAP 9.9.1 to ONTAP 9.16.1
-|
-ONTAP 9.12.1 to ONTAP 9.14.1
 |
 ONTAP 9.12.1 to 9.15.1 for ONTAP tools 10.2.
 
@@ -52,20 +48,13 @@ VMware Site Recovery Manager (SRM) 8.5 to VMware Live Site Recovery 9.0
 |
 vSphere 7.x-8.x
 
-VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0
-
+VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0 
 *NOTE:*
 Beginning with ONTAP tools 10.1, SRM supports shared sites, enabling enhanced scalability and improved performance.
-|
-vSphere 7.x-8.x
-
-VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0 
 |
 Protocol support
 |
 NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI and FCP)
-|
-NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI)
 |
 NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI/FCP/NVMe-oF)
 |
@@ -74,8 +63,6 @@ Scalability
 Hosts and VMs: 300 Hosts, up to 10K VMs 
 
 Datastores: 600 NFS, up to 50 VMFS
-|
-Hosts and VMs: 600 Hosts
 |
 Hosts and VMs: 600 Hosts
 |
@@ -89,24 +76,16 @@ Updated performance, capacity, and host compliance dashboards
 
 Dynamic VM and datastore reports
 |
-Updated performance, capacity, and host compliance dashboards
-
-Dynamic VM and datastore reports
-|
 Data protection
 |
 SRA replication for VMFS and NFS
 SCV integration and interoperable for backup
-|
-SRA replication for iSCSI VMFS and NFS v3 datastores
 |
 SRA replication for iSCSI VMFS and NFS v3 datastores three-site protection combining SMAS and VMware Live Site Recovery.
 |
 VASA Provider support
 |
 VASA 4.0
-|
-VASA 3.0
 |
 VASA 3.0
 |===
