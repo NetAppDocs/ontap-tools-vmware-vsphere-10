@@ -9,16 +9,16 @@ summary: 'When you first run ONTAP tools for VMware vSphere in a vSphere Client,
 :imagesdir: ../media/
 
 [.lead]
-When you first run ONTAP tools for VMware vSphere in a vSphere Client, ONTAP tools discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.
+When ONTAP tools for VMware vSphere is launched in the vSphere Client for the first time, it automatically discovers ESXi hosts, their associated LUNs and NFS exports, as well as the NetApp storage systems that own these resources.
 
 .Before you begin
 
-* All the ESXi hosts should be powered on and connected.
-* All the storage virtual machines (SVMs) to be discovered should be running, and each cluster node should have at least one data LIF configured for the storage protocol in use (NFS or iSCSI).
+* Ensure all ESXi hosts are powered on and connected.
+* Ensure all storage virtual machines (SVMs) to be discovered are running, and each cluster node has at least one data LIF configured for the storage protocol in use (NFS or iSCSI).
 
-*About this task*
+.About this task
 
-You can discover new storage systems or update information about existing storage systems to obtain the latest capacity and configuration information at any time. You can also modify the credentials that ONTAP tools for VMware vSphere uses to log in to the storage systems.
+You can discover new storage systems or update existing ones to get the latest capacity and setup details. You can also change ONTAP tools for VMware vSphere credentials for storage system access.
 
 While discovering the storage systems, ONTAP tools for VMware vSphere collects information from the ESXi hosts that are managed by the vCenter Server instance.
 

@@ -21,7 +21,7 @@ Consider the following before creating a content library:
 * Set up the content library before deploying the ONTAP tools for VMware vSphere OVA.
 * Ensure the content library is created before configuring the appliance for HA.
 [NOTE]
-don't delete the OVA template in the content library after deployment.
+Don't delete the OVA template in the content library after deployment.
 
 [NOTE]
 To enable HA deployment in the future, avoid deploying the ONTAP tools virtual machine directly on an ESXi host. Instead, deploy it within a ESXi host cluster or resource pool.
@@ -76,10 +76,25 @@ image:../media/select-name.png[Select a name and folder]
 . Read and accept the license agreement and select *Next*.
 . Select the storage for the configuration and the disk format and select *Next*.
 . Select the destination network for each source network and select *Next*.
-. In the *Customize template* window, fill in the required fields and select *Next*.
-image:../media/sys-conf.png[Customize template]
-[NOTE] 
+. In the *Customize template* window, fill in the required fields.
+// image:../media/sys-conf.png[Customize template]
+image:../media/custom-temp.png[Customize template]
+[NOTE]
+The vCenter hostname is the name of the vCenter Server instance where the ONTAP tools appliance is deployed.
 +
+If you are deploying ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another—you can assign a restricted role for the vCenter instance hosting the ONTAP tools.
+You can create a dedicated vCenter user and role with only below listed datastore permissions required for the OVF template deployment:
+
+* Allocate space
+* Browse datastore
+* Low-level file operations
+* Remove file
+* Update virtual machine files
+* Update virtual machine metadata
++
+For the vCenter instance that will be managed by ONTAP tools, make sure the vCenter user account has administrator privileges.
++
+[NOTE] 
 * The information is validated during installation. If there is a discrepancy, an error message appears on the web console, and you're prompted to correct it.
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
@@ -90,7 +105,6 @@ Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IP
 . When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
 image:../media/customize-hw105.png[Customize hardware]
 // Applicable only to vCenter 8.0.3
-image:../media/customize-hw.png[Customize hardware]
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 As the deployment task gets created, the progress is shown in the vSphere task bar.
@@ -111,3 +125,4 @@ If you have deployment ONTAP tools for VMware vSphere with vCenter Server 7.0.3,
 . Under the *CPU* options, check the *Enable CPU hot add* checkbox
 . Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
 
+//OTVDOC-334 updated by Jani
