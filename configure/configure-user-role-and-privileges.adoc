@@ -9,7 +9,7 @@ summary: 'Configure user roles and privileges for storage backends with the JSON
 :imagesdir: ../media/
 
 [.lead]
-Configure user roles and privileges for storage backends with the JSON file from ONTAP tools for VMware vSphere and ONTAP System Manager.
+Use this section to configure ONTAP user roles and privileges for storage backends with ONTAP tools for VMware vSphere and ONTAP System Manager. You can assign roles using the provided JSON files, manually create users and roles, and apply the minimum required privileges for non-admin accounts.
 
 .Before you begin
 

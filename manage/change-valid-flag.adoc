@@ -19,7 +19,7 @@ You need to have maintenance user login credentials.
 
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
-. Enter `1` to select Application Configuration Menu.
+. Enter `1` to select *Application Configuration* menu.
 . Enter `3` to change cert validation flag.
 +
 The maintenance console shows the certificate validation flag status and prompts you to change it.

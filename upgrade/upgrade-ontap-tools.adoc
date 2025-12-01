@@ -20,8 +20,9 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 
 .Before you begin
 
+* Ensure that all nodes are active.
 * Ensure the ONTAP system certificate and onboarded vCenter certificates are valid for at least 5 days. If the certificates expire sooner, the upgrade fails.
-* To ensure a secure upgrade, verify that your certificates include Subject Alternative Name (SAN) entries. If certificates lack SAN entries, set the certificate validation flag to false to bypass SAN checks during the upgrade.
+// OTVDOC-328 updates
 // 10.5 updates - Jani certificate feature.
 * Ensure you have a fifth disk with a capacity of 100 GB on all nodes.
 * Verify that the node configuration matches the specifications in the table below.
@@ -70,13 +71,13 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 |1050
 
 |===
-
+// Github issues/128
 * Ensure hot plug-in for CPU and RAM is enabled.
-* For ONTAP tools for VMware vSphere 10.3 or 10.4 deployment, take a quiesced snapshot on the ONTAP tools virtual machine before upgrading.
-* Enable low RPO backup and ensure one backup visible in vCenter Client interface.
+* Enable low RPO backup and ensure one backup is visible in vCenter Client interface. Download the backup folder before upgrade.
+* Low RPO backup is recommended. However, in non-HA deployment, you can take a quiesced snapshot of the ONTAP tools virtual machine before upgrading. 
 +
 Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../manage/recover-backup.html[Recover the ONTAP tools setup] for more information about backup and recovery.
-// Github issues/125
+// Github issues/125 
 
 .Steps
 
@@ -105,8 +106,10 @@ During the upgrade, if any onboarded storage backend certificates are missing Su
 After upgrading to ONTAP tools for VMware vSphere 10.5:
 
 * Monitor system alerts and plan to renew the gateway certificate before it expires in one year.
-* Remove the ONTAP tools 10.4 or 10.3 SRA adapter and upload the 10.5 SRA adapter tar file. Then, rescan the SRA adapters to update the VMware Site Recovery Storage Replication Adapters page.
-// OTVDOC-167 - updated by jani
+* Remove the ONTAP tools 10.4 or 10.3 SRA adapter and upload the 10.5 SRA adapter tar file. 
+* Run the install command after uploading SRA adapter tar. the Then, rescan the SRA adapters to update the VMware Site Recovery Storage Replication Adapters page.
+// OTVDOC-167 - updated by Jani
+//OTVDOC-328 Updated by Jani
 
 After upgrading you can: 
 

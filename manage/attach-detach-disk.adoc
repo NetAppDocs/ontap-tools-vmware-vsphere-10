@@ -9,9 +9,10 @@ summary: 'Attach a data disk to a virtual machine to expand the storage capacity
 :imagesdir: ../media/
 
 [.lead]
+Follow these steps to attach or detach data disks from virtual machines in vSphere and manage their storage resources.
 
 == Attach a data disk to a virtual machine
-Attach a data disk to a virtual machine to expand the storage capacity. 
+Attach a data disk to a virtual machine to add more storage.
 
 .Steps
 
@@ -19,14 +20,14 @@ Attach a data disk to a virtual machine to expand the storage capacity.
 . Right-click on a virtual machine in the inventory and select *Edit Settings*.
 . On the *Virtual Hardware* tab, select *Existing hard disk*.
 . Select the virtual machine where the disk exists.
-. Select the disk you want to attach and select *OK*
+. Select the disk you want to attach and select the *OK* button.
 
 .Result
 The hard disk appears in the Virtual Hardware devices list.
 
 == Detach a data disk from the virtual machine
 
-You can detach a data disk attached to a virtual machine when it is no longer needed. When you detach the disk from the virtual machine, it is not automatically deleted; it remains on the ONTAP storage system.
+Detach a data disk from a virtual machine when you don't need it anymore. The disk is not deleted; it stays on the ONTAP storage system.
 
 .Steps
 
