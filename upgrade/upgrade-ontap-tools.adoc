@@ -93,6 +93,7 @@ Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../m
 . Log in as the maintenance user.
 . Enter *2* to select the *System Configuration* menu.
 . Enter *7* to select the *Upgrade* option.
+. Provide the vCenter credentials for the instance where ONTAP tools is deployed.
 +
 If you are deploying ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another—you can assign a restricted role for the vCenter instance hosting the ONTAP tools.
 You can create a dedicated vCenter user and role with only below listed datastore permissions required for the OVF template deployment:
