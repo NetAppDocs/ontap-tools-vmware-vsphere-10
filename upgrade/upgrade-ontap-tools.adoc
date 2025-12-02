@@ -94,6 +94,18 @@ Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../m
 . Enter *2* to select the *System Configuration* menu.
 . Enter *7* to select the *Upgrade* option.
 +
+If you are deploying ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another—you can assign a restricted role for the vCenter instance hosting the ONTAP tools.
+You can create a dedicated vCenter user and role with only below listed datastore permissions required for the OVF template deployment:
+
+* Allocate space
+* Browse datastore
+* Low-level file operations
+* Remove file
+* Update virtual machine files
+* Update virtual machine metadata
++
+For the vCenter instance that will be managed by ONTAP tools, make sure the vCenter user account has administrator privileges.
+// OTVDOC-327 updates
 During the upgrade, if any onboarded storage backend certificates are missing Subject Alternative Name (SAN) entries, you will receive a prompt indicating the missing SAN. If you choose to proceed without validating the SAN, the upgrade will continue, but this is not recommended because of potential security risks.
 . When you upgrade, the following actions are performed automatically:
 .. The gateway certificate is renewed with a 1-year validity period. When you remove the previous SRA adapter and upload the new 10.5 adapter, the SRA certificate validity changes from 10 years to 1 year.
