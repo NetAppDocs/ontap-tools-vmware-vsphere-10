@@ -106,6 +106,7 @@ You can create a dedicated vCenter user and role with only below listed datastor
 +
 For the vCenter instance that will be managed by ONTAP tools, make sure the vCenter user account has administrator privileges.
 // OTVDOC-327 updates
++
 During the upgrade, if any onboarded storage backend certificates are missing Subject Alternative Name (SAN) entries, you will receive a prompt indicating the missing SAN. If you choose to proceed without validating the SAN, the upgrade will continue, but this is not recommended because of potential security risks.
 . When you upgrade, the following actions are performed automatically:
 .. The gateway certificate is renewed with a 1-year validity period. When you remove the previous SRA adapter and upload the new 10.5 adapter, the SRA certificate validity changes from 10 years to 1 year.
