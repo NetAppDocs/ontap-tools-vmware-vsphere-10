@@ -45,4 +45,4 @@ In a fan-out configuration, after a SnapMirror Active Sync failover where the Sn
 
 https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-nfs-vlsr.html#scenario-overview[Configure disaster recovery for NFS datastores using VMware Site Recovery Manager]
 
-// added thie related info as part of github feedback. Need to replicate in 10.4
+// added thie related info as part of github feedback

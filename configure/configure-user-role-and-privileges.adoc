@@ -32,7 +32,7 @@ You can create users at the cluster level or directly at the storage virtual mac
 +
 ONTAP tools automatically populates the Product field.
 .. Select the product capability as *VSC, VASA Provider and SRA* from the drop-down.
-// updated for OTVDOC-257 10.4 release.
+// updated for OTVDOC-257
 +
 ONTAP tools automatically populates the *Role* field based on the product capability you select.
 .. Enter the required username and password.
@@ -412,7 +412,6 @@ vserver nvme subsystem modify
 ----
 
 == Upgrade ONTAP tools for VMware vSphere 10.3 user to 10.4 user
-// updated for 10.4
 Beginning with ONTAP 9.16.1, upgrade the ONTAP tools for VMware vSphere 10.3 user to 10.4 user.
 
 For ONTAP tools for VMware vSphere 10.3 user with a cluster-scoped user created using the JSON file and ONTAP version 9.16.1 or above, use the ONTAP CLI command with admin user privileges to upgrade to the 10.4 release.
