@@ -45,7 +45,7 @@ You can renew the certificate if it has expired or is nearing its expiration dat
 The system will be offline until the certificate is renewed, and you will be logged out of the ONTAP tools Manager interface.
 . To upgrade the self-signed certificate to custom CA certificate, select *Certificates* > *ONTAP tools* > *Upgrade to CA* option.
 .. In the pop-up window, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files.
-.. Enter the FQDN or Load Balancer IP for which you generated this certificate and upgrade the certificate.
+.. Enter the FQDN of the Load Balancer IP for which you generated this certificate and upgrade the certificate.
 +
 [NOTE]
 The system will be offline until the upgrade is complete, and you will be logged out of the ONTAP tools Manager interface.
@@ -64,7 +64,7 @@ When you manage multiple vCenter Server instances and want to enable vVols capab
 . Select *Certificates* > *VASA Provider* or *ONTAP tools* > *Renew* to renew the certificates.
 . Select *Certificates* > *VASA Provider* or *ONTAP tools* > *Upgrade to CA* to upgrade the self-signed certificate to custom CA certificate.
 .. In the pop-up window, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files.
-.. Enter the FQDN or Load Balancer IP for which you generated this certificate and upgrade the certificate.
+.. Enter the FQDN of the Load Balancer IP for which you generated this certificate and upgrade the certificate.
 // updated for OTVDOC-341
 +
 [NOTE]
