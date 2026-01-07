@@ -48,6 +48,117 @@ Provides some of the native vCenter Server privileges and ONTAP tools-specific p
 * Create new datastores
 * Manage datastores
 
+.Required vCenter privileges for deployment or onboarding
+
+The following privileges must be included in the role assigned to the vCenter user responsible for deploying or onboarding vCenter. Ensure these privileges are configured as a prerequisite for the deployment or onboarding process.
+
+* Alarms
+** Acknowledge alarm
+* Content Library
+** Add library item
+** Check in a template
+** Check out a template
+** Download files
+** Import storage
+** Read storage
+** Sync library item
+** Sync subscribed library
+** View configuration settings
+* Datastore
+** Allocate space
+** Browse datastore
+** Low level file operations
+** Remove file
+** Update virtual machine files
+** Update virtual machine metadata
+* ESX Agent Manager
+** View
+* Folder
+** Create folder
+* Host
+** Configuration
+** Advanced settings
+** Change settings
+** Network configuration
+** System resources
+** Virtual machine autostart configuration
+** Local operations
+** Create virtual machine
+** Delete virtual machine
+** Reconfigure virtual machine
+* Network
+** Assign network
+** Configure
+* OvfManager
+** OvfConsumer Access
+* Host profile
+** View
+* Resource
+** Assign virtual machine to resource pool
+* Scheduled task
+** Create tasks
+** Modify task
+** Run task
+* Tasks
+** Create task
+** Update task
+* vApp
+** Add virtual machine
+** Assign resource pool
+** Assign vApp
+** Create
+** Import
+** Move
+** Power off
+** Power on
+** Pull from URL
+** View OVF environment
+* Virtual machine
+** Change Configuration
+*** Add existing disk
+*** Add new disk
+*** Add or remove device
+*** Advanced configuration
+*** Change CPU count
+*** Change Memory
+** Change Settings
+** Change resource
+** Extend virtual disk
+** Modify device settings
+** Remove disk
+*** Reset guest information
+*** Upgrade virtual machine compatibility
+** Edit Inventory
+** Create from existing
+** Create new
+** Move
+*** Register
+** Remove
+** Unregister
+** Interaction
+*** Backup operation on virtual machine
+*** Configure CD media
+*** Configure floppy media
+*** Connect devices
+*** Console interaction
+*** Guest operating system management by VIX API
+*** Power off
+*** Power on
+*** Reset
+*** Suspend
+** Provisioning
+*** Allow disk access
+*** Clone template
+*** Customize guest
+*** Deploy template
+*** Modify customization specification
+*** Read customization specifications
+** Snapshot management
+*** Create snapshot
+*** Remove snapshot
+*** Rename snapshot
+*** Revert to snapshot
+// OTVDOC-334 update
 == vSphere objects and ONTAP storage backends
 
 The two RBAC environments work together. When performing a task in the vSphere client interface, the ONTAP tools roles defined to vCenter Server are checked first. If the operation is permitted by vSphere, then the ONTAP role privileges are examined. This second step is performed based on the ONTAP role assigned to the user when the storage backend was created and configured.
