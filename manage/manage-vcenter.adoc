@@ -96,3 +96,7 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ----
 . Save the certificate in a text file with a `.pem` extension.
 . Upload the certificate  and select *Modify*.
+
+.Related information
+
+link:../manage/configure-remote-diagnostic-access.html[Configure remote diagnostic access]
