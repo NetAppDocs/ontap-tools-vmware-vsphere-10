@@ -62,15 +62,15 @@ The following privileges must be included in the role assigned to the vCenter us
 ** Create folder
 * Host
 ** Configuration
-** Advanced settings
-** Change settings
-** Network configuration
-** System resources
-** Virtual machine autostart configuration
+*** Advanced settings
+*** Change settings
+*** Network configuration
+*** System resources
+*** Virtual machine autostart configuration
 ** Local operations
-** Create virtual machine
-** Delete virtual machine
-** Reconfigure virtual machine
+*** Create virtual machine
+*** Delete virtual machine
+*** Reconfigure virtual machine
 * Network
 ** Assign network
 ** Configure
@@ -106,20 +106,20 @@ The following privileges must be included in the role assigned to the vCenter us
 *** Advanced configuration
 *** Change CPU count
 *** Change Memory
-** Change Settings
-** Change resource
-** Extend virtual disk
-** Modify device settings
-** Remove disk
+*** Change Settings
+*** Change resource
+*** Extend virtual disk
+*** Modify device settings
+*** Remove disk
 *** Reset guest information
 *** Upgrade virtual machine compatibility
 ** Edit Inventory
-** Create from existing
-** Create new
-** Move
+*** Create from existing
+*** Create new
+*** Move
 *** Register
-** Remove
-** Unregister
+*** Remove
+*** Unregister
 ** Interaction
 *** Backup operation on virtual machine
 *** Configure CD media
