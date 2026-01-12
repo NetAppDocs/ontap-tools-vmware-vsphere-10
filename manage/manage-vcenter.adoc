@@ -97,7 +97,7 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ----
 . Copy the output and save it as a text file with a `.pem` extension on your desktop.
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
-. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Select the applicable vCenter Server instance from the sidebar
 . Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
 . In the *Modify vCenter* window, enter the username, password, and port details. 
