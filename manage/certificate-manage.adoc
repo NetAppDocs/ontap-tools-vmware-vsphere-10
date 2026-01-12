@@ -9,9 +9,7 @@ summary: 'A single instance of ONTAP tools for VMware vSphere can manage multipl
 :imagesdir: ../media/
 
 [.lead]
-A self-signed certificate is generated for ONTAP tools and VASA Provider by default during deployment. Using the ONTAP tools Manager interface, you can renew the certificate or upgrade it to a custom CA.
-You must use custom CA certificates in a multi-vCenter deployment.
-
+A self-signed certificate is generated for ONTAP tools and VASA Provider by default during deployment. You can use the ONTAP tools Manager interface to renew this certificate or replace it with a custom CA certificate. In multi-vCenter deployments, using custom CA certificates is required.
 
 .Before you begin
 
@@ -47,7 +45,7 @@ You can renew the certificate if it has expired or is nearing its expiration dat
 The system will be offline until the certificate is renewed, and you will be logged out of the ONTAP tools Manager interface.
 . To upgrade the self-signed certificate to custom CA certificate, select *Certificates* > *ONTAP tools* > *Upgrade to CA* option.
 .. In the pop-up window, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files.
-.. Enter the domain name for which you generated this certificate and upgrade the certificate.
+.. Enter the FQDN of the Load Balancer IP for which you generated this certificate and upgrade the certificate.
 +
 [NOTE]
 The system will be offline until the upgrade is complete, and you will be logged out of the ONTAP tools Manager interface.
@@ -66,12 +64,14 @@ When you manage multiple vCenter Server instances and want to enable vVols capab
 . Select *Certificates* > *VASA Provider* or *ONTAP tools* > *Renew* to renew the certificates.
 . Select *Certificates* > *VASA Provider* or *ONTAP tools* > *Upgrade to CA* to upgrade the self-signed certificate to custom CA certificate.
 .. In the pop-up window, upload the server certificate, server certificate private key, root CA certificate, and intermediate certificate files.
-.. Enter the domain name for which you generated this certificate and upgrade the certificate.
+.. Enter the FQDN of the Load Balancer IP for which you generated this certificate and upgrade the certificate.
+// updated for OTVDOC-341
 +
 [NOTE]
 The system will be offline until the upgrade is complete, and you will be logged out of the ONTAP tools Manager interface. 
 --
 ====
+
 
 //10.3 updates - added ONTAP tools.
 //NADIAA checked

@@ -34,7 +34,118 @@ To simplify working with vCenter Server RBAC, ONTAP tools for VMware vSphere pro
 [NOTE]
 You can create new custom roles if needed. In this case, you should clone one of the existing ONTAP tools roles and edit it as needed. After making the configuration changes, the affected vSphere client users need to log out and log back in to activate the changes.
 
-To view the ONTAP tools for VMware vSphere roles, select *Menu* at the top of the vSphere Client and click *Administration* and then *Roles* on the left. There are three predefined roles as described below.
+To view the ONTAP tools for VMware vSphere roles, select *Menu* at the top of the vSphere Client and click *Administration* and then *Roles* on the left. 
+The following privileges must be included in the role assigned to the vCenter user responsible for deploying or onboarding vCenter. Ensure these privileges are configured as a prerequisite for the deployment or onboarding process.
+
+* Alarms
+** Acknowledge alarm
+* Content Library
+** Add library item
+** Check in a template
+** Check out a template
+** Download files
+** Import storage
+** Read storage
+** Sync library item
+** Sync subscribed library
+** View configuration settings
+* Datastore
+** Allocate space
+** Browse datastore
+** Low level file operations
+** Remove file
+** Update virtual machine files
+** Update virtual machine metadata
+* ESX Agent Manager
+** View
+* Folder
+** Create folder
+* Host
+** Configuration
+*** Advanced settings
+*** Change settings
+*** Network configuration
+*** System resources
+*** Virtual machine autostart configuration
+** Local operations
+*** Create virtual machine
+*** Delete virtual machine
+*** Reconfigure virtual machine
+* Network
+** Assign network
+** Configure
+* OvfManager
+** OvfConsumer Access
+* Host profile
+** View
+* Resource
+** Assign virtual machine to resource pool
+* Scheduled task
+** Create tasks
+** Modify task
+** Run task
+* Tasks
+** Create task
+** Update task
+* vApp
+** Add virtual machine
+** Assign resource pool
+** Assign vApp
+** Create
+** Import
+** Move
+** Power off
+** Power on
+** Pull from URL
+** View OVF environment
+* Virtual machine
+** Change Configuration
+*** Add existing disk
+*** Add new disk
+*** Add or remove device
+*** Advanced configuration
+*** Change CPU count
+*** Change Memory
+*** Change Settings
+*** Change resource
+*** Extend virtual disk
+*** Modify device settings
+*** Remove disk
+*** Reset guest information
+*** Upgrade virtual machine compatibility
+** Edit Inventory
+*** Create from existing
+*** Create new
+*** Move
+*** Register
+*** Remove
+*** Unregister
+** Interaction
+*** Backup operation on virtual machine
+*** Configure CD media
+*** Configure floppy media
+*** Connect devices
+*** Console interaction
+*** Guest operating system management by VIX API
+*** Power off
+*** Power on
+*** Reset
+*** Suspend
+** Provisioning
+*** Allow disk access
+*** Clone template
+*** Customize guest
+*** Deploy template
+*** Modify customization specification
+*** Read customization specifications
+** Snapshot management
+*** Create snapshot
+*** Remove snapshot
+*** Rename snapshot
+*** Revert to snapshot
+// OTVDOC-334 update
+
+There are three predefined roles as described below.
 
 .NetApp ONTAP tools for VMware vSphere Administrator
 Provides all the native vCenter Server privileges and ONTAP tools-specific privileges required to perform core ONTAP tools for VMware vSphere administrator tasks.
@@ -47,6 +158,8 @@ Provides some of the native vCenter Server privileges and ONTAP tools-specific p
 
 * Create new datastores
 * Manage datastores
+
+// .Required vCenter privileges for deployment or onboarding
 
 == vSphere objects and ONTAP storage backends
 

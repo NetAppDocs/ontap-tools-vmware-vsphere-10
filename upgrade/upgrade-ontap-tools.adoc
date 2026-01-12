@@ -100,7 +100,7 @@ You can create a dedicated vCenter user and role with only below listed datastor
 
 * Allocate space
 * Browse datastore
-* Low-level file operations
+* Low level file operations
 * Remove file
 * Update virtual machine files
 * Update virtual machine metadata
