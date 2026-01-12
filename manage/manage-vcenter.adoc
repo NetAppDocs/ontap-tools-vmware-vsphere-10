@@ -52,7 +52,7 @@ When you remove vCenter Server instances in ONTAP tools, the following actions a
 
 == Renew vCenter Server certificate
 // OTVDOC-342 updates
-If the vCenter Server certificate has expired or is expiring within the next 30 days, renew it by following these steps:
+ONTAP tools notifies you when the vCenter certificate is nearing expiration or has expired. After renewing the vCenter certificate, upload the new certificate to ONTAP tools using the following steps:
 
 . Log in to the ONTAP tools remote diagnostics shell.
 . Obtain the renewed vCenter certificate from the diagnostics shell:
@@ -63,8 +63,9 @@ echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE
 . Ensure the certificate is in Base 64 ASCII format and includes the beginning and ending lines, for example:
 +
 ----
------BEGIN CERTIFICATE-----
-MIIFUzCCA7ugAwIBAgIJANOgLapcl5oSMA0GCSqGSIb3DQEBCwUAMIGJMQwwCgYDVQQDDAN2YzExFDASBgoJkiaJk/IsZAEZFgRkZW1vMRUwEwYKCZImiZPyLGQBGRYF
+---{}BEGIN CERTIFICATE{}---
+MIIFUzCCA7ugAwIBAgIJANOgLapcl5oSMA0GCSqGSIb3DQEBCwUAMIGJMQwwCgYD
+VQQDDAN2YzExFDASBgoJkiaJk/IsZAEZFgRkZW1vMRUwEwYKCZImiZPyLGQBGRYF
 bG9jYWwxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRwwGgYDVQQK
 DBN2YzEuZGVtby5uZXRhcHAuY29tMQwwCgYDVQQLDANMT0QwHhcNMjQwNDA1MTgw
 NTE4WhcNMjYwNDA1MTgwNTE4WjBzMRwwGgYDVQQDDBN2YzEuZGVtby5uZXRhcHAu
@@ -92,9 +93,9 @@ gwsfs5H7VG9MJYks6lViNsGclo0EwEdF0MfoB3JtsWpPWq6+jBua0Jm7/aFCU+Ht
 mykr0gaV7muegoiBQuDma4EkAI31D7ZlUgJQaw157NTk4RW3TFcbtViBHJkM54Hr
 iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
------END CERTIFICATE-----
+---{}END CERTIFICATE{}---
 ----
-. Save the certificate in a text file with a `.pem` extension.
+. Copy the output and save it as a text file with a `.pem` extension on your desktop.
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the applicable vCenter Server instance from the sidebar
