@@ -44,6 +44,8 @@ A _permission_ is a definition that binds a user or group along with a role to a
 == Two RBAC environments
 
 There are two distinct RBAC environments you need to consider when working with ONTAP tools for VMware vSphere 10.
+ONTAP tools for VMware vSphere 10 requires specific privileges in both vCenter and ONTAP to perform its operations. While ONTAP tools automates storage management tasks, it does not create user accounts in either vCenter or ONTAP. Service accounts must be created by a vSphere administrator as needed. This documentation provides guidance for administrators to assign the necessary roles and permissions for effective ONTAP tools management.
+// github issue #106
 
 .VMware vCenter Server
 
