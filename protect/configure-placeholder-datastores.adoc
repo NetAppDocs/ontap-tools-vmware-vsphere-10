@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Configure a placeholder datastore to reserve space in the vCenter inventory at the recovery site for protected virtual machines (VMs). Placeholder datastores require minimal capacity, because placeholder VMs are small and typically use only a few hundred kilobytes.'
 ---
-= Configure placeholder datastores
+= Configure placeholder datastores in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

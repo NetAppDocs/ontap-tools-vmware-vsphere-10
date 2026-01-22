@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can change the administrator password using ONTAP tools Manager.'
 ---
-= Change ONTAP tools for VMware vSphere configuration
+= Change ONTAP tools appliance settings
 :icons: font
 :imagesdir: ../media/
 

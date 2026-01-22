@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should map your resources on the protected site and recovery site so that virtual machines are configured to fail over into one group of hosts or the other.'
 ---
-= Configure resource mappings
+= Configure resource mappings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

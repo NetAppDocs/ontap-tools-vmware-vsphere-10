@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should be aware of some of the considerations while migrating exisitng virtual machines in your data center.'
 ---
-= Considerations to migrate or clone virtual machines
+= Virtual machine migration and cloning considerations for ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

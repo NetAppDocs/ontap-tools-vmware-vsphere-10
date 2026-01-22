@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Attach a data disk to a virtual machine to expand the storage capacity.'
 ---
-= Attach or detach a data disk from a virtual machine
+= Attach or detach a data disk in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

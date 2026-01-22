@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
 summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
 ---
-= ONTAP tools for VMware vSphere requirements and configuration limits
+= ONTAP tools requirements and configuration limits
 :icons: font
 :imagesdir: ../media/
 

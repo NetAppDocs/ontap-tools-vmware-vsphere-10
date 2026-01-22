@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
 summary: 'Set up ONTAP tools for VMware vSphere with this quick start section.'
 ---
-= Quick start for ONTAP tools for VMware vSphere
+= Quick start for ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
