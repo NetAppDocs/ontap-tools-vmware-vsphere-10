@@ -123,46 +123,31 @@ Click to expand or collapse the port requirements table.
 For HA deployments, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
 ====
 
-== Configuration limits to deploy ONTAP tools for VMware vSphere for vVols datastores
 
-You can use the following table as a guide for configuring ONTAP tools for VMware vSphere.
+== Configuration limits to deploy ONTAP tools for VMware vSphere
+
+The following table provides configuration limits for deploying ONTAP tools for VMware vSphere, covering vVols, VMFS, and NFS datastores. These limits are validated and supported by NetApp. Actual limits may vary depending on your environment and workload. Exceeding these limits may impact performance or supportability and is not recommended.
+
+Consider the following when reviewing the table:
+
+* Virtual machine Disaster Recovery (DR) is configured using synchronous, asynchronous, or strict sync policies. DR is not supported for the NVMe protocol.
+* Cluster protection uses SnapMirror Active Sync, which does not support multi-vCenter deployments.
+* ONTAP tools restricts only the number of ESXi hosts and datastores based on deployment size. There are no restrictions on the number of vCenter Servers that can be connected to ONTAP tools.
+* ONTAP tools performs parallel discovery of all storage objects. Configuration limits for ONTAP storage objects apply regardless of the number of objects actively in use.
+
+[cols="1,1,2,2,2,2"]
 |===
+|Deployment |Type |Number of vVols |Number of VMFS and NFS datastores |Number of DR enabled VMFS datastores |Number of hosts |Number of vCenters
 
-|*Deployment* | *Type* | *Number of vVols* |*Number of hosts*
-
-|Non-HA |Small (S) |up to 12K| 32
-|Non-HA |Medium (M) |up to 24K| 64
-|High-Availability |Small (S) |up to 24K| 64
-|High-Availability |Medium (M) |up to 50k| 128
-|High-Availability |Large (L) |up to 100k| 256 
+|Non-HA |Small (S) |up to 12K |200 |80 |32 |1 or multiple
+|Non-HA |Medium (M) |up to 24K |250 |100 |64 |1 or multiple
+|High-Availability |Small (S) |up to 24K |350 |200 |64 |1 or multiple
+|High-Availability |Medium (M) |up to 50K |600 |200 |128 |1 or multiple
+|High-Availability |Large (L) |up to 100K |1024 |250 |256 |1 or multiple
 |===
 
 [NOTE]
 The host counts in the table represent the combined total across all connected vCenters.
-
-== Configuration limits to deploy ONTAP tools for VMware vSphere for VMFS and NFS datastores
-// github issue updates
-The configuration limits listed in this section are validated and supported by NetApp. Actual limits may vary depending on your environment and workload. Exceeding these limits may impact performance or supportability and is not recommended.
-
-
-[cols="2,2,2,1,2,1"]
-|===
-|Deployment |Number of VMFS and NFS datastores |Number of DR enabled VMFS datastores |Number of hosts | Number of vCenters |ONTAP Storage objects
-
-|Non-HA Small |200 |80 |32 |1 or multiple |
-|Non-HA Medium |250 |100 |32 |1 or multiple |
-|HA Small |350 |200 |64 |1 or multiple |
-|HA Medium |600 |200 |128 |1 or multiple |
-|HA Large |1024 |250 |256 |1 or multiple |
-|===
-
-Disaster Recovery (DR) configuration is done through SnapMirror Active Sync, and multi-vCenter deployments are not supported with SnapMirror Active Sync.
-
-[NOTE]
-ONTAP tools only restricts the number of ESXi hosts and datastores based on the deployment size. There are no restrictions on the number of vCenter Servers that can be connected to ONTAP tools.
-
-[NOTE]
-ONTAP tools performs parallel discovery of all storage objects. The configuration limits for ONTAP storage objects apply regardless of the number of objects actively in use.
 
 == ONTAP tools for VMware vSphere - Storage Replication Adapter (SRA)
 The following table shows the numbers supported per VMware Live Site Recovery instance using ONTAP tools for VMware vSphere.
