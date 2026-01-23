@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can register the VASA Provider with a vCenter Server instance using ONTAP tools for VMware vSphere remote plug-in interface.'
 ---
-= Register the VASA Provider with a vCenter Server instance using ONTAP tools
+= Register the VASA Provider with a vCenter Server instance in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

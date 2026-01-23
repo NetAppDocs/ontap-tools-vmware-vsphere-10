@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'When you create a datastore at the host cluster level, ONTAP tools mounts it on all destination hosts and enables the action only if you have the required privileges.'
 ---
-= Create a datastore
+= Create a datastore in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

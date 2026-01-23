@@ -5,7 +5,7 @@ keywords: ontap tools vmware vsphere rest api
 summary: "ONTAP tools for VMware vSphere 10 is a set of tools for virtual machine lifecycle management. It includes a robust REST API you can use as part of your automation processes."
 ---
 
-= Learn about the ONTAP tools for VMware vSphere 10 REST API
+= Learn about the ONTAP tools REST API
 :hardbreaks:
 :nofooter:
 :icons: font

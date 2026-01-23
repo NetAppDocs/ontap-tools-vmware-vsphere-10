@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'The following section describes the key concepts and terms used in the document.'
 ---
-= Key concepts and terms
+= Key concepts and terms in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

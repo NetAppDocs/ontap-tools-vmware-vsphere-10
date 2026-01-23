@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'In a fan-out protection scenario, the consistency group is double protected with synchronous relationship on the first destination ONTAP cluster and with asynchronous relationship on the second destination ONTAP cluster.'
 ---
-= Fan-out protection
+= Fan-out protection in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

@@ -5,7 +5,7 @@ keywords: ontap tools for vmware vsphere rest api reference, first rest api call
 summary: "You can issue an API call using curl to get started with the ONTAP tools for VMware vSphere 10 REST API."
 ---
 
-= Your first ONTAP tools for VMware vSphere 10 REST API call
+= Make your first ONTAP tools REST API call
 :hardbreaks:
 :nofooter:
 :icons: font
