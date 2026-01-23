@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools,Storage Replication Adapter
 summary: 'Follow the instructions in this section to terminate your ONTAP tools for VMware vSphere deployment gracefully.'
 ---
-= Uninstall ONTAP tools for VMware vSphere
+= Uninstall ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

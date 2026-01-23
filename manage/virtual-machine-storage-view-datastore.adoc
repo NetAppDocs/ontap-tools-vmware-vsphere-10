@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Remove vVol datastore
 summary: 'The storage view shows the list of vVols that are created by the virtual machine.'
 ---
-= Virtual machine storage view
+= Virtual machine storage view in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

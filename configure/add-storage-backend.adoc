@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
 ---
-= Add storage backend to ONTAP tools
+= Add a storage backend to ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

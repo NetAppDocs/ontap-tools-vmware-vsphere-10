@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should map your networks on the protected site and the recovery site to enable communication between them.'
 ---
-= Configure network mappings
+= Configure network mappings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
