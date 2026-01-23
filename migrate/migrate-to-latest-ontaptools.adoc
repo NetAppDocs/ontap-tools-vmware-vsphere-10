@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: migrate
 summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.'
 ---
-= Migrate from ONTAP tools 9.x to 10.x
+= Migrate from ONTAP tools for VMware vSphere 9.xx to 10.5
 :icons: font
 :imagesdir: ../media/
 

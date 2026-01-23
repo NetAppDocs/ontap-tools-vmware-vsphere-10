@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should create protection groups to protect a group of virtual machines on the protected site.'
 ---
-= Configure protection groups in ONTAP tools
+= Configure protected and recovery sites in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

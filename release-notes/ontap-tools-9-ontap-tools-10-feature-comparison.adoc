@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: release notes, feature, comparison
 summary: "Learn about the ONTAP tools for VMware vSphere 9 and ONTAP tools for VMware vSphere 10 feature comparison"
 ---
-= ONTAP tools 9.x and 10.x feature comparison
+= ONTAP tools for VMware vSphere 9 and 10 feature comparison
 :icons: font
 :imagesdir: ../media/
 
