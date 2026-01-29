@@ -148,19 +148,21 @@ Consider the following when reviewing the table:
 * ESXi host cluster protection uses SnapMirror Active Sync, which does not support multi-vCenter deployments.
 * ONTAP tools restricts only the number of ESXi hosts and datastores based on deployment size. There are no restrictions on the number of vCenter Servers that can be connected to ONTAP tools.
 * ONTAP tools performs parallel discovery of all storage objects. Configuration limits for ONTAP storage objects apply regardless of the number of objects actively in use.
-[cols="1,2,2,2,2"]
+* The host count can include hosts managed by one or more vCenter Servers.
+
+[cols="1,2,2,2"]
 |===
-|Deployment |Number of VMFS and NFS datastores |Number of DR enabled VMFS datastores |Number of hosts | Number of vCenters
+|Deployment |Number of VMFS and NFS datastores |Number of DR enabled VMFS datastores |Number of hosts
 
-|Non-HA Small |200 |80 |32 |1 or multiple 
+|Non-HA Small |200 |80 |32
 
-|Non-HA Medium |250 |100 |32 |1 or multiple
+|Non-HA Medium |250 |100 |32
 
-|HA Small |350 |200 |64 |1 or multiple 
+|HA Small |350 |200 |64
 
-|HA Medium |600 |200 |128 |1 or multiple 
+|HA Medium |600 |200 |128
 
-|HA Large |1024 |250 |256 |1 or multiple 
+|HA Large |1024 |250 |256
 
 |===
 
