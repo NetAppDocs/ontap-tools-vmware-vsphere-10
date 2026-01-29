@@ -150,7 +150,6 @@ Consider the following when reviewing the table:
 * ONTAP tools performs parallel discovery of all storage objects. Configuration limits for ONTAP storage objects apply regardless of the number of objects actively in use.
 * The host count can include hosts managed by one or more vCenter Servers.
 
-[cols="1,2,2,2"]
 |===
 |Deployment |Number of VMFS and NFS datastores |Number of DR enabled VMFS datastores |Number of hosts
 
