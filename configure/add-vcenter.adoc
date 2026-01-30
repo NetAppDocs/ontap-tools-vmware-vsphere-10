@@ -12,6 +12,15 @@ summary: 'Add vCenter Server instances to ONTAP tools for VMware vSphere to conf
 Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment. When you add multiple vCenter Server instances, Custom CA certificates are required for secure communication between ONTAP tools and each vCenter Server.
 //OTVDOC-271 updates -Jani
 
+When registering a vCenter Server instance with ONTAP tools Manager, ensure that the vCenter Server certificate includes a valid Subject Alternative Name (SAN) extension. The SAN extension must contain both DNS and IP address entries. For example:
+----
+X509v3 extensions:
+    X509v3 Subject Alternative Name:
+        DNS: vcenter.example.com, DNS: vcenter, IP Address: 192.168.0.50
+----
+If the vCenter Server certificate does not include a SAN extension, or if the SAN extension does not contain the correct DNS or IP address values, ONTAP tools operations may fail due to certificate validation errors.
+// OTVDOC-343 fix
+
 .About this task
 
 ONTAP tools integrates with vCenter Server to perform storage tasks like provisioning, snapshots, and data protection directly from the vSphere client.
