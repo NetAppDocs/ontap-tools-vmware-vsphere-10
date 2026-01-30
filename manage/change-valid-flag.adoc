@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can change the certificate validation flag using the maintenance console.'
 ---
-= Change certificate validation flag
+= Change certificate validation flag in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

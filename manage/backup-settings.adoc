@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Enter the NTP server details to synchronize the time clocks of ONTAP tools appliance.'
 ---
-= Edit Backup settings
+= Edit ONTAP tools backup settings
 :icons: font
 :imagesdir: ../media/
 

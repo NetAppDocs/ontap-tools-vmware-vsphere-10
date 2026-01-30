@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should map your folders on the protected site and recovery site to enable communication between them.'
 ---
-= Configure folder mappings
+= Configure folder mappings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

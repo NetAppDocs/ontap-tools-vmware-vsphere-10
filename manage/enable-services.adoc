@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You can change the administrator password using ONTAP tools Manager to enable services like VASA Provider, import of vVols configuration, and disaster recovery (SRA) using ONTAP tools Manager.'
 ---
-= Enable ONTAP tools for VMware vSphere services
+= Enable ONTAP tools services
 :icons: font
 :imagesdir: ../media/
 

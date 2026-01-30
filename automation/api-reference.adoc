@@ -5,7 +5,7 @@ keywords: ontap tools for vmware vsphere rest api reference, api reference
 summary: "The ONTAP tools for VMware vSphere 10 REST API reference contains details about all the API calls. This reference is helpful when developing automation applications."
 ---
 
-= API reference for the ONTAP tools for VMware vSphere 10 REST API
+= ONTAP tools REST API reference
 :hardbreaks:
 :nofooter:
 :icons: font

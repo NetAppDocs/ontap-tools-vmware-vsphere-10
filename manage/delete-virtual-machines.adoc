@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'Use the steps in this section to perform VASA cleanup.'
 ---
-= VASA cleanup
+= Clean up VASA configurations in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

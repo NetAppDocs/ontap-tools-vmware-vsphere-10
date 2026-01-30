@@ -5,7 +5,7 @@ keywords: vcenter, vcenter server, vcenter server rbac, use rbac
 summary: "There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implementation with vCenter Server you should consider before using it in a production environment."
 ---
 
-= Use vCenter Server RBAC with ONTAP tools for VMware vSphere 10
+= vCenter Server RBAC considerations for ONTAP tools
 :hardbreaks:
 :nofooter:
 :icons: font

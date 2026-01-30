@@ -5,7 +5,7 @@ keywords:
 summary: 'You can set the threshold to receive notifications in vCenter Server when the volume and the aggregate capacity reaches certain levels.
 '
 ---
-= Manage storage thresholds
+= Manage storage thresholds in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 

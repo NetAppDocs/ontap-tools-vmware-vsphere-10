@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:
 summary: 'You should verify that the protected site and recovery site are successfully paired after configuring Storage Replication Adapter \(SRA\). The replicated storage system should be discoverable by both the protected site and the recovery site.'
 ---
-= Verify replicated storage systems
+= Verify replicated storage systems in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
