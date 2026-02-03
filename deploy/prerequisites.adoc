@@ -62,7 +62,7 @@ When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on
 |3.0
 
 |OVA Application 
-|10.5
+|10.6
 
 |ESXi host to deploy ONTAP tools virtual machine
 |7.0U3 and 8.0U3

@@ -91,7 +91,6 @@ When you delete the relationship, the system rescans the secondary site to remov
 * If you delete an Automated Failover Duplex (AFD) policy-based relationship of a protected host cluster, you can choose to remove the associated storage elements on the secondary storage directly from the interface.
 * If you delete an Automated Failover Duplex (AFD) policy-based relationship and the consistency group is now hierarchical for application-level backups, a warning appears about backup impact. Confirm to proceed. After confirmation, delete the associated storage elements on the secondary storage. If you do not remove them, they remain on the secondary site.
 
-// 10.5 update for hierarchical CG
 ONTAP tools creates a vCenter task, and you can track its progress in the *Recent task* panel.
 
 == Modify an existing SnapMirror relationship

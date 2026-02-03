@@ -15,8 +15,6 @@ Storage backends are systems that the ESXi hosts use for data storage.
 
 You can run the discovery of a storage backend on demand without waiting for a scheduled discovery to update the storage details immediately. For MetroCluster configurations, run ONTAP tools discovery manually after a switchover.
 
-// 10.5 updates  - Jani
-
 Follow the steps below to discover the storage backends.
 
 .Steps
@@ -34,7 +32,6 @@ If the certificate will expire in 30 days or less, ONTAP tools shows a warning. 
 
 When you modify the storage backend, ONTAP tools for VMware vSphere performs a discovery of the storage backend to update the storage details.
 
-// 10.5 updates - Jani For Certificate feature.
 Follow the steps in this section to modify a storage backend.
 
 . Log in to the vSphere client.
@@ -83,7 +80,6 @@ The summary page provides the following details:
 * Capacity information
 * Basic information about the VM
 * Certificate details such as the certificate status and the expiry date. 
-// 10.5 updates - Jani
 * Network information like the IP address and port of the network. For the child SVM, the information is the same as the parent storage backend.
 * Privileges allowed and restricted for the storage backend. For the child SVM, the information is the same as the parent storage backend. ONTAP tools show privileges only on the cluster-based storage backends. If you add SVM as the storage backend, privileges information is not shown.
 * The ASA r2 system cluster drill-down view doesn't include local tiers tab when the disaggregated property is set as "true" for the SVM or the cluster.

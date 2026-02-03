@@ -15,7 +15,6 @@ Do not disable the backup because it prevents ONTAP tools from maintaining low R
 You can change the frequency of the backup to a value between 10 and 60 minutes.
 // OTVDOC-256 jira updated note removed for JIRA OTVDOC-290
 
-//10.5 backup updates
 .Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 

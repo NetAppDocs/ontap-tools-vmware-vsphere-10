@@ -17,7 +17,6 @@ To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Ma
 
 If MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
 
-// 10.5 updates -Jani rewrote the intro and added the last para. Added before you begin section.
 .Before you begin
 
 Verify that the certificate includes a valid Subject Alternative Name (SAN) field. ONTAP systems use the SAN field to identify cluster and SVM management LIFs.
@@ -46,7 +45,6 @@ If needed, you can disable Subject Alternative Name (SAN) validation from the ma
 [NOTE]
 After the ONTAP system performs a switchover and switchback, run the ONTAP tools discovery manually.
 
-// 10.5 updates -Jani.
 --
 
 .Using vSphere client user interface
@@ -66,7 +64,6 @@ You can add a storage backend using cluster-based credentials with either IPv4 o
 [NOTE]
 After the ONTAP system performs a switchover and switchback, run the ONTAP tools discovery manually.
 
-// 10.5 updates -Jani. For MCC and certificate feature updates.
 .What’s next?
 
 ONTAP tools updates the list to show the new storage backend.

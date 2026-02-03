@@ -23,7 +23,6 @@ ONTAP tools Manager provides the following capabilities:
 * Manage certificates - Replace the self-signed certificate with a custom CA certificate, and renew or refresh certificates for VASA Provider and ONTAP tools.
 * Reset passwords - Change the password for the VASA Provider and SRA.
 * Manage appliance settings - Configure the ONTAP tools appliance, including enabling HA and scaling up node sizes.
-// updated for 10.5
 
 To access ONTAP tools Manager, launch `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` from the browser and login with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 

@@ -23,12 +23,10 @@ You should use the *Summary* tab of your deployed ONTAP tools for VMware vSphere
 a|
 Application Configuration
 a|
-// updated for 10.0 release
 
 . Display server status summary
 . Change LOG level for ONTAP tools services
 . Change cert validation flag
-// 10.5 updates
 a|
 System Configuration
 a|
