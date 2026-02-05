@@ -71,8 +71,10 @@ When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on
 |vCenter Server to deploy ONTAP tools virtual machine
 |7.0 and 8.0
 // https://jira.ngage.netapp.com/browse/OTVDOC-346 updates - Jani
-##|vCenter High Availability beginning with ONTAP tools for VMware vSphere 10.5 P1
-|vCenter Server 8.0U3 and 9.0##
+
+|##vCenter High Availability beginning with ONTAP tools for VMware vSphere 10.5 P1##
+|##vCenter Server 8.0U3 and 9.0##
+
 // updated the requirements as per OTVDOC-258
 |===
 [NOTE]
