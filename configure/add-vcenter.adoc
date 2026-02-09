@@ -25,6 +25,23 @@ If the vCenter Server certificate does not include a SAN extension, or if the SA
 
 ONTAP tools integrates with vCenter Server to perform storage tasks like provisioning, snapshots, and data protection directly from the vSphere client.
 
+.Before you begin
+// OTVDOC-347 updates
+* Ensure that the vCenter Server certificate includes a valid Subject Alternative Name (SAN) extension with both DNS and IP address entries. The SAN should match how clients connect to vCenter (FQDN and/or IP address).
+* The Primary Network Identifier (PNID) of the vCenter Server must be included in the SAN details.
+* NetApp recommends deploying vCenter Server using its FQDN, with the Subject Alternative Name containing DNS Name=machine_FQDN.
+* The PNID and DNS name should be identical and resolvable in DNS.
+* For more information, refer to VMware documentation:
+** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html[vSphere Certificate Requirements for Different Solution Paths]
+** https://knowledge.broadcom.com/external/article/316601/replace-vcenter-machine-ssl-certificate.html[Replace vCenter Machine SSL certificate Custom Certificate Authority Signed Certificate]
+** https://knowledge.broadcom.com/external/article/406282/error-subject-alternate-name-san-field-d.html[Error: Subject Alternate Name (SAN) field does not contain the PNID. Please provide a valid certificate]
+
+[NOTE]
+====
+If FQDN is not available, you can set the PNID to the IP address and include the IP address in the SAN. However, this is not recommended by VMware.
+====
+
+
 .Steps
 
 . Open a web browser and go to the URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
