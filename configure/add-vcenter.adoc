@@ -27,10 +27,9 @@ ONTAP tools integrates with vCenter Server to perform storage tasks like provisi
 
 .Before you begin
 // OTVDOC-347 updates
-* Ensure that the vCenter Server certificate includes a valid Subject Alternative Name (SAN) extension with both DNS and IP address entries. The SAN should match how clients connect to vCenter (FQDN and/or IP address).
-* The Primary Network Identifier (PNID) of the vCenter Server must be included in the SAN details.
 * NetApp recommends deploying vCenter Server using its FQDN, with the Subject Alternative Name containing DNS Name=machine_FQDN.
-* The PNID and DNS name should be identical and resolvable in DNS.
+* Ensure that the vCenter Server certificate includes a valid Subject Alternative Name (SAN) extension with both DNS and IP address entries. The SAN should match how clients connect to vCenter (FQDN and/or IP address).
+* The Primary Network Identifier (PNID) of the vCenter Server must be included in the SAN details. PNID and DNS name should be identical and resolvable in DNS.
 * For more information, refer to VMware documentation:
 ** https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-authentication/vsphere-security-certificates-authentication/certificate-requirements-for-different-solution-paths-authentication.html[vSphere Certificate Requirements for Different Solution Paths]
 ** https://knowledge.broadcom.com/external/article/316601/replace-vcenter-machine-ssl-certificate.html[Replace vCenter Machine SSL certificate Custom Certificate Authority Signed Certificate]
