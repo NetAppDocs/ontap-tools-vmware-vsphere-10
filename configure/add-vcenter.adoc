@@ -41,7 +41,6 @@ ONTAP tools integrates with vCenter Server to perform storage tasks like provisi
 If FQDN is not available, you can set the PNID to the IP address and include the IP address in the SAN. However, this is not recommended by VMware.
 ====
 
-
 .Steps
 
 . Open a web browser and go to the URL: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
