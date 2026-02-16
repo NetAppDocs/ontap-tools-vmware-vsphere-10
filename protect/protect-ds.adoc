@@ -1,0 +1,38 @@
+---
+permalink: protect/protect-ds.html
+sidebar: sidebar
+keywords:
+summary: 'Protect eligible VMFS datastores by adding them to a protection group, enabling SnapMirror replication and failover capabilities.'
+---
+
+=  Protect a VMFS Datastore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Protect eligible VMFS datastores by adding them to a protection group, enabling SnapMirror replication and failover capabilities.
+
+.Before you begin
+
+Ensure the datastore uses the iSCSI or FC protocol.
+Confirm you have administrative privileges in vSphere.
+Verify that the datastore is not already part of a protection group.
+
+.Steps
+
+. . In the vSphere client, right-click the VMFS datastore you want to protect and select Protect.
+. The system checks the datastore’s eligibility for protection.
+
+If the datastore is ineligible, a message displays the reasons and you cannot proceed.
+. Choose to add the datastore to an existing protection group or create a new protection group.
+. If creating a new protection group:
+.. Enter a name for the group.
+.. Configure SnapMirror relationship settings as required.
+. Click Protect to start the protection workflow.
+[NOTE]
+The Protect option is only available for eligible VMFS datastores using iSCSI or FC protocols.
+
+.Result
+The datastore is protected and appears in the selected protection group. You can view or manage its protection status from the ONTAP tools plugin.
+
+// 10.6 updates

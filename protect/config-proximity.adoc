@@ -5,12 +5,12 @@ keywords:
 summary: 'Configure proximity or access settings for a host cluster to define source and target sites, assign hosts, and pair storage virtual machines (SVMs) for datastore protection.'
 ---
 
-= Configure proximity or access for datastore protection with ONTAP tools
+= Configure proximity and access for datastore protection with ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Configure proximity or access settings for a host cluster to define source and target sites, assign hosts, and pair storage virtual machines (SVMs) for datastore protection.
+Configure proximity and access settings to define source and target sites, assign hosts, and pair SVMs for robust datastore protection and failover in ONTAP tools.
 
 .Before you begin
 
@@ -20,7 +20,7 @@ Configure proximity or access settings for a host cluster to define source and t
 
 .Steps
 
-. In the vSphere Client, right-click the host cluster and select *Configure proximity or access*.
+. In the vSphere client, right-click the host cluster and select *Configure proximity or access*.
 . In the configuration window, select the cluster configuration type: *Uniform* or *Non-uniform*.
 . Enter site names for the source and target sites:
 .. Default names are "Site A" and "Site B". You can edit these fields as needed.
@@ -43,4 +43,4 @@ NOTE: If the cluster already has a proximity configuration, an error message is 
 
 .Result
 
-The proximity or access configuration is applied to the selected host cluster. Hosts and SVMs are assigned to source and target sites as specified, enabling protection and failover for datastores in ONTAP tools. You can view or edit the configuration at any time from the ONTAP tools plug-in view.
+The configuration is applied, and you can view or edit it in the ONTAP tools plugin.

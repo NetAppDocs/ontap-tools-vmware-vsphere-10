@@ -99,6 +99,8 @@ entries:
         url: /manage/delete-hostcluster-protection.html
       - title: Configure proximity/access for host cluster protection
         url: /manage/config-proximity.html
+      - title: Manage protection groups in ONTAP tools
+        url: /manage/manage-protection-groups.html
   - title: Recover the ONTAP tools setup
     url: /manage/recover-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere
