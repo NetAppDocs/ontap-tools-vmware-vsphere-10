@@ -41,9 +41,9 @@ When you select the *uniform host configuration* toggle button, the host initiat
 . If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
 .. Select *Add*.
 . Review the configuration in the *Summary* window and select *Protect*.
-+
-A new protection group is created with the selected datastores and the SnapMirror relationship is added to that protection group. The system creates a vCenter task with job ID details and shows its progress in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and does not wait for the task to complete.
 . To view the details of all the available protection groups, go to *NetApp ONTAP tools* > *Protection* > *Protection groups*.
+
+A new protection group is created with the selected datastores and the SnapMirror relationship is added to that protection group. The system creates a vCenter task with job ID details and shows its progress in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and does not wait for the task to complete.
 
 [NOTE]
 ====
@@ -51,7 +51,4 @@ To remove protection within one hour of creation, run storage discovery first.
 ====
 //OTVDOC-312 update - Jani
 
-.Related information
-
-https://www.vmware.com/docs/vmware-vsphere-metro-storage-cluster-vmsc[VMware vSphere Metro Storage Cluster (vMSC)^]
 //10.6 topic

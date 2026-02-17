@@ -149,11 +149,11 @@ In the ASA r2 storage type, volume creation or selection doesn't apply to storag
 +
 [NOTE]
 You cannot use the existing volume to create a VMFS datastore with NVMe/FC or NVMe/TCP protocol. Create a new volume for the VMFS datastore.
-. In the *Protection* window, select *Protect this datastore using SnapMirror replication* to enable protection. 
-. If the datastore is eligible for protection, you can choose to add the datastore to an existing protection group or create a new one. To create a new protection group:
-.. Enter a *Protection group name*. 
-.. Add SnapMirror relationship.  If you select the AutomatedFailoverDuplex policy, configure host proximity and access settings before proceeding. For more information, see link:../protect/config-proximity.html[Configure proximity and access for datastore protection with ONTAP tools].
-. If the datastore is not eligible for protection, the protection option is disabled and the reasons for ineligibility are displayed. You can still create the datastore without protection.
+. In the *Protection* window, select *Protect this datastore using SnapMirror replication* to enable protection. You can add the datastore to an existing protection group or create a new one. To create a new protection group:
+.. Enter a *Protection group name*.
+.. Configure the SnapMirror relationship. If you select the AutomatedFailoverDuplex policy, set up host proximity and access settings before continuing. For details, see link:../protect/config-proximity.html[Configure proximity and access for datastore protection with ONTAP tools].
+[NOTE]
+If the datastore is not eligible for protection, the protection option is disabled and the reasons for ineligibility are displayed. You can still create the datastore without protection.
 . Review the datastore details in the *Summary* pane and select *Finish*.
 // 10.6 updates 
 [NOTE]
