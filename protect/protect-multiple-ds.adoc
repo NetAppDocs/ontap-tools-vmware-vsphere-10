@@ -15,8 +15,7 @@ You can protect only certain datastores within a host cluster, rather than all d
 Make sure you meet these requirements before you protect a host cluster:
 
 * Only VMFS datastores using iSCSI or FC protocols are eligible. vVols, NFS, NVMe/FC, and NVMe/TCP datastores are not supported.
-
-##datastore eligibility criteria ##
+* ##datastore eligibility criteria ##
 
 .Steps
 
@@ -25,9 +24,9 @@ Make sure you meet these requirements before you protect a host cluster:
 . Select the *Storage VM* in the cluster.
 +
 Datastores from the selected SVM are displayed. Only datastores provisioned on ONTAP 9.15.1 with iSCSI or FC protocols and mounted on the host cluster are shown.
-. Select the datastores you want to protect and click *Next*.
-. In the protection settings window, choose whether to protect the selected datastores in a new or existing protection group.
-. If you want to create a new protection group for the selected datastores, select *Create new*.
+. Select the *datastore type*.
+. From the list that populates, select the datastores you want to protect and click *Next*.
+. In the *Protection settings* window, choose whether to protect the selected datastores in an existing protection group or a new protection group. To create a new protection group, select *Create new*: 
 .. Provide a name for the protection group. 
 .. Select *Add Relationship*. 
 .. In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
@@ -39,7 +38,7 @@ When you add the SnapMirror relationship as an AutomatedFailOverDuplex type poli
 In the AutomatedFailOverDuplex policy type, there are uniform and non-uniform host configurations. 
 When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
 . If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
-.. Select *Add*.
+.. Select *Save*.
 . Review the configuration in the *Summary* window and select *Protect*.
 . To view the details of all the available protection groups, go to *NetApp ONTAP tools* > *Protection* > *Protection groups*.
 
