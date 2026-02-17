@@ -37,7 +37,7 @@ When you add the SnapMirror relationship as an AutomatedFailOverDuplex type poli
 +
 In the AutomatedFailOverDuplex policy type, there are uniform and non-uniform host configurations. 
 When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
-. If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
+.. If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
 .. Select *Save*.
 . Review the configuration in the *Summary* window and select *Protect*.
 . To view the details of all the available protection groups, go to *NetApp ONTAP tools* > *Protection* > *Protection groups*.

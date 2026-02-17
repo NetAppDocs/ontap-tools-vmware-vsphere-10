@@ -48,4 +48,5 @@ image:../media/fan-out-protection-relationship.png[Fan-out protection relationsh
 +
 For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/about-placeholder-virtual-machines/configure-a-placeholder-datastore.html[Select a Placeholder Datastore]
 
-. Add datastore to the host cluster protection by following link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. Add both asynchronous and synchronous policy types.
+//. Add datastore to the host cluster protection by following link:../manage/edit-hostcluster-protection.html[Modify protected host cluster]. Add both asynchronous and synchronous policy types.
+// for 10.6 - need to get clarification on this step

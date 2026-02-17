@@ -1,0 +1,33 @@
+---
+permalink: manage/unprotect-ds.html
+sidebar: sidebar
+keywords:
+summary: 'Remove a datastore from a protection group, with options to delete associated target artifacts and protection settings.'
+---
+
+=  Unprotect a VMFS datastore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Remove a datastore from a protection group, with options to delete associated target artifacts and protection settings.
+
+.Before you begin
+
+Ensure you have administrative privileges in vSphere.
+Review the impact of unprotecting the last datastore in a group.
+
+.Steps
+
+. Log in to the vSphere client.
+. Select a host cluster and select *Datastores*
+. Right-click the eligible VMFS datastore you want to unprotect and select *NetApp ONTAP tools* > *Unprotect*.
+. Select *Delete associated storage elements(LUN) from the secondary storage* if you want to delete replicated LUNs and consistency groups on the target.
+. Select *Unprotect* to proceed.
+[NOTE]
+Unprotecting the last datastore in a protection group deletes the protection group and the associated storage elements.
+
+.Result
+The datastore is removed from protection. If it was the last in the protection group, the group is deleted.
+
+// 10.6 updates

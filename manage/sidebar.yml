@@ -27,6 +27,10 @@ entries:
     url: /manage/add-vsphere-host.html
   - title: Manage datastores
     entries:
+      - title: Protect a VMFS Datastore
+        url: /manage/protect-ds.html
+      - title: Unprotect a VMFS datastore
+        url: /manage/unprotect-ds.html
       - title: Mount NFS and VMFS datastore
         url: /manage/mount-datastores-on-host.html
       - title: Unmount NFS and VMFS datastore
@@ -93,12 +97,12 @@ entries:
         url: /manage/reset-maint-password.html
   - title: Manage host cluster protection
     entries:
-      - title: Modify host cluster protection
-        url: /manage/edit-hostcluster-protection.html
       - title: Remove host cluster protection
         url: /manage/delete-hostcluster-protection.html
       - title: Manage protection groups in ONTAP tools
         url: /manage/manage-protection-groups.html
+      - title: Manage host proximity in ONTAP tools
+        url: /manage/manage-host-proximity.html
   - title: Recover the ONTAP tools setup
     url: /manage/recover-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere

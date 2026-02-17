@@ -9,7 +9,7 @@ summary: 'You can edit the SnapMirror relationships of the protected host cluste
 :imagesdir: ../media/
 
 [.lead]
-View, edit, and remove protection groups and their relationships directly from the cluster configuration page.
+You can view, edit, and remove protection groups and their relationships directly from the cluster configuration page in ONTAP tools.
 
 .Before you begin
 
@@ -17,15 +17,17 @@ Ensure you have administrative privileges in vSphere.
 
 .Steps
 
-. In the ONTAP tools plugin, navigate *Protection* > *Host proximity/access*.
-. To edit a group, select the group and click Edit. Update relationships as needed.
-. To remove a group, select the group and click Remove. Confirm the deletion.
-. To add or remove relationships, use the options available on the cluster configuration page.
+. In the ONTAP tools plugin, navigate to *Protection* > *Protection groups*.
++
+The protection groups are listed with their associated relationships, including consistency groups, SnapMirror policies, and protected datastores. 
+. Select the vertical ellipsis (three dots) next to the protection group you want to manage:
+.. To edit, select *Edit* and update relationships as needed.
+.. To delete, select *Delete* and confirm the deletion in the dialog box.
 
-[NOTE]
-The warning message for deleting target artifacts during unprotect operations remains unchanged.
+.Related topics
 
-.Result
-Protection groups and relationships are managed directly from the configuration page, streamlining the workflow.
+link:../protect/config-proximity.html[Configure proximity/access for host cluster protection]
+link:../manage/protect-ds.html[Protect a VMFS Datastore]
+link:../protect/protect-multiple-ds.html[Protect multiple datastores]
 
 // 10.6 updates

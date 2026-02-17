@@ -5,10 +5,6 @@ entries:
     url: /protect/config-proximity.html
   - title: Protect datastores in a cluster
     url: /protect/protect-multiple-ds.html
-  - title: Protect a single datastore
-    url: /protect/protect-ds.html
-  - title: Unprotect a single datastore
-    url: protect/unprotect-ds.html
   - title: Protect using SRA protection
     entries:
       - title: Configure SRA to protect datastores
