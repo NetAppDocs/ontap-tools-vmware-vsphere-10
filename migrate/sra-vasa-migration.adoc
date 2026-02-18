@@ -21,6 +21,7 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.5.
 . Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.5 release. Refer to link:../configure/add-vcenter.html[Add a vCenter Server instance] for more information. 
+. link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
 . Onboard the storage backend locally from the vCenter server APIs for the ONTAP tools plug-in. Refer to link:../configure/add-storage-backend.html[Add a storage backend using the vSphere client interface] for more information.
 . Obtain an access token to authenticate REST API requests. Use the following example, replacing the variables with values specific to your environment.
 +
@@ -106,7 +107,6 @@ After the job completes, review the migration report in the job response.
 . Add the ONTAP tools for VMware vSphere storage provider to the vCenter Server.
 . Register the VASA Provider with ONTAP tools for VMware vSphere. For instructions, see link:../configure/registration-process.html[Register the VASA Provider].
 . After registration, verify the name of the VASA Provider and its status in the vSphere Client under *Storage Providers*. The VASA Provider should appear online, confirming successful registration.
-. link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service using these steps:
 +
 .. In ONTAP tools 9.x, open the web console.
