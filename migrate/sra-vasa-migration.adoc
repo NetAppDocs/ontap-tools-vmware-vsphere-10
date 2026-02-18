@@ -176,8 +176,10 @@ curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373
 }
 ----
 ====
+[NOTE]
+Use the 'migration_id' value returned in Step 7 as <migration_id> in the PATCH API call.
 The request body is empty for patch operation.
-
++
 [NOTE]
 UUID is the migration UUID returned in response to the post-migrate API.
 
