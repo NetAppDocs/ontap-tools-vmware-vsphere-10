@@ -48,11 +48,8 @@ You can access Swagger through this URL: `\https://$FQDN_IP_PORT/`, for example:
 This REST API call uses the following method and endpoint.
 
 |===
-
 |*HTTP method* |*Path*
-|POST
-|/api/v1
-
+|POST |/api/v1
 |===
 
 *Processing type*
@@ -60,18 +57,40 @@ This REST API call uses the following method and endpoint.
 Asynchronous
 
 *Curl example*
-
 ----
 curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
---header 'x-auth: <auth_token>' \
---header 'Content-Type: application/json' \
---data '{
+  --header 'x-auth: <auth_token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "otv_ip": "xx.xx.xx.xx",
+    "vasa_provider_credentials": {
+      "username": "xxxxx",
+      "password": "******"
+    },
+    "database_password": "******"
+  }'
+----
+
+Request body for other release migration:
+----
+{
   "otv_ip": "xx.xx.xx.xx",
   "vasa_provider_credentials": {
     "username": "xxxxx",
-    "password": "******"
-. link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
-  },
+    "password": "*******"
+  }
+}
+----
+
+*JSON output example*
+
+The system returns a job object. Save the job identifier to use it in the next step.
+----
+{
+  "id": 123,
+  "migration_id": "d50073ce-35b4-4c51-9d2e-4ce66f802c35",
+  "status": "running"
+}
 ----
 ====
 . Use the following URI in Swagger to check the status:
