@@ -135,6 +135,11 @@ This REST API call uses the following method and endpoint.
 |/api/v1
 
 |===
+*Processing type*
+
+Asynchronous
+
+Use the following URI in Swagger:
 ----
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
 ----
