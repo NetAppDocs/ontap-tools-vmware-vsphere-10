@@ -149,7 +149,7 @@ curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373
   "status": "running"
 }
 ----
-
+====
 The request body is empty for patch operation.
 
 [NOTE]
