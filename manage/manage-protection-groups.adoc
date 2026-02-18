@@ -26,8 +26,8 @@ The protection groups are listed with their associated relationships, including 
 
 .Related topics
 
-link:../protect/config-proximity.html[Configure proximity/access for host cluster protection]
-link:../manage/protect-ds.html[Protect a VMFS Datastore]
-link:../protect/protect-multiple-ds.html[Protect multiple datastores]
+* link:../protect/config-proximity.html[Configure proximity/access for host cluster protection]
+* link:../manage/protect-ds.html[Protect a VMFS Datastore]
+* link:../protect/protect-multiple-ds.html[Protect multiple datastores]
 
 // 10.6 updates
