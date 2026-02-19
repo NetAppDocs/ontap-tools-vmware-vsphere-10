@@ -5,7 +5,7 @@ keywords:
 summary: 'Protect eligible VMFS datastores by adding them to a protection group, enabling SnapMirror replication and failover capabilities.'
 ---
 
-=  Protect a VMFS Datastore
+=  Protect a VMFS datastore
 :icons: font
 :imagesdir: ../media/
 

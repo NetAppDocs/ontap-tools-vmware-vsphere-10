@@ -157,7 +157,7 @@ If the datastore is not eligible for protection, the protection option is disabl
 . Review the datastore details in the *Summary* pane and select *Finish*.
 // 10.6 updates 
 [NOTE]
-If you create the datastore on a protected cluster, you can see a read-only message: "The datastore is being mounted on a protected Cluster."
+If a datastore is protected, ONTAP tools mounts it on all hosts in the cluster.
 
 .Result
 ONTAP tools creates the VMFS datastore and mounts it on all the hosts.

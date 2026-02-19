@@ -5,39 +5,39 @@ keywords:
 summary: 'Configure proximity or access settings for a host cluster to define source and target sites, assign hosts, and pair storage virtual machines (SVMs) for datastore protection.'
 ---
 
-= Configure proximity and access for datastore protection with ONTAP tools
+= Configure proximity or access for datastore protection with ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP tools for VMware vSphere to configure proximity and access settings, enabling efficient datastore protection and streamlined failover management for your virtualized environment.
+Use ONTAP tools for VMware vSphere to configure proximity or access settings, enabling efficient datastore protection and streamlined failover management for your virtualized environment.
 
 .Before you begin
 
 * Verify that you have administrative privileges in vSphere.
-* Ensure that the host cluster and datastores are eligible for protection.
+* Proximity settings are applicable for uniform and non-uniform configurations, while access settings are applicable only for AFD type of relationship.
 * Review site name requirements, including character limits and allowed characters.
 
 .Steps
 
 . In the vSphere client, right-click the host cluster and select *Configure proximity/access*.
-. In the *Configuration type* window:
-.. Select *Uniform*, to allow hosts from both Site A and Site B to access storage from both sites.
-.. Select *Non-uniform*, to restrict hosts at each site to access storage only at their own site.
-.. Enter site names for the source and target sites. Default names are "Site A" and "Site B". You can edit these fields as needed. Ensure that site names comply with character restrictions.
-. Select *Next*.
-. In the *Hosts* window, assign each host to either the source site or the target site. All hosts must be assigned, and a host cannot belong to both sites. The *Next* button is enabled after all hosts are assigned.
-. Select *Next*.
-. On the *Storage SVM peers* page, assign each SVM to the appropriate site. You can peer multiple SVMs, but at least one must be assigned to each site. When you assign an SVM to a site, its peer SVM is automatically assigned to the opposite site.
-. Select *Next*.
-. Review the *Summary* page. Confirm the source and target hosts, SVM peering, and proximity assignments.
-. Select *Create* to apply the configuration.
 +
-NOTE: If the cluster already has a proximity configuration, an error message is displayed.
-
-. To view or edit an existing cluster proximity configuration:
-.. Go to the ONTAP tools plug-in view.
-.. Navigate to *Protect* > *Cluster proximity/access*.
+[NOTE]
+If the cluster already has a proximity or access configuration, this option allows you to edit the existing configuration.
+. In the *Configuration type* window:
+.. Select *Uniform* to allow hosts in both fault domains to access storage resources at both sites. Fault domain is a group of hardware and infrastructure components. Assign each host to a fault domain for both sites.
+.. Select *Non-uniform* to restrict hosts at each site to access storage only at their respective site. Assign hosts to fault domains accordingly.
+.. Enter fault domain names. Default names are "Site A" and "Site B". You can edit these fields as needed. Ensure that site names comply with character restrictions.
+. Select *Next*.
+. In the *Hosts* window, assign each host to either the source fault domain or the target fault domain. All hosts must be assigned, and a host cannot belong to both sites. The *Next* button is enabled after all hosts are assigned.
+. Select *Next*.
+. On the *Storage SVM peers* page, assign each SVM to the appropriate site. You can assign multiple SVM peers, but at least one must be assigned to each site. When you assign an SVM to a site, its peer SVM is automatically assigned to the opposite site.
+. Select *Next*.
+. Review the *Summary* page. Confirm the proximity assignment or access assignment to the respective fault domains.
+. Select *Create* to apply the configuration.
+. To view or edit an existing cluster proximity or access configuration:
+.. Go to the ONTAP tools plug-in view. 
+.. Navigate to *Protection* > *Cluster proximity/access*.
 .. Select the cluster to view its current configuration.
 .. Click the vertical ellipsis and select *Edit* to modify the configuration. The wizard displays the current settings for editing.
 

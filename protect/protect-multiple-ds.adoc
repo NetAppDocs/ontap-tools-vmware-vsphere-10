@@ -9,21 +9,23 @@ summary: 'Granular datastore protection lets you select and group specific datas
 :imagesdir: ../media/
 
 [.lead]
-You can protect only certain datastores within a host cluster, rather than all datastores. With granular datastore protection, you can select and group specific datastores into separate protection groups. This approach gives you flexibility to tailor protection policies to your environment, even when a host cluster contains datastores from multiple SVMs.
+Granular datastore protection enables you to select and group specific datastores within a host cluster into separate protection groups. This provides flexibility to apply protection policies that meet your environment’s requirements, even when the host cluster includes datastores from multiple storage virtual machines (SVMs).
 // Configure granular datastore protection - this can be the heading of the main topic
-.Before you begin
-Make sure you meet these requirements before you protect a host cluster:
 
-* Only VMFS datastores using iSCSI or FC protocols are eligible. vVols, NFS, NVMe/FC, and NVMe/TCP datastores are not supported.
+.Before you begin
+
+Make sure you meet these requirements before you protect a datastore:
+
+* The datastore is of type VMFS datastores with iSCSI or FC protocols.
 * ##datastore eligibility criteria ##
 
 .Steps
 
 . Log in to the vSphere client.
-. Right-click on a host cluster and select *NetApp ONTAP tools* > *Protect datastores*.
+. Right-click on a host or a host cluster and select *NetApp ONTAP tools* > *Protect datastores*.
 . Select the *Storage VM* in the cluster.
 +
-Datastores from the selected SVM are displayed. Only datastores provisioned on ONTAP 9.15.1 with iSCSI or FC protocols and mounted on the host cluster are shown.
+Datastores from the selected SVM are displayed.
 . Select the *datastore type*.
 . From the list that populates, select the datastores you want to protect and click *Next*.
 . In the *Protection settings* window, choose whether to protect the selected datastores in an existing protection group or a new protection group. To create a new protection group, select *Create new*: 
@@ -31,7 +33,7 @@ Datastores from the selected SVM are displayed. Only datastores provisioned on O
 .. Select *Add Relationship*. 
 .. In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
 +
-The policy type can be Asynchronous or AutomatedFailOverDuplex. 
+The policy type can be Asynchronous or AutomatedFailOverDuplex. AutomatedFailOverDuplex policy type is supported only for datastores provisioned on ONTAP 9.15.1 with iSCSI or FC protocols and mounted on the host cluster.
 +
 When you add the SnapMirror relationship as an AutomatedFailOverDuplex type policy, you must add the target storage VM as storage backend to the same vCenter where ONTAP tools for VMware vSphere is deployed.
 +
@@ -49,5 +51,8 @@ A new protection group is created with the selected datastores and the SnapMirro
 To remove protection within one hour of creation, run storage discovery first.
 ====
 //OTVDOC-312 update - Jani
+.Related information
 
+* link:../manage/protect-ds.html[Protect a VMFS datastore]
+* link:../manage/unprotect-ds.html[Unprotect a VMFS datastore]
 //10.6 topic
