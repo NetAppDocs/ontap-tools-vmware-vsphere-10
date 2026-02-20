@@ -21,16 +21,17 @@ iptables -I INPUT 1 -p tcp --dport 1527 -j ACCEPT
 
 . Deploy OVA for ONTAP tools for VMware vSphere 10.5.
 . Add the vCenter Server instance you want to migrate to ONTAP tools for VMware vSphere 10.5 release. Refer to link:../configure/add-vcenter.html[Add a vCenter Server instance] for more information. 
+. link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
 . Onboard the storage backend locally from the vCenter server APIs for the ONTAP tools plug-in. Refer to link:../configure/add-storage-backend.html[Add a storage backend using the vSphere client interface] for more information.
 . Obtain an access token to authenticate REST API requests. Use the following example, replacing the variables with values specific to your environment.
 +
 [source,curl]
 ----
 curl --request POST \
---location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/login” \
---header "Content-Type: application/json" \
---header "Accept: */*" \
--d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
+  --location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/vcenter-login" \
+  --header "Content-Type: application/json" \
+  --header "Accept: */*" \
+  -d '{"username": "$MYUSER", "password": "$MYPASSWORD"}'
 ----
 Copy and save the access token returned in the response.
 . Issue the following API from Swagger or in Postman to migrate. 
@@ -47,11 +48,8 @@ You can access Swagger through this URL: `\https://$FQDN_IP_PORT/`, for example:
 This REST API call uses the following method and endpoint.
 
 |===
-
 |*HTTP method* |*Path*
-|POST
-|/api/v1
-
+|POST |/api/v1
 |===
 
 *Processing type*
@@ -59,21 +57,21 @@ This REST API call uses the following method and endpoint.
 Asynchronous
 
 *Curl example*
-
 ----
 curl -X POST 'https://<OTV-NG-IP>:8443/virtualization/api/v1/vcenters/<vcguid>/migration-jobs' \
---header 'x-auth: <auth_token>' \
---header 'Content-Type: application/json' \
---data '{
-  "otv_ip": "xx.xx.xx.xx",
-  "vasa_provider_credentials": {
-    "username": "xxxxx",
-    "password": "******"
-  },
-  "database_password": "******"
-}'
+  --header 'x-auth: <auth_token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "otv_ip": "xx.xx.xx.xx",
+    "vasa_provider_credentials": {
+      "username": "xxxxx",
+      "password": "******"
+    },
+    "database_password": "******"
+  }'
 ----
-Request body for other release migration: 
+
+Request body for other release migration:
 ----
 {
   "otv_ip": "xx.xx.xx.xx",
@@ -98,21 +96,26 @@ The system returns a job object. Save the job identifier to use it in the next s
 . Use the following URI in Swagger to check the status:
 +
 ----
-curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<migration_id>?includeSubJobsAndTasks=true`
+curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?includeSubJobsAndTasks=true`
 ----
++
+Use the 'id' value returned from the migration job in the previous step.
 After the job completes, review the migration report in the job response.
 . Add the ONTAP tools for VMware vSphere storage provider to the vCenter Server.
 . Register the VASA Provider with ONTAP tools for VMware vSphere. For instructions, see link:../configure/registration-process.html[Register the VASA Provider].
-. After registration, verify the name of the VASA Provider and its status in the vSphere Client under *Storage Providers*. The VASA Provider should appear online, confirming successful registration.
-. link:../manage/enable-services.html[Enable VASA Provider] service on ONTAP tools for VMware vSphere 10.5.
+. Verify the VASA Provider registration:
++
+.. In the vSphere Client, navigate to the vCenter Server.
+.. Select *Configure* > *Storage Providers*.
+.. Confirm that the VASA Provider registered in the previous step appears online.
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service using these steps:
 +
 .. In ONTAP tools 9.x, open the web console.
 .. Access the maintenance console.
 .. Enter `1` to select the *Application Configuration* menu.
 .. Enter `5` to stop the VASA Provider and SRA services.
-.. In the vSphere Client, navigate to *Inventory* > *Storage Providers*.
-.. Select the ONTAP tools 9.x VASA Provider from the storage backend and click *Remove*.
+.. In the vSphere Client, navigate to the vCenter Server and select *Configure* > *Storage Providers*.
+.. Select the offline VASA Provider for ONTAP tools 9.x and select *Remove*.
 // JIRA OTVDOC-335 updates. Removed note.
 +
 After the old VASA Provider is stopped, the vCenter Server fails over to ONTAP tools for VMware vSphere. All the datastores and VMs become accessible and are served from ONTAP tools for VMware vSphere.
@@ -132,6 +135,23 @@ This REST API call uses the following method and endpoint.
 |/api/v1
 
 |===
+*Processing type*
+
+Asynchronous
+
+Use the following URI in Swagger:
+----
+curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
+----
+
+*HTTP method and endpoint*
+
+This REST API call uses the following method and endpoint.
+
+|===
+|*HTTP method* |*Path*
+|PATCH |/api/v1
+|===
 
 *Processing type*
 
@@ -141,13 +161,13 @@ Use the following URI in Swagger:
 ----
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/<vcenter_id>/migration-jobs/<migration_id>`
 ----
+
 *Curl example*
 ----
 curl  -X PATCH  `\https://xx.xx.xx.xx:8443/virtualization/api/v1/vcenters/56d373bd-4163-44f9-a872-9adabb008ca9/migration-jobs/d50073ce-35b4-4c51-9d2e-4ce66f802c35`
 ----
-*JSON output example*
 
-A job object is returned. You should save the job identifier to use it in the next step.
+*JSON output example*
 ----
 {
   "id": 123,
@@ -156,16 +176,14 @@ A job object is returned. You should save the job identifier to use it in the ne
 }
 ----
 ====
-// URI <https://10.60.24.125:8443/virtualization/api/v1/migration/migrate>
-+
+[NOTE]
+Use the 'migration_id' value returned in Step 7 as <migration_id> in the PATCH API call.
 The request body is empty for patch operation.
-
++
 [NOTE]
 UUID is the migration UUID returned in response to the post-migrate API.
 
 After running the patch migration API, all VMs comply with the storage policy.
-
-
 
 .What's next
 
@@ -177,19 +195,15 @@ After completing the migration and registering ONTAP tools 10.5 to the vCenter S
 After upgrading, if the virtual machine's compliance state is outdated, reapply the storage policy using the following steps:
 
 . Go to the datastore and select *Summary* > *VM Storage policies*.
-+
-The system shows the compliance status under *VM storage policy compliance* as *Out-of-date*.
+. The system shows the compliance status under *VM storage policy compliance* as *Out-of-date*.
 . Select the Storage VM policy and the corresponding VM.
 . Select *Apply*.
-+
-The compliance status under *VM storage policy compliance* shows as compliant.
+. The compliance status under *VM storage policy compliance* shows as compliant.
 
-// updated for OTVDOC-192
 .Related information
 
 * link:../concepts/rbac-learn-about.html[Learn about ONTAP tools for VMware vSphere 10 RBAC]
 * link:../upgrade/upgrade-ontap-tools.html[Upgrade from ONTAP tools for VMware vSphere 10.x to 10.5]
-// OTVDOC-164 - jani
 
 == Steps to update the storage replication adaptor(SRA)
 
@@ -205,6 +219,7 @@ Don't begin migration if the failover has been completed but the re-protection i
 .. Go to the *Storage Replication Adapter* section.
 .. From the ellipsis menu select *Reset configuration*.
 .. From the ellipsis menu select *Delete*.
+
 . Perform these steps on both protection and recovery sites.
 .. link:../manage/enable-services.html[Enable ONTAP tools for VMware vSphere services]
 .. Configure ONTAP tools for VMware vSphere 10.5 SRA adapter using the steps in link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance].
