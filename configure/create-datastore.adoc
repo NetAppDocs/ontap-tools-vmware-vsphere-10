@@ -126,7 +126,7 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 . Right-click on a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
 . Select VMFS datastore type.
 . Enter the datastore name, size, and protocol information in the *Name and Protocol* pane.
-To add the new datastore to an existing VMFS cluster, select the datastore cluster in Advanced Options. 
+To add the new datastore to an existing VMFS cluster, select the datastore cluster in *Advanced Options*. 
 . Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section as required. You can choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
 When NVMe/FC or NVMe/TCP protocol is selected, a new namespace subsystem is created and is used for namespace mapping. ONTAP tools creates the namespace subsystem using the auto-generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of the *Storage* pane. 
@@ -151,7 +151,7 @@ In the ASA r2 storage type, volume creation or selection doesn't apply to storag
 You cannot use the existing volume to create a VMFS datastore with NVMe/FC or NVMe/TCP protocol. Create a new volume for the VMFS datastore.
 . In the *Protection* window, select *Protect this datastore using SnapMirror replication* to enable protection. You can add the datastore to an existing protection group or create a new one. To create a new protection group:
 .. Enter a *Protection group name*.
-.. Configure the SnapMirror relationship. If you select the AutomatedFailoverDuplex policy, set up host proximity and access settings before continuing. For details, see link:../protect/config-proximity.html[Configure proximity and access for datastore protection with ONTAP tools].
+.. Configure the SnapMirror relationship. If you select the AutomatedFailoverDuplex policy, set up host cluster configuration settings before continuing. For details, see link:../protect/config-proximity.html[Configure cluster configuration for datastore protection with ONTAP tools].
 [NOTE]
 If the datastore is not eligible for protection, the protection option is disabled and the reasons for ineligibility are displayed. You can still create the datastore without protection.
 . Review the datastore details in the *Summary* pane and select *Finish*.

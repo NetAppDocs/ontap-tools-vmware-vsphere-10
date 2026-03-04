@@ -25,6 +25,8 @@ The table below shows the recommended memory for each deployment size. For high 
 |===
 
 |*Type of deployment*| *CPUs per node* |*Memory (GB) per node* |*Disk space (GB) thick provisioned per node*
+|Extra small |6 |12 |350
+// 10.6 updates
 |Small
 |9
 |18
@@ -49,14 +51,14 @@ When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on
 |===
 |Storage, host, and applications|Version requirements
 
-|ONTAP
-|9.15.1, 9.16.1, and 9.17.0
+|ONTAP systems
+|9.16.1, 9.17.1, 9.18.1, 9.19.1
 
 |ONTAP tools supported ESXi hosts
 |7.0.3 onwards
 
 |ONTAP tools supported vCenter Server
-|7.0U3 onwards
+|8.0U3 onwards
 
 |VASA Provider 
 |3.0

@@ -2,28 +2,28 @@
 permalink: protect/config-proximity.html
 sidebar: sidebar
 keywords:
-summary: 'Configure proximity or access settings for a host cluster to define source and target sites, assign hosts, and pair storage virtual machines (SVMs) for datastore protection.'
+summary: 'Configure cluster configuration settings for a host cluster to define source and target sites, assign hosts, and pair storage virtual machines (SVMs) for datastore protection.'
 ---
 
-= Configure proximity or access for datastore protection with ONTAP tools
+= Configure cluster for datastore protection with ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP tools for VMware vSphere to configure proximity or access settings, enabling efficient datastore protection and streamlined failover management for your virtualized environment.
+Use ONTAP tools for VMware vSphere to configure cluster configuration settings, enabling efficient datastore protection and streamlined failover management for your virtualized environment.
 
 .Before you begin
 
 * Verify that you have administrative privileges in vSphere.
-* Proximity settings are applicable for uniform and non-uniform configurations, while access settings are applicable only for AFD type of relationship.
+* Cluster configuration settings are applicable for uniform and non-uniform configurations, while access settings are applicable only for AFD type of relationship.
 * Review site name requirements, including character limits and allowed characters.
 
 .Steps
 
-. In the vSphere client, right-click the host cluster and select *Configure proximity/access*.
+. In the vSphere client, right-click the host cluster and select *Configure cluster protection*.
 +
 [NOTE]
-If the cluster already has a proximity or access configuration, this option allows you to edit the existing configuration.
+If the cluster already has a cluster configuration, this option allows you to edit the existing configuration.
 . In the *Configuration type* window:
 .. Select *Uniform* to allow hosts in both fault domains to access storage resources at both sites. Fault domain is a group of hardware and infrastructure components. Assign each host to a fault domain for both sites.
 .. Select *Non-uniform* to restrict hosts at each site to access storage only at their respective site. Assign hosts to fault domains accordingly.
@@ -33,11 +33,11 @@ If the cluster already has a proximity or access configuration, this option allo
 . Select *Next*.
 . On the *Storage SVM peers* page, assign each SVM to the appropriate site. You can assign multiple SVM peers, but at least one must be assigned to each site. When you assign an SVM to a site, its peer SVM is automatically assigned to the opposite site.
 . Select *Next*.
-. Review the *Summary* page. Confirm the proximity assignment or access assignment to the respective fault domains.
+. Review the *Summary* page. Confirm the cluster configuration settings for the respective fault domains.
 . Select *Create* to apply the configuration.
-. To view or edit an existing cluster proximity or access configuration:
+. To view or edit an existing cluster protection configuration:
 .. Go to the ONTAP tools plug-in view. 
-.. Navigate to *Protection* > *Cluster proximity/access*.
+.. Navigate to *Protection* > *Cluster protection configuration*.
 .. Select the cluster to view its current configuration.
 .. Click the vertical ellipsis and select *Edit* to modify the configuration. The wizard displays the current settings for editing.
 

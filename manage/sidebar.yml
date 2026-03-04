@@ -101,7 +101,7 @@ entries:
         url: /manage/delete-hostcluster-protection.html
       - title: Manage protection groups in ONTAP tools
         url: /manage/manage-protection-groups.html
-      - title: Manage host proximity in ONTAP tools
+      - title: Manage host cluster configuration in ONTAP tools
         url: /manage/manage-host-proximity.html
   - title: Recover the ONTAP tools setup
     url: /manage/recover-backup.html

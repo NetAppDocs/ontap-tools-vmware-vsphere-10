@@ -4,12 +4,12 @@ sidebar: sidebar
 keywords: vVols datastore,delete vVol
 summary: 'You can edit the SnapMirror relationships of the protected host cluster. You can add, modify, and delete the relationships. However, you cannot edit consistency group name. '
 ---
-= Manage host proximity in ONTAP tools
+= Manage host cluster configuration in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can view, edit, and remove host proximity/access settings directly from the cluster configuration page in ONTAP tools.
+You can view, edit, and remove host cluster configuration settings directly from the cluster configuration page in ONTAP tools.
 
 .Before you begin
 
@@ -17,13 +17,13 @@ Ensure you have administrative privileges in vSphere.
 
 .Steps
 
-. In the ONTAP tools plugin, navigate to *Protection* > *Host proximity/access*.
+. In the ONTAP tools plugin, navigate to *Protection* > *Host cluster configuration*.
 +
-The host proximity/access settings are listed with their configuration type, SVMs, and hosts.
-. Select the vertical ellipsis (three dots) next to the host proximity/access setting you want to manage:
-.. To edit, select *Edit* and update the proximity settings. For more information, refer to link:../protect/config-proximity.html[Configure proximity/access for host cluster protection].
+The host cluster configuration settings are listed with their configuration type, SVMs, and hosts.
+. Select the vertical ellipsis (three dots) next to the host cluster configuration setting you want to manage:
+.. To edit, select *Edit* and update the cluster configuration settings. For more information, refer to link:../protect/config-proximity.html[Configure cluster configuration for host cluster protection].
 +
-When a new host is onboarded to a cluster, proximity/access settings are not automatically applied to the new host. You must edit the existing proximity/access configuration and assign the new host to the appropriate site to apply the settings.
+When a new host is onboarded to a cluster, cluster configuration settings are not automatically applied to the new host. You must edit the existing cluster configuration and assign the new host to the appropriate site to apply the settings.
 .. To delete, select *Remove* and confirm the deletion in the dialog box.
 
 // 10.6 updates
