@@ -28,7 +28,7 @@ The maintenance console shows the certificate validation flag status and prompts
 When you enable the certificate validation flag (set to true), ONTAP tools checks that all storage backends use certificates with a Subject Alternative Name (SAN). If any backend uses a certificate without a SAN, you cannot enable certificate validation. Before enabling this flag, verify that all storage backends use SAN-based certificates. If you disable the certificate validation flag (set to false), ONTAP tools bypasses certificate validation for all configured storage backends.
 
 // NADIAA checked
-== Verifying SAN-based Certificates for Storage Backends
+== Verify SAN-based certificates for storage backends
 
 To ensure secure communication and proper validation, verify that all storage backends use SAN-based certificates:
 
