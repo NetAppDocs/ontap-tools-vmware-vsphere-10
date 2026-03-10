@@ -18,6 +18,36 @@ To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Ma
 If MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
 
 // 10.5 updates -Jani rewrote the intro and added the last para. Added before you begin section.
+
+
+[cols="1,2,2,2", options="header"]
+|===
+|Use Case
+|Description
+|Example
+|Notes
+
+|Adding an entire storage cluster as a storage backend for a single vCenter server configuration
+|Onboard a full ONTAP cluster as a backend for one vCenter
+|Adding a storage backend from the ONTAP tools plugin in vCenter
+|No need to associate the storage backend with the vCenter in ONTAP tools Manager for this case
+
+|Adding multiple storage virtual machines (SVMs) in a multi-tenancy environment and associating them to different vCenter server instances
+|Onboard SVMs as backends and associate them with different vCenters in a multi-tenant setup
+|Adding a storage virtual machine as a storage backend
+|Include when associating a storage backend/SVM with a particular vCenter is required
+
+|Comparison of Global and Local Storage Use Cases
+|Global: Multi-tenancy where an ONTAP tools admin manages multiple vCenters and assigns SVM-level access to each vCenter. Local: Onboarding a cluster or directly onboarding an SVM for a specific vCenter
+|--
+|--
+
+|vCenter Storage Backend Onboarding
+|Onboarding a storage backend with SVM in vCenter requires both cluster onboarding (with limited privileges) and SVM onboarding at the vCenter level, especially for vWAL workflows
+|--
+|Clarifies onboarding procedures for clusters and SVMs in both single and multi-vCenter environments, and the distinction between global and local storage backends
+|===
+
 .Before you begin
 
 Verify that the certificate includes a valid Subject Alternative Name (SAN) field. ONTAP systems use the SAN field to identify cluster and SVM management LIFs.
@@ -79,3 +109,7 @@ ONTAP tools list the newly added storage backend on the *Storage backends* page.
 .Related information
 
 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html[Configuring the clusters into a MetroCluster configuration]
+
+
+// part of the github fix
+
