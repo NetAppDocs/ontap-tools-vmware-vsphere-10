@@ -38,4 +38,7 @@ To ensure secure communication and proper validation, verify that all storage ba
 
 Following these steps helps prevent certificate validation issues and ensures that the ONTAP system is securely integrated.
 
+Sample certificate
+
+
 // github issue https://github.com/NetAppDocs/ontap-tools-vmware-vsphere-10/issues/139
