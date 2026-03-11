@@ -31,9 +31,10 @@ curl --request POST \
   --location "https://$FQDN_IP_PORT/virtualization/api/v1/auth/vcenter-login" \
   --header "Content-Type: application/json" \
   --header "Accept: */*" \
-  -d '{"username": "$MYUSER", "password": "$MYPASSWORD"}'
+  -d '{"username": "$MYUSER", "password": "$MYPASSWORD", "vcenter hostname": "$MYVCENTER"}'
 ----
 Copy and save the access token returned in the response.
+// feedback through call from Rajiv. OEM request.
 . Issue the following API from Swagger or in Postman to migrate. 
 +
 ----
@@ -101,7 +102,6 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?i
 +
 Use the 'id' value returned from the migration job in the previous step.
 After the job completes, review the migration report in the job response.
-. Add the ONTAP tools for VMware vSphere storage provider to the vCenter Server.
 . Register the VASA Provider with ONTAP tools for VMware vSphere. For instructions, see link:../configure/registration-process.html[Register the VASA Provider].
 . Verify the VASA Provider registration:
 +
