@@ -1,0 +1,23 @@
+---
+permalink: manage/nconnect-update.html
+sidebar: sidebar
+keywords:
+summary: 'Updating the number of connections for a NFS datastore enables you to optimize the performance and availability of your virtual machine files. You can change the number of connections as your infrastructure requirements change.'
+---
+= Update number of connections for a NFS datastore in ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Updating the number of connections for a NFS datastore enables you to optimize the performance and availability of your virtual machine files. You can change the number of connections as your infrastructure requirements change.
+
+.About this task
+
+You can update the number of connections for NFS datastores to optimize performance and availability. The number of connections determines how many concurrent connections can be made to the NFS datastore. Increasing the number of connections can improve performance by allowing more clients to access the datastore simultaneously, while decreasing it can help manage resource usage and prevent overloading the system.
+// 10.6 nconnect update.
+.Steps
+
+. From the vSphere Client home page, select *Hosts and Clusters*.
+. In the navigation pane, select the data center or cluster to update multiple datastores at once, or select the NFS datastore under the data center to update connections for a single datastore.
+. Right-click the selection and select *NetApp ONTAP tools* > *Update number of connections*.
+. In the Update Number of Connections dialog box, enter the new number of connections for the datastore and select *Update*.

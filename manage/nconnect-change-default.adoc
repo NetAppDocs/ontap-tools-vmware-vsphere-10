@@ -1,0 +1,25 @@
+---
+permalink: manage/nconnect-change-default.html
+sidebar: sidebar
+keywords:
+summary: 'Updating the number of connections for a NFS datastore enables you to optimize the performance and availability of your virtual machine files. You can change the number of connections as your infrastructure requirements change.'
+---
+= Change default number of connections for a NFS datastore in ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can update the number of connections for NFS datastores to optimize performance and availability. The number of connections determines how many concurrent connections can be made to the NFS datastore. Increasing the number of connections can improve performance by allowing more clients to access the datastore simultaneously, while decreasing it can help manage resource usage and prevent overloading the system.
+
+.About this task
+
+Change the default number of connections for a NFS datastore to ensure that new datastores created in the future have the optimal number of connections for your environment.
+// 10.6 nconnect update.
+.Steps
+
+. Log in to the vSphere client.
+. Select *Shortcuts* > *NetApp ONTAP tools* under the plug-ins section.
+. Select *Settings* > *Default nconnect value*.
+. Select *Edit*, change the default number of connections for NFS datastores and select *Save*.
+
+The new default number of connections will be applied to all new NFS datastores created after the change. Existing datastores will not be affected by this change and will retain their current number of connections unless updated individually.
