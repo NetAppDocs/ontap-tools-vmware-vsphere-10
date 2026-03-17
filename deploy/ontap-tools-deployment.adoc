@@ -97,6 +97,7 @@ Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IP
 . When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
 image:../media/customize-hw105-p2-1.png[CPU hot add]
 image:../media/customize-hw105-p2.png[Memory hot plug]
+// OTV10.5 P2 update
 // Applicable only to vCenter 8.0.3
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
