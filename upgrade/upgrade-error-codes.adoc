@@ -89,7 +89,11 @@ You can try to migrate the VM to another host and restart.
 |056 |deleting migration backup has failed |NA
 |090 |certificate validation for storage backends and vCenter failed |
 Check upgrade logs and log file at /var/log/cert_validation_error.log and retry the upgrade.
-
+|114 |Internal cert update in the mongo collection failed| In case of upgrade failure with error code ending with 114, please follow the below steps to recover/complete the upgrade.
+Enable Diagnostic Shell
+Execute 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection'
+Please check the logs at /var/log/otvng/post-deploy-upgrade.log
+//OTV10.5 P2 update
 |===
 
 [NOTE]
