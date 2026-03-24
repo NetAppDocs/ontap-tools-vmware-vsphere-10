@@ -84,7 +84,9 @@ sudo rke2-uninstall.sh (all VMs).
 |061 |Services deployment has failed |Perform basic Kubernetes debugging like get pods, get rs, get svc, and so on in ntv-system namespace for more details and error logs at /var/log/ansible-perl-errors.log and /var/log/ansible-run.log and redeploy.
 |062 |ONTAP tools Services deployment has failed |Refer to the error logs at /var/log/ansible-perl-errors.log for more details and redeploy.
 |065 |Swagger page URL is not reachable |Redeploy
-|066 |Post deployment steps for gateway certificate has failed |Do the following to recover/complete the upgrade:
+|066 |Post deployment steps for gateway certificate has failed a|
+Do the following to recover/complete the upgrade:
+
 * Enable diagnostic shell.
 * Run 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postDeploy' command.
 * Check the logs at /var/log/post-deploy-upgrade.log.
@@ -92,6 +94,11 @@ sudo rke2-uninstall.sh (all VMs).
 |089 |Changing ownership of summary log rotate config file has failed |Restart the primary VM.
 |096 |Install dynamic storage provisioner |-
 |108 |Seeding script failed |-
+|114 |Internal certificate update in the MongoDB collection failed a|If deployment fails with error code 114, complete the following steps:
+
+* Enable the diagnostic shell.
+* Run the following command: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
+* Review the logs at `/var/log/otvng/post-deploy-upgrade.log`.
 |===
 
 |===

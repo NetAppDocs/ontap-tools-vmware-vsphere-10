@@ -89,10 +89,68 @@ You can try to migrate the VM to another host and restart.
 |056 |deleting migration backup has failed |NA
 |090 |certificate validation for storage backends and vCenter failed |
 Check upgrade logs and log file at /var/log/cert_validation_error.log and retry the upgrade.
-|114 |Internal cert update in the mongo collection failed| In case of upgrade failure with error code ending with 114, please follow the below steps to recover/complete the upgrade.
-Enable Diagnostic Shell
-Execute 'sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection'
-Please check the logs at /var/log/otvng/post-deploy-upgrade.log
+|114 |Internal certificate update in the MongoDB collection failed a|
+If upgrade fails with error code 114, perform the following steps:
+
+. Connect to the upgrade ISO on the primary node and enable the diagnostic shell.
+. Mount the ISO from the SSH session to the primary node:
++
+----
+sudo mount /dev/cdrom
+sudo mount -o loop,ro /dev/cdrom/APPLIANCE_UPGRADE.bin /upgrade
+----
+. Install Debian packages:
++
+----
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vplatform.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vpupgrader.deb
+sudo dpkg -iE /upgrade/dists/squeeze/main/binary-amd64/vmware-tools.deb
+----
+. Copy the build information file:
++
+----
+sudo cp /upgrade/APPLIANCE_BUILD /
+----
+. Add certificates to the collection by enabling the diagnostic shell and running:
++
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection
+----
++
+Check the logs at `/var/log/otvng/post-deploy-upgrade.log`.
+. Reboot the nodes:
++
+----
+sudo bash /home/maint/scripts/vault_decrypt.sh
+cd /home/maint/rke2-pb
+sudo ansible-playbook site.yaml --tags restart_nodes --skip-tags debian_upgrade,kernel_upgrade,rescan_scsi_bus,source_iso,eject_upgrade,mountIso,upgradeNodes,registryUpg,deleteOldImages,wait,checkReachability,delete_otv_cr,uninstall_trident,del_trident_images,refresh_resources,ntp_configure,ntpd_uninstall
+----
+. Perform post-upgrade steps:
++
+----
+sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade
+----
+. Verify successful completion by checking the logs:
++
+----
+tail -f /var/log/post-deploy-upgrade.log
+----
++
+Look for the success message: `Completed post 10.5 upgrade steps.`
+. Eject the ISO:
++
+----
+sudo umount -l -f /upgrade
+sudo umount -l -f /dev/cdrom
+sudo eject /dev/cdrom
+----
+. Reboot the primary node:
++
+----
+sudo reboot -f
+----
+|===
+
 //OTV10.5 P2 update
 |===
 
