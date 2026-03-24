@@ -9,7 +9,8 @@ summary: 'You should be aware of some of the considerations while migrating exis
 :imagesdir: ../media/
 
 [.lead]
-You should be aware of some of the considerations while migrating existing virtual machines in your data center.
+Managing virtual machines with ONTAP tools for VMware vSphere involves VMs that reside on vVols datastores. This section describes how ONTAP tools handle common VM operations such as migration, cloning, and snapshots on vVol-based VMs. You should consider several factors when migrating existing virtual machines in your data center.
+// OTVDOC-351 updates march26
 
 == Migrate protected virtual machines
 
@@ -47,11 +48,10 @@ Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsph
 
 == Virtual Machine Snapshots
 
-Presently only virtual machine Snapshots without memory are supported. If virtual machine has Snapshot with memory, then the virtual machine is not considered for protection.
+Virtual machine snapshots without memory are supported. If a virtual machine has a snapshot with memory, the virtual machine cannot be protected.
 
-You also cannot protect unprotected virtual machines that have memory Snapshot. For this release, you're expected to delete memory snapshot before enabling protection for the virtual machine.
+You cannot protect unprotected virtual machines that contain memory snapshots. Delete memory snapshots before you enable protection for the virtual machine.
 
-For a Windows VM with the ASA r2 storage type, a snapshot of the virtual machine is read-only.
-When you power on the VM, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the VM, VASA Provider deletes the LUN and disables IOPS.
-
+For a Windows VM with ASA r2 storage type, virtual machine snapshots are read-only. When you power on the VM, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the VM, VASA Provider deletes the LUN and disables IOPS.
+// OTVDOC-351 updates march26
 // Added for 10.3, inputs received from Rajiv
