@@ -50,6 +50,56 @@ When you remove vCenter Server instances in ONTAP tools, the following actions a
 * Plug-in is unregistered.
 * Plug-in privileges and plug-in roles are removed.
 
+== Remove a vCenter Server instance using the force delete option
+
+Beginning with ONTAP tools 10.6, you can use the force delete option to remove a vCenter Server instance even when traditional (non-vVol) datastores and storage backends are still associated.
+
+=== When to use force delete
+
+Use force delete when the vCenter Server is decommissioned, unreachable, or no longer needed in ONTAP tools.
+
+[NOTE]
+Force delete removes only ONTAP tools metadata. It does not remove ONTAP storage objects (volumes or LUNs), vSphere datastores, or virtual machines.
+
+=== Limitations
+
+Force delete is blocked if:
+
+* A vVol datastore exists on the vCenter Server
+* SMaS (granular datastore protection) is enabled on any datastore for the vCenter Server
+
+If either condition exists, remove or migrate vVol datastores and unprotect protected datastores before proceeding.
+
+Global storage backends shared with other vCenter Server instances are retained. Only the association with the deleted vCenter Server is removed.
+
+=== Remove a reachable vCenter Server instance
+
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Log in with ONTAP tools for VMware vSphere administrator credentials.
+. Select *vCenters* from the sidebar.
+. Select the vertical ellipses for the required vCenter Server and select *Remove*.
+. In the *Remove vCenter* dialog, review associated storage backends and datastores.
+. Select *Force delete*.
+. Confirm the action.
+
+=== Remove an unreachable vCenter Server instance
+
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Log in with ONTAP tools for VMware vSphere administrator credentials.
+. Select *vCenters* from the sidebar.
+. Select the vertical ellipses for the unreachable vCenter Server and select *Remove*.
+. In the *Remove vCenter* dialog, review associated storage backends and datastores.
+. Select *Force delete*.
+. Confirm the action.
+
+[NOTE]
+If the vCenter Server is unreachable, plug-in unregistration is not performed and a warning is displayed.
+
+
 == Renew vCenter Server certificate
 // OTVDOC-342 updates
 ONTAP tools notifies you when the vCenter certificate is nearing expiration or has expired. After renewing the vCenter certificate, upload the new certificate to ONTAP tools using the following steps:
