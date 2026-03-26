@@ -54,14 +54,10 @@ When you remove vCenter Server instances in ONTAP tools, the following actions a
 
 Beginning with ONTAP tools 10.6, you can use the force delete option to remove a vCenter Server instance even when traditional (non-vVol) datastores and storage backends are still associated.
 
-=== When to use force delete
-
 Use force delete when the vCenter Server is decommissioned, unreachable, or no longer needed in ONTAP tools.
 
 [NOTE]
 Force delete removes only ONTAP tools metadata. It does not remove ONTAP storage objects (volumes or LUNs), vSphere datastores, or virtual machines.
-
-=== Limitations
 
 Force delete is blocked if:
 

@@ -9,17 +9,19 @@ summary: 'You should be aware of some of the considerations while migrating exis
 :imagesdir: ../media/
 
 [.lead]
-You should be aware of some of the considerations while migrating existing virtual machines in your data center.
+You can migrate and clone virtual machines using the native vCenter Server interface. Be aware of the following considerations when migrating existing virtual machines in your data center.
 
 == Migrate protected virtual machines
 
 You can migrate the protected virtual machines to:
 
-* Same vVols datastore in a different ESXi host
-* Different compatible vVols datastore in same ESXi host
-* Different compatible vVols datastore in a different ESXi host
+* Same datastore in a different ESXi host
+* Different compatible datastore in same ESXi host
+* Different compatible datastore in a different ESXi host
 
 If you migrate the virtual machine to a different FlexVol volume, the system updates the metadata file for that volume with the virtual machine information. If a virtual machine is migrated to a different ESXi host but same storage, then underlying FlexVol volume metadata file will not be modified.
+
+For more information, refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html[vSphere Virtual Machines Migration]
 
 == Clone protected virtual machines
 
