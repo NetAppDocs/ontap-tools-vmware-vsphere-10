@@ -2,60 +2,64 @@
 permalink: manage/migrate-virtual-machines.html
 sidebar: sidebar
 keywords:
-summary: 'You should be aware of some of the considerations while migrating exisitng virtual machines in your data center.'
+summary: 'You should be aware of some considerations when migrating existing virtual machines in your data center.'
 ---
 = Virtual machine migration and cloning considerations for ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can migrate and clone virtual machines using the native vCenter Server interface. Be aware of the following considerations when migrating existing virtual machines in your data center.
+ONTAP tools for VMware vSphere support all major types of virtual machine migration—including compute-only (vMotion), storage-only (Storage vMotion), and combined compute and storage migration across all datastores. This topic outlines key considerations and best practices to ensure successful migration and cloning of virtual machines, regardless of the underlying datastore type.
+
 // OTVDOC-351 updates
 == Migrate protected virtual machines
 
-You can migrate the protected virtual machines to:
 
-* Same datastore in a different ESXi host
-* Different compatible datastore in same ESXi host
-* Different compatible datastore in a different ESXi host
+You can migrate protected virtual machines to:
 
-If you migrate the virtual machine to a different FlexVol volume, the system updates the metadata file for that volume with the virtual machine information. If a virtual machine is migrated to a different ESXi host but same storage, then underlying FlexVol volume metadata file will not be modified.
+* The same datastore on a different ESXi host
+* A different compatible datastore on the same ESXi host
+* A different compatible datastore on a different ESXi host
+
+If you migrate the virtual machine to a different FlexVol volume, the system updates the metadata file for that volume with the virtual machine information. If a virtual machine is migrated to a different ESXi host but the same storage, the underlying FlexVol volume metadata file will not be modified.
 
 For information on migrating virtual machines, refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html[vSphere Virtual Machines Migration]
 
 == Clone protected virtual machines
 
+
 You can clone protected virtual machines to the following:
 
-* Same container of same FlexVol volume using replication group
+* The same container of the same FlexVol volume using a replication group
 +
-Same FlexVol volume's metadata file is updated with the cloned virtual machine details.
+The same FlexVol volume's metadata file is updated with the cloned virtual machine details.
 
-* Same container of a different FlexVol volume using replication group
+* The same container of a different FlexVol volume using a replication group
 +
-The FlexVol volume where the cloned virtual machine is placed, the metadata file gets updated with the cloned virtual machine details.
+In the FlexVol volume where the cloned virtual machine is placed, the metadata file gets updated with the cloned virtual machine details.
 
-* Different container or vVols datastore
+* A different container or vVols datastore
 +
-The FlexVol volume where the cloned virtual machine is placed, the metadata file gets updated virtual machine details.
+In the FlexVol volume where the cloned virtual machine is placed, the metadata file gets updated with the virtual machine details.
 
-VMware presently doesn't support virtual machines cloned to a VM template.
+VMware presently does not support virtual machines cloned to a VM template.
 
-Clone-of-Clone of a protected virtual machine is supported.
 
-refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html[Creating a Virtual Machine for Cloning] for more details.
+A clone of a clone of a protected virtual machine is supported.
+
+Refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html[Creating a Virtual Machine for Cloning] for more details.
 
 // 10.3 updates
 
+
 == Virtual machine snapshots
 
-Presently only virtual machine Snapshots without memory are supported. If virtual machine has Snapshot with memory, then the virtual machine is not considered for protection.
+Only virtual machine snapshots without memory are supported. If a virtual machine has a snapshot with memory, it cannot be protected.
 
-You also cannot protect unprotected virtual machines that have memory Snapshot. For this release, you're expected to delete memory snapshot before enabling protection for the virtual machine.
+You cannot protect virtual machines that contain memory snapshots. Delete any memory snapshots before enabling protection for the virtual machine.
 
-For a Windows VM with the ASA r2 storage type, a snapshot of the virtual machine is read-only.
-When you power on the VM, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the VM, VASA Provider deletes the LUN and disables IOPS.
+For a Windows virtual machine with the ASA r2 storage type, virtual machine snapshots are read-only. When you power on the virtual machine, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the virtual machine, VASA Provider deletes the LUN and disables IOPS.
 
-For information on managing the virtual machine snapshots, refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html[Manage Virtual Machines With Snapshots]
+For information on managing virtual machine snapshots, refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html[Manage Virtual Machines With Snapshots]
 
 // Added for 10.3, inputs received from Rajiv
