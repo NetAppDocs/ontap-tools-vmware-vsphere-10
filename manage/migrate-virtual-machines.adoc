@@ -9,18 +9,19 @@ summary: 'You should be aware of some of the considerations while migrating exis
 :imagesdir: ../media/
 
 [.lead]
-Managing virtual machines with ONTAP tools for VMware vSphere involves VMs that reside on vVols datastores. This section describes how ONTAP tools handle common VM operations such as migration, cloning, and snapshots on vVol-based VMs. You should consider several factors when migrating existing virtual machines in your data center.
-// OTVDOC-351 updates march26
-
+You can migrate and clone virtual machines using the native vCenter Server interface. Be aware of the following considerations when migrating existing virtual machines in your data center.
+// OTVDOC-351 updates
 == Migrate protected virtual machines
 
 You can migrate the protected virtual machines to:
 
-* Same vVols datastore in a different ESXi host
-* Different compatible vVols datastore in same ESXi host
-* Different compatible vVols datastore in a different ESXi host
+* Same datastore in a different ESXi host
+* Different compatible datastore in same ESXi host
+* Different compatible datastore in a different ESXi host
 
 If you migrate the virtual machine to a different FlexVol volume, the system updates the metadata file for that volume with the virtual machine information. If a virtual machine is migrated to a different ESXi host but same storage, then underlying FlexVol volume metadata file will not be modified.
+
+For information on migrating virtual machines, refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vcenter-and-host-management/migrating-virtual-machines-host-management.html[vSphere Virtual Machines Migration]
 
 == Clone protected virtual machines
 
@@ -42,16 +43,19 @@ VMware presently doesn't support virtual machines cloned to a VM template.
 
 Clone-of-Clone of a protected virtual machine is supported.
 
-Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html[Creating a Virtual Machine for Cloning] for more details.
+refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-virtual-machine-administration-guide-7-0/deploying-virtual-machinesvm-admin/clone-an-existing-virtual-machine-h5vm-admin.html[Creating a Virtual Machine for Cloning] for more details.
 
 // 10.3 updates
 
-== Virtual Machine Snapshots
+== Virtual machine snapshots
 
-Virtual machine snapshots without memory are supported. If a virtual machine has a snapshot with memory, the virtual machine cannot be protected.
+Presently only virtual machine Snapshots without memory are supported. If virtual machine has Snapshot with memory, then the virtual machine is not considered for protection.
 
-You cannot protect unprotected virtual machines that contain memory snapshots. Delete memory snapshots before you enable protection for the virtual machine.
+You also cannot protect unprotected virtual machines that have memory Snapshot. For this release, you're expected to delete memory snapshot before enabling protection for the virtual machine.
 
-For a Windows VM with ASA r2 storage type, virtual machine snapshots are read-only. When you power on the VM, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the VM, VASA Provider deletes the LUN and disables IOPS.
-// OTVDOC-351 updates march26
+For a Windows VM with the ASA r2 storage type, a snapshot of the virtual machine is read-only.
+When you power on the VM, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the VM, VASA Provider deletes the LUN and disables IOPS.
+
+For information on managing the virtual machine snapshots, refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html[Manage Virtual Machines With Snapshots]
+
 // Added for 10.3, inputs received from Rajiv
