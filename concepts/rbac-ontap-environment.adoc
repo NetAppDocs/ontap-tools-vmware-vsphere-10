@@ -32,9 +32,9 @@ The REST roles were introduced with ONTAP 9.6 and are generally applied to users
 
 * Traditional
 +
-These are the legacy roles included prior to ONTAP 9.6. They continue to be a foundational aspect of RBAC. The privileges are defined in terms of access to the ONTAP CLI commands.
+These are the legacy roles that existed prior to ONTAP 9.6. They continue to be a foundational aspect of RBAC. The privileges are defined in terms of access to the ONTAP CLI commands.
 
-While the REST roles were introduced more recently, the traditional roles have some advantages. For example, additional query parameters can optionally be included so the privileges more precisely define the objects they are applied to.
+While the REST roles were introduced more recently, the traditional roles offer some advantages. For example, additional query parameters can be included to let privileges more precisely define the objects to which they apply.
 
 .Scope
 

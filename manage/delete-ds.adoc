@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html
 sidebar: sidebar
 keywords: vVols datastore,delete vVol
-summary: 'Delete datastore action deletes the datastore. In the case of NFS or VMFS datastore a dialog box appears with the list of VMs that are using the datastore.'
+summary: 'Delete datastore action deletes the datastore. In the case of an NFS or VMFS datastore, a dialog box appears with the list of VMs that are using the datastore.'
 ---
 = Delete datastores in ONTAP tools
 :icons: font
@@ -14,7 +14,7 @@ This page describes how to delete NFS, VMFS, or vVols datastores using ONTAP too
 When you delete a datastore, the following actions are performed depending on the datastore type:
 
 * The vVol container is unmounted.
-* If the igroup is not in use, iqn is removed from the igroup.
+* If the igroup is not in use, its initiators are removed from the igroup.
 * The vVol container is deleted.
 * Flex volumes are left on the storage array. 
 

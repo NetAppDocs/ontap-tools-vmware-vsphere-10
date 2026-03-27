@@ -43,7 +43,7 @@ After HA configuration is enabled, you cannot revert to a non-HA single node con
 ONTAP tools pre-fill most input options with Node 1 network details to simplify the workflow. You can edit the input data before going to the wizard's last page. 
 You can enter IPv6 address details for the other two nodes only when the IPv6 address is enabled on the ONTAP tools management node.
 +
-Ensure that an ESXi host contains only one ONTAP tools VM. The inputs are validated each time you move to the next window. 
+Ensure that each ESXi host contains only one ONTAP tools VM. The inputs are validated each time you move to the next window. 
 . Review the details in the *Summary* section and *Save* the changes.
 
 .What's next?

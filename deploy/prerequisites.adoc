@@ -11,7 +11,7 @@ summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be fam
 [.lead]
 Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
 
-You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools for VMware vSphere on a supported vSphere client that includes ESXi system.
+You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools for VMware vSphere on a supported vSphere environment that includes ESXi hosts.
 
 == System requirements
 
@@ -193,7 +193,7 @@ The following table shows the numbers supported per VMware Live Site Recovery in
 
 |===
 
-The following table shows the number of VMware Live Site Recovery and the corresponding ONTAP tools for VMware vSphere deployment size.
+The following table shows the number of VMware Live Site Recovery instances and the corresponding ONTAP tools for VMware vSphere deployment size.
 
 |===
 |*Number of VMware Live Site Recovery instances* |*ONTAP tools deployment Size*

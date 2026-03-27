@@ -11,13 +11,41 @@ summary: 'Storage backends are systems that the ESXi hosts use for data storage.
 [.lead]
 Use ONTAP tools for VMware vSphere to add and manage storage backends for your ESXi hosts. You can onboard clusters or SVMs, enable MetroCluster support, and validate certificates for secure connectivity. You can configure storage backends using ONTAP tools Manager or the vSphere client, monitor certificate status, and manually rediscover resources after cluster changes.
 
-To add a storage backend locally, use cluster or SVM credentials in the ONTAP tools interface. Local storage backends are available only to the selected vCenter Server. ONTAP tools maps SVMs to the vCenter Server for vVols or VMFS datastore management. For VMFS datastores and SRA workflows, you can use SVM credentials without mapping a cluster globally.
+Local storage backends are available only to the vCenter Server where they are onboarded and do not require association with other vCenters. Onboard a cluster or SVM directly using the ONTAP tools interface. This is ideal for single-vCenter environments or when storage is managed within one vCenter. For plug-in workflows, SVM credentials can be used without global mapping.
 
-To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources required for vVol management. In multitenant environments, you can add an SVM user locally to manage vVols datastores.
+Global storage backends are managed centrally in ONTAP tools Manager and can be assigned to one or more vCenters. This is recommended for multi-tenant or multi-vCenter environments. Use ONTAP cluster credentials to onboard, and explicitly assign the backend or SVM to the required vCenters. You can centrally control which vCenters have access to specific SVMs or storage backends.
+
+[NOTE]
+For global storage backends, both cluster and SVM onboarding at the vCenter level might be required for some workflows like vVols.
 
 If MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
+// github issue
 
-// 10.5 updates -Jani rewrote the intro and added the last para. Added before you begin section.
+The following table summarizes common use cases for adding and associating storage backends in ONTAP tools, including when to use cluster or SVM onboarding and key considerations for each scenario.
+
+[cols="1,2,2,2", options="header"]
+|===
+|Use Case
+|Description
+|Example
+|Notes
+
+|Add a cluster as a storage backend for a single vCenter
+|Onboard an ONTAP cluster as a backend for a single vCenter
+|Add a storage backend from the ONTAP tools plugin
+|No association required in ONTAP tools Manager
+
+|Add SVMs in a multi-tenant environment
+|Onboard SVMs as backends and associate them with different vCenters
+|Add an SVM as a storage backend
+|Required when assigning an SVM to a specific vCenter
+
+|vCenter storage backend onboarding
+|Onboard storage backends to specific vCenters in multi-vCenter environments
+|Assign a cluster or SVM to a vCenter
+|Required for multi-vCenter deployments and vVols workflows
+|===
+
 .Before you begin
 
 Verify that the certificate includes a valid Subject Alternative Name (SAN) field. ONTAP systems use the SAN field to identify cluster and SVM management LIFs.
@@ -79,3 +107,7 @@ ONTAP tools list the newly added storage backend on the *Storage backends* page.
 .Related information
 
 https://docs.netapp.com/us-en/ontap-metrocluster/install-ip/task_sw_config_configure_clusters.html[Configuring the clusters into a MetroCluster configuration]
+
+
+// part of the github fix
+

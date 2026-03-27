@@ -48,7 +48,7 @@ The RBAC definitions are packaged as several product capabilities, including com
 
 === Privileges
 
-The role privileges are arranged in four sets based on the level of access needed to the ONTAP storage. The privileges which the roles are based on include:
+The role privileges are arranged in four sets based on the level of access needed for ONTAP storage. The privileges which the roles are based on include:
 
 * Discovery
 +
@@ -78,6 +78,6 @@ After you've selected the configuration options for your environment, click *Add
 
 `OTV_10_VSC_Discovery_Create`
 
-The new user will be added to the list on the page "Users and roles". Note that both HTTP and ONTAPI user login methods are supported.
+The new user will be added to the list on the 'Users and roles' page. Note that both HTTP and ONTAPI user login methods are supported.
 
 // Jan 28 2025 - OTVDOC-179

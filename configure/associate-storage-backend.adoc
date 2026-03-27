@@ -11,6 +11,10 @@ summary: 'Associate a storage backend with the vCenter Server to create a mappin
 [.lead]
 Associate a storage backend with a vCenter Server instance to enable access for all vCenter Server instances. For MetroCluster configuration, when you associate a storage backend cluster, ensure you also associate its peer cluster with the vCenter Server.
 
+[NOTE]
+When associating a storage backend globally, you must explicitly assign it to the intended vCenter Server instances. For vVols workflows, you might need to onboard both the cluster and the SVM at the vCenter level.
+
+// github issue
 .Steps
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
