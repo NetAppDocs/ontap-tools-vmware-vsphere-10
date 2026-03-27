@@ -13,7 +13,7 @@ You can upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5. Howeve
 
 [NOTE]
 --
-* For ASA r2 systems, make sure you upgrade to ONTAP tools for VMware vSphere to 10.5 and ONTAP to 9.16.1, before setting up more storage availability zones (SAZs).
+* For ASA r2 systems, make sure you upgrade ONTAP tools for VMware vSphere to 10.5 and ONTAP to 9.16.1, before setting up more storage availability zones (SAZs).
 // https://jira.ngage.netapp.com/browse/OTVDOC-254 updates
 * If the upgrade from ONTAP tools for VMware vSphere 10.3 or 10.4 to 10.5 fails, you cannot roll back. Use low RPO or snapshot recovery to restore the setup. For ONTAP tools for VMware vSphere 10.2 and earlier, use zero-RPO to restore the setup.
 --
@@ -93,7 +93,7 @@ Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../m
 . Log in as the maintenance user.
 . Enter *2* to select the *System Configuration* menu.
 . Enter *7* to select the *Upgrade* option.
-. Provide the vCenter credentials, when prompted. This is the vCenter instance where the ONTAP tools is hosted.
+. Provide the vCenter credentials when prompted. This is the vCenter instance where the ONTAP tools is hosted.
 +
 If you are using ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another, you can assign a restricted role for the vCenter instance hosting the ONTAP tools.
 You can create a dedicated vCenter user and role with only the permissions required for OVF template deployment. For details, see the roles listed in https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy[Roles included with ONTAP tools for VMware vSphere 10].

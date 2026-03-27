@@ -15,7 +15,7 @@ The error codes are five digits long, where the first two digits represent the s
 All error logs are recorded in the ansible-perl-errors.log file to facilitate easy tracking and resolution of issues. This log file contains the error code and the failed Ansible task. 
 
 [NOTE]
-The error codes provided on this page are for reference only. Contact the support team if error persists or if there's no resolution mentioned.
+The error codes provided on this page are for reference only. Contact the support team if the error persists or if there's no resolution mentioned.
 
 The following table lists the error codes and the corresponding file names.
 
@@ -55,7 +55,7 @@ The last three digits of the error code indicate the specific workflow error wit
 |081 |Services rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
 |082 |Deleting old images from container failed |Use zero-RPO or snapshot based recovery and retry upgrade.
 |083 |Deleting backup has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
-|084 |Changing JobManager back to Production failed |Follow the below steps to recover/complete the upgrade.
+|084 |Changing JobManager back to Production failed |Perform the following steps to recover/complete the upgrade.
 
 1. Enable Diagnostic Shell
 
@@ -70,7 +70,7 @@ The last three digits of the error code indicate the specific workflow error wit
 2. Run _sudo perl /home/maint/scripts/post-deploy-upgrade.pl --postupgrade_ command
 
 3. Check the logs at /var/log/post-deploy-upgrade.log
-|088 |Configuring log rotate for journald has failed |Check the VM network settings compatible with the host on which VM is hosted.
+|088 |Configuring log rotate for journald has failed |Check the VM network settings compatible with the host on which the VM is hosted.
 You can try to migrate the VM to another host and restart.
 |089 |Changing ownership of summary log rotate config file has failed |Retry the upgrade.
 |095 |OS upgrade failed |No recovery for OS upgrade. ONTAP tools services are upgraded and new pods will be running.
@@ -83,7 +83,7 @@ You can try to migrate the VM to another host and restart.
 |111 |Updating etcd timeout parameters for RKE2 has failed |Check the upgrade logs and retry upgrade.
 |112 |Uninstall dynamic storage provisioner has failed |-
 |113 |Refresh resources on secondary nodes has failed |Check the upgrade logs and retry upgrade.
-|104 |Restarting of secondary node has failed |Restart the nodes manually one by one
+|104 |Restarting of secondary node has failed |Restart the nodes manually, one by one.
 |100 |kernel rollback has failed |-
 |051 |dynamic storage provisioner upgrade has failed |Check upgrade logs and retry upgrade.	
 |056 |deleting migration backup has failed |NA
