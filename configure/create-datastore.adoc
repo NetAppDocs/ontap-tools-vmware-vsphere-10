@@ -68,7 +68,7 @@ An NFS datastore connects ESXi hosts to shared storage using the NFS protocol. T
 [NOTE]
 Kerberos authentication is available only when the NFS 4.1 protocol is selected. 
 +
-.. Specify the *Number of connections (nconnect)* for the datastore (default is 4; configurable from 1 to 4, or up to 8 if host settings allow).
+.. Specify the *Number of connections (nconnect)* for the datastore. The default value is 4, configurable from 1 to 8. If the value you select is higher than the current host-level nconnect setting, ONTAP tools updates the host-level nconnect setting to match.
 // 10.6 nconnect updates
 . In the *Storage* pane, select *Platform* and *Storage VM*. 
 . If you select *Custom export policy* under the advanced options, run the discovery in vCenter for all objects. It’s recommended that you don't use this option.

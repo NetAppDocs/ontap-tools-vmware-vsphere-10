@@ -2,24 +2,24 @@
 permalink: manage/nconnect-change-default.html
 sidebar: sidebar
 keywords:
-summary: 'Updating the number of connections for a NFS datastore enables you to optimize the performance and availability of your virtual machine files. You can change the number of connections as your infrastructure requirements change.'
+summary: 'You can change the default number of connections (nconnect) applied to ESXi hosts in a vCenter Server. This setting applies to all hosts in the vCenter Server for NFS 3 and NFS 4 protocols.'
 ---
-= Change default number of connections for a NFS datastore in ONTAP tools
+= Change the default nconnect value for ESXi hosts in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can update the number of connections for NFS datastores to optimize performance and availability. The number of connections determines how many concurrent connections can be made to the NFS datastore. Increasing the number of connections can improve performance by allowing more clients to access the datastore simultaneously, while decreasing it can help manage resource usage and prevent overloading the system.
+You can change the default number of connections (nconnect) applied to ESXi hosts in a vCenter Server. This setting applies to all ESXi hosts in the selected vCenter Server for NFS 3 and NFS 4 protocols.
 
 .About this task
 
-Change the default number of connections for a NFS datastore to ensure that new datastores created in the future have the optimal number of connections for your environment.
+The nconnect value set on this page is the host-level default. It applies to all ESXi hosts in the vCenter Server and determines the number of TCP connections used per NFS mount for NFS 3 and NFS 4 protocols. When you create an NFS datastore and select a higher nconnect value than the current host-level setting, ONTAP tools updates the host-level setting to match.
 // 10.6 nconnect update.
 .Steps
 
 . Log in to the vSphere client.
 . Select *Shortcuts* > *NetApp ONTAP tools* under the plug-ins section.
 . Select *Settings* > *Default nconnect value*.
-. Select *Edit*, change the default number of connections for NFS datastores and select *Save*.
+. Select *Edit*, change the default nconnect value for ESXi hosts and select *Save*.
 
-The new default number of connections will be applied to all new NFS datastores created after the change. Existing datastores will not be affected by this change and will retain their current number of connections unless updated individually.
+The updated nconnect value is applied to all ESXi hosts in the vCenter Server for NFS 3 and NFS 4 protocols.

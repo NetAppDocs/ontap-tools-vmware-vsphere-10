@@ -39,9 +39,7 @@ entries:
         url: /manage/mount-a-vvols-datastore.html
       - title: Resize NFS and VMFS datastore
         url: /manage/resize-datastores.html
-      - title: Update number of connections for a NFS datastore
-        url: /manage/nconnect-update.html
-      - title: Change default number of connections for a NFS datastore
+      - title: Change default nconnect value for ESXi hosts
         url: /manage/nconnect-change-default.html
       - title: Expand vVol datastore
         url: /manage/expand-storage-of-vvol-datastore.html
