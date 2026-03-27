@@ -26,7 +26,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 
 .Before you begin
 
-* Make sure root aggregates are not mapped to SVM. 
+* Make sure root aggregates are not mapped to the SVM. 
 * Ensure that the VASA Provider is registered with the selected vCenter.
 *  In the ASA r2 storage system, the SVM should be mapped to the aggregate for the SVM user.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
@@ -34,7 +34,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 .Steps
 . Log in to the vSphere client.
 . Right-click on a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
-. Select vVols *Datastore type*.
+. Select vVols as the *Datastore type*.
 . Enter the *Datastore name* and *Protocol* information.
 [NOTE]
 The ASA r2 system supports the iSCSI and FC protocols for vVols.
@@ -42,14 +42,14 @@ The ASA r2 system supports the iSCSI and FC protocols for vVols.
 . Under advanced options:
 +
 * If you select the *Custom export policy*, ensure you run discovery in vCenter for all objects. It’s recommended that you don't use this option.
-* You can select *Custom initiator group* name for the iSCSI and FC protocols.
+* You can select a *Custom initiator group* name for the iSCSI and FC protocols.
 +
 [NOTE]
 In ASA r2 storage system type SVM, storage units (LUN/namespace) aren't created because the datastore is only a logical container.
 
 . In the *Storage attributes* pane, you can create new volumes or use the existing volumes. However, you cannot combine these two types of volumes to create a vVols datastore. 
 +
-When creating a new volume, you can enable QoS on the datastore. By default, one volume is created for every LUN-created request. Skip this step for vVols datastores on ASA r2 storage systems.
+When creating a new volume, you can enable QoS on the datastore. By default, one volume is created for each LUN creation request. Skip this step for vVols datastores on ASA r2 storage systems.
 . Review your selection in the *Summary* pane and select *Finish*.
 
 --
@@ -124,10 +124,10 @@ For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://
 .Steps
 . Log in to the vSphere client.
 . Right-click on a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Create Datastore*.
-. Select VMFS datastore type.
+. Select the VMFS datastore type.
 . Enter the datastore name, size, and protocol information in the *Name and Protocol* pane.
 To add the new datastore to an existing VMFS cluster, select the datastore cluster in Advanced Options. 
-. Select storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section as required. You can choose an existing igroup for the datastore or create a new igroup with a custom name.
+. Select a storage VM in the *Storage* pane. Provide the *Custom initiator group name* in the *Advanced options* section as required. You can choose an existing igroup for the datastore or create a new igroup with a custom name.
 +
 When NVMe/FC or NVMe/TCP protocol is selected, a new namespace subsystem is created and is used for namespace mapping. ONTAP tools creates the namespace subsystem using the auto-generated name that includes the datastore name. You can rename the namespace subsystem in the *custom namespace subsystem name* field in the advanced options of the *Storage* pane. 
 . From the *storage attributes* pane:
@@ -145,7 +145,7 @@ Beginning in ONTAP 9.16.1, ASA r2 storage systems support up to 12 nodes per clu
 .. Select *Use existing volume*, *Enable QoS* options as required, and provide the details.
 +
 [NOTE]
-In the ASA r2 storage type, volume creation or selection doesn't apply to storage unit creation(LUN/Namespace). Therefore, these options aren't shown.
+In the ASA r2 storage type, volume creation or selection doesn't apply to storage unit creation (LUN/Namespace). Therefore, these options aren't shown.
 +
 [NOTE]
 You cannot use the existing volume to create a VMFS datastore with NVMe/FC or NVMe/TCP protocol. Create a new volume for the VMFS datastore.

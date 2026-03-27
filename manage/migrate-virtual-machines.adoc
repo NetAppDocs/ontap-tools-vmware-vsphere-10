@@ -9,7 +9,7 @@ summary: 'You should be aware of some considerations when migrating existing vir
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools for VMware vSphere support all major types of virtual machine migration—including compute-only (vMotion), storage-only (Storage vMotion), and combined compute and storage migration across all datastores. This topic outlines key considerations and best practices to ensure successful migration and cloning of virtual machines, regardless of the underlying datastore type.
+ONTAP tools for VMware vSphere support all major types of virtual machine migration, including compute-only (vMotion), storage-only (Storage vMotion), and combined compute and storage migration across all datastores. This topic outlines key considerations and best practices to ensure successful migration and cloning of virtual machines, regardless of the underlying datastore type.
 
 // OTVDOC-351 updates
 == Migrate protected virtual machines
@@ -55,9 +55,7 @@ Refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-
 == Virtual machine snapshots
 
 Only virtual machine snapshots without memory are supported. If a virtual machine has a snapshot with memory, it cannot be protected.
-
 You cannot protect virtual machines that contain memory snapshots. Delete any memory snapshots before enabling protection for the virtual machine.
-
 For a Windows virtual machine with the ASA r2 storage type, virtual machine snapshots are read-only. When you power on the virtual machine, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the virtual machine, VASA Provider deletes the LUN and disables IOPS.
 
 For information on managing virtual machine snapshots, refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html[Manage Virtual Machines With Snapshots]

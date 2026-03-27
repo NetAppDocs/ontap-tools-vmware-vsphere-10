@@ -24,6 +24,11 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 
 * SRA: Install the adapter on VMware Live Site Recovery.
 
+For iSCSI protocol configurations, ensure the following prerequisites are met on both the protected and recovery sites before running SRA workflows:
+
+* The iSCSI storage adapter must be added on each ESXi host.
+* The data LIF details must be configured on the iSCSI adapter. To complete this configuration, create a placeholder datastore of type iSCSI using the SVM on which the SRA workflows are configured. Refer to link:../protect/configure-placeholder-datastores.html[Configure placeholder datastores in ONTAP tools] for more details.
+// OTVDOC-358 updates
 .Steps
 
 . Verify that the primary ESXi hosts are connected to the LUNs in the primary storage system on the protected site.
