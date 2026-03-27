@@ -73,11 +73,11 @@ Create users and roles manually without the JSON file.
 Add the *REST API Path* and choose the access from the drop-down list.
 .. Add all the needed APIs and save the changes.
 . Create users:
-.. Select *Add* under *Users* table.
+.. Select *Add* under the *Users* table.
 .. In the *Add User* dialog box, select *System Manager*.
 .. Enter the *Username*.
 .. Select *Role* from the options created in the *Create Roles* step above.
-.. Enter the applications to give access to and the authentication method. ONTAPI and HTTP are the required applications, and the authentication type is *Password*. 
+.. Enter the applications to which you want to give access and the authentication method. ONTAPI and HTTP are the required applications, and the authentication type is *Password*. 
 .. Set the *Password for the User* and *Save* the user.
  
 
@@ -213,13 +213,13 @@ security login rest-role create -role <role-name> -api /api/cluster/metrocluster
 
 ----
 
-Additionally, for ONTAP Versions 9.16.0 and above run the following command:
+Additionally, for ONTAP versions 9.16.0 and above, run the following command:
 
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all
 ----
 
-For ASA r2 systems on ONTAP Versions 9.16.1 and above run the following command:
+For ASA r2 systems on ONTAP versions 9.16.1 and above, run the following command:
 
 ----
 security login rest-role create -role <role-name> -api /api/storage/availability-zones -access readonly
@@ -307,12 +307,12 @@ security login rest-role create -role <role-name> -api /api/svm/peers -access re
 security login rest-role create -role <role-name> -api /api/svm/svms -access readonly -vserver <vserver-name>
 ----
 
-Additionally, for ONTAP Versions 9.16.0 and above run the following command:
+Additionally, for ONTAP versions 9.16.0 and above, run the following command:
 ----
 security login rest-role create -role <role-name> -api /api/storage/storage-units -access all -vserver <vserver-name>
 ----
 
-To create a new API based user using the above created API based roles, run the following command:
+To create a new API-based user using the previously created API-based roles, run the following command:
 
 ----
 security login create -user-or-group-name <user-name> -application http -authentication-method password -role <role-name> -vserver <cluster-or-vserver-name>

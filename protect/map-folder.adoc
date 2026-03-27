@@ -28,4 +28,4 @@ You should have connected the protected and recovery sites.
 
 .Result
 
-The Folder Mappings page displays the protected site resources and the recovery site resources. You can follow the same steps for other networks in your environment.
+The Folder Mappings page displays the protected site resources and the recovery site resources. You can follow the same steps for other folders in your environment.

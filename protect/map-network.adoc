@@ -31,7 +31,7 @@ You should have connected the protected and recovery sites.
  .. Select *Automatically Prepare Mappings for Networks with Matching Names* and select *Next*.
  .. Select the required data center objects for the protected and recovery sites and select *Add Mappings*.
  .. Select *Next* after mappings are created successfully.
- .. Select the object used earlier to create reverse mapping, then select *Finish*.
+ .. Select the object used earlier to create reverse mapping and then select *Finish*.
 
 .Result
 

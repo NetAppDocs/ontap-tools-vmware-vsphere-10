@@ -29,13 +29,13 @@ All permissions are validated in the vSphere object hierarchy except the VAAI pl
 
 == Roles included with ONTAP tools for VMware vSphere 10
 
-To simplify working with vCenter Server RBAC, ONTAP tools for VMware vSphere provides predefined roles tailored to various administration tasks.
+To simplify working with vCenter Server RBAC, ONTAP tools for VMware vSphere provides predefined roles tailored to various administrative tasks.
 
 [NOTE]
-You can create new custom roles if needed. In this case, you should clone one of the existing ONTAP tools roles and edit it as needed. After making the configuration changes, the affected vSphere client users need to log out and log back in to activate the changes.
+You can create new custom roles if needed. To do so, clone one of the existing ONTAP tools roles and edit it as needed. After making the configuration changes, the affected vSphere client users need to log out and log back in to activate the changes.
 
 To view the ONTAP tools for VMware vSphere roles, select *Menu* at the top of the vSphere Client and click *Administration* and then *Roles* on the left. 
-The following privileges must be included in the role assigned to the vCenter user responsible for deploying or onboarding vCenter. Ensure these privileges are configured as a prerequisite for the deployment or onboarding process.
+The following privileges must be included in the role assigned to the vCenter user responsible for deploying or onboarding vCenter Server. Ensure these privileges are configured as a prerequisite for the deployment or onboarding process.
 
 * Alarms
 ** Acknowledge alarm

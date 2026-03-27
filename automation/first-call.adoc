@@ -65,7 +65,7 @@ curl --request POST \
 -d "{"username": "$MYUSER", "password": "$MYPASSWORD"}"
 ----
 
-Copy and save the the access token provided in the response.
+Copy and save the access token provided in the response.
 
 == Step 2: Issue the REST API call
 
