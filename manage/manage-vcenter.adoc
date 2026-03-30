@@ -46,8 +46,19 @@ Force delete is blocked if the vCenter Server has vVols datastores or protected 
 * Remove or migrate all vVols datastores.
 * Unprotect all protected datastores.
 
-The *Remove vCenter* dialog behavior depends on the state of the vCenter Server:
+[NOTE]
+Global storage backends shared with other vCenter Server instances are retained. Only the association with the deleted vCenter Server is removed.
 
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
+. Select *vCenters* from the sidebar.
+. Select the vertical ellipsis for the required vCenter Server and select *Remove*.
+. In the *Remove vCenter* dialog, review the state of the vCenter Server and complete any required actions.
++
+The dialog behavior depends on the state of the vCenter Server:
++
 [cols="2,2,3",options="header"]
 |===
 | Condition | Dialog behavior | Required action
@@ -61,17 +72,6 @@ The *Remove vCenter* dialog behavior depends on the state of the vCenter Server:
 | No additional action required.
 
 |===
-
-[NOTE]
-Global storage backends shared with other vCenter Server instances are retained. Only the association with the deleted vCenter Server is removed.
-
-.Steps
-
-. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
-. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
-. Select *vCenters* from the sidebar.
-. Select the vertical ellipsis for the required vCenter Server and select *Remove*.
-. In the *Remove vCenter* dialog, review the state of the vCenter Server and complete any required actions.
 . Select *Force delete*.
 . Confirm the action.
 +
