@@ -20,5 +20,5 @@ Associate a storage backend with a vCenter Server instance to enable access for 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select vCenter from the sidebar.
-. Select the vertical ellipses next to the vCenter Server instance that you want to connect to the storage backends.
+. Select the vertical ellipsis next to the vCenter Server instance that you want to connect to the storage backends.
 . From the dropdown menu, choose the storage backend you want to associate with the selected vCenter Server instance.
