@@ -50,7 +50,7 @@ When you remove vCenter Server instances in ONTAP tools, the following actions a
 * Plug-in is unregistered.
 * Plug-in privileges and plug-in roles are removed.
 
-=== Remove a vCenter Server instance
+=== Force remove a vCenter Server instance
 // 10.6 updates
 Beginning with ONTAP tools 10.6, you can use the force delete option to remove a vCenter Server instance even when VMFS and NFS datastores, and storage backends are still associated.
 
