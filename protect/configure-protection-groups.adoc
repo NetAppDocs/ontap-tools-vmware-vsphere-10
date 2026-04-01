@@ -19,9 +19,10 @@ When you add a new datastore, you can include it in the existing datastore group
 You should pair the protected and recovery sites created using your vSphere Client to enable Storage Replication Adapter (SRA) to discover the storage systems.
 
 [NOTE]
-Storage Replication Adapter (SRA) supports fan-out with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two asynchronous SnapMirror relationships on consistency groups or fan-out SnapMirror relationships on volumes is not supported. Vault type SnapMirror relationships are not considered within these fan-out restrictions.
-
+Storage Replication Adapter (SRA) supports fan-out with one sync relationship of type Automated Failover Duplex and async relationship SnapMirror on consistency group. However, fan-out with two asynchronous SnapMirror relationships on consistency groups or fan-out SnapMirror relationships on volumes is not supported. Vault type SnapMirror relationships are not considered within these fan-out restrictions. Consistency group support in SRA is limited to SAN protocols (iSCSI and Fibre Channel) on Unified and ASA r2 storage systems. Consistency groups are not supported for NFS; if NFS datastore volumes are placed under a consistency group, the Discover Devices operation will fail.
+// OTV10.5 P2 updates - Jani
 // updated the note for OTVDOC-323 - jani
+
 .Before you begin
 
 * You should have VMware Live Site Recovery installed on the protected and recovery sites.

@@ -11,8 +11,12 @@ summary: 'You should set up the storage systems before running Storage Replicati
 [.lead]
 You should set up the storage systems before running Storage Replication Adapter (SRA) for VMware Live Site Recovery.
 
-
 == Configure SRA for SAN environments
+
+[NOTE]
+Consistency groups (CGs) are supported in SRA workflows for SAN protocols (iSCSI and Fibre Channel) on both Unified and ASA r2 storage systems.
+
+// OTV10.5 P2 updates - Jani
 
 .Before you begin
 
@@ -40,6 +44,10 @@ You can do this either by verifying that the ESXi hosts have local LUNs connecte
 Check the LUN access for the mapped LUNs in the ESXi host to verify iSCSI connectivity.
 
 == Configure SRA for NAS environments
+
+[NOTE]
+Consistency groups are not supported for NFS in SRA workflows. If NFS datastore volumes are placed under a consistency group and protected, the Discover Devices operation will fail. Do not use consistency groups when protecting NFS datastores with SRA.
+// OTV10.5 P2 updates - Jani
 
 .Before you begin
 
