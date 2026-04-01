@@ -194,6 +194,7 @@ Beginning with ONTAP tools 10.5P2, migrated igroups are deleted when they are no
 * Migrated igroups cannot be reused across datastores.
 * Custom igroups (user-defined) are never deleted and can still be reused.
 // OTV10.5 P2 updates
+
 .Related topics
 
 https://docs.netapp.com/us-en/ontap/san-admin/igroups-concept.html[About igroups]
