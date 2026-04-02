@@ -54,10 +54,15 @@ Refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-
 
 == Virtual machine snapshots
 
-Only virtual machine snapshots without memory are supported. If a virtual machine has a snapshot with memory, it cannot be protected.
-You cannot protect virtual machines that contain memory snapshots. Delete any memory snapshots before enabling protection for the virtual machine.
-For a Windows virtual machine with the ASA r2 storage type, virtual machine snapshots are read-only. When you power on the virtual machine, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the virtual machine, VASA Provider deletes the LUN and disables IOPS.
+ONTAP tools supports virtual machine snapshots through standard VMware workflows. Snapshots are short-term rollback points intended for use cases such as testing and patch preparation — they are not a substitute for backup or replication-based data protection. Running a virtual machine on a snapshot for extended periods can cause instability and data loss.
 
-For information on managing virtual machine snapshots, refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html[Manage Virtual Machines With Snapshots]
+You can take crash-consistent snapshots (snapshots without memory state, which can be used to restart the virtual machine to a consistent state) on all supported datastore types. Quiesced snapshots, which use VMware Tools to flush in-memory data to disk before capturing, are also supported. For an overview of snapshot types and behavior, refer to https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html[Overview of virtual machine snapshots in vSphere].
+
+[NOTE]
+Memory snapshots capture the running memory state and temporarily stun the virtual machine. They are not supported in ONTAP tools workflows. If a virtual machine has a memory snapshot, you must delete it before the virtual machine can be included in a consistency group or host cluster relationship managed by ONTAP tools.
+
+On ASA r2 storage systems, virtual machine snapshot behavior differs from other storage types. Snapshots are read-only. When you power on the virtual machine, VASA Provider creates a LUN from the read-only snapshot and enables IOPS. When you power off the virtual machine, VASA Provider deletes the LUN and disables IOPS.
+
+For information on managing virtual machine snapshots, refer to the Broadcom documentation https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machinesvsphere-vm-admin/using-snapshots-to-manage-virtual-machinesvsphere-vm-admin.html[Manage Virtual Machines With Snapshots].
 
 // Added for 10.3, inputs received from Rajiv
