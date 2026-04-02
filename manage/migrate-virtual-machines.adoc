@@ -54,7 +54,7 @@ Refer to the Broadcom documentation: https://techdocs.broadcom.com/us/en/vmware-
 
 == Virtual machine snapshots
 
-ONTAP tools supports virtual machine snapshots through standard VMware workflows. Snapshots are short-term rollback points intended for use cases such as testing and patch preparation — they are not a substitute for backup or replication-based data protection. Running a virtual machine on a snapshot for extended periods can cause instability and data loss.
+ONTAP tools supports virtual machine snapshots through standard VMware workflows. Snapshots are short-term rollback points intended for use cases such as testing and patch preparation. They are not a substitute for backup or replication-based data protection. Running a virtual machine on a snapshot for extended periods can cause instability and data loss.
 
 You can take crash-consistent snapshots (snapshots without memory state, which can be used to restart the virtual machine to a consistent state) on all supported datastore types. Quiesced snapshots, which use VMware Tools to flush in-memory data to disk before capturing, are also supported. For an overview of snapshot types and behavior, refer to https://knowledge.broadcom.com/external/article/342618/overview-of-virtual-machine-snapshots-in.html[Overview of virtual machine snapshots in vSphere].
 
