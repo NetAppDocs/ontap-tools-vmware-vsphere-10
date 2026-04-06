@@ -18,9 +18,14 @@ You should verify that the protected site and recovery site are successfully pai
 * You should have enabled FlexClone license and SnapMirror license before performing the test failover operation and failover operation for SRA.
 * You should have the same SnapMirror policies and schedules on source and destination sites.
 // updated for OTVDOC-186 - Jani
-* You should have performed storage discovery from ONTAP tools after creating a custom policy with a default schedule, and again after a reprotect operation creates the same policy on the recovery site, before running any SRA workflow.
 * You should have the same custom schedule and policy configured on both the protected and recovery sites when using custom policies with a custom schedule.
 // OTVDOC-360 for P2
+
+[CAUTION]
+When using custom SnapMirror policies, storage discovery must be performed from ONTAP tools at two specific points, or SRA workflows will fail:
+
+* *After creating the custom policy on the protected site*: Run storage discovery before executing any SRA workflow.
+* *After a reprotect operation*: The reprotect operation creates the same policy on the recovery site. Run storage discovery on both the protected and recovery sites before running the next SRA workflow.
 
 .Steps
 
