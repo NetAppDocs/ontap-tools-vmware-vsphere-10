@@ -20,12 +20,9 @@ You should verify that the protected site and recovery site are successfully pai
 // updated for OTVDOC-186 - Jani
 * You should have the same custom schedule and policy configured on both the protected and recovery sites when using custom policies with a custom schedule.
 // OTVDOC-360 for P2
-
-[CAUTION]
-When using custom SnapMirror policies, storage discovery must be performed from ONTAP tools at two specific points, or SRA workflows will fail:
-
-* *After creating the custom policy on the protected site*: Run storage discovery before executing any SRA workflow.
-* *After a reprotect operation*: The reprotect operation creates the same policy on the recovery site. Run storage discovery on both the protected and recovery sites before running the next SRA workflow.
+* If you are using custom SnapMirror policies, you must perform storage discovery from ONTAP tools at the following points before running any SRA workflow, otherwise SRA workflows will fail:
+** After creating the custom policy on the protected site.
+** After a reprotect operation, which creates the same policy on the recovery site. Perform discovery on both the protected and recovery sites.
 
 .Steps
 
