@@ -14,10 +14,9 @@ You should set up the storage systems before running Storage Replication Adapter
 == Configure SRA for SAN environments
 
 [NOTE]
-Consistency groups (CGs) are supported in SRA workflows for SAN protocols (iSCSI and Fibre Channel) on both Unified and ASA r2 storage systems.
+Consistency groups in SRA workflows are supported only with SAN protocols (iSCSI and Fibre Channel) on both Unified and ASA r2 storage systems.
 
-// OTV10.5 P2 updates - Jani
-
+// OTV10.5 P2 updates - Jani OTVDOC-365
 .Before you begin
 
 You should have the following programs installed on the protected site and the recovery site:
