@@ -1,7 +1,7 @@
 ---
 permalink: protect/verify-the-replicated-storage-environment.html
 sidebar: sidebar
-keywords:
+keywords: SRA, storage replication adapter, storage discovery, SnapMirror, custom policy, array pairing, VMware Live Site Recovery
 summary: 'You should verify that the protected site and recovery site are successfully paired after configuring Storage Replication Adapter \(SRA\). The replicated storage system should be discoverable by both the protected site and the recovery site.'
 ---
 = Verify replicated storage systems in ONTAP tools
@@ -18,11 +18,11 @@ You should verify that the protected site and recovery site are successfully pai
 * You should have enabled FlexClone license and SnapMirror license before performing the test failover operation and failover operation for SRA.
 * You should have the same SnapMirror policies and schedules on source and destination sites.
 // updated for OTVDOC-186 - Jani
-* You should have the same custom schedule and policy configured on both the protected and recovery sites when using custom policies with a custom schedule.
+* If you are using custom SnapMirror policies with a custom schedule, you must configure the same schedule and policy on both the protected and recovery sites.
 // OTVDOC-360 for P2
-* If you are using custom SnapMirror policies, you must perform storage discovery from ONTAP tools at the following points before running any SRA workflow, otherwise SRA workflows will fail:
-** After creating the custom policy on the protected site.
-** After a reprotect operation, which creates the same policy on the recovery site. Perform discovery on both the protected and recovery sites.
+* If you are using custom SnapMirror policies (with either a default or custom schedule), you must perform storage discovery from ONTAP tools so that the new policy is recognized. Without this, SRA workflows, including test failover and failover, will fail. Perform storage discovery at the following points:
+** After creating the custom policy on the recovery site.
+** After a reprotect operation, which recreates the policy on the protected site.
 
 .Steps
 
