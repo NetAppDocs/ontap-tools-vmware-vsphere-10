@@ -27,11 +27,13 @@ Ensure the vCenter Server is installed and accessible.
 * link:../deploy/prerequisites.html[ ONTAP tools for VMware vSphere requirements and configuration limits]
 * link:../deploy/pre-deploy-checks.html[Before you get started]
 
+
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy ONTAP tools for VMware vSphere 
 
 [role="quick-margin-para"]
-Initially, you'll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores.
+Initially, you’ll deploy ONTAP tools for VMware vSphere as an extra small (XS) single node configuration (the default Day0 setup) that provides core services to support NFS and VMFS datastores. Scale up to small (S), medium (M), or large (L) configurations when enabling additional services or higher scale is needed.
 If you plan to expand your configuration to use vVols datastores and high availability (HA), you’ll do so after you finish this workflow. To expand to an HA setup, make sure CPU hot-add and memory hot-plug are enabled.
+// 10.6 XS updates
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
