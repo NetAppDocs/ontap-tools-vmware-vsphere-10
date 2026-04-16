@@ -102,6 +102,7 @@ curl `\https://xx.xx.xx.xxx:8443/virtualization/api/jobmanager/v2/jobs/<JobId>?i
 +
 Use the 'id' value returned from the migration job in the previous step.
 After the job completes, review the migration report in the job response.
+// feedback through call from Rajiv. OEM request.
 . Register the VASA Provider with ONTAP tools for VMware vSphere. For instructions, see link:../configure/registration-process.html[Register the VASA Provider].
 . Verify the VASA Provider registration:
 +
