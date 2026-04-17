@@ -152,7 +152,6 @@ sudo reboot -f
 |===
 
 //OTV10.5 P2 update
-|===
 
 [NOTE]
 Beginning with ONTAP tools for VMware vSphere 10.3 zero RPO is not supported.
