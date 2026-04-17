@@ -14,7 +14,7 @@ The NFS vStorage API for Array Integration (NFS VAAI) plug-in connects VMware vS
 .Before you begin
 
 * Download the https://mysupport.netapp.com/site/products/all/details/nfsplugin-vmware-vaai/downloads-tab[NetApp NFS Plug-in for VMware VAAI] installation package.
-* Make sure you have the ESXi host and vSphere 7.0U3 latest patch or later versions and ONTAP 9.14.1 or later versions.  
+* Ensure you have ESXi hosts with vSphere 7.0 U3 (latest patch or later) and ONTAP 9.14.1 or later.  
 * Mount an NFS datastore.
 // OTVDOC-238 - jani
 
@@ -25,12 +25,12 @@ The NFS vStorage API for Array Integration (NFS VAAI) plug-in connects VMware vS
 . Select *Settings* > *NFS VAAI Tools*.
 . If you have already uploaded the VAAI plug-in to vCenter Server, select *Change* in *Existing version*. If you have not, select *Upload*.
 . Browse and select the `.vib` file and select *Upload* to upload the file to ONTAP tools.
-. Select *Install on ESXI host*, select the ESXi host on which you want to install the NFS VAAI plug-in, and then select *Install*.
+. Select *Install on ESXi host*, select the ESXi host on which you want to install the NFS VAAI plug-in, and then select *Install*.
 +
 The vSphere Web Client shows only the ESXi hosts that can install the plug-in. You can monitor the installation progress in the recent tasks section.
 . Restart the ESXi host manually after installation.
 +
-After you restart the ESXi host, ONTAP tools for VMware vSphere automatically detect and enable the NFS VAAI plug-in.
+After you restart the ESXi host, ONTAP tools for VMware vSphere automatically detects and enables the NFS VAAI plug-in.
 
 .What's next?
 

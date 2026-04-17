@@ -11,9 +11,12 @@ summary: 'You should set up the storage systems before running Storage Replicati
 [.lead]
 You should set up the storage systems before running Storage Replication Adapter (SRA) for VMware Live Site Recovery.
 
-
 == Configure SRA for SAN environments
 
+[NOTE]
+Consistency groups in SRA workflows are supported only with SAN protocols (iSCSI and Fibre Channel) on both Unified and ASA r2 storage systems.
+
+// OTV10.5 P2 updates - Jani OTVDOC-365
 .Before you begin
 
 You should have the following programs installed on the protected site and the recovery site:
@@ -24,16 +27,26 @@ https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/live-site-recovery/
 
 * SRA: Install the adapter on VMware Live Site Recovery.
 
+For iSCSI protocol configurations, note the following before running SRA workflows:
+
+* *Protected site*: iSCSI storage adapters and data LIF details are configured automatically when you provision datastores. No manual configuration is required.
+* *Recovery site*: iSCSI storage adapters must be manually configured on each ESXi host that is included in the resource mapping for disaster recovery. To avoid configuring adapters individually on each host, create a placeholder datastore of type iSCSI on the recovery site using the SVM on which the SRA workflows are configured. This automatically adds the iSCSI adapter and the required data LIF IP addresses to all mapped ESXi hosts. Refer to link:../protect/configure-placeholder-datastores.html[Configure placeholder datastores in ONTAP tools] for more details.
+// OTVDOC-358 updates
+
 .Steps
 
 . Verify that the primary ESXi hosts are connected to the LUNs in the primary storage system on the protected site.
-. Verify that the LUNS are in igroups that have the `ostype` option set to _VMware_ on the primary storage system.
+. Verify that the LUNs are in igroups that have the `ostype` option set to _VMware_ on the primary storage system.
 . Verify that the ESXi hosts at the recovery site have appropriate iSCSI and Fibre Channel connectivity to the storage virtual machine (SVM). The secondary site ESXi hosts should have access to the secondary site storage, and the primary site ESXi hosts should have access to the primary site storage.
 +
 You can do this either by verifying that the ESXi hosts have local LUNs connected on the SVM or the `iscsi show initiators` command on the SVMs. 
 Check the LUN access for the mapped LUNs in the ESXi host to verify iSCSI connectivity.
 
 == Configure SRA for NAS environments
+
+[NOTE]
+Consistency groups are not supported for NFS in SRA workflows. If NFS datastore volumes are placed under a consistency group and protected, the Discover Devices operation will fail. Do not use consistency groups when protecting NFS datastores with SRA.
+// OTV10.5 P2 updates - Jani
 
 .Before you begin
 
@@ -45,7 +58,7 @@ You should have the following programs installed on the protected site and the r
 .Steps
 
 . Verify that the datastores at the protected site contain virtual machines that are registered with vCenter Server.
-. Verify that the ESXi hosts at the protected site have mounted the NFS exports volumes from the storage virtual machine (SVM).
-. Verify that valid addresses such as the IP address or FQDN on which the NFS exports are present are specified in the *NFS Addresses* field when using the Array Manager wizard to add arrays to VMware Live Site Recovery. Do not use the NFS hostname in the *NFS Addresses* field.
+. Verify that the ESXi hosts at the protected site have mounted the NFS export volumes from the storage virtual machine (SVM).
+. Verify that valid IP addresses on which the NFS exports are present are specified in the *NFS Addresses* field when using the Array Manager wizard to add arrays to VMware Live Site Recovery. Do not use the NFS hostname or FQDN in the *NFS Addresses* field.
 // updated for OTVDOC-284 JIRA
 . Use the `ping` command on each ESXi host at the recovery site to verify that the host has a VMkernel port that can access the IP addresses that are used to serve NFS exports from the SVM.
