@@ -98,7 +98,8 @@ Do the following to recover/complete the upgrade:
 
 * Enable the diagnostic shell.
 * Run the following command: `sudo perl /home/maint/scripts/post-deploy-upgrade.pl --internal_cert_update_collection`
-* Review the logs at `/var/log/otvng/post-deploy-upgrade.log`.
+* Review the logs at `/var/log/otvng/post-deploy-upgrade.log`
+
 |===
 
 |===
