@@ -19,7 +19,7 @@ You can access the ONTAP tools for VMware vSphere 10 REST API documentation onli
 
 .Steps
 
-. Type the following URL into your browser substituting the appropriate IP address and port combination for the variable and press *Enter*.
+. Type the following URL into your browser, substituting the appropriate IP address and port combination for the variable, and press *Enter*.
 +
 `\https://$FQDN_IP_PORT/`
 +

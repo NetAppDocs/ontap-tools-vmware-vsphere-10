@@ -2,7 +2,7 @@
 permalink: configure/dashboard-overview.html
 sidebar: sidebar
 keywords: user roles
-summary: 'When you select the ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts like the dashboard providing you the summary of the ONTAP tools for VMware vSphere plug-in.'
+summary: 'When you select the ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts as the dashboard, providing a summary of the ONTAP tools for VMware vSphere plug-in.'
 ---
 = Learn about the ONTAP tools dashboard
 :icons: font
@@ -18,7 +18,7 @@ image:../media/remote-plugin-dashboard.png[Dashboard overview]
 From the overview page, you can run the *Discovery* action. The discovery action detects newly added or updated storage backends, hosts, datastores, and protection status or relationships at the vCenter level. Run on-demand discovery without waiting for the scheduled discovery.
 
 [NOTE]
-The *Discovery* action button is enabled only if you have the required privilege to perform the discovery action.
+The *Discovery* button is enabled only if you have the required privilege to perform discovery.
 
 After the discovery request is submitted, you can track the progress of the action in the recent tasks panel.
 
@@ -29,14 +29,14 @@ The dashboard has several cards showing different elements of the system. The fo
 |Status
 |The Status card shows the number of storage backends and the overall health status of the storage backends and the VASA Provider. 
 
-Storage backends status shows *Healthy* when all the storage backends status is normal and it shows *Unhealthy* if any one of the storage backends has an issue (Unknown/Unreachable/Degraded status). 
+Storage backends status shows *Healthy* when all storage backend statuses are normal and shows *Unhealthy* if any storage backend has an issue (Unknown/Unreachable/Degraded status). 
 
 Select the tool tip to open the status details of the storage backends. You can select any storage backend for more details. *Other VASA Provider states* link shows the current state of the VASA Provider that is registered in the vCenter Server.
 
 |Storage Backends - Capacity
 |This card shows the aggregated used and available capacity of all storage backends for the selected vCenter Server instance.
 
-In case of ASA r2 storage systems, the capacity data is not shown because it is a disaggregated system. 
+For ASA r2 storage systems, the capacity data is not shown because storage is disaggregated. 
 
 // 10.3 updates for ASA r2
 |Virtual machines
@@ -46,6 +46,6 @@ In case of ASA r2 storage systems, the capacity data is not shown because it is 
 |This card shows the top 10 datastores sorted by a performance metric.
 You can select the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a Datastore type drop-down to select the type of the datastores - NFS, VMFS, or vVols.
 |ESXi Host compliance card
-|This card shows if all ESXi hosts (for the selected vCenter) follow the recommended NetApp host settings by group or category.
-You can select *Apply Recommended Settings* link to apply the recommended settings. You can select the compliant status of the hosts to see the list of hosts.
+|This card shows whether all ESXi hosts (for the selected vCenter) follow the recommended NetApp host settings by group or category.
+You can select the *Apply Recommended Settings* link to apply the recommended settings. You can select the compliance status of the hosts to see the list of hosts.
 |===
