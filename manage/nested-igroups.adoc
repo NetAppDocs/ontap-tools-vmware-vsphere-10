@@ -100,6 +100,8 @@ After datastore discovery, ONTAP tools identifies and registers datastore-mapped
 
 image:../media/otv-ds.png[Datastore and igroup managed by ONTAP tools]
 
+ONTAP tools for VMware vSphere does not detect or manage igroups that are created in ONTAP systems but are not mapped to a datastore or linked to ONTAP tools. During discovery, ONTAP tools converts only those igroups that are mapped to discovered datastores; other igroups remain unmanaged.
+
 == Reuse of discovered native igroups
 
 After ONTAP tools manages a discovered native igroup, that igroup is available in the custom initiator group name drop-down list for datastore creation.
