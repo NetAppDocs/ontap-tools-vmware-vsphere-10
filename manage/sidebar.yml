@@ -9,6 +9,8 @@ entries:
     url: /manage/nested-igroups.html
   - title: ONTAP tools Manager user interface
     url: /manage/manager-user-interface.html
+  - title: Manage audit logs for ONTAP tools
+    url: /manage/audit-logs.html
   - title: Manage ONTAP tools Manager settings
     entries:
       - title: Edit AutoSupport settings 
