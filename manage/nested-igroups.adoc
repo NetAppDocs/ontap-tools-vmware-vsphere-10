@@ -11,7 +11,7 @@ summary: ''
 [.lead]
 If you manage both ONTAP tools VMs and ONTAP storage systems, it is important to understand how igroups behave, especially when moving datastores from environments not managed by ONTAP tools to those that are. This page explains how igroups are updated during this process.
 
-ONTAP tools for VMware vSphere 10.4 and later version automatically creates and maintains ONTAP and vCenter objects to simplify datastore management in VMware datacenter environments.
+Beginning with ONTAP tools for VMware vSphere 10.4, ONTAP tools automatically creates and maintains ONTAP and vCenter objects, simplifying datastore management in VMware datacenter environments.
 
 ONTAP tools for VMware vSphere interprets igroups in two different contexts:
 
@@ -48,6 +48,10 @@ During datastore creation in ONTAP tools, you can enter a custom igroup name ins
 When creating a datastore using the ONTAP tools user interface, you can choose an existing custom parent igroup from the drop-down list. After reusing the parent igroup to create another datastore, the ONTAP systems user interface shows this association. The new datastore also appears in the vCenter Server user interface.
 
 This operation can also be performed using the API. To reuse an existing igroup during datastore creation, specify the igroup UUID in the API request payload.
+
+[NOTE]
+Only custom igroups can be reused. Igroups created during migration from ONTAP tools 9.x (migrated igroups) cannot be reused and, beginning with ONTAP tools 10.5P2, are automatically deleted when no longer in use.
+// OTV10.5 P2 updates
 
 *When you create a datastore and igroup natively from ONTAP and vCenter*
 

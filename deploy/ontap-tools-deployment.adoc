@@ -83,7 +83,7 @@ image:../media/custom-temp-p2.png[Customize template]
 The vCenter hostname is the name of the vCenter Server instance where the ONTAP tools appliance is deployed.
 +
 If you are deploying ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another, you can assign a restricted role for the vCenter instance hosting the ONTAP tools.
-You can create a dedicated vCenter user and role with only the permissions required for OVF template deployment. For details, see the roles listed in https://review.docs.netapp.com/us-en/ontap-tools-vmware-vsphere-10_otv105-releasebranch/concepts/rbac-vcenter-use.html#vsphere-object-hierarchy[Roles included with ONTAP tools for VMware vSphere 10].
+You can create a dedicated vCenter user and role with only the permissions required for OVF template deployment. For details, see the roles listed in link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy[Roles included with ONTAP tools for VMware vSphere 10].
 +
 For the vCenter instance that will be managed by ONTAP tools, make sure the vCenter user account has administrator privileges.
 +
