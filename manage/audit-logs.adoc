@@ -10,13 +10,17 @@ summary: 'Learn how ONTAP tools for VMware vSphere captures, retains, and monito
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools for VMware vSphere 10.6 includes audit logging to support security, governance, and compliance requirements. Audit logs provide an event trail that shows who performed an action, what action was performed, when it occurred, and whether it succeeded or failed.
+Use this task to manage audit logging behavior and operational response in ONTAP tools for VMware vSphere. Audit logs provide an event trail that shows who performed an action, what action was performed, when it occurred, and whether it succeeded or failed.
 
-Audit logging supports forensic investigations and operational accountability across ONTAP tools Manager UI activity, REST API activity, scheduled jobs, and maintenance console activity.
+.Before you begin
 
-== What ONTAP tools captures in audit logs
+* Ensure that you have administrator access to ONTAP tools Manager.
+* Ensure that you have maintenance console access if you plan to change local retention settings.
+* Review your organization's security and compliance requirements for retention, forwarding, and incident response.
 
-ONTAP tools generates audit events for the following operations:
+.About this task
+
+ONTAP tools generates audit events for the following activities:
 
 * External REST API operations
 ** All non-GET REST API requests are audited, such as POST, PATCH, PUT, and DELETE.
@@ -27,6 +31,44 @@ ONTAP tools generates audit events for the following operations:
 ** Cleanup jobs
 * Maintenance console activities
 ** Maintenance console operations are captured in a separate audit log.
+
+Audit logging has the following operational limits:
+
+* GET REST API calls are not captured in the audit log.
+* Disabling audit logging is not supported.
+* Audit log file size is not user-configurable.
+
+Sensitive data handling is built in:
+
+* Sensitive data, such as passwords, tokens, and private key material, is redacted.
+* Long request and response payloads might be truncated.
+
+.Steps
+
+. Verify what your environment audits.
++
+Confirm that your audit scope includes ONTAP tools Manager UI activity, REST API activity, scheduled jobs, and maintenance console activity.
+
+. Configure local retention.
++
+Audit logs rotate daily with a default retention period of 30 days. Configure retention through the ONTAP tools maintenance console, or through the supported ONTAP tools configuration mechanism for your deployment.
+
+. Optional: Forward audit logs to an external syslog destination.
++
+Use syslog forwarding when you need centralized monitoring, long-term retention, or SIEM correlation. Follow your organization's standards for TLS, certificates, ports, and retention.
+
+. Monitor integrity alerts.
++
+ONTAP tools checks archived audit logs for deletion or tampering at regular intervals (for example, every 24 hours). Review alerts in ONTAP tools Manager.
+
+. If an integrity alert occurs, perform incident-response actions.
+.. Collect a support bundle as soon as possible.
+.. Preserve exported bundles and archives according to your organization's incident-response process.
+.. Review alert details in ONTAP tools Manager and contact NetApp Support if required.
+
+. Collect audit logs when requested.
++
+Audit logs are included in ONTAP tools support bundles. Follow the standard procedure for collecting log files and support bundles, then provide the bundle to NetApp Support when requested.
 
 == Audit event fields
 
@@ -40,9 +82,6 @@ Audit records include a consistent set of fields to support traceability. Typica
 * Request identifier, when available (for example, correlation ID)
 * Job identifier, when available (for asynchronous workflows)
 * Tenant or vCenter identifier, when available
-
-[NOTE]
-Depending on the operation, request and response details might be included. To reduce the risk of sensitive data exposure and control log growth, captured payloads can be truncated and secrets are redacted.
 
 == Example audit record
 
@@ -62,57 +101,5 @@ The following example shows the type of information captured. The exact field se
 }
 ----
 
-== Sensitive data handling
-
-Audit logs support investigations without exposing secrets.
-
-* Sensitive data, such as passwords, tokens, and private key material, is redacted.
-* Long request and response payloads might be truncated.
-
-== Limitations
-
-* GET REST API calls are not captured in the audit log.
-* Disabling audit logging is not supported.
-* Audit log file size is not user-configurable.
-
-== Audit log rotation and retention
-
-* Audit logs rotate daily.
-* The default retention period is 30 days.
-* You can configure the retention period through the ONTAP tools maintenance console, or through the supported ONTAP tools configuration mechanism for your deployment.
-
 [IMPORTANT]
 If you have long-term retention requirements, such as regulatory retention, forward audit logs to an external syslog or SIEM destination and manage retention externally.
-
-== Audit log integrity monitoring
-
-ONTAP tools monitors archived audit logs for deletion or tampering.
-
-* Integrity verification runs at a regular interval, for example every 24 hours.
-* If ONTAP tools detects tampering or deletion of an archived audit log, it raises an alert in ONTAP tools Manager.
-
-== If an integrity alert occurs
-
-If ONTAP tools reports an audit log integrity alert:
-
-. Collect a support bundle as soon as possible.
-. Preserve relevant exported bundles and archives according to your organization's incident response process.
-. Review the alert details in ONTAP tools Manager and contact NetApp Support if required.
-
-== Forward audit logs to syslog (optional)
-
-ONTAP tools supports forwarding audit logs to an external syslog server, for example for centralized monitoring or SIEM integration.
-
-Use syslog forwarding when you require:
-
-* Centralized log collection across environments
-* Long-term retention beyond local default retention
-* Correlation with other infrastructure audit events
-
-Refer to your organization's syslog and SIEM standards for TLS, certificates, ports, and retention policies.
-
-== Where to access audit logs
-
-Audit logs are included in ONTAP tools log bundles (support bundles).
-
-To collect audit logs, follow the standard procedure in the topic for collecting log files and support bundles, and provide the bundle to NetApp Support when requested.
