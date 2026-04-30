@@ -1,59 +1,59 @@
 ---
 permalink: deploy/ontap-tools-deployment.html
 sidebar: sidebar
-keywords:
-summary: 'The ONTAP tools for VMware vSphere appliance is deployed as a small-sized single node with core services to support NFS and VMFS datastores.'
+keywords: deployment, ONTAP tools, OVA, vSphere
+summary: 'Deploy ONTAP tools for VMware vSphere as an extra-small single-node appliance.'
 ---
 = Deploy ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-The ONTAP tools for VMware vSphere appliance is deployed as an extra small-sized single node with core services to support NFS and VMFS datastores. The ONTAP tools deployment process might take up to 45 minutes.
+Deploy ONTAP tools for VMware vSphere as an extra-small single-node appliance that supports NFS and VMFS datastores. The deployment process takes up to 45 minutes.
 
 .Before you begin
 
-If you're deploying an extra small single node, a content library is optional. For multi-node or HA deployments, a content library is required. In VMware, a content library stores VM templates, vApp templates, and other files. Deploying with a content library provides a seamless experience because it is not dependent on network connectivity.
+If you deploy an extra-small single-node configuration, a content library is optional. For multi-node or HA deployments, a content library is required.
 
-Consider the following before creating a content library:
+In VMware, a content library stores VM templates, vApp templates, and other files. Using a content library simplifies deployment because it is not dependent on direct network access during template operations.
+
+Before you create a content library:
 
 * Create the content library on a shared datastore so all hosts in the cluster can access it.
-* Set up the content library before deploying the ONTAP tools for VMware vSphere OVA.
-* Ensure the content library is created before configuring the appliance for HA.
-[NOTE]
-Don't delete the OVA template in the content library after deployment.
+* Create the content library before deploying the ONTAP tools for VMware vSphere OVA.
+* Keep the OVA template in the content library after deployment.
 
 [NOTE]
-To enable HA deployment in the future, avoid deploying the ONTAP tools virtual machine directly on an ESXi host. Instead, deploy it within an ESXi host cluster or resource pool.
+If you plan to enable HA later, deploy the ONTAP tools VM in an ESXi cluster or resource pool, not directly on an ESXi host.
 
-Follow these steps to create a content library:
+To create a content library:
 
-. Download the file that contains the binaries (_.ova_) and signed certificates for ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^].
-. Log in to the vSphere client
-. Select the vSphere client menu and select *Content libraries*.
-. Select *Create* on the right of the page.
-. Provide a name for the library and create the content library.
-. Go to the content library you created.
-. Select *Actions* on the right of the page, select *Import item*, and import the OVA file.
-
-[NOTE]
-For more information, refer to https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library] blog.
+. Download the ONTAP tools for VMware vSphere binaries (_.ova_) and signed certificates from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^].
+. Log in to the vSphere Client.
+. From the vSphere Client menu, select *Content libraries*.
+. Select *Create*.
+. Enter a name, and create the content library.
+. Open the content library you created.
+. Select *Actions* > *Import item*, and import the OVA file.
 
 [NOTE]
-Before proceeding with the deployment, set the cluster's Distributed Resource Scheduler (DRS) to Conservative. This ensures that VMs aren't migrated during the installation.
+For more information, see https://blogs.vmware.com/vsphere/2020/01/creating-and-using-content-library.html[Creating and Using Content Library].
 
-The ONTAP tools for VMware vSphere is initially deployed as a non-HA setup. To scale to HA deployment, you will need to enable the CPU hot-add and memory hot-plug. You can perform this step as part of the deployment process or edit the VM settings after deployment.
+[NOTE]
+Before deployment, set the cluster Distributed Resource Scheduler (DRS) to Conservative to prevent VM migration during installation.
+
+ONTAP tools for VMware vSphere is initially deployed as a non-HA configuration. To scale to HA later, enable CPU hot add and memory hot plug during deployment or by editing VM settings after deployment.
 // updated for OTVDOC-255 - Jani
 
 .Steps
 
-. Download the file that contains the binaries (_.ova_) and signed certificates for the ONTAP tools for VMware vSphere from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^]. If you have imported the OVA into the content library, you can skip this step and proceed with the next step.
+. Download the ONTAP tools OVA file and signed certificates from the https://mysupport.netapp.com/site/products/all/details/otv10/downloads-tab[NetApp Support Site^]. If you have already imported the OVA into your content library, skip this step.
 . Log in to the vSphere server.
-. Go to the resource pool, cluster, or host where you intend to deploy the OVA.
+. Go to the resource pool, cluster, or host where you want to deploy the OVA.
 +
-[NOTE]
-Never store the ONTAP tools for VMware vSphere virtual machine on vVols datastores that it manages.
-. You can deploy the OVA from the content library or from the local system.
+[IMPORTANT]
+Do not store the ONTAP tools VM on vVols datastores that it manages.
+. Deploy the OVA from either the content library or the local system.
 +
 |===
 |From the local system|From the content library
@@ -66,57 +66,55 @@ a. Go to your content library and select the library item that you want to deplo
 
 b. Select *Actions* > *New VM from this template*
 |===
-. In the *Select a name and folder* field, enter the virtual machine name and choose its location. 
+. In *Select a name and folder*, enter the VM name and location.
 +
-* If you're using the vCenter Server 8.0.3 version, select the option *Customize this virtual machine's hardware*, which will activate an additional step called *Customize hardware* before proceeding to the *Ready to complete* window.
-* If you're using the vCenter Server 7.0.3 version, follow the steps in the *What's next?* section at the end of deployment.
+For vCenter Server 8.0.3, select *Customize this virtual machine's hardware* to enable an additional hardware configuration step.
 image:../media/select-name.png[Select a name and folder]
 . Select a computer resource and select *Next*. Optionally, check the box to *Automatically power on deployed VM*.
 . Review the details of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.
 . Select the storage for the configuration and the disk format and select *Next*.
 . Select the destination network for each source network and select *Next*.
-. In the *Customize template* window, fill in the required fields.
+. In the *Customize template* window, enter the required values.
 // image:../media/sys-conf.png[Customize template]
 image:../media/custom-temp-p2.png[Customize template]
 [NOTE]
 The vCenter hostname is the name of the vCenter Server instance where the ONTAP tools appliance is deployed.
 +
-If you are deploying ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another, you can assign a restricted role for the vCenter instance hosting the ONTAP tools.
-You can create a dedicated vCenter user and role with only the permissions required for OVF template deployment. For details, see the roles listed in link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy[Roles included with ONTAP tools for VMware vSphere 10].
+If you are deploying ONTAP tools in a two-vCenter Server topology, where the appliance is hosted in one vCenter instance and manages another, assign a restricted role for the vCenter instance that hosts ONTAP tools.
+Create a dedicated vCenter user and role with only the permissions required for OVF template deployment. For details, see link:../concepts/rbac-vcenter-use.html#vsphere-object-hierarchy[Roles included with ONTAP tools for VMware vSphere 10].
 +
-For the vCenter instance that will be managed by ONTAP tools, make sure the vCenter user account has administrator privileges.
+For the vCenter instance managed by ONTAP tools, ensure that the vCenter user account has administrator privileges.
 +
 [NOTE] 
-* Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). To configure dual stack, specify the host name mapped to the IPv6 address.
+* Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). For dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
-Pure IPv6 is not supported. Mixed mode is supported with VLAN containing both IPv6 and IPv4 addresses.
+Pure IPv6 is not supported. Mixed mode is supported with a VLAN that contains both IPv6 and IPv4 addresses.
 * ONTAP tools IP address is the primary interface for communicating with ONTAP tools.
-* IPv4 is the IP address component of the node configuration, which can be utilized to enable diagnostic shell and SSH access on the node for the purposes of debugging and maintenance.
+* IPv4 is the node configuration address used to enable diagnostic shell and SSH access for debugging and maintenance.
 // update for OTVDOC-262 
-. When using the vCenter Server 8.0.3 version, in the *Customize hardware* window, enable the *CPU hot add* and *Memory hot plug* options to allow HA functionality.
+. For vCenter Server 8.0.3, in the *Customize hardware* window, enable *CPU hot add* and *Memory hot plug* to support HA functionality.
 image:../media/customize-hw105-p2-1.png[CPU hot add]
 image:../media/customize-hw105-p2.png[Memory hot plug]
 // OTV10.5 P2 update
 // Applicable only to vCenter 8.0.3
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
-As the deployment task gets created, the progress is shown in the vSphere task bar.
+When the deployment task starts, progress is shown in the vSphere task bar.
 // we might need to add another step to To customize the hardware. go to vSphere client menu >  in the inventory go to your VM > edit settings. 
-. Power on the VM after completing the task if the option to automatically power on the VM was not selected.
+. If you did not select automatic power on, power on the VM after the task completes.
 
-You can track the progress of the installation within the VM's web console.
+Track installation progress from the VM web console.
 
-If there are discrepancies in the OVF form, a dialog box will prompt corrective action. Use the tab button to navigate, make the necessary changes, and select *OK*. You have three attempts to resolve any issues. If problems continue after three attempts, the installation process will stop, and it is advised to retry the installation on a new virtual machine.
+If there are discrepancies in the OVF form, a dialog box prompts corrective action. Use the tab key to navigate, make the required changes, and select *OK*. You have three attempts to resolve issues. If problems continue after three attempts, the installation stops, and you should retry the installation on a new virtual machine.
 
 .What’s next?
 
 If you have deployed ONTAP tools for VMware vSphere with vCenter Server 7.0.3, then follow these steps after the deployment.
 
-. Log in to the vCenter client
-. Power down the ONTAP tools node.
-. Go to the ONTAP tools for VMware vSphere virtual machine under *Inventories* and select the *Edit settings* option.
-. Under the *CPU* options, check the *Enable CPU hot add* checkbox
-. Under the *Memory* options, check the *Enable* checkbox against *Memory hot plug*.
-
+. Log in to the vCenter client.
+. Power down the ONTAP tools VM.
+. Right-click the VM and select *Edit settings*.
+. Under *CPU*, check *Enable CPU hot add*.
+. Under *Memory*, check *Enable* for *Memory hot plug*.
 //OTVDOC-334 updated by Jani
