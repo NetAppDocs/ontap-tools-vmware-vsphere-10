@@ -24,8 +24,7 @@ The table below shows the recommended CPU, memory, and disk space for each deplo
 // updated for GITHUB issue #50
 |===
 |*Type of deployment*| *CPUs per node* |*Memory (GB) per node* |*Disk space (GB) thick provisioned per node*
-|Non-HA Extra small (XS) |6 |12 |350
-|HA Extra small (XS) |6 (18 total) |12 (36 total) |350 (1050 total)
+|Extra small (XS) |6 |12 |350
 // 10.6 XS updates
 |Small |9 |18 |350
 |Medium |13 |26 |350
@@ -114,6 +113,7 @@ Click to expand or collapse the port requirements table.
 [NOTE]
 For HA deployments, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
 ====
+
 == Configuration limits to deploy ONTAP tools for VMware vSphere for vVols datastores
 
 You can use the following table as a guide for configuring ONTAP tools for VMware vSphere.
@@ -144,6 +144,8 @@ Consider the following when reviewing the table:
 
 |===
 |Deployment |Number of VMFS and NFS datastores |Number of DR enabled VMFS datastores |Number of hosts
+
+|Extra Small |50 |50 |16
 
 |Non-HA Small |200 |80 |32
 

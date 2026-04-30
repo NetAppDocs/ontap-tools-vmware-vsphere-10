@@ -51,7 +51,7 @@ Confirm that your audit scope includes ONTAP tools Manager UI activity, REST API
 
 . Configure local retention.
 +
-Audit logs rotate daily with a default retention period of 30 days. Configure retention through the ONTAP tools maintenance console, or through the supported ONTAP tools configuration mechanism for your deployment.
+Audit logs rotate daily with a default retention period of 30 days. You can configure the retention period from 1 to 1440 days through the ONTAP tools maintenance console, or through the supported ONTAP tools configuration mechanism for your deployment.
 
 . Optional: Forward audit logs to an external syslog destination.
 +
@@ -59,16 +59,15 @@ Use syslog forwarding when you need centralized monitoring, long-term retention,
 
 . Monitor integrity alerts.
 +
-ONTAP tools checks archived audit logs for deletion or tampering at regular intervals (for example, every 24 hours). Review alerts in ONTAP tools Manager.
+ONTAP tools checks audit log archives for integrity every 24 hours to detect potential tampering or deletion due to malicious activity. If ONTAP tools detects that an archive has been tampered with or deleted, it raises an alert in ONTAP tools Manager.
 
 . If an integrity alert occurs, perform incident-response actions.
 .. Collect a support bundle as soon as possible.
 .. Preserve exported bundles and archives according to your organization's incident-response process.
 .. Review alert details in ONTAP tools Manager and contact NetApp Support if required.
-
-. Collect audit logs when requested.
+. Collect the log files.
 +
-Audit logs are included in ONTAP tools support bundles. Follow the standard procedure for collecting log files and support bundles, then provide the bundle to NetApp Support when requested.
+To collect audit logs, follow the procedure in xref:../deploy/deployment-error-codes.adoc#collect-the-log-files[Collect the log files].
 
 == Audit event fields
 

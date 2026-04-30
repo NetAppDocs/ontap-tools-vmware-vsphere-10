@@ -18,7 +18,6 @@ Use ONTAP tools Manager to scale up the ONTAP tools for VMware vSphere configura
 // https://jira.ngage.netapp.com/browse/OTVDOC-190 -  jani
 * Ensure the CPU hot add and memory hot plug are enabled.
 * In the vCenter Server, set the Disaster Recovery Service (DRS) automation level to partially automated. After deploying HA, revert it to fully automated.
-* Node hostnames in the HA setup should be in lowercase.
 // OTVDOC-268 - jani
 
 .Steps
@@ -35,7 +34,7 @@ On extra small (XS) deployments, certain services and features are unavailable o
 // 10.6 XS updates
 . Use the HA toggle button to enable the HA configuration. On the *HA settings* page, ensure that:
 [NOTE]
-In ONTAP tools for VMware vSphere, you're only allowed to increase the node size; you cannot reduce the node size. The default deployment is Extra Small (XS). In a non-HA setup, Small (S) and Medium (M) configurations are supported. In an HA setup, Small (S), Medium (M), and Large (L) configurations are supported.
+In ONTAP tools for VMware vSphere, you're only allowed to increase the node size; you cannot reduce the node size. The default deployment is Extra Small (XS). In a non-HA setup, Small (S) and Medium (M) configurations are supported. In an HA setup, Extra Small (XS), Small (S), Medium (M), and Large (L) configurations are supported.
 +
 . Use the HA toggle button to enable the HA configuration. On the *HA settings* page, ensure that:
 
