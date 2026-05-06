@@ -54,7 +54,8 @@ ONTAP tools for VMware vSphere 10 is deployed using the vSphere remote plug-in a
 
 .ONTAP tools IP address
 
-ONTAP tools for VMware vSphere 10 exposes a single IP address which provides a gateway to the capabilities of the virtual machine. You need to provide the address during initial configuration and it's assigned to an internal load balancer component. The address is used by the ONTAP tools Manager user interface as well as to access the Swagger documentation page and REST API directly.
+ONTAP tools for VMware vSphere 10 exposes a single external IP address (formerly load balancer) that provides a gateway to the capabilities of the virtual machine. You provide this address during initial configuration. The address is used by the ONTAP tools Manager interface and to access the Swagger documentation page and REST API directly.
+// updated for https://jira.ngage.netapp.com/browse/OTVDOC-367
 
 .Two REST APIs
 

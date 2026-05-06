@@ -90,8 +90,10 @@ For the vCenter instance managed by ONTAP tools, ensure that the vCenter user ac
 * Host names must include letters (A-Z, a-z), digits (0-9), and hyphens (-). For dual stack, specify the host name mapped to the IPv6 address.
 [NOTE]
 Pure IPv6 is not supported. Mixed mode is supported with a VLAN that contains both IPv6 and IPv4 addresses.
-* ONTAP tools IP address is the primary interface for communicating with ONTAP tools.
-* IPv4 is the node configuration address used to enable diagnostic shell and SSH access for debugging and maintenance.
+* ONTAP tools IP address (formerly load balancer) is the external endpoint for ONTAP tools Manager (`\https://<ip>:8443/virtualization/ui/`), API calls, and plug-in access from the vCenter UI.
+* ONTAP tools virtual IP address (formerly node interconnect) is assigned to the Kubernetes API (kube-api) server and acts as the virtual IP for the Kubernetes control plane.
+* IPv4 address is the node management address mapped to the specified host name, and is used for diagnostic shell and SSH access.
+// updated for https://jira.ngage.netapp.com/browse/OTVDOC-367
 // update for OTVDOC-262 
 . For vCenter Server 8.0.3, in the *Customize hardware* window, enable *CPU hot add* and *Memory hot plug* to support HA functionality.
 image:../media/customize-hw105-p2-1.png[CPU hot add]
