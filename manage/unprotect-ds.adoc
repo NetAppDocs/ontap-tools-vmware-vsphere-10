@@ -1,33 +1,34 @@
 ---
 permalink: manage/unprotect-ds.html
 sidebar: sidebar
-keywords:
-summary: 'Remove a datastore from a protection group, with options to delete associated target artifacts and protection settings.'
+keywords: VMFS datastore, unprotect datastore, protection group, SnapMirror, LUN cleanup
+summary: 'Unprotect a VMFS datastore and optionally remove associated target-side storage elements.'
 ---
 
-=  Unprotect a VMFS datastore
+= Unprotect a VMFS datastore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Remove a datastore from a protection group, with options to delete associated target artifacts and protection settings.
+Use this task to remove protection from a VMFS datastore and optionally remove associated target-side storage elements.
 
 .Before you begin
 
-Ensure you have administrative privileges in vSphere.
-Review the impact of unprotecting the last datastore in a group.
+* Ensure you have administrative privileges in vSphere.
+* Ensure your ONTAP tools user account has permissions to manage protection settings.
+* Review the impact of unprotecting the last datastore in a protection group.
 
 .Steps
 
-. Log in to the vSphere client.
-. Select a host cluster and select *Datastores*
+. Log in to the vSphere Client.
+. Select a host cluster and select *Datastores*.
 . Right-click the eligible VMFS datastore you want to unprotect and select *NetApp ONTAP tools* > *Unprotect*.
-. Select *Delete associated storage elements(LUN) from the secondary storage* if you want to delete replicated LUNs and consistency groups on the target.
-. Select *Unprotect* to proceed.
 [NOTE]
-Unprotecting the last datastore in a protection group deletes the protection group and the associated storage elements.
+Unprotecting the last datastore in a protection group deletes the protection group and associated storage elements.
+. Optional: Select *Delete associated storage elements (LUNs) from the secondary storage* to delete replicated LUNs and consistency groups on the target.
+. Select *Unprotect*.
 
 .Result
-The datastore is removed from protection. If it was the last in the protection group, the group is deleted.
+The datastore is removed from protection. If it was the last datastore in the protection group, the protection group is deleted. If you selected the delete option, target-side replicated LUNs and consistency groups are also removed.
 
 // 10.6 updates

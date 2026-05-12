@@ -19,7 +19,7 @@ ONTAP tools for VMware vSphere 10.5 adds support for ASA r2 systems, providing c
 
 ONTAP tools for VMware vSphere 10.5 complies with current VMware interoperability certification standards, supporting both ESXi host and vCenter Server.
 
-* *MetroCluster support*
+* *NetApp MetroCluster support*
 
 This release introduces support for MetroCluster configurations, enhancing high availability and disaster recovery capabilities.
 

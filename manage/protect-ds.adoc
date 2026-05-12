@@ -1,46 +1,46 @@
 ---
 permalink: manage/protect-ds.html
 sidebar: sidebar
-keywords:
-summary: 'Protect eligible VMFS datastores by adding them to a protection group, enabling SnapMirror replication and failover capabilities.'
+keywords: VMFS datastore, protection group, SnapMirror, failover, host cluster protection
+summary: 'Protect an eligible VMFS datastore by adding it to a protection group with SnapMirror replication.'
 ---
 
-=  Protect a VMFS datastore
+= Protect a VMFS datastore
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Protect eligible VMFS datastores by adding them to a protection group, enabling SnapMirror replication and failover capabilities.
+Use this task to protect an eligible VMFS datastore by adding it to a protection group.
 
 .Before you begin
 
-Ensure the datastore uses the iSCSI or FC protocol.
-Confirm you have administrative privileges in vSphere.
-Verify that the datastore is not already part of a protection group.
-// This topic should go under manage ds
+* Ensure the datastore uses the iSCSI or FC protocol.
+* Confirm that you have administrative privileges in vSphere.
+* Verify that the datastore is not already part of a protection group.
 
 .Steps
 
-. Log in to the vSphere client.
-. Select a host cluster and select *Datastores*
+. Log in to the vSphere Client.
+. Select a host cluster and select *Datastores*.
 . Right-click the eligible VMFS datastore you want to protect and select *NetApp ONTAP tools* > *Protect*.
 +
 The system checks the datastore’s eligibility for protection. If the datastore is eligible, the protection workflow continues. If the datastore is ineligible, a message displays the reasons and you cannot proceed.
-. Choose to add the datastore to an existing protection group or create a new protection group. To create a new protection group:
-.. Provide a name for the protection group. 
-.. Select *Add Relationship*. 
-.. In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
+. Choose whether to add the datastore to an existing protection group or create a new protection group.
+.. To use an existing protection group, select the protection group and continue.
+.. To create a new protection group:
+... Provide a name for the protection group.
+... Select *Add Relationship*.
+... In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
 +
-The policy type can be Asynchronous or AutomatedFailOverDuplex. 
+The policy type can be *Asynchronous* or *AutomatedFailOverDuplex*.
 +
-When you add the SnapMirror relationship as an AutomatedFailOverDuplex type policy, you must add the target storage VM as storage backend to the same vCenter where ONTAP tools for VMware vSphere is deployed.
+If you select *AutomatedFailOverDuplex*, add the target storage VM as a storage backend to the same vCenter Server where ONTAP tools for VMware vSphere is deployed.
 +
-In the AutomatedFailOverDuplex policy type, there are uniform and non-uniform host configurations. 
-When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
-.. If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
+For *AutomatedFailOverDuplex*, choose a uniform or non-uniform host configuration.
+When you select the *uniform host configuration* toggle, the host initiator group configuration is implicitly replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
+... If you select a non-uniform host configuration, select host access (source/target) for each host in the cluster.
 . Select *OK* to start the protection workflow.
 
 .Result
-The datastore is protected and appears in the selected protection group. You can view or manage its protection status from the ONTAP tools plugin.
-
+The datastore appears in the selected protection group. You can view and manage protection status from the ONTAP tools plug-in.
 // 10.6 updates

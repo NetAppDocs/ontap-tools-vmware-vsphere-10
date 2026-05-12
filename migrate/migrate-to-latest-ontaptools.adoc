@@ -2,19 +2,19 @@
 permalink: migrate/migrate-to-latest-ontaptools.html
 sidebar: sidebar
 keywords: migrate
-summary: 'When migrating storage data, storage backends are onboarded manually using REST APIs. When migrating VASA Provider data, data is exported from existing Derby database and imported into the MongoDB database.'
+summary: 'Choose the supported migration path from ONTAP tools for VMware vSphere 9.xx to 10.6 based on whether your environment includes vVols datastores.'
 ---
 = Migrate from ONTAP tools for VMware vSphere 9.xx to 10.6
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Moving the NetApp ONTAP tools for VMware vSphere setup from version 9.xx to 10.6 necessitates a migration process because of the significant product updates and enhancements across the versions. 
+Migrating from ONTAP tools for VMware vSphere 9.xx to 10.6 requires different steps based on your datastore types.
 
 You can migrate from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.6.
 
-//updated for OTVDOC-175 - jani
-If you have NFS and VMFS datastores and no vVols datastores in your setup, simply uninstall ONTAP tools 9.xx and deploy ONTAP tools 10.6. However, if your setup contains vVols datastores, you’ll have to go through a process of migrating the VASA Provider and the SRA.  
+// updated for OTVDOC-175 - jani
+If your setup has NFS and VMFS datastores and no vVols datastores, uninstall ONTAP tools 9.xx and deploy ONTAP tools 10.6. If your setup contains vVols datastores, migrate the VASA Provider and SRA.
 
 The following table outlines the migration process in these two different scenarios. 
 |===
@@ -30,7 +30,7 @@ Steps:
 |
 Steps:
 
-1. Remove ONTAP tools 9.xx from your environment. Refer to https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment[How to remove OTV 9.xx from your environment] NetApp Knowledge Base article.
+1. Remove ONTAP tools 9.xx from your environment. See https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_How_to_remove_OTV_9_12_from_your_environment[How to remove OTV 9.xx from your environment] in the NetApp Knowledge Base.
 
 2. link:../deploy/quick-start.html[Deploy and configure ONTAP tools for VMware vSphere 10.6] 
 
@@ -42,4 +42,12 @@ Steps:
 [NOTE]
 After migrating from ONTAP tools for VMware vSphere 9.xx to 10.6, vVols datastores using the NVMe/FC protocol become non-operational because ONTAP tools 10.6 supports the NVMe-oF protocol only with VMFS datastores.
 
-//updated for 10.3 jira OTVDOC-147
+== After migration
+
+Verify the following:
+
+* Datastores are accessible from vCenter Server.
+* VM storage policies are mapped as expected.
+* Protection and replication status shows healthy for configured datastores.
+
+// updated for 10.3 jira OTVDOC-147

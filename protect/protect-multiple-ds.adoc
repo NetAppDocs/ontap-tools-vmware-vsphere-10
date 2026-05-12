@@ -1,49 +1,51 @@
 ---
 permalink: protect/protect-multiple-ds.html
 sidebar: sidebar
-keywords:
-summary: 'Granular datastore protection lets you select and group specific datastores for flexible protection. You can organize datastores from different storage virtual machines (SVMs) into separate protection groups, and a host cluster may include datastores from multiple SVMs.'
+keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration
+summary: Protect multiple VMFS datastores in a host cluster by grouping them into protection groups and applying SnapMirror policies.
 ---
 = Protect datastores in a cluster with ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Granular datastore protection enables you to select and group specific datastores within a host cluster into separate protection groups. This provides flexibility to apply protection policies that meet your environment’s requirements, even when the host cluster includes datastores from multiple storage virtual machines (SVMs).
+Use granular datastore protection when a host cluster includes datastores from multiple storage virtual machines (SVMs) and you need to protect selected datastores with different policies.
 // Configure granular datastore protection - this can be the heading of the main topic
 
 .Before you begin
 
-Make sure you meet these requirements before you protect a datastore:
+Make sure you meet these requirements before you protect datastores in a host cluster:
 
-* The datastore is of type VMFS datastores with iSCSI or FC protocols.
-* ##datastore eligibility criteria ##
+* The datastores are VMFS datastores that use iSCSI or FC protocols.
+* The datastores are discovered and available in ONTAP tools.
+* The source and target storage VMs are configured for SnapMirror relationships.
+// need this info - * ##datastore eligibility criteria ##
 
 .Steps
 
-. Log in to the vSphere client.
+. Log in to the vSphere Client.
 . Right-click on a host or a host cluster and select *NetApp ONTAP tools* > *Protect datastores*.
 . Select the *Storage VM* in the cluster.
 +
 Datastores from the selected SVM are displayed.
-. Select the *datastore type*.
+. Select the *Datastore type*.
 . From the list that populates, select the datastores you want to protect and click *Next*.
-. In the *Protection settings* window, choose whether to protect the selected datastores in an existing protection group or a new protection group. To create a new protection group, select *Create new*: 
-.. Provide a name for the protection group. 
-.. Select *Add Relationship*. 
-.. In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
+. In the *Protection settings* window, choose whether to protect the selected datastores in an existing protection group or a new protection group.
+. If you select *Create new*, provide a name for the protection group and select *Add Relationship*.
+. In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
 +
-The policy type can be Asynchronous or AutomatedFailOverDuplex. AutomatedFailOverDuplex policy type is supported only for datastores provisioned on ONTAP 9.15.1 with iSCSI or FC protocols and mounted on the host cluster.
+The policy type can be Asynchronous or AutomatedFailOverDuplex. AutomatedFailOverDuplex is supported only for datastores provisioned on ONTAP 9.15.1 with iSCSI or FC protocols and mounted on the host cluster.
 +
-When you add the SnapMirror relationship as an AutomatedFailOverDuplex type policy, you must add the target storage VM as storage backend to the same vCenter where ONTAP tools for VMware vSphere is deployed.
+If you add the SnapMirror relationship as AutomatedFailOverDuplex, add the target storage VM as a storage backend to the same vCenter Server where ONTAP tools for VMware vSphere is deployed.
 +
 In the AutomatedFailOverDuplex policy type, there are uniform and non-uniform host configurations. 
-When you select the *uniform host configuration* toggle button, the host initiator group configuration is implicitly replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
-.. If you choose to have a non-uniform host configuration, select the host access (source/target) for each host inside that cluster.
-.. Select *Save*.
+When you select the *Uniform host configuration* toggle button, the host initiator group configuration is replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
+. If you select a non-uniform host configuration, select the host access (source or target) for each host in the cluster.
+. Select *Save*.
 . Review the configuration in the *Summary* window and select *Protect*.
 . To view the details of all the available protection groups, go to *NetApp ONTAP tools* > *Protection* > *Protection groups*.
 
+.Result
 A new protection group is created with the selected datastores and the SnapMirror relationship is added to that protection group. The system creates a vCenter task with job ID details and shows its progress in the recent tasks panel. This is an asynchronous task; the user interface shows only the request submission status and does not wait for the task to complete.
 
 [NOTE]

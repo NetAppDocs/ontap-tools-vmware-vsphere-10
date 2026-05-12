@@ -15,7 +15,7 @@ To add a storage backend locally, use cluster or SVM credentials in the ONTAP to
 
 To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources required for vVol management. In multitenant environments, you can add an SVM user locally to manage vVols datastores.
 
-If MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
+If NetApp MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
 
 .Before you begin
 
