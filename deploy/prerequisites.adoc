@@ -1,7 +1,7 @@
 ---
 permalink: deploy/prerequisites.html
 sidebar: sidebar
-keywords: ONTAP tools, Storage Replication Adapter
+keywords: requirements, configuration limits, supported versions, sizing, port requirements, ONTAP tools for VMware vSphere
 summary: 'Review supported versions, sizing, port requirements, and configuration limits before deploying ONTAP tools for VMware vSphere.'
 ---
 = ONTAP tools for VMware vSphere requirements and configuration limits

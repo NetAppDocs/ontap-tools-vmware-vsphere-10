@@ -1,7 +1,7 @@
 ---
 permalink: deploy/quick-start.html
 sidebar: sidebar
-keywords: ONTAP tools,Storage Replication Adapter
+keywords: quick start, deployment workflow, vCenter onboarding, storage backend setup, protection features, ONTAP tools for VMware vSphere
 summary: 'Deploy ONTAP tools for VMware vSphere and complete the core post-deployment setup workflow.'
 ---
 = Quick start for ONTAP tools for VMware vSphere

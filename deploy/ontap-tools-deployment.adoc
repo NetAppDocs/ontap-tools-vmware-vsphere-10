@@ -1,7 +1,7 @@
 ---
 permalink: deploy/ontap-tools-deployment.html
 sidebar: sidebar
-keywords: deployment, ONTAP tools, OVA, vSphere
+keywords: deployment, OVA, content library, single-node appliance, ONTAP tools Manager, ONTAP tools for VMware vSphere
 summary: 'Deploy ONTAP tools for VMware vSphere as an extra-small single-node appliance.'
 ---
 = Deploy ONTAP tools
