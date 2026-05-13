@@ -1,7 +1,7 @@
 ---
 permalink: deploy/pre-deploy-checks.html
 sidebar: sidebar
-keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server, ONTAP tools IP address, ONTAP tools for VMware vSphere
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server
 summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
 ---
 = Pre-deployment requirements for ONTAP tools

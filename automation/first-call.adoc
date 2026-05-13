@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: automation/first-call.html
-keywords: first REST API call, access token, curl examples, ONTAP tools Manager, x-auth header, vCenter list API, ONTAP tools for VMware vSphere
+keywords: first REST API call, access token, curl, authentication
 summary: "You can issue an API call using curl to get started with the ONTAP tools for VMware vSphere 10 REST API."
 ---
 
