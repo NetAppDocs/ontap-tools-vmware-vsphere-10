@@ -1,7 +1,7 @@
 ---
 permalink: protect/map-folder.html
 sidebar: sidebar
-keywords:
+keywords: folder mappings, protected and recovery sites, VMware Live Site Recovery, disaster recovery, ONTAP tools
 summary: 'You should map your folders on the protected site and recovery site to enable communication between them.'
 ---
 = Configure folder mappings in ONTAP tools

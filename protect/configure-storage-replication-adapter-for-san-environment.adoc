@@ -1,7 +1,7 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html
 sidebar: sidebar
-keywords:
+keywords: SRA SAN configuration, VMware Live Site Recovery, iSCSI and Fibre Channel, SnapMirror, ONTAP tools
 summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for VMware Live Site Recovery.'
 ---
 = Configure SRA in ONTAP tools for SAN and NAS environments

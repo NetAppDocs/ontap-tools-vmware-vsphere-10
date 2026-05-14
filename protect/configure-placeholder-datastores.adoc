@@ -1,7 +1,7 @@
 ---
 permalink: protect/configure-placeholder-datastores.html
 sidebar: sidebar
-keywords:
+keywords: placeholder datastore, VMware Live Site Recovery, vCenter inventory, protected virtual machines, ONTAP tools
 summary: 'Configure a placeholder datastore to reserve space in the vCenter inventory at the recovery site for protected virtual machines (VMs). Placeholder datastores require minimal capacity, because placeholder VMs are small and typically use only a few hundred kilobytes.'
 ---
 = Configure placeholder datastores in ONTAP tools

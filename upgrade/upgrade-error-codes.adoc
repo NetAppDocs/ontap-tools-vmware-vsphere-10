@@ -1,7 +1,7 @@
 ---
 permalink: upgrade/upgrade-error-codes.html
 sidebar: sidebar
-keywords: upgrade
+keywords: upgrade error codes, ONTAP tools, VMware vSphere, troubleshooting, Ansible logs
 summary: 'This page outlines the error codes for the upgrade operation of ONTAP tools for VMware vSphere system.'
 ---
 = ONTAP tools upgrade error codes

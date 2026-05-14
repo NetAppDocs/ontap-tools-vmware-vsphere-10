@@ -1,7 +1,7 @@
 ---
 permalink: protect/configure-protection-groups.html
 sidebar: sidebar
-keywords:
+keywords: protection groups, VMware Live Site Recovery, SnapMirror, datastore protection, ONTAP tools
 summary: 'You should create protection groups to protect a group of virtual machines on the protected site.'
 ---
 = Configure protected and recovery sites in ONTAP tools
