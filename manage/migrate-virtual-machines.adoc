@@ -1,7 +1,7 @@
 ---
 permalink: manage/migrate-virtual-machines.html
 sidebar: sidebar
-keywords:
+keywords: virtual machine migration considerations, ONTAP tools VM cloning guidance, VMware storage vMotion considerations, VM migration best practices
 summary: 'You should be aware of some considerations when migrating existing virtual machines in your data center.'
 ---
 = Virtual machine migration and cloning considerations for ONTAP tools

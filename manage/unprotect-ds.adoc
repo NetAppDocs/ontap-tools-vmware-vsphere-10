@@ -1,7 +1,7 @@
 ---
 permalink: manage/unprotect-ds.html
 sidebar: sidebar
-keywords: VMFS datastore, unprotect datastore, protection group, SnapMirror, LUN cleanup
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup
 summary: 'Unprotect a VMFS datastore and optionally remove associated target-side storage elements.'
 ---
 

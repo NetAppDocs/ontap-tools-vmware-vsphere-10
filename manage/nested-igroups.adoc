@@ -1,7 +1,7 @@
 ---
 permalink: manage/nested-igroups.html
 sidebar: sidebar
-keywords:
+keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping
 summary: ''
 ---
 = How ONTAP tools manages igroups

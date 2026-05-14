@@ -1,7 +1,7 @@
 ---
 permalink: manage/manage-vcenter.html
 sidebar: sidebar
-keywords: vCenter Server, manage, remove, force delete, storage backend, certificate, ONTAP tools
+keywords: manage vCenter instances, add remove vCenter, ONTAP tools vCenter credentials, vCenter certificate management
 summary: 'vCenters are central management platforms that allow you to control hosts, virtual machines, and storage backends.'
 ---
 = Manage vCenter Server instances in ONTAP tools

@@ -1,7 +1,7 @@
 ---
 permalink: manage/edit-appliance-settings.html
 sidebar: sidebar
-keywords: appliance, scale, high availability, HA
+keywords: scale ONTAP tools appliance, enable high availability, ONTAP tools HA configuration, appliance scaling settings
 summary: 'Use ONTAP tools Manager to scale the appliance and configure High Availability (HA).'
 ---
 = Scale up ONTAP tools and enable High Availability

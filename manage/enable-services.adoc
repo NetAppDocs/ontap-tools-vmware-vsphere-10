@@ -1,7 +1,7 @@
 ---
 permalink: manage/enable-services.html
 sidebar: sidebar
-keywords: VASA Provider, SRA, vVols, services
+keywords: enable ONTAP tools services, enable VASA provider, enable SRA service, vVols service configuration
 summary: 'Enable optional ONTAP tools services, including VASA Provider, vVols configuration import, and disaster recovery (SRA).'
 ---
 = Enable ONTAP tools services

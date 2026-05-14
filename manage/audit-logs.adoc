@@ -1,7 +1,7 @@
 ---
 permalink: manage/audit-logs.html
 sidebar: sidebar
-keywords:
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention
 summary: 'Learn how ONTAP tools for VMware vSphere captures, retains, and monitors audit logs for security and compliance.'
 ---
 

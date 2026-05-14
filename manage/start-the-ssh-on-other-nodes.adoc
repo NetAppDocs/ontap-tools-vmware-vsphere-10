@@ -1,7 +1,7 @@
 ---
 permalink: manage/start-the-ssh-on-other-nodes.html
 sidebar: sidebar
-keywords:
+keywords: start SSH on nodes, ONTAP tools node SSH access, pre-upgrade SSH enablement, appliance cluster troubleshooting
 summary: 'You need to start SSH on other nodes before you upgrade.'
 ---
 = Start SSH on other ONTAP tools nodes

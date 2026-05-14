@@ -1,7 +1,7 @@
 ---
 permalink: manage/maintenance-console.html
 sidebar: sidebar
-keywords:
+keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration
 summary: 'You can manage your application, system, and network configurations by using the maintenance console of the ONTAP tools. You can change your administrator password and maintenance password. You can also generate support bundles, set different log levels, view and manage TLS configurations, and start remote diagnostics.'
 ---
 = Learn about the ONTAP tools maintenance console

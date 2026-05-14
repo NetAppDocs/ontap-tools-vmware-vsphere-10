@@ -1,7 +1,7 @@
 ---
 permalink: manage/mount-a-vvols-datastore.html
 sidebar: sidebar
-keywords: Mount vVol
+keywords: mount vVols datastore, add vVol datastore to hosts, ONTAP tools vVol host access, VMware virtual volumes mount
 summary: 'You can mount a VMware Virtual Volumes \(vVols\) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only through the APIs.'
 ---
 = Mount a vVols datastore in ONTAP tools

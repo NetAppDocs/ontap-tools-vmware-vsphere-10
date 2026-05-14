@@ -1,7 +1,7 @@
 ---
 permalink: manage/unmount-datastores-on-host.html
 sidebar: sidebar
-keywords:
+keywords: unmount NFS VMFS datastore, remove datastore from host, ONTAP tools datastore unmount, ESXi host storage detach
 summary: 'Unmount datastore action unmounts a NFS or VMFS datastore from ESXi hosts. Unmount datastore action is enabled for NFS and VMFS datastores that are discovered or managed by the ONTAP tools for VMware vSphere.'
 ---
 = Unmount NFS and VMFS datastores in ONTAP tools

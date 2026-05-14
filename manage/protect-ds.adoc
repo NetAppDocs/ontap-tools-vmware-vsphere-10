@@ -1,7 +1,7 @@
 ---
 permalink: manage/protect-ds.html
 sidebar: sidebar
-keywords: VMFS datastore, protection group, SnapMirror, failover, host cluster protection
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery
 summary: 'Protect an eligible VMFS datastore by adding it to a protection group with SnapMirror replication.'
 ---
 

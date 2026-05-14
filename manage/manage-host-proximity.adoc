@@ -1,7 +1,7 @@
 ---
 permalink: manage/manage-host-proximity.html
 sidebar: sidebar
-keywords: host cluster protection, cluster configuration, proximity, SVM mapping
+keywords: host cluster configuration, manage host proximity, SVM mapping, ONTAP tools host cluster protection
 summary: 'View, edit, and remove host cluster configuration settings for host cluster protection in ONTAP tools.'
 ---
 = Manage host cluster configuration in ONTAP tools

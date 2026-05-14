@@ -1,7 +1,7 @@
 ---
 permalink: manage/storage-backend.html
 sidebar: sidebar
-keywords:
+keywords: manage storage backends, ONTAP backend systems, storage backend operations, VMware datastore backend configuration
 summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
 ---
 = Manage storage backends in ONTAP tools

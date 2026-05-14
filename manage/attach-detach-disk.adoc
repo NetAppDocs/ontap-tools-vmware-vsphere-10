@@ -1,7 +1,7 @@
 ---
 permalink: manage/attach-detach-disk.html
 sidebar: sidebar
-keywords:
+keywords: attach data disk VM, detach VM disk, ONTAP tools virtual machine disk, VMware VM storage expansion
 summary: 'Attach a data disk to a virtual machine to expand the storage capacity.'
 ---
 = Attach or detach a data disk from a VM in ONTAP tools
