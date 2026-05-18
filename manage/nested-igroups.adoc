@@ -75,8 +75,8 @@ The ONTAP systems interface shows the relationship between parent and child igro
 |The new datastore LUN is mapped through the associated child igroup. The datastore appears in vCenter Server.
 
 |Datastore and igroup created natively in ONTAP and vCenter, then discovered by ONTAP tools
-|A parent igroup is created in ONTAP tools management context.
-|The original igroup is renamed with the `otv_` prefix and represented as a child igroup.
+|ONTAP tools creates a parent igroup in its management context and keeps the original igroup name.
+|ONTAP tools renames the original igroup with the `otv_` prefix and represents it as a child igroup in the hierarchy.
 |Initiator mappings remain unchanged. Only igroups mapped to datastores are converted during discovery.
 |===
 
