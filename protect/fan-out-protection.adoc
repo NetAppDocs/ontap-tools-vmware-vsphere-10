@@ -2,7 +2,7 @@
 permalink: protect/fan-out-protection.html
 sidebar: sidebar
 keywords: fan-out protection, SnapMirror active sync, asynchronous replication, VMware Live Site Recovery, placeholder datastore, host cluster protection
-summary: Protect a consistency group with fan-out protection by using synchronous replication on one destination ONTAP cluster and asynchronous replication on a second destination ONTAP cluster.
+summary: "Protect a consistency group with fan-out protection by using synchronous and asynchronous replication across two destination ONTAP clusters."
 ---
 = Fan-out protection in ONTAP tools
 :icons: font

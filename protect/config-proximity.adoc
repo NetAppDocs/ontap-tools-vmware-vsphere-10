@@ -2,7 +2,7 @@
 permalink: protect/config-proximity.html
 sidebar: sidebar
 keywords: cluster configuration, datastore protection, SVM pairing, VMware vSphere, failover management
-summary: 'Configure cluster configuration settings for a host cluster to define source and target sites, assign hosts, and pair storage virtual machines (SVMs) for datastore protection.'
+summary: "Configure host cluster proximity settings to define source and target sites, assign hosts, and pair SVMs for datastore protection."
 ---
 
 = Configure cluster for datastore protection with ONTAP tools

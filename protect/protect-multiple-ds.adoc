@@ -2,7 +2,7 @@
 permalink: protect/protect-multiple-ds.html
 sidebar: sidebar
 keywords: granular datastore protection, protection groups, SnapMirror relationship, AutomatedFailOverDuplex, uniform host configuration, non-uniform host configuration
-summary: Protect multiple VMFS datastores in a host cluster by grouping them into protection groups and applying SnapMirror policies.
+summary: "Protect multiple VMFS datastores in a host cluster by grouping datastores into protection groups and applying SnapMirror policies."
 ---
 = Protect datastores in a cluster with ONTAP tools
 :icons: font

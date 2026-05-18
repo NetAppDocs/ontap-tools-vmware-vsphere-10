@@ -2,7 +2,7 @@
 permalink: protect/map-resource.html
 sidebar: sidebar
 keywords: resource mappings, ESXi hosts and clusters, VMware Live Site Recovery, failover configuration, ONTAP tools
-summary: 'You should map your resources on the protected site and recovery site so that virtual machines are configured to fail over into one group of hosts or the other.'
+summary: "Map resource pools, hosts, or clusters between protected and recovery sites to place virtual machines correctly during failover."
 ---
 = Configure resource mappings in ONTAP tools
 :icons: font

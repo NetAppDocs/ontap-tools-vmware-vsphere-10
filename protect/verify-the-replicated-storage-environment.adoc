@@ -2,7 +2,7 @@
 permalink: protect/verify-the-replicated-storage-environment.html
 sidebar: sidebar
 keywords: SRA, storage replication adapter, storage discovery, SnapMirror, custom policy, array pairing, VMware Live Site Recovery
-summary: 'You should verify that the protected site and recovery site are successfully paired after configuring Storage Replication Adapter \(SRA\). The replicated storage system should be discoverable by both the protected site and the recovery site.'
+summary: "Verify protected and recovery site pairing and confirm replicated storage discovery after you configure SRA."
 ---
 = Verify replicated storage systems in ONTAP tools
 :icons: font

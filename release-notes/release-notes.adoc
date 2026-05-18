@@ -2,7 +2,7 @@
 permalink: release-notes/release-notes.html
 sidebar: sidebar
 keywords: release notes, ONTAP tools for VMware vSphere, 10.6
-summary: Review key information about ONTAP tools for VMware vSphere 10.6, including new features, compatibility information, and migration details.
+summary: "Review ONTAP tools for VMware vSphere 10.6 release notes for features, compatibility, and supported migration paths."
 ---
 = Release notes for ONTAP tools for VMware vSphere 10.6
 :icons: font
