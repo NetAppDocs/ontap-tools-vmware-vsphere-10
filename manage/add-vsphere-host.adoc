@@ -2,7 +2,7 @@
 permalink: manage/add-vsphere-host.html
 sidebar: sidebar
 keywords: add vSphere host, ONTAP tools host discovery, register ESXi host, VMware host management
-summary: 'Add new VMware vSphere hosts to ONTAP tools for VMware vSphere.'
+summary: "Add VMware vSphere hosts to ONTAP tools for VMware vSphere."
 ---
 = Add VMware vSphere hosts to ONTAP tools
 :icons: font

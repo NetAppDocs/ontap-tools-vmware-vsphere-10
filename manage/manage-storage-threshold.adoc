@@ -2,8 +2,8 @@
 permalink: manage/manage-storage-threshold.html
 sidebar: sidebar
 keywords: storage threshold alerts, ONTAP tools capacity thresholds, vCenter storage notifications, aggregate volume capacity warnings
-summary: 'You can set the threshold to receive notifications in vCenter Server when the volume and the aggregate capacity reaches certain levels.
-'
+summary: "Set threshold notifications for volume and aggregate capacity levels in vCenter Server."
+
 ---
 = Manage storage thresholds in ONTAP tools
 :icons: font

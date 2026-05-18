@@ -2,7 +2,7 @@
 permalink: manage/storage-view-datastore.html
 sidebar: sidebar
 keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility
-summary: 'View datastore and volume details from the ONTAP Storage page in ONTAP tools for VMware vSphere.'
+summary: "View datastore and volume details from the ONTAP Storage page in ONTAP tools for VMware vSphere."
 ---
 = ONTAP storage views for datastores in ONTAP tools
 :icons: font

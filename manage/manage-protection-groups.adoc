@@ -2,7 +2,7 @@
 permalink: manage/manage-protection-groups.html
 sidebar: sidebar
 keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups
-summary: 'View, edit, and delete protection groups and their relationships in ONTAP tools.'
+summary: "View, edit, and delete protection groups and their relationships in ONTAP tools."
 ---
 = Manage protection groups in ONTAP tools
 :icons: font

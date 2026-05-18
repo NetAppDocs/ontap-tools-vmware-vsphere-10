@@ -2,7 +2,7 @@
 permalink: manage/nconnect-change-default.html
 sidebar: sidebar
 keywords: change nconnect default, ESXi NFS nconnect, ONTAP tools host nconnect settings, vCenter NFS performance tuning
-summary: 'Change the default nconnect value for ESXi hosts in a vCenter Server.'
+summary: "Change the default nconnect value for ESXi hosts in a vCenter Server."
 ---
 = Change the default nconnect value for ESXi hosts in ONTAP tools
 :icons: font

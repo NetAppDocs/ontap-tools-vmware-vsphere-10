@@ -2,7 +2,7 @@
 permalink: migrate/migrate-to-latest-ontaptools.html
 sidebar: sidebar
 keywords: ONTAP tools migration, vVols migration, VMware vSphere, NFS datastores, VMFS datastores
-summary: 'Choose the supported migration path from ONTAP tools for VMware vSphere 9.xx to 10.6 based on whether your environment includes vVols datastores.'
+summary: "Migrate ONTAP tools for VMware vSphere 9.xx to 10.6 by choosing a path based on whether you use vVols datastores."
 ---
 = Migrate from ONTAP tools for VMware vSphere 9.xx to 10.6
 :icons: font

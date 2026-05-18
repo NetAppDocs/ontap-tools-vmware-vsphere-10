@@ -2,7 +2,7 @@
 permalink: migrate/sra-vasa-migration.html
 sidebar: sidebar
 keywords: VASA Provider migration, SRA update, VMware Live Site Recovery, ONTAP tools migration, vVols migration, migration jobs, Swagger, REST API
-summary: 'Migrate the VASA Provider from ONTAP tools for VMware vSphere 9.x to 10.6 and update the Storage Replication Adapter (SRA) for VMware Live Site Recovery.'
+summary: "Migrate VASA Provider and update SRA from ONTAP tools 9.x to 10.6 for VMware Live Site Recovery."
 ---
 = Migrate the VASA Provider and update the SRA in ONTAP tools
 :icons: font

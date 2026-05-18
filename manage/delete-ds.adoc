@@ -2,7 +2,7 @@
 permalink: manage/delete-ds.html
 sidebar: sidebar
 keywords: delete datastore, ONTAP tools datastore removal, delete NFS VMFS vVol datastore, VMware datastore cleanup
-summary: 'Delete datastore action deletes the datastore. In the case of an NFS or VMFS datastore, a dialog box appears with the list of VMs that are using the datastore.'
+summary: "Delete an NFS or VMFS datastore and review virtual machines that use it before removal."
 ---
 = Delete datastores in ONTAP tools
 :icons: font

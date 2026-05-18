@@ -2,7 +2,7 @@
 permalink: manage/virtual-machine-storage-view-datastore.html
 sidebar: sidebar
 keywords: virtual machine storage view, vVols list per VM, ONTAP tools VM storage details, datastore usage by virtual machine
-summary: 'The storage view shows the list of vVols that are created by the virtual machine.'
+summary: "View the list of vVols created by a virtual machine from the storage view."
 ---
 = Virtual machine storage view in ONTAP tools
 :icons: font

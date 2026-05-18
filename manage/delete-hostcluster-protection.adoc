@@ -2,7 +2,7 @@
 permalink: manage/delete-hostcluster-protection.html
 sidebar: sidebar
 keywords: remove host cluster protection, unprotect host cluster, ONTAP tools protection settings, VMFS protection removal
-summary: 'When you remove the host cluster protection, the datastores become unprotected.'
+summary: "Remove host cluster protection to unprotect associated datastores."
 ---
 = Remove host cluster protection in ONTAP tools
 :icons: font

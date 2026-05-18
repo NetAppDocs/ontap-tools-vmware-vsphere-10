@@ -2,7 +2,7 @@
 permalink: manage/protect-ds.html
 sidebar: sidebar
 keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery
-summary: 'Protect an eligible VMFS datastore by adding it to a protection group with SnapMirror replication.'
+summary: "Protect an eligible VMFS datastore by adding it to a protection group with SnapMirror replication."
 ---
 
 = Protect a VMFS datastore

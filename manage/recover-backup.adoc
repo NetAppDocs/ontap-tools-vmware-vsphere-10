@@ -2,7 +2,7 @@
 permalink: manage/recover-backup.html
 sidebar: sidebar
 keywords: recover ONTAP tools setup, appliance recovery workflow, near zero RPO recovery, restore ONTAP tools configuration
-summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses dynamic storage provisioner, you cannot achieve zero RPO. However, you can achieve near zero-RPO.'
+summary: "Recover ONTAP tools from backup and understand zero-RPO and near zero-RPO behavior by release."
 ---
 = Recover the ONTAP tools setup
 :icons: font

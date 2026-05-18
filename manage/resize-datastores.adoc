@@ -2,7 +2,7 @@
 permalink: manage/resize-datastores.html
 sidebar: sidebar
 keywords: resize NFS VMFS datastore, increase datastore capacity, ONTAP tools datastore expansion, VMware datastore size change
-summary: 'Resizing a datastore enables you to increase the storage for your virtual machine files. You can change the size of a datastore as your infrastructure requirements change.'
+summary: "Resize datastores to increase virtual machine file storage as infrastructure requirements change."
 ---
 = Resize NFS and VMFS datastores in ONTAP tools
 :icons: font

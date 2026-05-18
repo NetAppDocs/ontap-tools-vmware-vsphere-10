@@ -2,7 +2,7 @@
 permalink: manage/delete-deployment.html
 sidebar: sidebar
 keywords: remove FlexVol after uninstall, ONTAP tools cleanup, delete unused FlexVol volumes, post-uninstall storage cleanup
-summary: 'When you use a dedicated ONTAP cluster for ONTAP tools for VMware deployment, it creates many unused FlexVol volumes. After removing ONTAP tools for VMware vSphere, you should remove the FlexVol volumes to avoid possible performance impacts.'
+summary: "Remove unused FlexVol volumes after removing ONTAP tools deployment to avoid performance impacts."
 ---
 = Remove FlexVol volumes after uninstalling ONTAP tools
 :icons: font

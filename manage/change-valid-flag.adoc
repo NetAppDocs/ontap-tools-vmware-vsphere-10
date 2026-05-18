@@ -2,7 +2,7 @@
 permalink: manage/change-valid-flag.html
 sidebar: sidebar
 keywords: certificate validation flag, ONTAP tools certificate check, maintenance console certificate settings, TLS validation toggle
-summary: 'You can change the certificate validation flag using the maintenance console.'
+summary: "Change the certificate validation flag by using the maintenance console."
 ---
 = Change certificate validation flag in ONTAP tools
 :icons: font
