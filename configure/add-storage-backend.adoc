@@ -2,7 +2,7 @@
 permalink: configure/add-storage-backend.html
 sidebar: sidebar
 keywords:
-summary: 'Storage backends are systems that the ESXi hosts use for data storage.'
+summary: "Add and manage storage backends in ONTAP tools for clusters, SVMs, and MetroCluster environments."
 ---
 = Add a storage backend to ONTAP tools
 :icons: font

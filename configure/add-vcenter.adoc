@@ -2,7 +2,7 @@
 permalink: configure/add-vcenter.html
 sidebar: sidebar
 keywords:
-summary: 'Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect your virtual datastores in your vCenter Server environment.'
+summary: "Add vCenter Server instances to ONTAP tools to configure, manage, and protect virtual datastores."
 ---
 = Add vCenter Server instances to ONTAP tools
 :icons: font

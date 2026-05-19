@@ -2,7 +2,7 @@
 permalink: concepts/rbac-vcenter-use.html
 sidebar: sidebar
 keywords: vCenter RBAC implementation, custom roles, vSphere permissions, ONTAP tools access
-summary: "There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implementation with vCenter Server you should consider before using it in a production environment."
+summary: "Review vCenter Server RBAC considerations for ONTAP tools before using it in a production environment."
 ---
 
 = vCenter Server RBAC considerations for ONTAP tools

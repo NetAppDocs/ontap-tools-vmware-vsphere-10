@@ -2,7 +2,7 @@
 permalink: configure/discover-storage-systems-and-hosts.html
 sidebar: sidebar
 keywords:
-summary: 'When you first run ONTAP tools for VMware vSphere in a vSphere Client, ONTAP tools for VMware vSphere discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.'
+summary: "Discover ESXi hosts, LUNs, NFS exports, and NetApp storage systems in ONTAP tools at first launch."
 ---
 = Discover storage systems and hosts in ONTAP tools
 :icons: font

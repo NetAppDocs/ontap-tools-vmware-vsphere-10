@@ -2,7 +2,7 @@
 permalink: deploy/deployment-error-codes.html
 sidebar: sidebar
 keywords: troubleshooting deployment errors, log bundles, error codes, ONTAP tools
-summary: 'This page outlines the error codes for the deployment, reboot, and recovery operations of ONTAP tools for VMware vSphere system.'
+summary: "Use ONTAP tools deployment error codes to diagnose and resolve deployment, reboot, and recovery failures."
 ---
 = Troubleshoot ONTAP tools deployment errors
 :icons: font

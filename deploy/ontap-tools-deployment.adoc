@@ -2,7 +2,7 @@
 permalink: deploy/ontap-tools-deployment.html
 sidebar: sidebar
 keywords: deploy ONTAP tools, OVA, content library, single-node configuration
-summary: 'Deploy ONTAP tools for VMware vSphere as an extra-small single-node appliance.'
+summary: "Deploy ONTAP tools for VMware vSphere as an extra-small single-node appliance."
 ---
 = Deploy ONTAP tools
 :icons: font

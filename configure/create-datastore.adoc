@@ -2,7 +2,7 @@
 permalink: configure/create-datastore.html
 sidebar: sidebar
 keywords:
-summary: 'When you create a datastore at the host cluster level, ONTAP tools mounts it on all destination hosts and enables the action only if you have the required privileges.'
+summary: "Create NFS, VMFS, or vVols datastores in ONTAP tools at the host or host cluster level."
 ---
 = Create a datastore in ONTAP tools
 :icons: font

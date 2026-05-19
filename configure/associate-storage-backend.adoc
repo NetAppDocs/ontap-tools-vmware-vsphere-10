@@ -2,7 +2,7 @@
 permalink: configure/associate-storage-backend.html
 sidebar: sidebar
 keywords:
-summary: 'Associate a storage backend with the vCenter Server to create a mapping between the storage backend and the onboarded vCenter Server instance globally.'
+summary: "Associate a storage backend with a vCenter Server instance to enable global storage mapping in ONTAP tools."
 ---
 = Associate a storage backend with a vCenter Server instance in ONTAP tools
 :icons: font

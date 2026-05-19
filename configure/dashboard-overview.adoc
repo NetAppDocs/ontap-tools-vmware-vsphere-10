@@ -2,7 +2,7 @@
 permalink: configure/dashboard-overview.html
 sidebar: sidebar
 keywords: user roles
-summary: 'When you select the ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts as the dashboard, providing a summary of the ONTAP tools for VMware vSphere plug-in.'
+summary: "Review the ONTAP tools dashboard to see a summary of plug-in status, datastores, and vCenter Server data."
 ---
 = Learn about the ONTAP tools dashboard
 :icons: font
