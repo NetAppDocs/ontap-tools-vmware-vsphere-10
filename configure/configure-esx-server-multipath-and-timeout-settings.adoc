@@ -1,7 +1,7 @@
 ---
 permalink: configure/configure-esx-server-multipath-and-timeout-settings.html
 sidebar: sidebar
-keywords:
+keywords: ESXi multipath settings, HBA timeout settings, ONTAP tools host settings, NetApp storage failover
 summary: "Configure ESXi host multipathing and HBA timeout settings for optimal NetApp storage performance."
 ---
 = Configure ESXi host settings in ONTAP tools 

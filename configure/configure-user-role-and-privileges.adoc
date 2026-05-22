@@ -1,7 +1,7 @@
 ---
 permalink: configure/configure-user-role-and-privileges.html
 sidebar: sidebar
-keywords: user roles
+keywords: ONTAP user roles and privileges, ONTAP tools JSON role file, storage backend least privilege, ONTAP System Manager roles
 summary: "Configure user roles and privileges for storage backends with the JSON file from ONTAP tools and ONTAP System Manager."
 ---
 = Configure ONTAP user roles and privileges for ONTAP tools

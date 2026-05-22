@@ -1,12 +1,8 @@
 ---
 permalink: configure/add-storage-backend.html
 sidebar: sidebar
-keywords:
-<<<<<<< HEAD
-summary: "Add and manage storage backends in ONTAP tools for clusters, SVMs, and MetroCluster environments."
-=======
+keywords: add storage backend, ONTAP tools storage backend, local and global storage backend, MetroCluster storage backend
 summary: "Add and manage storage backends locally for a vCenter instance or globally for cluster-wide discovery in ONTAP tools."
->>>>>>> 072ae7a2343ebb38350313e5bbb069680bd822ae
 ---
 = Add a storage backend to ONTAP tools
 :icons: font
@@ -19,14 +15,10 @@ To add a storage backend locally, use cluster or SVM credentials in the ONTAP to
 
 To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources required for vVol management. In multitenant environments, you can add an SVM user locally to manage vVols datastores.
 
-<<<<<<< HEAD
-If NetApp MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
-=======
 Refer to the KB article: https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope[OTV 10: What is storage backend global and local scope^] for more information on global and local storage backends.
 // updated for https://github.com/NetAppDocs/ontap-tools-vmware-vsphere-10/issues/146
 
-If MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
->>>>>>> 072ae7a2343ebb38350313e5bbb069680bd822ae
+If NetApp MetroCluster support is enabled in ONTAP, onboard both source and destination clusters as local or global storage backends.
 
 .Before you begin
 

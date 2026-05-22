@@ -1,7 +1,7 @@
 ---
 permalink: configure/dashboard-overview.html
 sidebar: sidebar
-keywords: user roles
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard
 summary: "Review the ONTAP tools dashboard to see a summary of plug-in status, datastores, and vCenter Server data."
 ---
 = Learn about the ONTAP tools dashboard

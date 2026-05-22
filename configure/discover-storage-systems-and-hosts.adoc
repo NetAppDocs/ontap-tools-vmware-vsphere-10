@@ -1,7 +1,7 @@
 ---
 permalink: configure/discover-storage-systems-and-hosts.html
 sidebar: sidebar
-keywords:
+keywords: discover storage systems and hosts, ONTAP tools first discovery, ESXi host and LUN discovery, NFS export discovery
 summary: "Discover ESXi hosts, LUNs, NFS exports, and NetApp storage systems in ONTAP tools at first launch."
 ---
 = Discover storage systems and hosts in ONTAP tools

@@ -1,7 +1,7 @@
 ---
 permalink: configure/registration-process.html
 sidebar: sidebar
-keywords:
+keywords: register VASA Provider, ONTAP tools VASA registration, vCenter VASA Provider, vVols policy management
 summary: "Register VASA Provider with a vCenter Server instance by using the ONTAP tools remote plug-in interface."
 ---
 = Register the VASA Provider with a vCenter Server instance in ONTAP tools

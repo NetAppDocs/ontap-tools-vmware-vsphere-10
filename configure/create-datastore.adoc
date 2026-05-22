@@ -1,7 +1,7 @@
 ---
 permalink: configure/create-datastore.html
 sidebar: sidebar
-keywords:
+keywords: create datastore, ONTAP tools NFS VMFS vVols, host cluster datastore provisioning, nconnect datastore settings
 summary: "Create NFS, VMFS, or vVols datastores in ONTAP tools at the host or host cluster level."
 ---
 = Create a datastore in ONTAP tools

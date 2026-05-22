@@ -1,7 +1,7 @@
 ---
 permalink: configure/add-vcenter.html
 sidebar: sidebar
-keywords:
+keywords: add vCenter Server, ONTAP tools vCenter registration, multiple vCenter support, vCenter CA certificate
 summary: "Add vCenter Server instances to ONTAP tools to configure, manage, and protect virtual datastores."
 ---
 = Add vCenter Server instances to ONTAP tools

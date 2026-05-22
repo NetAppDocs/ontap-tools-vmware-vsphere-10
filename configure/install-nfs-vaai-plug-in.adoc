@@ -1,7 +1,7 @@
 ---
 permalink: configure/install-nfs-vaai-plug-in.html
 sidebar: sidebar
-keywords:
+keywords: install NFS VAAI plug-in, NetApp NFS Plug-in for VAAI, ONTAP tools VAAI installation, vSphere NFS offload
 summary: "Install the NetApp NFS Plug-in for VAAI by using ONTAP tools for VMware vSphere."
 ---
 = Install the NFS VAAI plug-in using ONTAP tools

@@ -1,7 +1,7 @@
 ---
 permalink: configure/configure-network-access.html
 sidebar: sidebar
-keywords: network access configuration, export policy, mount operation, ESXi hosts
+keywords: configure network access, ONTAP export policy, ESXi host IP allowlist, ONTAP tools mount access
 summary: "Configure network access to control which ESXi host IP addresses are added to export policies in ONTAP tools."
 ---
 = Configure network access in ONTAP tools
