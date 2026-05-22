@@ -70,9 +70,25 @@ When you manage multiple vCenter Server instances and want to enable vVols capab
 +
 [NOTE]
 The system will be offline until the upgrade is complete, and you will be logged out of the ONTAP tools Manager interface. 
+
+--
+.Refresh ONTAP tools services certificate
+--
+Beginning with ONTAP tools 10.5, certificate validity changed from 10 years to 1 year. Certificate renewal from ONTAP tools Manager refreshes gateway certificates, but does not refresh internal service communication certificates.
+
+Use this maintenance console option to manually refresh internal service communication certificates as needed. The refreshed certificates continue to use a one-year validity period (365 days), which helps meet audit requirements.
+
+.Steps
+
+. From the vCenter Server, open a console to ONTAP tools and access the maintenance console.
+. Enter `2` to select *System Configuration*.
+. Enter `9` to select *Refresh ONTAP tools services certificates*.
+
+[WARNING]
+This action restarts all services and might cause downtime or disruption. To continue, acknowledge the warning by typing `y`, and then the refresh process starts.
 --
 ====
-
+// 10.6 updates
 
 //10.3 updates - added ONTAP tools.
 //NADIAA checked

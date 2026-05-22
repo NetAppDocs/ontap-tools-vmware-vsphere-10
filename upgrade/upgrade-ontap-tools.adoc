@@ -93,7 +93,7 @@ Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../m
 . From the vCenter Server, open a console to ONTAP tools.
 . Log in as the maintenance user.
 . Enter *2* to select the *System Configuration* menu.
-. Enter *7* to select the *Upgrade* option.
+. Enter *6* to select the *Upgrade* option.
 . Provide the vCenter credentials when prompted. This is the vCenter instance where the ONTAP tools is hosted.
 +
 If you are using ONTAP tools in a two-vCenter Server topology—where the appliance is hosted in one vCenter instance and manages another, you can assign a restricted role for the vCenter instance hosting the ONTAP tools.

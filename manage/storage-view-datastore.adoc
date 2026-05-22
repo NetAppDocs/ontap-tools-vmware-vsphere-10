@@ -21,7 +21,9 @@ Use the ONTAP Storage page in the *Configure* tab to view datastore and volume i
 |NFS datastores |The *Storage details* page contains storage backends, aggregates, and volume information.
 
 The *NFS details* page contains data related to the NFS datastore.
-// no change required for 10.6 nconnect feature as th sentence is generic.
+
+Note: If the nconnect value is changed outside ONTAP tools, the value shown in ONTAP tools might not reflect that external change.
+//  for 10.6 nconnect feature 
 
 |VMFS datastores |The *Storage details* page contains storage backend, aggregate, volume, and storage availability zone (SAZ) details.
 

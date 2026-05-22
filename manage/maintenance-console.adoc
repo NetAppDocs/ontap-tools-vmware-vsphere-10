@@ -32,12 +32,14 @@ System Configuration
 a|
 
 . Reboot virtual machine
-. Shutdown virtual machine
-. Change 'maint' user password
+. Shut down virtual machine
+. Generate token to reset manager UI password
 . Change time zone
 . Increase jail disk size (/jail)
 . Upgrade
 . Install VMware Tools
+. Update vCenter credentials
+. Refresh ONTAP tools services certificates
 
 a|
 Network Configuration
