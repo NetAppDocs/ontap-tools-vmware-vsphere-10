@@ -77,7 +77,6 @@ Changing audit log retention restarts services and is a disruptive operation.
 . Monitor audit log integrity status in ONTAP tools Manager:
 .. On the ONTAP tools Manager dashboard, check the *Alerts* card for active alerts.
 .. Select the alert count hyperlink, or open *Manage alerts* to view alert details and status.
-.. To review archived audit log content, download a log bundle and inspect the daily archives under the audit directory.
 +
 ONTAP tools checks audit log archives for integrity every 3 minutes. ONTAP tools maintains a record of expected archives. If an archive is missing or altered, ONTAP tools raises an alert in ONTAP tools Manager.
 +
@@ -85,6 +84,8 @@ ONTAP tools checks audit log archives for integrity every 3 minutes. ONTAP tools
 Integrity alerts persist until the issue is resolved.
 
 . Optional: Change the audit integrity check interval from the maintenance console:
+.. From the vCenter Server, open a console to ONTAP tools.
+.. Log in as the maintenance user.
 .. Enter `1` to select *Application Configuration*.
 .. Enter `4` to select *Change Audit Integrity Check Interval*.
 .. Enter the interval value in seconds and confirm the change.
@@ -94,7 +95,7 @@ The minimum supported interval is 60 seconds (1 minute).
 [WARNING]
 Changing the audit integrity check interval restarts services and is a disruptive operation.
 
-. Optional: Forward audit logs to an external syslog destination. Use syslog forwarding when you need centralized monitoring, long-term retention, or SIEM correlation. Follow your organization's standards for TLS, certificates, ports, and retention.
+. Optional: Forward audit logs to an external syslog destination. Use syslog forwarding when you need centralized monitoring, long-term retention, or Security Information and Event Management (SIEM) correlation. Follow your organization's standards for TLS, certificates, ports, and retention.
 
 . If an integrity alert occurs, perform incident-response actions.
 .. Collect a support bundle as soon as possible.
@@ -102,6 +103,18 @@ Changing the audit integrity check interval restarts services and is a disruptiv
 .. Review alert details in ONTAP tools Manager and contact NetApp Support if required.
 
 == Example audit record
+
+Audit records include a consistent set of fields to support traceability. Typical fields include:
+
+* Timestamp (UTC)
+* Username (authenticated user identity)
+* Operation (HTTP method and request URI)
+* Request source (UI, API, or inter-service)
+* Status (success or failure and status code)
+* User agent (client identity, if available)
+* Request identifier, when available (for example, correlation ID)
+* Job identifier, when available (for asynchronous workflows)
+* Tenant or vCenter identifier, when available
 
 The following example shows the type of information captured. The exact field set can vary by workflow.
 
@@ -118,6 +131,3 @@ The following example shows the type of information captured. The exact field se
   "type": "audit"
 }
 ----
-
-[IMPORTANT]
-If you have long-term retention requirements, such as regulatory retention, forward audit logs to an external syslog or SIEM destination and manage retention externally.
