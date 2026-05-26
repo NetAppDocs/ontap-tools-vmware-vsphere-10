@@ -101,8 +101,6 @@ entries:
         url: /manage/reset-maint-password.html
   - title: Manage host cluster protection
     entries:
-      - title: Remove host cluster protection
-        url: /manage/delete-hostcluster-protection.html
       - title: Manage protection groups in ONTAP tools
         url: /manage/manage-protection-groups.html
       - title: Manage host cluster configuration in ONTAP tools

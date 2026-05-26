@@ -86,11 +86,14 @@ Integrity alerts persist until the issue is resolved.
 . Optional: Change the audit integrity check interval from the maintenance console:
 .. From the vCenter Server, open a console to ONTAP tools.
 .. Log in as the maintenance user.
-.. Enter `1` to select *Application Configuration*.
-.. Enter `4` to select *Change Audit Integrity Check Interval*.
-.. Enter the interval value in seconds and confirm the change.
+.. Enter `4` to select *Support and diagnostic*.
+.. Enter `2` to select *Enable diag access*.
+.. Log in as the `diag` user.
+.. Run the following command to change the interval in seconds:
 +
-The minimum supported interval is 60 seconds (1 minute).
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
++
+The minimum supported interval is 60 seconds.
 +
 [WARNING]
 Changing the audit integrity check interval restarts services and is a disruptive operation.

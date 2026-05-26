@@ -157,6 +157,10 @@ You cannot use the existing volume to create a VMFS datastore with NVMe/FC or NV
 .. Enter a *Protection group name*.
 .. Configure the SnapMirror relationship. If you select the AutomatedFailoverDuplex policy, set up host cluster configuration settings before continuing. For details, see link:../protect/config-proximity.html[Configure cluster configuration for datastore protection with ONTAP tools].
 [NOTE]
+If the datastore is already protected, the Add protection option is disabled and replication is not triggered again.
+If the selected volume is already part of another protection setting, the next protection page is disabled and an info message indicates that the selected volume is already part of another protection setting.
+// needs review - jani
+// need new message for this scenario from Deekshith or Sriram
 If the datastore is not eligible for protection, the protection option is disabled and the reasons for ineligibility are displayed. You can still create the datastore without protection.
 . Review the datastore details in the *Summary* pane and select *Finish*.
 // 10.6 updates 

@@ -10,21 +10,39 @@ summary: "View, edit, and delete protection groups and their relationships in ON
 
 [.lead]
 Use this task to view, edit, and delete protection groups and their relationships from the *Protection groups* page in ONTAP tools.
-
+// needs review- jani
 .Before you begin
 
 * Ensure you have administrative privileges in vSphere.
 * Ensure your ONTAP tools user account has permissions to manage protection groups.
 
 .Steps
-
+// updated the procedure for 10.6 updates
 . In the ONTAP tools plug-in, navigate to *Protection* > *Protection groups*.
 +
 The protection groups are listed with their associated relationships, including consistency groups, SnapMirror policies, and protected datastores.
+. Review the protection group details, including the number of protected datastores.
 . Select the vertical ellipsis (three dots) next to the protection group you want to manage.
-.. To edit a protection group, select *Edit* and update the relationship settings.
-.. To delete a protection group, select *Delete* and confirm the deletion in the dialog box.
+. To edit a protection group, select *Edit protection group* and update the relationship settings. 
+.. If a protection group has both automated failover duplex (AFD) and asynchronous relationships, you can remove either relationship from the *Edit protection group* window.
+.. You cannot add more than one automated failover duplex (AFD) relationship to the same protection group.
+.. To use a different AFD relationship, remove the existing AFD relationship and then add the new AFD relationship.
+.. If you remove an existing relationship in the *Edit protection group* window, review the warning that removing the relationship can impact backups and consistency.
+.. If you remove an asynchronous relationship in the *Edit protection group* window, target-side storage resources remain and are not deleted automatically. Manually clean up target-side resources as required.
+. To delete a protection group:
+.. Select *Remove protection*.
+.. In the *Remove protection* dialog, review the message that removing host cluster protection results in unprotected datastores.
+.. Optional: Select *Delete associated storage elements* (cleanup artifacts) to remove storage elements in the protection group.
++
+Storage elements can include consistency groups, volumes, storage units, and snapshots.
+.. If you do not select *Delete associated storage elements*, ONTAP tools removes the local protection records, but remote-side storage artifacts can remain as stale entries on ONTAP and must be cleaned up manually.
++
+Delete behavior depends on the relationship type:
 
+* This workflow applies to both asynchronous and automated failover duplex (AFD) relationships.
+* For AFD, deleting protection on either site deletes the relationship on both sites.
+* For asynchronous, cross-site delete is not available because the destination site is not onboarded to the same ONTAP tools instance. Manually clean up destination-side relationships and storage elements as required.
+// include restriction
 [NOTE]
 Edit operations are limited to supported relationship settings. Refer to your protection policy and workflow requirements before saving changes.
 
