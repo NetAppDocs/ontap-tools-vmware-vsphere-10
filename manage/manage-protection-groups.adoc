@@ -9,8 +9,8 @@ summary: "View, edit, and delete protection groups and their relationships in ON
 :imagesdir: ../media/
 
 [.lead]
-Use this task to view, edit, and delete protection groups and their relationships from the *Protection groups* page in ONTAP tools.
-// needs review- jani
+Use this task to view, edit, and delete protection groups and their relationships from the Protection groups page in ONTAP tools.
+// 10.6 updates need review- jani
 
 .Before you begin
 
@@ -20,7 +20,7 @@ Use this task to view, edit, and delete protection groups and their relationship
 [IMPORTANT]
 Before you edit or remove protection, review the warning messages in the dialog. Removing relationships can impact backup and consistency behavior.
 
-.What changes and what does not
+.About this task
 
 * ONTAP tools updates local protection records in the selected ONTAP tools instance.
 * If you select *Delete associated storage elements*, ONTAP tools removes storage elements in the protection group.
@@ -81,7 +81,7 @@ Storage elements can include consistency groups, volumes, storage units, and sna
 |Manually remove destination-side relationships and storage elements in ONTAP.
 |===
 
-.Outcome after removal
+.Result
 
 * ONTAP tools removes local protection records for the selected protection group.
 * If you selected *Delete associated storage elements*, ONTAP tools removes the selected storage elements in the protection group.
