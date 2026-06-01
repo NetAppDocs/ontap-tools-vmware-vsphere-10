@@ -72,7 +72,7 @@ If the datastore is part of a protected host cluster, review protection constrai
 .. If no virtual machines are associated with a VMFS datastore, you see a confirmation dialog. If host cluster protection is enabled and an Automated Failover Duplex (AFD) relationship exists, you can clean up secondary storage elements.
 .. For protected VMFS datastores on ASA r2 systems, remove protection before deleting. Beginning with ONTAP 9.17.1 and ONTAP tools for VMware vSphere 10.5, you can delete a protected datastore.
 +
-For Automated Failover Duplex (AFD), the message is: *The datastore is protected. The protection will be removed before deletion.* This message appears for last-datastore deletion.
+For last-datastore deletion with Automated Failover Duplex (AFD), ONTAP tools displays this message: *The datastore is protected. The protection will be removed before deletion.*
 // 10.3 updates for ASA r2
 +
 If you delete the last protected datastore in a protection group, ONTAP tools shows a message that deleting the last datastore results in an unprotected datastore.
