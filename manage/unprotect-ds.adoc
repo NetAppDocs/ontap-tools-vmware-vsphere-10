@@ -25,6 +25,7 @@ When you unprotect a VMFS datastore, consider the following behavior:
 * Ensure you have administrative privileges in vSphere.
 * Ensure your ONTAP tools user account has permissions to manage protection settings.
 * Review the impact of unprotecting the last datastore in a protection group.
+* On Unified (ONTAP 9) clusters, non-last datastore unprotect is supported only for AutomatedFailOverDuplex relationships.
 
 .Steps
 
@@ -43,11 +44,12 @@ You can unprotect only one datastore at a time. Multi-select unprotect is not su
 For non-last datastores, behavior differs by storage type:
 
 * For ASA r2, unprotecting a non-last datastore shows the same confirmation message and lets you delete secondary-site resources from the dialog.
-* For Unified, unprotecting a non-last datastore removes the AFD relationship and recreates it because shrinking the consistency group is not supported.
+* For Unified with an asynchronous SnapMirror relationship, unprotecting a non-last datastore is not supported.
+* For Unified with an AutomatedFailOverDuplex (AFD) relationship, unprotecting a non-last datastore removes the AFD relationship and recreates it because shrinking the consistency group is not supported.
 +
 The unprotect operation starts a job that you can monitor in ONTAP tools Manager.
 
 .Result
-The datastore is removed from protection. If it was the last datastore in the protection group, ONTAP tools deletes the protection group and protection settings. If you selected the delete option, target-side replicated LUNs and consistency groups are also removed. For non-last datastores on Unified, ONTAP tools removes and recreates the AFD relationship as part of the operation.
+The datastore is removed from protection. If it was the last datastore in the protection group, ONTAP tools deletes the protection group and protection settings. If you selected the delete option, target-side replicated LUNs and consistency groups are also removed. For eligible non-last datastores on Unified (AutomatedFailOverDuplex only), ONTAP tools removes and recreates the AFD relationship as part of the operation.
 
 // 10.6 updates
