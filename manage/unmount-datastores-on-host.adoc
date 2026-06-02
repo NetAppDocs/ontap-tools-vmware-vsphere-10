@@ -13,6 +13,7 @@ Use this task to unmount an NFS or VMFS datastore from ESXi hosts.
 
 Beginning with ONTAP tools 10.6, unmount is blocked for protected VMFS datastores.
 // 10.6 GDP feature
+
 .Steps
 
 . Log in to the vSphere client.
