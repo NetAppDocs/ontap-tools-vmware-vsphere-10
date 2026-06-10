@@ -10,37 +10,81 @@ summary: "Understand granular datastore protection and the datastore eligibility
 :imagesdir: ../media/
 
 [.lead]
-Granular datastore protection lets you protect selected datastores in a host cluster by creating protection groups and applying SnapMirror relationships based on your availability and recovery requirements.
+Use granular datastore protection to protect selected VMFS datastores in a host cluster instead of protecting the entire cluster.
 
-== What granular datastore protection is
+Granular datastore protection is available with ONTAP tools for VMware vSphere 10.6 and later.
+In 10.6, this feature provides datastore-level protection planning instead of cluster-wide selection.
 
-In ONTAP tools for VMware vSphere, granular datastore protection enables you to:
+== What granular datastore protection provides
 
-* Select specific datastores instead of protecting all datastores in a cluster.
-* Group selected datastores into one or more protection groups.
+Granular datastore protection enables you to:
+
+* Protect only selected datastores in a host cluster.
+* Group selected datastores into protection groups.
 * Apply SnapMirror relationships and policies at the protection-group level.
-* Use different protection strategies for different datastore sets in the same cluster.
+* Use different protection approaches for different datastore groups in the same cluster.
 
-This approach is useful when a host cluster contains datastores from multiple storage VMs and requires different protection policies for business-critical and non-critical workloads.
+== Supported protocols and datastore types
 
-== Datastore eligibility criteria
+* Granular datastore protection supports VMFS datastores that use iSCSI or FC.
+* NFS, NVMe, and vVol datastores are not supported.
 
-A datastore is eligible for granular datastore protection only when all of the following conditions are met:
+== Protection configuration types
 
-* The datastore is a VMFS datastore.
-* The datastore protocol is iSCSI or FC.
+You can use the following policy types for eligible datastores:
+
+* *AutomatedFailOverDuplex (AFD)*
+** *Uniform host configuration*: Hosts at both sites can access protected datastores.
+** *Non-uniform host configuration*: Host access is scoped to site-specific hosts.
+* *Asynchronous*: The target site maintains an asynchronous copy for recovery.
+
+Fan-out protection can combine AFD between primary sites and asynchronous replication to a third site.
+
+== Datastore listing criteria
+
+Datastores are listed for granular datastore protection only when they meet all of the following criteria:
+
+* Datastore type is VMFS.
+* Protocol is iSCSI or FC.
+* The datastore is mounted only on hosts in the selected host cluster.
 * The datastore is discovered and available in ONTAP tools.
-* The source and target storage VMs are configured for SnapMirror relationships.
 
-For AutomatedFailOverDuplex relationships, ensure the target storage VM is added as a storage backend to the same vCenter Server where ONTAP tools is deployed.
+== Datastore selection requirements
 
-== Policy and configuration considerations
+After a datastore is listed, it is selectable for protection only when all of the following requirements are met:
 
-Before you configure protection, review these policy considerations:
+=== Datastore requirements
 
-* Asynchronous and AutomatedFailOverDuplex policy types are supported for eligible VMFS datastores.
-* AutomatedFailOverDuplex supports uniform and non-uniform host configurations.
-* Host access assignments must align with the selected configuration model.
+* The datastore is not already protected.
+* The datastore remains mounted only within the selected host cluster.
+
+=== Storage VM (SVM) requirements
+
+* Source and target SVMs are peered and onboarded in ONTAP tools.
+* ONTAP version is 9.15.1 or later.
+* The source and destination clusters have a minimum of four nodes total, with at least two nodes on each cluster.
+* MetroCluster configurations are not eligible.
+
+=== Backing object requirements
+
+* The FlexVol volume or LUN backing the datastore is not part of an existing consistency group.
+* The FlexVol volume or LUN backing the datastore is not part of an existing SnapMirror relationship.
+
+== Operational considerations
+
+* Configure cluster proximity before you configure datastore protection.
+* A single host cluster can use either uniform or non-uniform AFD configuration, not both.
+* Moving datastores between protection groups is not supported. Unprotect and then protect again in the target group.
+* Cross-SVM protection in the same host cluster, with one source and multiple different targets, is not supported.
+* Custom asynchronous policies are not supported. Use the default ONTAP asynchronous policy.
+* In tertiary or asynchronous-only configurations, asynchronous relationship cleanup is manual.
+* Trigger failover from ONTAP System Manager. Configure ONTAP Mediator outside ONTAP tools.
+
+== Upgrade behavior from 10.5
+
+When you upgrade from ONTAP tools 10.5, existing host cluster protection configurations are migrated to granular datastore protection format.
+
+After upgrade, verify protection groups and datastore membership.
 
 == Related information
 
