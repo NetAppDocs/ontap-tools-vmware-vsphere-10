@@ -52,7 +52,7 @@ A new protection group is created with the selected datastores and the SnapMirro
 ====
 To remove protection within one hour of creation, run storage discovery first.
 
-For Unified (ONTAP 9) clusters, if you later unprotect a non-last datastore, the datastore must use an AutomatedFailOverDuplex relationship. Non-last datastore unprotect is not supported for asynchronous SnapMirror relationships.
+For ONTAP storage (ONTAP 9) clusters, if you later unprotect a non-last datastore, the datastore must use an AutomatedFailOverDuplex relationship. Non-last datastore unprotect is not supported for asynchronous SnapMirror relationships.
 ====
 //OTVDOC-312 update - Jani
 .Related information
