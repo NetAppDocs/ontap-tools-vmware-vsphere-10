@@ -3,6 +3,8 @@ title: Protect datastores and virtual machines
 entries:
   - title: Configure proximity and access
     url: /protect/config-proximity.html
+  - title: Granular datastore protection concepts and eligibility
+    url: /protect/granular-datastore-protection-concept.html
   - title: Protect datastores in a cluster
     url: /protect/protect-multiple-ds.html
   - title: Protect using SRA protection

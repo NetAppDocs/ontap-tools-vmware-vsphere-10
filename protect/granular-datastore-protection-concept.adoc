@@ -1,0 +1,47 @@
+---
+permalink: protect/granular-datastore-protection-concept.html
+sidebar: sidebar
+keywords: granular datastore protection, VMFS datastore eligibility, protection group criteria, ONTAP tools datastore protection
+summary: "Understand granular datastore protection and the datastore eligibility criteria before protecting datastores in a host cluster."
+---
+
+= Granular datastore protection concepts and eligibility criteria
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Granular datastore protection lets you protect selected datastores in a host cluster by creating protection groups and applying SnapMirror relationships based on your availability and recovery requirements.
+
+== What granular datastore protection is
+
+In ONTAP tools for VMware vSphere, granular datastore protection enables you to:
+
+* Select specific datastores instead of protecting all datastores in a cluster.
+* Group selected datastores into one or more protection groups.
+* Apply SnapMirror relationships and policies at the protection-group level.
+* Use different protection strategies for different datastore sets in the same cluster.
+
+This approach is useful when a host cluster contains datastores from multiple storage VMs and requires different protection policies for business-critical and non-critical workloads.
+
+== Datastore eligibility criteria
+
+A datastore is eligible for granular datastore protection only when all of the following conditions are met:
+
+* The datastore is a VMFS datastore.
+* The datastore protocol is iSCSI or FC.
+* The datastore is discovered and available in ONTAP tools.
+* The source and target storage VMs are configured for SnapMirror relationships.
+
+For AutomatedFailOverDuplex relationships, ensure the target storage VM is added as a storage backend to the same vCenter Server where ONTAP tools is deployed.
+
+== Policy and configuration considerations
+
+Before you configure protection, review these policy considerations:
+
+* Asynchronous and AutomatedFailOverDuplex policy types are supported for eligible VMFS datastores.
+* AutomatedFailOverDuplex supports uniform and non-uniform host configurations.
+* Host access assignments must align with the selected configuration model.
+
+== Related information
+
+* link:../protect/protect-multiple-ds.html[Protect datastores in a cluster with ONTAP tools]
