@@ -5,7 +5,7 @@ keywords: granular datastore protection, VMFS datastore eligibility, protection 
 summary: "Understand granular datastore protection and the datastore eligibility criteria before protecting datastores in a host cluster."
 ---
 
-= Granular datastore protection concepts and eligibility criteria
+= Granular datastore protection eligibility criteria
 :icons: font
 :imagesdir: ../media/
 
@@ -13,23 +13,16 @@ summary: "Understand granular datastore protection and the datastore eligibility
 Use granular datastore protection to protect selected VMFS datastores in a host cluster instead of protecting the entire cluster.
 
 Granular datastore protection is available with ONTAP tools for VMware vSphere 10.6 and later.
-In 10.6, this feature provides datastore-level protection planning instead of cluster-wide selection.
+This feature provides datastore-level protection planning instead of cluster-wide selection.
 
-== What granular datastore protection provides
-
-Granular datastore protection enables you to:
+This feature enables you to:
 
 * Protect only selected datastores in a host cluster.
 * Group selected datastores into protection groups.
 * Apply SnapMirror relationships and policies at the protection-group level.
 * Use different protection approaches for different datastore groups in the same cluster.
 
-== Supported protocols and datastore types
-
-* Granular datastore protection supports VMFS datastores that use iSCSI or FC.
-* NFS, NVMe, and vVol datastores are not supported.
-
-== Protection configuration types
+This feature supports VMFS datastores that use iSCSI or FC protocols. NFS, NVMe, and vVol datastores are not supported.
 
 You can use the following policy types for eligible datastores:
 
@@ -40,8 +33,6 @@ You can use the following policy types for eligible datastores:
 
 Fan-out protection can combine AFD between primary sites and asynchronous replication to a third site.
 
-== Datastore listing criteria
-
 Datastores are listed for granular datastore protection only when they meet all of the following criteria:
 
 * Datastore type is VMFS.
@@ -49,28 +40,18 @@ Datastores are listed for granular datastore protection only when they meet all 
 * The datastore is mounted only on hosts in the selected host cluster.
 * The datastore is discovered and available in ONTAP tools.
 
-== Datastore selection requirements
-
 After a datastore is listed, it is selectable for protection only when all of the following requirements are met:
-
-=== Datastore requirements
 
 * The datastore is not already protected.
 * The datastore remains mounted only within the selected host cluster.
-
-=== Storage VM (SVM) requirements
-
 * Source and target SVMs are peered and onboarded in ONTAP tools.
 * ONTAP version is 9.15.1 or later.
 * The source and destination clusters have a minimum of four nodes total, with at least two nodes on each cluster.
 * MetroCluster configurations are not eligible.
-
-=== Backing object requirements
-
 * The FlexVol volume or LUN backing the datastore is not part of an existing consistency group.
 * The FlexVol volume or LUN backing the datastore is not part of an existing SnapMirror relationship.
 
-== Operational considerations
+Consider the following operational limits and behavior:
 
 * Configure cluster proximity before you configure datastore protection.
 * A single host cluster can use either uniform or non-uniform AFD configuration, not both.
@@ -86,6 +67,6 @@ When you upgrade from ONTAP tools 10.5, existing host cluster protection configu
 
 After upgrade, verify protection groups and datastore membership.
 
-== Related information
+.Related information
 
 * link:../protect/protect-multiple-ds.html[Protect datastores in a cluster with ONTAP tools]
