@@ -74,9 +74,6 @@ The dialog behavior depends on the state of the vCenter Server:
 |===
 . Select *Force delete*.
 . Confirm the action.
-+
-[NOTE]
-If the vCenter Server is unreachable, plug-in unregistration is not performed and a warning is displayed.
 
 .Result
 
@@ -86,6 +83,13 @@ ONTAP tools performs the following actions automatically:
 * Plug-in privileges and plug-in roles are removed.
 
 The vCenter Server instance is no longer managed by ONTAP tools.
+
+If the vCenter Server is unreachable during deletion:
+
+* ONTAP tools removes the vCenter Server record.
+* Plugin unregistration does not occur.
+* A warning is displayed.
+* You must manually unregister the plugin from VMware vCenter Server.
 
 == Renew vCenter Server certificate
 // OTVDOC-342 updates

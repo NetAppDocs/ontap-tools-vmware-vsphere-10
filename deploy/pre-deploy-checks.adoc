@@ -29,6 +29,7 @@ Ensure the following requirements are met before you proceed with the deployment
 === For single node deployment
 Use the following worksheet to gather the required information for ONTAP tools for VMware vSphere initial deployment:
 
+[cols="3,1"]
 |===
 |Requirement|Your value
 
@@ -59,6 +60,7 @@ Create DNS records for all the above IP addresses. Before assigning hostnames, m
 
 === For High availability (HA) deployment
 In addition to the single node deployment requirements, you'll need the following information for HA deployment:
+[cols="3,1"]
 |===
 |Requirement|Your value
 |Primary DNS server|

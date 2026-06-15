@@ -19,7 +19,8 @@ When you add a new ESXi host using the https://techdocs.broadcom.com/us/en/vmwar
 * Some right-click actions are disabled or unavailable depending on the vSphere client version and the type of datastore selected. 
 ** If you're using vSphere client 8.0 or later versions, some of the right-click options are hidden. 
 ** From vSphere 7.0U3 to vSphere 8.0 versions, even though the options appear, the action will be disabled.
-* vSphere disables the mount datastore option when the host cluster is protected with uniform configurations. 
+* vSphere disables the mount datastore option when the host cluster is protected with uniform configurations.
+* When a datastore with nconnect is mounted on a new host, ONTAP tools applies the datastore's nconnect value if it exceeds the host's setting. 
 
 .Steps
 

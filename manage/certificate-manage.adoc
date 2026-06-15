@@ -11,6 +11,9 @@ summary: "Manage ONTAP tools and VASA Provider certificates, renew default certi
 [.lead]
 A self-signed certificate is generated for ONTAP tools and VASA Provider by default during deployment. You can use the ONTAP tools Manager interface to renew this certificate or replace it with a custom CA certificate. In multi-vCenter deployments, using custom CA certificates is required.
 
+[WARNING]
+If certificates expire without timely renewal, ONTAP tools stops functioning. Renew certificates before expiration to maintain continuous operation and prevent service disruption.
+
 .Before you begin
 
 You should have the following before you begin:
