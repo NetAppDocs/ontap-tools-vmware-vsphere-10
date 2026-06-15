@@ -40,7 +40,7 @@ Datastores are listed for granular datastore protection only when they meet all 
 * Datastore type is VMFS.
 * Protocol is iSCSI or FC.
 * The datastore is mounted only on hosts in the selected host cluster.
-* The datastore is discovered and available in ONTAP tools.
+* The datastore is in the selected host cluster in vCenter Server and can be evaluated by ONTAP tools for protection.
 
 After a datastore is listed, it is selectable for protection only when all of the following requirements are met:
 
@@ -48,7 +48,7 @@ After a datastore is listed, it is selectable for protection only when all of th
 * The datastore remains mounted only within the selected host cluster.
 * Source and target SVMs are peered and onboarded in ONTAP tools.
 * ONTAP version is 9.15.1 or later.
-* The source and destination clusters have a minimum of four nodes total, with at least two nodes on each cluster.
+* Only 2x2 and 4x4 source and destination cluster node combinations are supported.
 * MetroCluster configurations are not eligible.
 * The FlexVol volume or LUN backing the datastore is not part of an existing consistency group.
 * The FlexVol volume or LUN backing the datastore is not part of an existing SnapMirror relationship.
@@ -63,10 +63,10 @@ Consider the following operational limits and behavior:
 * In tertiary or asynchronous-only configurations, asynchronous relationship cleanup is manual.
 * Trigger failover from ONTAP System Manager. Configure ONTAP Mediator outside ONTAP tools.
 
-When you upgrade from ONTAP tools 10.5, existing host cluster protection configurations are migrated to granular datastore protection format.
-
-After upgrade, verify protection groups and datastore membership.
+When you upgrade from ONTAP tools 10.5, existing host cluster protection configurations are migrated to granular datastore protection format. After upgrade, verify protection groups and datastore membership.
 
 .Related information
 
 * link:../protect/protect-multiple-ds.html[Protect datastores in a cluster with ONTAP tools]
+
+// 10.6 topics
