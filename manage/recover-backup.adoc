@@ -41,6 +41,6 @@ don't alter the destination path and file name (/home/diag/system_recovery.tar.e
 sudo perl /home/maint/scripts/post-deploy-upgrade.pl -recovery
 ----
 +
-The logs are recorded in _/var/log/post-deploy-upgrade.log_ file.
+The logs are recorded in _/var/log/otvng/post-deploy-upgrade.log_ file.
 
 After you complete the recovery, ONTAP tools restores services and vCenter objects.
