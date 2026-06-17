@@ -22,8 +22,9 @@ Ensure that the new virtual machine uses the same ONTAP tools IP address and mat
 .. Select the *Files* section.
 .. Download the required backup directory.
 . Power off the existing virtual machine. Then, deploy a new virtual machine using the same OVA file as the original deployment.
-. From the vCenter Server, open the maintenance console.
-. Log in as the maintenance user.
+. Log in to the vCenter Server.
+. Locate the newly deployed ONTAP tools VM and launch the web console.
+. Log in using the `maint` credentials.
 . Enter `4` to select *Support and Diagnostics*.
 . Enter `2` to select *Enable remote diagnostic access* option and create a new password for the diagnostic access.
 . Choose a backup file from the downloaded directory. Refer to the _OTV_backup_info.txt_ file to identify the latest backup.

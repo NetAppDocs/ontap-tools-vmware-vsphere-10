@@ -21,8 +21,9 @@ Repeat this procedure on each node before upgrading.
 
 .Steps
 
-. From the vCenter Server, open a console to VASA Provider.
-. Log in as the maintenance user.
+. Log in to the vCenter Server.
+. Locate the ONTAP tools node VM and launch the web console.
+. Log in using the `maint` credentials.
 . Enter `4` to select Support and Diagnostics.
 . Enter `1` to select Access diagnostic shell.
 . Enter `y` to proceed.

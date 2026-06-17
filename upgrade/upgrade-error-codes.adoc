@@ -41,7 +41,7 @@ The last three digits of the error code indicate the specific workflow error wit
 |*Upgrade error code* |*Workflow* |*Resolution*
 
 |052 |The ISO might be the same as the current version or two releases above the current version. |Use an ISO version compatible to upgrade from your current version.
-|068 |Debian packages rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
+|068 |Debian OS packages rollback has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
 |069 |Failed restoring files |Use zero-RPO or snapshot based recovery and retry upgrade.
 |070 |Failed deleting backup |-
 |071 |Kubernetes cluster was not healthy |-
@@ -76,8 +76,9 @@ You can try to migrate the VM to another host and restart.
 |095 |OS upgrade failed |No recovery for OS upgrade. ONTAP tools services are upgraded and new pods will be running.
 |096 |Install dynamic storage provisioner |Check the upgrade logs and retry upgrade.
 |097 |Uninstalling services for upgrade has failed |Use zero RPO or snapshot based recovery and retry upgrade. 
-|098 |copying dockercred secret from ntv-system to dynamic storage provisioner namespace has failed |Check the upgrade logs and retry upgrade.
+|098 |copying dockercred secret from ntv-system to rook-ceph namespace has failed |Check the upgrade logs and retry upgrade.
 |099 |Failed to validate the new HDD addition |Add the new HDD to all the nodes in case of HA and to one node in case of non-HA deployment.
+|108 |Seeding script failed |-
 |109 |backing up persistent volume data has failed |Check the upgrade logs and retry upgrade.
 |110 |restoring persistent volume data has failed |Use zero-RPO or snapshot based recovery and retry upgrade.
 |111 |Updating etcd timeout parameters for RKE2 has failed |Check the upgrade logs and retry upgrade.

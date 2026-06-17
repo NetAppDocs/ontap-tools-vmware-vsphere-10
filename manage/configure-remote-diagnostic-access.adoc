@@ -29,8 +29,9 @@ The login session expires at midnight the next day.
 
 .Steps
 
-. From the vCenter Server, open a console to VASA Provider.
-. Log in as the maintenance user.
+. Log in to the vCenter Server.
+. Locate the ONTAP tools VM and launch the web console.
+. Log in using the `maint` credentials.
 . Enter `4` to select *Support and Diagnostics*.
 . Enter `2` to select *Enable remote diagnostics access*.
 . Enter `y` in the Confirmation dialog box to enable remote diagnostic access.

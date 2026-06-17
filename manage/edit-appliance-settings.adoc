@@ -15,7 +15,7 @@ Use ONTAP tools Manager to scale up your appliance and configure High Availabili
 .Before you begin
 
 * Ensure that your OVA template matches the version of Node 1 (the initial deployment node).
-* Enable CPU hot add and memory hot plug on the hypervisor.
+* Enable CPU hot add and memory hot plug on the hypervisor. These features are required to scale up the appliance and enable HA. For ONTAP tools 10.6 and later, these features are enabled by default. For earlier versions, enable these features before scaling up or enabling HA.
 * In vCenter Server, set the Disaster Recovery Service (DRS) automation level to partially automated. Revert to fully automated after HA deployment completes.
 [NOTE]
 You can only increase node size, not decrease it. Extra small (XS) deployments limit certain services.

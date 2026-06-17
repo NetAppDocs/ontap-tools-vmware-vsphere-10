@@ -121,7 +121,7 @@ After the job completes, review the migration report in the job response.
 . Stop ONTAP tools for VMware vSphere storage provider 9.10/9.11/9.12/9.13 VASA Provider service using these steps:
 +
 .. In ONTAP tools 9.x, open the web console.
-.. Access the maintenance console.
+.. Log in using the `maint` credentials.
 .. Enter `1` to select the *Application Configuration* menu.
 .. Enter `5` to stop the VASA Provider and SRA services.
 .. In the vSphere Client, navigate to the vCenter Server and select *Configure* > *Storage Providers*.

@@ -65,7 +65,7 @@ When backup is enabled, each ONTAP tools cluster needs an additional 50 GB of sp
 // updated the requirements as per OTVDOC-258
 |===
 [NOTE]
-Beginning with ONTAP tools for VMware vSphere 10.4, the virtual machine hardware changes from version 10 to 17.
+Beginning with ONTAP tools for VMware vSphere 10.4, the virtual machine hardware version changes from 10 to 17.
 
 The Interoperability Matrix Tool (IMT) contains the latest information about the supported versions of ONTAP, vCenter Server, ESXi hosts, and plug-in applications.
 

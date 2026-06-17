@@ -63,8 +63,9 @@ Sensitive data handling is built in:
 Audit logs are available in daily archives under the audit directory in the downloaded support bundle.
 
 . Optional: Configure local retention from the maintenance console:
-.. From the vCenter Server, open a console to ONTAP tools.
-.. Log in as the maintenance user.
+.. Log in to the vCenter Server.
+.. Locate the ONTAP tools VM and launch the web console.
+.. Log in using the `maint` credentials.
 .. Enter `1` to select *Application Configuration*.
 .. Enter `4` to select *Change Audit Log Retention*.
 .. Enter the retention value in days and confirm the change.
@@ -84,8 +85,9 @@ ONTAP tools checks audit log archives for integrity every 3 minutes. ONTAP tools
 Integrity alerts persist until the issue is resolved.
 
 . Optional: Change the audit integrity check interval from the maintenance console:
-.. From the vCenter Server, open a console to ONTAP tools.
-.. Log in as the maintenance user.
+.. Log in to the vCenter Server.
+.. Locate the ONTAP tools VM and launch the web console.
+.. Log in using the `maint` credentials.
 .. Enter `4` to select *Support and diagnostic*.
 .. Enter `2` to select *Enable diag access*.
 .. Log in as the `diag` user.

@@ -72,7 +72,6 @@ To upgrade from ONTAP tools 10.0, 10.1, 10.2, or 10.3 to 10.6, first upgrade to 
 
 |===
 // Github issues/128
-* Ensure hot plug-in for CPU and RAM is enabled.
 * Enable low RPO backup and ensure one backup is visible in the vSphere Client interface. Download the backup folder before upgrade.
 * Low RPO backup is recommended. However, in non-HA deployment, you can take a quiesced snapshot of the ONTAP tools virtual machine before upgrading. 
 +
@@ -90,8 +89,9 @@ Refer to link:../manage/backup-settings.html[Edit Backup settings] and link:../m
 . Select the *content library ISO file* in the edit settings window under the *CD/DVD drive* field. 
 . Select the ISO file, check the *Connected* box for the *CD/DVD drive* field, and click *OK*.
 // need new image image:../media/primaryvm-edit-settings.png[Edit settings]
-. From the vCenter Server, open a console to ONTAP tools.
-. Log in as the maintenance user.
+. Log in to the vCenter Server.
+. Locate the primary ONTAP tools VM and launch the web console.
+. Log in using the `maint` credentials.
 . Enter *2* to select the *System Configuration* menu.
 . Enter *6* to select the *Upgrade* option.
 . Provide the vCenter credentials when prompted. This is the vCenter instance where the ONTAP tools is hosted.

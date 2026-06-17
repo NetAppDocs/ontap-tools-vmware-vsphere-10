@@ -42,7 +42,7 @@ For more information, see https://blogs.vmware.com/vsphere/2020/01/creating-and-
 [NOTE]
 Before deployment, set the cluster Distributed Resource Scheduler (DRS) to Conservative to prevent VM migration during installation.
 
-ONTAP tools for VMware vSphere is initially deployed as a non-HA configuration. To scale to HA later, enable CPU hot add and memory hot plug during deployment or by editing VM settings after deployment.
+ONTAP tools for VMware vSphere is initially deployed as a non-HA configuration. Beginning with ONTAP tools 10.6, CPU hot add and memory hot plug are enabled by default. To scale to HA later, these features must be enabled.
 // updated for OTVDOC-255 - Jani
 
 .Steps
@@ -67,8 +67,6 @@ a. Go to your content library and select the library item that you want to deplo
 b. Select *Actions* > *New VM from this template*
 |===
 . In *Select a name and folder*, enter the VM name and location.
-+
-For vCenter Server 8.0.3, select *Customize this virtual machine's hardware* to enable an additional hardware configuration step.
 image:../media/select-name.png[Select a name and folder]
 . Select a computer resource and select *Next*. Optionally, check the box to *Automatically power on deployed VM*.
 . Review the details of the template and select *Next*.
@@ -95,11 +93,6 @@ Pure IPv6 is not supported. Mixed mode is supported with a VLAN that contains bo
 * IPv4 address is the node management address mapped to the specified host name, and is used for diagnostic shell and SSH access.
 // updated for https://jira.ngage.netapp.com/browse/OTVDOC-367
 // update for OTVDOC-262 
-. For vCenter Server 8.0.3, in the *Customize hardware* window, enable *CPU hot add* and *Memory hot plug* to support HA functionality.
-image:../media/customize-hw105-p2-1.png[CPU hot add]
-image:../media/customize-hw105-p2.png[Memory hot plug]
-// OTV10.5 P2 update
-// Applicable only to vCenter 8.0.3
 . Review the details in the *Ready to complete* window, select *Finish*.
 +
 When the deployment task starts, progress is shown in the vSphere task bar.
@@ -110,13 +103,4 @@ Track installation progress from the VM web console.
 
 If there are discrepancies in the OVF form, a dialog box prompts corrective action. Use the tab key to navigate, make the required changes, and select *OK*. You have three attempts to resolve issues. If problems continue after three attempts, the installation stops, and you should retry the installation on a new virtual machine.
 
-.What’s next?
-
-If you have deployed ONTAP tools for VMware vSphere with vCenter Server 7.0.3, then follow these steps after the deployment.
-
-. Log in to the vCenter client.
-. Power down the ONTAP tools VM.
-. Right-click the VM and select *Edit settings*.
-. Under *CPU*, check *Enable CPU hot add*.
-. Under *Memory*, check *Enable* for *Memory hot plug*.
 //OTVDOC-334 updated by Jani
