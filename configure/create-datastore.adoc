@@ -41,7 +41,7 @@ The ASA r2 system supports the iSCSI and FC protocols for vVols.
 . Select the storage VM where you want to create the datastore. 
 . Under *Advanced options*:
 +
-* If you select the *Custom export policy*, run discovery in vCenter for all objects before you continue.
+* If you select the *Custom export policy*, run discovery in vCenter for all objects before you continue. It’s recommended that you don’t use this option.
 * You can select a *Custom initiator group* name for the iSCSI and FC protocols.
 +
 [NOTE]
