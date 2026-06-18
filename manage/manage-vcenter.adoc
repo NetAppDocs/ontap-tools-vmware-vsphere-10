@@ -45,6 +45,7 @@ Force delete is blocked if the vCenter Server has vVols datastores or protected 
 
 * Remove or migrate all vVols datastores.
 * Unprotect all protected datastores.
+* Ensure that no discovery jobs are running. The force delete operation will not proceed if discovery jobs are in progress.
 
 [NOTE]
 Global storage backends shared with other vCenter Server instances are retained. Only the association with the deleted vCenter Server is removed.

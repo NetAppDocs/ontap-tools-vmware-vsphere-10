@@ -10,7 +10,7 @@ summary: "Configure host cluster proximity settings to define source and target 
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP tools for VMware vSphere to configure cluster configuration settings, enabling efficient datastore protection and streamlined failover management for your virtualized environment.
+Use ONTAP tools for VMware vSphere to configure cluster configuration (host-to-storage proximity) settings, enabling efficient datastore protection and streamlined failover management for your virtualized environment.
 
 .Before you begin
 

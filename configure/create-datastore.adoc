@@ -89,13 +89,6 @@ ONTAP tools creates the NFS datastore and mounts it on all hosts.
 --
 VMFS is a clustered file system for storing virtual machine files. Multiple ESXi hosts can access the same VM files simultaneously for vMotion and High Availability features.
 
-On a protected cluster:
-
-* You can create only VMFS datastores. Adding a VMFS datastore to a protected cluster automatically protects it.
-* You cannot create a datastore on a data center with one or more protected host clusters.
-* You cannot create a datastore on an ESXi host if the parent host cluster is protected by an Automated Failover Duplex policy (uniform or non-uniform configuration).
-* You can create a VMFS datastore only on an ESXi host protected by an asynchronous relationship. You cannot create and mount a datastore on an ESXi host that is part of a host cluster protected by an Automated Failover Duplex policy.
- 
 .Before you begin
 
 * Enable services and LIFs for each protocol on the ONTAP storage side. 
