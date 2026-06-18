@@ -28,7 +28,7 @@ Beginning with ONTAP tools for VMware vSphere 10.3, you can create a vVols datas
 
 * Make sure root aggregates are not mapped to the SVM. 
 * Ensure that the VASA Provider is registered with the selected vCenter.
-*  In the ASA r2 storage system, the SVM should be mapped to the aggregate for the SVM user.
+* For ASA r2 storage systems, SVM-to-aggregate mapping is not required.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 
 .Steps
@@ -41,7 +41,7 @@ The ASA r2 system supports the iSCSI and FC protocols for vVols.
 . Select the storage VM where you want to create the datastore. 
 . Under *Advanced options*:
 +
-* If you select the *Custom export policy*, ensure you run discovery in vCenter for all objects. It’s recommended that you don't use this option.
+* If you select the *Custom export policy*, run discovery in vCenter for all objects before you continue.
 * You can select a *Custom initiator group* name for the iSCSI and FC protocols.
 +
 [NOTE]
@@ -71,12 +71,12 @@ Kerberos authentication is available only when the NFS 4.1 protocol is selected.
 .. Specify the *Number of connections (nconnect)* for the datastore. The default value is 4, configurable from 1 to 8. If the value you select is higher than the current host-level nconnect setting, ONTAP tools updates the host-level nconnect setting to match.
 // 10.6 nconnect updates
 . In the *Storage* pane, select *Platform* and *Storage VM*. 
-. If you select *Custom export policy* under the *Advanced options*, run discovery in vCenter for all objects. It’s recommended that you don't use this option.
+. If you select *Custom export policy* under the *Advanced options*, run discovery in vCenter for all objects before you continue.
 [NOTE]
 You cannot create an NFS datastore using the SVM’s default or root volume policy.
 [NOTE]
-* In the *Advanced options*, the *Asymmetric* toggle button is visible only if performance or capacity is selected in the platform drop-down. 
-* When you choose the *Any* option in the platform drop-down, you can see all SVMs in the vCenter. Platform and asymmetric flag do not affect visibility. 
+* The *Asymmetric* option does not apply to NFS datastore creation.
+* When you choose the *Any* option in the platform drop-down, all SVMs in the vCenter are visible.
 . In the *Storage Attributes* pane, select the aggregate for volume creation. In the *Advanced options*, choose *Space Reserve* and *Enable QoS* as required.
 . In the *Summary* pane, review the selections and select *Finish*.
 
@@ -92,7 +92,7 @@ VMFS is a clustered file system for storing virtual machine files. Multiple ESXi
 .Before you begin
 
 * Enable services and LIFs for each protocol on the ONTAP storage side. 
-* Map the SVM to an aggregate for the SVM user in the ASA r2 storage system. 
+* For ASA r2 storage systems, SVM-to-aggregate mapping is not required.
 // https://jira.ngage.netapp.com/browse/OTVDOC-189 updates jani
 * Configure the ESXi host if you're using the NVMe/TCP protocol:
 
