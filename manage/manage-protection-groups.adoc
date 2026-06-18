@@ -42,8 +42,10 @@ The protection groups list shows associated relationships, including consistency
 . Select the vertical ellipsis (three dots) next to the protection group you want to edit.
 . Select *Edit protection group*.
 . Update the relationship settings:
+.. If a protection group has an Automated Failover Duplex (AFD) relationship, you can add an asynchronous relationship.
+.. If a protection group has an asynchronous relationship, you can add an Automated Failover Duplex (AFD) relationship.
 .. If a protection group has both Automated Failover Duplex (AFD) and asynchronous relationships, you can remove either relationship from the *Edit protection group* window.
-.. You cannot add more than one Automated Failover Duplex (AFD) relationship to the same protection group.
+.. Each protection group can have only one Automated Failover Duplex (AFD) relationship and one asynchronous relationship.
 .. To use a different AFD relationship, remove the existing AFD relationship and then add the new AFD relationship.
 .. If you remove an existing relationship in the *Edit protection group* window, review the warning that removing the relationship can impact backups and consistency.
 .. If you remove an asynchronous relationship in the *Edit protection group* window, destination-side storage resources are not deleted automatically. Manually remove destination-side relationships and storage elements in ONTAP.
