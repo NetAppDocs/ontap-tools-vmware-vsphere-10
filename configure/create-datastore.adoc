@@ -75,8 +75,8 @@ Kerberos authentication is available only when the NFS 4.1 protocol is selected.
 [NOTE]
 You cannot create an NFS datastore using the SVM’s default or root volume policy.
 [NOTE]
-* The *Asymmetric* option does not apply to NFS datastore creation.
-* When you choose the *Any* option in the platform drop-down, all SVMs in the vCenter are visible.
+* In the *Advanced options*, the *Asymmetric* toggle button is visible only if performance or capacity is selected in the platform drop-down. However, the *Asymmetric* option does not apply to NFS datastore creation.
+* When you choose the *Any* option in the platform drop-down, all SVMs in the vCenter are visible. Platform and asymmetric settings do not affect visibility.
 . In the *Storage Attributes* pane, select the aggregate for volume creation. In the *Advanced options*, choose *Space Reserve* and *Enable QoS* as required.
 . In the *Summary* pane, review the selections and select *Finish*.
 
