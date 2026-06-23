@@ -80,9 +80,6 @@ Changing audit log retention restarts services and is a disruptive operation.
 .. Select the alert count hyperlink, or open *Manage alerts* to view alert details and status.
 +
 ONTAP tools checks audit log archives for integrity every 3 minutes. ONTAP tools maintains a record of expected archives. If an archive is missing or altered, ONTAP tools raises an alert in ONTAP tools Manager.
-+
-[NOTE]
-Integrity alerts persist until the issue is resolved.
 
 . Optional: Change the audit integrity check interval from the maintenance console:
 .. Log in to the vCenter Server.
