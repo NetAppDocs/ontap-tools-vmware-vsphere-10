@@ -1,7 +1,7 @@
 ---
 permalink: release-notes/whats-new.html
 sidebar: sidebar
-keywords: ONTAP tools 10.6, VMware vSphere release notes, datastore protection, audit logging, nConnect
+keywords: ONTAP tools 10.6, VMware vSphere release notes, datastore protection, audit logging, nconnect
 summary: "Learn about the new capabilities and enhancements in ONTAP tools for VMware vSphere 10.6."
 ---
 = What's new in ONTAP tools for VMware vSphere 10.6
@@ -13,7 +13,7 @@ Learn about the new capabilities and enhancements in ONTAP tools for VMware vSph
 
 == Granular datastore protection
 
-ONTAP tools 10.6 introduces datastore-level protection, so you can apply protection to selected datastores instead of an entire host cluster.
+ONTAP tools 10.6 introduces datastore-level protection, so you can apply protection to selected datastores instead of an entire host cluster. 
 
 Key enhancements include:
 
@@ -23,7 +23,7 @@ Key enhancements include:
 * Hierarchical consistency groups and fan-out configurations
 * Uniform and non-uniform AFD protection configurations
 * Ability to modify protection by adding or removing datastores and hosts
-* Native datastore protection workflow from the vCenter plug-in
+* Datastore protection workflow in the vCenter plug-in
 * Upgrade path from host-cluster protection to datastore-level protection
 
 == Audit logging
@@ -39,16 +39,16 @@ Audit logging includes:
 
 These updates support compliance and security requirements.
 
-== nConnect support for NFS datastores
+== nconnect support for NFS datastores
 
-ONTAP tools 10.6 adds nConnect support for VMware NFS datastores, enabling multiple parallel TCP connections between ESXi hosts and ONTAP NFS datastores.
+ONTAP tools 10.6 adds nconnect support for VMware NFS datastores, enabling multiple parallel TCP connections between ESXi hosts and ONTAP NFS datastores.
 
 This release supports:
 
-* nConnect for NFSv3 datastores during provisioning
-* nConnect for NFSv4.1 datastores during provisioning with vCenter 8.0U3 and later
+* nconnect for NFSv3 datastores during provisioning
+* nconnect for NFSv4.1 datastores during provisioning with vCenter 8.0U3 and later
 
-This improves I/O parallelism and helps increase NFS datastore performance for multi-VM workloads.
+This helps improve throughput and NFS datastore performance for multi-VM workloads.
 
 == Smaller default deployment with XS profile
 
@@ -58,7 +58,7 @@ Enhancements include:
 
 * XS as the default configuration for initial deployment
 * Support for datastore provisioning, protection, SRA service enablement, and HA mode with XS
-* Four available deployment profiles in the Manager UI: XS, S, M, and L
+* Four available deployment profiles in the Manager UI: extra-small (XS), small (S), medium (M), and large (L)
 
 This model provides a lower starting footprint with a clear scale-up path.
 
