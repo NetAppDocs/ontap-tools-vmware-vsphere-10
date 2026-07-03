@@ -9,11 +9,11 @@ summary: "Learn about the new capabilities and enhancements in ONTAP tools for V
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools for VMware vSphere 10.6 introduces enhancements for protection, auditing, scalability, and lifecycle operations.
+Learn about the new capabilities and enhancements in ONTAP tools for VMware vSphere 10.6.
 
 == Granular datastore protection
 
-ONTAP tools 10.6 introduces datastore-level protection, so you can protect only the datastores you select instead of applying protection only at the host-cluster level.
+ONTAP tools 10.6 introduces datastore-level protection, so you can apply protection to selected datastores instead of an entire host cluster.
 
 Key enhancements include:
 
@@ -24,11 +24,11 @@ Key enhancements include:
 * Uniform and non-uniform AFD protection configurations
 * Ability to modify protection by adding or removing datastores and hosts
 * Native datastore protection workflow from the vCenter plug-in
-* Upgrade path from existing host-cluster protection to datastore-level protection
+* Upgrade path from host-cluster protection to datastore-level protection
 
 == Audit logging
 
-ONTAP tools 10.6 adds comprehensive audit logging as part of secure-by-design improvements.
+ONTAP tools 10.6 adds audit logging to improve security and operational traceability.
 
 Audit logging includes:
 
@@ -37,28 +37,30 @@ Audit logging includes:
 * Integrity protection for audit log archives, including tamper and delete alerts
 * Syslog forwarding support
 
-These updates improve traceability and help with compliance and security requirements.
+These updates support compliance and security requirements.
 
 == nConnect support for NFS datastores
 
-ONTAP tools 10.6 adds nConnect support for VMware NFS datastores, enabling multiple parallel TCP connections between ESXi hosts and ONTAP NFS datastores. It supports:
+ONTAP tools 10.6 adds nConnect support for VMware NFS datastores, enabling multiple parallel TCP connections between ESXi hosts and ONTAP NFS datastores.
+
+This release supports:
 
 * nConnect for NFSv3 datastores during provisioning
 * nConnect for NFSv4.1 datastores during provisioning with vCenter 8.0U3 and later
 
 This improves I/O parallelism and helps increase NFS datastore performance for multi-VM workloads.
 
-== Start small and scale with extra-small deployment
+== Smaller default deployment with XS profile
 
-ONTAP tools 10.6 introduces a smaller default extra-small (XS) deployment profile to reduce resource overhead and simplify day-0 deployment.
+ONTAP tools 10.6 introduces a smaller default extra-small (XS) deployment profile to reduce resource overhead and simplify initial deployment.
 
 Enhancements include:
 
-* XS as the default configuration for day-0 deployment
+* XS as the default configuration for initial deployment
 * Support for datastore provisioning, protection, SRA service enablement, and HA mode with XS
 * Four available deployment profiles in the Manager UI: XS, S, M, and L
 
-This model provides a lower starting footprint with a clear scale-up path as your environment grows.
+This model provides a lower starting footprint with a clear scale-up path.
 
 == Protection workflow improvement
 
@@ -66,9 +68,11 @@ ONTAP tools 10.6 removes the requirement to manually trigger storage discovery w
 
 == Supportability enhancements
 
-ONTAP tools 10.6 improves troubleshooting and lifecycle management. Key updates include:
+ONTAP tools 10.6 improves troubleshooting and lifecycle management.
 
-* Force delete for unreachable or stale vCenter entries
+Key updates include:
+
+* Forced delete for unreachable or stale vCenter entries
 * Migration from `ntpd` to `chronyd` for time synchronization, with automatic migration of existing NTP server settings during upgrade
 * Support for both traditional NTP servers and RHEL-based chrony servers over standard NTP protocol (UDP port 123)
 
