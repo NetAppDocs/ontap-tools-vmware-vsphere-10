@@ -17,10 +17,11 @@ ONTAP tools 10.6 introduces datastore-level protection, so you can apply protect
 
 Key enhancements include:
 
-* Datastore-level protection for ONTAP platforms and ASA r2 systems
+* Datastore-level protection for ONTAP systems and ASA r2 systems
 * Automated Failover Duplex (AFD) and asynchronous protection policies
 * Support for iSCSI and FC VMFS datastores
 * Hierarchical consistency groups and fan-out configurations
+* Control over consistency-group membership by selecting which datastores to protect together
 * Uniform and non-uniform AFD protection configurations
 * Ability to modify protection by adding or removing datastores and hosts
 * Datastore protection workflow in the vCenter plug-in
@@ -57,6 +58,7 @@ ONTAP tools 10.6 introduces a smaller default extra-small (XS) deployment profil
 Enhancements include:
 
 * XS as the default configuration for initial deployment
+* OVA deployment with optimized default hardware settings
 * Support for datastore provisioning, protection, SRA service enablement, and HA mode with XS
 * Four available deployment profiles in the Manager UI: extra-small (XS), small (S), medium (M), and large (L)
 

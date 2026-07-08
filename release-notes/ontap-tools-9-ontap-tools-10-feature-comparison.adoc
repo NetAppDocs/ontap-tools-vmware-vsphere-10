@@ -10,10 +10,12 @@ summary: "Compare ONTAP tools for VMware vSphere 9 and 10 features to decide whe
 
 [.lead]
 
-Learn why migrating from ONTAP tools for VMware vSphere 9 to ONTAP tools for VMware vSphere 10.2 or later is the best fit.
+Learn why migrating from ONTAP tools for VMware vSphere 9 to ONTAP tools for VMware vSphere 10.2 or later may be the right choice for your environment.
 
 [NOTE]
-For the most up-to-date compatibility information, refer to https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^].
+For the latest compatibility information, refer to https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^].
+
+For the latest end-of-support information for ONTAP tools 9.x, refer to https://mysupport.netapp.com/site/info/version-support[Software Version Support^].
 
 [cols="20%,25%,30%",options="header"]
 |===
