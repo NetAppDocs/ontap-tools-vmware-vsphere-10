@@ -93,6 +93,6 @@ Storage elements can include consistency groups, volumes, storage units, and sna
 
 * link:../manage/protect-ds.html[Protect a VMFS datastore]
 * link:../protect/protect-multiple-ds.html[Protect multiple datastores]
-* link:../protect/config-proximity.html[Configure cluster configuration for host cluster protection]
+* link:../protect/config-proximity.html[Configure cluster for datastore protection with ONTAP tools]
 
 // 10.6 updates

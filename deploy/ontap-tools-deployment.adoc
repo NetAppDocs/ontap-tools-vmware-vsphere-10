@@ -67,7 +67,6 @@ a. Go to your content library and select the library item that you want to deplo
 b. Select *Actions* > *New VM from this template*
 |===
 . In *Select a name and folder*, enter the VM name and location.
-image:../media/select-name.png[Select a name and folder]
 . Select a computer resource and select *Next*. Optionally, check the box to *Automatically power on deployed VM*.
 . Review the details of the template and select *Next*.
 . Read and accept the license agreement and select *Next*.

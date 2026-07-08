@@ -25,7 +25,7 @@ Storage Replication Adapter (SRA) supports fan-out with one sync relationship of
 
 .Before you begin
 
-* You should have VMware Live Site Recovery installed on the protected and recovery sites.
+* You should have VMware Live Site Recovery (VLSR) installed on the protected and recovery sites.
 * You should have SRA installed on the protected and recovery sites.
 
 .Steps
@@ -48,7 +48,7 @@ The *Objects* dialog box displays both the protected and recovery sites.
 
 You should ensure that both the source and target sites are configured for the following:
 
-* Same version of VMware Live Site Recovery installed
+* Same version of VLSR installed
 * Virtual machines
 * Paired protected and recovery sites
 * Source and destination datastores should be mounted on respective sites

@@ -9,7 +9,7 @@ summary: "Use ONTAP tools deployment error codes to diagnose and resolve deploym
 :imagesdir: ../media/
 
 [.lead]
-If you experience deployment issues, review the logs and error codes to diagnose and resolve problems. Starting with ONTAP tools for VMware vSphere 10.6, log bundles collected from the pods include logs from MongoDB, RabbitMQ, and Vault, along with the status and descriptions of all pods. These are provided in addition to the existing ONTAP tools service logs, enhancing supportability and troubleshooting.
+If you experience deployment issues, review the logs and error codes to diagnose and resolve problems. Beginning with ONTAP tools for VMware vSphere 10.6, log bundles collected from the pods include logs from MongoDB, RabbitMQ, and Vault, along with the status and descriptions of all pods. ONTAP tools 10.6 also adds audit logging to improve traceability during troubleshooting. These are provided in addition to the existing ONTAP tools service logs, enhancing supportability and troubleshooting.
 
 == Collect the log files
 

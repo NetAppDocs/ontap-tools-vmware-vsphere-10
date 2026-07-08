@@ -22,7 +22,7 @@ This feature enables you to:
 * Apply SnapMirror relationships and policies at the protection-group level.
 * Use different protection approaches for different datastore groups in the same cluster.
 
-This feature supports VMFS datastores that use iSCSI or FC protocols. NFS, NVMe, and vVol datastores are not supported.
+This feature supports only VMFS datastores that use iSCSI or FC protocols.
 
 You can use the following policy types for eligible datastores:
 
@@ -40,7 +40,7 @@ Datastores are listed for granular datastore protection only when they meet all 
 * Datastore type is VMFS.
 * Protocol is iSCSI or FC.
 * The datastore is mounted only on hosts in the selected host cluster.
-* The datastore is in the selected host cluster in vCenter Server and can be evaluated by ONTAP tools for protection.
+* ONTAP tools can evaluate the datastore for protection when the datastore is in the selected host cluster in vCenter Server.
 
 After a datastore is listed, it is selectable for protection only when all of the following requirements are met:
 

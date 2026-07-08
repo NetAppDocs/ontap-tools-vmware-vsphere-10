@@ -82,7 +82,7 @@ Enable the SRA capability to configure disaster recovery and protect NFS or VMFS
 Configure ONTAP tools for VMware vSphere to manage granular datastore protection. Perform the ONTAP cluster and SVM peering in ONTAP systems to use SnapMirror active sync. This applies only to VMFS datastores.
 
 [role="quick-margin-list"]
-* link:../protect/config-proximity.html[Configure cluster for datastore protection]
+* link:../protect/config-proximity.html[Configure cluster for datastore protection with ONTAP tools]
 * link:../protect/protect-multiple-ds.html[Protect datastores in a cluster]
 
 

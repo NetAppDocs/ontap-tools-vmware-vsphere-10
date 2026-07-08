@@ -22,7 +22,7 @@ Use this task to view, edit, and remove host cluster configuration settings in O
 +
 The host cluster configuration settings are listed with their configuration type, SVMs, and hosts.
 . Select the vertical ellipsis (three dots) next to the host cluster configuration setting you want to manage:
-.. To edit a configuration, select *Edit* and update the required settings. For more information, refer to link:../protect/config-proximity.html[Configure host cluster protection].
+.. To edit a configuration, select *Edit* and update the required settings. For more information, refer to link:../protect/config-proximity.html[Configure cluster for datastore protection with ONTAP tools].
 +
 When a new host is added to a cluster, existing cluster configuration settings are not automatically applied to that host. Edit the existing cluster configuration and assign the new host to the appropriate site.
 .. To remove a configuration, select *Remove* and confirm the deletion in the dialog box.
