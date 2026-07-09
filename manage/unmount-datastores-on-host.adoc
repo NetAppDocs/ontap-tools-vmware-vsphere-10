@@ -11,7 +11,7 @@ summary: "Unmount NFS or VMFS datastores from ESXi hosts by using ONTAP tools."
 [.lead]
 Use this task to unmount an NFS or VMFS datastore from ESXi hosts.
 Cluster-level datastore unmount is not supported through the UI or APIs.
-Unsupported parameter combinations for datastore unmount are not available in the REST API schema.
+// Unsupported parameter combinations for datastore unmount are not available in the REST API schema.
 
 Beginning with ONTAP tools 10.6, unmount is blocked for protected VMFS datastores.
 // 10.6 GDP feature
