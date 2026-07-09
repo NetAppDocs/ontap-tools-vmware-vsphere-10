@@ -49,9 +49,9 @@ vSphere 7.x-8.x
 
 VMware Site Recovery Manager (SRM) 8.5 to VMware Live Site Recovery 9.0
 |
-vSphere 7.x-8.x
-vSphere 9.0 from ONTAP tools 10.5 onwards
-VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0 
+vSphere 7.x-8.x 
+vSphere 9.0 from ONTAP tools 10.5 onwards 
+VMware Site Recovery Manager (SRM) 8.7 to VMware Live Site Recovery 9.0, 9.0.1, 9.0.2,9.0.3, and 9.0.4
 
 *NOTE:*
 In ONTAP tools 10.x, SRM supports shared sites, enabling enhanced scalability and improved performance.
@@ -60,7 +60,7 @@ Protocol support
 |
 NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI and FCP)
 |
-NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI/FCP/NVMe-oF)
+NFS and VMFS datastores: NFS (v3 and v4.1), VMFS (iSCSI/FCP/NVMe-TCP and NVMe-FC)
 |
 Scalability
 |
