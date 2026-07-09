@@ -17,7 +17,12 @@ Fan-out is not supported for SVM users.
 
 To set up fan-out protection, peer the three site clusters and SVMs. 
 
+The following diagram shows the fan-out protection configuration:
+image:../media/fan-out-protection.png[Fan-out protection configuration]
+image:../media/fan-out-protection-relationship.png[Fan-out protection relationship]
+
 Example:
+
 If:
 
 * Source consistency group is on cluster c1 and SVM svm1
@@ -32,10 +37,6 @@ Then,
 * SVM peering on source SVM will be (svm1, svm2) and (svm1, svm3). 
 * SVM peering on first destination SVM will be (svm2, svm1) and (svm2, svm3) and 
 * SVM peering on second destination SVM will be (svm3, svm1) and (svm3, svm2).
-
-The following diagram shows the fan-out protection configuration:
-image:../media/fan-out-protection.png[Fan-out protection configuration]
-image:../media/fan-out-protection-relationship.png[Fan-out protection relationship]
 
 .Steps
 

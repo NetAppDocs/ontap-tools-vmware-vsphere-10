@@ -16,7 +16,7 @@ Use ONTAP tools for VMware vSphere to configure cluster configuration (host-to-s
 
 * Verify that you have administrative privileges in vSphere.
 * Cluster configuration settings are applicable for uniform and non-uniform configurations, while access settings are applicable only for AFD type of relationship.
-* Review site name requirements, including character limits and allowed characters.
+* Review site name requirements, including character limits and allowed characters. Site names correspond to the source and target fault domain names.
 
 .Steps
 
@@ -27,12 +27,12 @@ If the cluster already has a cluster configuration, this option allows you to ed
 . In the *Configuration type* window:
 .. Select *Uniform* to allow hosts in both fault domains to access storage resources at both sites. Fault domain is a group of hardware and infrastructure components. Assign each host to a fault domain for both sites.
 .. Select *Non-uniform* to restrict hosts at each site to access storage only at their respective site. Assign hosts to fault domains accordingly.
-.. Enter fault domain names. Default names are "Site A" and "Site B". You can edit these fields as needed. Ensure that site names comply with character restrictions.
+.. Enter fault domain names. Default names are "Site A" and "Site B". You can edit these fields as needed. These site names map to the source and target fault domains. Ensure that site names comply with character restrictions.
 +
 [NOTE]
 The configuration type cannot be modified after it is set. To change the configuration type, delete the cluster configuration and create a new one with the desired settings.
 . Select *Next*.
-. In the *Hosts* window, assign each host to either the source fault domain or the target fault domain. All hosts must be assigned, and a host cannot belong to both sites. The *Next* button is enabled after all hosts are assigned.
+. In the *Hosts* window, assign each host to either the source fault domain or the target fault domain. All hosts must be assigned, and a host cannot belong to both sites. The site names shown in the wizard are the source and target fault domain names. The *Next* button is enabled after all hosts are assigned.
 . Select *Next*.
 . On the *Storage SVM peers* page, assign each SVM to the appropriate site. You can assign multiple SVM peers, but at least one must be assigned to each site. When you assign an SVM to a site, its peer SVM is automatically assigned to the opposite site.
 . Select *Next*.
