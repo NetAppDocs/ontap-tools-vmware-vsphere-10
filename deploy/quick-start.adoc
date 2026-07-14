@@ -11,13 +11,15 @@ summary: 'Set up ONTAP tools for VMware vSphere with this quick start section.'
 [.lead]
 Set up ONTAP tools for VMware vSphere with this quick start section.
 
+Complete these core tasks first to make ONTAP tools operational for day-0 management and provisioning. Then complete the optional tasks based on your environment and protection requirements.
+
 Initially, you’ll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores. To expand your configuration for additional containers per service, enhanced resiliency, or to use vVols datastores and high availability (HA), complete this workflow first and then proceed with the expansion steps. For more information, refer to the link:../deploy/ha-workflow.html[HA deployment workflow].
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Plan your deployment
 
 [role="quick-margin-para"]
-Verify that your vSphere, ONTAP, and ESXi host versions are compatible with the ONTAP tools version. Allocate sufficient CPU, memory, and disk space. Based on your security rules, you might need to set up firewalls or other security tools to allow network traffic.
+Confirm that your environment is ready for a supported deployment. Verify that your vSphere, ONTAP, and ESXi host versions are compatible with the ONTAP tools version. Allocate sufficient CPU, memory, and disk space. Based on your security rules, you might need to set up firewalls or other security tools to allow network traffic.
 
 [role="quick-margin-para"]
 Ensure the vCenter Server is installed and accessible.
@@ -30,29 +32,30 @@ Ensure the vCenter Server is installed and accessible.
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Deploy ONTAP tools for VMware vSphere 
 
 [role="quick-margin-para"]
-Initially, you'll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration that provides core services to support NFS and VMFS datastores.
+Deploy the ONTAP tools appliance to establish base services for NFS and VMFS datastores.
+
+[role="quick-margin-para"]
+Initially, you'll deploy ONTAP tools for VMware vSphere as a small-sized single node configuration.
 If you plan to expand your configuration to use vVols datastores and high availability (HA), you’ll do so after you finish this workflow. To expand to an HA setup, make sure CPU hot-add and memory hot-plug are enabled.
+
+[role="quick-margin-para"]
+During deployment, review the *Customize template* fields carefully, especially host name, ONTAP tools IP address usage, and DNS requirements.
 
 [role="quick-margin-list"]
 * link:../deploy/ontap-tools-deployment.html[Deploy ONTAP tools for VMware vSphere]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add vCenter Server instances
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Register and install the vCenter client plug-in
 [role="quick-margin-para"]
-Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect virtual datastores in the vCenter Server environment.
+Add a vCenter Server instance to register the vCenter client plug-in and apply the required privileges and roles.
+When you add a vCenter Server instance, ONTAP tools registers the remote plug-in, applies custom plug-in and API privileges, creates custom roles, and adds a plug-in shortcut in the vSphere user interface.
 
 [role="quick-margin-list"]
-* link:../configure/add-vcenter.html[Add vCenter Server instances]
+* link:../configure/add-vcenter.html[Add vCenter Server instances to ONTAP tools]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure ONTAP user roles and privileges
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Configure the storage backends
 [role="quick-margin-para"]
-Configure new user roles and privileges for managing storage backends using the JSON file provided with ONTAP tools for VMware vSphere.
-
-[role="quick-margin-list"]
-* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Configure the storage backends
-[role="quick-margin-para"]
-Add a storage backend to an ONTAP cluster. For multitenancy setups where vCenter acts as the tenant with an associated SVM, use ONTAP tools Manager to add the cluster. Associate the storage backend with the vCenter Server to map it globally to the onboarded vCenter Server instance.
+Connect ONTAP storage resources to allow ONTAP tools to provision and manage datastores.
+Add a storage backend to an ONTAP cluster. In multitenant environments where a vCenter Server is associated with a tenant SVM, use ONTAP tools Manager to add the cluster. Then associate the storage backend with the vCenter Server to create a global mapping for that vCenter instance.
 
 [role="quick-margin-para"]
 Add the local storage backends with cluster or SVM credentials using the ONTAP tools user interface. These storage backends are limited to a single vCenter. When using cluster credentials locally, the associated SVMs automatically map to the vCenter to manage vVols or VMFS. For VMFS management, including SRA, ONTAP tools supports SVM credentials without needing a global cluster.
@@ -60,30 +63,44 @@ Add the local storage backends with cluster or SVM credentials using the ONTAP t
 [role="quick-margin-list"]
 * link:../configure/add-storage-backend.html[Add a storage backend]
 * link:../configure/associate-storage-backend.html[Associate the storage backend with a vCenter Server instance]
+// * link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges (if you use custom RBAC instead of an admin account)]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png[Six] Upgrade the certificates if you're working with multiple vCenter Server instances
+[discrete]
+== Optional next tasks
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Configure ONTAP user roles and privileges
 [role="quick-margin-para"]
-When working with multiple vCenter Server instances, upgrade the self-signed certificate to a certificate authority (CA) signed certificate.
+Configure custom ONTAP roles for least-privilege access instead of the default admin account.
+[role="quick-margin-list"]
+* link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Upgrade certificates for multiple vCenter Server instances
+[role="quick-margin-para"]
+Upgrade certificates to use trusted, certificate-based communication across multiple vCenter Server instances.
 [role="quick-margin-list"]
 * link:../manage/certificate-manage.html[Manage certificates]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png[Seven] (Optional) Configure SRA protection
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Configure SRA protection
 [role="quick-margin-para"]
-Enable the SRA capability to configure disaster recovery and protect NFS or VMFS datastores.
+Enable the SRA capability to set up disaster recovery protection for NFS and VMFS datastores.
 
 [role="quick-margin-list"]
 
 * link:../manage/enable-services.html[Enable ONTAP tools for VMware vSphere services]
 * link:../protect/configure-on-srm-appliance.html[Configure SRA on the VMware Live Site Recovery appliance]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png[eight] (Optional) Enable SnapMirror active sync protection
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Enable SnapMirror active sync protection
 [role="quick-margin-para"]
-Configure ONTAP tools for VMware vSphere to manage host cluster protection for SnapMirror active sync. Perform the ONTAP cluster and SVM peering in ONTAP systems to use SnapMirror active sync. This applies only to VMFS datastores.
+Set up host cluster protection with SnapMirror active sync to protect VMFS datastores.
+In ONTAP systems, peer the required cluster and SVM, and then configure host cluster protection in ONTAP tools for VMware vSphere. This option applies only to VMFS datastores.
 
 [role="quick-margin-list"]
 * link:../configure/protect-cluster.html[Protect using host cluster protection]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-9.png[Nine] Set up backup and recovery for your ONTAP tools for VMware vSphere deployment
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png[Five] Set up backup and recovery for your ONTAP tools deployment
+[role="quick-margin-para"]
+Set up backup and recovery to protect ONTAP tools configuration and recover quickly from failures.
+
 [role="quick-margin-para"]
 Backup is enabled by default in ONTAP tools for VMware vSphere 10.5 and occurs every 10 minutes. Schedule backups of your ONTAP tools for VMware vSphere setup that you can use to recover the setup in case of a failure.
 
