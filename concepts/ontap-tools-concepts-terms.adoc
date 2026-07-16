@@ -4,12 +4,12 @@ sidebar: sidebar
 keywords:
 summary: 'The following section describes the key concepts and terms used in the document.'
 ---
-= Key concepts and terms in ONTAP tools
+= Key terms and definitions for ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-The following section describes the key concepts and terms used in the document. 
+Familiarize yourself with key concepts and terminology used in ONTAP tools for VMware vSphere. Definitions cover storage backends, virtual volumes (vVols), SnapMirror active sync, VASA, SRA, and other core components.
 
 === Certificate authority (CA)
 A CA is a trusted entity that issues Secure Sockets Layer (SSL) certificates.
@@ -28,7 +28,7 @@ A LUN is a number used to identify a logical unit within a Storage Area Network 
 
 === NVMe namespace and subsystem
 An NVMe namespace is a quantity of non-volatile memory that can be formatted into logical blocks. Namespaces are the equivalent of LUNs for FC and iSCSI protocols, and an NVMe subsystem is analogous to an igroup.
-An NVMe subsystem can be associated with initiators so that the associated initiators can access namespaces within the subsystem.
+An NVMe subsystem can be associated with initiators, enabling them to access namespaces within the subsystem.
 
 === ONTAP tools Manager
 ONTAP tools Manager provides ONTAP tools for VMware vSphere administrators with greater control over the managed vCenter Server instances and onboarded storage backends. It helps manage vCenter Server instances, storage backends, certificates, passwords, and log bundles.
@@ -37,10 +37,10 @@ ONTAP tools Manager provides ONTAP tools for VMware vSphere administrators with 
 OVA is an open standard for packaging and distributing virtual appliances or software that must be run on virtual machines. 
 
 === Recovery Point Objective (RPO)
-RPO measures how frequently you back up or replicate data. It specifies the exact point in time you need to restore data after an outage to resume business operations. For example, if an organization has an RPO of 4 hours, it can tolerate losing up to 4 hours of data in the event of a disaster.
+RPO measures how frequently you back up or replicate data. It specifies the exact point in time you need to restore data after an outage to resume business operations. For example, if an organization has an RPO of four hours, it can tolerate losing up to four hours of data in the event of a disaster.
 
 === SnapMirror active sync
-SnapMirror active sync enables business services to continue operating even with a complete site failure, supporting applications to fail over transparently using a secondary copy. Manual intervention or custom scripting is not required to trigger a failover with SnapMirror active sync. Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync].
+SnapMirror active sync enables business services to continue operating even with a complete site failure, supporting applications to fail over transparently using a secondary copy. SnapMirror active sync does not require manual intervention or custom scripting to trigger a failover. Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync].
 
 === Storage backends
 Storage backends are the underlying storage infrastructure that the ESXi host uses to store virtual machine files, data, and other resources. They allow the ESXi host to access and manage persistent data, providing the required storage capability and performance for a virtualized environment. 
@@ -62,20 +62,20 @@ SVM is the unit of multitenancy in ONTAP. Like a virtual machine running on a hy
 * *Uniform host access* means that hosts from two sites are connected to all paths to storage clusters on both sites. Cross-site paths are stretched across distances.
 * *Non-uniform host access* means hosts in each site are connected only to the cluster in the same site. Cross-site paths and stretched paths aren't connected.
 [NOTE]
-Uniform host access is supported for any SnapMirror active sync deployment; non-uniform host access is only supported for symmetric active/active deployments. 
+SnapMirror active sync supports uniform host access for any deployment; only symmetric active/active deployments support non-uniform host access.
 Learn more about https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/index.html[SnapMirror active sync overview in ONTAP].
 
 === Virtual Machine File System (VMFS)
 VMFS is a clustered file system designed to store virtual machine files in VMware vSphere environments.
 
 === Virtual volumes (vVols)
-vVols provide a volume-level abstraction for storage used by a virtual machine. It includes several benefits and provides an alternative to using a traditional LUN. A vVol datastore is typically associated with a single LUN that acts as a container for vVols.
+vVols provide a volume-level abstraction for storage used by a virtual machine. vVols include several benefits and provide an alternative to using a traditional LUN. A vVol datastore is typically associated with a single LUN that acts as a container for vVols.
 
 === VM Storage Policy
 VM Storage Policies are created in the vCenter Server under Policies and Profiles. For vVols, create a rule set using rules from the NetApp vVols storage type provider.
 
 === VMware Live Site Recovery
-VMware Live Site Recovery formerly known as Site Recovery Manager (SRM) provides business continuity, disaster recovery, site migration, and non-disruptive testing capabilities for VMware virtual environments.
+VMware Live Site Recovery, formerly known as Site Recovery Manager (SRM), provides business continuity, disaster recovery, site migration, and non-disruptive testing capabilities for VMware virtual environments.
 
 === VMware vSphere APIs for Storage Awareness (VASA)
 VASA is a set of APIs that integrate storage arrays with vCenter Server for management and administration. The architecture is based on several components, including the VASA Provider, which handles communication between VMware vSphere and the storage systems.

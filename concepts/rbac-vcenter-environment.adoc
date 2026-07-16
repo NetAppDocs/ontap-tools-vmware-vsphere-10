@@ -13,11 +13,11 @@ summary: "VMware vCenter Server provides an RBAC capability that enables you to 
 :imagesdir: ../media/
 
 [.lead]
-VMware vCenter Server provides an RBAC capability that enables you to control access to vSphere objects. It is an important part of the vCenter centralized authentication and authorization security services.
+VMware vCenter Server provides role-based access control (RBAC) that enables you to control access to vSphere objects. Understanding how vCenter Server RBAC integrates with ONTAP tools for VMware vSphere helps you manage permissions effectively and secure access to your storage resources.
 
 == Illustration of a vCenter Server permission
 
-A permission is the foundation for enforcing access control in the vCenter Server environment. It's applied to a vSphere object with a user or group included with the permission definition. A high-level illustration of a vCenter permission is provided in the figure below.
+A permission is the foundation for enforcing access control in the vCenter Server environment. It is applied to a vSphere object and includes a user or group as part of the permission definition. The following figure shows a high-level illustration of a vCenter Server permission.
 
 image:vc-permission.png[vCenter permission]
 
@@ -31,7 +31,7 @@ Permissions are associated with vSphere objects, such as the vCenter Server, ESX
 
 === Privileges and roles
 
-There are two types of vSphere privileges used with ONTAP tools for VMware vSphere 10. To simplify working with RBAC in this environment, ONTAP tools provides roles containing the required native and custom privileges. The privileges include:
+ONTAP tools for VMware vSphere uses two types of vSphere privileges. To simplify working with RBAC in this environment, ONTAP tools provides roles containing the required native and custom privileges. The privileges include:
 
 * Native vCenter Server privileges
 +
@@ -43,6 +43,6 @@ These are custom privileges unique to ONTAP tools for VMware vSphere.
 
 === Users and groups
 
-You can define users and groups using Active Directory or the local vCenter Server instance. Combined with a role, you can create a permission on an object in the vSphere object hierarchy. The permission grants access based on the privileges in the associated role. Note that roles aren't assigned directly to users in isolation. Instead, users and groups gain access to an object through role privileges as part of the larger vCenter Server permission.
+You can define users and groups using Active Directory or the local vCenter Server instance. Combined with a role, you can create a permission on an object in the vSphere object hierarchy. The permission grants access based on the privileges in the associated role. Roles are not assigned directly to users in isolation. Instead, users and groups gain access to an object through role privileges as part of the larger vCenter Server permission.
 
 // Jan 28 2025 - OTVDOC-179
