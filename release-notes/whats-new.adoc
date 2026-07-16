@@ -48,6 +48,7 @@ This release supports:
 
 * nconnect for NFSv3 datastores during provisioning
 * nconnect for NFSv4.1 datastores during provisioning with vCenter 8.0U3 and later
+* Modification of the maximum nconnect value on ESXi hosts
 
 This helps improve throughput and NFS datastore performance for multi-VM workloads.
 
