@@ -152,6 +152,8 @@ Consider the following when reviewing the table:
 
 |Non-HA Medium |250 |100 |32
 
+|HA Extra small |200 |100 |32
+
 |HA Small |350 |200 |64
 
 |HA Medium |600 |200 |128
