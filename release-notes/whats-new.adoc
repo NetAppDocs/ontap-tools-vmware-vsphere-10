@@ -69,6 +69,12 @@ This model provides a lower starting footprint with a clear scale-up path.
 
 ONTAP tools 10.6 removes the requirement to manually trigger storage discovery when ONTAP clusters are unavailable, simplifying protection workflows.
 
+== Platform and interoperability qualification
+
+ONTAP tools 10.6 expands platform and interoperability support across key ONTAP and VMware releases, enabling seamless NetApp storage integration in VMware environments.
+
+This release aligns with current ONTAP platform configurations and VMware releases, reducing operational complexity during platform upgrades and VMware stack refreshes.
+
 == Supportability enhancements
 
 ONTAP tools 10.6 improves troubleshooting and lifecycle management.
