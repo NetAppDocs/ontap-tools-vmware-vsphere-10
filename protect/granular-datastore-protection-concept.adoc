@@ -33,6 +33,8 @@ You can use the following policy types for eligible datastores:
 
 Fan-out protection can combine AFD between primary sites and asynchronous replication to a third site.
 
+== Eligibility evaluation
+
 Eligibility is evaluated in two stages: listing and selection.
 
 Datastores are listed for granular datastore protection only when they meet all of the following criteria:
