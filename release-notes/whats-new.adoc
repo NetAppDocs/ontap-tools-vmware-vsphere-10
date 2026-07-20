@@ -69,7 +69,7 @@ This model provides a lower starting footprint with a clear scale-up path.
 
 ONTAP tools 10.6 enables CPU hot add and memory hot plug by default for fresh deployments of the primary ONTAP tools VM.
 
-This eliminates the need to manually enable these settings during deployment.
+This eliminates the need to manually enable these settings before or after deployment.
 
 == Protection workflow improvement
 
@@ -89,7 +89,7 @@ Key updates include:
 
 * Forced delete for unreachable or stale vCenter entries
 * Migration from `ntpd` to `chronyd` for time synchronization, with automatic migration of existing NTP server settings during upgrade
-* Maintenance console option to renew service certificates, even after expiration
+* Maintenance console option to renew internal services certificates, even after expiration
 * Support for both traditional NTP servers and RHEL-based chrony servers over standard NTP protocol (UDP port 123)
 
 For the latest details on version compatibility, refer to https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^].
