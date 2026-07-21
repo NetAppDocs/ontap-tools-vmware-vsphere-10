@@ -62,6 +62,10 @@ Add local storage backends with cluster or SVM credentials by using the ONTAP to
 [role="quick-margin-list"]
 * link:../configure/add-storage-backend.html[Add a storage backend]
 * link:../configure/associate-storage-backend.html[Associate the storage backend with a vCenter Server instance]
+// * link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges (if you use custom RBAC instead of an admin account)]
+
+[discrete]
+== Optional next tasks
 
 == Optional next tasks
 

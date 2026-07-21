@@ -75,6 +75,19 @@ b. Select *Actions* > *New VM from this template*
 . In the *Customize template* window, enter the required values.
 // image:../media/sys-conf.png[Customize template]
 image:../media/custom-temp-p2.png[Customize template]
++
+[IMPORTANT]
+====
+The values on the *Customize template* page are required for a successful deployment.
+
+Pay special attention to these fields:
+
+* *Host name*: Enter the ONTAP tools VM host name. Use a valid host name format.
+* *ONTAP tools IP address*: This is the primary management interface used to access ONTAP tools.
+* *IPv4 address*: This is the node IP address used for diagnostic shell and SSH access for troubleshooting and maintenance.
+
+If you use DNS names for the host or vCenter, ensure those names resolve correctly in DNS.
+====
 [NOTE]
 The vCenter hostname is the name of the vCenter Server instance where the ONTAP tools appliance is deployed.
 +
