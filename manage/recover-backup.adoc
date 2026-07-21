@@ -9,7 +9,7 @@ summary: 'Beginning with ONTAP tools for VMware vSphere 10.3, the appliance uses
 :imagesdir: ../media/
 
 [.lead]
-Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default.
+You can recover the ONTAP tools for VMware vSphere setup by restoring it from a backup file stored on the datastore. Beginning with ONTAP tools for VMware vSphere 10.5, the backup feature is enabled by default, so a recent backup is available if you need to redeploy or recover the appliance.
 
 // otv10.5 updates backup
 The datastore where you deploy ONTAP tools for VMware vSphere virtual machines stores the backup files. A folder named after the ONTAP tools IP address (dots replaced by underscores and suffixed with _OTV_backup_) keeps the two most recent backup files (_OTV_backup_1.tar.enc_ and _OTV_backup_2.tar.enc_) and an info file (_OTV_backup_info.txt_) that contains the name of the latest backup.
@@ -35,7 +35,7 @@ scp <OTV_backup_X.tar.enc> diag@<node_ip>:/home/diag/system_recovery.tar.enc
 ----
 +
 [NOTE]
-don't alter the destination path and file name (/home/diag/system_recovery.tar.enc) mentioned in the command.
+Do not alter the destination path and file name (/home/diag/system_recovery.tar.enc) mentioned in the command.
 . After the backup file is transferred, log in to the diagnostic shell and run the following command:
 +
 ----

@@ -10,14 +10,16 @@ summary: 'You can set the threshold to receive notifications in vCenter Server w
 :imagesdir: ../media/
 
 [.lead]
-You can set the threshold to receive notifications in vCenter Server when the volume and the aggregate capacity reaches certain levels.
+You can set storage thresholds to receive notifications in vCenter Server when volume or aggregate capacity reaches a certain level.
 
-.Steps:
+.Steps
 
 . Log in to the vSphere client.
 . In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
 . In the left pane of ONTAP tools, go to *Settings* > *Threshold Settings* > *Edit*.
 . In the *Edit Threshold* window, provide the desired values in the *Nearly Full* and *Full* fields and select *Save*.
++
+[NOTE]
 You can restore the threshold values to the recommended defaults: 80 for Nearly Full and 90 for Full.
 
 //NADIAA checked

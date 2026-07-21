@@ -9,7 +9,7 @@ summary: 'Mounting a datastore provides storage access to additional hosts. You 
 :imagesdir: ../media/
 
 [.lead]
-Mounting a datastore provides storage access to additional hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment. 
+Mounting a datastore provides storage access to additional hosts after you add them to your VMware environment.
 [NOTE]
 When you add a new ESXi host using the https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html[Add an ESX Host to Your vSphere Cluster workflow], wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen.
 
@@ -18,7 +18,7 @@ When you add a new ESXi host using the https://techdocs.broadcom.com/us/en/vmwar
 
 * Some right-click actions are disabled or unavailable depending on the vSphere client version and the type of datastore selected. 
 ** If you're using vSphere client 8.0 or later versions, some of the right-click options are hidden. 
-** From vSphere 7.0U3 to vSphere 8.0 versions, even though the options appear, the action will be disabled.
+** From vSphere 7.0U3 to vSphere 8.0, even though the options appear, the action is disabled.
 * vSphere disables the mount datastore option when the host cluster is protected with uniform configurations. 
 
 .Steps

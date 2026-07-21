@@ -9,7 +9,7 @@ summary: Learn how ONTAP tools for VMware vSphere represents and manages igroups
 :imagesdir: ../media/
 
 [.lead]
-If you manage both ONTAP tools VMs and ONTAP storage systems, it is important to understand how igroups behave, especially when moving datastores from environments not managed by ONTAP tools to those that are. This page explains how ONTAP tools for VMware vSphere represents and manages igroups. It is conceptual information for understanding behavior differences between earlier releases and the current nested igroup model.
+If you manage both ONTAP tools VMs and ONTAP storage systems, you need to understand how igroups behave, especially when moving datastores from environments not managed by ONTAP tools to those that are. ONTAP tools for VMware vSphere represents and manages igroups using a nested igroup model, and understanding this model helps you interpret behavior differences between earlier releases and the current implementation.
 
 Beginning with ONTAP tools for VMware vSphere 10.4, ONTAP tools automatically creates and maintains ONTAP and vCenter objects, simplifying datastore management in VMware datacenter environments. Beginning with ONTAP tools for VMware vSphere 10.5 P2, migrated igroups are also deleted automatically when they are no longer in use.
 
@@ -35,7 +35,7 @@ image:../media/non-otv-managed.png[Non-ONTAP tools managed igroup]
 
 When you create datastores, ONTAP tools for VMware vSphere creates igroups in a nested structure.
 
-For example, when datastore1 is created and mounted on hosts 1, 2, and 3, and a new datastore (datastore2) is created and mounted on hosts 3, 4, and 5, ONTAP tools reuses the host-level igroup for efficient management.
+For example, if you create datastore1 and mount it on hosts 1, 2, and 3, then create datastore2 and mount it on hosts 3, 4, and 5, ONTAP tools reuses the host-level igroup for efficient management.
 
 image:../media/otv-managed.png[ONTAP tools managed igroup]
 
@@ -92,7 +92,7 @@ Only custom igroups can be reused. Migrated igroups from ONTAP tools 9.x cannot 
 
 == Native-to-managed conversion view
 
-If you create the igroup and datastore directly in ONTAP systems and VMware environments, ONTAP tools does not manage these objects initially. This results in a flat igroup structure.
+If you create the igroup and datastore directly in ONTAP systems and VMware environments, ONTAP tools does not manage these objects initially, resulting in a flat igroup structure.
 
 image:../media/vmfsds-native.png[Datastore and igroup created natively]
 

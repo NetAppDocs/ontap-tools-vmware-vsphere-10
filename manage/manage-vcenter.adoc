@@ -9,7 +9,7 @@ summary: 'vCenters are central management platforms that allow you to control ho
 :imagesdir: ../media/
 
 [.lead]
-vCenter Server instances are central management platforms that allow you to control hosts, virtual machines, and storage backends.
+vCenter Server instances are central management platforms that let you control hosts, virtual machines, and storage backends. In ONTAP tools, you can dissociate storage backends, modify instance details, remove instances, and renew vCenter Server certificates.
 
 == Dissociate storage backends with the vCenter Server instance
 
@@ -24,14 +24,14 @@ The vCenter Server listing page shows the associated number of storage backends.
 . Select *Dissociate storage backend*.
 
 == Modify a vCenter Server instance
-Follow the steps below to modify a vCenter Server instances.
+Modify a vCenter Server instance by completing the following steps.
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
 . Select the applicable vCenter Server instance from the sidebar
 . Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
 . In the *Modify vCenter* window, enter the username, password, and port details. 
-. Upload the certificate  and select *Modify*.
+. Upload the certificate and select *Modify*.
 
 
 == Remove a vCenter Server instance
@@ -43,9 +43,9 @@ Remove all storage backends from the vCenter Server before removing it.
 . Select the vertical ellipses against the vCenter Server that you want to remove and select *Remove*.
 +
 [NOTE]
-After you remove vCenter Server instances, they will no longer be maintained by the application.
+After you remove vCenter Server instances, the application no longer maintains them.
 
-When you remove vCenter Server instances in ONTAP tools, the following actions are performed automatically: 
+When you remove vCenter Server instances in ONTAP tools, ONTAP tools automatically performs the following actions: 
 
 * Plug-in is unregistered.
 * Plug-in privileges and plug-in roles are removed.
@@ -60,7 +60,7 @@ ONTAP tools notifies you when the vCenter certificate is nearing expiration or h
 ----
 echo | openssl s_client connect <vcenter>:443 2>&1 | sed -n '/-BEGIN CERTIFICATE/,/END CERTIFICATE/p' 
 ----
-. Ensure the certificate is in Base 64 ASCII format and includes the beginning and ending lines, for example:
+. Verify the certificate is in Base 64 ASCII format and includes the beginning and ending lines, for example:
 +
 ----
 ---{}BEGIN CERTIFICATE{}---
@@ -101,7 +101,7 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 . Select the applicable vCenter Server instance from the sidebar
 . Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
 . In the *Modify vCenter* window, enter the username, password, and port details. 
-. Upload the certificate  and select *Modify*.
+. Upload the certificate and select *Modify*.
 
 .Related information
 
