@@ -11,7 +11,7 @@ summary: "Mount datastores on additional hosts after adding hosts to your VMware
 [.lead]
 Mounting a datastore provides storage access to additional hosts. You can mount the datastore on the additional hosts after you add the hosts to your VMware environment. 
 [NOTE]
-When you add a new ESXi host to your vSphere cluster, wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen.
+After adding the host, wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen. For information on how to add an ESXi host to your vSphere cluster, refer to [Broadcom Technical Documentation](https://techdocs.broadcom.com/).
 
 // OTVDOC-325 updates
 .About this task 
