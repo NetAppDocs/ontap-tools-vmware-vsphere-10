@@ -116,7 +116,7 @@ To configure an ONTAP SVM for FC protocol, refer to https://docs.netapp.com/us-e
 
 For more information on using NVMe/FC protocol with VMware vSphere 8.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[NVMe-oF Host Configuration for ESXi 8.x with ONTAP].
 
-For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme_esxi_8.html[ONTAP NVMe/FC Host Configuration guide] and http://www.netapp.com/us/media/tr-4684.pdf[TR-4684].
+For more information on using NVMe/FC with VMware vSphere 7.0, refer to https://docs.netapp.com/us-en/ontap-sanhost/nvme-esxi-7.html[ONTAP NVMe/FC Host Configuration guide].
 
 .Steps
 . Log in to the vSphere Client.
