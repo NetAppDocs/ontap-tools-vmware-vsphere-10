@@ -1,8 +1,8 @@
 ---
 permalink: configure/dashboard-overview.html
 sidebar: sidebar
-keywords: user roles
-summary: 'When you select the ONTAP tools for VMware vSphere plug-in icon in the shortcuts section on the vCenter client, the user interface navigates to the overview page. This page acts as the dashboard, providing a summary of the ONTAP tools for VMware vSphere plug-in.'
+keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard
+summary: "Review the ONTAP tools dashboard to see a summary of plug-in status, datastores, and vCenter Server data."
 ---
 = Learn about the ONTAP tools dashboard
 :icons: font
@@ -16,6 +16,13 @@ When you select a vCenter Server on one page, it stays the same when you switch 
 image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
 From the overview page, you can run the *Discovery* action. The discovery action detects newly added or updated storage backends, hosts, datastores, and protection status or relationships at the vCenter level. Run on-demand discovery without waiting for the scheduled discovery.
+
+If you add a new host to a protected host cluster, the protection settings change to *Partially protected*.
+
+To resolve this state, open *Modify cluster configuration*, assign the host to the correct site (source or target), and select *Modify*.
+
+// 10.6 GDP feature
+// Deekshith to share new screenshot on the partial protection
 
 [NOTE]
 The *Discovery* button is enabled only if you have the required privilege to perform discovery.

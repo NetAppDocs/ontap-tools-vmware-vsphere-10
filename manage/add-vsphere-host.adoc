@@ -1,8 +1,8 @@
 ---
 permalink: manage/add-vsphere-host.html
 sidebar: sidebar
-keywords:
-summary: 'Add new VMware vSphere hosts to ONTAP tools for VMware vSphere.'
+keywords: add vSphere host, ONTAP tools host discovery, register ESXi host, VMware host management
+summary: "Add VMware vSphere hosts to ONTAP tools for VMware vSphere."
 ---
 = Add VMware vSphere hosts to ONTAP tools
 :icons: font
@@ -13,7 +13,7 @@ Add new VMware vSphere hosts to ONTAP tools for VMware vSphere to manage and pro
 
 .Steps
 
-. Add a host to your VMware vSphere cluster following the workflow on page: https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html[How to Add an ESX Host to Your vSphere Cluster by Using the Quickstart Workflow]
+. Add a host to your VMware vSphere cluster following the [Broadcom Technical Documentation](https://techdocs.broadcom.com/)
 . After adding the host, go to the ONTAP tools main menu and select *Discover* in the overview panel. Wait for the discovery process to finish. Alternatively, you can wait for the scheduled host discovery to complete.
 
 .Result

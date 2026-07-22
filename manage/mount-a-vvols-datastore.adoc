@@ -1,17 +1,19 @@
 ---
 permalink: manage/mount-a-vvols-datastore.html
 sidebar: sidebar
-keywords: Mount vVol
-summary: 'You can mount a VMware Virtual Volumes \(vVols\) datastore to one or more additional hosts by using the Mount vVols Datastore dialog box. Mounting the datastore provides storage access to additional hosts. You can unmount vVols datastore only through the APIs.'
+keywords: mount vVols datastore, add vVol datastore to hosts, ONTAP tools vVol host access, VMware virtual volumes mount
+summary: "Mount a vVols datastore to additional hosts to provide storage access across your virtual environment."
 ---
 = Mount a vVols datastore in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts to provide storage access to additional hosts. You can unmount vVols datastore only through the APIs.
+You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts to provide storage access to additional hosts. You can unmount a vVols datastore only through host-level APIs. Cluster-level datastore unmount is not supported.
+// Unsupported parameter combinations for datastore unmount are not available in the REST API schema.
+
 [NOTE]
-When you add a new ESXi host using the https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/use-quickstart-to-add---host-to-a-cluster.html[Add an ESX Host to Your vSphere Cluster workflow], wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen.
+After adding the host, wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen. For information on how to add an ESXi host to your vSphere cluster, refer to [Broadcom Technical Documentation](https://techdocs.broadcom.com/).
 
 // OTVDOC-325 updates
 .Steps

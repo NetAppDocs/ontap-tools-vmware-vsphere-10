@@ -1,8 +1,8 @@
 ---
 permalink: manage/start-the-ssh-on-other-nodes.html
 sidebar: sidebar
-keywords:
-summary: 'You need to start SSH on other nodes before you upgrade.'
+keywords: start SSH on nodes, ONTAP tools node SSH access, pre-upgrade SSH enablement, appliance cluster troubleshooting
+summary: "Start SSH on other nodes before you run an upgrade."
 ---
 = Start SSH on other ONTAP tools nodes
 :icons: font
@@ -21,8 +21,9 @@ Repeat this procedure on each node before upgrading.
 
 .Steps
 
-. From the vCenter Server, open a console to VASA Provider.
-. Log in as the maintenance user.
+. Log in to the vCenter Server.
+. Locate the ONTAP tools node VM and launch the web console.
+. Log in using the `maint` credentials.
 . Enter `4` to select Support and Diagnostics.
 . Enter `1` to select Access diagnostic shell.
 . Enter `y` to proceed.

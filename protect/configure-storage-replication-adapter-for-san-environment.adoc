@@ -1,8 +1,8 @@
 ---
 permalink: protect/configure-storage-replication-adapter-for-san-environment.html
 sidebar: sidebar
-keywords:
-summary: 'You should set up the storage systems before running Storage Replication Adapter \(SRA\) for VMware Live Site Recovery.'
+keywords: SRA SAN configuration, VMware Live Site Recovery, iSCSI and Fibre Channel, SnapMirror, ONTAP tools
+summary: "Set up SAN and NAS storage systems before you run SRA workflows in VMware Live Site Recovery."
 ---
 = Configure SRA in ONTAP tools for SAN and NAS environments
 :icons: font
@@ -14,7 +14,7 @@ You should set up the storage systems before running Storage Replication Adapter
 == Configure SRA for SAN environments
 
 [NOTE]
-Consistency groups in SRA workflows are supported only with SAN protocols (iSCSI and Fibre Channel) on both Unified and ASA r2 storage systems.
+Consistency groups in SRA workflows are supported only with SAN protocols (iSCSI and Fibre Channel) on both ONTAP storage and ASA r2 storage systems.
 
 // OTV10.5 P2 updates - Jani OTVDOC-365
 .Before you begin

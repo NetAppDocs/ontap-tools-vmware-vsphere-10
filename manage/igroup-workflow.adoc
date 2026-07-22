@@ -1,8 +1,8 @@
 ---
 permalink: manage/igroup-workflow.html
 sidebar: sidebar
-keywords:
-summary: ''
+keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control
+summary: "Understand how ONTAP tools creates and manages igroups and export policies for datastore access."
 ---
 = How ONTAP tools manages igroups and export policies
 :icons: font
@@ -12,7 +12,7 @@ summary: ''
 Initiator groups (igroups) are tables of FC protocol host World Wide Port Name (WWPNs) or iSCSI host qualified node names. You can define igroups and map them to LUNs to control which initiators have access to LUNs.
 
 In ONTAP tools for VMware vSphere 9.x, igroups were created and managed in a flat structure, where each datastore in vCenter was associated with a single igroup. This model limited flexibility and reuse of igroups across multiple datastores.
-ONTAP tools for VMware vSphere introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across datastores to make igroup management easier.
+ONTAP tools for VMware vSphere 10.4 introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across datastores to make igroup management easier.
 Understand the igroup workflow to manage LUNs and datastores in ONTAP tools for VMware vSphere.
 Different workflows generate varying igroup configurations, as shown in the following examples:
 [NOTE]
