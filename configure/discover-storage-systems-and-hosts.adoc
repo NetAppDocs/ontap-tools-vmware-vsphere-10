@@ -1,8 +1,8 @@
 ---
 permalink: configure/discover-storage-systems-and-hosts.html
 sidebar: sidebar
-keywords:
-summary: 'When you first run ONTAP tools for VMware vSphere in a vSphere Client, ONTAP tools for VMware vSphere discovers the ESXi hosts, their LUNs and NFS exports, and the NetApp storage systems that own those LUNs and exports.'
+keywords: discover storage systems and hosts, ONTAP tools first discovery, ESXi host and LUN discovery, NFS export discovery
+summary: "Discover ESXi hosts, LUNs, NFS exports, and NetApp storage systems in ONTAP tools at first launch."
 ---
 = Discover storage systems and hosts in ONTAP tools
 :icons: font
@@ -24,8 +24,8 @@ While discovering the storage systems, ONTAP tools for VMware vSphere collects i
 
 .Steps
 
-. From the vSphere Client home page, select *Hosts and Clusters*.
-. Right-click on the required data center and select *NetApp ONTAP tools* > *Update Host Data*.
+. From the vSphere client home page, select *Hosts and Clusters*.
+. Right-click on the required data center and select *NetApp ONTAP tools* > *Update host and storage data* .
 +
 In the *Confirm* dialog box, confirm your choice.
 . Select the discovered storage controllers that have the status `Authentication Failure` and select *Actions* > *Modify*.

@@ -1,33 +1,37 @@
 ---
 permalink: manage/unmount-datastores-on-host.html
 sidebar: sidebar
-keywords:
-summary: 'Unmount datastore action unmounts a NFS or VMFS datastore from ESXi hosts. Unmount datastore action is enabled for NFS and VMFS datastores that are discovered or managed by the ONTAP tools for VMware vSphere.'
+keywords: unmount NFS VMFS datastore, remove datastore from host, ONTAP tools datastore unmount, ESXi host storage detach
+summary: "Unmount NFS or VMFS datastores from ESXi hosts by using ONTAP tools."
 ---
 = Unmount NFS and VMFS datastores in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+Use this task to unmount an NFS or VMFS datastore from ESXi hosts.
+Cluster-level datastore unmount is not supported through the UI or APIs.
+// Unsupported parameter combinations for datastore unmount are not available in the REST API schema.
 
-The Unmount datastore action removes an NFS or VMFS datastore from ESXi hosts. It is available for datastores discovered or managed by ONTAP tools for VMware vSphere.
+Beginning with ONTAP tools 10.6, unmount is blocked for protected VMFS datastores.
+// 10.6 GDP feature
 
 .Steps
 
 . Log in to the vSphere client.
-. Right-click on a NFS or VMFS datastore object and select *Unmount datastore*.
+. Right-click an NFS or VMFS datastore object and select *Unmount datastore*.
 +
-The vSphere client opens a dialog box and lists the ESXi hosts that mount the datastore. 
-When the operation is performed on a protected datastore, a warning message is displayed on the screen.
+The vSphere client opens a dialog box and lists the ESXi hosts that mount the datastore.
+If the datastore is protected, ONTAP tools blocks the request and shows a message that the datastore is under protection and cannot be unmounted.
 . Select one or more ESXi hosts to unmount the datastore.
 +
 You cannot unmount the datastore from all hosts. The user interface suggests that you use the delete datastore operation instead.
 . Select the *Unmount* button.
 +
-If the datastore is part of a protected host cluster, a warning message is displayed. 
+The *Unmount datastore* option is available only when the host is moved outside the protected host cluster.
 
 [NOTE]
-If the protected datastore is unmounted the exiting protection setting might result in partial protection. Refer to link:../manage/edit-hostcluster-protection.html[Modify protected host cluster] to enable complete protection.
+If a datastore is protected, you must remove protection before you can unmount it.
 
 .What's next?
 You can track the progress in the recent tasks panel.

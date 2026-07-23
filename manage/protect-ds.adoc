@@ -1,0 +1,46 @@
+---
+permalink: manage/protect-ds.html
+sidebar: sidebar
+keywords: protect VMFS datastore, SnapMirror datastore protection, create protection group, ONTAP tools disaster recovery
+summary: "Protect an eligible VMFS datastore by adding it to a protection group with SnapMirror replication."
+---
+
+= Protect a VMFS datastore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use this task to protect an eligible VMFS datastore by adding it to a protection group.
+
+.Before you begin
+
+* Ensure the datastore uses the iSCSI or FC protocol.
+* Confirm that you have administrative privileges in vSphere.
+* Verify that the datastore is not already part of a protection group.
+
+.Steps
+
+. Log in to the vSphere Client.
+. Select a host cluster and select *Datastores*.
+. Right-click the eligible VMFS datastore you want to protect and select *NetApp ONTAP tools* > *Protect*.
++
+The system checks the datastore’s eligibility for protection. If the datastore is eligible, the protection workflow continues. If the datastore is ineligible, a message displays the reasons and you cannot proceed.
+. Choose whether to add the datastore to an existing protection group or create a new protection group.
+.. To use an existing protection group, select the protection group and continue.
+.. To create a new protection group:
+... Provide a name for the protection group.
+... Select *Add Relationship*.
+... In the *Add SnapMirror Relationship* window, select the *Target storage VM* and the *Policy* type.
++
+The policy type can be *Asynchronous* or *AutomatedFailOverDuplex*.
++
+If you select *AutomatedFailOverDuplex*, add the target storage VM as a storage backend to the same vCenter Server where ONTAP tools for VMware vSphere is deployed.
++
+For *AutomatedFailOverDuplex*, choose a uniform or non-uniform host configuration.
+When you select the *uniform host configuration* toggle, the host initiator group configuration is implicitly replicated on the target site. For more information, refer to link:../concepts/ontap-tools-concepts-terms.html[Key concepts and terms].
+... If you select a non-uniform host configuration, select host access (source/target) for each host in the cluster.
+. Select *OK* to start the protection workflow.
+
+.Result
+The datastore appears in the selected protection group. You can view and manage protection status from the ONTAP tools plug-in.
+// 10.6 updates

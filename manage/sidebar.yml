@@ -9,6 +9,8 @@ entries:
     url: /manage/nested-igroups.html
   - title: ONTAP tools Manager user interface
     url: /manage/manager-user-interface.html
+  - title: Manage audit logs for ONTAP tools
+    url: /manage/audit-logs.html
   - title: Manage ONTAP tools Manager settings
     entries:
       - title: Edit AutoSupport settings 
@@ -27,6 +29,10 @@ entries:
     url: /manage/add-vsphere-host.html
   - title: Manage datastores
     entries:
+      - title: Protect a VMFS Datastore
+        url: /manage/protect-ds.html
+      - title: Unprotect a VMFS datastore
+        url: /manage/unprotect-ds.html
       - title: Mount NFS and VMFS datastore
         url: /manage/mount-datastores-on-host.html
       - title: Unmount NFS and VMFS datastore
@@ -35,6 +41,8 @@ entries:
         url: /manage/mount-a-vvols-datastore.html
       - title: Resize NFS and VMFS datastore
         url: /manage/resize-datastores.html
+      - title: Change default nconnect value for ESXi hosts
+        url: /manage/nconnect-change-default.html
       - title: Expand vVol datastore
         url: /manage/expand-storage-of-vvol-datastore.html
       - title: Shrink vVols datastore
@@ -93,10 +101,10 @@ entries:
         url: /manage/reset-maint-password.html
   - title: Manage host cluster protection
     entries:
-      - title: Modify host cluster protection
-        url: /manage/edit-hostcluster-protection.html
-      - title: Remove host cluster protection
-        url: /manage/delete-hostcluster-protection.html
+      - title: Manage protection groups in ONTAP tools
+        url: /manage/manage-protection-groups.html
+      - title: Manage host cluster configuration in ONTAP tools
+        url: /manage/manage-host-proximity.html
   - title: Recover the ONTAP tools setup
     url: /manage/recover-backup.html
   - title: Uninstall ONTAP tools for VMware vSphere

@@ -1,17 +1,17 @@
 ---
 permalink: deploy/prerequisites.html
 sidebar: sidebar
-keywords: ONTAP tools,Storage Replication Adapter
-summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
+keywords: ONTAP tools requirements, configuration limits, supported versions, sizing
+summary: "Review supported versions, sizing, port requirements, and configuration limits before deploying ONTAP tools for VMware vSphere."
 ---
 = ONTAP tools for VMware vSphere requirements and configuration limits
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.
+Review supported versions, sizing, port requirements, and configuration limits before deploying ONTAP tools for VMware vSphere.
 
-You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Appliance (vCSA). You should deploy ONTAP tools for VMware vSphere on a supported vSphere environment that includes ESXi hosts.
+Deploy ONTAP tools for VMware vSphere on a supported vSphere environment that includes ESXi hosts and VMware vCenter Server Virtual Appliance (vCSA).
 
 == System requirements
 
@@ -20,28 +20,20 @@ You can use ONTAP tools for VMware vSphere with VMware vCenter Server Virtual Ap
 ** 348 GB for thick provisioned installations
 
 * *Host system sizing requirements*
-The table below shows the recommended memory for each deployment size. For high availability (HA) deployments, you need three times the appliance size listed.
+The table below shows the recommended CPU, memory, and disk space per node for each deployment size. For high availability (HA) deployments, deploy three nodes.
 // updated for GITHUB issue #50
 |===
-
 |*Type of deployment*| *CPUs per node* |*Memory (GB) per node* |*Disk space (GB) thick provisioned per node*
-|Small
-|9
-|18
-|350
-|Medium
-|13
-|26
-|350
-|Large
-
-NOTE: The large deployment is only for HA configuration.
-|17
-|34
-|350
+|Extra small (XS) |6 |12 |350
+// 10.6 XS updates
+|Small |9 |18 |350
+|Medium |13 |26 |350
+|Large |17 |34 |350
 |===
 [NOTE]
-When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total.
+Large deployment size is supported only for HA configuration.
+[NOTE]
+When backup is enabled, each ONTAP tools cluster needs an additional 50 GB of space on the datastore where VMs are deployed. Therefore, non-HA requires 400 GB, and HA requires 1100 GB of space in total.
 
 // updated note for OTVDOC-258
 == Minimum storage and application requirements
@@ -49,31 +41,31 @@ When backup is enabled, each ONTAP tools cluster needs another 50 GB of space on
 |===
 |Storage, host, and applications|Version requirements
 
-|ONTAP
-|9.15.1, 9.16.1, and 9.17.0
+|ONTAP systems
+|9.16.1, 9.17.1, 9.18.1, 9.19.1
 
-|ONTAP tools supported ESXi hosts
+|ESXi hosts managed by ONTAP tools
 |7.0.3 onwards
 
-|ONTAP tools supported vCenter Server
-|7.0U3 onwards
+|vCenter Server instances managed by ONTAP tools
+|8.0U3 onwards
 
 |VASA Provider 
 |3.0
 
 |OVA Application 
-|10.5
+|10.6
 
-|ESXi host to deploy ONTAP tools virtual machine
+|ESXi host used to deploy the ONTAP tools virtual machine
 |7.0U3 and 8.0U3
 //OTVDOC-282 updates -Jani
 
-|vCenter Server to deploy ONTAP tools virtual machine
+|vCenter Server used to deploy the ONTAP tools virtual machine
 |7.0 and 8.0
 // updated the requirements as per OTVDOC-258
 |===
 [NOTE]
-Beginning with ONTAP tools for VMware vSphere 10.4, the virtual machine hardware is changed from version 10 to 17.
+Beginning with ONTAP tools for VMware vSphere 10.4, the virtual machine hardware version changes from 10 to 17.
 
 The Interoperability Matrix Tool (IMT) contains the latest information about the supported versions of ONTAP, vCenter Server, ESXi hosts, and plug-in applications.
 
@@ -85,7 +77,7 @@ The following table outlines the network ports that NetApp uses and their purpos
 There are three different types of ports:
 
 * External ports: These ports are accessible from outside the Kubernetes cluster or node. They allow services to communicate with external networks or users, enabling integration with systems outside the cluster environment.
-* Inter-node ports: These ports enable communication between nodes within the Kubernetes cluster. They are needed for cluster tasks like sharing data and working together. For single-node deployments, inter-node ports are used only within the node and do not need external access. Inter-node ports can accept traffic from outside the cluster. Block inter-node ports from internet access with firewall rules.
+* Inter-node ports: These ports enable communication between nodes within the Kubernetes cluster. They are required for cluster operations such as data exchange and node coordination. For single-node deployments, inter-node ports are used only within the node and do not require external access. Allow inter-node traffic only from trusted cluster networks, and block internet access with firewall rules.
 * Internal ports: These ports communicate within the Kubernetes cluster using ClusterIP addresses. They are not exposed externally and do not need to be added to firewall rules.
 
 [NOTE]
@@ -122,24 +114,25 @@ Click to expand or collapse the port requirements table.
 [NOTE]
 For HA deployments, ensure UDP port 8472 is open between all nodes. This port enables pod-to-pod communication across nodes; blocking it will interrupt inter-node networking.
 ====
-== Configuration limits to deploy ONTAP tools for VMware vSphere for vVols datastores
 
-You can use the following table as a guide for configuring ONTAP tools for VMware vSphere.
+== Configuration limits for vVol datastores
+
+Use the following table as a guide for configuring ONTAP tools for VMware vSphere.
 |===
 
 |*Deployment* | *Type* | *Number of vVols* |*Number of hosts*
 
 |Non-HA |Small (S) |up to 12K| 32
 |Non-HA |Medium (M) |up to 24K| 64
-|High-Availability |Small (S) |up to 24K| 64
-|High-Availability |Medium (M) |up to 50k| 128
-|High-Availability |Large (L) |up to 100k| 256 
+|HA |Small (S) |up to 24K| 64
+|HA |Medium (M) |up to 50K| 128
+|HA |Large (L) |up to 100K| 256 
 |===
 
 [NOTE]
 The host counts in the table represent the combined total across all connected vCenters.
 
-== Configuration limits to deploy ONTAP tools for VMware vSphere for VMFS and NFS datastores
+== Configuration limits for VMFS and NFS datastores
 // github issue updates
 The configuration limits listed in this section are validated and supported by NetApp. Actual limits may vary depending on your environment and workload. Exceeding these limits may impact performance or supportability and is not recommended.
 Consider the following when reviewing the table:
@@ -153,9 +146,13 @@ Consider the following when reviewing the table:
 |===
 |Deployment |Number of VMFS and NFS datastores |Number of DR enabled VMFS datastores |Number of hosts
 
+|Extra small |50 |50 |16
+
 |Non-HA Small |200 |80 |32
 
 |Non-HA Medium |250 |100 |32
+
+|HA Extra small |200 |100 |32
 
 |HA Small |350 |200 |64
 
@@ -169,7 +166,7 @@ Consider the following when reviewing the table:
 The following table shows the numbers supported per VMware Live Site Recovery instance using ONTAP tools for VMware vSphere.
 
 |===
-|*vCenter Deployment size* |*Small* |*Medium*
+|*vCenter deployment size* |*Small* |*Medium*
 
 |Total number of virtual machines configured for protection using array-based replication
 |2000
@@ -196,8 +193,8 @@ The following table shows the numbers supported per VMware Live Site Recovery in
 The following table shows the number of VMware Live Site Recovery instances and the corresponding ONTAP tools for VMware vSphere deployment size.
 
 |===
-|*Number of VMware Live Site Recovery instances* |*ONTAP tools deployment Size*
-|Upto 4
+|*Number of VMware Live Site Recovery instances* |*ONTAP tools deployment size*
+|Up to 4
 |Small
 |4 to 8	
 |Medium
