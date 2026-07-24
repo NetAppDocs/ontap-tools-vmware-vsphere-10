@@ -13,7 +13,7 @@ Add new VMware vSphere hosts to ONTAP tools for VMware vSphere to manage and pro
 
 .Steps
 
-. Add a host to your VMware vSphere cluster following the [Broadcom Technical Documentation](https://techdocs.broadcom.com/)
+. Add a host to your VMware vSphere cluster following the https://techdocs.broadcom.com/[Broadcom Technical Documentation].
 . After adding the host, go to the ONTAP tools main menu and select *Discover* in the overview panel. Wait for the discovery process to finish. Alternatively, you can wait for the scheduled host discovery to complete.
 
 .Result
