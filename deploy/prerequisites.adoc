@@ -132,6 +132,11 @@ Use the following table as a guide for configuring ONTAP tools for VMware vSpher
 [NOTE]
 The host counts in the table represent the combined total across all connected vCenters.
 
+== Configuration limits for storage backend discovery
+
+ONTAP tools supports storage backend discovery for up to 200 SVMs and approximately 10,000 LUNs.
+// OTVDOC-373 updates
+
 == Configuration limits for VMFS and NFS datastores
 // github issue updates
 The configuration limits listed in this section are validated and supported by NetApp. Actual limits may vary depending on your environment and workload. Exceeding these limits may impact performance or supportability and is not recommended.
