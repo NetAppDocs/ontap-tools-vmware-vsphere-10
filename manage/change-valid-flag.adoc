@@ -1,8 +1,8 @@
 ---
 permalink: manage/change-valid-flag.html
 sidebar: sidebar
-keywords:
-summary: 'You can change the certificate validation flag using the maintenance console.'
+keywords: certificate validation flag, ONTAP tools certificate check, maintenance console certificate settings, TLS validation toggle
+summary: "Change the certificate validation flag by using the maintenance console."
 ---
 = Change certificate validation flag in ONTAP tools
 :icons: font
@@ -17,8 +17,9 @@ You need to have maintenance user login credentials.
 
 .Steps
 
-. From the vCenter Server, open a console to ONTAP tools.
-. Log in as the maintenance user.
+. Log in to the vCenter Server.
+. Locate the ONTAP tools VM and launch the web console.
+. Log in using the `maint` credentials.
 . Enter `1` to select *Application Configuration* menu.
 . Enter `3` to change cert validation flag.
 +

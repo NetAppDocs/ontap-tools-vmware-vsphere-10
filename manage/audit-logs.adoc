@@ -1,0 +1,135 @@
+---
+permalink: manage/audit-logs.html
+sidebar: sidebar
+keywords: ONTAP tools audit logs, security logging, compliance audit trail, audit log retention
+summary: "Review how ONTAP tools captures, retains, and monitors audit logs for security and compliance."
+---
+
+= Manage audit logs for ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use this task to manage audit logging behavior and operational response in ONTAP tools for VMware vSphere. Audit logs provide an event trail that shows who performed an action, what action was performed, when it occurred, the request source, and whether it succeeded or failed.
+// 10.6 topic
+
+.Before you begin
+
+* Ensure that you have administrator access to ONTAP tools Manager.
+* Ensure that you have maintenance console access if you plan to change local retention settings.
+* Review your organization's security and compliance requirements for retention, forwarding, and incident response.
+
+.About this task
+
+ONTAP tools captures comprehensive audit events for operational and compliance visibility.
+
+Audit coverage includes:
+
+* User and API operations, such as datastore create/delete, vCenter onboarding, and storage backend actions
+* Internal service calls, including VASA Provider service interactions
+* Jobs, including discovery, protection, and aggregate operations
+* Maintenance console activities
+
+Audit entries can include:
+
+* Username, when available
+* Operation performed
+* Timestamp
+* Request source (UI, API, or inter-service)
+* Request and response details with status
+
+Audit archives are generated daily and are available from the support bundle generated in ONTAP tools Manager. Archives for a given day are available the next day.
+
+Audit logging has the following operational limits:
+
+* Disabling audit logging is not supported.
+* Audit log file size is not user-configurable.
+
+Sensitive data handling is built in:
+
+* Sensitive data, such as passwords, tokens, and private key material, is redacted.
+* Long request and response payloads might be truncated.
+
+.Steps
+
+. Generate a support bundle from ONTAP tools Manager:
+
+.. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+.. Log in with the ONTAP tools for VMware vSphere administrator credentials.
+.. Select *Log Bundles* from the sidebar.
+.. Select *Generate*.
+.. Enter a label for the log bundle and select *Generate*.
++
+Audit logs are available in daily archives under the audit directory in the downloaded support bundle.
+
+. Optional: Configure local retention from the maintenance console:
+.. Log in to the vCenter Server.
+.. Locate the ONTAP tools VM and launch the web console.
+.. Log in using the `maint` credentials.
+.. Enter `1` to select *Application Configuration*.
+.. Enter `4` to select *Change Audit Log Retention*.
+.. Enter the retention value in days and confirm the change.
++
+The default retention is 30 days, and the supported range is 1 to 180 days.
++
+[WARNING]
+Changing audit log retention restarts services and is a disruptive operation.
+
+. Monitor audit log integrity status in ONTAP tools Manager:
+.. On the ONTAP tools Manager dashboard, check the *Alerts* card for active alerts.
+.. Select the alert count hyperlink, or open *Manage alerts* to view alert details and status.
++
+ONTAP tools checks audit log archives for integrity every 3 minutes. ONTAP tools maintains a record of expected archives. If an archive is missing or altered, ONTAP tools raises an alert in ONTAP tools Manager.
+
+. Optional: Change the audit integrity check interval from the maintenance console:
+.. Log in to the vCenter Server.
+.. Locate the ONTAP tools VM and launch the web console.
+.. Log in using the `maint` credentials.
+.. Enter `4` to select *Support and diagnostic*.
+.. Enter `2` to select *Enable diag access*.
+.. Log in as the `diag` user.
+.. Run the following command to change the interval in seconds:
++
+`bash /home/maint/scripts/change_audit_integrity_check_interval.sh <value_in_seconds>`
++
+The minimum supported interval is 60 seconds.
++
+[WARNING]
+Changing the audit integrity check interval restarts services and is a disruptive operation.
+
+. Optional: Forward audit logs to an external syslog destination. Use syslog forwarding when you need centralized monitoring, long-term retention, or Security Information and Event Management (SIEM) correlation. Follow your organization's standards for TLS, certificates, ports, and retention.
+
+. If an integrity alert occurs, perform incident-response actions.
+.. Collect a support bundle as soon as possible.
+.. Preserve exported bundles and archives according to your organization's incident-response process.
+.. Review alert details in ONTAP tools Manager and contact NetApp Support if required.
+
+== Example audit record
+
+Audit records include a consistent set of fields to support traceability. Typical fields include:
+
+* Timestamp (UTC)
+* Username (authenticated user identity)
+* Operation (HTTP method and request URI)
+* Request source (UI, API, or inter-service)
+* Status (success or failure and status code)
+* User agent (client identity, if available)
+* Request identifier, when available (for example, correlation ID)
+* Job identifier, when available (for asynchronous workflows)
+* Tenant or vCenter identifier, when available
+
+The following example shows the type of information captured. The exact field set can vary by workflow.
+
+[source,json]
+----
+{
+  "timestamp": "2026-01-29T08:21:51Z",
+  "username": "administrator",
+  "operation": "POST /virtualization/api/v1/vcenters/{vcguid}/traditional/datastores",
+  "status": "Success 202",
+  "user_agent": "Mozilla/5.0 ...",
+  "correlation_id": "9ee9a89e-900d-4538-bcab-79830d4ab7cc",
+  "job_id": "3416",
+  "type": "audit"
+}
+----

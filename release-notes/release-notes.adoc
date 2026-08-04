@@ -1,21 +1,21 @@
 ---
 permalink: release-notes/release-notes.html
 sidebar: sidebar
-keywords: release notes, ontap tools for VMware vSphere
-summary: 'Provides important information about this release of ONTAP tools for VMware vSphere, including new features and enhancements, fixed issues, known issues, cautions, and limitations.'
+keywords: release notes, ONTAP tools for VMware vSphere, 10.6
+summary: "Review ONTAP tools for VMware vSphere 10.6 release notes for features, compatibility, and supported migration paths."
 ---
-= Release notes for ONTAP tools
+= Release notes for ONTAP tools for VMware vSphere 10.6
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
+Review this page for key information about ONTAP tools for VMware vSphere 10.6, then follow the linked topics for feature details, compatibility, and migration information.
 
-Learn about the new and enhanced features available in ONTAP tools for VMware vSphere 10.5.
-
-For a complete list of new features and enhancements, refer to xref:whats-new.adoc[What's new in ONTAP tools for VMware vSphere 10.5].
+For a complete list of new features and enhancements, refer xref:whats-new.adoc[What's new in ONTAP tools for VMware vSphere 10.6].
 
 For the most up-to-date compatibility information, refer to https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^].
 
-Migration is supported from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.5.
+Migration is supported from ONTAP tools for VMware vSphere 9.12D1, 9.13D2, and 9.13P2 releases to ONTAP tools for VMware vSphere 10.6.
 
-For more information, refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP3358876[ONTAP tools for VMware vSphere 10.5 Release Notes^]. You must sign in with your NetApp account or create an account to access the Release Notes.
+For more information, refer to the https://library.netapp.com/ecm/ecm_download_file/ECMLP3383264[ONTAP tools for VMware vSphere 10.6 Release Notes^].
+You must sign in with your NetApp account or create an account to access this document.

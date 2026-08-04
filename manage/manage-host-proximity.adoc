@@ -1,0 +1,30 @@
+---
+permalink: manage/manage-host-proximity.html
+sidebar: sidebar
+keywords: host cluster configuration, manage host proximity, SVM mapping, ONTAP tools host cluster protection
+summary: "View, edit, and remove host cluster configuration settings for host cluster protection."
+---
+= Manage cluster configuration in ONTAP tools 
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use this task to view, edit, and remove host cluster configuration settings in ONTAP tools so site assignments remain accurate for host cluster protection.
+
+.Before you begin
+
+* Ensure you have administrative privileges in vSphere.
+* Ensure your ONTAP tools user account has permissions to manage host cluster protection settings.
+
+.Steps
+
+. In the ONTAP tools plug-in, navigate to *Protection* > *Cluster protection configuration*.
++
+The host cluster configuration settings are listed with their configuration type, SVMs, and hosts.
+. Select the vertical ellipsis (three dots) next to the host cluster configuration setting you want to manage:
+.. To edit a configuration, select *Edit* and update the required settings. For more information, refer to link:../protect/config-proximity.html[Configure cluster for datastore protection with ONTAP tools].
++
+When a new host is added to a cluster, existing cluster configuration settings are not automatically applied to that host. Edit the existing cluster configuration and assign the new host to the appropriate site.
+.. To remove a configuration, select *Remove* and confirm the deletion in the dialog box.
+
+// 10.6 updates

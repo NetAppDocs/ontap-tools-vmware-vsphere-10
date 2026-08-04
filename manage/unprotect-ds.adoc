@@ -1,0 +1,55 @@
+---
+permalink: manage/unprotect-ds.html
+sidebar: sidebar
+keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirror protection removal, ONTAP tools DR cleanup
+summary: "Unprotect a VMFS datastore and optionally remove associated target-side storage elements."
+---
+
+= Unprotect a VMFS datastore
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use this task to unprotect a VMFS datastore and optionally remove associated target-side storage elements on the secondary site.
+// 10.6 topic
+
+.About this task
+
+When you unprotect a VMFS datastore, consider the following behavior:
+
+* Unprotecting the last datastore in a protection group deletes the protection group and its protection settings name.
+* For a last datastore, ONTAP tools shows the protection settings name.
+
+.Before you begin
+
+* Ensure you have administrative privileges in vSphere.
+* Ensure your ONTAP tools user account has permissions to manage protection settings.
+* Review the impact of unprotecting the last datastore in a protection group.
+* On ONTAP 9 clusters, non-last datastore unprotect is supported only for AutomatedFailOverDuplex relationships.
+
+.Steps
+
+. Log in to the vSphere Client.
+. Select the host cluster and then select *Datastores*.
+. Right-click the eligible VMFS datastore you want to unprotect and select *NetApp ONTAP tools* > *Unprotect datastore*.
+[NOTE]
+You can unprotect only one datastore at a time. Multi-select unprotect is not supported.
+
+. In the confirmation dialog, review the message *This action removes datastore protection. Do you want to continue?*.
+. Optional: Select *Delete associated storage elements (LUNs) and igroups from the secondary storage* to remove replicated LUNs and consistency groups on the target site.
+// Deekshith to provide the correct UI message for this option.
+. Select *Unprotect datastore*.
++
+[NOTE]
+For non-last datastores, behavior differs by storage type:
+
+* For ASA r2, unprotecting a non-last datastore shows the same confirmation message and lets you delete secondary-site resources from the dialog.
+* For ONTAP storage with an asynchronous SnapMirror relationship, unprotecting a non-last datastore is not supported.
+* For ONTAP storage with an AutomatedFailOverDuplex (AFD) relationship, unprotecting a non-last datastore removes the AFD relationship and recreates it because shrinking the consistency group is not supported.
++
+The unprotect operation starts a job that you can monitor in ONTAP tools Manager.
+
+.Result
+The datastore is removed from protection. If it was the last datastore in the protection group, ONTAP tools deletes the protection group and protection settings. If you selected the delete option, target-side replicated LUNs and consistency groups are also removed. For eligible non-last datastores on ONTAP storage (AutomatedFailOverDuplex only), ONTAP tools removes and recreates the AFD relationship as part of the operation.
+
+// 10.6 updates

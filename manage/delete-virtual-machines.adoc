@@ -1,8 +1,8 @@
 ---
 permalink: manage/delete-virtual-machines.html
 sidebar: sidebar
-keywords:
-summary: 'Use the steps in this section to perform VASA cleanup.'
+keywords: VASA cleanup, clean up VASA configurations, ONTAP tools VM removal cleanup, vVol metadata cleanup
+summary: "Run VASA cleanup after deleting virtual machines."
 ---
 = Clean up VASA configurations in ONTAP tools
 :icons: font
