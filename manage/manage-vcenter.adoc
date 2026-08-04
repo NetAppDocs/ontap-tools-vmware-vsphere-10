@@ -1,8 +1,8 @@
 ---
 permalink: manage/manage-vcenter.html
 sidebar: sidebar
-keywords:
-summary: 'vCenters are central management platforms that allow you to control hosts, virtual machines, and storage backends.'
+keywords: manage vCenter instances, add remove vCenter, ONTAP tools vCenter credentials, vCenter certificate management
+summary: "Manage vCenter instances in ONTAP tools to control hosts, virtual machines, and storage backends."
 ---
 = Manage vCenter Server instances in ONTAP tools
 :icons: font
@@ -11,7 +11,7 @@ summary: 'vCenters are central management platforms that allow you to control ho
 [.lead]
 vCenter Server instances are central management platforms that let you control hosts, virtual machines, and storage backends. In ONTAP tools, you can dissociate storage backends, modify instance details, remove instances, and renew vCenter Server certificates.
 
-== Dissociate storage backends with the vCenter Server instance
+== Dissociate storage backends from a vCenter Server instance
 
 The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to associate or disassociate with a storage backend.
 
@@ -19,8 +19,8 @@ The vCenter Server listing page shows the associated number of storage backends.
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select the required vCenter Server instance from the sidebar.
-. Select the vertical ellipses against the vCenter Server that you want to associate or dissociate with storage backends.
+. Select *vCenters* from the sidebar.
+. Select the vertical ellipsis for the vCenter Server that you want to associate or dissociate with storage backends.
 . Select *Dissociate storage backend*.
 
 == Modify a vCenter Server instance
@@ -28,27 +28,70 @@ Modify a vCenter Server instance by completing the following steps.
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select the applicable vCenter Server instance from the sidebar
-. Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
+. Select *vCenters* from the sidebar.
+. Select the vertical ellipsis for the vCenter Server that you want to modify and select *Modify*.
 . In the *Modify vCenter* window, enter the username, password, and port details. 
 . Upload the certificate and select *Modify*.
 
 
 == Remove a vCenter Server instance
-Remove all storage backends from the vCenter Server before removing it.
 
-. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
-. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select the applicable vCenter Server instances from the sidebar
-. Select the vertical ellipses against the vCenter Server that you want to remove and select *Remove*.
-+
+You can remove a vCenter Server instance even when datastores and storage backends are still associated. The *Remove vCenter* dialog guides you through any required actions based on the current state of the vCenter Server.
+
 [NOTE]
-After you remove vCenter Server instances, the application no longer maintains them.
+Force delete removes only ONTAP tools metadata. It does not remove ONTAP storage objects (volumes or LUNs), vSphere datastores, or virtual machines.
 
-When you remove vCenter Server instances in ONTAP tools, ONTAP tools automatically performs the following actions: 
+.Before you begin
+Force delete is blocked if the vCenter Server has vVols datastores or protected datastores. Before proceeding:
+
+* Remove or migrate all vVols datastores.
+* Unprotect all protected datastores.
+* Ensure that no discovery jobs are running. The force delete operation will not proceed if discovery jobs are in progress.
+
+[NOTE]
+Global storage backends shared with other vCenter Server instances are retained. Only the association with the deleted vCenter Server is removed.
+
+.Steps
+
+. Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/`
+. Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
+. Select *vCenters* from the sidebar.
+. Select the vertical ellipsis for the required vCenter Server and select *Remove*.
+. In the *Remove vCenter* dialog, review the state of the vCenter Server and complete any required actions.
++
+The dialog behavior depends on the state of the vCenter Server:
++
+[cols="2,2,3",options="header"]
+|===
+| Condition | Dialog behavior | Required action
+
+| No vVols or protected datastores, but storage backends are associated
+| The dialog displays the number of associated storage backends and datastores.
+| Select *Remove all storage artifacts from this vCenter Server* and *I understand that the associated datastores will no longer be managed by ONTAP tools*.
+
+| No vVols datastores, protected datastores, or storage backends
+| The dialog confirms removal.
+| No additional action required.
+
+|===
+. Select *Force delete*.
+. Confirm the action.
+
+.Result
+
+ONTAP tools performs the following actions automatically:
 
 * Plug-in is unregistered.
 * Plug-in privileges and plug-in roles are removed.
+
+The vCenter Server instance is no longer managed by ONTAP tools.
+
+If the vCenter Server is unreachable during deletion:
+
+* ONTAP tools removes the vCenter Server record.
+* Plugin unregistration does not occur.
+* A warning is displayed.
+* You must manually unregister the plugin from VMware vCenter Server.
 
 == Renew vCenter Server certificate
 // OTVDOC-342 updates
@@ -99,7 +142,7 @@ siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Select the applicable vCenter Server instance from the sidebar
-. Select the vertical ellipses against the vCenter Server that you want to modify and select *Modify*.
+. Select the vertical ellipsis for the vCenter Server that you want to modify and select *Modify*.
 . In the *Modify vCenter* window, enter the username, password, and port details. 
 . Upload the certificate and select *Modify*.
 

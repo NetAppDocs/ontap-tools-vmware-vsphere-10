@@ -1,8 +1,8 @@
 ---
 permalink: deploy/pre-deploy-checks.html
 sidebar: sidebar
-keywords: ONTAP tools,Storage Replication Adapter
-summary: 'Before deploying the ONTAP tools for VMware vSphere, you should be familiar with the space requirements for the deployment package and some basic host system requirements.'
+keywords: pre-deployment checklist, deployment worksheet, certificates, vCenter Server
+summary: "Complete the pre-deployment checklist for ONTAP tools, including vSphere compatibility, sizing, certificates, and network requirements."
 ---
 = Pre-deployment requirements for ONTAP tools
 :icons: font
@@ -29,16 +29,23 @@ Ensure the following requirements are met before you proceed with the deployment
 === For single node deployment
 Use the following worksheet to gather the required information for ONTAP tools for VMware vSphere initial deployment:
 
+[cols="3,1"]
 |===
 |Requirement|Your value
 
-|IP address for the ONTAP tools application. This is the IP address for accessing the ONTAP tools manager web interface (load balancer) at `\https://<ip>:8443/virtualization/ui/`|
-|ONTAP tools virtual IP address for internal communication. This IP address is used for internal communication in a setup with multiple ONTAP tools instances. This IP address should not be the same as the IP address for the ONTAP tools application. (The Kubernetes Control Plane)|
+|ONTAP tools IP address (formerly load balancer). This external IP address is used to access the ONTAP tools Manager interface at `\https://<ip>:8443/virtualization/ui/`, send API calls, and access the ONTAP tools plug-in from the vCenter interface.
+// updated for https://jira.ngage.netapp.com/browse/OTVDOC-367
+|
+|ONTAP tools virtual IP address (formerly node interconnect). This IP address is assigned to the Kubernetes API server and acts as the virtual IP address for the Kubernetes control plane in single-node and multi-node deployments. It is used for internal cluster communication and Kubernetes management, and it must be different from the ONTAP tools IP address.
+// updated for https://jira.ngage.netapp.com/browse/OTVDOC-367 
+|
 |DNS hostname for the ONTAP tools management node|
 |Primary DNS server|
 |Secondary DNS server|
 |DNS search domain|
-|IPv4 address for the ONTAP tools management node. It is a unique IPv4 address for the node management interface on the management network. This is used to connect to the ONTAP tools appliance for remote diagnostic access over SSH.|
+|IPv4 address for the ONTAP tools management node. In a single-node deployment, this address maps to the specified host name for the ONTAP tools VM. In an HA deployment, you must provide additional IPv4 addresses for the two additional ONTAP tools VMs.
+// updated for https://jira.ngage.netapp.com/browse/OTVDOC-367
+|
 |Subnet mask for the IPv4 address|
 |Default gateway for the IPv4 address|
 |IPv6 address (optional) |
@@ -53,6 +60,7 @@ Create DNS records for all the above IP addresses. Before assigning hostnames, m
 
 === For High availability (HA) deployment
 In addition to the single node deployment requirements, you'll need the following information for HA deployment:
+[cols="3,1"]
 |===
 |Requirement|Your value
 |Primary DNS server|

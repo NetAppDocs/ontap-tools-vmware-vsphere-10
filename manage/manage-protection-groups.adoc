@@ -1,0 +1,98 @@
+---
+permalink: manage/manage-protection-groups.html
+sidebar: sidebar
+keywords: manage protection groups, SnapMirror relationships, datastore disaster recovery, ONTAP tools replication groups
+summary: "View, edit, and delete protection groups and their relationships in ONTAP tools."
+---
+= Manage protection groups in ONTAP tools
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Use this task to view, edit, and delete protection groups and their relationships from the Protection groups page in ONTAP tools.
+// 10.6 updates need review- jani
+
+.Before you begin
+
+* Ensure you have administrative privileges in vSphere.
+* Ensure your ONTAP tools user account has permissions to manage protection groups.
+
+[IMPORTANT]
+Before you edit or remove protection, review the warning messages in the dialog. Removing relationships can impact backup and consistency behavior.
+
+.About this task
+
+* ONTAP tools updates local protection records in the selected ONTAP tools instance.
+* If you select *Delete associated storage elements*, ONTAP tools removes storage elements in the protection group.
+* If you do not select *Delete associated storage elements*, manually remove destination-side relationships and storage elements in ONTAP.
+
+== View protection groups
+
+.Steps
+// updated the procedure for 10.6 updates
+. In the ONTAP tools plug-in, navigate to *Protection* > *Protection groups*.
++
+The protection groups list shows associated relationships, including consistency groups, SnapMirror policies, and protected datastores.
+. Review the protection group details, including the number of protected datastores.
+
+== Edit protection group relationships
+
+.Steps
+. In the ONTAP tools plug-in, navigate to *Protection* > *Protection groups*.
+. Select the vertical ellipsis (three dots) next to the protection group you want to edit.
+. Select *Edit protection group*.
+. Update the relationship settings:
+.. If a protection group has an Automated Failover Duplex (AFD) relationship, you can add an asynchronous relationship.
+.. If a protection group has an asynchronous relationship, you can add an Automated Failover Duplex (AFD) relationship.
+.. If a protection group has both Automated Failover Duplex (AFD) and asynchronous relationships, you can remove either relationship from the *Edit protection group* window.
+.. Each protection group can have only one Automated Failover Duplex (AFD) relationship and one asynchronous relationship.
+.. To use a different AFD relationship, remove the existing AFD relationship and then add the new AFD relationship.
+.. If you remove an existing relationship in the *Edit protection group* window, review the warning that removing the relationship can impact backups and consistency.
+.. If you remove an asynchronous relationship in the *Edit protection group* window, destination-side storage resources are not deleted automatically. Manually remove destination-side relationships and storage elements in ONTAP.
+
+// include restriction
+[NOTE]
+Edit operations are limited to supported relationship settings. Refer to your protection policy and workflow requirements before saving changes.
+
+== Remove a protection group
+
+.Steps
+. In the ONTAP tools plug-in, navigate to *Protection* > *Protection groups*.
+. Select the vertical ellipsis (three dots) next to the protection group you want to remove.
+. Select *Remove protection*.
+. In the *Remove protection* dialog, review the message that removing host cluster protection results in unprotected datastores.
+. Optional: Select *Delete associated storage elements* (cleanup artifacts) to remove storage elements in the protection group.
++
+Storage elements can include consistency groups, volumes, storage units, and snapshots.
+. If you do not select *Delete associated storage elements*, ONTAP tools removes only local protection records. Manually remove destination-side relationships and storage elements in ONTAP.
+
+.Relationship delete behavior
+
+[cols="1,1,1,1"]
+|===
+|Relationship type |Delete scope |Automatic cleanup |Manual cleanup required
+
+|Automated Failover Duplex (AFD)
+|Deleting protection on either site deletes the relationship on both sites.
+|Relationship records are removed as part of the workflow.
+|If you do not select *Delete associated storage elements*, manually remove remaining storage elements as needed.
+
+|Asynchronous
+|Delete applies to the local ONTAP tools instance only; cross-site delete is not available.
+|Local protection records are removed.
+|Manually remove destination-side relationships and storage elements in ONTAP.
+|===
+
+.Result
+
+* ONTAP tools removes local protection records for the selected protection group.
+* If you selected *Delete associated storage elements*, ONTAP tools removes the selected storage elements in the protection group.
+* If destination-side relationships or storage elements remain, remove them manually in ONTAP.
+
+.Related topics
+
+* link:../manage/protect-ds.html[Protect a VMFS datastore]
+* link:../protect/protect-multiple-ds.html[Protect multiple datastores]
+* link:../protect/config-proximity.html[Configure cluster for datastore protection with ONTAP tools]
+
+// 10.6 updates

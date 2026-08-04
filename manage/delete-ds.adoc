@@ -1,46 +1,90 @@
 ---
 permalink: manage/delete-ds.html
 sidebar: sidebar
-keywords: vVols datastore,delete vVol
-summary: 'Delete datastore action deletes the datastore. In the case of an NFS or VMFS datastore, a dialog box appears with the list of VMs that are using the datastore.'
+keywords: delete datastore, ONTAP tools datastore removal, delete NFS VMFS vVol datastore, VMware datastore cleanup
+summary: "Delete an NFS, VMFS, or vVols datastore and review virtual machines that use it before removal."
 ---
 = Delete datastores in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-This page describes how to delete NFS, VMFS, or vVols datastores using ONTAP tools in the vCenter Server.
+Use this task to delete NFS, VMFS, or vVols datastores by using ONTAP tools in vCenter Server.
+Deletion behavior and cleanup options differ by datastore type.
 
-When you delete a datastore, the following actions are performed depending on the datastore type:
+.Deletion behavior for NFS and VMFS datastores
+
+* You cannot delete a datastore that is used by virtual machines.
+* For protected host clusters, additional protection constraints apply.
+
+.Deletion behavior for vVols datastores
+
+For vVols datastores, the following actions are performed:
 
 * The vVol container is unmounted.
 * If the igroup is not in use, its initiators are removed from the igroup.
 * The vVol container is deleted.
 * Flex volumes are left on the storage array. 
 
-You can delete the datastore only if no vVols are present on the selected datastore.
+For vVols datastores, you can delete the datastore only if no vVols are present on the selected datastore.
+
+.Before you begin
+
+* Verify that the datastore is not in use by virtual machines.
+* Check whether the datastore belongs to a protected host cluster.
+* Decide whether to delete backing volumes on the ONTAP cluster during datastore deletion.
+
+.Quick reference: datastore delete behavior
+
+[cols="1,1,2,2"]
+|===
+|Datastore type |Can you delete it? |Primary blocking condition |ONTAP cleanup option
+
+|NFS
+|Yes
+|The datastore is in use by virtual machines.
+|You can select *Delete volumes on ONTAP cluster* when applicable.
+
+|VMFS
+|Yes
+|The datastore is in use by virtual machines, or host cluster protection constraints apply.
+|You can select *Delete volumes on ONTAP cluster*. For protected host clusters on ONTAP storage, deleting the volume from ONTAP is not supported.
+
+|vVols
+|Yes, conditionally
+|One or more vVols are present on the datastore.
+|You can select the option to remove volumes from ONTAP, except on ASA r2 where deleting backing volumes from ONTAP is not supported from this workflow.
+|===
 
 .Steps
 
-. Log in to the vSphere client.
+. Log in to the vSphere Client.
 . Right-click on a host system, a host cluster, or a data center and select *NetApp ONTAP tools* > *Delete datastore*.
 +
 [NOTE]
-You cannot delete a datastore used by virtual machines. Move virtual machines to another datastore before deleting. You cannot delete the volume if it is part of a protected host cluster.
+You cannot delete a datastore used by virtual machines. Move virtual machines to another datastore before deleting.
 
-.. In the case of an NFS or VMFS datastore, a dialog box appears with the list of VMs using the datastore.
-.. If no virtual machines are associated with a VMFS datastore, you see a confirmation dialog. If host cluster protection is enabled and an AFD relationship exists, you can clean up secondary storage elements.
-// 10.5 updates for Hierarchical CG feature
-.. For protected VMFS datastores on ASA r2 systems, remove protection before deleting. Beginning with ONTAP 9.17.1 and ONTAP tools for VMware vSphere 10.5, you can delete a protected datastore. If it is the only datastore in the protection group, host cluster protection removes automatically.
++
+[NOTE]
+If the datastore is part of a protected host cluster, review protection constraints before deleting.
+
+.. For an NFS or VMFS datastore, a dialog box appears with a list of VMs using the datastore.
+.. If no virtual machines are associated with a VMFS datastore, you see a confirmation dialog. If host cluster protection is enabled and an Automated Failover Duplex (AFD) relationship exists, you can clean up secondary storage elements.
+.. For protected VMFS datastores on ASA r2 storage systems, remove protection before deleting. Beginning with ONTAP 9.17.1 and ONTAP tools for VMware vSphere 10.5, you can delete a protected datastore.
++
+For last-datastore deletion with Automated Failover Duplex (AFD), ONTAP tools displays this message: *The datastore is protected. The protection will be removed before deletion.*
 // 10.3 updates for ASA r2
++
+If you delete the last protected datastore in a protection group, ONTAP tools shows a message that deleting the last datastore results in an unprotected datastore.
+// 10.6 updates, needs review - jani
 .. For vVols datastores, you can delete the datastore only if there are no vVols present. The *Delete datastore* dialog box includes an option to remove volumes from the ONTAP cluster.
-.. For vVols datastores on ASA r2 systems, you cannot delete the backing volumes from ONTAP using the *Delete datastore* option.
+.. For vVols datastores on ASA r2 storage systems, you cannot delete the backing volumes from ONTAP using the *Delete datastore* option.
 . To delete the backing volumes on ONTAP storage, select *Delete volumes on ONTAP cluster*.
 +
 [NOTE]
-For VMFS datastores on unified ONTAP storage that are part of a protected host cluster, you cannot delete the volume from the ONTAP cluster.
+For VMFS datastores on ONTAP storage that are part of a protected host cluster, you cannot delete the volume from the ONTAP cluster.
 
-When you delete an NFS, VMFS, or vVols datastore, parent igroups remain on the ONTAP system. Child igroups that are not mapped to any LUNs are deleted automatically. ONTAP tools perform a daily cleanup to remove unmapped default parent igroups. Delete the custom parent igroups manually in ONTAP. ONTAP tools cannot reuse stale parent igroups.
+When you delete an NFS, VMFS, or vVols datastore, parent igroups remain on the ONTAP system. Child igroups that are not mapped to any LUNs are deleted automatically. ONTAP tools performs a daily cleanup to remove unmapped default parent igroups. Delete the custom parent igroups manually in ONTAP. ONTAP tools cannot reuse stale parent igroups.
 
 // OTVDOC-321 - jani
 //NADIAA checked

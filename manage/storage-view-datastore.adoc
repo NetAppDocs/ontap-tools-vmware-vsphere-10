@@ -1,8 +1,8 @@
 ---
 permalink: manage/storage-view-datastore.html
 sidebar: sidebar
-keywords: Remove vVol datastore
-summary: 'The ONTAP storage view under the Configure tab of ONTAP tools for VMware vSphere provides data related to the datastore and its volumes.'
+keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility
+summary: "View datastore and volume details from the ONTAP Storage page in ONTAP tools for VMware vSphere."
 ---
 = ONTAP storage views for datastores in ONTAP tools
 :icons: font
@@ -12,9 +12,8 @@ summary: 'The ONTAP storage view under the Configure tab of ONTAP tools for VMwa
 ONTAP tools for VMware vSphere shows the ONTAP storage-side view of the datastores and their volumes on the Configure tab, including storage backend, aggregate, and volume details for each datastore type.
 
 .Steps
-
-. From the vSphere client, go to the datastore.
-. Select the *Configure* tab in the right pane. 
+. In the vSphere Client inventory, select the datastore.
+. Select the *Configure* tab in the right pane.
 . Select *NetApp ONTAP tools* > *ONTAP Storage*. The view changes by datastore type. See the table below:
 
 |===
@@ -22,6 +21,9 @@ ONTAP tools for VMware vSphere shows the ONTAP storage-side view of the datastor
 |NFS datastore |The *Storage details* page contains storage backend, aggregate, and volume information.
 
 The *NFS details* page contains data related to the NFS datastore.
+
+Note: If the nconnect value is changed outside ONTAP tools, the value shown in ONTAP tools might not reflect that external change.
+//  for 10.6 nconnect feature 
 
 |VMFS datastores |The *Storage details* page contains storage backend, aggregate, volume, and storage availability zone (SAZ) details.
 
@@ -31,5 +33,9 @@ The *Storage unit details* page contains details of the storage unit.
 ONTAP tools for VMware vSphere does not support this view for ASA r2 system-based vVols datastores.
 
 |===
+
+.Result
+
+You can review ONTAP-side datastore details based on the selected datastore type.
 
 // NADIAA checked

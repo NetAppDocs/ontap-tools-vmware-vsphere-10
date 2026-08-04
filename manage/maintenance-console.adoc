@@ -1,8 +1,8 @@
 ---
 permalink: manage/maintenance-console.html
 sidebar: sidebar
-keywords:
-summary: 'You can manage your application, system, and network configurations by using the maintenance console of the ONTAP tools. You can change your administrator password and maintenance password. You can also generate support bundles, set different log levels, view and manage TLS configurations, and start remote diagnostics.'
+keywords: ONTAP tools maintenance console, appliance system management, support bundle generation, TLS and network configuration
+summary: "Manage ONTAP tools configurations, reset passwords, generate support bundles, and configure TLS settings."
 ---
 = Learn about the ONTAP tools maintenance console
 :icons: font
@@ -23,23 +23,23 @@ You should use the *Summary* tab of your deployed ONTAP tools for VMware vSphere
 a|
 Application Configuration
 a|
-// updated for 10.0 release
 
 . Display server status summary
 . Change LOG level for ONTAP tools services
 . Change cert validation flag
-// 10.5 updates
 a|
 System Configuration
 a|
 
 . Reboot virtual machine
-. Shutdown virtual machine
-. Change 'maint' user password
+. Shut down virtual machine
+. Generate token to reset manager UI password
 . Change time zone
 . Increase jail disk size (/jail)
 . Upgrade
 . Install VMware Tools
+. Update vCenter credentials
+. Refresh ONTAP tools services certificates
 
 a|
 Network Configuration
