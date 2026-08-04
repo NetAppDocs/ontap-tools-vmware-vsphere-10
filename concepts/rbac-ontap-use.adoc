@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: ONTAP RBAC deployment, custom roles, user configuration, JSON role definition
 summary: "Review ONTAP RBAC considerations for ONTAP tools before using it in a production environment."
 ---
-= ONTAP RBAC considerations for ONTAP tools
+= ONTAP RBAC in ONTAP tools for VMware vSphere
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implementation with ONTAP you should consider before using it in a production environment.
+ONTAP tools for VMware vSphere supports role-based access control (RBAC) through ONTAP, enabling you to create custom users and roles that restrict access to storage resources. Understanding the configuration process and privilege levels helps you set up appropriate access controls before deploying ONTAP tools in a production environment.
 
 == Overview of the configuration process
 
 ONTAP tools for VMware vSphere includes support for creating an ONTAP user with a custom role. The definitions are packaged in a JSON file that you can upload to the ONTAP cluster. You can create the user and tailor the role for your environment and security needs.
 
-The major configuration steps are described at a high level below. Refer to link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges] for more details.
+The following section describes the major configuration steps at a high level. Refer to link:../configure/configure-user-role-and-privileges.html[Configure ONTAP user roles and privileges] for more details.
 
 .1. Prepare
 
@@ -30,7 +30,7 @@ After signing in to the ONTAP tools Manager user interface, you can download the
 After signing in to System Manager, you can create the user and role:
 
 .. Select *Cluster* on the left and then *Settings*.
-.. Scroll down to *Users and roles* and click `-->`.
+.. Scroll down to *Users and roles* and select `-->`.
 .. Select *Add* under *Users* and select *Virtualization products*.
 .. Select the JSON file on your local workstation and upload it.
 
@@ -48,7 +48,7 @@ The RBAC definitions are packaged as several product capabilities, including com
 
 === Privileges
 
-The role privileges are arranged in four sets based on the level of access needed for ONTAP storage. The privileges which the roles are based on include:
+The role privileges are arranged in four sets based on the level of access needed for ONTAP storage. The privileges that the roles are based on include:
 
 * Discovery
 +
@@ -68,7 +68,7 @@ This role enables you to destroy storage. It also includes all the privileges as
 
 === Generate the user with a role
 
-After you've selected the configuration options for your environment, click *Add* and ONTAP creates the user and role. The name of the generated role is a concatenation of the following values:
+After you've selected the configuration options for your environment, select *Add* and ONTAP creates the user and role. The name of the generated role is a concatenation of the following values:
 
 * Constant prefix value defined in the JSON file (for example "OTV_10")
 * Product capability you selected
@@ -78,6 +78,6 @@ After you've selected the configuration options for your environment, click *Add
 
 `OTV_10_VSC_Discovery_Create`
 
-The new user will be added to the list on the 'Users and roles' page. Note that both HTTP and ONTAPI user login methods are supported.
+The new user appears in the list on the *Users and roles* page. Note that both HTTP and ONTAPI user login methods are supported.
 
 // Jan 28 2025 - OTVDOC-179

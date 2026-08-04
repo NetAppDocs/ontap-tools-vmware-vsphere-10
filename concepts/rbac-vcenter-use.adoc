@@ -5,7 +5,7 @@ keywords: vCenter RBAC implementation, custom roles, vSphere permissions, ONTAP 
 summary: "Review vCenter Server RBAC considerations for ONTAP tools before using it in a production environment."
 ---
 
-= vCenter Server RBAC considerations for ONTAP tools
+= How vCenter Server RBAC works with ONTAP tools for VMware vSphere
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: "Review vCenter Server RBAC considerations for ONTAP tools before using
 :imagesdir: ../media/
 
 [.lead]
-There are several aspects of the ONTAP tools for VMware vSphere 10 RBAC implementation with vCenter Server you should consider before using it in a production environment.
+ONTAP tools for VMware vSphere implements role-based access control (RBAC) with vCenter Server to control access to vSphere objects and administrative tasks. Understanding the RBAC model — including predefined roles, permission assignments, and how vCenter and ONTAP privileges interact — helps you configure appropriate access before deploying ONTAP tools in a production environment.
 
 == vCenter roles and the administrator account
 
@@ -34,8 +34,8 @@ To simplify working with vCenter Server RBAC, ONTAP tools for VMware vSphere pro
 [NOTE]
 You can create new custom roles if needed. To do so, clone one of the existing ONTAP tools roles and edit it as needed. After making the configuration changes, the affected vSphere client users need to log out and log back in to activate the changes.
 
-To view the ONTAP tools for VMware vSphere roles, select *Menu* at the top of the vSphere Client and click *Administration* and then *Roles* on the left. 
-The following privileges must be included in the role assigned to the vCenter user responsible for deploying or onboarding vCenter Server. Ensure these privileges are configured as a prerequisite for the deployment or onboarding process.
+To view the ONTAP tools for VMware vSphere roles, select *Menu* at the top of the vSphere Client, select *Administration*, and then select *Roles* on the left.
+The following privileges must be included in the role assigned to the vCenter user responsible for deploying or onboarding vCenter Server. Verify that these privileges are configured before starting the deployment or onboarding process.
 
 * Alarms
 ** Acknowledge alarm
@@ -145,7 +145,7 @@ The following privileges must be included in the role assigned to the vCenter us
 *** Revert to snapshot
 // OTVDOC-334 update
 
-There are three predefined roles as described below.
+ONTAP tools for VMware vSphere includes three predefined roles.
 
 .NetApp ONTAP tools for VMware vSphere Administrator
 Provides all the native vCenter Server privileges and ONTAP tools-specific privileges required to perform core ONTAP tools for VMware vSphere administrator tasks.
@@ -163,19 +163,19 @@ Provides some of the native vCenter Server privileges and ONTAP tools-specific p
 
 == vSphere objects and ONTAP storage backends
 
-The two RBAC environments work together. When performing a task in the vSphere client interface, the ONTAP tools roles defined to vCenter Server are checked first. If the operation is permitted by vSphere, then the ONTAP role privileges are examined. This second step is performed based on the ONTAP role assigned to the user when the storage backend was created and configured.
+The two RBAC environments work together. When you perform a task in the vSphere Client, ONTAP tools checks the vCenter Server roles first. If the operation is permitted by vSphere, then the ONTAP role privileges are examined. This second step is performed based on the ONTAP role assigned to the user when the storage backend was created and configured.
 
 == Working with vCenter Server RBAC
 
-There are a few things to consider when working with the vCenter Server privileges and permissions.
+Keep the following in mind when working with vCenter Server privileges and permissions.
 
 === Required privileges
 
-To access the ONTAP tools for VMware vSphere 10 user interface, you need to have the ONTAP tools-specific _View_ privilege. If you sign in to vSphere without this privilege and click the NetApp icon, ONTAP tools for VMware vSphere displays an error message and prevents you from accessing the user interface.
+To access the ONTAP tools for VMware vSphere 10 user interface, you need to have the ONTAP tools-specific _View_ privilege. If you sign in to vSphere without this privilege and select the NetApp icon, ONTAP tools for VMware vSphere displays an error message and prevents you from accessing the user interface.
 
 The assignment level in the vSphere object hierarchy determines which portions of the user interface you can access. Assigning the View privilege to the root object enables you to access ONTAP tools for VMware vSphere by clicking the NetApp icon.
 
-You can instead assign the View privilege to another lower vSphere object level. However, this will limit the ONTAP tools for VMware vSphere menus that you can access and use.
+You can instead assign the View privilege to another lower vSphere object level. However, this limits the ONTAP tools for VMware vSphere menus that you can access.
 
 === Assigning permissions
 
@@ -186,7 +186,7 @@ Unless you need to define more restrictive access, it's generally a good practic
 
 The permissions available with ONTAP tools for VMware vSphere 10 apply to custom non-vSphere objects, such as storage systems. If possible, you should assign these permissions to ONTAP tools for VMware vSphere root object because there is no vSphere object you can assign it to. For example, any permission that includes an ONTAP tools for VMware vSphere "Add/Modify/Remove storage systems" privilege should be assigned at the root object level.
 
-When defining a permission at a higher level in the object hierarchy, you can configure the permission so it is passed down and inherited by the child objects. If needed you can assign additional permissions to the child objects that override the permissions inherited from the parent.
+When defining a permission at a higher level in the object hierarchy, you can configure the permission so it is passed down and inherited by the child objects. If needed, you can assign additional permissions to the child objects that override the permissions inherited from the parent.
 
 You can modify a permission at any time. If you change any of the privileges within a permission, users associated with the permission need to log out of vSphere and log back in to enable the change.
 
