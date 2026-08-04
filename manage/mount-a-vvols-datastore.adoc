@@ -13,7 +13,7 @@ You can mount a VMware Virtual Volumes (vVols) datastore to one or more addition
 // Unsupported parameter combinations for datastore unmount are not available in the REST API schema.
 
 [NOTE]
-After adding the host, wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen. For information on how to add an ESXi host to your vSphere cluster, refer to [Broadcom Technical Documentation](https://techdocs.broadcom.com/).
+After adding the host, wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen. For information on how to add an ESXi host to your vSphere cluster, refer to https://techdocs.broadcom.com/[Broadcom Technical Documentation].
 
 // OTVDOC-325 updates
 .Steps
