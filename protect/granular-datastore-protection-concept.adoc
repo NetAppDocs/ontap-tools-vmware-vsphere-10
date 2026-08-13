@@ -5,7 +5,7 @@ keywords: granular datastore protection, VMFS datastore eligibility, protection 
 summary: "Understand granular datastore protection and the datastore eligibility criteria before protecting datastores in a host cluster."
 ---
 
-= Granular datastore protection eligibility criteria
+= Granular datastore protection eligibility criteria in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
