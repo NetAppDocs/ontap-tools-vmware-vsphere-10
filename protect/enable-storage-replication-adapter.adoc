@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable SRA, VMware Live Site Recovery, disaster recovery, SnapMirror schedules, ONTAP tools
 summary: "Enable SRA in ONTAP tools to support VMware Live Site Recovery disaster recovery workflows."
 ---
-= Enable SRA in ONTAP tools to protect datastores
+= Configure SRA in ONTAP tools to protect datastores
 :icons: font
 :imagesdir: ../media/
 
