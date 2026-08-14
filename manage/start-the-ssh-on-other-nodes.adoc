@@ -9,7 +9,7 @@ summary: "Start SSH on other nodes before you run an upgrade."
 :imagesdir: ../media/
 
 [.lead]
-Before you upgrade ONTAP tools for VMware vSphere, you need to start SSH on each of the other nodes in your environment.
+Before you upgrade ONTAP tools for VMware vSphere, start SSH on each of the other nodes in your environment.
 
 .Before you begin
 
@@ -24,9 +24,9 @@ Repeat this procedure on each node before upgrading.
 . Log in to the vCenter Server.
 . Locate the ONTAP tools node VM and launch the web console.
 . Log in using the `maint` credentials.
-. Enter `4` to select Support and Diagnostics.
-. Enter `1` to select Access diagnostic shell.
+. Enter `4` to select *Support and Diagnostics*.
+. Enter `1` to select *Access diagnostic shell*.
 . Enter `y` to proceed.
-. Run the command _sudo systemctl restart ssh_.
+. Run the command `sudo systemctl restart ssh`.
 
 // NADIAA checked
