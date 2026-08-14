@@ -9,8 +9,7 @@ summary: "Delete an NFS, VMFS, or vVols datastore and review virtual machines th
 :imagesdir: ../media/
 
 [.lead]
-Use this task to delete NFS, VMFS, or vVols datastores by using ONTAP tools in vCenter Server.
-Deletion behavior and cleanup options differ by datastore type.
+Delete NFS, VMFS, or vVols datastores in vCenter Server by using ONTAP tools. Deletion behavior and cleanup options vary by datastore type.
 
 .Deletion behavior for NFS and VMFS datastores
 
@@ -24,7 +23,7 @@ For vVols datastores, the following actions are performed:
 * The vVol container is unmounted.
 * If the igroup is not in use, its initiators are removed from the igroup.
 * The vVol container is deleted.
-* Flex volumes are left on the storage array. 
+* Flex volumes are left on the storage backend. 
 
 For vVols datastores, you can delete the datastore only if no vVols are present on the selected datastore.
 
@@ -59,7 +58,7 @@ For vVols datastores, you can delete the datastore only if no vVols are present 
 .Steps
 
 . Log in to the vSphere Client.
-. Right-click on a host system, a host cluster, or a data center and select *NetApp ONTAP tools* > *Delete datastore*.
+. Right-click a host system, host cluster, or data center and select *NetApp ONTAP tools* > *Delete datastore*.
 +
 [NOTE]
 You cannot delete a datastore used by virtual machines. Move virtual machines to another datastore before deleting.

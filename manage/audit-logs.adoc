@@ -10,7 +10,7 @@ summary: "Review how ONTAP tools captures, retains, and monitors audit logs for 
 :imagesdir: ../media/
 
 [.lead]
-Use this task to manage audit logging behavior and operational response in ONTAP tools for VMware vSphere. Audit logs provide an event trail that shows who performed an action, what action was performed, when it occurred, the request source, and whether it succeeded or failed.
+Manage audit logging in ONTAP tools for VMware vSphere. Audit logs show who performed an action, what happened, when it occurred, the request source, and whether the action succeeded or failed.
 // 10.6 topic
 
 .Before you begin
