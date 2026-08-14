@@ -9,11 +9,11 @@ summary: "Configure user roles and privileges for storage backends with the JSON
 :imagesdir: ../media/
 
 [.lead]
-Use this section to configure ONTAP user roles and privileges for storage backends with ONTAP tools for VMware vSphere and ONTAP System Manager. You can assign roles using the provided JSON files, manually create users and roles, and apply the minimum required privileges for non-admin accounts.
+Configure ONTAP user roles and privileges for storage backends by using ONTAP tools for VMware vSphere and ONTAP System Manager. You can assign roles with the provided JSON files, manually create users and roles, or apply the minimum required privileges for non-admin accounts.
 
 .Before you begin
 
-* Download the ONTAP Privileges file from ONTAP tools for VMware vSphere using _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_. After downloading the zip file, you find two JSON files. Use the ASA r2-specific JSON file when configuring an ASA r2 system.
+* Download the ONTAP Privileges file from ONTAP tools for VMware vSphere at _\https://<ONTAPtoolsIP>:8443/virtualization/user-privileges/users_roles.zip_. The zip file contains two JSON files. Use the ASA r2-specific JSON file when you configure an ASA r2 system.
 +
 [NOTE]
 You can create users at the cluster level or directly at the storage virtual machines (SVMs) level. If you do not use the user_roles.json file, ensure the user has the minimum required SVM permissions.
@@ -31,7 +31,7 @@ You can create users at the cluster level or directly at the storage virtual mac
 .. *Browse* to select and upload the ONTAP Privileges JSON file. For non-ASA r2 systems, select users_roles.json file and for ASA r2 systems, select users_roles_ASAr2.json file.
 +
 ONTAP tools automatically populates the Product field.
-.. Select the product capability as *VSC, VASA Provider and SRA* from the drop-down.
+.. Select the product capability as *VSC, VASA Provider, and SRA* from the drop-down list.
 // updated for OTVDOC-257
 +
 ONTAP tools automatically populates the *Role* field based on the product capability you select.
@@ -79,11 +79,10 @@ Add the *REST API Path* and choose the access from the drop-down list.
 .. Select *Role* from the options created in the *Create Roles* step above.
 .. Enter the applications to which you want to give access and the authentication method. ONTAPI and HTTP are the required applications, and the authentication type is *Password*. 
 .. Set the *Password for the User* and *Save* the user.
- 
 
-=== List of minimum privileges required for non-admin global scoped cluster user
+=== List of minimum privileges required for a non-admin, global-scoped cluster user
 
-This page lists the minimum privileges required for a non-admin global-scoped cluster user without a JSON file.
+This page lists the minimum privileges required for a non-admin, global-scoped cluster user without a JSON file.
 If a cluster is in local scope, use the JSON file to create users because ONTAP tools for VMware vSphere needs more than just the Read privileges for provisioning on ONTAP.
 
 You can access functionality by using APIs:
