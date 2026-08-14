@@ -13,8 +13,8 @@ By default, all IP addresses discovered from the ESXi host are automatically add
 
 .Steps
 . Log in to the vSphere client.
-. Select *NetApp ONTAP tools* in the shortcuts page under the plug-ins section.
+. Select *NetApp ONTAP tools* on the shortcuts page under the plug-ins section.
 . In the left pane of ONTAP tools, go to *Settings* > *Manage Network Access* > *Edit*. 
 +
-To add multiple IP addresses, separate the list with commas, range, Classless Inter-Domain Routing (CIDR), or a combination of all three.
+To add multiple IP addresses, specify them as a comma-separated list, an IP range, a Classless Inter-Domain Routing (CIDR) block, or a combination of these formats.
 . Select *Save*.

@@ -9,7 +9,7 @@ summary: "Associate a global storage backend with a vCenter Server instance in O
 :imagesdir: ../media/
 
 [.lead]
-Use this task to associate a global storage backend with a vCenter Server instance. A global storage backend is a backend added in ONTAP tools Manager that is not yet associated with specific vCenter Server instances. For NetApp MetroCluster configurations, when you associate a storage backend cluster, also associate its peer cluster with the vCenter Server.
+Associate a global storage backend with a vCenter Server instance to make it available for datastore operations. A global storage backend is a backend added in ONTAP tools Manager that is not yet associated with specific vCenter Server instances.
 
 //[NOTE]
 //When associating a storage backend globally, you must explicitly assign it to the intended vCenter Server instances. For vVols workflows, you might need to onboard both the cluster and the SVM at the vCenter level.
@@ -19,6 +19,12 @@ Use this task to associate a global storage backend with a vCenter Server instan
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
-. Select vCenter from the sidebar.
+. Select *vCenters* from the sidebar.
 . Select the vertical ellipsis next to the vCenter Server instance that you want to connect to the storage backends.
 . From the dropdown menu, choose the storage backend you want to associate with the selected vCenter Server instance.
+
+[NOTE]
+For NetApp MetroCluster configurations, when you associate a storage backend cluster, also associate its peer cluster with the vCenter Server.
+
+.What's next?
+ONTAP tools associates the selected storage backend with the vCenter Server instance, making it available for datastore operations in that vCenter Server environment.
