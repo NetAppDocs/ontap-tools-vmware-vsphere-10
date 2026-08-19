@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: ONTAP tools igroup workflow, export policy management, initiator group mapping, VMware datastore access control
 summary: "Understand how ONTAP tools creates and manages igroups and export policies for datastore access."
 ---
-= How ONTAP tools manages igroups and export policies
+= Igroup and export policy workflows in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Initiator groups (igroups) are tables of FC protocol host World Wide Port Name (WWPNs) or iSCSI host qualified node names. You can define igroups and map them to LUNs to control which initiators have access to LUNs.
+Use this information to understand how ONTAP tools for VMware vSphere creates and manages igroups and export policies for datastore access.
 
 In ONTAP tools for VMware vSphere 9.x, igroups were created and managed in a flat structure, where each datastore in vCenter was associated with a single igroup. This model limited flexibility and reuse of igroups across multiple datastores.
 ONTAP tools for VMware vSphere 10.4 introduces nested igroups, where each datastore in vCenter is associated with a parent igroup, while each host is linked to a child igroup under that parent. You can define custom parent igroups with user-defined names for reuse across datastores to make igroup management easier.
-Understand the igroup workflow to manage LUNs and datastores in ONTAP tools for VMware vSphere.
+Use this information to understand how ONTAP tools for VMware vSphere manages LUNs and datastores through igroup workflows.
 Different workflows generate varying igroup configurations, as shown in the following examples:
 [NOTE]
 The names mentioned are for illustration purposes only and don't refer to real igroup names. ONTAP tools managed igroups use the prefix “otv_”. Custom igroups can be given any name.
@@ -54,7 +54,7 @@ Mount existing datastore to an additional host
 ** host1Igroup → (iqn1: lun1)
 ** host2Igroup → (iqn2: lun1)
 
-ONTAP tools for VMware vSphere create a child igroup host2Igroup and add it to the existing parent igroup DS1Igroup.
+ONTAP tools for VMware vSphere creates a child igroup host2Igroup and adds it to the existing parent igroup DS1Igroup.
 
 .Example 3:
 
@@ -167,7 +167,7 @@ Migration from ONTAP tools 9 to 10 (igroup normalization)
 
 *Workflow*
 
-ONTAP tools for VMware vSPhere 9.x versions don't support hierarchical igroups. During migration to 10.3 or above versions, igroups must be normalized into the hierarchical structure.
+ONTAP tools for VMware vSphere 9.x versions don't support hierarchical igroups. During migration to 10.3 or above versions, igroups must be normalized into the hierarchical structure.
 
 Before migration:
 
@@ -209,7 +209,7 @@ When you mount an NFS datastore on a new ESXi host, ONTAP tools for VMware vSphe
 
 When you delete or unmount an NFS datastore from an ESXi host, ONTAP tools for VMware vSphere removes the host's IP address from the export policy. If no other hosts are using that export policy, it will be deleted.
 When you delete an NFS datastore, ONTAP tools for VMware vSphere removes the export policy associated with that datastore if it is not reused by any other datastores. If the export policy is reused, it keeps the host IP address and does not change.
-When you delete the datastores, the export policy unassigns the host IP address and assigns a default export policy, so that the ONTAP systems can access them if required.  
+When you delete datastores, ONTAP tools removes the host IP address from the export policy and assigns the default export policy if ONTAP requires access.  
 
 Assigning the export policy differs when it is reused across different datastores. When you reuse the export policy, you can append the policy with the new host IP address. When you delete or unmount a datastore that uses a shared export policy, the policy will not be deleted. It remains unchanged, and the host IP address is not removed, because it is shared with the other datastores. Reusing export policies is not recommended, because it can lead to access and latency issues.
 

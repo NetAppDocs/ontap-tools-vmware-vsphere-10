@@ -14,8 +14,8 @@ You can set storage thresholds to receive notifications in vCenter Server when v
 
 .Steps
 
-. Log in to the vSphere client.
-. In the shortcuts page, select *NetApp ONTAP tools* under the plug-ins section.
+. Log in to the vSphere Client.
+. On the *Shortcuts* page, select *NetApp ONTAP tools* in the *Plug-ins* section.
 . In the left pane of ONTAP tools, go to *Settings* > *Threshold Settings* > *Edit*.
 . In the *Edit Threshold* window, provide the desired values in the *Nearly Full* and *Full* fields and select *Save*.
 +

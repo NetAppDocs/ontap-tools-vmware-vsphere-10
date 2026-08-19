@@ -9,13 +9,13 @@ summary: "Run VASA cleanup after deleting virtual machines."
 :imagesdir: ../media/
 
 [.lead]
-To complete the VASA cleanup process, follow these steps.
+Follow these steps to complete VASA cleanup in ONTAP tools.
 [NOTE]
-It is recommended to remove any vVols datastores before starting the VASA cleanup.
+Remove any vVols datastores before you start VASA cleanup.
 
 .Steps
 
-. Unregister the plug-in by going into \https://OTV_IP:8143/Register.html
+. Open `\https://OTV_IP:8143/Register.html` to unregister the plug-in.
 . Verify that the plug-in is no longer available on the vCenter Server.
-. Shut down ONTAP tools for VMware vSphere VM.
+. Shut down the ONTAP tools for VMware vSphere virtual machine (VM).
 . Delete ONTAP tools for VMware vSphere VM.

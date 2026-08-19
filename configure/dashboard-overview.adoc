@@ -4,18 +4,18 @@ sidebar: sidebar
 keywords: ONTAP tools dashboard, vCenter plug-in overview, datastore and backend summary, Enhanced Linked Mode dashboard
 summary: "Review the ONTAP tools dashboard to see a summary of plug-in status, datastores, and vCenter Server data."
 ---
-= Learn about the ONTAP tools dashboard
+= Learn about the ONTAP tools for VMware vSphere dashboard
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Selecting the ONTAP tools for VMware vSphere plug-in icon from the shortcuts section in the vCenter client opens the overview page. This dashboard provides a summary of the ONTAP tools for VMware vSphere plug-in.
+Select the ONTAP tools for VMware vSphere plug-in icon from the shortcuts section in the vCenter client to open the dashboard, which summarizes the status of the plug-in, datastores, and vCenter Server data.
 
 In Enhanced Linked Mode (ELM), the vCenter Server dropdown appears. Choose a vCenter Server to view its data. The dropdown is available in all listing views of the plug-in.
 When you select a vCenter Server on one page, it stays the same when you switch tabs in the plug-in.
 image:../media/remote-plugin-dashboard.png[Dashboard overview]
 
-From the overview page, you can run the *Discovery* action. The discovery action detects newly added or updated storage backends, hosts, datastores, and protection status or relationships at the vCenter level. Run on-demand discovery without waiting for the scheduled discovery.
+From the overview page, you can run the *Discovery* action to detect newly added or updated storage backends, hosts, datastores, and protection status or relationships at the vCenter level. Run on-demand discovery without waiting for the scheduled discovery.
 
 If you add a new host to a protected host cluster, the protection settings change to *Partially protected*.
 
@@ -47,11 +47,11 @@ For ASA r2 storage systems, the capacity data is not shown because storage is di
 
 // 10.3 updates for ASA r2
 |Virtual machines
-|This card shows the top 10 VMs sorted by performance metric. You can select the header to get the top 10 VMs for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache.
+|This card shows the top 10 VMs sorted by performance metric. You can select the header to sort the top 10 VMs for the selected metric in either ascending or descending order. The sorting and filtering changes made on the card persist until you change or clear the browser cache.
 
 |Datastores
 |This card shows the top 10 datastores sorted by a performance metric.
-You can select the header to get the top 10 datastores for the selected metric sorted by either ascending or descending order. The sorting and filtering changes made on the card persists until you change or clear the browser cache. There is a Datastore type drop-down to select the type of the datastores - NFS, VMFS, or vVols.
+You can select the header to sort the top 10 datastores for the selected metric in either ascending or descending order. The sorting and filtering changes made on the card persist until you change or clear the browser cache. Use the Datastore type drop-down list to select the datastore type: NFS, VMFS, or vVols.
 |ESXi Host compliance card
 |This card shows whether all ESXi hosts (for the selected vCenter) follow the recommended NetApp host settings by group or category.
 You can select the *Apply Recommended Settings* link to apply the recommended settings. You can select the compliance status of the hosts to see the list of hosts.

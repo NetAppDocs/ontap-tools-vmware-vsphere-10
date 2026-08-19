@@ -5,11 +5,12 @@ keywords: ESXi multipath settings, HBA timeout settings, ONTAP tools host settin
 summary: "Configure ESXi host multipathing and HBA timeout settings for optimal NetApp storage performance."
 ---
 = Configure ESXi host settings in ONTAP tools
+= Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Configuring ESXi server multipath and timeout settings helps maintain data availability and integrity. It enables automatic failover to a backup storage path if the primary path becomes unavailable.
+Configuring ESXi host multipath and timeout settings helps maintain data availability and integrity. It enables automatic failover to a backup storage path if the primary path becomes unavailable.
 
 == Apply recommended ESXi host settings
 ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings and HBA timeout settings that work best with NetApp storage systems.
@@ -52,7 +53,7 @@ MPIO settings select and use the best available path for NetApp storage systems.
 For high-performance environments or when testing with a single LUN datastore, adjust the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) to improve performance. Set the default IOPS value from 1000 to 1.
 
 [NOTE]
-The MPIO settings don't apply to NVMe, NVMe/FC, and NVMe/TCP protocols.
+The MPIO settings do not apply to NVMe, NVMe/FC, and NVMe/TCP protocols.
 // OTVDOC-281 updates -Jani
 
 === NFS settings

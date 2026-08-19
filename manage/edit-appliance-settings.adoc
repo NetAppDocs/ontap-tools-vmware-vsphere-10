@@ -9,7 +9,7 @@ summary: "Scale the ONTAP tools appliance and configure High Availability (HA) b
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP tools Manager to scale up your appliance and configure High Availability (HA). By default, ONTAP tools for VMware vSphere deploys as a single-node, non-HA configuration.
+Use ONTAP tools Manager to scale up the appliance or configure High Availability (HA). By default, ONTAP tools for VMware vSphere deploys as a single-node, non-HA configuration.
 // OTVDOC-256 jira updated note removed for JIRA OTVDOC-290
 
 .Before you begin
@@ -28,14 +28,14 @@ You can only increase node size, not decrease it. Extra small (XS) deployments l
 . In the *Configuration* section, select your new node size and toggle the HA switch to enable High Availability.
 . On the *HA settings* page, verify the following:
 
-** The content library resides on the same vCenter Server where the ONTAP tools VMs will run.
+** The content library resides on the same vCenter Server where the ONTAP tools virtual machines (VMs) run.
 ** The ONTAP tools VMs are deployed on a cluster or resource pool, not directly on an ESXi host.
 +
 [IMPORTANT]
 After you enable HA, you cannot revert to a non-HA single-node configuration.
 . In the *HA settings* section, enter the network details for Nodes 2 and 3. ONTAP tools supports three nodes in HA mode.
 +
-ONTAP tools pre-fills most fields with Node 1 network settings. You can edit these values before completing the wizard. IPv6 address entries are only available if IPv6 is enabled on the management node. Ensure each ESXi host hosts only one ONTAP tools VM. 
+ONTAP tools pre-fills most fields with Node 1 network settings. You can edit these values before completing the wizard. IPv6 address entries are available only if IPv6 is enabled on the management node. Ensure that each ESXi host runs only one ONTAP tools VM.
 . Review the summary and click *Save*.
 
 .Result

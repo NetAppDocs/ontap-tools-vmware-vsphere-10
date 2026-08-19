@@ -9,14 +9,14 @@ summary: "Configure AutoSupport settings for ONTAP tools and review default supp
 :imagesdir: ../media/
 
 [.lead]
-When configuring ONTAP tools for VMware vSphere for the first time, AutoSupport is enabled by default. It sends messages to technical support 24 hours after it is enabled. 
+AutoSupport is enabled by default when you first configure ONTAP tools for VMware vSphere. It sends messages to technical support 24 hours after you enable it.
 
 == Disable AutoSupport
 
 When you disable AutoSupport, you no longer receive proactive support and monitoring.
 
 [NOTE]
-It is recommended to keep AutoSupport enabled, as it helps accelerate problem detection and resolution. Even when AutoSupport is disabled, the system continues to collect and store information locally, but it doesn't send reports over the network.
+Keep AutoSupport enabled because it helps accelerate problem detection and resolution. Even when AutoSupport is disabled, the system continues to collect and store information locally, but it does not send reports over the network.
 
 .Steps
 

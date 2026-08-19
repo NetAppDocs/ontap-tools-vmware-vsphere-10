@@ -9,9 +9,9 @@ summary: "Create NFS, VMFS, or vVols datastores in ONTAP tools at the host or ho
 :imagesdir: ../media/
 
 [.lead]
-When you create a datastore at the host cluster level, ONTAP tools mounts it on all destination hosts and enables the action only if you have the required privileges.
- 
-*Interoperability between native datastores with vCenter Server and ONTAP tools managed datastores*
+Create an NFS, VMFS, or vVols datastore at the host or host cluster level. When you create a datastore at the host cluster level, ONTAP tools mounts it on all destination hosts, provided you have the required privileges.
+
+== Interoperability between native datastores and ONTAP tools managed datastores
 
 Beginning with ONTAP tools for VMware vSphere 10.4, ONTAP tools creates nested igroups for datastores, with parent igroups specific to datastores and child igroups mapped to the hosts. You can create flat igroups from ONTAP System Manager and use them to create VMFS datastores without using ONTAP tools. Refer to https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[Manage SAN initiators and igroups] for more information.
 
@@ -41,7 +41,7 @@ The ASA r2 system supports the iSCSI and FC protocols for vVols.
 . Select the storage VM where you want to create the datastore. 
 . Under *Advanced options*:
 +
-* If you select the *Custom export policy*, run discovery in vCenter for all objects before you continue. It’s recommended that you don’t use this option.
+* If you select the *Custom export policy*, run discovery in vCenter for all objects before you continue. NetApp recommends that you don't use this option.
 * You can select a *Custom initiator group* name for the iSCSI and FC protocols.
 +
 [NOTE]
@@ -57,7 +57,7 @@ When creating a new volume, you can enable QoS on the datastore. By default, one
 .Create an NFS datastore
 
 --
-An NFS datastore connects ESXi hosts to shared storage using the NFS protocol. It is simple and flexible and is used in VMware vSphere environments.
+An NFS datastore connects ESXi hosts to shared storage by using the NFS protocol. It is simple and flexible, and VMware vSphere environments commonly use it.
 
 .Steps
 . Log in to the vSphere Client.
@@ -75,7 +75,7 @@ Kerberos authentication is available only when the NFS 4.1 protocol is selected.
 [NOTE]
 You cannot create an NFS datastore using the SVM’s default or root volume policy.
 [NOTE]
-* In the *Advanced options*, the *Asymmetric* toggle button is visible only if performance or capacity is selected in the platform drop-down. However, the *Asymmetric* option does not apply to NFS datastore creation.
+* In the *Advanced options*, the *Asymmetric* toggle button is visible only if you select performance or capacity in the platform drop-down list. However, the *Asymmetric* option doesn't apply to NFS datastore creation.
 * When you choose the *Any* option in the platform drop-down, all SVMs in the vCenter are visible. Platform and asymmetric settings do not affect visibility.
 . In the *Storage Attributes* pane, select the aggregate for volume creation. In the *Advanced options*, choose *Space Reserve* and *Enable QoS* as required.
 . In the *Summary* pane, review the selections and select *Finish*.
@@ -108,7 +108,7 @@ For more information, refer to https://community.netapp.com/t5/Tech-ONTAP-Blogs/
 
 * If you're using the NVMe/FC protocol, perform the following steps to configure the ESXi host:
 
-. If not already enabled, enable NVMe over Fabrics (NVMe-oF) on your ESXi host(s). 
+. If not already enabled, enable NVMe over Fabrics (NVMe-oF) on your ESXi hosts. 
 . Complete SCSI zoning. 
 . Ensure that ESXi hosts and the ONTAP system are connected at a physical and logical layer.
 

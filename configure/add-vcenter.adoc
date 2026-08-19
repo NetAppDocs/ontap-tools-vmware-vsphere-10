@@ -9,7 +9,7 @@ summary: "Add vCenter Server instances to ONTAP tools to configure, manage, and 
 :imagesdir: ../media/
 
 [.lead]
-Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect datastores in your vCenter Server environment. When you add multiple vCenter Server instances, custom CA certificates are required for secure communication between ONTAP tools and each vCenter Server.
+Add vCenter Server instances to ONTAP tools for VMware vSphere to configure, manage, and protect datastores in your vCenter Server environment. When you add multiple vCenter Server instances, configure Custom CA certificates for secure communication between ONTAP tools and each vCenter Server.
 //OTVDOC-271 updates -Jani
 
 .About this task
@@ -20,7 +20,7 @@ Adding a vCenter Server instance to ONTAP tools automatically triggers the follo
 
 * ONTAP tools registers the vCenter client plug-in as a remote plug-in.
 * ONTAP tools applies custom privileges for the plug-ins and APIs to the vCenter Server instance.
-* ONTAP tools creates custom roles to manage users.
+* ONTAP tools creates custom roles to manage the users.
 * The plug-in appears as a shortcut on the vSphere user interface.
 
 .Before you begin

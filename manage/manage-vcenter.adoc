@@ -9,11 +9,11 @@ summary: "Manage vCenter instances in ONTAP tools to control hosts, virtual mach
 :imagesdir: ../media/
 
 [.lead]
-vCenter Server instances are central management platforms that let you control hosts, virtual machines, and storage backends. In ONTAP tools, you can dissociate storage backends, modify instance details, remove instances, and renew vCenter Server certificates.
+Use ONTAP tools to dissociate storage backends, modify vCenter Server instance details, remove instances, and renew vCenter Server certificates.
 
 == Dissociate storage backends from a vCenter Server instance
 
-The vCenter Server listing page shows the associated number of storage backends. Each vCenter Server instance has the option to associate or disassociate with a storage backend.
+The vCenter Server listing page shows the number of associated storage backends. Each vCenter Server instance can associate with or dissociate from a storage backend.
 
 .Steps
 
@@ -24,7 +24,7 @@ The vCenter Server listing page shows the associated number of storage backends.
 . Select *Dissociate storage backend*.
 
 == Modify a vCenter Server instance
-Modify a vCenter Server instance by completing the following steps.
+To modify a vCenter Server instance, complete the following steps.
 
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment. 
@@ -89,7 +89,7 @@ The vCenter Server instance is no longer managed by ONTAP tools.
 If the vCenter Server is unreachable during deletion:
 
 * ONTAP tools removes the vCenter Server record.
-* Plugin unregistration does not occur.
+* Plug-in unregistration does not occur.
 * A warning is displayed.
 * You must manually unregister the plugin from VMware vCenter Server.
 
@@ -138,7 +138,7 @@ iVm0cl+2BZNi/QTMh/MkWV2dYXJ3NuNlqqfzFY+bUfkzkR4SneMk0HX3joNNYDJv
 siO7bL+k/Pxql27NVIhuCoVJAlcI7ak=
 ---{}END CERTIFICATE{}---
 ----
-. Copy the output and save it as a text file with a `.pem` extension on your desktop.
+. Copy the output and save it as a `.pem` file on your desktop.
 . Launch ONTAP tools Manager from a web browser: `\https://<ONTAPtoolsIP>:8443/virtualization/ui/` 
 . Log in with the ONTAP tools for VMware vSphere administrator credentials you provided during deployment.
 . Select the applicable vCenter Server instance from the sidebar

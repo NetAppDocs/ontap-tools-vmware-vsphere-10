@@ -9,7 +9,7 @@ summary: "Add and manage storage backends locally for a vCenter instance or glob
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP tools for VMware vSphere to add and manage storage backends for your ESXi hosts. You can add a storage backend locally or globally using ONTAP tools Manager or the vSphere client.
+Use ONTAP tools for VMware vSphere to add and manage storage backends for your ESXi hosts, including onboarding clusters or SVMs, enabling MetroCluster support, and validating certificates for secure connectivity. You can configure storage backends using ONTAP tools Manager or the vSphere Client, monitor certificate status, and manually rediscover resources after cluster changes.
 
 To add a storage backend locally, use cluster or SVM credentials in the ONTAP tools interface. Local storage backends are available only to the selected vCenter Server. ONTAP tools maps SVMs to the vCenter Server for vVols or VMFS datastore management. For VMFS datastores and SRA workflows, you can use SVM credentials without mapping a cluster globally.
 
@@ -70,7 +70,6 @@ After the ONTAP system performs a switchover and switchback, run the ONTAP tools
 --
 ====
 
-.What’s next?
 ONTAP tools lists the newly added storage backend on the *Storage backends* page. If a certificate expires in 30 days or less, ONTAP tools shows a warning in the certificate expiry date column. After expiry, ONTAP tools marks the storage backend as unknown because it cannot connect to the storage system.
 
 .Related information

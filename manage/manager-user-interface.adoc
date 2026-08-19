@@ -4,14 +4,12 @@ sidebar: sidebar
 keywords: ONTAP tools Manager UI, appliance administration interface, tenant and backend management, ONTAP tools manager portal
 summary: "Use ONTAP tools Manager to manage the appliance, tenants, and storage backends."
 ---
-= Learn about the ONTAP tools Manager user interface
+= ONTAP tools Manager user interface
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 ONTAP tools Manager is a web-based console that you use to manage ONTAP tools for VMware vSphere, including vCenter Server instances, storage backends, and appliance configuration such as high availability (HA) and node scaling. It supports multi-tenancy, so you can manage multiple vCenter Server instances from a single interface.
-
-ONTAP tools Manager is a web-based console for managing ONTAP tools for VMware vSphere, vCenter Server instances, storage backends, and appliance configuration such as High Availability (HA) and node scaling.
 
 ONTAP tools Manager provides the following capabilities:
 
@@ -33,7 +31,7 @@ image:../media/ontap-tools-manager-overview.png[ONTAP tools Manager dashboard ov
 
 |Appliance card |The Appliance card shows the overall status of the ONTAP tools appliance, configuration details, and the status of enabled services. To view more information, select the *View details* link. If you change an appliance setting, the card shows the job status and details until the change is complete.
 
-|Alerts card |The Alerts card shows ONTAP tools alerts categorized by type, including HA node-level alerts. You can view detailed alerts by clicking the count hyperlink, which takes you to the alerts page filtered by the selected alert type.
+|Alerts card |The Alerts card shows ONTAP tools alerts categorized by type, including HA node-level alerts. You can view detailed alerts by selecting the count link, which takes you to the alerts page filtered by the selected alert type.
 
 |vCenters card |The vCenters card shows the health status of all vCenter Server instances managed by ONTAP tools. You can view details for each vCenter by selecting the corresponding link, which navigates to a page with more information about the selected instance.
 
