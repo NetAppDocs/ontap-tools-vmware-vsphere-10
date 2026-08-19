@@ -19,7 +19,7 @@ After adding the host, wait for the scheduled host discovery to complete before 
 * Some right-click actions are disabled or unavailable depending on the vSphere client version and the type of datastore selected. 
 ** If you're using vSphere Client 8.0 or later, some of the right-click options are hidden. 
 ** From vSphere 7.0U3 to vSphere 8.0, even though the options appear, the action is disabled.
-* vSphere disables the *Mount Datastores* option when the host cluster is protected with uniform configurations. 
+* vSphere disables the *Mount datastores* option when the host cluster is protected with uniform configurations. 
 
 .Steps
 
