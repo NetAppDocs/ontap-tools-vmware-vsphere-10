@@ -9,10 +9,10 @@ summary: "Mount a vVols datastore to additional hosts to provide storage access 
 :imagesdir: ../media/
 
 [.lead]
-You can mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts to provide storage access to additional hosts. You can unmount a vVols datastore only through host-level APIs. Cluster-level datastore unmount is not supported.
+Mount a VMware Virtual Volumes (vVols) datastore to one or more additional hosts to extend storage access. You can unmount a vVols datastore only through host-level APIs. Cluster-level datastore unmount is not supported.
 
 [NOTE]
-After adding the host, wait for the scheduled host discovery to complete before it shows up in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen. For information on how to add an ESXi host to your vSphere cluster, refer to https://techdocs.broadcom.com/[Broadcom Technical Documentation].
+After adding the host, wait for the scheduled host discovery to complete before it appears in ONTAP tools. Alternatively, you can manually run discovery from the NetApp ONTAP tools overview screen. For information about adding an ESXi host to your vSphere cluster, refer to https://techdocs.broadcom.com/[Broadcom Technical Documentation].
 
 // OTVDOC-325 updates
 .Steps

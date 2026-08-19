@@ -9,7 +9,7 @@ summary: "Migrate virtual machines from NFS and VMFS datastores to vVols datasto
 :imagesdir: ../media/
 
 [.lead]
-You can migrate virtual machines from NFS and VMFS datastores to Virtual Volumes (vVols) datastores to take advantage of policy-based VM management and other vVols capabilities. vVols datastores enable you to meet increased workload requirements.
+You can migrate virtual machines from NFS or VMFS datastores to Virtual Volumes (vVols) datastores to use policy-based VM management and other vVols capabilities.
 
 .Before you begin
 
@@ -17,7 +17,7 @@ Verify that VASA Provider is not running on any of the virtual machines that you
 
 .About this task
 
-When you migrate from a NFS and VMFS datastore to a vVols datastore, the vCenter Server uses vStorage APIs for Array Integration (VAAI) offloads when moving data from VMFS datastores, but not from an NFS VMDK file. VAAI offloads normally reduce the load on the host.
+When you migrate from an NFS or VMFS datastore to a vVols datastore, vCenter Server uses vStorage APIs for Array Integration (VAAI) offloads for data moved from VMFS datastores, but not from NFS VMDK files. VAAI offloads usually reduce host load.
 
 .Steps
 

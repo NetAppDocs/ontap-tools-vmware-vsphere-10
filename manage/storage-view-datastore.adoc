@@ -9,7 +9,7 @@ summary: "View datastore and volume details from the ONTAP Storage page in ONTAP
 :imagesdir: ../media/
 
 [.lead]
-ONTAP tools for VMware vSphere shows the ONTAP storage-side view of the datastores and their volumes on the Configure tab, including storage backend, aggregate, and volume details for each datastore type.
+ONTAP tools for VMware vSphere shows ONTAP-side details for datastores and their volumes on the *Configure* tab, including storage backend, aggregate, and volume details for each datastore type.
 
 .Steps
 . In the vSphere Client inventory, select the datastore.

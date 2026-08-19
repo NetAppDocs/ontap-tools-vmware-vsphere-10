@@ -9,11 +9,11 @@ summary: "Change the certificate validation flag by using the maintenance consol
 :imagesdir: ../media/
 
 [.lead]
-By default, the certificate validation flag is enabled (set to true). You can set the ONTAP storage backend certificate validation flag to false if you need to bypass SAN certificate checks. This setting is not applicable to vCenter Server certificates.
+By default, certificate validation is enabled for ONTAP storage backend certificates. If needed, you can set the certificate validation flag to false to bypass SAN certificate checks. This setting does not apply to vCenter Server certificates.
 
 .Before you begin
 
-You need to have maintenance user login credentials.
+You need the maintenance user credentials.
 
 .Steps
 
@@ -21,12 +21,12 @@ You need to have maintenance user login credentials.
 . Locate the ONTAP tools VM and launch the web console.
 . Log in using the `maint` credentials.
 . Enter `1` to select *Application Configuration* menu.
-. Enter `3` to change cert validation flag.
+. Enter `3` to change the certificate validation flag.
 +
 The maintenance console shows the certificate validation flag status and prompts you to change it.
 . Enter 'y' to toggle the flag or 'n' to cancel.
 
-When you enable the certificate validation flag (set to true), ONTAP tools checks that all storage backends use certificates with a Subject Alternative Name (SAN). If any backend uses a certificate without a SAN, you cannot enable certificate validation. Before enabling this flag, verify that all storage backends use SAN-based certificates. If you disable the certificate validation flag (set to false), ONTAP tools bypasses certificate validation for all configured storage backends.
+When certificate validation is enabled, ONTAP tools checks that all storage backends use certificates with a Subject Alternative Name (SAN). If any storage backend uses a certificate without a SAN, you cannot enable validation. Before you enable this flag, verify that all storage backends use SAN-based certificates. If you disable the flag, ONTAP tools bypasses certificate validation for all configured storage backends.
 
 // NADIAA checked
 == Verify SAN-based certificates for storage backends
@@ -37,7 +37,7 @@ To ensure secure communication and proper validation, verify that all storage ba
 . Confirm that the SAN entries match the ONTAP management IP address or DNS name, or both.
 . Ensure the details used to onboard ONTAP match the IP address or DNS name in the SAN entry of the certificate.
 
-Following these steps helps prevent certificate validation issues and ensures that the ONTAP system is securely integrated.
+These steps help prevent certificate validation issues and keep the ONTAP system securely integrated.
 
 The following sample certificate shows the decoded information:
 

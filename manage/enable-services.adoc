@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable ONTAP tools services, enable VASA provider, enable SRA service, vVols service configuration
 summary: "Enable optional ONTAP tools services, including VASA Provider, vVols configuration import, and disaster recovery (SRA)."
 ---
-= Enable ONTAP tools services
+= Enable optional services in ONTAP tools Manager
 :icons: font
 :imagesdir: ../media/
 

@@ -4,16 +4,16 @@ sidebar: sidebar
 keywords: expand vVols datastore, increase vVol datastore capacity, ONTAP tools vVol storage expansion, VMware virtual volumes scaling
 summary: "Expand vVols datastore storage from the vCenter object view by using ONTAP tools actions."
 ---
-= Expand vVols datastores in ONTAP tools
+= Expand a vVols datastore in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
 
-When you right-click on the datastore object in the vCenter object view, the plug-in section shows the supported actions for ONTAP tools for VMware vSphere. Specific actions are enabled depending on the type of datastore and the current user privileges.
+When you right-click the datastore object in the vCenter object view, the plug-in section shows the supported actions for ONTAP tools for VMware vSphere. The available actions depend on the datastore type and the current user privileges.
 
 [NOTE]
-Expand vVols datastore operation is not applicable for ASA r2 system-based vVols datastores.
+This procedure does not apply to ASA r2 system-based vVols datastores.
 
 .Steps
 

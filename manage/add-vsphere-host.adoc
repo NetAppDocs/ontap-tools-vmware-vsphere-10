@@ -9,15 +9,15 @@ summary: "Add VMware vSphere hosts to ONTAP tools for VMware vSphere."
 :imagesdir: ../media/
 
 [.lead]
-Add new VMware vSphere hosts to ONTAP tools for VMware vSphere to manage and protect datastores on the hosts.
+Add new VMware vSphere hosts to ONTAP tools for VMware vSphere so you can manage and protect host datastores.
 
 .Steps
 
 . Add a host to your VMware vSphere cluster following the https://techdocs.broadcom.com/[Broadcom Technical Documentation].
-. After adding the host, go to the ONTAP tools main menu and select *Discover* in the overview panel. Wait for the discovery process to finish. Alternatively, you can wait for the scheduled host discovery to complete.
+. After you add the host, go to the ONTAP tools main menu and select *Discover* in the overview panel, or wait for the scheduled host discovery to complete.
 
 .Result
-The new host is now discovered and managed by ONTAP tools for VMware vSphere. You can proceed to manage the datastore on the new host.
+The new host is now discovered and managed by ONTAP tools for VMware vSphere. You can now manage datastores on the host.
 
 .Related topics
 

@@ -5,7 +5,7 @@ keywords: unprotect VMFS datastore, remove datastore protection group, SnapMirro
 summary: "Unprotect a VMFS datastore and optionally remove associated target-side storage elements."
 ---
 
-= Unprotect a VMFS datastore
+= Unprotect a VMFS datastore in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
@@ -17,8 +17,8 @@ Use this task to unprotect a VMFS datastore and optionally remove associated tar
 
 When you unprotect a VMFS datastore, consider the following behavior:
 
-* Unprotecting the last datastore in a protection group deletes the protection group and its protection settings name.
-* For a last datastore, ONTAP tools shows the protection settings name.
+* Unprotecting the last datastore in a protection group deletes the protection group and its protection settings.
+* For the last datastore, ONTAP tools shows the protection settings name.
 
 .Before you begin
 

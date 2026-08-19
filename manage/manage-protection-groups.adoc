@@ -18,7 +18,7 @@ Use this task to view, edit, and delete protection groups and their relationship
 * Ensure your ONTAP tools user account has permissions to manage protection groups.
 
 [IMPORTANT]
-Before you edit or remove protection, review the warning messages in the dialog. Removing relationships can impact backup and consistency behavior.
+Before you edit or remove a protection group, review the warning messages in the dialog. Removing relationships can affect backup and consistency behavior.
 
 .About this task
 
