@@ -9,7 +9,7 @@ summary: "Terminate your ONTAP tools for VMware vSphere deployment gracefully."
 :imagesdir: ../media/
 
 [.lead]
-Uninstalling ONTAP tools for VMware vSphere deletes all the data in the tools, so you must complete these steps to gracefully terminate your deployment and avoid unexpected data loss.
+Uninstalling ONTAP tools for VMware vSphere deletes data in the appliance, so complete these steps to shut down the deployment gracefully and avoid unexpected data loss.
 
 .Steps
 
@@ -19,7 +19,7 @@ Uninstalling ONTAP tools for VMware vSphere deletes all the data in the tools, s
 * To move them to an unmanaged datastore, refer to https://techdocs.broadcom.com/[Broadcom Technical Documentation] for migrating virtual machines with Storage vMotion
 // updated as per pull request from Chance.
 . link:../manage/delete-ds.html[Delete datastores] created on ONTAP tools for VMware vSphere.
-. If you have enabled the VASA provider, select *Settings* > *VASA Provider settings* > *Unregister* in ONTAP tools to unregister the VASA providers from all the vCenter servers. 
+. If you have enabled the VASA Provider, select *Settings* > *VASA Provider settings* > *Unregister* in ONTAP tools to unregister the VASA Provider from all the vCenter Server instances. 
 . Disassociate all storage backends from the vCenter Server instance. Refer to link:../manage/manage-vcenter.html[Dissociate storage backends with the vCenter Server instance].
 . Delete all storage backends. Refer to link:../manage/storage-backend.html[Manage storage backends].
 . Remove the SRA adapter from VMware Live Site Recovery:

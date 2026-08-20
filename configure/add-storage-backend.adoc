@@ -9,11 +9,11 @@ summary: "Add and manage storage backends locally for a vCenter instance or glob
 :imagesdir: ../media/
 
 [.lead]
-Use ONTAP tools for VMware vSphere to add and manage storage backends for your ESXi hosts. You can onboard clusters or SVMs, enable MetroCluster support, and validate certificates for secure connectivity. You can configure storage backends using ONTAP tools Manager or the vSphere client, monitor certificate status, and manually rediscover resources after cluster changes.
+Use ONTAP tools for VMware vSphere to add and manage storage backends for your ESXi hosts, including onboarding clusters or SVMs, enabling MetroCluster support, and validating certificates for secure connectivity. You can configure storage backends using ONTAP tools Manager or the vSphere Client, monitor certificate status, and manually rediscover resources after cluster changes.
 
 To add a storage backend locally, use cluster or SVM credentials in the ONTAP tools interface. Local storage backends are available only to the selected vCenter Server. ONTAP tools maps SVMs to the vCenter Server for vVols or VMFS datastore management. For VMFS datastores and SRA workflows, you can use SVM credentials without mapping a cluster globally.
 
-To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources required for vVol management. In multitenant environments, you can add an SVM user locally to manage vVols datastores.
+To add a global storage backend, use ONTAP cluster credentials in ONTAP tools Manager. Global storage backends enable discovery workflows to identify cluster resources required for vVols management. In multitenant environments, you can add an SVM user locally to manage vVols datastores.
 
 Refer to the KB article: https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/OTV_10_What_is_storage_backend_global_and_local_scope[OTV 10: What is storage backend global and local scope^] for more information on global and local storage backends.
 // updated for https://github.com/NetAppDocs/ontap-tools-vmware-vsphere-10/issues/146
@@ -67,13 +67,10 @@ You can add a storage backend using cluster-based credentials with either IPv4 o
 [NOTE]
 After the ONTAP system performs a switchover and switchback, run the ONTAP tools discovery manually.
 
-.What’s next?
-
-
 --
 ====
 
-ONTAP tools list the newly added storage backend on the *Storage backends* page. If a certificate expires in 30 days or less, ONTAP tools shows a warning in the certificate expiry date column. After expiry, ONTAP tools marks the storage backend as unknown because it cannot connect to the storage system.
+ONTAP tools lists the newly added storage backend on the *Storage backends* page. If a certificate expires in 30 days or less, ONTAP tools shows a warning in the certificate expiry date column. After expiry, ONTAP tools marks the storage backend as unknown because it cannot connect to the storage system.
 
 .Related information
 

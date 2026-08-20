@@ -9,7 +9,7 @@ summary: "Enable SSH access for the diag user in ONTAP tools for VMware vSphere.
 :imagesdir: ../media/
 
 [.lead]
-You can configure ONTAP tools for VMware vSphere to enable SSH access for the diag user.
+You can enable SSH access for the diag user in ONTAP tools for VMware vSphere.
 
 .Before you begin
 
@@ -19,8 +19,8 @@ Enable the VASA Provider extension for your vCenter Server instance.
 
 Using SSH to access the diag user account has the following limitations:
 
-* you're allowed only one login account per activation of SSH.
-* SSH access to the diag user account is disabled when one of the following happens:
+* You can use only one login account each time you enable SSH.
+* SSH access to the diag user account is disabled in either of these cases:
  ** The time expires.
 +
 The login session expires at midnight the next day.
@@ -34,7 +34,7 @@ The login session expires at midnight the next day.
 . Log in using the `maint` credentials.
 . Enter `4` to select *Support and Diagnostics*.
 . Enter `2` to select *Enable remote diagnostics access*.
-. Enter `y` in the Confirmation dialog box to enable remote diagnostic access.
+. Enter `y` in the confirmation dialog box to enable remote diagnostic access.
 . Enter a password for remote diagnostic access.
 
 // NADIAA checked

@@ -9,12 +9,12 @@ summary: "Configure network access to control which ESXi host IP addresses are a
 :imagesdir: ../media/
 
 [.lead]
-By default, all IP addresses discovered from the ESXi host are automatically added to the export policy unless you configure network access. You can modify the export policy to allow access only from specific IP addresses. If an excluded ESXi host attempts a mount operation, the operation fails.
+By default, ONTAP tools automatically adds all IP addresses discovered from the ESXi host to the export policy unless you configure network access. You can modify the export policy to allow access only from specific IP addresses; mount operations fail for excluded ESXi hosts.
 
 .Steps
 . Log in to the vSphere client.
-. Select *NetApp ONTAP tools* in the shortcuts page under the plug-ins section.
+. Select *NetApp ONTAP tools* on the shortcuts page under the plug-ins section.
 . In the left pane of ONTAP tools, go to *Settings* > *Manage Network Access* > *Edit*. 
 +
-To add multiple IP addresses, separate the list with commas, range, Classless Inter-Domain Routing (CIDR), or a combination of all three.
+To add multiple IP addresses, separate the list with commas, ranges, Classless Inter-Domain Routing (CIDR) notation, or a combination of all three.
 . Select *Save*.

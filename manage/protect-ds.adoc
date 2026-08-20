@@ -5,12 +5,12 @@ keywords: protect VMFS datastore, SnapMirror datastore protection, create protec
 summary: "Protect an eligible VMFS datastore by adding it to a protection group with SnapMirror replication."
 ---
 
-= Protect a VMFS datastore
+= Protect a VMFS datastore in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Use this task to protect an eligible VMFS datastore by adding it to a protection group.
+Protect an eligible VMFS datastore by adding it to a protection group.
 
 .Before you begin
 
@@ -24,7 +24,7 @@ Use this task to protect an eligible VMFS datastore by adding it to a protection
 . Select a host cluster and select *Datastores*.
 . Right-click the eligible VMFS datastore you want to protect and select *NetApp ONTAP tools* > *Protect*.
 +
-The system checks the datastore’s eligibility for protection. If the datastore is eligible, the protection workflow continues. If the datastore is ineligible, a message displays the reasons and you cannot proceed.
+The system checks the datastore's eligibility for protection. If the datastore is eligible, the protection workflow continues. If the datastore is ineligible, a message displays the reasons and you cannot proceed.
 . Choose whether to add the datastore to an existing protection group or create a new protection group.
 .. To use an existing protection group, select the protection group and continue.
 .. To create a new protection group:

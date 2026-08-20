@@ -4,14 +4,14 @@ sidebar: sidebar
 keywords: ONTAP tools igroups, nested igroup management, initiator group handling, VMware host access mapping
 summary: "Learn how ONTAP tools represents and manages nested igroups for efficient host and datastore mapping."
 ---
-= How ONTAP tools manages igroups
+= Nested igroup management in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you manage both ONTAP tools VMs and ONTAP storage systems, you need to understand how igroups behave, especially when moving datastores from environments not managed by ONTAP tools to those that are. ONTAP tools for VMware vSphere represents and manages igroups using a nested igroup model, and understanding this model helps you interpret behavior differences between earlier releases and the current implementation.
+If you move datastores from environments not managed by ONTAP tools to environments that are, understand how igroups behave. ONTAP tools for VMware vSphere uses a nested igroup model, which helps explain behavior differences between earlier releases and the current implementation.
 
-Beginning with ONTAP tools for VMware vSphere 10.4, ONTAP tools automatically creates and maintains ONTAP and vCenter objects, simplifying datastore management in VMware datacenter environments. Beginning with ONTAP tools for VMware vSphere 10.5 P2, migrated igroups are also deleted automatically when they are no longer in use.
+Beginning with ONTAP tools for VMware vSphere 10.4, ONTAP tools automatically creates and maintains ONTAP and vCenter objects, which simplifies datastore management in VMware datacenter environments. Beginning with ONTAP tools for VMware vSphere 10.5 P2, ONTAP tools also deletes migrated igroups automatically when they are no longer in use.
 
 == Quick behavior summary
 

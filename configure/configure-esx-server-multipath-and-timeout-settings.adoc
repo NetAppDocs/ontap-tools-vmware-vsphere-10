@@ -4,14 +4,15 @@ sidebar: sidebar
 keywords: ESXi multipath settings, HBA timeout settings, ONTAP tools host settings, NetApp storage failover
 summary: "Configure ESXi host multipathing and HBA timeout settings for optimal NetApp storage performance."
 ---
-= Configure ESXi host settings in ONTAP tools 
+= Configure ESXi host settings in ONTAP tools
+= Configure ESXi host settings in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-Configuring ESXi server multipath and timeout settings helps maintain data availability and integrity. It enables automatic failover to a backup storage path if the primary path becomes unavailable.
+Configuring ESXi host multipath and timeout settings helps maintain data availability and integrity. It enables automatic failover to a backup storage path if the primary path becomes unavailable.
 
-== Configure ESXi server multipath and timeout settings
+== Apply recommended ESXi host settings
 ONTAP tools for VMware vSphere checks and sets the ESXi host multipath settings and HBA timeout settings that work best with NetApp storage systems.
 
 .About this task
@@ -23,7 +24,7 @@ This process might take time, depending on your setup and system load. You can v
 . From the VMware vSphere Web client home page, select *Hosts and Clusters*.
 . On the shortcuts page of the VMware vSphere Web client, select *NetApp ONTAP tools* under the plug-ins section.
 . Go to the *ESXi Host compliance* card in the overview (dashboard) of the ONTAP tools for VMware vSphere plug-in.
-. Select *Apply Recommended Settings* link.
+. Select the *Apply Recommended Settings* link.
 . In the *Apply recommended host settings* window, select the hosts you want to update to use NetApp recommended settings and select *Next*.
 +
 [NOTE]
@@ -37,7 +38,7 @@ Use ONTAP tools for VMware vSphere to set timeouts and other values on ESXi host
 You can set the following values on an ESXi host:
 
 === HBA/CNA Adapter Settings
-Sets the following parameters to default values: 
+ONTAP tools sets the following parameters to default values: 
 
 * Disk.QFullSampleSize
 * Disk.QFullThreshold
@@ -47,21 +48,24 @@ Sets the following parameters to default values:
 
 === MPIO Settings
 
-MPIO settings pick the best paths for NetApp storage systems. MPIO settings select the best path and use it.
+MPIO settings select and use the best available path for NetApp storage systems.
 
 For high-performance environments or when testing with a single LUN datastore, adjust the load balance setting of the round-robin (VMW_PSP_RR) path selection policy (PSP) to improve performance. Set the default IOPS value from 1000 to 1.
 
 [NOTE]
-The MPIO settings don't apply to NVMe, NVMe/FC, and NVMe/TCP protocols.
+The MPIO settings do not apply to NVMe, NVMe/FC, and NVMe/TCP protocols.
 // OTVDOC-281 updates -Jani
 
 === NFS settings
 |===
 |Parameter |Set this value to...
+
 |Net.TcpipHeapSize
 |32
+
 |Net.TcpipHeapMax
 |1024MB
+
 |NFS.MaxVolumes
 |256
 

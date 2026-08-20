@@ -9,7 +9,7 @@ summary: "Change the default nconnect value for ESXi hosts in a vCenter Server."
 :imagesdir: ../media/
 
 [.lead]
-Use this task to change the default number of connections (nconnect) for ESXi hosts in a selected vCenter Server.
+Change the default number of connections (nconnect) for ESXi hosts in a selected vCenter Server.
 
 .About this task
 

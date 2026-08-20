@@ -9,8 +9,7 @@ summary: "Unmount NFS or VMFS datastores from ESXi hosts by using ONTAP tools."
 :imagesdir: ../media/
 
 [.lead]
-Use this task to unmount an NFS or VMFS datastore from ESXi hosts.
-Cluster-level datastore unmount is not supported through the UI or APIs.
+Use this task to unmount an NFS or VMFS datastore from ESXi hosts. Cluster-level datastore unmount is not supported through the UI or APIs.
 // Unsupported parameter combinations for datastore unmount are not available in the REST API schema.
 
 Beginning with ONTAP tools 10.6, unmount is blocked for protected VMFS datastores.
@@ -18,14 +17,14 @@ Beginning with ONTAP tools 10.6, unmount is blocked for protected VMFS datastore
 
 .Steps
 
-. Log in to the vSphere client.
+. Log in to the vSphere Client.
 . Right-click an NFS or VMFS datastore object and select *Unmount datastore*.
 +
-The vSphere client opens a dialog box and lists the ESXi hosts that mount the datastore.
+The vSphere Client opens a dialog box and lists the ESXi hosts that mount the datastore.
 If the datastore is protected, ONTAP tools blocks the request and shows a message that the datastore is under protection and cannot be unmounted.
 . Select one or more ESXi hosts to unmount the datastore.
 +
-You cannot unmount the datastore from all hosts. The user interface suggests that you use the delete datastore operation instead.
+You cannot unmount the datastore from all hosts. The user interface suggests using the delete datastore operation instead.
 . Select the *Unmount* button.
 +
 The *Unmount datastore* option is available only when the host is moved outside the protected host cluster.
