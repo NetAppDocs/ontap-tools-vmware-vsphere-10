@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, ONTAP tools, VMware vSphere, HA, non-HA, low RPO backup, SRA adapter, vCenter Server
 summary: "Upgrade ONTAP tools for VMware vSphere from 10.4 or 10.5 to 10.6 for HA and non-HA deployments using required prechecks and backup steps."
 ---
-= Upgrade ONTAP tools for VMware vSphere
+= Upgrade from ONTAP tools for VMware vSphere 10.x to 10.6
 :icons: font
 :imagesdir: ../media/
 
