@@ -5,7 +5,7 @@ keywords: REST API reference, Swagger UI, API endpoints, authentication
 summary: "The ONTAP tools for VMware vSphere 10 REST API reference contains details about all the API calls. This reference is helpful when developing automation applications."
 ---
 
-= ONTAP tools REST API reference
+= View the ONTAP tools REST API documentation in Swagger UI
 :hardbreaks:
 :nofooter:
 :icons: font
