@@ -49,7 +49,7 @@ entries:
         url: /manage/remove-storage-from-a-vvols-datastore.html
       - title: Delete datastores
         url: /manage/delete-ds.html  
-      - title: ONTAP storage views for datastores
+      - title: View datastore storage details
         url: /manage/storage-view-datastore.html  
       - title: Virtual machine storage view
         url: /manage/virtual-machine-storage-view-datastore.html  
