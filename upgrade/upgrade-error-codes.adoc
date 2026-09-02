@@ -73,6 +73,30 @@ The last three digits of the error code indicate the specific workflow error wit
 |088 |Configuring log rotate for journald has failed |Check the VM network settings compatible with the host on which the VM is hosted.
 You can try to migrate the VM to another host and restart.
 |089 |Changing ownership of summary log rotate config file has failed |Retry the upgrade.
+// OTVDOC-375 and OTVDOC-374 update
+|094 |NTP configuration failed and the system rolled back to NTPsec a|
+If the upgrade fails due to a failure in the Chrony installation:
+
+. Check whether Chrony is installed:
++
+----
+systemctl status chrony
+----
+. If Chrony is installed and the issue is with the NTP servers you provided, check whether those servers are reachable:
++
+----
+sudo chronyc -N sources -v
+sudo chronyc tracking
+----
++
+If the servers are reachable, the issue is unrelated to server reachability. If a server is genuinely unreachable, remove it from ONTAP tools Manager and provide a reachable NTP server instead.
+. If the upgrade fails due to any other issue during the NTP upgrade, check the following logs:
++
+----
+/var/log/otvng/ansible-perl-errors.log
+/var/log/otvng/ntp_configure.log
+/var/log/ansible-perl-errors.log
+----
 |095 |OS upgrade failed |No recovery for OS upgrade. ONTAP tools services are upgraded and new pods will be running.
 |096 |Install dynamic storage provisioner |Check the upgrade logs and retry upgrade.
 |097 |Uninstalling services for upgrade has failed |Use zero RPO or snapshot based recovery and retry upgrade. 
