@@ -13,7 +13,7 @@ By default, ONTAP tools automatically adds all IP addresses discovered from the 
 
 .Steps
 . Log in to the vSphere client.
-. Select *NetApp ONTAP tools* in the shortcuts page under the plug-ins section.
+. Select *NetApp ONTAP tools* on the shortcuts page under the plug-ins section.
 . In the left pane of ONTAP tools, go to *Settings* > *Manage Network Access* > *Edit*. 
 +
 To add multiple IP addresses, separate the list with commas, ranges, Classless Inter-Domain Routing (CIDR) notation, or a combination of all three.
