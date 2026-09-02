@@ -131,7 +131,7 @@ After upgrading you can:
 
 .Related information
 
-link:../migrate/migrate-to-latest-ontaptools.html[Migration workflow for the latest ONTAP tools]
+link:../migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.x to 10.6]
 // OTVDOC-164 - jani
 
 // NADIAA checked
