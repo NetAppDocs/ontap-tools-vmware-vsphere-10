@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP storage view datastores, datastore volume details, NFS VMFS vVol datastore insights, ONTAP tools storage visibility
 summary: "View datastore and volume details from the ONTAP Storage page in ONTAP tools for VMware vSphere."
 ---
-= View datastore storage details in ONTAP tools
+= ONTAP storage views for datastores in ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
