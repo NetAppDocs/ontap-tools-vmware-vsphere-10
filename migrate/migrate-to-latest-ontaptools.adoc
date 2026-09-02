@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools migration, vVols migration, VMware vSphere, NFS datastores, VMFS datastores
 summary: "Migrate ONTAP tools for VMware vSphere 9.xx to 10.6 by choosing a path based on whether you use vVols datastores."
 ---
-= Migrate from ONTAP tools for VMware vSphere 9.xx to 10.6
+= Migration workflow for the latest ONTAP tools
 :icons: font
 :imagesdir: ../media/
 
