@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP tools feature comparison, VMware vSphere, version upgrade, compatibility, NetApp tools
 summary: "Compare ONTAP tools for VMware vSphere 9 and 10 features to decide whether to migrate to ONTAP tools 10.2 or later."
 ---
-= ONTAP tools for VMware vSphere 9 and 10 feature comparison
+= ONTAP tools for VMware vSphere feature comparison by version
 :icons: font
 :imagesdir: ../media/
 
