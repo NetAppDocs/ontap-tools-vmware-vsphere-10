@@ -75,22 +75,22 @@ You can try to migrate the VM to another host and restart.
 |089 |Changing ownership of summary log rotate config file has failed |Retry the upgrade.
 // OTVDOC-375 and OTVDOC-374 update
 |094 |NTP configuration failed and the system rolled back to NTPsec a|
-Do the following to recover:
+If the upgrade fails due to a failure in the Chrony installation:
 
-. Verify DNS resolution for the configured NTP server.
-. Correct or remove invalid entries from `/etc/ntpsec/ntp.conf`.
-. Ensure NTPsec is running:
+. Check whether Chrony is installed:
 +
 ----
-sudo systemctl enable --now ntpsec
+systemctl status chrony
 ----
-. Check the Chrony status:
+. If Chrony is installed and the issue is with the NTP servers you provided, check whether those servers are reachable:
 +
 ----
 sudo chronyc -N sources -v
 sudo chronyc tracking
 ----
-. Review the following logs:
++
+If the servers are reachable, the issue is unrelated to server reachability. If a server is genuinely unreachable, remove it from ONTAP tools Manager and provide a reachable NTP server instead.
+. If the upgrade fails due to any other issue during the NTP upgrade, check the following logs:
 +
 ----
 /var/log/otvng/ansible-perl-errors.log
