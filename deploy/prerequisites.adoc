@@ -13,6 +13,10 @@ Review supported versions, sizing, port requirements, and configuration limits b
 
 Deploy ONTAP tools for VMware vSphere on a supported vSphere environment that includes ESXi hosts and VMware vCenter Server Virtual Appliance (vCSA).
 
+[NOTE]
+Do not deploy the ONTAP tools virtual machine inside a VMware vApp in vCenter Server.
+// OTVDOC-377 updates
+
 == System requirements
 
 * *Installation package space requirements per node*
