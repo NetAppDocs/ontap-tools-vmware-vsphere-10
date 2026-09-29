@@ -108,7 +108,7 @@ During the upgrade, if any onboarded storage backend certificates are missing Su
 .. Remote plug-in is upgraded
 .. ONTAP and vCenter Server certificates are validated and added to ONTAP tools
 .. Backup is enabled
-.. If host cluster protection settings exist from 10.5 or earlier releases, ONTAP tools creates a separate *Cluster protection configuration* navigation item during upgrade.
+.. If host cluster protection settings exist from ONTAP tools for VMware vSphere 10.5 or earlier, ONTAP tools converts them to granular datastore protection and creates a separate *Cluster protection configuration* navigation item.
 // 10.6 GDP feature update
 
 .What's next
@@ -119,16 +119,7 @@ After upgrading to ONTAP tools for VMware vSphere 10.6:
 * Remove the ONTAP tools 10.4 or 10.5 SRA adapter and upload the 10.6 SRA adapter tar file.
 * Run the install command after uploading SRA adapter tar. the Then, rescan the SRA adapters to update the VMware Site Recovery Storage Replication Adapters page.
 * Open *Cluster protection configuration* and verify that existing host cluster protection settings are present and mapped correctly.
-* Existing host cluster protection is automatically converted to granular datastore protection. This configuration lets you manage protection at the datastore level.
-+
-With granular datastore protection, you can:
-+
-** Assign multiple protection settings to a single host cluster.
-** Configure protection settings on the same storage virtual machine (SVM), on different SVMs, or on different storage systems.
-** Keep unprotected datastores in a host cluster when you no longer want them protected.
-** Select specific datastores and group them under a protection setting.
-** Remove protection from an individual datastore.
-** Protect a datastore as part of the provisioning workflow.
+* For more information about granular datastore protection capabilities and eligibility, see link:../protect/granular-datastore-protection-concept.html[Granular datastore protection eligibility criteria in ONTAP tools].
 // OTVDOC-167 - updated by Jani
 //OTVDOC-328 Updated by Jani
 // 10.6 GDP feature update
