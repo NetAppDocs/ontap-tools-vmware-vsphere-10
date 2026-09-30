@@ -20,7 +20,12 @@ This feature enables you to:
 * Protect only selected datastores in a host cluster.
 * Group selected datastores into protection groups.
 * Apply SnapMirror relationships and policies at the protection-group level.
-* Use different protection approaches for different datastore groups in the same cluster.
+* Use different protection approaches for different datastore groups in the same host cluster.
+* Assign multiple protection settings to a single host cluster.
+* Configure protection settings across the same storage virtual machine (SVM), different SVMs, or different storage systems.
+* Keep some datastores in a host cluster unprotected.
+* Remove protection from an individual datastore.
+* Protect a datastore during provisioning.
 
 This feature supports only VMFS datastores that use iSCSI or FC protocols.
 
@@ -65,7 +70,7 @@ Consider the following operational limits and behavior:
 * In tertiary or asynchronous-only configurations, asynchronous relationship cleanup is manual.
 * Trigger failover from ONTAP System Manager. Configure ONTAP Mediator outside ONTAP tools.
 
-When you upgrade from ONTAP tools 10.5, existing host cluster protection configurations are migrated to granular datastore protection format. After upgrade, verify protection groups and datastore membership.
+When you upgrade from ONTAP tools for VMware vSphere 10.5, existing host cluster protection settings are automatically converted to granular datastore protection. After the upgrade, verify protection groups and datastore membership.
 
 .Related information
 
