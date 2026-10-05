@@ -1,0 +1,86 @@
+---
+sidebar: sidebar
+permalink: faq-ontap-tools.html
+keywords: faq, frequently asked questions, frequently asked questions about ontap tools for vmware vsphere, datastore management, disaster recovery, vvols, storage backends
+summary: "Frequently asked questions about ONTAP tools for VMware vSphere."
+---
+
+= FAQ for ONTAP tools for VMware vSphere
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+This FAQ answers common questions about ONTAP tools for VMware vSphere. It focuses on concepts, deployment, storage backends, datastore protection, and automation that are useful when deploying, managing, and troubleshooting your ONTAP tools environment.
+
+== Deployment and high availability
+
+.What should I prepare before deploying ONTAP tools?
+
+Verify that your vSphere, ONTAP, and ESXi versions are compatible, and plan the required CPU, memory, disk, network, and IP address resources. Prepare the vCenter credentials and DNS records, and ensure the required network ports are reachable. The requirements page links to the Interoperability Matrix Tool for current compatibility details.
+
+.How do I deploy ONTAP tools, and can I expand it later?
+
+The documented initial deployment is an extra-small, single-node appliance for core NFS and VMFS datastore services. You can later scale the deployment to HA; multi-node or HA deployments require a content library, and HA uses three nodes. To support HA expansion, deploy the appliance in an ESXi cluster or resource pool and ensure CPU hot-add and memory hot-plug are enabled.
+
+.What does high availability protect, and what should I account for?
+
+The HA solution is intended to help recover from a single-node host failure, network failure, guest OS failure, or ONTAP tools application failure. HA deployments use three nodes, which must be on the same subnet for inter-node communication. CPU hot-add and memory hot-plug must be enabled; the HA workflow also requires VASA Provider for vVols datastores.
+
+== Datastores and storage backends
+
+.Which datastore types and protocols can I manage?
+
+ONTAP tools supports these datastore types and protocols:
+
+* *NFS*: NFSv3 and NFSv4.1.
+* *VMFS*: iSCSI, FC, NVMe/TCP, and NVMe/FC.
+* *vVols*: Provisioned and managed through VASA Provider.
+
+.What is the difference between a global and a local storage backend?
+
+A global storage backend is added in ONTAP tools Manager with ONTAP cluster credentials and can be associated with vCenter Server instances. A local storage backend is added through the ONTAP tools interface with cluster or SVM credentials and is limited to one vCenter Server. For vVols in multitenant environments, the docs describe onboarding the cluster globally and adding the tenant SVM locally.
+
+.What do I need to use vVols with ONTAP tools?
+
+vVols datastore workflows depend on the VASA Provider service being enabled and registered with the selected vCenter Server. ONTAP tools uses VASA Provider to create and maintain the vVols datastore representation, and VM Storage Policies use rules from the NetApp vVols storage type provider. In an HA setup, the HA workflow also requires VASA Provider for vVols datastores.
+
+== Protection and disaster recovery
+
+.How can I use ONTAP tools for disaster recovery?
+
+For array-based disaster recovery, enable the SRA service in ONTAP tools and install the SRA adapter on the VMware Live Site Recovery appliance. The SRA documentation requires matching custom SnapMirror schedules on the source and destination clusters before running SRA workflows. For a new SRA setup, run a test failover; the docs warn that skipping it may cause reprotect to fail.
+
+.How is SnapMirror active sync protection different from SRA-based disaster recovery?
+
+The documented host-cluster protection workflow uses SnapMirror active sync for VMFS datastores. ONTAP tools 10.6 also supports granular datastore protection, which lets you select eligible VMFS datastores using iSCSI or FC and apply protection at the protection-group level. SRA instead integrates with VMware Live Site Recovery for array-based disaster recovery workflows.
+
+== Access control, backup, and support
+
+.How does access control work across ONTAP tools, vCenter, and ONTAP?
+
+Access is controlled in two environments: vCenter Server permissions govern access to vSphere objects, and ONTAP roles govern storage operations. ONTAP tools checks the vCenter role first and then checks the ONTAP role associated with the storage backend. ONTAP tools does not create user accounts in vCenter or ONTAP, so administrators create the required service accounts.
+
+.How often does ONTAP tools back up its configuration?
+
+Beginning with ONTAP tools 10.5, backups are enabled by default and run every 10 minutes. You can change the frequency to between 10 and 60 minutes, but the docs advise against disabling backups because this prevents ONTAP tools from maintaining a low recovery point objective. Disabling backups does not delete existing backup files.
+
+.Where can I find logs when I need to troubleshoot or contact support?
+
+You can generate a log bundle in ONTAP tools Manager or from the vSphere Client support interface. A Manager-generated bundle includes logs for all managed vCenter Server instances; a bundle generated in the vCenter Client is scoped to the selected vCenter. Download the generated archive and provide it to technical support when requested.
+
+== Upgrade, migration, and automation
+
+.Which ONTAP tools 10.x versions can I upgrade directly to 10.6?
+
+You can upgrade directly from ONTAP tools 10.4 or 10.5 to 10.6. To upgrade from 10.0 through 10.3, first upgrade to 10.4 or 10.5. The upgrade documentation recommends enabling low-RPO backup and downloading the backup before starting; a failed upgrade from 10.4 or 10.5 to 10.6 cannot be rolled back, so recovery uses low-RPO backup or snapshot recovery.
+
+.How can I migrate from ONTAP tools 9.x to 10.6?
+
+The documented migration sources are ONTAP tools 9.12D1, 9.13D2, and 9.13P2. The migration path depends on whether your environment uses vVols: environments with vVols migrate VASA Provider and update SRA, while environments with only NFS and VMFS remove the 9.x deployment and deploy 10.6. After migration, verify datastore access, VM Storage Policy mappings, and protection and replication status. The docs note that vVols datastores using NVMe/FC become non-operational after migration because 10.6 supports NVMe-oF only with VMFS datastores.
+
+.Can I automate ONTAP tools with a REST API?
+
+Yes. ONTAP tools provides a REST API for automation, separate from the ONTAP cluster REST API. API access uses the ONTAP tools IP address and port 8443; authenticate with ONTAP tools Manager credentials to obtain an access token, then send the token in the `x-auth` header. Long-running operations can run asynchronously and return a job to monitor.
