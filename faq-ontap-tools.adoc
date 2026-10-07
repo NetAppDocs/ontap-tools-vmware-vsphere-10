@@ -29,13 +29,9 @@ ONTAP tools for VMware vSphere 10.6 supports ONTAP 9.16.1, 9.17.1, 9.18.1, and 9
 
 The right choice depends on your environment and requirements. Compared to ONTAP tools 9.13, ONTAP tools 10.2 and later adds FC support for VMFS and NVMe-oF support for VMFS, qualifies against newer ONTAP and VMware vSphere releases, and supports multiple vCenter Server instances per appliance instead of only one. If your environment needs these capabilities, or ONTAP tools 9.x is approaching end of support, plan a migration to ONTAP tools 10.2 or later. See the link:release-notes/ontap-tools-9-ontap-tools-10-feature-comparison.html[ONTAP tools for VMware vSphere feature comparison by version] and the NetApp Interoperability Matrix Tool to confirm which version matches your ONTAP, ESXi, and vSphere versions.
 
-.How do I deploy ONTAP tools, and can I expand it later?
+.How do I deploy ONTAP tools, choose a size, and expand it later?
 
-The initial deployment is an extra-small, single-node appliance for core NFS and VMFS datastore services. You can later scale the deployment to HA; multi-node or HA deployments require a content library, and HA uses three nodes. To support HA expansion, deploy the appliance in an ESXi cluster or resource pool and ensure CPU hot-add and memory hot-plug are enabled. For deployment and expansion steps, see link:deploy/quick-start.html[Quick start for ONTAP tools for VMware vSphere] and link:deploy/ha-workflow.html[High availability deployment workflow for ONTAP tools].
-
-.How do I choose a deployment size, and can I change it later?
-
-Choose extra small, small, medium, or large based on the CPU, memory, and disk resources listed for each size in link:deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits]; large deployments are supported only with HA. You can scale up to a larger node size later from ONTAP tools Manager, so it is safe to start with a smaller deployment and expand as your requirements grow. However, ONTAP tools supports only scaling up: you can only increase node size, not decrease it, and after you enable HA you cannot revert to a non-HA, single-node configuration. For steps, see link:manage/edit-appliance-settings.html[Scale up ONTAP tools and enable High Availability].
+ONTAP tools deploys as an extra-small (XS), single-node appliance by default, providing core services for NFS and VMFS datastores. If you need more resources, higher resiliency, or vVols and HA, you can scale up later to small, medium, or large, or expand to HA; multi-node and HA deployments require a content library, HA uses three nodes, and large deployments are supported only with HA. To support HA expansion, deploy the appliance in an ESXi cluster or resource pool and ensure CPU hot-add and memory hot-plug are enabled. The CPU, memory, and disk resources for each size are listed in link:deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits], so it is safe to start with the XS default and expand as your requirements grow. ONTAP tools supports only scaling up: you can only increase node size, not decrease it, and after you enable HA you cannot revert to a non-HA, single-node configuration. For deployment, sizing, and expansion steps, see link:deploy/quick-start.html[Quick start for ONTAP tools for VMware vSphere], link:deploy/ha-workflow.html[High availability deployment workflow for ONTAP tools], and link:manage/edit-appliance-settings.html[Scale up ONTAP tools and enable High Availability].
 
 .What does high availability protect, and what should I account for?
 
@@ -63,7 +59,12 @@ See link:configure/create-datastore.html[Create a datastore in ONTAP tools] for 
 
 .What is the difference between a global and a local storage backend?
 
-A global storage backend is added in ONTAP tools Manager with ONTAP cluster credentials and can be associated with vCenter Server instances. A local storage backend is added through the ONTAP tools interface with cluster or SVM credentials and is limited to one vCenter Server. For vVols in multitenant environments, you can onboard the cluster globally and add the tenant SVM locally. See link:configure/add-storage-backend.html[Add a storage backend to ONTAP tools] and link:configure/associate-storage-backend.html[Associate a storage backend with a vCenter Server instance in ONTAP tools] for steps.
+Storage backends differ in scope and credentials:
+
+* *Global storage backend*: Added once in ONTAP tools Manager using ONTAP cluster credentials only. It is not linked to a vCenter Server until you associate it with one, and it provides the cluster-level discovery that vVols management requires.
+* *Local storage backend*: Added per vCenter Server using either cluster or SVM credentials, and available only to that vCenter Server. SVM credentials alone are enough for VMFS datastores and Storage Replication Adapter (SRA) workflows, but not for vVols.
+
+See link:configure/add-storage-backend.html[Add a storage backend to ONTAP tools] and link:configure/associate-storage-backend.html[Associate a storage backend with a vCenter Server instance in ONTAP tools] for steps.
 
 .What do I need to use vVols with ONTAP tools?
 
@@ -95,7 +96,11 @@ Because ONTAP tools does not create user accounts in vCenter or ONTAP, a vSphere
 
 .How often does ONTAP tools back up its configuration?
 
-Beginning with ONTAP tools 10.5, backups are enabled by default and run every 10 minutes. You can change the frequency to between 10 and 60 minutes. Do not disable backups, because this prevents ONTAP tools from maintaining a low recovery point objective. Disabling backups does not delete existing backup files. See link:manage/backup-settings.html[Edit ONTAP tools backup settings] for steps.
+Beginning with ONTAP tools 10.5, backups are enabled by default and run every 10 minutes. You can change the frequency to between 10 and 60 minutes. See link:manage/backup-settings.html[Edit ONTAP tools backup settings] for steps.
+
+.Can I disable ONTAP tools backups?
+
+You can, but do not disable backups, because this prevents ONTAP tools from maintaining a low recovery point objective. Disabling backups does not delete existing backup files. See link:manage/backup-settings.html[Edit ONTAP tools backup settings] for steps.
 
 .Where can I find logs when I need to troubleshoot or contact support?
 
@@ -113,7 +118,7 @@ You can upgrade directly from ONTAP tools 10.4 or 10.5 to 10.6. To upgrade from 
 
 .How can I migrate from ONTAP tools 9.x to 10.6?
 
-The migration sources are ONTAP tools 9.12D1, 9.13D2, and 9.13P2. The migration path depends on whether your environment uses vVols: environments with vVols migrate VASA Provider and update SRA, while environments with only NFS and VMFS remove the 9.x deployment and deploy 10.6. After migration, verify datastore access, VM Storage Policy mappings, and protection and replication status. vVols datastores using NVMe/FC become non-operational after migration because 10.6 supports NVMe-oF only with VMFS datastores. See link:migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.xx to 10.6] for steps.
+The migration sources are ONTAP tools 9.12D1, 9.13D2, and 9.13P2. The migration path depends on whether your environment uses vVols: environments with vVols migrate VASA Provider and update SRA, while environments with only NFS and VMFS remove the 9.x deployment and deploy 10.6. vVols datastores using NVMe/FC become non-operational after migration because 10.6 supports NVMe-oF only with VMFS datastores. See link:migrate/migrate-to-latest-ontaptools.html[Migrate from ONTAP tools for VMware vSphere 9.xx to 10.6] for steps.
 
 .Can I automate ONTAP tools with a REST API?
 
