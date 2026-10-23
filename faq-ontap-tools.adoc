@@ -17,10 +17,6 @@ This FAQ answers common questions about ONTAP tools for VMware vSphere. It focus
 
 == Deployment and high availability
 
-.What should I prepare before deploying ONTAP tools?
-
-Verify that your vSphere, ONTAP, and ESXi versions are compatible, and plan the required CPU, memory, disk, network, and IP address resources. Prepare the vCenter credentials and DNS records, and ensure the required network ports are reachable. See link:deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits] and link:deploy/pre-deploy-checks.html[Pre-deployment requirements for ONTAP tools] for details.
-
 .Which VMware vSphere, ESXi, and ONTAP versions are supported with ONTAP tools?
 
 Supported ONTAP, ESXi, and vCenter Server versions vary by ONTAP tools release. The ESXi host and vCenter Server used to deploy the ONTAP tools virtual machine can also have separate, narrower requirements than the versions ONTAP tools can manage after deployment. Supported versions change between releases, so always check the https://mysupport.netapp.com/matrix[NetApp Interoperability Matrix Tool^] and link:deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits] for the release you are running.
@@ -45,6 +41,47 @@ HA is not required if you are only using NFS or VMFS datastores without vVols, b
 
 Yes. Unlike ONTAP tools 9.x, which supports only one vCenter Server per appliance, ONTAP tools 10.x supports multi-tenancy and lets you manage multiple vCenter Server instances from a single ONTAP tools Manager interface, reducing the number of appliances and overall resource requirements. If you use vVols datastores across multiple vCenter Server instances, upgrade the self-signed certificate to a CA-signed certificate for secure communication. See link:configure/add-vcenter.html[Add vCenter Server instances to ONTAP tools] for steps.
 
+== Networking and ports
+
+.How many IP addresses does an ONTAP tools deployment need, and what is each one for?
+
+A single-node deployment needs three unique, static IPv4 addresses on the same subnet:
+
+* *ONTAP tools IP* (formerly the load balancer IP): The external endpoint for ONTAP tools Manager (`https://<ONTAPtoolsIP>:8443/virtualization/ui/`), the REST API, the VASA Provider, the Storage Replication Adapter (SRA), and the vSphere Client plug-in.
+* *ONTAP tools virtual IP* (formerly the node interconnect IP): Assigned to the Kubernetes API server and used as the virtual IP for the Kubernetes control plane.
+* *Node IP*: The node management address used for diagnostic shell and SSH access.
+
+An HA deployment adds one additional node IP address for each of the second and third nodes; the ONTAP tools IP and virtual IP are shared across all nodes. See link:deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits] and link:deploy/pre-deploy-checks.html[Pre-deployment requirements for ONTAP tools] for the full deployment worksheet.
+
+.Which network ports does ONTAP tools use?
+
+ONTAP tools exposes ports 443 and 8443 as the external pass-through ports for ONTAP tools Manager, the REST API, the VASA Provider, and the vSphere Client plug-in back end. The remaining ports in the port requirements table are inter-node ports used internally by the appliance's Kubernetes cluster; in a single-node deployment they do not require external access, and in an HA deployment all three nodes must be able to reach each other on these ports, including UDP 8472 for pod-to-pod communication. See link:deploy/prerequisites.html[ONTAP tools for VMware vSphere requirements and configuration limits] for the complete port table.
+
+== Certificates and security
+
+.What does ONTAP tools require of the vCenter Server certificate?
+
+A certificate secures a connection only if it proves the identity of the server you are connecting to. The Subject Alternative Name (SAN) extension provides that proof: it lists the DNS names and IP addresses the certificate is valid for.
+
+The vCenter Server machine SSL certificate must meet these requirements:
+
+* The SAN includes the vCenter Server's DNS name and IP address.
+* The SAN includes the vCenter Server Primary Network Identifier (PNID), and the PNID matches the DNS name.
+* Every name in the SAN resolves in DNS.
+
+If the certificate has no SAN, or the SAN does not match the vCenter Server's DNS name, IP address, or PNID, ONTAP tools operations fail with certificate validation errors. This validation cannot be turned off. Correct the SAN with vSphere Certificate Manager before you add the vCenter Server instance. See link:configure/add-vcenter.html[Add vCenter Server instances to ONTAP tools] for certificate requirements and examples.
+
+.Why does adding a storage backend fail certificate validation, and how do I fix it?
+
+ONTAP tools validates storage backend certificates by default, for the same reason it validates vCenter Server certificates: the SAN extension proves which cluster or SVM management LIF the certificate belongs to. The default ONTAP self-signed certificate often has no SAN, so it fails validation when you add the storage backend.
+
+To resolve a failed validation:
+
+* Replace the certificate with one whose SAN includes the cluster or SVM management LIF's IP address or DNS name, then fetch and authorize the updated certificate when you add or re-add the storage backend.
+* If you cannot replace the certificate right away, disable certificate validation from the maintenance console. This bypasses validation for all configured storage backends and does not apply to vCenter Server certificates.
+
+If a storage backend certificate expires before you renew it, ONTAP tools marks the storage backend as unknown because it can no longer connect to the storage system. See link:configure/add-storage-backend.html[Add a storage backend to ONTAP tools] and link:manage/change-valid-flag.html[Change certificate validation flag] for steps.
+
 == Datastores and storage backends
 
 .Which datastore types and protocols can I manage?
@@ -56,6 +93,18 @@ ONTAP tools supports these datastore types and protocols:
 * *vVols*: Provisioned and managed through VASA Provider.
 
 See link:configure/create-datastore.html[Create a datastore in ONTAP tools] for creation steps.
+
+.Why does ONTAP tools create so many igroups, and can I use my existing flat igroups?
+
+ONTAP tools uses a nested igroup model by design:
+
+* A parent igroup represents each datastore's access, and a child igroup represents each ESXi host. LUN mappings apply at the child igroup.
+* This structure lets ONTAP tools reuse a host's child igroup across multiple datastores, instead of duplicating host access for every datastore, and it gives ONTAP tools the granular, per-host control it needs for mount, unmount, and host update operations.
+* ONTAP tools-managed igroups use the `otv_` prefix.
+
+If you already have flat igroups mapped to datastores that ONTAP tools discovers, ONTAP tools converts them during discovery: it keeps the original igroup as a child igroup renamed with the `otv_` prefix, and creates a parent igroup above it, without changing the underlying initiator mappings. igroups that are not mapped to a datastore, such as boot LUN igroups, are left alone.
+
+Because ONTAP tools relies on this parent-child structure to track host access, do not rename, edit, or delete ONTAP tools-managed igroups manually. Use the ONTAP tools mount, unmount, and host update workflows instead. See link:manage/nested-igroups.html[Nested igroup management in ONTAP tools] and link:manage/igroup-workflow.html[How ONTAP tools manages igroups and export policies] for details.
 
 .What is the difference between a global and a local storage backend?
 
@@ -70,6 +119,10 @@ See link:configure/add-storage-backend.html[Add a storage backend to ONTAP tools
 
 vVols datastore workflows depend on the VASA Provider service being enabled and registered with the selected vCenter Server. ONTAP tools uses VASA Provider to create and maintain the vVols datastore representation, and VM Storage Policies use rules from the NetApp vVols storage type provider. In an HA setup, the HA workflow also requires VASA Provider for vVols datastores. See link:manage/enable-services.html[Enable optional services in ONTAP tools Manager] and link:configure/registration-process.html[Register the VASA Provider with a vCenter Server instance in ONTAP tools] for setup steps.
 
+.VMware has deprecated vVols. What does that mean for ONTAP tools users?
+
+Broadcom has deprecated vVols beginning with VMware Cloud Foundation and VMware vSphere Foundation 9.0 and plans to discontinue the feature in a future release. For new deployments, plan on VMFS or NFS datastores, and leave the VASA Provider disabled unless you currently use vVols. Check the ONTAP tools release notes for vVols support in each release.
+
 == Protection and disaster recovery
 
 .How do I protect datastores using ONTAP tools for VMware vSphere?
@@ -79,6 +132,10 @@ You can protect an eligible VMFS datastore that uses the iSCSI or FC protocol by
 .How can I use ONTAP tools for disaster recovery?
 
 For array-based disaster recovery, enable the SRA service in ONTAP tools and install the SRA adapter on the VMware Live Site Recovery appliance. Use the same custom SnapMirror schedules on the source and destination clusters before running SRA workflows. In a new SRA setup, always run a test failover; skipping it might cause the reprotect operation to fail. See link:protect/enable-storage-replication-adapter.html[Configure SRA in ONTAP tools to protect datastores] for setup steps.
+
+.Which datastore types can I protect with the SRA and VMware Live Site Recovery?
+
+The SRA supports NFSv3 datastores and VMFS datastores on iSCSI and FC. Disaster recovery is not supported for NVMe-oF datastores, and VMware Live Site Recovery does not support array-based replication for NFSv4.1 or FlexGroup datastores. Consistency groups are supported for iSCSI and FC only; adding NFS volumes to a consistency group causes device discovery to fail.
 
 .How is SnapMirror active sync protection different from SRA-based disaster recovery?
 
