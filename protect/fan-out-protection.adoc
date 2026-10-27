@@ -12,8 +12,8 @@ summary: "Protect a consistency group with fan-out protection by using synchrono
 Use fan-out protection to protect a consistency group across two destination ONTAP clusters. ONTAP tools maintains the synchronous relationship through the create, edit, and delete SnapMirror active sync protection workflows, and VMware Live Site Recovery maintains the asynchronous relationship through failover and reprotect workflows.
 
 [NOTE]
-Fan-out is not supported for SVM users.
-// OTVDOC-317 - jani
+Fan-out protection is not supported for SVM users. Fan-out protection requires an Asynchronous relationship in addition to the AutomatedFailOverDuplex relationship, and ONTAP tools does not support creating Asynchronous protection for a storage backend added with SVM user credentials.
+// OTVDOC-380 - jani
 
 To set up fan-out protection, peer the three site clusters and SVMs. 
 
