@@ -24,6 +24,8 @@ sidebar:
   entries:
     - title: ONTAP tools for VMware vSphere 10.6
       url: /index.html
+    - title: FAQ for ONTAP tools for VMware vSphere
+      url: /faq-ontap-tools.html
     - section: release-notes
     - section: concepts
     - section: deploy
