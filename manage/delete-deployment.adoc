@@ -20,7 +20,7 @@ _cat /opt/netapp/meta/ansible_vars.yaml | grep -i protocol_
 If the deployment uses iSCSI, delete the igroups as well. 
 . Get the list of FlexVol volumes.
 _kubectl describe persistentvolumes | grep internalName | awk -F'=' '{print $2}'_
-. Remove the VMs from the vCenter Server. Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/8-0/vsphere-virtual-machine-administration-guide-8-0/managing-virtual-machinesvsphere-vm-admin/adding-and-removing-virtual-machinesvsphere-vm-admin.html#GUID-376174FE-F936-4BE4-B8C2-48EED42F110B-en[Remove and reregister VMs and VM templates].
+. Remove the VMs from the vCenter Server. Refer to https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/9-0/vsphere-virtual-machine-administration/managing-virtual-machines/adding-and-removing-virtual-machines.html[Remove and reregister VMs and VM templates].
 . Delete FlexVol volumes. Refer to https://docs.netapp.com/us-en/ontap/volumes/delete-flexvol-task.html[Delete a FlexVol volume]. Enter the exact FlexVol volume name in the CLI command to delete a volume.
 . For iSCSI deployments, delete the SAN igroups from the ONTAP storage backend. See https://docs.netapp.com/us-en/ontap/san-admin/manage-san-initiators-task.html[View and manage SAN initiators and igroups].
 
